@@ -17387,30 +17387,319 @@
 	"70000": {
 		"bfmtMetadata": {
 			"createdAt": "2015-07-16T07:34:45.000Z",
-			"removed": true,
-			"updatedAt": "2015-11-06T15:11:19.000Z"
+			"updatedAt": "2015-12-02T14:10:13.000Z"
 		},
-		"desc": "Boosts Atk by 50% for first 3 turns",
+		"desc": "Shows where the Boss is on the map for a short period of time.",
 		"dictionary": {
 			"lore": "A bullet that applies a special glowing pigment made from an Acute Eye on its target. A Summoner is able to detect the glow even from a distance, thus it is often used among the Demon Slayers when they work in teams. The Demon Slayers are also given a basic gun to fire the bullet, but the gun does not have great range nor power, so it does not inflict any damage on its target."
 		},
-		"effect": [
-			{
-				"first x turns": 3,
-				"first x turns atk% (1)": 75,
-				"passive id": "21"
-			}
-		],
+		"effect": {
+			"effect": [
+				{
+					"unknown proc id": "903",
+					"unknown proc param": "1,480,0"
+				}
+			],
+			"target_area": "single",
+			"target_type": "enemy"
+		},
 		"id": 70000,
+		"max equipped": 10,
+		"max_stack": 99,
+		"name": "Beacon",
+		"raid": true,
+		"rarity": 3,
+		"sell_price": 100,
+		"thumbnail": "item_thum_70000.png",
+		"type": "consumable",
+		"usage": []
+	},
+	"70100": {
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "Guarantees escape from battle.",
+		"dictionary": {
+			"lore": "A pellet that creates a smoke screen by taking advantage of properties of Smoky Drops. The special smoke not only obstructs one's field of sight, it makes it impossible to detect any scents or traces of magic as well. Unfortunately, as its effects affect the senses of its user as well, it can't be used in ambushes, and is only useful for escape from tough enemies. When faced with a formidable monster, sometimes retreating is the only option."
+		},
+		"effect": {
+			"effect": [
+				{
+					"unknown proc id": "906",
+					"unknown proc param": ""
+				}
+			],
+			"target_area": "aoe",
+			"target_type": "enemy"
+		},
+		"id": 70100,
+		"max equipped": 3,
+		"max_stack": 99,
+		"name": "Smoke Bomb",
+		"raid": true,
+		"rarity": 3,
+		"sell_price": 100,
+		"thumbnail": "item_thum_70100.png",
+		"type": "consumable",
+		"usage": []
+	},
+	"70200": {
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "Moves player to Camp.",
+		"dictionary": {
+			"lore": "A catalyst that allows any Summoner to use teleportation magic. However, it does not allow its user to teleport freely, only towards a preset portal and is often used by the Demon Slayers as a means of rapid travel. Although it isn't perfect, the process of creating this potion which produces highly refined magic is only disclosed to a few Summoners and its distribution to the public is strictly restricted."
+		},
+		"effect": {
+			"effect": [
+				{
+					"unknown proc id": "905",
+					"unknown proc param": "1"
+				}
+			],
+			"target_area": "single",
+			"target_type": "party"
+		},
+		"id": 70200,
+		"max equipped": 1,
+		"max_stack": 99,
+		"name": "Teleport",
+		"raid": true,
+		"rarity": 3,
+		"sell_price": 100,
+		"thumbnail": "item_thum_70200.png",
+		"type": "consumable",
+		"usage": []
+	},
+	"70300": {
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "Replenishes the HP of all allies in the surrounding area.",
+		"dictionary": {
+			"lore": "An extract from the Mow Nut, it was mixed with a Cure and crystallized into an incense. This incense stabilizes the spirit, and has the ability to cure any wounds that the soul itself may have suffered. It has the power to heal Demon Slayers for a short time, but it takes a lot of preparation to burn, and thus an exclusive burner is required. However, any error committed when processing this incense can result in dangerous ingredients, and thus it is not available for common use."
+		},
+		"effect": {
+			"effect": [
+				{
+					"unknown proc id": "901",
+					"unknown proc param": "100,120,0,0"
+				}
+			],
+			"target_area": "aoe",
+			"target_type": "party"
+		},
+		"id": 70300,
+		"max equipped": 3,
+		"max_stack": 99,
+		"name": "God Crystal",
+		"raid": true,
+		"rarity": 3,
+		"sell_price": 100,
+		"thumbnail": "item_thum_70300.png",
+		"type": "consumable",
+		"usage": []
+	},
+	"70400": {
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "Increases the Atk Power of all surrounding allies for some time.",
+		"dictionary": {
+			"lore": "An extract from the Mow Nut, it was mixed with an Atk Potion, refined, and then crystallized into an incense. The aroma from this incense incites one's fighting spirits, and has the ability to increase one's attack power on the battlefield. Since one mistake when using this incense can lead one to go berserk, the common folk, and the usual Summoner are forbidden to use it. However, due to its effective properties, there are probably Demon Slayers out there at this very moment surrounding an incense burner in order to prepare for the battlefield."
+		},
+		"effect": {
+			"effect": [
+				{
+					"atk% buff (100)": 10,
+					"buff timer (seconds)": 300,
+					"proc id": "902"
+				}
+			],
+			"target_area": "aoe",
+			"target_type": "party"
+		},
+		"id": 70400,
+		"max equipped": 4,
+		"max_stack": 99,
+		"name": "Atk Crystal",
+		"raid": true,
+		"rarity": 3,
+		"sell_price": 100,
+		"thumbnail": "item_thum_70400.png",
+		"type": "consumable",
+		"usage": []
+	},
+	"70500": {
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "Increases the Def Power of all surrounding allies for some time.",
+		"dictionary": {
+			"lore": "An extract from the Mow Nut, it was mixed with a Def Potion, and crystallized into an incense. Its aroma has the ability to increase one's defensive power. Similar to other crystallized types of incense, when the instructions for its burning are not followed to the letter, it can have a bad effect on the user, and thus permission to use this item is only granted to Demon Slayers currently on duty. Furthermore, the side effect of this crystal is said to be extreme devitalization."
+		},
+		"effect": {
+			"effect": [
+				{
+					"unknown proc id": "907",
+					"unknown proc param": "10,300,1"
+				}
+			],
+			"target_area": "aoe",
+			"target_type": "party"
+		},
+		"id": 70500,
+		"max equipped": 4,
+		"max_stack": 99,
+		"name": "Def Crystal",
+		"raid": true,
+		"rarity": 3,
+		"sell_price": 100,
+		"thumbnail": "item_thum_70500.png",
+		"type": "consumable",
+		"usage": []
+	},
+	"70600": {
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "Identifies the location of undiscovered bosses for some time.",
+		"dictionary": {
+			"lore": "Made by using Brown Grass, the light that this eye shines is amplified to cover a very long distance, making it a catalyst for magic that can very well be considered clairvoyance. The light that it shines has a particular purpose. It can penetrate any object, and stretch over any distance, reflecting off any strong spirits that it encounters. It is said that since this item came into use, Demon Slayers have been able to locate the dens of demons more quickly."
+		},
+		"effect": {
+			"effect": [
+				{
+					"unknown proc id": "903",
+					"unknown proc param": "1,90,0"
+				}
+			],
+			"target_area": "single",
+			"target_type": "enemy"
+		},
+		"id": 70600,
+		"max equipped": 5,
+		"max_stack": 99,
+		"name": "Detector",
+		"raid": true,
+		"rarity": 3,
+		"sell_price": 100,
+		"thumbnail": "item_thum_70600.png",
+		"type": "consumable",
+		"usage": []
+	},
+	"110000": {
+		"associated_units": [
+			"10234"
+		],
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "A crystal used to evolve the mock Unit based on Seria",
+		"id": 110000,
 		"max_stack": 1,
-		"name": "Lovely Charm",
+		"name": "Ruby",
 		"raid": false,
 		"rarity": 3,
-		"sell_price": 5000,
-		"sphere type": 1,
-		"sphere type text": "Status Boost",
-		"thumbnail": "sphere_thum_4_8.png",
-		"type": "sphere",
+		"sell_price": 10000,
+		"thumbnail": "item_thum_110000.png",
+		"type": "evomat",
+		"usage": []
+	},
+	"110010": {
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "A crystal used to evolve the mock Unit based on Karl",
+		"id": 110010,
+		"max_stack": 1,
+		"name": "Sapphire",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 10000,
+		"thumbnail": "item_thum_110010.png",
+		"type": "evomat",
+		"usage": []
+	},
+	"110020": {
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "A crystal used to evolve the mock Unit based on Paris",
+		"id": 110020,
+		"max_stack": 1,
+		"name": "Emerald",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 10000,
+		"thumbnail": "item_thum_110020.png",
+		"type": "evomat",
+		"usage": []
+	},
+	"110030": {
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "A crystal used to evolve the mock Unit based on Grahdens",
+		"id": 110030,
+		"max_stack": 1,
+		"name": "Topaz",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 10000,
+		"thumbnail": "item_thum_110030.png",
+		"type": "evomat",
+		"usage": []
+	},
+	"110050": {
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "A mysterious stone that allows Units to surpass the gods' power",
+		"id": 110050,
+		"max_stack": 1,
+		"name": "Amethyst",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 10000,
+		"thumbnail": "item_thum_110050.png",
+		"type": "evomat",
+		"usage": []
+	},
+	"110100": {
+		"associated_units": [
+			"10015",
+			"20015",
+			"30015",
+			"40015",
+			"50015",
+			"60015"
+		],
+		"bfmtMetadata": {
+			"createdAt": "2015-11-19T05:49:01.000Z",
+			"updatedAt": "2015-12-02T14:10:13.000Z"
+		},
+		"desc": "A mysterious relic used to evolve the Unit Grandt",
+		"id": 110100,
+		"max_stack": 99,
+		"name": "Legend Stone",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 10000,
+		"thumbnail": "item_thum_111000.png",
+		"type": "evomat",
 		"usage": []
 	},
 	"700000": {
