@@ -1,0 +1,53 @@
+{
+	"associated_units": [
+		"30166"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2015-08-14T00:39:50.000Z",
+		"updatedAt": "2015-08-14T00:39:50.000Z"
+	},
+	"desc": "Adds removal of status ailments effect to BB and SBB & when Lafdranya is equipped, 20% boost to all parameters",
+	"effects": [
+		{
+			"atk% buff": 20,
+			"conditions": [
+				{
+					"item required": [
+						"37660"
+					]
+				}
+			],
+			"def% buff": 20,
+			"hp% buff": 20,
+			"passive id": "1",
+			"rec% buff": 20
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"ailments cured": [
+						"poison",
+						"weaken",
+						"sick",
+						"injury",
+						"curse",
+						"paralysis",
+						"atk down",
+						"def down",
+						"rec down"
+					],
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "38",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "Armored Volition",
+	"target": "self"
+}
