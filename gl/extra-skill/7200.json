@@ -1,0 +1,46 @@
+{
+	"bfmtMetadata": {
+		"createdAt": "2015-09-29T16:44:37.000Z",
+		"updatedAt": "2015-09-29T16:44:37.000Z"
+	},
+	"desc": "ＢＢおよびＳＢＢに３ターン状態異常を無効化する効果を追加し、さらに「氷輝天鎧レーゼ」を装備時、戦闘中に全能力を２０％アップ",
+	"effects": [
+		{
+			"atk% buff": 20,
+			"conditions": [
+				{
+					"item required": [
+						"47206"
+					]
+				}
+			],
+			"def% buff": 20,
+			"hp% buff": 20,
+			"passive id": "1",
+			"rec% buff": 20
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "17",
+					"resist curse% (34)": 100,
+					"resist injury% (33)": 100,
+					"resist paralysis% (35)": 100,
+					"resist poison% (30)": 100,
+					"resist sick% (32)": 100,
+					"resist status ails turns": 3,
+					"resist weaken% (31)": 100,
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "人では無い存在へ",
+	"target": "self"
+}
