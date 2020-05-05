@@ -434,7 +434,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2016-06-08T10:37:21.000Z"
+		"updatedAt": "2016-09-08T09:14:23.000Z"
 	},
 	"cost": 45,
 	"damage frames": {
@@ -479,16 +479,19 @@
 	},
 	"kind": "normal",
 	"leader skill": {
-		"desc": "Reduction in BB gauge required to activate BB (25%) & Reduces damage taken (20%) and boosts BB gauge (10BC) when damage dealt has exceeded certain amount (10 000) for 2 turns",
+		"desc": "Reduction in BB gauge required to activate BB (25%) & Reduces damage taken (20%) and gradually recovers BB gauge (10 BC) when damage dealt has exceeded certain amount (10 000) for 2 turns",
 		"effects": [
 			{
 				"passive id": "48",
 				"reduced bb bc cost%": 25
 			},
 			{
-				"damage dealt threshold activation": 10000,
-				"increase bb gauge": 10,
-				"passive id": "81"
+				"buff": {
+					"buff turns (37)": "2",
+					"increase bb gauge gradual buff": 10
+				},
+				"damage dealt threshold buff activation": 10000,
+				"passive id": "80"
 			},
 			{
 				"buff": {
