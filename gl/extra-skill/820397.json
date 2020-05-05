@@ -1,0 +1,54 @@
+{
+	"associated_units": [
+		"820397"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-12-14T12:06:01.000Z",
+		"updatedAt": "2016-12-14T12:06:01.000Z"
+	},
+	"desc": "20% boost to all parameters when Atk Boosting sphere is equipped, adds Def ignoring effect to BB/SBB for 3 turns & 50% boost to Atk of Water Types",
+	"effects": [
+		{
+			"atk% buff": 20,
+			"conditions": [
+				{
+					"sphere category required": "Atk Boosting",
+					"sphere category required (raw)": "13"
+				}
+			],
+			"def% buff": 20,
+			"hp% buff": 20,
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 20
+		},
+		{
+			"atk% buff": 50,
+			"conditions": [],
+			"elements buffed": [
+				"water"
+			],
+			"passive id": "2",
+			"passive target": "party"
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"defense% ignore": 100,
+					"defense% ignore turns (39)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "22",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "Duty and Honor",
+	"target": "self"
+}

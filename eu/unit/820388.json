@@ -1,0 +1,1522 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "atk_max",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 30,
+			"target conditions": "hp_min",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"attack": {
+			"total number of frames": 208
+		},
+		"idle": {
+			"total number of frames": 108
+		},
+		"move": {
+			"total number of frames": 10
+		}
+	},
+	"bb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					45,
+					46,
+					47,
+					48,
+					49,
+					50,
+					115,
+					117,
+					119,
+					121,
+					123,
+					125
+				],
+				"hit dmg% distribution": [
+					6,
+					5,
+					5,
+					5,
+					5,
+					25,
+					15,
+					10,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
+		],
+		"desc": "12 combo Water attack on all foes & Negates all status ailments for 3 turns & Gradually heal all allies for 3 turns & Probable (30%) 1 turn ATK reduction (-50%)",
+		"drop check count": 1,
+		"id": "820388",
+		"levels": [
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 250,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "33.3/2",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 2000,
+						"gradual heal low": 1500,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 260,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "33.3/2",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 2100,
+						"gradual heal low": 1600,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 270,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "33.3/2",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 2200,
+						"gradual heal low": 1700,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 280,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "33.3/2",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 2300,
+						"gradual heal low": 1800,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 290,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "33.3/2",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 2400,
+						"gradual heal low": 1900,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 300,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "33.3/2",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 2500,
+						"gradual heal low": 2000,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 310,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "33.3/2",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 2600,
+						"gradual heal low": 2100,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 320,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "33.3/2",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 2700,
+						"gradual heal low": 2200,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 330,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "33.3/2",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 2800,
+						"gradual heal low": 2300,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 350,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "33.3/2",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 3000,
+						"gradual heal low": 2500,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			}
+		],
+		"name": "Magnanimous Aegis"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2015-08-14T00:39:50.000Z",
+		"updatedAt": "2016-12-15T14:14:30.000Z"
+	},
+	"cost": 47,
+	"damage frames": {
+		"frame times": [
+			47,
+			49,
+			50,
+			52,
+			115,
+			117,
+			119,
+			121
+		],
+		"hit dmg% distribution": [
+			15,
+			15,
+			15,
+			15,
+			10,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
+	"dictionary": {
+		"description": "(Grand Gaia Version) A knight of the Kingdom of Grandshelt, Charlotte often finds it difficult to maintain her composure around Rain and Lasswell, as many of their conversations quickly turn into complaints on her behalf about Rain. However, she constantly found herself worried about both of them regardless, which caused her spirit to take physical form and begin following them during their adventures. Balancing the needs of her friends and her concerns for the kingdom she served worlds away, Charlotte saw no other option but to continue fighting to protect those around her. As a knight of Grandshelt, she would never allow herself to hesitate, no matter where her journey lead her.",
+		"evolution": "Duty and honor are principles I treasure above all else. However, comradery may be important as well...",
+		"fusion": "As a knight of Grandshelt, I will use this power to help others.",
+		"summon": "Thank you for the assistance. A friendly face is always welcome."
+	},
+	"drop check count": 6,
+	"element": "water",
+	"exp_pattern": 10,
+	"extra skill": {
+		"error": "data missing"
+	},
+	"gender": "female",
+	"getting type": "farmable",
+	"guide_id": 8240,
+	"id": 820388,
+	"imp": {
+		"max atk": "600",
+		"max def": "600",
+		"max hp": "1500",
+		"max rec": "600"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "Boosts HP and DEF (50%) & Reduce damage taken (5%) & Boosts damage reduced while guarding (10%) & Gradually heal all allies each turn",
+		"effects": [
+			{
+				"def% buff": 50,
+				"hp% buff": 50,
+				"passive id": "1"
+			},
+			{
+				"dmg% mitigation": 5,
+				"passive id": "8"
+			},
+			{
+				"guard increase mitigation%": 10,
+				"passive id": "58"
+			},
+			{
+				"passive id": "33",
+				"rec% added (turn heal)": 10,
+				"turn heal high": 1000,
+				"turn heal low": 800
+			}
+		],
+		"id": "810015",
+		"name": "Royal Guardian"
+	},
+	"lord damage range": "2402~2683",
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
+	"name": "Charlotte",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					45,
+					46,
+					47,
+					48,
+					49,
+					50,
+					51,
+					52,
+					115,
+					117,
+					119,
+					121,
+					123,
+					125,
+					127,
+					129
+				],
+				"hit dmg% distribution": [
+					6,
+					6,
+					6,
+					5,
+					16,
+					8,
+					6,
+					5,
+					5,
+					5,
+					8,
+					8,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					110
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
+		],
+		"desc": "16 combo Water attack on all foes & Negates all status ailments for 3 turns & Boosts DEF (140%) for 3 turns & Reduce damage taken (50%) for 1 turns & Probable (30%) 1 turn ATK reduction (-50%)",
+		"drop check count": 1,
+		"id": "1820388",
+		"levels": [
+			{
+				"bc cost": 30,
+				"effects": [
+					{
+						"bb atk%": 460,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 95,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 30,
+				"effects": [
+					{
+						"bb atk%": 470,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 95,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 30,
+				"effects": [
+					{
+						"bb atk%": 480,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 30,
+				"effects": [
+					{
+						"bb atk%": 490,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 105,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 30,
+				"effects": [
+					{
+						"bb atk%": 500,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 110,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 30,
+				"effects": [
+					{
+						"bb atk%": 510,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 115,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 30,
+				"effects": [
+					{
+						"bb atk%": 520,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 120,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 20,
+				"effects": [
+					{
+						"bb atk%": 530,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 125,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 30,
+				"effects": [
+					{
+						"bb atk%": 540,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 130,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			},
+			{
+				"bc cost": 30,
+				"effects": [
+					{
+						"bb atk%": 560,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "17",
+						"resist curse% (34)": 100,
+						"resist injury% (33)": 100,
+						"resist paralysis% (35)": 100,
+						"resist poison% (30)": 100,
+						"resist sick% (32)": 100,
+						"resist status ails turns": 3,
+						"resist weaken% (31)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 140,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"buff #2": {
+							"def% buff (4)": -50,
+							"proc chance%": 30
+						},
+						"buff turns": 1,
+						"effect delay time(ms)/frame": "16.7/1",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			}
+		],
+		"name": "Royal Armlet"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 1806,
+			"def": 2086,
+			"hp": 5495,
+			"rec": 1610
+		},
+		"_lord": {
+			"atk": 2580,
+			"def": 2980,
+			"hp": 7850,
+			"rec": 2300
+		}
+	},
+	"ubb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					45,
+					46,
+					47,
+					48,
+					49,
+					50,
+					51,
+					52,
+					53,
+					54,
+					115,
+					117,
+					119,
+					121,
+					123,
+					125,
+					127,
+					129,
+					131,
+					133
+				],
+				"hit dmg% distribution": [
+					2,
+					5,
+					5,
+					5,
+					5,
+					12,
+					4,
+					2,
+					5,
+					5,
+					5,
+					5,
+					8,
+					8,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					110
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			}
+		],
+		"desc": "20 combo Water attack on all foes & 3 turn Atk reduction (-80%) & Boosts DEF (250%) for 3 turns & Reduce damage taken (50%) for 3 turns & Fully heal all allies for 3 turns",
+		"drop check count": 1,
+		"id": "2820388",
+		"levels": [
+			{
+				"bc cost": 35,
+				"effects": [
+					{
+						"bb atk%": 1500,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"buff #1": {
+							"atk% buff (2)": -80,
+							"proc chance%": 100
+						},
+						"buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "9",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"buff turns": 3,
+						"def% buff (3)": 250,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"gradual heal high": 99999,
+						"gradual heal low": 98999,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 10,
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"name": "Fortify"
+	}
+}
