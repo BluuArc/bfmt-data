@@ -368,7 +368,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-15T01:31:57.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-02-03T05:36:47.000Z"
 	},
 	"category": 30160,
 	"cost": 40,
@@ -384,8 +384,51 @@
 	},
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing",
-		"id": "3000"
+		"desc": "BB 및 SBB에 상태이상 회복효과를 추가&「녹휘검개 러프드라니아」를 장비하면 전투 중에 모든 능력 20% 상승",
+		"effects": [
+			{
+				"atk% buff": 20,
+				"conditions": [
+					{
+						"item required": [
+							"37660"
+						]
+					}
+				],
+				"def% buff": 20,
+				"hp% buff": 20,
+				"passive id": "1",
+				"rec% buff": 20
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"ailments cured": [
+							"poison",
+							"weaken",
+							"sick",
+							"injury",
+							"curse",
+							"paralysis",
+							"atk down",
+							"def down",
+							"rec down"
+						],
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "38",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "3000",
+		"name": "갑옷의 의지",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",
@@ -438,9 +481,9 @@
 	"max bc generated": 36,
 	"name": "빛나는 패갑옷신 에데아",
 	"overdrive stats": {
-		"atk%": 1000,
-		"def%": 1000,
-		"rec%": 1000
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
 	},
 	"rarity": 7,
 	"sbb": {
