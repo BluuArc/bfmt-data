@@ -3881,6 +3881,25 @@
 			}
 		]
 	},
+	"10820": {
+		"bfmtMetadata": {
+			"createdAt": "2016-05-27T10:24:09.000Z",
+			"updatedAt": "2016-06-08T10:37:21.000Z"
+		},
+		"desc": "The beautiful and vibrant remnants of a Phoenix",
+		"dictionary": {
+			"lore": "A long time ago, there was a beautiful crimson phoenix which had pledged its service to a goddess. The phoenix granted its divine protection to the goddess over the span of many years, until a demon appeared from another world and ended the goddess's life. Mad with anger, the Phoenix pursued the demon back to its world, and achieved vengeance in exchange for both of its own wings. Unfortunately, however, the Phoenix was unable to return to its home without the ability to fly, forcing it to live in solitude in the demon's world until nothing but its vibrantly colored bones were left."
+		},
+		"id": 10820,
+		"max_stack": 99,
+		"name": "Phoenix Bone",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 50,
+		"thumbnail": "item_thum_900.png",
+		"type": "material",
+		"usage": []
+	},
 	"10900": {
 		"bfmtMetadata": {
 			"createdAt": "2015-07-16T07:34:45.000Z",
@@ -17812,6 +17831,46 @@
 		"type": "sphere",
 		"usage": []
 	},
+	"47206": {
+		"bfmtMetadata": {
+			"createdAt": "2016-05-27T10:24:09.000Z",
+			"updatedAt": "2016-06-08T10:37:21.000Z"
+		},
+		"desc": "40% boost to max HP, damage taken boosts BB gauge & boosts Atk, Def, Rec when BB gauge is over 50% full",
+		"dictionary": {
+			"lore": "A piece of armor which suddenly appeared when the otherworldly scientist Reeze found herself in great peril during her battle against the gods. It is said that the piece somehow matched perfectly with the rest of the upgrades she had done to her own body. Reeze gained great power thanks to this addition to her equipment, but instead lost many of her human qualities in the process. It is said this piece of armor had the words \"No. 3\" carved upon it."
+		},
+		"effect": [
+			{
+				"hp% buff": 40,
+				"passive id": "1"
+			},
+			{
+				"atk% buff": 50,
+				"bb gauge above % buff requirement": 50,
+				"def% buff": 50,
+				"passive id": "30",
+				"rec% buff": 50
+			},
+			{
+				"bc fill when attacked high": 3,
+				"bc fill when attacked low": 2,
+				"bc fill when attacked%": 100,
+				"passive id": "25"
+			}
+		],
+		"id": 47206,
+		"max_stack": 1,
+		"name": "Reeze's Armor",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 10000,
+		"sphere type": 1,
+		"sphere type text": "Status Boost",
+		"thumbnail": "sphere_thum_1_1.png",
+		"type": "sphere",
+		"usage": []
+	},
 	"47300": {
 		"bfmtMetadata": {
 			"createdAt": "2015-09-30T08:04:51.000Z",
@@ -19021,23 +19080,36 @@
 		"associated_units": [
 			"10015",
 			"10125",
+			"10255",
+			"10335",
 			"20015",
 			"20155",
+			"20275",
+			"20285",
+			"20325",
 			"30015",
+			"30115",
 			"30165",
+			"30515",
 			"40015",
 			"40165",
 			"40275",
+			"40445",
+			"40505",
 			"50015",
+			"50115",
 			"50165",
+			"50275",
 			"50285",
+			"50405",
 			"60015",
 			"60115",
-			"60175"
+			"60175",
+			"60315"
 		],
 		"bfmtMetadata": {
 			"createdAt": "2015-11-19T05:49:01.000Z",
-			"updatedAt": "2016-04-07T13:46:48.000Z"
+			"updatedAt": "2016-06-08T10:37:21.000Z"
 		},
 		"desc": "A mysterious relic used to evolve the Unit Grandt",
 		"id": 110100,
@@ -19463,7 +19535,7 @@
 	"700013": {
 		"bfmtMetadata": {
 			"createdAt": "2016-05-05T09:35:15.000Z",
-			"updatedAt": "2016-05-06T07:55:07.000Z"
+			"updatedAt": "2016-06-08T10:37:21.000Z"
 		},
 		"desc": "30% boost to max HP & recovers HP each turn (3,000~3,500 + 10% Rec) & Negates status ailments",
 		"effect": [
@@ -19497,6 +19569,105 @@
 		"sphere type text": "Status Ailments Resistant",
 		"thumbnail": "sphere_thum_2_5.png",
 		"type": "sphere",
+		"usage": [
+			{
+				"id": 700014,
+				"name": "Hope of Yggdrasil"
+			}
+		]
+	},
+	"700014": {
+		"bfmtMetadata": {
+			"createdAt": "2016-05-27T10:24:09.000Z",
+			"updatedAt": "2016-06-08T10:37:21.000Z"
+		},
+		"desc": "Boosts Atk, Def, Rec, and max HP (30%) & Nullifies all ailments and critical dmg & recovers HP each turn (3,000~3,500 + 10% Rec) & Boosts BB gauge when attacked (3-5BC)",
+		"effect": [
+			{
+				"atk% buff": 30,
+				"def% buff": 30,
+				"hp% buff": 30,
+				"passive id": "1",
+				"rec% buff": 30
+			},
+			{
+				"bc fill when attacked high": 5,
+				"bc fill when attacked low": 3,
+				"bc fill when attacked%": 100,
+				"passive id": "25"
+			},
+			{
+				"passive id": "33",
+				"rec% added (turn heal)": 11,
+				"turn heal high": 3500,
+				"turn heal low": 3000
+			},
+			{
+				"curse resist%": 100,
+				"injury resist%": 100,
+				"paralysis resist%": 100,
+				"passive id": "4",
+				"poison resist%": 100,
+				"sick resist%": 100,
+				"weaken resist%": 100
+			},
+			{
+				"unknown passive id": "52",
+				"unknown passive params": "1.5,999"
+			}
+		],
+		"id": 700014,
+		"max_stack": 1,
+		"name": "Hope of Yggdrasil",
+		"raid": false,
+		"rarity": 3,
+		"recipe": {
+			"karma": "70000",
+			"materials": [
+				{
+					"count": 3,
+					"id": 700013,
+					"name": "Seed of Yggdrasil"
+				}
+			]
+		},
+		"sell_price": 0,
+		"sphere type": 5,
+		"sphere type text": "Status Ailments Resistant",
+		"thumbnail": "sphere_thum_70_5.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"700015": {
+		"bfmtMetadata": {
+			"createdAt": "2016-05-27T10:24:09.000Z",
+			"updatedAt": "2016-06-08T10:37:21.000Z"
+		},
+		"desc": "The inert and vanquished Corruption. Your contact with it leaves you filled with a sensation of great purity.",
+		"id": 700015,
+		"max_stack": 99,
+		"name": "Corruption",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 50,
+		"thumbnail": "item_thum_700015.png",
+		"type": "material",
+		"usage": []
+	},
+	"700016": {
+		"bfmtMetadata": {
+			"createdAt": "2016-05-27T10:24:09.000Z",
+			"updatedAt": "2016-06-08T10:37:21.000Z"
+		},
+		"desc": "Llewxam’s tears... at their touch, you feel great sadness overwhelming you.",
+		"id": 700016,
+		"max_stack": 99,
+		"name": "Tears",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 50,
+		"thumbnail": "item_thum_700016.png",
+		"type": "material",
 		"usage": []
 	},
 	"700017": {

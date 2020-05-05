@@ -1,0 +1,46 @@
+{
+	"associated_units": [
+		"10556"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-06-08T09:46:56.000Z",
+		"updatedAt": "2016-06-08T09:46:56.000Z"
+	},
+	"desc": "「緋炎宝フォルディア」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加",
+	"effects": [
+		{
+			"atk% buff": 20,
+			"conditions": [
+				{
+					"item required": [
+						"47208"
+					]
+				}
+			],
+			"def% buff": 20,
+			"hp% buff": 20,
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 20
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"defense% ignore": 100,
+					"defense% ignore turns (39)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "22",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "私だけの英雄",
+	"target": "self"
+}
