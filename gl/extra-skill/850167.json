@@ -1,0 +1,41 @@
+{
+	"associated_units": [
+		"850167"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-07-04T10:20:30.000Z",
+		"updatedAt": "2016-07-04T10:20:30.000Z"
+	},
+	"desc": "Adds Light barrier effect to BB/SBB for 3 turns & greatly boosts Rec relative to amount of depleted HP",
+	"effects": [
+		{
+			"buff proportional to hp": "lost",
+			"conditions": [],
+			"passive id": "46",
+			"passive target": "self",
+			"rec% base buff": 50,
+			"rec% extra buff based on hp": 150
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "light",
+					"elemental barrier hp": 2000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "Amaranthine Bastion",
+	"target": "self"
+}

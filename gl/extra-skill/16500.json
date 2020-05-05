@@ -1,0 +1,38 @@
+{
+	"associated_units": [
+		"20806"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-07-04T10:20:30.000Z",
+		"updatedAt": "2016-07-04T10:20:30.000Z"
+	},
+	"desc": "ＢＢ及びＳＢＢに「味方のＢＢゲージを増加」を追加＆残りＨＰが少ないほど、防御力をアップ",
+	"effects": [
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge": 5,
+					"proc id": "31",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"buff proportional to hp": "lost",
+			"conditions": [],
+			"def% base buff": 0,
+			"def% extra buff based on hp": 50,
+			"passive id": "46",
+			"passive target": "self"
+		}
+	],
+	"name": "絶唱の音律結界",
+	"target": "self"
+}
