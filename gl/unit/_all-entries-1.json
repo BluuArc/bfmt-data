@@ -4893,7 +4893,7 @@
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-08-13T15:42:33.000Z",
-			"updatedAt": "2015-08-14T00:39:50.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 10030,
 		"cost": 3,
@@ -4905,6 +4905,25 @@
 		},
 		"element": "fire",
 		"evolution": {
+			"cost": 50000,
+			"mats": [
+				{
+					"id": "10131",
+					"name": "Fire Spirit",
+					"type": "unit"
+				},
+				{
+					"id": "10130",
+					"name": "Fire Nymph",
+					"type": "unit"
+				},
+				{
+					"id": "60142",
+					"name": "Mimic",
+					"type": "unit"
+				}
+			],
+			"next": "10032",
 			"prev": "10030"
 		},
 		"exp_pattern": 10,
@@ -5126,7 +5145,7 @@
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-09-29T16:25:19.000Z",
-			"updatedAt": "2015-12-04T07:58:12.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 10030,
 		"cost": 5,
@@ -5137,6 +5156,9 @@
 			"summon": "You look yummy! *Sizzle*<br>If I don't get some good fire to eat<br>I'll eat you up instead! *Sizzle*"
 		},
 		"element": "fire",
+		"evolution": {
+			"prev": "10031"
+		},
 		"exp_pattern": 10,
 		"gender": "other",
 		"getting type": "farmable",
@@ -33308,7 +33330,7 @@
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-08-13T15:42:33.000Z",
-			"updatedAt": "2015-08-14T00:39:50.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 10280,
 		"cost": 24,
@@ -33320,6 +33342,35 @@
 		},
 		"element": "fire",
 		"evolution": {
+			"cost": 1500000,
+			"mats": [
+				{
+					"id": "10354",
+					"name": "Fire Mecha God",
+					"type": "unit"
+				},
+				{
+					"id": "50354",
+					"name": "Miracle Totem",
+					"type": "unit"
+				},
+				{
+					"id": "10133",
+					"name": "Fire Totem",
+					"type": "unit"
+				},
+				{
+					"id": "60144",
+					"name": "Dragon Mimic",
+					"type": "unit"
+				},
+				{
+					"id": "110100",
+					"name": "Legend Stone",
+					"type": "item"
+				}
+			],
+			"next": "10286",
 			"prev": "10284"
 		},
 		"exp_pattern": 20,
@@ -33375,7 +33426,7 @@
 		"name": "Rakshasa Lord Vishra",
 		"rarity": 6,
 		"sbb": {
-			"desc": "13 combo powerful Fire attack on all enemies & chance of BB gauge filling when attacked and increases fill rate for 3 turns",
+			"desc": "13 combo powerful Fire attack on all foes & damage taken boosts BB gauge for 3 turns",
 			"hit dmg% distribution": [
 				7,
 				7,
@@ -33643,6 +33694,1310 @@
 				"hp": 5821,
 				"rec": 1455
 			}
+		}
+	},
+	"10286": {
+		"ai": [
+			{
+				"action": "skill",
+				"chance%": 60,
+				"target conditions": "random",
+				"target type": "enemy"
+			},
+			{
+				"action": "skill",
+				"chance%": 20,
+				"target conditions": "atk_max",
+				"target type": "enemy"
+			},
+			{
+				"action": "attack",
+				"chance%": 30,
+				"target conditions": "hp_min",
+				"target type": "enemy"
+			},
+			{
+				"action": "attack",
+				"chance%": 100,
+				"target conditions": "random",
+				"target type": "enemy"
+			}
+		],
+		"bb": {
+			"desc": "14 combo powerful Fire attack on all foes & probable random status ailment counter when attacked for 3 turns",
+			"hit dmg% distribution": [
+				10,
+				6,
+				4,
+				3,
+				8,
+				5,
+				5,
+				12,
+				11,
+				9,
+				8,
+				5,
+				5,
+				9
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 14,
+			"id": "10286",
+			"levels": [
+				{
+					"bc cost": 25,
+					"effects": [
+						{
+							"bb atk%": 160,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 25,
+					"effects": [
+						{
+							"bb atk%": 170,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 25,
+					"effects": [
+						{
+							"bb atk%": 180,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 25,
+					"effects": [
+						{
+							"bb atk%": 190,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 25,
+					"effects": [
+						{
+							"bb atk%": 200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 25,
+					"effects": [
+						{
+							"bb atk%": 210,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 25,
+					"effects": [
+						{
+							"bb atk%": 220,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 25,
+					"effects": [
+						{
+							"bb atk%": 230,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 25,
+					"effects": [
+						{
+							"bb atk%": 240,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 25,
+					"effects": [
+						{
+							"bb atk%": 260,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 14,
+			"name": "Demonic Embers"
+		},
+		"bfmtMetadata": {
+			"createdAt": "2015-12-30T09:59:43.000Z",
+			"updatedAt": "2016-01-15T05:35:32.000Z"
+		},
+		"category": 10280,
+		"cost": 40,
+		"dictionary": {
+			"description": "A former knight turned into an evil demon by the armor that curses any who wear it. Though it was thought that Vishra had completely lost himself to the armor which had possessed him during the battle against his best friend, he made an unexpected recovery when the war against the gods began. Once he had regained his senses, however, he was surprised to find that the friend who had helped him recover was now possessed by the same force that had once made him the Cursed Armor's prisoner. He then decided to unleash the full power of his armor in order to rescue his dear friend, even when he knew this would endanger his own life.",
+			"evolution": "My many sins cannot be erased.<br>That's why my soul will keep burning!<br>To atone for my sins eternally!",
+			"fusion": "The pain...is turning into power...<br>When did I...regain my senses?<br>You must think me strange<br>for enjoying this pain. Ha ha.",
+			"summon": "Seeing my friend during my last<br>moments made me realize that the path<br>I chose was much easier than his."
+		},
+		"element": "fire",
+		"evolution": {
+			"prev": "10285"
+		},
+		"exp_pattern": 20,
+		"extra skill": {
+			"desc": "Probable slight BB gauge boost when attacked & hugely boosts damage against status afflicted foes",
+			"effects": [
+				{
+					"bc fill when attacked high": 3,
+					"bc fill when attacked low": 2,
+					"bc fill when attacked%": 50,
+					"conditions": [],
+					"passive id": "25"
+				},
+				{
+					"atk% buff when enemy has ailment": 100,
+					"atk% buff when enemy has curse": true,
+					"atk% buff when enemy has injury": true,
+					"atk% buff when enemy has paralysis": true,
+					"atk% buff when enemy has poison": true,
+					"atk% buff when enemy has sick": true,
+					"atk% buff when enemy has weaken": true,
+					"conditions": [],
+					"passive id": "74"
+				}
+			],
+			"id": "8200",
+			"name": "Entrusted Will",
+			"target": "self"
+		},
+		"gender": "male",
+		"getting type": "rare summon",
+		"guide_id": 1134,
+		"hit dmg% distribution": [
+			12,
+			7,
+			10,
+			8,
+			8,
+			16,
+			12,
+			9,
+			8,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10,
+		"id": 10286,
+		"imp": {
+			"max atk": "440",
+			"max def": "440",
+			"max hp": "1100",
+			"max rec": "440"
+		},
+		"kind": "normal",
+		"leader skill": {
+			"desc": "High probable infliction of random status ailment, greatly boosts critical damage & 80% boost to Atk",
+			"effects": [
+				{
+					"injury%": 15,
+					"passive id": "20",
+					"poison%": 10,
+					"sick%": 15,
+					"weaken%": 15
+				},
+				{
+					"curse%": 10,
+					"paralysis%": 10,
+					"passive id": "20"
+				},
+				{
+					"crit multiplier%": 150,
+					"passive id": "34"
+				},
+				{
+					"atk% buff": 80,
+					"passive id": "1"
+				}
+			],
+			"id": "3009",
+			"name": "Full Epidemic Flash"
+		},
+		"lord damage range": "2337~2611",
+		"max bc generated": 40,
+		"name": "Unleashed Ravana Vishra",
+		"overdrive stats": {
+			"atk%": 100,
+			"def%": 100,
+			"rec%": 100
+		},
+		"rarity": 7,
+		"sbb": {
+			"desc": "16 combo powerful Fire attack on all foes, probable random status ailment counter when attacked for 3 turns & greatly boosts BB gauge",
+			"hit dmg% distribution": [
+				10,
+				6,
+				4,
+				3,
+				3,
+				7,
+				4,
+				4,
+				3,
+				11,
+				9,
+				9,
+				8,
+				5,
+				5,
+				9
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 16,
+			"id": "110286",
+			"levels": [
+				{
+					"bc cost": 15,
+					"effects": [
+						{
+							"bb atk%": 400,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 15,
+					"effects": [
+						{
+							"bb atk%": 410,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 15,
+					"effects": [
+						{
+							"bb atk%": 420,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 15,
+					"effects": [
+						{
+							"bb atk%": 430,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 15,
+					"effects": [
+						{
+							"bb atk%": 440,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 15,
+					"effects": [
+						{
+							"bb atk%": 450,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 6,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 15,
+					"effects": [
+						{
+							"bb atk%": 460,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 6,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 15,
+					"effects": [
+						{
+							"bb atk%": 470,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 6,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 15,
+					"effects": [
+						{
+							"bb atk%": 480,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 6,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 15,
+					"effects": [
+						{
+							"bb atk%": 500,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 10,
+							"counter inflict injury% (81)": 15,
+							"counter inflict paralysis% (83)": 10,
+							"counter inflict poison% (78)": 10,
+							"counter inflict sick% (80)": 15,
+							"counter inflict weaken% (79)": 15,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 7,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 16,
+			"name": "Supreme Ravana Execution"
+		},
+		"sell caution": false,
+		"stats": {
+			"_base": {
+				"atk": 1900,
+				"def": 1731,
+				"hp": 4948,
+				"rec": 1382
+			},
+			"_lord": {
+				"atk": 2511,
+				"def": 2104,
+				"hp": 6709,
+				"rec": 2052
+			}
+		},
+		"ubb": {
+			"desc": "21 combo massive Fire attack on all foes, largely boosts Atk and probable random status ailment counter when attacked for 3 turns & hugely boosts BB gauge",
+			"hit dmg% distribution": [
+				8,
+				5,
+				4,
+				3,
+				3,
+				3,
+				6,
+				4,
+				3,
+				3,
+				13,
+				10,
+				8,
+				5,
+				4,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 21,
+			"id": "210286",
+			"levels": [
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 1000,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 100,
+							"counter inflict injury% (81)": 100,
+							"counter inflict paralysis% (83)": 100,
+							"counter inflict poison% (78)": 100,
+							"counter inflict sick% (80)": 100,
+							"counter inflict weaken% (79)": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 50,
+							"bc fill when attacked low": 50,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"atk% buff (1)": 200,
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "5",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 1000,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 100,
+							"counter inflict injury% (81)": 100,
+							"counter inflict paralysis% (83)": 100,
+							"counter inflict poison% (78)": 100,
+							"counter inflict sick% (80)": 100,
+							"counter inflict weaken% (79)": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 50,
+							"bc fill when attacked low": 50,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"atk% buff (1)": 200,
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "5",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 1000,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 100,
+							"counter inflict injury% (81)": 100,
+							"counter inflict paralysis% (83)": 100,
+							"counter inflict poison% (78)": 100,
+							"counter inflict sick% (80)": 100,
+							"counter inflict weaken% (79)": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 50,
+							"bc fill when attacked low": 50,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"atk% buff (1)": 200,
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "5",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 1000,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 100,
+							"counter inflict injury% (81)": 100,
+							"counter inflict paralysis% (83)": 100,
+							"counter inflict poison% (78)": 100,
+							"counter inflict sick% (80)": 100,
+							"counter inflict weaken% (79)": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 50,
+							"bc fill when attacked low": 50,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"atk% buff (1)": 200,
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "5",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 1000,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 100,
+							"counter inflict injury% (81)": 100,
+							"counter inflict paralysis% (83)": 100,
+							"counter inflict poison% (78)": 100,
+							"counter inflict sick% (80)": 100,
+							"counter inflict weaken% (79)": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 50,
+							"bc fill when attacked low": 50,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"atk% buff (1)": 200,
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "5",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 1000,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 100,
+							"counter inflict injury% (81)": 100,
+							"counter inflict paralysis% (83)": 100,
+							"counter inflict poison% (78)": 100,
+							"counter inflict sick% (80)": 100,
+							"counter inflict weaken% (79)": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 50,
+							"bc fill when attacked low": 50,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"atk% buff (1)": 200,
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "5",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 1000,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 100,
+							"counter inflict injury% (81)": 100,
+							"counter inflict paralysis% (83)": 100,
+							"counter inflict poison% (78)": 100,
+							"counter inflict sick% (80)": 100,
+							"counter inflict weaken% (79)": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 50,
+							"bc fill when attacked low": 50,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"atk% buff (1)": 200,
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "5",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 1000,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 100,
+							"counter inflict injury% (81)": 100,
+							"counter inflict paralysis% (83)": 100,
+							"counter inflict poison% (78)": 100,
+							"counter inflict sick% (80)": 100,
+							"counter inflict weaken% (79)": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 50,
+							"bc fill when attacked low": 50,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"atk% buff (1)": 200,
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "5",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 1000,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 100,
+							"counter inflict injury% (81)": 100,
+							"counter inflict paralysis% (83)": 100,
+							"counter inflict poison% (78)": 100,
+							"counter inflict sick% (80)": 100,
+							"counter inflict weaken% (79)": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 50,
+							"bc fill when attacked low": 50,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"atk% buff (1)": 200,
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "5",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 1000,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"counter inflict ailment turns": 3,
+							"counter inflict curse% (82)": 100,
+							"counter inflict injury% (81)": 100,
+							"counter inflict paralysis% (83)": 100,
+							"counter inflict poison% (78)": 100,
+							"counter inflict sick% (80)": 100,
+							"counter inflict weaken% (79)": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "53",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 50,
+							"bc fill when attacked low": 50,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"atk% buff (1)": 200,
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "5",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 21,
+			"name": "Ravana Funeral Pyre"
 		}
 	},
 	"10293": {
@@ -69371,7 +70726,7 @@
 			}
 		],
 		"bb": {
-			"desc": "敵全体に強力な炎属性１０連ダメージ＆味方全体のＨＰを回復＆３ターン防御力をアップ",
+			"desc": "MST_SKILLS_10695_DESCRIPTION",
 			"hit dmg% distribution": [
 				12,
 				8,
@@ -69700,11 +71055,11 @@
 				}
 			],
 			"max bc generated": 10,
-			"name": "煉刻参り"
+			"name": "MST_SKILLS_10695_NAME"
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-09-29T16:25:19.000Z",
-			"updatedAt": "2015-10-06T03:45:35.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 10690,
 		"cost": 29,
@@ -69760,7 +71115,7 @@
 		"name": "MST_UNIT_10695_NAME",
 		"rarity": 6,
 		"sbb": {
-			"desc": "敵全体に強力な炎属性１４連ダメージ＆３ターン味方全体の攻撃力をアップ＆クリティカル率をアップ",
+			"desc": "MST_SKILLS_110695_DESCRIPTION",
 			"hit dmg% distribution": [
 				10,
 				7,
@@ -70013,7 +71368,7 @@
 				}
 			],
 			"max bc generated": 14,
-			"name": "天鬼道『蒼の狐火』"
+			"name": "MST_SKILLS_110695_NAME"
 		},
 		"sell caution": false,
 		"stats": {
@@ -70053,7 +71408,7 @@
 			}
 		],
 		"bb": {
-			"desc": "敵全体に強力な炎属性１２連ダメージ＆味方全体のＨＰを回復＆３ターン防御力をアップ",
+			"desc": "MST_SKILLS_10696_DESCRIPTION",
 			"hit dmg% distribution": [
 				11,
 				7,
@@ -70384,11 +71739,11 @@
 				}
 			],
 			"max bc generated": 12,
-			"name": "煉葬火祀り"
+			"name": "MST_SKILLS_10696_NAME"
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-09-29T16:25:19.000Z",
-			"updatedAt": "2015-12-04T07:58:12.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 10690,
 		"cost": 40,
@@ -70464,7 +71819,7 @@
 		},
 		"rarity": 7,
 		"sbb": {
-			"desc": "敵全体に強力な炎属性１６連ダメージ＆３ターン味方全体の攻撃力をアップ＆クリティカル率をアップ",
+			"desc": "MST_SKILLS_110696_DESCRIPTION",
 			"hit dmg% distribution": [
 				10,
 				6,
@@ -70719,7 +72074,7 @@
 				}
 			],
 			"max bc generated": 16,
-			"name": "天鬼道『破討の雙炎』"
+			"name": "MST_SKILLS_110696_NAME"
 		},
 		"sell caution": false,
 		"stats": {
@@ -70737,7 +72092,7 @@
 			}
 		},
 		"ubb": {
-			"desc": "敵全体に超強力な炎属性２１連ダメージ＆３ターン味方全体のＨＰを全回復＆攻撃力と防御力を大アップ",
+			"desc": "MST_SKILLS_210696_DESCRIPTION",
 			"hit dmg% distribution": [
 				8,
 				4,
@@ -71097,7 +72452,7 @@
 				}
 			],
 			"max bc generated": 21,
-			"name": "天輪奉印"
+			"name": "MST_SKILLS_210696_NAME"
 		}
 	},
 	"10704": {
@@ -72151,7 +73506,7 @@
 			}
 		],
 		"bb": {
-			"desc": "敵全体に強力な炎属性１３連ダメージ＆３ターンの間、味方全体のＢＢゲージを徐々に増加＆ＢＣ・ＨＣ出現率をアップ",
+			"desc": "MST_SKILLS_10715_DESCRIPTION",
 			"hit dmg% distribution": [
 				6,
 				4,
@@ -72473,11 +73828,11 @@
 				}
 			],
 			"max bc generated": 13,
-			"name": "ランブルエッジ"
+			"name": "MST_SKILLS_10715_NAME"
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-09-29T16:25:19.000Z",
-			"updatedAt": "2015-10-06T03:45:35.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 10710,
 		"cost": 29,
@@ -72533,7 +73888,7 @@
 		"name": "MST_UNIT_10715_NAME",
 		"rarity": 6,
 		"sbb": {
-			"desc": "敵全体に強力な炎属性１７連ダメージ＆３ターンの間、味方全体に被ダメージ時にＢＢゲージを上昇する効果を付与＆ＢＣ・ＨＣ・アイテム出現率をアップ",
+			"desc": "MST_SKILLS_110715_DESCRIPTION",
 			"hit dmg% distribution": [
 				6,
 				4,
@@ -72889,7 +74244,7 @@
 				}
 			],
 			"max bc generated": 17,
-			"name": "ビザーレイズ"
+			"name": "MST_SKILLS_110715_NAME"
 		},
 		"sell caution": false,
 		"stats": {
@@ -72929,7 +74284,7 @@
 			}
 		],
 		"bb": {
-			"desc": "敵全体に強力な炎属性１６連ダメージ＆３ターンの間、味方全体のＢＢゲージを徐々に増加＆ＢＣ・ＨＣ出現率をアップ",
+			"desc": "MST_SKILLS_10716_DESCRIPTION",
 			"hit dmg% distribution": [
 				6,
 				3,
@@ -73254,11 +74609,11 @@
 				}
 			],
 			"max bc generated": 16,
-			"name": "ドラグローム"
+			"name": "MST_SKILLS_10716_NAME"
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-09-29T16:25:19.000Z",
-			"updatedAt": "2015-12-04T07:58:12.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 10710,
 		"cost": 40,
@@ -73335,7 +74690,7 @@
 		},
 		"rarity": 7,
 		"sbb": {
-			"desc": "敵全体に強力な炎属性１９連ダメージ＆３ターンの間、味方全体に被ダメージ時にＢＢゲージを上昇する効果を付与＆ＢＣ・ＨＣ・アイテム出現率をアップ",
+			"desc": "MST_SKILLS_110716_DESCRIPTION",
 			"hit dmg% distribution": [
 				6,
 				3,
@@ -73693,7 +75048,7 @@
 				}
 			],
 			"max bc generated": 19,
-			"name": "トライアンフレイズ"
+			"name": "MST_SKILLS_110716_NAME"
 		},
 		"sell caution": false,
 		"stats": {
@@ -73711,7 +75066,7 @@
 			}
 		},
 		"ubb": {
-			"desc": "敵全体に超強力な炎属性２２連ダメージ＆３ターン味方全体の通常攻撃ＨＩＴ数をアップ＆ＢＣ・ＨＣ・アイテム出現率をアップ",
+			"desc": "MST_SKILLS_210716_DESCRIPTION",
 			"hit dmg% distribution": [
 				6,
 				3,
@@ -74062,7 +75417,617 @@
 				}
 			],
 			"max bc generated": 22,
-			"name": "ラスト・ログ"
+			"name": "MST_SKILLS_210716_NAME"
+		}
+	},
+	"10721": {
+		"ai": [
+			{
+				"action": "skill",
+				"chance%": 60,
+				"target conditions": "hp_50pr_over",
+				"target type": "enemy"
+			},
+			{
+				"action": "skill",
+				"chance%": 20,
+				"target conditions": "random",
+				"target type": "enemy"
+			},
+			{
+				"action": "attack",
+				"chance%": 100,
+				"target conditions": "random",
+				"target type": "enemy"
+			}
+		],
+		"bb": {
+			"desc": "6 combo Fire attack on single foe & slightly boosts BB gauge fill rate for 3 turns",
+			"hit dmg% distribution": [
+				15,
+				10,
+				35,
+				20,
+				10,
+				10
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 6,
+			"id": "10721",
+			"levels": [
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 10,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 110,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 10,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 120,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 10,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 130,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 10,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 140,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 10,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 150,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 10,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 160,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 10,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 170,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 10,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 180,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 10,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 190,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 10,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 12,
+			"name": "Flame Tail"
+		},
+		"bfmtMetadata": {
+			"createdAt": "2015-12-30T09:59:43.000Z",
+			"updatedAt": "2016-01-15T05:35:32.000Z"
+		},
+		"category": 10720,
+		"cost": 4,
+		"element": "fire",
+		"exp_pattern": 15,
+		"gender": "other",
+		"getting type": "not eligible for achievement",
+		"guide_id": 1158,
+		"hit dmg% distribution": [
+			35,
+			45,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3,
+		"id": 10721,
+		"imp": {
+			"max atk": "120",
+			"max def": "120",
+			"max hp": "300",
+			"max rec": "120"
+		},
+		"kind": "normal",
+		"leader skill": {
+			"desc": "クリティカル時、ＢＢケージを少し上昇",
+			"effects": [
+				{
+					"bc fill on crit max": 3,
+					"bc fill on crit min": 2,
+					"bc fill on crit%": 100,
+					"passive id": "65"
+				}
+			],
+			"id": "10200",
+			"name": "闘輝神の刃"
+		},
+		"lord damage range": "848~948",
+		"max bc generated": 6,
+		"name": "MST_UNIT_10721_NAME",
+		"rarity": 2,
+		"sell caution": false,
+		"stats": {
+			"_base": {
+				"atk": 660,
+				"def": 329,
+				"hp": 1480,
+				"rec": 249
+			},
+			"_lord": {
+				"atk": 912,
+				"def": 554,
+				"hp": 2402,
+				"rec": 643
+			}
+		}
+	},
+	"10722": {
+		"ai": [
+			{
+				"action": "skill",
+				"chance%": 60,
+				"target conditions": "hp_50pr_over",
+				"target type": "enemy"
+			},
+			{
+				"action": "skill",
+				"chance%": 20,
+				"target conditions": "random",
+				"target type": "enemy"
+			},
+			{
+				"action": "attack",
+				"chance%": 100,
+				"target conditions": "random",
+				"target type": "enemy"
+			}
+		],
+		"bb": {
+			"desc": "8 combo Fire attack on single foe & slightly boosts BB gauge fill rate for 3 turns",
+			"hit dmg% distribution": [
+				10,
+				10,
+				10,
+				10,
+				26,
+				18,
+				10,
+				6
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 8,
+			"id": "10722",
+			"levels": [
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 160,
+							"bb flat atk": 50,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 170,
+							"bb flat atk": 50,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 180,
+							"bb flat atk": 50,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 190,
+							"bb flat atk": 50,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 200,
+							"bb flat atk": 50,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 210,
+							"bb flat atk": 50,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 220,
+							"bb flat atk": 50,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 230,
+							"bb flat atk": 50,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 240,
+							"bb flat atk": 50,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 12,
+					"effects": [
+						{
+							"bb atk%": 250,
+							"bb flat atk": 50,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "single",
+							"target type": "enemy"
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 16,
+			"name": "Burning Clout"
+		},
+		"bfmtMetadata": {
+			"createdAt": "2015-12-30T09:59:43.000Z",
+			"updatedAt": "2016-01-15T05:35:32.000Z"
+		},
+		"category": 10720,
+		"cost": 6,
+		"element": "fire",
+		"exp_pattern": 15,
+		"gender": "other",
+		"getting type": "farmable",
+		"guide_id": 1159,
+		"hit dmg% distribution": [
+			15,
+			15,
+			15,
+			15,
+			40
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5,
+		"id": 10722,
+		"imp": {
+			"max atk": "160",
+			"max def": "160",
+			"max hp": "400",
+			"max rec": "160"
+		},
+		"kind": "normal",
+		"leader skill": {
+			"desc": "クリティカル時、ＢＢケージを少し上昇",
+			"effects": [
+				{
+					"bc fill on crit max": 3,
+					"bc fill on crit min": 2,
+					"bc fill on crit%": 100,
+					"passive id": "65"
+				}
+			],
+			"id": "10200",
+			"name": "闘輝神の刃"
+		},
+		"lord damage range": "1056~1180",
+		"max bc generated": 10,
+		"name": "MST_UNIT_10722_NAME",
+		"rarity": 3,
+		"sell caution": false,
+		"stats": {
+			"_base": {
+				"atk": 761,
+				"def": 532,
+				"hp": 2144,
+				"rec": 478
+			},
+			"_lord": {
+				"atk": 1135,
+				"def": 824,
+				"hp": 3113,
+				"rec": 740
+			}
 		}
 	},
 	"10734": {
@@ -76530,6 +78495,886 @@
 			"name": "Supremacy: Cardinal Gene"
 		}
 	},
+	"10743": {
+		"ai": [
+			{
+				"action": "skill",
+				"chance%": 60,
+				"target conditions": "hp_50pr_over",
+				"target type": "enemy"
+			},
+			{
+				"action": "skill",
+				"chance%": 20,
+				"target conditions": "random",
+				"target type": "enemy"
+			},
+			{
+				"action": "attack",
+				"chance%": 100,
+				"target conditions": "random",
+				"target type": "enemy"
+			}
+		],
+		"bb": {
+			"desc": "8 combo powerful Fire attack on all foes, boosts BB Atk for 3 turns & boosts BB gauge fill rate",
+			"hit dmg% distribution": [
+				15,
+				8,
+				5,
+				15,
+				8,
+				5,
+				30,
+				14
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 8,
+			"id": "10743",
+			"levels": [
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 110,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 20,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 20,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 20
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 115,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 22,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 22,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 22
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 120,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 24,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 24,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 24
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 125,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 26,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 26,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 26
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 130,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 28,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 28,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 28
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 135,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 30,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 30,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 30
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 140,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 32,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 32,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 32
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 145,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 34,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 34,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 34
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 150,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 36,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 36,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 36
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 20,
+					"effects": [
+						{
+							"bb atk%": 160,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 40,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 40,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 40
+						},
+						{
+							"bb gauge fill rate% buff": 15,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 8,
+			"name": "Ardent Arts"
+		},
+		"bfmtMetadata": {
+			"createdAt": "2015-12-30T09:59:43.000Z",
+			"updatedAt": "2016-01-15T05:35:32.000Z"
+		},
+		"category": 10740,
+		"cost": 10,
+		"dictionary": {
+			"description": "A mock Unit based on Elise, the young receptionist in charge of handling the Raid requests from the Akras Summoners' Hall. Though she no longer fights on the field, Elise was once the vice-commander of the \"Silver Knights,\" the 21st Division of the Demon Slayers. Noah, the commander of the Silver Knights, thought very highly of Elise's abilities, and considered her his most trusted ally and advisor. Unlike him, however, Elise paid a lot more attention to minor details, which earned her the trust of her comrades as well.",
+			"fusion": "In return for this power,<br>I'll do my very best.<br>Although I don't really know<br>how much use I'll be...",
+			"summon": "Are you here to accept a mission?<br>What?! I've been summoned?!<br>Do you really think I can help?"
+		},
+		"element": "fire",
+		"evolution": {
+			"cost": 200000,
+			"mats": [
+				{
+					"id": "10133",
+					"name": "Fire Totem",
+					"type": "unit"
+				},
+				{
+					"id": "10191",
+					"name": "Fire Pot",
+					"type": "unit"
+				},
+				{
+					"id": "10191",
+					"name": "Fire Pot",
+					"type": "unit"
+				},
+				{
+					"id": "10191",
+					"name": "Fire Pot",
+					"type": "unit"
+				},
+				{
+					"id": "10132",
+					"name": "Fire Idol",
+					"type": "unit"
+				}
+			],
+			"next": "10744"
+		},
+		"exp_pattern": 20,
+		"gender": "female",
+		"getting type": "farmable",
+		"guide_id": 1108,
+		"hit dmg% distribution": [
+			20,
+			10,
+			20,
+			10,
+			40
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5,
+		"id": 10743,
+		"imp": {
+			"max atk": "200",
+			"max def": "120",
+			"max hp": "400",
+			"max rec": "160"
+		},
+		"kind": "normal",
+		"leader skill": {
+			"desc": "15% boost to Atk & boosts BB Atk",
+			"effects": [
+				{
+					"atk% buff": 15,
+					"passive id": "1"
+				},
+				{
+					"bb atk% buff": 50,
+					"passive id": "64",
+					"sbb atk% buff": 50,
+					"ubb atk% buff": 50
+				}
+			],
+			"id": "9800",
+			"name": "Silver Knights' Crest"
+		},
+		"lord damage range": "1145~1279",
+		"max bc generated": 10,
+		"name": "Elise",
+		"rarity": 4,
+		"sell caution": true,
+		"stats": {
+			"_base": {
+				"atk": 923,
+				"def": 859,
+				"hp": 2964,
+				"rec": 800
+			},
+			"_lord": {
+				"atk": 1230,
+				"def": 1145,
+				"hp": 4252,
+				"rec": 1066
+			}
+		}
+	},
+	"10744": {
+		"ai": [
+			{
+				"action": "skill",
+				"chance%": 60,
+				"target conditions": "hp_50pr_over",
+				"target type": "enemy"
+			},
+			{
+				"action": "skill",
+				"chance%": 20,
+				"target conditions": "random",
+				"target type": "enemy"
+			},
+			{
+				"action": "attack",
+				"chance%": 100,
+				"target conditions": "random",
+				"target type": "enemy"
+			}
+		],
+		"bb": {
+			"desc": "10 combo powerful Fire attack on all foes, boosts BB Atk for 3 turns & boosts BB gauge fill rate",
+			"hit dmg% distribution": [
+				13,
+				7,
+				5,
+				3,
+				13,
+				7,
+				5,
+				3,
+				30,
+				14
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 10,
+			"id": "10744",
+			"levels": [
+				{
+					"bc cost": 22,
+					"effects": [
+						{
+							"bb atk%": 130,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 30,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 30,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 30
+						},
+						{
+							"bb gauge fill rate% buff": 20,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 22,
+					"effects": [
+						{
+							"bb atk%": 135,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 32,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 32,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 32
+						},
+						{
+							"bb gauge fill rate% buff": 20,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 22,
+					"effects": [
+						{
+							"bb atk%": 140,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 34,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 34,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 34
+						},
+						{
+							"bb gauge fill rate% buff": 20,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 22,
+					"effects": [
+						{
+							"bb atk%": 145,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 36,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 36,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 36
+						},
+						{
+							"bb gauge fill rate% buff": 20,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 22,
+					"effects": [
+						{
+							"bb atk%": 150,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 38,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 38,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 38
+						},
+						{
+							"bb gauge fill rate% buff": 20,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 22,
+					"effects": [
+						{
+							"bb atk%": 155,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 40,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 40,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 40
+						},
+						{
+							"bb gauge fill rate% buff": 20,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 22,
+					"effects": [
+						{
+							"bb atk%": 160,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 42,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 42,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 42
+						},
+						{
+							"bb gauge fill rate% buff": 20,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 22,
+					"effects": [
+						{
+							"bb atk%": 165,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 44,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 44,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 44
+						},
+						{
+							"bb gauge fill rate% buff": 20,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 22,
+					"effects": [
+						{
+							"bb atk%": 170,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 46,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 46,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 46
+						},
+						{
+							"bb gauge fill rate% buff": 20,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 22,
+					"effects": [
+						{
+							"bb atk%": 180,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"bb atk% buff": 50,
+							"buff turns (72)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "45",
+							"sbb atk% buff": 50,
+							"target area": "aoe",
+							"target type": "party",
+							"ubb atk% buff": 50
+						},
+						{
+							"bb gauge fill rate% buff": 20,
+							"buff turns (77)": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "52",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 10,
+			"name": "Vermilion Arts"
+		},
+		"bfmtMetadata": {
+			"createdAt": "2015-12-30T09:59:43.000Z",
+			"updatedAt": "2016-01-15T05:35:32.000Z"
+		},
+		"category": 10740,
+		"cost": 15,
+		"dictionary": {
+			"description": "A mock Unit based on Elise. Elise's abilities as a Summoner grew immensely during her time as vice-commander, until injuries from an altercation with a certain demon forced her to retire. Noah, the commander of the Silver Knights, then began having problems with his men after Elise's absence, which only served to remind him of the importance of her role in the division. Unfortunately, this mock Unit is based on Elise's currently diminished abilities, as Noel believes that one's real power can only be claimed by oneself.",
+			"evolution": "Oh, it looks like I've changed!<br>And maybe got a bit stronger, too.<br>I think I may be able to help now!",
+			"fusion": "I don't know what this is,<br>but it feels nice!<br>It's like I'm becoming stronger...<br>I feel like I can work harder now!",
+			"summon": "Who do you take me for?<br>I won't let neither you nor Noel<br>get away with anything weird!"
+		},
+		"element": "fire",
+		"evolution": {
+			"prev": "10743"
+		},
+		"exp_pattern": 20,
+		"gender": "female",
+		"getting type": "farmable",
+		"guide_id": 1109,
+		"hit dmg% distribution": [
+			15,
+			8,
+			15,
+			8,
+			40,
+			14
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6,
+		"id": 10744,
+		"imp": {
+			"max atk": "260",
+			"max def": "140",
+			"max hp": "500",
+			"max rec": "200"
+		},
+		"kind": "normal",
+		"leader skill": {
+			"desc": "30% boost to Atk & greatly boosts BB Atk",
+			"effects": [
+				{
+					"atk% buff": 30,
+					"passive id": "1"
+				},
+				{
+					"bb atk% buff": 100,
+					"passive id": "64",
+					"sbb atk% buff": 100,
+					"ubb atk% buff": 100
+				}
+			],
+			"id": "9801",
+			"name": "Silver Knights' Memories"
+		},
+		"lord damage range": "1396~1560",
+		"max bc generated": 12,
+		"name": "Informant Elise",
+		"rarity": 5,
+		"sell caution": true,
+		"stats": {
+			"_base": {
+				"atk": 1107,
+				"def": 1031,
+				"hp": 3557,
+				"rec": 959
+			},
+			"_lord": {
+				"atk": 1500,
+				"def": 1400,
+				"hp": 5205,
+				"rec": 1300
+			}
+		}
+	},
 	"10754": {
 		"ai": [
 			{
@@ -78994,6 +81839,2952 @@
 			],
 			"max bc generated": 22,
 			"name": "Final Soul Breaker"
+		}
+	},
+	"10774": {
+		"ai": [
+			{
+				"action": "skill",
+				"chance%": 60,
+				"target conditions": "hp_50pr_over",
+				"target type": "enemy"
+			},
+			{
+				"action": "skill",
+				"chance%": 20,
+				"target conditions": "random",
+				"target type": "enemy"
+			},
+			{
+				"action": "attack",
+				"chance%": 100,
+				"target conditions": "random",
+				"target type": "enemy"
+			}
+		],
+		"bb": {
+			"desc": "9 combo powerful Fire attack on all foes, gradually restores HP and BB gauge for 3 turns & slightly boosts BB gauge",
+			"hit dmg% distribution": [
+				8,
+				5,
+				5,
+				20,
+				20,
+				15,
+				15,
+				6,
+				6
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 9,
+			"id": "10774",
+			"levels": [
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 150,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1700,
+							"gradual heal low": 1400,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 4,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 5,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 160,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1730,
+							"gradual heal low": 1430,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 4,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 5,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 170,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1760,
+							"gradual heal low": 1460,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 4,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 5,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 180,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1790,
+							"gradual heal low": 1490,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 4,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 5,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 190,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1820,
+							"gradual heal low": 1520,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 4,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 5,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1850,
+							"gradual heal low": 1550,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 4,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 5,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 210,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1880,
+							"gradual heal low": 1580,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 4,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 5,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 220,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1910,
+							"gradual heal low": 1610,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 4,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 5,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 230,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1940,
+							"gradual heal low": 1640,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 4,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 5,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 250,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2000,
+							"gradual heal low": 1700,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 4,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 5,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 9,
+			"name": "Lava Beast: Claw"
+		},
+		"bfmtMetadata": {
+			"createdAt": "2015-12-30T09:59:43.000Z",
+			"updatedAt": "2016-01-15T05:35:32.000Z"
+		},
+		"category": 10770,
+		"cost": 20,
+		"dictionary": {
+			"description": "The empress of the rising Agni Empire. Vermilion is known as the heroine who continuously invaded other countries in order to expand the reach of her empire. Not only are her achievements recorded in Agni's history, but stories of her exploits have spread all over the land over centuries, making her a very popular character to this day. Though she was the monarch of her nation, Vermilion was a powerful warrior mage who always fought in the frontlines alongside a beast she had conjured from hot lava, which always accompanied her. The very sight of her is said to have struck fear in the hearts of her enemies, but inspired unwavering trust from her allies.",
+			"fusion": "You seem unhappy.<br>Pledge yourself to me.<br>I promise not to do you any harm.",
+			"summon": "You shall obey me.<br>And if you do, I shall love you.<br>He he... What a fool."
+		},
+		"element": "fire",
+		"evolution": {
+			"cost": 500000,
+			"mats": [
+				{
+					"id": "50354",
+					"name": "Miracle Totem",
+					"type": "unit"
+				},
+				{
+					"id": "10133",
+					"name": "Fire Totem",
+					"type": "unit"
+				},
+				{
+					"id": "10133",
+					"name": "Fire Totem",
+					"type": "unit"
+				},
+				{
+					"id": "10191",
+					"name": "Fire Pot",
+					"type": "unit"
+				},
+				{
+					"id": "60224",
+					"name": "Metal Mimic",
+					"type": "unit"
+				}
+			],
+			"next": "10775"
+		},
+		"exp_pattern": 20,
+		"gender": "female",
+		"getting type": "rare summon",
+		"guide_id": 1176,
+		"hit dmg% distribution": [
+			10,
+			5,
+			5,
+			25,
+			25,
+			15,
+			15
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7,
+		"id": 10774,
+		"imp": {
+			"max atk": "200",
+			"max def": "200",
+			"max hp": "500",
+			"max rec": "200"
+		},
+		"kind": "normal",
+		"leader skill": {
+			"desc": "Damage taken slightly boosts BB gauge and may slightly restore HP",
+			"effects": [
+				{
+					"dmg% to hp% when attacked chance%": 30,
+					"dmg% to hp% when attacked high": 20,
+					"dmg% to hp% when attacked low": 20,
+					"passive id": "24"
+				},
+				{
+					"bc fill when attacked high": 4,
+					"bc fill when attacked low": 2,
+					"bc fill when attacked%": 100,
+					"passive id": "25"
+				}
+			],
+			"id": "10600",
+			"name": "Crowned Phoenix's Waking"
+		},
+		"lord damage range": "1838~2054",
+		"max bc generated": 21,
+		"name": "Lava Beast Vermilion",
+		"rarity": 5,
+		"sell caution": false,
+		"stats": {
+			"_base": {
+				"atk": 1481,
+				"def": 1238,
+				"hp": 3590,
+				"rec": 1144
+			},
+			"_lord": {
+				"atk": 1975,
+				"def": 1651,
+				"hp": 5087,
+				"rec": 1525
+			}
+		}
+	},
+	"10775": {
+		"ai": [
+			{
+				"action": "skill",
+				"chance%": 60,
+				"target conditions": "hp_50pr_over",
+				"target type": "enemy"
+			},
+			{
+				"action": "skill",
+				"chance%": 20,
+				"target conditions": "random",
+				"target type": "enemy"
+			},
+			{
+				"action": "attack",
+				"chance%": 100,
+				"target conditions": "random",
+				"target type": "enemy"
+			}
+		],
+		"bb": {
+			"desc": "11 combo powerful Fire attack on all foes, gradually restores HP and BB gauge for 3 turns & slightly boosts BB gauge",
+			"hit dmg% distribution": [
+				7,
+				4,
+				4,
+				4,
+				18,
+				16,
+				15,
+				14,
+				6,
+				6,
+				6
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 11,
+			"id": "10775",
+			"levels": [
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 170,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1900,
+							"gradual heal low": 1500,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 180,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1930,
+							"gradual heal low": 1530,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 190,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1960,
+							"gradual heal low": 1560,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 1990,
+							"gradual heal low": 1590,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 210,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2020,
+							"gradual heal low": 1620,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 220,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2050,
+							"gradual heal low": 1650,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 230,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2080,
+							"gradual heal low": 1680,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 240,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2110,
+							"gradual heal low": 1710,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 250,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2140,
+							"gradual heal low": 1740,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 270,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2200,
+							"gradual heal low": 1800,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 11,
+			"name": "Lava Beast: Steel Claw"
+		},
+		"bfmtMetadata": {
+			"createdAt": "2015-12-30T09:59:43.000Z",
+			"updatedAt": "2016-01-15T05:35:32.000Z"
+		},
+		"category": 10770,
+		"cost": 30,
+		"dictionary": {
+			"description": "The empress of the rising Agni Empire. The following year after ancient Vriksha suffered from a terrible plague, Vermilion built an army to search for fertile land in which to grow crops for her empire. However, her troops encountered a demon during one of their marches and were crushed by its immense power, along with the hopes of the empress. It is said that Vermilion ordered her forces to retreat while she remained behind, fighting the demon until every single one of her men had escaped.",
+			"evolution": "This is like preparation for battle.<br>I can feel my blood boiling.<br>I'm quite excited, you know.",
+			"fusion": "So you've gotten used to serving me.<br>Well, I dare say that you are now<br>my third most trusted servant.",
+			"summon": "Your enemies are demons?<br>Then I shall help you...<br>I will turn them to ashes!"
+		},
+		"element": "fire",
+		"evolution": {
+			"cost": 1500000,
+			"mats": [
+				{
+					"id": "10354",
+					"name": "Fire Mecha God",
+					"type": "unit"
+				},
+				{
+					"id": "50354",
+					"name": "Miracle Totem",
+					"type": "unit"
+				},
+				{
+					"id": "10133",
+					"name": "Fire Totem",
+					"type": "unit"
+				},
+				{
+					"id": "60224",
+					"name": "Metal Mimic",
+					"type": "unit"
+				},
+				{
+					"id": "60224",
+					"name": "Metal Mimic",
+					"type": "unit"
+				}
+			],
+			"next": "10776",
+			"prev": "10774"
+		},
+		"exp_pattern": 20,
+		"gender": "female",
+		"getting type": "rare summon",
+		"guide_id": 1177,
+		"hit dmg% distribution": [
+			16,
+			12,
+			20,
+			20,
+			10,
+			10,
+			6,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8,
+		"id": 10775,
+		"imp": {
+			"max atk": "300",
+			"max def": "300",
+			"max hp": "750",
+			"max rec": "300"
+		},
+		"kind": "normal",
+		"leader skill": {
+			"desc": "Damage taken boosts BB gauge and may restore HP",
+			"effects": [
+				{
+					"dmg% to hp% when attacked chance%": 40,
+					"dmg% to hp% when attacked high": 20,
+					"dmg% to hp% when attacked low": 20,
+					"passive id": "24"
+				},
+				{
+					"bc fill when attacked high": 5,
+					"bc fill when attacked low": 3,
+					"bc fill when attacked%": 100,
+					"passive id": "25"
+				}
+			],
+			"id": "10601",
+			"name": "Divine Phoenix's Waking"
+		},
+		"lord damage range": "2240~2502",
+		"max bc generated": 32,
+		"name": "Fiend Master Vermilion",
+		"rarity": 6,
+		"sbb": {
+			"desc": "14 combo powerful Fire attack on all foes (damage relative to remaining HP), gradually restores HP and BB gauge for 3 turns & boosts BB gauge",
+			"hit dmg% distribution": [
+				7,
+				4,
+				4,
+				4,
+				4,
+				4,
+				17,
+				13,
+				10,
+				8,
+				7,
+				6,
+				6,
+				6
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 14,
+			"id": "110775",
+			"levels": [
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 80,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2300,
+							"gradual heal low": 1800,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 13,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 90,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2350,
+							"gradual heal low": 1850,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 13.200000000000001,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 100,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2400,
+							"gradual heal low": 1900,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 13.4,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 110,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2450,
+							"gradual heal low": 1950,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 13.599999999999998,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 120,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2500,
+							"gradual heal low": 2000,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 13.799999999999999,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 130,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2550,
+							"gradual heal low": 2050,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 14,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 140,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2600,
+							"gradual heal low": 2100,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 14.2,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 150,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2650,
+							"gradual heal low": 2150,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 14.399999999999999,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 160,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2700,
+							"gradual heal low": 2200,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 14.6,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 180,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2800,
+							"gradual heal low": 2300,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 15,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 6,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 14,
+			"name": "Cross Crime"
+		},
+		"sell caution": false,
+		"stats": {
+			"_base": {
+				"atk": 1778,
+				"def": 1486,
+				"hp": 4308,
+				"rec": 1373
+			},
+			"_lord": {
+				"atk": 2406,
+				"def": 1996,
+				"hp": 6234,
+				"rec": 1864
+			}
+		}
+	},
+	"10776": {
+		"ai": [
+			{
+				"action": "skill",
+				"chance%": 60,
+				"target conditions": "hp_50pr_over",
+				"target type": "enemy"
+			},
+			{
+				"action": "skill",
+				"chance%": 20,
+				"target conditions": "random",
+				"target type": "enemy"
+			},
+			{
+				"action": "attack",
+				"chance%": 100,
+				"target conditions": "random",
+				"target type": "enemy"
+			}
+		],
+		"bb": {
+			"desc": "15 combo powerful Fire attack on all foes, gradually restores HP and BB gauge for 3 turns & slightly boosts BB gauge",
+			"hit dmg% distribution": [
+				6,
+				4,
+				4,
+				3,
+				3,
+				3,
+				15,
+				13,
+				10,
+				8,
+				7,
+				6,
+				6,
+				6,
+				6
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 15,
+			"id": "10776",
+			"levels": [
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2200,
+							"gradual heal low": 1700,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 210,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2230,
+							"gradual heal low": 1730,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 220,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2260,
+							"gradual heal low": 1760,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 230,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2290,
+							"gradual heal low": 1790,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 240,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2320,
+							"gradual heal low": 1820,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 250,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2350,
+							"gradual heal low": 1850,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 260,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2380,
+							"gradual heal low": 1880,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 270,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2410,
+							"gradual heal low": 1910,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 280,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2440,
+							"gradual heal low": 1940,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 300,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2500,
+							"gradual heal low": 2000,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 5,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge": 6,
+							"proc id": "31",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 15,
+			"name": "Lava Beast: Imperial Fury"
+		},
+		"bfmtMetadata": {
+			"createdAt": "2015-12-30T09:59:43.000Z",
+			"updatedAt": "2016-01-15T05:35:32.000Z"
+		},
+		"category": 10770,
+		"cost": 42,
+		"dictionary": {
+			"description": "Research conducted in Grand Gaia during recent years has uncovered more information regarding this legendary empress. According to a story written on ancient parchment, Vermilion found herself mostly on the defensive during her battle against the demon which had attacked her troops. Nonetheless, being a talented and instinctive warrior, the empress was able to outmaneuver the demon and awaken her true power during the struggle. It is written that after this took place, Vermilion was finally able to face her opponent on the same level, making for a fair fight. However, this account differs greatly from her supposed glorious victory previously recorded in Agni's history.",
+			"evolution": "Ahh... Another adrenaline rush...<br>But I can still fight...<br>This battle shall never end...",
+			"fusion": "You are adorable.<br>Come closer.<br>There is no need for restraint.",
+			"summon": "No defeats shall tarnish my name.<br>My actions are justice.<br>My words are fact."
+		},
+		"element": "fire",
+		"evolution": {
+			"prev": "10775"
+		},
+		"exp_pattern": 20,
+		"extra skill": {
+			"desc": "Probable slight HP recovery and probable BB gauge boost when attacked",
+			"effects": [
+				{
+					"conditions": [],
+					"dmg% to hp% when attacked chance%": 25,
+					"dmg% to hp% when attacked high": 20,
+					"dmg% to hp% when attacked low": 20,
+					"passive id": "24"
+				},
+				{
+					"bc fill when attacked high": 5,
+					"bc fill when attacked low": 3,
+					"bc fill when attacked%": 50,
+					"conditions": [],
+					"passive id": "25"
+				}
+			],
+			"id": "9700",
+			"name": "Proud Aspirations",
+			"target": "self"
+		},
+		"gender": "female",
+		"getting type": "rare summon",
+		"guide_id": 1178,
+		"hit dmg% distribution": [
+			10,
+			7,
+			7,
+			5,
+			5,
+			18,
+			18,
+			9,
+			9,
+			6,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11,
+		"id": 10776,
+		"imp": {
+			"max atk": "440",
+			"max def": "440",
+			"max hp": "1100",
+			"max rec": "440"
+		},
+		"kind": "normal",
+		"leader skill": {
+			"desc": "Restores HP and BB gauge each turn & damage taken boosts BB gauge and may restore HP",
+			"effects": [
+				{
+					"passive id": "33",
+					"rec% added (turn heal)": 10,
+					"turn heal high": 800,
+					"turn heal low": 600
+				},
+				{
+					"bc fill per turn": 4,
+					"passive id": "9"
+				},
+				{
+					"dmg% to hp% when attacked chance%": 40,
+					"dmg% to hp% when attacked high": 25,
+					"dmg% to hp% when attacked low": 25,
+					"passive id": "24"
+				},
+				{
+					"bc fill when attacked high": 6,
+					"bc fill when attacked low": 3,
+					"bc fill when attacked%": 100,
+					"passive id": "25"
+				}
+			],
+			"id": "10602",
+			"name": "Auspicious Phoenix's Genesis"
+		},
+		"lord damage range": "2503~2795",
+		"max bc generated": 44,
+		"name": "Rider Empress Vermilion",
+		"overdrive stats": {
+			"atk%": 100,
+			"def%": 100,
+			"rec%": 100
+		},
+		"rarity": 7,
+		"sbb": {
+			"desc": "18 combo powerful Fire attack on all foes (damage relative to remaining HP), gradually restores HP and BB gauge for 3 turns & boosts BB gauge",
+			"hit dmg% distribution": [
+				5,
+				4,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				12,
+				10,
+				9,
+				8,
+				7,
+				6,
+				6,
+				5,
+				5,
+				5
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 18,
+			"id": "110776",
+			"levels": [
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 140,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2500,
+							"gradual heal low": 2000,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 13,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 150,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2550,
+							"gradual heal low": 2050,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 13.200000000000001,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 160,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2600,
+							"gradual heal low": 2100,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 13.4,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 170,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2650,
+							"gradual heal low": 2150,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 13.599999999999998,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 6,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 180,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2700,
+							"gradual heal low": 2200,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 13.799999999999999,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 7,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 5,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 190,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2750,
+							"gradual heal low": 2250,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 14,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 7,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 6,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2800,
+							"gradual heal low": 2300,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 14.2,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 7,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 6,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 210,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2850,
+							"gradual heal low": 2350,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 14.399999999999999,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 7,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 6,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 220,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 2900,
+							"gradual heal low": 2400,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 14.6,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 7,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 6,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb added atk% based on hp": 500,
+							"bb added atk% proportional to hp": "remaining",
+							"bb base atk%": 240,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "47",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"gradual heal high": 3000,
+							"gradual heal low": 2500,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 15,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"increase bb gauge gradual": 7,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"bc fill when attacked high": 7,
+							"bc fill when attacked low": 4,
+							"bc fill when attacked turns (38)": 3,
+							"bc fill when attacked%": 100,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "20",
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 18,
+			"name": "Cross Volcano"
+		},
+		"sell caution": false,
+		"stats": {
+			"_base": {
+				"atk": 2165,
+				"def": 1797,
+				"hp": 5340,
+				"rec": 1678
+			},
+			"_lord": {
+				"atk": 2688,
+				"def": 2253,
+				"hp": 7004,
+				"rec": 2102
+			}
+		},
+		"ubb": {
+			"desc": "22 combo massive Fire attack on all foes, fully restores HP and gradually restores BB gauge for 3 turns & slight probability of raising allies from KO",
+			"hit dmg% distribution": [
+				5,
+				4,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				11,
+				8,
+				7,
+				7,
+				7,
+				6,
+				5,
+				4,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 22,
+			"id": "210776",
+			"levels": [
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb atk%": 1200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"gradual heal high": 99999,
+							"gradual heal low": 98999,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"increase bb gauge gradual": 50,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "66",
+							"revive unit chance%": 33,
+							"revive unit hp%": 100,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb atk%": 1200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"gradual heal high": 99999,
+							"gradual heal low": 98999,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"increase bb gauge gradual": 50,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "66",
+							"revive unit chance%": 33,
+							"revive unit hp%": 100,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb atk%": 1200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"gradual heal high": 99999,
+							"gradual heal low": 98999,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"increase bb gauge gradual": 50,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "66",
+							"revive unit chance%": 33,
+							"revive unit hp%": 100,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb atk%": 1200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"gradual heal high": 99999,
+							"gradual heal low": 98999,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"increase bb gauge gradual": 50,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "66",
+							"revive unit chance%": 33,
+							"revive unit hp%": 100,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb atk%": 1200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"gradual heal high": 99999,
+							"gradual heal low": 98999,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"increase bb gauge gradual": 50,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "66",
+							"revive unit chance%": 33,
+							"revive unit hp%": 100,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb atk%": 1200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"gradual heal high": 99999,
+							"gradual heal low": 98999,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"increase bb gauge gradual": 50,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "66",
+							"revive unit chance%": 33,
+							"revive unit hp%": 100,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb atk%": 1200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"gradual heal high": 99999,
+							"gradual heal low": 98999,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"increase bb gauge gradual": 50,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "66",
+							"revive unit chance%": 33,
+							"revive unit hp%": 100,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb atk%": 1200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"gradual heal high": 99999,
+							"gradual heal low": 98999,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"increase bb gauge gradual": 50,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "66",
+							"revive unit chance%": 33,
+							"revive unit hp%": 100,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb atk%": 1200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"gradual heal high": 99999,
+							"gradual heal low": 98999,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"increase bb gauge gradual": 50,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "66",
+							"revive unit chance%": 33,
+							"revive unit hp%": 100,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 30,
+					"effects": [
+						{
+							"bb atk%": 1200,
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "1",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"gradual heal high": 99999,
+							"gradual heal low": 98999,
+							"gradual heal turns (8)": 3,
+							"proc id": "3",
+							"rec added% (from target)": 10,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "16.7/1",
+							"increase bb gauge gradual": 50,
+							"increase bb gauge gradual turns (37)": 3,
+							"proc id": "19",
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "66",
+							"revive unit chance%": 33,
+							"revive unit hp%": 100,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 22,
+			"name": "Lava Beast: Vermilion"
 		}
 	},
 	"18830": {
@@ -90585,7 +96376,7 @@
 			}
 		],
 		"bb": {
-			"desc": "9 combo powerful Fire attack on all foes & boosts BB gauge",
+			"desc": "12 combo powerful Fire attack on all foes & boosts BB gauge",
 			"hit dmg% distribution": [
 				13,
 				8,
@@ -90810,7 +96601,7 @@
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-10-28T13:11:01.000Z",
-			"updatedAt": "2015-11-06T15:19:47.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 810260,
 		"cost": 15,
@@ -90936,7 +96727,7 @@
 			}
 		],
 		"bb": {
-			"desc": "13 combo powerful Fire attack on all foes & boosts BB gauge",
+			"desc": "16 combo powerful Fire attack on all foes & boosts BB gauge",
 			"hit dmg% distribution": [
 				10,
 				6,
@@ -91165,7 +96956,7 @@
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-10-28T13:11:01.000Z",
-			"updatedAt": "2015-11-06T15:19:47.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 810260,
 		"cost": 25,
@@ -91229,7 +97020,7 @@
 		"name": "Universal Mage Aludra",
 		"rarity": 6,
 		"sbb": {
-			"desc": "15 combo powerful Fire attack on all foes, boosts BB gauge & boosts BB Atk for 3 turns",
+			"desc": "20 combo powerful Fire attack on all foes, boosts BB gauge & boosts BB Atk for 3 turns",
 			"hit dmg% distribution": [
 				8,
 				5,
@@ -94647,12 +100438,12 @@
 					]
 				}
 			],
-			"max bc generated": 12,
+			"max bc generated": 32,
 			"name": "Phoenix Shot"
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-08-13T15:42:33.000Z",
-			"updatedAt": "2015-09-17T03:58:43.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 810520,
 		"cost": 19,
@@ -94724,7 +100515,7 @@
 			"name": "Flashing Slash"
 		},
 		"lord damage range": "1760~1965",
-		"max bc generated": 8,
+		"max bc generated": 18,
 		"name": "Grandt",
 		"rarity": 5,
 		"sell caution": false,
@@ -95108,12 +100899,12 @@
 					]
 				}
 			],
-			"max bc generated": 15,
+			"max bc generated": 40,
 			"name": "Phoenix Blast"
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-08-13T15:42:33.000Z",
-			"updatedAt": "2015-09-17T03:58:43.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 810520,
 		"cost": 29,
@@ -95191,7 +100982,7 @@
 			"name": "Flashing Crimson Instinct"
 		},
 		"lord damage range": "2183~2438",
-		"max bc generated": 8,
+		"max bc generated": 18,
 		"name": "Mercenary Grandt",
 		"rarity": 6,
 		"sbb": {
@@ -95226,7 +101017,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -40,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -95260,7 +101051,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -40,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -95294,7 +101085,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -40,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -95328,7 +101119,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -40,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -95362,7 +101153,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -40,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -95396,7 +101187,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -40,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -95430,7 +101221,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -40,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -95464,7 +101255,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -40,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -95498,7 +101289,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -40,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -95532,7 +101323,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -40,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -95938,12 +101729,12 @@
 					]
 				}
 			],
-			"max bc generated": 12,
+			"max bc generated": 48,
 			"name": "Garuda Impact"
 		},
 		"bfmtMetadata": {
 			"createdAt": "2015-08-13T15:42:33.000Z",
-			"updatedAt": "2015-11-06T15:19:47.000Z"
+			"updatedAt": "2016-01-15T05:35:32.000Z"
 		},
 		"category": 810520,
 		"cost": 40,
@@ -96013,7 +101804,7 @@
 			"name": "Flashing Crimson Prescience"
 		},
 		"lord damage range": "2411~2693",
-		"max bc generated": 12,
+		"max bc generated": 32,
 		"name": "Slayer Grandt",
 		"overdrive stats": {
 			"atk%": 100,
@@ -96055,7 +101846,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -50,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -96066,7 +101857,7 @@
 						},
 						{
 							"% converted turns": 3,
-							"atk% buff (46)": 10,
+							"atk% buff (46)": 15,
 							"converted attribute": "hp",
 							"effect delay time(ms)/frame": "0.0/0",
 							"proc id": "24",
@@ -96089,7 +101880,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -50,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -96100,7 +101891,7 @@
 						},
 						{
 							"% converted turns": 3,
-							"atk% buff (46)": 10,
+							"atk% buff (46)": 15,
 							"converted attribute": "hp",
 							"effect delay time(ms)/frame": "0.0/0",
 							"proc id": "24",
@@ -96123,7 +101914,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -50,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -96134,7 +101925,7 @@
 						},
 						{
 							"% converted turns": 3,
-							"atk% buff (46)": 10,
+							"atk% buff (46)": 15,
 							"converted attribute": "hp",
 							"effect delay time(ms)/frame": "0.0/0",
 							"proc id": "24",
@@ -96157,7 +101948,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -50,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -96168,7 +101959,7 @@
 						},
 						{
 							"% converted turns": 3,
-							"atk% buff (46)": 10,
+							"atk% buff (46)": 15,
 							"converted attribute": "hp",
 							"effect delay time(ms)/frame": "0.0/0",
 							"proc id": "24",
@@ -96191,7 +101982,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -50,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -96202,7 +101993,7 @@
 						},
 						{
 							"% converted turns": 3,
-							"atk% buff (46)": 10,
+							"atk% buff (46)": 15,
 							"converted attribute": "hp",
 							"effect delay time(ms)/frame": "0.0/0",
 							"proc id": "24",
@@ -96225,7 +102016,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -50,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -96236,7 +102027,7 @@
 						},
 						{
 							"% converted turns": 3,
-							"atk% buff (46)": 10,
+							"atk% buff (46)": 15,
 							"converted attribute": "hp",
 							"effect delay time(ms)/frame": "0.0/0",
 							"proc id": "24",
@@ -96259,7 +102050,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -50,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -96270,7 +102061,7 @@
 						},
 						{
 							"% converted turns": 3,
-							"atk% buff (46)": 10,
+							"atk% buff (46)": 15,
 							"converted attribute": "hp",
 							"effect delay time(ms)/frame": "0.0/0",
 							"proc id": "24",
@@ -96293,7 +102084,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -50,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -96304,7 +102095,7 @@
 						},
 						{
 							"% converted turns": 3,
-							"atk% buff (46)": 10,
+							"atk% buff (46)": 15,
 							"converted attribute": "hp",
 							"effect delay time(ms)/frame": "0.0/0",
 							"proc id": "24",
@@ -96327,7 +102118,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -50,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -96338,7 +102129,7 @@
 						},
 						{
 							"% converted turns": 3,
-							"atk% buff (46)": 10,
+							"atk% buff (46)": 15,
 							"converted attribute": "hp",
 							"effect delay time(ms)/frame": "0.0/0",
 							"proc id": "24",
@@ -96361,7 +102152,7 @@
 						{
 							"buff #1": {
 								"atk% buff (2)": -50,
-								"proc chance%": 30
+								"proc chance%": 50
 							},
 							"buff turns": 1,
 							"effect delay time(ms)/frame": "0.0/0",
@@ -96372,7 +102163,7 @@
 						},
 						{
 							"% converted turns": 3,
-							"atk% buff (46)": 10,
+							"atk% buff (46)": 15,
 							"converted attribute": "hp",
 							"effect delay time(ms)/frame": "0.0/0",
 							"proc id": "24",
@@ -96439,7 +102230,7 @@
 						},
 						{
 							"buff #1": {
-								"atk% buff (2)": -50,
+								"atk% buff (2)": -75,
 								"proc chance%": 50
 							},
 							"buff turns": 2,
@@ -96475,7 +102266,7 @@
 						},
 						{
 							"buff #1": {
-								"atk% buff (2)": -50,
+								"atk% buff (2)": -75,
 								"proc chance%": 50
 							},
 							"buff turns": 2,
@@ -96511,7 +102302,7 @@
 						},
 						{
 							"buff #1": {
-								"atk% buff (2)": -50,
+								"atk% buff (2)": -75,
 								"proc chance%": 50
 							},
 							"buff turns": 2,
@@ -96547,7 +102338,7 @@
 						},
 						{
 							"buff #1": {
-								"atk% buff (2)": -50,
+								"atk% buff (2)": -75,
 								"proc chance%": 50
 							},
 							"buff turns": 2,
@@ -96583,7 +102374,7 @@
 						},
 						{
 							"buff #1": {
-								"atk% buff (2)": -50,
+								"atk% buff (2)": -75,
 								"proc chance%": 50
 							},
 							"buff turns": 2,
@@ -96619,7 +102410,7 @@
 						},
 						{
 							"buff #1": {
-								"atk% buff (2)": -50,
+								"atk% buff (2)": -75,
 								"proc chance%": 50
 							},
 							"buff turns": 2,
@@ -96655,7 +102446,7 @@
 						},
 						{
 							"buff #1": {
-								"atk% buff (2)": -50,
+								"atk% buff (2)": -75,
 								"proc chance%": 50
 							},
 							"buff turns": 2,
@@ -96691,7 +102482,7 @@
 						},
 						{
 							"buff #1": {
-								"atk% buff (2)": -50,
+								"atk% buff (2)": -75,
 								"proc chance%": 50
 							},
 							"buff turns": 2,
@@ -96727,7 +102518,7 @@
 						},
 						{
 							"buff #1": {
-								"atk% buff (2)": -50,
+								"atk% buff (2)": -75,
 								"proc chance%": 50
 							},
 							"buff turns": 2,
@@ -96763,7 +102554,7 @@
 						},
 						{
 							"buff #1": {
-								"atk% buff (2)": -50,
+								"atk% buff (2)": -75,
 								"proc chance%": 50
 							},
 							"buff turns": 2,
@@ -98808,6 +104599,765 @@
 			],
 			"max bc generated": 36,
 			"name": "Purgatorial Judgement"
+		}
+	},
+	"811116": {
+		"ai": [
+			{
+				"action": "skill",
+				"chance%": 60,
+				"target conditions": "hp_50pr_over",
+				"target type": "enemy"
+			},
+			{
+				"action": "skill",
+				"chance%": 20,
+				"target conditions": "random",
+				"target type": "enemy"
+			},
+			{
+				"action": "attack",
+				"chance%": 100,
+				"target conditions": "random",
+				"target type": "enemy"
+			}
+		],
+		"bb": {
+			"desc": "18 combo powerful Fire and Water attack on all enemies & boost to spark damage for 3 turns",
+			"hit dmg% distribution": [
+				8,
+				5,
+				5,
+				5,
+				5,
+				5,
+				8,
+				4,
+				4,
+				8,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				8,
+				5
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 18,
+			"id": "811116",
+			"levels": [
+				{
+					"bc cost": 24,
+					"effects": [
+						{
+							"bb atk%": 150,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 40,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 24,
+					"effects": [
+						{
+							"bb atk%": 160,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 42,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 24,
+					"effects": [
+						{
+							"bb atk%": 170,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 44,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 24,
+					"effects": [
+						{
+							"bb atk%": 180,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 46,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 24,
+					"effects": [
+						{
+							"bb atk%": 190,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 48,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 24,
+					"effects": [
+						{
+							"bb atk%": 200,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 50,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 24,
+					"effects": [
+						{
+							"bb atk%": 210,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 52,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 24,
+					"effects": [
+						{
+							"bb atk%": 220,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 54,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 24,
+					"effects": [
+						{
+							"bb atk%": 230,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 56,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				},
+				{
+					"bc cost": 24,
+					"effects": [
+						{
+							"bb atk%": 250,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 60,
+							"target area": "aoe",
+							"target type": "party"
+						}
+					]
+				}
+			],
+			"max bc generated": 18,
+			"name": "Ironblades Bhima"
+		},
+		"bfmtMetadata": {
+			"createdAt": "2015-12-30T09:59:43.000Z",
+			"updatedAt": "2016-01-15T05:35:32.000Z"
+		},
+		"category": 811110,
+		"cost": 29,
+		"dictionary": {
+			"description": "Prince of the isolated kingdom isle of Kauravas where a unique race called Anthromorphs thrived, Kurewa was branded a Warrior's Mark on his chest, a sign of destiny to become a Warrior of War. The Goddess of War, Gunnhildr, tasked him to protect his kingdom from Demons leaking from Ishgria until his last breath. However, he was reluctant and wished to be free and travel across Grand Gaia with his best friend and closest Warrior partner - Kuraginn. After defeating countless enemies, Kurewa revealed his inner desire and asked Kuraginn to travel the world together with him. Instead of agreeing, Kuraginn was against Kurewa's \"immature\" idea, because Kurewa chose to put himself above the people of his kingdom. Upset and furious at the rejection, Kurewa decided to leave by himself, but before he reached Grand Gaia, his choice led to the fatal destruction of his kingdom. Devastated by guilt, Kurewa returned to exact vengeance upon the Demons and his Mark glowed once again with Gunnhildr's power. In a miraculous encounter, Kurewa found an imprisoned Kuraginn and freed him from the Demons' grasp. Both wept tears of joy at the reunion and swore never to leave one another's side again.",
+			"fusion": "I dreamed about escaping my<br>destiny, but I had nightmares<br>about our lost friendship..",
+			"summon": "We are the Warriors of War!<br>By Gunnhildr's will, let us<br>vanquish Demons together, Summoner!"
+		},
+		"element": "fire",
+		"exp_pattern": 20,
+		"gender": "male",
+		"getting type": "rare summon",
+		"guide_id": 8158,
+		"hit dmg% distribution": [
+			10,
+			5,
+			5,
+			20,
+			10,
+			10,
+			10,
+			30
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8,
+		"id": 811116,
+		"imp": {
+			"max atk": "240",
+			"max def": "400",
+			"max hp": "1000",
+			"max rec": "560"
+		},
+		"kind": "normal",
+		"leader skill": {
+			"desc": "30% boost to max HP and Atk of all allies & greatly boosts Spark damage",
+			"effects": [
+				{
+					"atk% buff": 30,
+					"hp% buff": 30,
+					"passive id": "1"
+				},
+				{
+					"damage% for spark": 50,
+					"passive id": "31"
+				}
+			],
+			"id": "801094",
+			"name": "Gunnhildr's Chosen"
+		},
+		"lord damage range": "1899~2121",
+		"max bc generated": 32,
+		"name": "Brave Kurewa & Kuraginn",
+		"rarity": 6,
+		"sbb": {
+			"desc": "24 combo powerful Fire and Water attack on all enemies, boost to spark damage for 3 turns & probable 1 turn Atk reduction",
+			"hit dmg% distribution": [
+				10,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				10,
+				3,
+				3,
+				3,
+				10,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				10,
+				3,
+				3
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 24,
+			"id": "1811116",
+			"levels": [
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 320,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 40,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"buff #1": {
+								"atk% buff (2)": -30,
+								"proc chance%": 30
+							},
+							"buff turns": 1,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "9",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 330,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 42,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"buff #1": {
+								"atk% buff (2)": -30,
+								"proc chance%": 30
+							},
+							"buff turns": 1,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "9",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 340,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 44,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"buff #1": {
+								"atk% buff (2)": -30,
+								"proc chance%": 30
+							},
+							"buff turns": 1,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "9",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 350,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 46,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"buff #1": {
+								"atk% buff (2)": -30,
+								"proc chance%": 30
+							},
+							"buff turns": 1,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "9",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 360,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 48,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"buff #1": {
+								"atk% buff (2)": -30,
+								"proc chance%": 30
+							},
+							"buff turns": 1,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "9",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 370,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 50,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"buff #1": {
+								"atk% buff (2)": -30,
+								"proc chance%": 30
+							},
+							"buff turns": 1,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "9",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 380,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 52,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"buff #1": {
+								"atk% buff (2)": -30,
+								"proc chance%": 30
+							},
+							"buff turns": 1,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "9",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 390,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 54,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"buff #1": {
+								"atk% buff (2)": -30,
+								"proc chance%": 30
+							},
+							"buff turns": 1,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "9",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 400,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 56,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"buff #1": {
+								"atk% buff (2)": -30,
+								"proc chance%": 30
+							},
+							"buff turns": 1,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "9",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
+				},
+				{
+					"bc cost": 27,
+					"effects": [
+						{
+							"bb atk%": 420,
+							"bb elements": [
+								"water"
+							],
+							"bb flat atk": 100,
+							"effect delay time(ms)/frame": "16.7/1",
+							"proc id": "29",
+							"target area": "aoe",
+							"target type": "enemy"
+						},
+						{
+							"buff turns": 3,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "23",
+							"spark dmg% buff (40)": 60,
+							"target area": "aoe",
+							"target type": "party"
+						},
+						{
+							"buff #1": {
+								"atk% buff (2)": -30,
+								"proc chance%": 30
+							},
+							"buff turns": 1,
+							"effect delay time(ms)/frame": "0.0/0",
+							"element buffed": "all",
+							"proc id": "9",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
+				}
+			],
+			"max bc generated": 24,
+			"name": "Kauravas' Pride"
+		},
+		"sell caution": true,
+		"stats": {
+			"_base": {
+				"atk": 1390,
+				"def": 1430,
+				"hp": 4000,
+				"rec": 1040
+			},
+			"_lord": {
+				"atk": 2040,
+				"def": 1980,
+				"hp": 5650,
+				"rec": 1590
+			}
 		}
 	}
 }
