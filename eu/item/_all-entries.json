@@ -17778,9 +17778,9 @@
 	"47205": {
 		"bfmtMetadata": {
 			"createdAt": "2016-04-06T04:15:26.000Z",
-			"updatedAt": "2016-04-07T13:46:48.000Z"
+			"updatedAt": "2016-05-06T07:55:07.000Z"
 		},
-		"desc": "30% boost to Def, max HP & adds resistance against 1 KO attack when damage received has exceeded 5,000 points.",
+		"desc": "30% boost to Def, max HP & adds resistance against 1 KO attack when damage received has exceeded 50,000 points.",
 		"dictionary": {
 			"lore": "A half-translucent stone that Reed, Lucana, and Aneil found when they were children. Originally there was nothing special about the stone, until Lucana received a revelation from the gods that asked her to guide her people towards a new promised land. It is said that it was only after this event that the stone began emitting a mysterious light. Lucana took the glowing stone with her throughout her journey to the promised land, and its light served as a beacon of courage and hope to her people."
 		},
@@ -19369,7 +19369,7 @@
 	"700011": {
 		"bfmtMetadata": {
 			"createdAt": "2016-04-06T04:15:26.000Z",
-			"updatedAt": "2016-04-07T13:46:48.000Z"
+			"updatedAt": "2016-05-06T07:55:07.000Z"
 		},
 		"desc": "Boosts Atk, Def, Rec, and max HP by 15% & Reduction in BB gauge required for BB (20%) & Increases BB gauge after every turn (2-3BC)",
 		"effect": [
@@ -19409,12 +19409,17 @@
 		"sphere type text": "BB Gauge",
 		"thumbnail": "sphere_thum_4_4.png",
 		"type": "sphere",
-		"usage": []
+		"usage": [
+			{
+				"id": 700017,
+				"name": "Perfect Elgaia Emblem"
+			}
+		]
 	},
 	"700012": {
 		"bfmtMetadata": {
 			"createdAt": "2016-04-06T04:15:26.000Z",
-			"updatedAt": "2016-04-07T13:46:48.000Z"
+			"updatedAt": "2016-05-06T07:55:07.000Z"
 		},
 		"desc": "Boosts Atk, Def, Rec, and max HP by 20% & Spark damage boosts BB gauge (1BC) & Critical damage boosts BB gauge (2-3BC)",
 		"effect": [
@@ -19448,7 +19453,196 @@
 		"sphere type text": "BB Gauge",
 		"thumbnail": "sphere_thum_4_4.png",
 		"type": "sphere",
+		"usage": [
+			{
+				"id": 700017,
+				"name": "Perfect Elgaia Emblem"
+			}
+		]
+	},
+	"700013": {
+		"bfmtMetadata": {
+			"createdAt": "2016-05-05T09:35:15.000Z",
+			"updatedAt": "2016-05-06T07:55:07.000Z"
+		},
+		"desc": "30% boost to max HP & recovers HP each turn (3,000~3,500 + 10% Rec) & Negates status ailments",
+		"effect": [
+			{
+				"hp% buff": 30,
+				"passive id": "1"
+			},
+			{
+				"curse resist%": 100,
+				"injury resist%": 100,
+				"paralysis resist%": 100,
+				"passive id": "4",
+				"poison resist%": 100,
+				"sick resist%": 100,
+				"weaken resist%": 100
+			},
+			{
+				"passive id": "33",
+				"rec% added (turn heal)": 11,
+				"turn heal high": 3500,
+				"turn heal low": 3000
+			}
+		],
+		"id": 700013,
+		"max_stack": 1,
+		"name": "Seed of Yggdrasil",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 0,
+		"sphere type": 5,
+		"sphere type text": "Status Ailments Resistant",
+		"thumbnail": "sphere_thum_2_5.png",
+		"type": "sphere",
 		"usage": []
+	},
+	"700017": {
+		"bfmtMetadata": {
+			"createdAt": "2016-05-05T09:35:15.000Z",
+			"updatedAt": "2016-05-06T07:55:07.000Z"
+		},
+		"desc": "Boosts all stats by 30% & Reduce BB cost (20%) & Increases BB gauge every turn (2-3BC) & Spark (1BC) and Critical (2-3BC) damage boosts BB gauge",
+		"effect": [
+			{
+				"atk% buff": 30,
+				"def% buff": 30,
+				"hp% buff": 30,
+				"passive id": "1",
+				"rec% buff": 30
+			},
+			{
+				"bc fill on crit max": 3,
+				"bc fill on crit min": 2,
+				"bc fill on crit%": 100,
+				"passive id": "65"
+			},
+			{
+				"bc fill on spark high": 1,
+				"bc fill on spark low": 1,
+				"bc fill on spark%": 100,
+				"passive id": "47"
+			},
+			{
+				"passive id": "48",
+				"reduced bb bc cost%": 20
+			},
+			{
+				"bc fill per turn": 2,
+				"passive id": "9"
+			}
+		],
+		"id": 700017,
+		"max_stack": 1,
+		"name": "Perfect Elgaia Emblem",
+		"raid": false,
+		"rarity": 3,
+		"recipe": {
+			"karma": "70000",
+			"materials": [
+				{
+					"count": 1,
+					"id": 700011,
+					"name": "True Elgaia Emblem"
+				},
+				{
+					"count": 1,
+					"id": 700012,
+					"name": "Secret Elgaia Emblem"
+				}
+			]
+		},
+		"sell_price": 60000,
+		"sphere type": 6,
+		"sphere type text": "BB Gauge",
+		"thumbnail": "sphere_thum_4_4.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"700018": {
+		"bfmtMetadata": {
+			"createdAt": "2016-05-05T09:35:15.000Z",
+			"updatedAt": "2016-05-06T07:55:07.000Z"
+		},
+		"desc": "Adds Chance of Ignoring Enemy's Def when attacking (25%) & Boost all parameters (30%) & Boosts BB gauge when attacking (7-8 BC)",
+		"effect": [
+			{
+				"atk% buff": 30,
+				"def% buff": 30,
+				"hp% buff": 30,
+				"passive id": "1",
+				"rec% buff": 30
+			},
+			{
+				"bc fill when attacking high": 8,
+				"bc fill when attacking low": 7,
+				"bc fill when attacking%": 100,
+				"passive id": "35"
+			},
+			{
+				"ignore def%": 25,
+				"passive id": "29"
+			}
+		],
+		"id": 700018,
+		"max_stack": 1,
+		"name": "Blink's Glasses",
+		"raid": false,
+		"rarity": 3,
+		"recipe": {
+			"karma": "70000",
+			"materials": [
+				{
+					"count": 3,
+					"id": 700019,
+					"name": "Glass Fragment"
+				}
+			]
+		},
+		"sell_price": 0,
+		"sphere type": 12,
+		"sphere type text": "Defense Penetrating",
+		"thumbnail": "sphere_thum_3_4.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"700019": {
+		"bfmtMetadata": {
+			"createdAt": "2016-05-05T09:35:15.000Z",
+			"updatedAt": "2016-05-06T07:55:07.000Z"
+		},
+		"desc": "Adds Chance of Ignoring Enemy's Defense when Attacking (10%) & Boost all parameters (10%)",
+		"effect": [
+			{
+				"atk% buff": 10,
+				"def% buff": 10,
+				"hp% buff": 10,
+				"passive id": "1",
+				"rec% buff": 10
+			},
+			{
+				"ignore def%": 10,
+				"passive id": "29"
+			}
+		],
+		"id": 700019,
+		"max_stack": 1,
+		"name": "Glass Fragment",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 0,
+		"sphere type": 12,
+		"sphere type text": "Defense Penetrating",
+		"thumbnail": "sphere_thum_3_5.png",
+		"type": "sphere",
+		"usage": [
+			{
+				"id": 700018,
+				"name": "Blink's Glasses"
+			}
+		]
 	},
 	"819990": {
 		"bfmtMetadata": {

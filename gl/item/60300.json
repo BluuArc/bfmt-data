@@ -1,9 +1,12 @@
 {
 	"bfmtMetadata": {
 		"createdAt": "2016-04-05T04:40:09.000Z",
-		"updatedAt": "2016-04-08T16:05:21.000Z"
+		"updatedAt": "2016-05-06T07:55:07.000Z"
 	},
-	"desc": "確率で被ダメージの２０％を相手に反射する＆被ダメージ時、確率で全状態異常をランダムに発生・ＢＢゲージを増加・確率でＨＰをかなり回復",
+	"desc": "Probable 20% counter of damage received, probable random status ailment counter & damage taken boosts BB gauge and may considerably restore HP",
+	"dictionary": {
+		"lore": "This sphere contains the crystalized soul of the disciple Melord, who was doomed to decay when demonic power poured into his body. The demonic power successfully awakened Melord, but at the cost of gradually rotting away his flesh and spirit. When Melord's body finally succumbed to the fusion of demonic and disciple blood, only this crystal remained. Its clarion brilliance and holy aura attest to the unwavering faith Melord had in life for his master."
+	},
 	"effect": [
 		{
 			"dmg% reflect chance%": 40,
@@ -12,8 +15,13 @@
 			"passive id": "26"
 		},
 		{
-			"unknown passive id": "71",
-			"unknown passive params": "12,15,15,15,12,12"
+			"counter inflict curse%": 12,
+			"counter inflict injury%": 15,
+			"counter inflict paralysis%": 12,
+			"counter inflict poison%": 12,
+			"counter inflict sick%": 15,
+			"counter inflict weaken%": 15,
+			"passive id": "71"
 		},
 		{
 			"bc fill when attacked high": 2,
@@ -30,9 +38,39 @@
 	],
 	"id": 60300,
 	"max_stack": 1,
-	"name": "神魔崩魂メロード",
+	"name": "Melord's Core",
 	"raid": true,
 	"rarity": 3,
+	"recipe": {
+		"karma": "100000",
+		"materials": [
+			{
+				"count": 1,
+				"id": 39002,
+				"name": "Grudge Bow"
+			},
+			{
+				"count": 3,
+				"id": 41800,
+				"name": "Pure Crystal"
+			},
+			{
+				"count": 15,
+				"id": 11043,
+				"name": "Demonblood Clot"
+			},
+			{
+				"count": 2,
+				"id": 11044,
+				"name": "Crystal Soul"
+			},
+			{
+				"count": 3,
+				"id": 10627,
+				"name": "Blaze Pearl"
+			}
+		]
+	},
 	"sell_price": 10000,
 	"sphere type": 9,
 	"sphere type text": "Damage Reflecting",

@@ -93,7 +93,7 @@
 				"proc id": "68"
 			}
 		],
-		"desc": "敵全体に強力な闇属性１３連ダメージ＆味方全体に３ターン、防御力を大幅にアップ・ガード時のダメージ軽減率をアップ",
+		"desc": "13 combo powerful Dark attack on all foes, hugely boosts Def for 3 turns & boosts probable damage reduction when guarding for 3 turns",
 		"drop check count": 1,
 		"id": "60017",
 		"levels": [
@@ -398,11 +398,11 @@
 				]
 			}
 		],
-		"name": "アンフェールブラック"
+		"name": "Sidereal Blackness"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-03-30T22:44:28.000Z",
-		"updatedAt": "2016-04-08T16:05:21.000Z"
+		"updatedAt": "2016-05-06T07:55:07.000Z"
 	},
 	"category": 60010,
 	"cost": 45,
@@ -438,11 +438,20 @@
 		"hit dmg% distribution (total)": 100,
 		"hits": 12
 	},
+	"dictionary": {
+		"description": "Magress lived only for revenge, but ultimately died a knight's valiant death in battle. His own revenge was left unfulfilled. Although, historians wonder, had he achieved his ultimate revenge, would the spell of vengeance actually have been broken? Even if the Six Heroes had rallied to repel the gods, could he have ever stopped fighting? According to a friend of Magress, \"He was a man best described as one with madness lurking within the shadow of mercy.\" We can only wonder what fate awaited when he freed his true self and manifested as a god of destruction.",
+		"evolution": "Humans never change,<br>even after having defeated the gods.<br>But my lance can set things right...",
+		"fusion": "Mercy shall corrupt me...<br>As it did to them...<br>This dark lance does not want your impure light!",
+		"summon": "Vengeance leads only to greater vengeance... To break this chain, I and I alone shall bear all of the vengeful rage..."
+	},
 	"drop check count": 4,
 	"element": "dark",
+	"evolution": {
+		"prev": "60016"
+	},
 	"exp_pattern": 10,
 	"extra skill": {
-		"desc": "「黒騎槍レオムルグ」を装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ・確率で防御貫通効果を付与・クリティカルを無効",
+		"desc": "30% boost to all parameters, adds probable Def ignoring effect & negates critical damage when Leomurg is equipped",
 		"effects": [
 			{
 				"atk% buff": 30,
@@ -488,7 +497,7 @@
 			}
 		],
 		"id": "610",
-		"name": "優しさの中に眠る狂気",
+		"name": "Lurking Madness",
 		"target": "self"
 	},
 	"feskills": [
@@ -518,7 +527,7 @@
 		{
 			"category": "6",
 			"dependency": "1@5100000",
-			"dependency comment": "「被ダメージ時、確率でＨＰが少し回復」習得",
+			"dependency comment": "Unlock \"Damage taken may slightly restore HP\"",
 			"id": "5100100",
 			"skill": {
 				"bp": 10,
@@ -638,7 +647,7 @@
 		{
 			"category": "11",
 			"dependency": "1@59000000",
-			"dependency comment": "「ＢＢ・ＳＢＢに「被ダメージを半減」追加」習得",
+			"dependency comment": "Unlock \"Adds 50% damage reduction effect to BB/SBB\"",
 			"id": "59000100",
 			"skill": {
 				"bp": 20,
@@ -702,7 +711,7 @@
 	},
 	"kind": "normal",
 	"leader skill": {
-		"desc": "闇属性ユニットの攻撃力を５０％アップ・最大ＨＰを３０％アップ＆全てのユニットの攻撃力を１００％アップ・最大ＨＰを３０％アップ＆弱点属性ダメージを無効＆与ダメージが一定数を超える度にＢＢゲージを大幅に増加",
+		"desc": "50% boost to Atk and 30% boost to max HP for Dark types, 100% boost to Atk, 30% boost to max HP, negates elemental damage & hugely boosts BB gauge when damage dealt has exceeded certain amount",
 		"effects": [
 			{
 				"atk% buff": 100,
@@ -729,7 +738,7 @@
 			}
 		],
 		"id": "165",
-		"name": "幻闇の創心"
+		"name": "Eidolon Umbra Resolve"
 	},
 	"lord damage range": "2365~2641",
 	"movement": {
@@ -744,7 +753,7 @@
 			"move type": "1"
 		}
 	},
-	"name": "真黒騎マグルス",
+	"name": "Umbra Halcyon Magress",
 	"overdrive stats": {
 		"atk%": 100,
 		"def%": 100,
@@ -842,7 +851,7 @@
 				"proc id": "55"
 			}
 		],
-		"desc": "敵全体に強力な闇属性１５連ダメージ＆味方全体に３ターン、防御力を大幅にアップ・ガード時のダメージ軽減率をアップ・攻撃時ＨＰを少し吸収・闇属性の弱点属性ダメージをかなりアップ",
+		"desc": "15 combo powerful Dark attack on all foes, hugely boosts Def for 3 turns, boosts probable damage reduction when guarding for 3 turns, slightly absorbs HP when attacking for 3 turns & considerably boosts Dark elemental damage for 3 turns",
 		"drop check count": 1,
 		"id": "160017",
 		"levels": [
@@ -876,10 +885,13 @@
 					},
 					{
 						"effect delay time(ms)/frame": "16.7/1",
+						"hp drain buff turns (134)": 3,
+						"hp drain chance%": 50,
+						"hp drain% high": 6,
+						"hp drain% low": 3,
+						"proc id": "86",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "86",
-						"unknown proc param": "3,6,50,3,150"
+						"target type": "party"
 					},
 					{
 						"dark units do extra elemental weakness dmg": true,
@@ -922,10 +934,13 @@
 					},
 					{
 						"effect delay time(ms)/frame": "16.7/1",
+						"hp drain buff turns (134)": 3,
+						"hp drain chance%": 50,
+						"hp drain% high": 6,
+						"hp drain% low": 3,
+						"proc id": "86",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "86",
-						"unknown proc param": "3,6,50,3,150"
+						"target type": "party"
 					},
 					{
 						"dark units do extra elemental weakness dmg": true,
@@ -968,10 +983,13 @@
 					},
 					{
 						"effect delay time(ms)/frame": "16.7/1",
+						"hp drain buff turns (134)": 3,
+						"hp drain chance%": 50,
+						"hp drain% high": 6,
+						"hp drain% low": 3,
+						"proc id": "86",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "86",
-						"unknown proc param": "3,6,50,3,150"
+						"target type": "party"
 					},
 					{
 						"dark units do extra elemental weakness dmg": true,
@@ -1014,10 +1032,13 @@
 					},
 					{
 						"effect delay time(ms)/frame": "16.7/1",
+						"hp drain buff turns (134)": 3,
+						"hp drain chance%": 50,
+						"hp drain% high": 6,
+						"hp drain% low": 3,
+						"proc id": "86",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "86",
-						"unknown proc param": "3,6,50,3,150"
+						"target type": "party"
 					},
 					{
 						"dark units do extra elemental weakness dmg": true,
@@ -1060,10 +1081,13 @@
 					},
 					{
 						"effect delay time(ms)/frame": "16.7/1",
+						"hp drain buff turns (134)": 3,
+						"hp drain chance%": 50,
+						"hp drain% high": 6,
+						"hp drain% low": 3,
+						"proc id": "86",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "86",
-						"unknown proc param": "3,6,50,3,150"
+						"target type": "party"
 					},
 					{
 						"dark units do extra elemental weakness dmg": true,
@@ -1106,10 +1130,13 @@
 					},
 					{
 						"effect delay time(ms)/frame": "16.7/1",
+						"hp drain buff turns (134)": 3,
+						"hp drain chance%": 50,
+						"hp drain% high": 6,
+						"hp drain% low": 3,
+						"proc id": "86",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "86",
-						"unknown proc param": "3,6,50,3,150"
+						"target type": "party"
 					},
 					{
 						"dark units do extra elemental weakness dmg": true,
@@ -1152,10 +1179,13 @@
 					},
 					{
 						"effect delay time(ms)/frame": "16.7/1",
+						"hp drain buff turns (134)": 3,
+						"hp drain chance%": 50,
+						"hp drain% high": 6,
+						"hp drain% low": 3,
+						"proc id": "86",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "86",
-						"unknown proc param": "3,6,50,3,150"
+						"target type": "party"
 					},
 					{
 						"dark units do extra elemental weakness dmg": true,
@@ -1198,10 +1228,13 @@
 					},
 					{
 						"effect delay time(ms)/frame": "16.7/1",
+						"hp drain buff turns (134)": 3,
+						"hp drain chance%": 50,
+						"hp drain% high": 6,
+						"hp drain% low": 3,
+						"proc id": "86",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "86",
-						"unknown proc param": "3,6,50,3,150"
+						"target type": "party"
 					},
 					{
 						"dark units do extra elemental weakness dmg": true,
@@ -1244,10 +1277,13 @@
 					},
 					{
 						"effect delay time(ms)/frame": "16.7/1",
+						"hp drain buff turns (134)": 3,
+						"hp drain chance%": 50,
+						"hp drain% high": 6,
+						"hp drain% low": 3,
+						"proc id": "86",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "86",
-						"unknown proc param": "3,6,50,3,150"
+						"target type": "party"
 					},
 					{
 						"dark units do extra elemental weakness dmg": true,
@@ -1290,10 +1326,13 @@
 					},
 					{
 						"effect delay time(ms)/frame": "16.7/1",
+						"hp drain buff turns (134)": 3,
+						"hp drain chance%": 50,
+						"hp drain% high": 6,
+						"hp drain% low": 3,
+						"proc id": "86",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "86",
-						"unknown proc param": "3,6,50,3,150"
+						"target type": "party"
 					},
 					{
 						"dark units do extra elemental weakness dmg": true,
@@ -1307,7 +1346,7 @@
 				]
 			}
 		],
-		"name": "黒焉のアトラール"
+		"name": "Dark Demise"
 	},
 	"sell caution": false,
 	"stats": {
@@ -1429,7 +1468,7 @@
 				"proc id": "68"
 			}
 		],
-		"desc": "敵全体に超強力な闇属性２８連ダメージ＆味方全体に３ターン、防御力を超絶アップ・ガード時のダメージ軽減率を超絶アップ＆１ターン、被ダメージを超絶軽減",
+		"desc": "28 combo massive Dark attack on all foes, enormously boosts Def for 3 turns, enormously boosts probable damage reduction when guarding for 3 turns & enormously reduces damage taken for 1 turn",
 		"drop check count": 1,
 		"id": "260017",
 		"levels": [
@@ -1472,6 +1511,6 @@
 				]
 			}
 		],
-		"name": "ジュデッカ"
+		"name": "Judecca"
 	}
 }
