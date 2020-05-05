@@ -1,0 +1,47 @@
+{
+	"associated_units": [
+		"810108"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-11-09T14:29:41.000Z",
+		"updatedAt": "2016-11-09T14:29:41.000Z"
+	},
+	"desc": "Absorbs HP when attacking, adds Def ignore effect to BB/SBB for 3 turns & boosts Atk, Def when BB gauge is full",
+	"effects": [
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"defense% ignore": 100,
+					"defense% ignore turns (39)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "22",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"atk% buff": 50,
+			"bb gauge above % buff requirement": 100,
+			"conditions": [],
+			"def% buff": 50,
+			"passive id": "30",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"hp drain chance%": 100,
+			"hp drain% high": 10,
+			"hp drain% low": 5,
+			"passive id": "17",
+			"passive target": "self"
+		}
+	],
+	"name": "Queen of the Grimm",
+	"target": "self"
+}

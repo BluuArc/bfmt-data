@@ -1,0 +1,49 @@
+{
+	"bfmtMetadata": {
+		"createdAt": "2016-11-09T14:29:41.000Z",
+		"updatedAt": "2016-11-09T14:29:41.000Z"
+	},
+	"desc": "「攻撃強化系」タイプのスフィアを装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆通常攻撃ＨＩＴ数を増加＆ＢＢ及びＳＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加",
+	"effects": [
+		{
+			"atk% buff": 30,
+			"conditions": [
+				{
+					"sphere category required": "Atk Boosting",
+					"sphere category required (raw)": "13"
+				}
+			],
+			"def% buff": 30,
+			"hp% buff": 30,
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 30
+		},
+		{
+			"conditions": [],
+			"hit increase/hit": 1,
+			"passive id": "37",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "シェイプシフター",
+	"target": "self"
+}
