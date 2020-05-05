@@ -19,17 +19,42 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 103
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 뇌속성 5연속 데미지",
-		"hit dmg% distribution": [
-			40,
-			20,
-			20,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					64,
+					70,
+					76,
+					82,
+					88
+				],
+				"hit dmg% distribution": [
+					40,
+					20,
+					20,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "적 전체에게 뇌속성 5연속 데미지",
+		"drop check count": 1,
 		"id": "40233",
 		"levels": [
 			{
@@ -163,21 +188,35 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "라이징 인페르노"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2015-11-04T13:19:00.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 40230,
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			64,
+			70,
+			76
+		],
+		"hit dmg% distribution": [
+			50,
+			30,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A mock Unit modeled after Paris, a Summoner who served as one of the \"Imperial Guards,\" bodyguards to the imperial family of the Randall Empire. Part of an elite force rumored to be even more powerful than the Demon Slayers, her abilities were incredibly powerful. As to why a mock Unit was created based on someone not from the Summoners' Hall, theories are coming in from both sides saying everything from \"It was a high-reaching political move\" to \"It was due to an undeniable request from the head of the Development Department.\" ",
 		"evolution": " ",
 		"fusion": "You're quite attentive for a<br>Summoner from the Hall. <br>I definitely admire that.",
 		"summon": "So you're the Summoner<br>I've heard so much about.<br>Show me what you're made of."
 	},
+	"drop check count": 5,
 	"element": "thunder",
 	"evolution": {
 		"cost": 200000,
@@ -214,13 +253,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 389,
-	"hit dmg% distribution": [
-		50,
-		30,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 40233,
 	"imp": {
 		"max atk": "120",
@@ -247,7 +279,18 @@
 		"name": "성공주의 수호"
 	},
 	"lord damage range": "1368~1528",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		}
+	},
 	"name": "제도의 수호공주 파리스",
 	"rarity": 4,
 	"sell caution": true,

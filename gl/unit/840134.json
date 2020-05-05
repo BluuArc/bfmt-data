@@ -19,17 +19,46 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "5 combo powerful Thunder attack on single enemy & boost to Spark damage for 3 turns",
-		"hit dmg% distribution": [
-			13,
-			13,
-			14,
-			30,
-			30
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					40,
+					45,
+					50,
+					80,
+					90
+				],
+				"hit dmg% distribution": [
+					13,
+					13,
+					14,
+					30,
+					30
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "5 combo powerful Thunder attack on single enemy & boost to Spark damage for 3 turns",
+		"drop check count": 1,
 		"id": "8501341",
 		"levels": [
 			{
@@ -243,21 +272,39 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "Lightning Bolt"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-09-17T03:58:43.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 840130,
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			30,
+			100,
+			110,
+			120,
+			130
+		],
+		"hit dmg% distribution": [
+			30,
+			17,
+			17,
+			17,
+			19
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "Zedus was the first demi-god created by the old gods in an attempt to establish a utopian land. Birthed from a ravaging lightning storm, he wielded the power of electric carnage and could strike down any foe within moments. With his exceptional leadership skills, he guided the rest of the demi-gods toward achieving new milestones of civilization. Seeing potential in the talented tinkerer Gazia, Zedus assigned him to  technological research for the development of Athensphere. However, as time went by, Gazia experimented with forbidden technology that disrupted the balance of nature. Fearing that it would become uncontrollable, Zedus ordered him to shut down his research...",
 		"evolution": " ",
 		"fusion": "I need more thunderbolts.",
 		"summon": "Together, let's create a utopia."
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 200000,
@@ -294,15 +341,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 8064,
-	"hit dmg% distribution": [
-		30,
-		17,
-		17,
-		17,
-		19
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 840134,
 	"imp": {
 		"max atk": "160",
@@ -327,7 +365,18 @@
 		"name": "Zedus' Authority"
 	},
 	"lord damage range": "1303~1456",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Zedus",
 	"rarity": 4,
 	"sell caution": false,

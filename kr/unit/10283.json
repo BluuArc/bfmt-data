@@ -25,18 +25,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 80
+		},
+		"idle": {
+			"total number of frames": 56
+		},
+		"move": {
+			"total number of frames": 9
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 화속성 6연속 데미지&확률로 저주효과",
-		"hit dmg% distribution": [
-			20,
-			20,
-			15,
-			15,
-			15,
-			15
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					26,
+					34,
+					42,
+					50,
+					58,
+					64
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					15,
+					15,
+					15,
+					15
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "적 전체에게 강력한 화속성 6연속 데미지&확률로 저주효과",
+		"drop check count": 1,
 		"id": "10283",
 		"levels": [
 			{
@@ -240,21 +278,39 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "귀인열화참"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2015-08-14T00:39:50.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 10280,
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			26,
+			34,
+			42,
+			50,
+			58
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A demon who once wielded flames in the Bariura Empire long ago. Having once served the empire himself, his life was changed when he received the armor known as Vishra. In exchange for great power the armor robs its user of their memory, cursing them to fight on endlessly. Though many lived in fear of the armored warrior who had slain countless brave souls, none knew how the man inside the armor was suffering.",
 		"evolution": " ",
 		"fusion": "Don't give me more power!<br>You must keep me from <br>causing any more harm!",
 		"summon": "Summoner, do you know<br>who you've just called upon?<br>I cannot be controlled."
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 200000,
@@ -291,15 +347,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 377,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 10283,
 	"imp": {
 		"max atk": "160",
@@ -328,7 +375,18 @@
 		"name": "악역의 파문"
 	},
 	"lord damage range": "1258~1406",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "귀무인 비슈라",
 	"rarity": 4,
 	"sell caution": false,

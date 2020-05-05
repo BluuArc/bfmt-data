@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,25 +25,70 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 90
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "13 combo powerful Dark attack on all enemies & adds defense ignoring effect to all allies' attack for 2 turns",
-		"hit dmg% distribution": [
-			12,
-			11,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					38,
+					45,
+					51,
+					56,
+					59,
+					62,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83
+				],
+				"hit dmg% distribution": [
+					12,
+					11,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 13,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 13,
+		"desc": "13 combo powerful Dark attack on all enemies & adds defense ignoring effect to all allies' attack for 2 turns",
+		"drop check count": 1,
 		"id": "60355",
 		"levels": [
 			{
@@ -257,20 +302,46 @@
 				]
 			}
 		],
-		"max bc generated": 13,
 		"name": "Dark Slash"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 26,
+	"damage frames": {
+		"frame times": [
+			38,
+			45,
+			51,
+			56,
+			59,
+			62,
+			65,
+			68,
+			71
+		],
+		"hit dmg% distribution": [
+			20,
+			15,
+			15,
+			15,
+			10,
+			15,
+			10,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 116,
+		"hits": 9
+	},
 	"dictionary": {
 		"description": "A former Guardian who rebelled against the gods. As the fighting between the 12 Guardians broke out, he continued his investigation into what Sodis had said about the gods planning to destroy the humans. Whether or not he found out the truth is unknown, but there is extremely little documentation concerning Zephyr after that point. One theory states that after attaining proof of the gods' invasion, Zephyr returned to find the battle between the Guardians had ended, and soon afterwards the army of gods began their attack.",
 		"evolution": "This power to overcome all, <br>I just can't allow it.<br>I've still much more to investigate.",
 		"fusion": "I have nothing to say.<br>This is because I have faith in<br>whatever you decide.",
 		"summon": "I'll do absolutely everything I<br>can to assure you victory.<br>That is what I'm here for."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "60354"
@@ -279,19 +350,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 517,
-	"hit dmg% distribution": [
-		20,
-		15,
-		15,
-		15,
-		10,
-		15,
-		10,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 116,
-	"hits": 9,
 	"id": 60355,
 	"imp": {
 		"max atk": "300",
@@ -317,30 +375,89 @@
 		"name": "Light's Conviction"
 	},
 	"lord damage range": "1722~1924",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Dark Warlord Zephyr",
 	"rarity": 6,
 	"sbb": {
-		"desc": "15 combo powerful Dark attack on all enemies, adds defense ignoring effect to all allies' attack for 2 turns & boosts Atk for Dark types for 3 turns",
-		"hit dmg% distribution": [
-			16,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					38,
+					45,
+					51,
+					56,
+					59,
+					62,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86,
+					89
+				],
+				"hit dmg% distribution": [
+					16,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo powerful Dark attack on all enemies, adds defense ignoring effect to all allies' attack for 2 turns & boosts Atk for Dark types for 3 turns",
+		"drop check count": 1,
 		"id": "160355",
 		"levels": [
 			{
@@ -644,7 +761,6 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Black Nemesis"
 	},
 	"sell caution": false,

@@ -19,27 +19,66 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "15 combo powerful Fire, Dark attack on all foes & boosts Atk for 3 turns",
-		"hit dmg% distribution": [
-			5,
-			6,
-			6,
-			6,
-			5,
-			6,
-			5,
-			6,
-			5,
-			10,
-			9,
-			8,
-			8,
-			7,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					35,
+					40,
+					45,
+					50,
+					56,
+					62,
+					68,
+					74,
+					131,
+					134,
+					138,
+					143,
+					148,
+					153
+				],
+				"hit dmg% distribution": [
+					5,
+					6,
+					6,
+					6,
+					5,
+					6,
+					5,
+					6,
+					5,
+					10,
+					9,
+					8,
+					8,
+					7,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo powerful Fire, Dark attack on all foes & boosts Atk for 3 turns",
+		"drop check count": 1,
 		"id": "810107",
 		"levels": [
 			{
@@ -293,21 +332,53 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Savage Reave"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-28T13:11:01.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 810100,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			30,
+			37,
+			44,
+			51,
+			58,
+			65,
+			72,
+			131,
+			136,
+			141,
+			146,
+			151
+		],
+		"hit dmg% distribution": [
+			7,
+			7,
+			7,
+			7,
+			7,
+			7,
+			7,
+			13,
+			11,
+			9,
+			9,
+			9
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
 	"dictionary": {
 		"description": "Not far from a certain dark woods, there was a small village. Its people led simple but peaceful lives, living off the bounties of nature as farmers and hunters. The old folk of the village had many tales to tell, one of which was reserved for children who misbehaved. Legend has it that the dark woods was once a terrible and accursed place. Plagued by evil spirits and monsters, any who ventured in never returned alive. However, that was until a beautiful witch in a blood red cloak riding atop a 3 headed demon-wolf appeared. With her giant red scythe, she cut down all that was evil, clearing the forest of its gloomy aura. It is said that she continues to live there to this day, and that she will come after all the children who are naughty. And though the story may now be considered nothing more than just an old wives' tale, to some of the elderly folk, these evil spirits and monsters still live within their minds as a nightmare of the past... One that would be best forgotten. ",
 		"evolution": "Hands off my ears!<br>Why don't you touch<br>my wolfy's ears instead?<br>He won't bite. Promise!",
 		"fusion": "I will grow stronger in your place.<br>Fear not,<br>I shall protect you from now on. ",
 		"summon": "RAWWR!! Hehe!<br> There is nothing left to fear.<br>But it's always nice to see<br>a friendly face."
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"prev": "810106"
@@ -321,11 +392,13 @@
 				"hp drain chance%": 100,
 				"hp drain% high": 10,
 				"hp drain% low": 5,
-				"passive id": "17"
+				"passive id": "17",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -347,22 +420,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 8148,
-	"hit dmg% distribution": [
-		7,
-		7,
-		7,
-		7,
-		7,
-		7,
-		7,
-		13,
-		11,
-		9,
-		9,
-		9
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 810107,
 	"imp": {
 		"max atk": "600",
@@ -411,7 +468,18 @@
 		"name": "Arcane Aspect"
 	},
 	"lord damage range": "2490~2782",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Sanguine Hood Ciara",
 	"overdrive stats": {
 		"atk%": 100,
@@ -420,29 +488,80 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "18 combo powerful Fire, Dark attack on all foes, boosts Atk for 3 turns & adds Fire, Water, Earth, Thunder elements to attack for 2 turns",
-		"hit dmg% distribution": [
-			4,
-			5,
-			5,
-			4,
-			4,
-			5,
-			4,
-			4,
-			5,
-			4,
-			5,
-			10,
-			8,
-			7,
-			7,
-			6,
-			7,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					34,
+					38,
+					42,
+					46,
+					51,
+					56,
+					61,
+					66,
+					71,
+					74,
+					131,
+					134,
+					138,
+					142,
+					146,
+					150,
+					154
+				],
+				"hit dmg% distribution": [
+					4,
+					5,
+					5,
+					4,
+					4,
+					5,
+					4,
+					4,
+					5,
+					4,
+					5,
+					10,
+					8,
+					7,
+					7,
+					6,
+					7,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					200
+				],
+				"hit dmg% distribution (total)": 200,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo powerful Fire, Dark attack on all foes, boosts Atk for 3 turns & adds Fire, Water, Earth, Thunder elements to attack for 2 turns",
+		"drop check count": 1,
 		"id": "1810107",
 		"levels": [
 			{
@@ -826,7 +945,6 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Arcane Furor"
 	},
 	"sell caution": false,
@@ -845,32 +963,86 @@
 		}
 	},
 	"ubb": {
-		"desc": "21 combo powerful Fire, Dark attack on all foes, boosts Atk for 3 turns & boosts BB Atk for 2 turns",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			8,
-			7,
-			6,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					34,
+					38,
+					42,
+					46,
+					51,
+					56,
+					61,
+					66,
+					71,
+					76,
+					131,
+					135,
+					139,
+					143,
+					147,
+					152,
+					157,
+					162,
+					167,
+					172
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					8,
+					7,
+					6,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 21,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					200
+				],
+				"hit dmg% distribution (total)": 200,
+				"hits": 1,
+				"proc id": "45"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 21,
+		"desc": "21 combo powerful Fire, Dark attack on all foes, boosts Atk for 3 turns & boosts BB Atk for 2 turns",
+		"drop check count": 1,
 		"id": "2810107",
 		"levels": [
 			{
@@ -907,324 +1079,8 @@
 						"ubb atk% buff": 500
 					}
 				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
 			}
 		],
-		"max bc generated": 21,
 		"name": "Phantasmal Harvest"
 	}
 }

@@ -19,24 +19,92 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 145
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "12 combo powerful Earth attack on all foes, 50% damage reduction for 1 turn, boosts Def for 3 turns & removes all status ailments",
-		"hit dmg% distribution": [
-			20,
-			9,
-			6,
-			4,
-			11,
-			5,
-			3,
-			15,
-			10,
-			8,
-			6,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					27,
+					31,
+					35,
+					39,
+					56,
+					60,
+					64,
+					85,
+					89,
+					93,
+					97,
+					101
+				],
+				"hit dmg% distribution": [
+					20,
+					9,
+					6,
+					4,
+					11,
+					5,
+					3,
+					15,
+					10,
+					8,
+					6,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "12 combo powerful Earth attack on all foes, 50% damage reduction for 1 turn, boosts Def for 3 turns & removes all status ailments",
+		"drop check count": 1,
 		"id": "30686",
 		"levels": [
 			{
@@ -510,21 +578,49 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "Asto Layer"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-28T13:11:01.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 30680,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			27,
+			31,
+			35,
+			39,
+			56,
+			60,
+			85,
+			89,
+			93,
+			97
+		],
+		"hit dmg% distribution": [
+			21,
+			9,
+			6,
+			4,
+			11,
+			5,
+			16,
+			12,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
 	"dictionary": {
 		"description": "An old swordsman who practiced the Veda fencing style freely. Though the pupil he had relinquished the title of \"Zelban\" to tried to return the title to him, Dolk refused and headed towards the new promised land in order to leave a legacy for the Veda style of fencing and the name attached to it. Once he discovered the God Army on its way there, he donned the helmet he had once loved dearly, and headed straight to the battlefield to fend off the gods' troops. However, when Dolk's former pupil saw that the techniques his former master was using to fight were not of the Veda fencing art, he left without a word.",
 		"evolution": "Progress should never cease.<br>Wielding a sword is life.<br>There is no end to it.",
 		"fusion": "Breaking away from routine<br>is a fear that when overcome<br>awakens new powers.",
 		"summon": "\"Spread the legacy of Zelban.\"<br>Was I ever attached to that name?<br>Heh. It seems he influenced me..."
 	},
+	"drop check count": 4,
 	"element": "earth",
 	"evolution": {
 		"prev": "30685"
@@ -540,12 +636,14 @@
 				"crit dmg base damage resist%": 100,
 				"crit dmg buffed damage resist%": 100,
 				"passive id": "53",
+				"passive target": "self",
 				"strong base element damage resist%": 100,
 				"strong buffed element damage resist%": 100
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -568,20 +666,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1146,
-	"hit dmg% distribution": [
-		21,
-		9,
-		6,
-		4,
-		11,
-		5,
-		16,
-		12,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 30686,
 	"imp": {
 		"max atk": "440",
@@ -610,7 +694,18 @@
 		"name": "Blade Master's Ambition"
 	},
 	"lord damage range": "2421~2704",
-	"max bc generated": 40,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Heavenly Claymore Dolk",
 	"overdrive stats": {
 		"atk%": 100,
@@ -619,28 +714,90 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "17 combo powerful Earth attack on all foes, 50% damage reduction and negates Atk, Def, Rec reduction for 1 turn & boosts Def relative to Atk for 3 turns",
-		"hit dmg% distribution": [
-			15,
-			7,
-			5,
-			4,
-			3,
-			10,
-			5,
-			3,
-			3,
-			11,
-			8,
-			7,
-			6,
-			4,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					27,
+					30,
+					33,
+					36,
+					39,
+					56,
+					60,
+					64,
+					68,
+					85,
+					88,
+					91,
+					94,
+					97,
+					100,
+					103,
+					106
+				],
+				"hit dmg% distribution": [
+					15,
+					7,
+					5,
+					4,
+					3,
+					10,
+					5,
+					3,
+					3,
+					11,
+					8,
+					7,
+					6,
+					4,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 17,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "73"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 17,
+		"desc": "17 combo powerful Earth attack on all foes, 50% damage reduction and negates Atk, Def, Rec reduction for 1 turn & boosts Def relative to Atk for 3 turns",
+		"drop check count": 1,
 		"id": "130686",
 		"levels": [
 			{
@@ -1044,7 +1201,6 @@
 				]
 			}
 		],
-		"max bc generated": 17,
 		"name": "Veda Fencing: July"
 	},
 	"sell caution": false,
@@ -1063,32 +1219,86 @@
 		}
 	},
 	"ubb": {
-		"desc": "21 combo massive Earth attack on all foes, 75% damage reduction and greatly boosts Atk, Def, Rec for 3 turns",
-		"hit dmg% distribution": [
-			13,
-			6,
-			4,
-			3,
-			3,
-			3,
-			9,
-			4,
-			3,
-			3,
-			3,
-			3,
-			10,
-			7,
-			6,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					27,
+					30,
+					33,
+					36,
+					39,
+					42,
+					56,
+					59,
+					62,
+					65,
+					68,
+					71,
+					85,
+					88,
+					91,
+					94,
+					97,
+					100,
+					103,
+					106,
+					109
+				],
+				"hit dmg% distribution": [
+					13,
+					6,
+					4,
+					3,
+					3,
+					3,
+					9,
+					4,
+					3,
+					3,
+					3,
+					3,
+					10,
+					7,
+					6,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 21,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 21,
+		"desc": "21 combo massive Earth attack on all foes, 75% damage reduction and greatly boosts Atk, Def, Rec for 3 turns",
+		"drop check count": 1,
 		"id": "230686",
 		"levels": [
 			{
@@ -1122,297 +1332,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 21,
 		"name": "Divine Earthen Blade"
 	}
 }

@@ -19,26 +19,108 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 121
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 44
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性１４連ダメージ＆確率で全状態異常をランダムに発生＆味方全体に３ターン、攻撃時、確率でＨＰを少し吸収＆１ターン、被ダメージを半分に軽減",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			9,
-			8,
-			7,
-			7,
-			6,
-			6,
-			6,
-			6,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					54,
+					57,
+					60,
+					63,
+					66,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					9,
+					8,
+					7,
+					7,
+					6,
+					6,
+					6,
+					6,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "86"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "敵全体に水属性１４連ダメージ＆確率で全状態異常をランダムに発生＆味方全体に３ターン、攻撃時、確率でＨＰを少し吸収＆１ターン、被ダメージを半分に軽減",
+		"drop check count": 1,
 		"id": "20776",
 		"levels": [
 			{
@@ -502,15 +584,35 @@
 				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "ノキシアスコーラル"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-02-24T21:58:31.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20770,
 	"cost": 43,
+	"damage frames": {
+		"frame times": [
+			56,
+			59,
+			62,
+			65,
+			68,
+			71
+		],
+		"hit dmg% distribution": [
+			18,
+			18,
+			16,
+			16,
+			16,
+			16
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
+	"drop check count": 7,
 	"element": "water",
 	"evolution": {
 		"prev": "20775"
@@ -528,11 +630,13 @@
 				"atk% buff when enemy has sick": true,
 				"atk% buff when enemy has weaken": true,
 				"conditions": [],
-				"passive id": "74"
+				"passive id": "74",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -559,16 +663,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1312,
-	"hit dmg% distribution": [
-		18,
-		18,
-		16,
-		16,
-		16,
-		16
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 20776,
 	"imp": {
 		"max atk": "440",
@@ -610,7 +704,18 @@
 		"name": "泡沫創妃の秘境"
 	},
 	"lord damage range": "2545~2843",
-	"max bc generated": 42,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "神海宝姫アヴェルス",
 	"overdrive stats": {
 		"atk%": 100,
@@ -619,28 +724,114 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な水属性１７連ダメージ＆味方全体に３ターン、状態異常の敵へのダメージを大幅にアップ・攻撃時、確率でＨＰを少し吸収・確率で全状態異常をランダムに発生する効果を付与＆１ターン、被ダメージを半分に軽減",
-		"hit dmg% distribution": [
-			8,
-			8,
-			8,
-			7,
-			7,
-			6,
-			6,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					54,
+					57,
+					60,
+					63,
+					66,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102
+				],
+				"hit dmg% distribution": [
+					8,
+					8,
+					8,
+					7,
+					7,
+					6,
+					6,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 17,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "86"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "65"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 17,
+		"desc": "敵全体に強力な水属性１７連ダメージ＆味方全体に３ターン、状態異常の敵へのダメージを大幅にアップ・攻撃時、確率でＨＰを少し吸収・確率で全状態異常をランダムに発生する効果を付与＆１ターン、被ダメージを半分に軽減",
+		"drop check count": 1,
 		"id": "120776",
 		"levels": [
 			{
@@ -1204,7 +1395,6 @@
 				]
 			}
 		],
-		"max bc generated": 17,
 		"name": "シェル・イオニス"
 	},
 	"sell caution": false,
@@ -1223,33 +1413,112 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な水属性２２連ダメージ＆スパークダメージ耐性を２ターン低下＆味方全体に３ターン、被ダメージを１/４に軽減・スパーククリティカルが発生＆水属性のバリアを付与",
-		"hit dmg% distribution": [
-			7,
-			7,
-			6,
-			6,
-			5,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					54,
+					57,
+					60,
+					63,
+					66,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114,
+					117
+				],
+				"hit dmg% distribution": [
+					7,
+					7,
+					6,
+					6,
+					5,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "58"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "83"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "62"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "敵全体に超強力な水属性２２連ダメージ＆スパークダメージ耐性を２ターン低下＆味方全体に３ターン、被ダメージを１/４に軽減・スパーククリティカルが発生＆水属性のバリアを付与",
+		"drop check count": 1,
 		"id": "220776",
 		"levels": [
 			{
@@ -1300,450 +1569,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 100,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "water",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 100,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "water",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 100,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "water",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 100,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "water",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 100,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "water",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 100,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "water",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 100,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "water",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 100,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "water",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 100,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "water",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "宝精護『パラクレートス』"
 	}
 }

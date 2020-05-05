@@ -19,22 +19,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 110
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光属性１０連ダメージ＆確率で攻撃力・防御力を１ターン低下",
-		"hit dmg% distribution": [
-			8,
-			9,
-			9,
-			9,
-			9,
-			9,
-			9,
-			9,
-			9,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					10,
+					17,
+					24,
+					31,
+					38,
+					45,
+					52,
+					59,
+					66,
+					100
+				],
+				"hit dmg% distribution": [
+					8,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "敵全体に光属性１０連ダメージ＆確率で攻撃力・防御力を１ターン低下",
+		"drop check count": 1,
 		"id": "50944",
 		"levels": [
 			{
@@ -328,15 +370,37 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "ヒートウェイブ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-02-24T21:58:31.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50940,
 	"cost": 16,
+	"damage frames": {
+		"frame times": [
+			6,
+			9,
+			12,
+			19,
+			33,
+			36,
+			39
+		],
+		"hit dmg% distribution": [
+			15,
+			14,
+			13,
+			13,
+			15,
+			15,
+			15
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
+	"drop check count": 3,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -373,17 +437,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1331,
-	"hit dmg% distribution": [
-		15,
-		14,
-		13,
-		13,
-		15,
-		15,
-		15
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 50944,
 	"imp": {
 		"max atk": "300",
@@ -407,7 +460,18 @@
 		"name": "サムライの心"
 	},
 	"lord damage range": "1490~1664",
-	"max bc generated": 21,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "フリン",
 	"rarity": 5,
 	"sell caution": false,

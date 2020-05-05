@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 116
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "8 combo powerful Fire attack on all ennemies & Recovers own HP",
-		"hit dmg% distribution": [
-			12,
-			12,
-			12,
-			12,
-			16,
-			12,
-			12,
-			12
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					56,
+					62,
+					68,
+					74,
+					80,
+					86,
+					94,
+					102
+				],
+				"hit dmg% distribution": [
+					12,
+					12,
+					12,
+					12,
+					16,
+					12,
+					12,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo powerful Fire attack on all enemies & Recovers own HP",
+		"drop check count": 1,
 		"id": "710143",
 		"levels": [
 			{
@@ -262,14 +302,34 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Wolf Nibble"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			56,
+			62,
+			68,
+			74,
+			80,
+			86
+		],
+		"hit dmg% distribution": [
+			16,
+			16,
+			16,
+			16,
+			16,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"cost": 200000,
@@ -306,16 +366,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7060,
-	"hit dmg% distribution": [
-		16,
-		16,
-		16,
-		16,
-		16,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 710143,
 	"imp": {
 		"max atk": "180",
@@ -339,7 +389,18 @@
 		"name": "Strength of the Lone Wolf"
 	},
 	"lord damage range": "1446~1616",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Lord Heinrich",
 	"rarity": 4,
 	"sell caution": false,

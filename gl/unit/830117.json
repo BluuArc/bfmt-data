@@ -19,42 +19,120 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "30 combo powerful Water, Earth attack on all foes, greatly restores HP, removes all status ailments & greatly boosts BC, HC drop rate for 3 turns",
-		"hit dmg% distribution": [
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					32,
+					34,
+					36,
+					38,
+					40,
+					50,
+					63,
+					65,
+					67,
+					69,
+					71,
+					73,
+					75,
+					77,
+					80,
+					90,
+					100,
+					110,
+					120,
+					135,
+					137,
+					139,
+					141,
+					143,
+					145,
+					147,
+					149,
+					151,
+					153
+				],
+				"hit dmg% distribution": [
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 30,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					78
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 30,
+		"desc": "30 combo powerful Water, Earth attack on all foes, greatly restores HP, removes all status ailments & greatly boosts BC, HC drop rate for 3 turns",
+		"drop check count": 1,
 		"id": "830117",
 		"levels": [
 			{
@@ -568,21 +646,49 @@
 				]
 			}
 		],
-		"max bc generated": 30,
 		"name": "Requiem of the Fae"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-12-30T09:59:43.000Z",
-		"updatedAt": "2016-02-04T14:52:26.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 830110,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			30,
+			35,
+			40,
+			63,
+			75,
+			80,
+			135,
+			140,
+			145,
+			150
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			10,
+			5,
+			5,
+			5,
+			13,
+			13,
+			14,
+			15
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
 	"dictionary": {
 		"description": "The Eternal Guardian of all the treasures and knowledge of the Vale in the far North, summoned at the behest of the Fae to rule over and protect the land. One day, Zeruiah discovered that a small girl had somehow gotten past the wards, and gained access to the Vale. After observing the girl for days, Zeruiah grew fascinated at how such a young human was able to command the snow and ice. The Fae and animals initially assisted the girl with sustenance at Zeruiah's command, but she was eventually brought into the heart of the Vale. Despite her mistrust of humans, Zeruiah grew to love the girl, training and watching her grow up. Through this encounter, Zeruiah saw that not all humans were evil, and began opening up the Vale to druid tribes and scholars sent by human kingdoms once a year during the festival of Faetide.",
 		"evolution": "I thought I could endure the Aeons,<br>but only love can grant me<br>an eternity worth living.",
 		"fusion": "Love is a fabric which never fades,<br>no matter how often it is washed<br>in the tides of adversity and grief.",
 		"summon": "My existence is infinite...<br>Yet now that I have known love,<br>what have you to teach me, Summoner?"
 	},
+	"drop check count": 5,
 	"element": "earth",
 	"evolution": {
 		"prev": "830116"
@@ -596,13 +702,15 @@
 				"dmg% to hp% when attacked chance%": 30,
 				"dmg% to hp% when attacked high": 25,
 				"dmg% to hp% when attacked low": 25,
-				"passive id": "24"
+				"passive id": "24",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"dmg reduction chance%": 25,
 				"dmg reduction%": 25,
-				"passive id": "14"
+				"passive id": "14",
+				"passive target": "self"
 			}
 		],
 		"id": "830117",
@@ -612,20 +720,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 8174,
-	"hit dmg% distribution": [
-		10,
-		10,
-		10,
-		5,
-		5,
-		5,
-		13,
-		13,
-		14,
-		15
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 830117,
 	"imp": {
 		"max atk": "440",
@@ -658,7 +752,18 @@
 		"name": "Regalia of Mazzaroth"
 	},
 	"lord damage range": "2337~2610",
-	"max bc generated": 50,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Eternal Guardian Zeruiah",
 	"overdrive stats": {
 		"atk%": 100,
@@ -667,51 +772,136 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "40 combo powerful Water, Earth attack on all foes, fills own BB gauge to max, greatly boosts BC, HC, Item drop rate for 3 turns & adds all elements to attack for 2 turns",
-		"hit dmg% distribution": [
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					32,
+					34,
+					36,
+					38,
+					40,
+					45,
+					50,
+					55,
+					60,
+					63,
+					65,
+					67,
+					69,
+					71,
+					73,
+					75,
+					77,
+					80,
+					85,
+					90,
+					95,
+					100,
+					105,
+					110,
+					115,
+					120,
+					125,
+					130,
+					135,
+					137,
+					139,
+					141,
+					143,
+					145,
+					147,
+					149,
+					151,
+					153,
+					155
+				],
+				"hit dmg% distribution": [
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 40,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 40,
+		"desc": "40 combo powerful Water, Earth attack on all foes, fills own BB gauge to max, greatly boosts BC, HC, Item drop rate for 3 turns & adds all elements to attack for 2 turns",
+		"drop check count": 1,
 		"id": "1830117",
 		"levels": [
 			{
@@ -1195,7 +1385,6 @@
 				]
 			}
 		],
-		"max bc generated": 40,
 		"name": "Ancient of Days"
 	},
 	"sell caution": true,
@@ -1214,360 +1403,60 @@
 		}
 	},
 	"ubb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					90
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "8"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
+		],
 		"desc": "75% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Def relative to Rec & enormously boosts BC, HC, Item drop rate for 3 turns",
+		"drop check count": 1,
 		"id": "2830117",
 		"levels": [
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "recovery",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"item drop rate% buff (11)": 7,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "recovery",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"item drop rate% buff (11)": 7,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "recovery",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"item drop rate% buff (11)": 7,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "recovery",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"item drop rate% buff (11)": 7,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "recovery",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"item drop rate% buff (11)": 7,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "recovery",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"item drop rate% buff (11)": 7,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "recovery",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"item drop rate% buff (11)": 7,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "recovery",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"item drop rate% buff (11)": 7,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "recovery",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"item drop rate% buff (11)": 7,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
 			{
 				"bc cost": 30,
 				"effects": [

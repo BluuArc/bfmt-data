@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,25 +25,70 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 155
+		},
+		"idle": {
+			"total number of frames": 76
+		},
+		"move": {
+			"total number of frames": 52
+		}
+	},
 	"bb": {
-		"desc": "13 combo powerful Dark attack on all enemies & boosts BC drop rate for 3 turns",
-		"hit dmg% distribution": [
-			12,
-			6,
-			5,
-			12,
-			8,
-			7,
-			6,
-			5,
-			5,
-			5,
-			12,
-			10,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					42,
+					45,
+					48,
+					56,
+					60,
+					64,
+					68,
+					72,
+					76,
+					80,
+					93,
+					97,
+					101
+				],
+				"hit dmg% distribution": [
+					12,
+					6,
+					5,
+					12,
+					8,
+					7,
+					6,
+					5,
+					5,
+					5,
+					12,
+					10,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 13,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 13,
+		"desc": "13 combo powerful Dark attack on all enemies & boosts BC drop rate for 3 turns",
+		"drop check count": 1,
 		"id": "60295",
 		"levels": [
 			{
@@ -257,20 +302,48 @@
 				]
 			}
 		],
-		"max bc generated": 13,
 		"name": "Blood-Shaped Arc"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 26,
+	"damage frames": {
+		"frame times": [
+			36,
+			42,
+			56,
+			61,
+			66,
+			71,
+			76,
+			93,
+			97,
+			101
+		],
+		"hit dmg% distribution": [
+			13,
+			8,
+			15,
+			12,
+			10,
+			8,
+			6,
+			13,
+			8,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
 	"dictionary": {
 		"description": "A soldier who led the civilians from the Bariura Empire during the last stages of the war with the gods in hopes of finding a new land. After arriving to Lucius's gate and trying to get the refugees to cross over, some of the people still behind were suddenly attacked by a disciple. When Reed and Lucana tried to go help the group under attack, Eru told them that their roles in this mission were not yet over, ultimately going to the group's rescue alone. As he fought off the God Army he is said to have muttered to himself that \"copying that idiot may not be so bad,\" though his whereabouts following said battle remain unknown.",
 		"evolution": "I'll rise above myself to protect<br>everyone. That choice is what led<br>me to reach his level!",
 		"fusion": "I'll keep growing stronger.<br>I must grow stronger.<br>That's the role I've been given.",
 		"summon": "The fact that you still live<br>is proof of our past struggle.<br>I will exhaust all my power for you!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "60294"
@@ -279,20 +352,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 879,
-	"hit dmg% distribution": [
-		13,
-		8,
-		15,
-		12,
-		10,
-		8,
-		6,
-		13,
-		8,
-		7
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 60295,
 	"imp": {
 		"max atk": "300",
@@ -314,33 +373,95 @@
 		"name": "Might of the Six Gods"
 	},
 	"lord damage range": "1862~2081",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		}
+	},
 	"name": "Twin Dragons Eru",
 	"rarity": 6,
 	"sbb": {
-		"desc": "18 combo powerful Dark attack on all enemies & boosts BC drop rate for 3 turns & increases BB gauge when damage is taken",
-		"hit dmg% distribution": [
-			8,
-			4,
-			4,
-			8,
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			10,
-			6,
-			5,
-			6,
-			5,
-			6,
-			5,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					36,
+					39,
+					42,
+					56,
+					60,
+					64,
+					68,
+					72,
+					76,
+					80,
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114
+				],
+				"hit dmg% distribution": [
+					8,
+					4,
+					4,
+					8,
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					10,
+					6,
+					5,
+					6,
+					5,
+					6,
+					5,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo powerful Dark attack on all enemies & boosts BC drop rate for 3 turns & increases BB gauge when damage is taken",
+		"drop check count": 1,
 		"id": "160295",
 		"levels": [
 			{
@@ -654,7 +775,6 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Phantom Eliminator"
 	},
 	"sell caution": false,

@@ -19,17 +19,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 113
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 9
+		}
+	},
 	"bb": {
-		"desc": "5 combo Thunder attack on all foes & additional attack at turn's end for 1 turn",
-		"hit dmg% distribution": [
-			21,
-			19,
-			20,
-			19,
-			21
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					48,
+					55,
+					62,
+					69,
+					76
+				],
+				"hit dmg% distribution": [
+					21,
+					19,
+					20,
+					19,
+					21
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "5 combo Thunder attack on all foes & additional attack at turn's end for 1 turn",
+		"drop check count": 1,
 		"id": "40562",
 		"levels": [
 			{
@@ -273,20 +310,34 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "Magia Plasma"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T16:25:19.000Z",
-		"updatedAt": "2016-02-04T14:52:26.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 40560,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			48,
+			52,
+			56
+		],
+		"hit dmg% distribution": [
+			33,
+			33,
+			34
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A magician who lived during the time when the God Army was first rallying its forces to attack. Neid's act became popular due to his unusual use of electricity in his tricks. Claiming to be part of the royal line of a certain ruined country, he used his innate charisma and manner of speech to charm those around him, gaining a lot of financial support from a great number of ladies in the process. However, one day he vanished during the peak of his popularity. Many rumors concerning his disappearance circled about, but soon those who were initially interested in the subject stopped caring.",
 		"fusion": "This doesn't feel too bad.<br>To repay you for your kindness,<br>I'll show you something incredible!",
 		"summon": "I knew you had your eye on me.<br>However, my act isn't cheap!<br>That should be obvious."
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 100000,
@@ -323,13 +374,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1029,
-	"hit dmg% distribution": [
-		33,
-		33,
-		34
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 40562,
 	"imp": {
 		"max atk": "160",
@@ -350,7 +394,18 @@
 		"name": "Warrior's Light"
 	},
 	"lord damage range": "1154~1289",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Neid",
 	"rarity": 3,
 	"sell caution": false,

@@ -19,19 +19,58 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 100
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 7
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 화속성 7연속 데미지＆확률로 약화 효과",
-		"hit dmg% distribution": [
-			18,
-			14,
-			14,
-			14,
-			18,
-			14,
-			14
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					36,
+					40,
+					44,
+					48,
+					52,
+					56,
+					60
+				],
+				"hit dmg% distribution": [
+					18,
+					14,
+					14,
+					14,
+					18,
+					14,
+					14
+				],
+				"hit dmg% distribution (total)": 106,
+				"hits": 7,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 106,
-		"hits": 7,
+		"desc": "적 전체에게 화속성 7연속 데미지＆확률로 약화 효과",
+		"drop check count": 1,
 		"id": "10144",
 		"levels": [
 			{
@@ -225,21 +264,31 @@
 				]
 			}
 		],
-		"max bc generated": 7,
 		"name": "벨트 래딧슈"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 10140,
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			36
+		],
+		"hit dmg% distribution": [
+			100
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 1
+	},
 	"dictionary": {
 		"description": "A former blacksmith from the Agni Empire. Having completed his journey, Galant came back to his hometown to find it cowering in fear of the gods' invasion. Enraged by what he saw, he took to the volcano to forge a new weapon from the special ore he had acquired. It is said this massive weapon was covered in flames and able to break through the strongest of armor. Afterwards, it is said he handed his weapon off to his friend, a person who would later also come to be known as a hero.",
 		"evolution": "You seem quite capable.<br>You require my help?<br>I guess I can pitch in!",
 		"fusion": "You've gotta control the heat.<br>Too much heat is no good.<br>The right amount at the right time!",
 		"summon": "I feel my power being drawn out.<br>I guess you must have the<br>spirit of a blacksmith afterall."
 	},
+	"drop check count": 15,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -277,11 +326,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 435,
-	"hit dmg% distribution": [
-		100
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 1,
 	"id": 10144,
 	"imp": {
 		"max atk": "160",
@@ -302,7 +346,18 @@
 		"name": "중격의 섬광"
 	},
 	"lord damage range": "1313~1467",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "대장간신 가렌트",
 	"rarity": 5,
 	"sell caution": false,

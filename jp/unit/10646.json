@@ -19,32 +19,84 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 170
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性２０連ダメージ＆味方全体に３ターン、確率で攻撃力を１ターン低下する効果を付与",
-		"hit dmg% distribution": [
-			10,
-			3,
-			3,
-			3,
-			6,
-			3,
-			10,
-			3,
-			3,
-			3,
-			6,
-			3,
-			14,
-			6,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					14,
+					17,
+					20,
+					23,
+					39,
+					43,
+					69,
+					72,
+					75,
+					78,
+					92,
+					96,
+					111,
+					114,
+					117,
+					120,
+					123,
+					126,
+					129,
+					132
+				],
+				"hit dmg% distribution": [
+					10,
+					3,
+					3,
+					3,
+					6,
+					3,
+					10,
+					3,
+					3,
+					3,
+					6,
+					3,
+					14,
+					6,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "51"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "敵全体に炎属性２０連ダメージ＆味方全体に３ターン、確率で攻撃力を１ターン低下する効果を付与",
+		"drop check count": 1,
 		"id": "10646",
 		"levels": [
 			{
@@ -278,21 +330,55 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "フリットアングリフ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10640,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			14,
+			18,
+			39,
+			69,
+			73,
+			92,
+			111,
+			115,
+			119,
+			123,
+			127,
+			131,
+			135
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			5,
+			10,
+			5,
+			5,
+			15,
+			10,
+			10,
+			5,
+			5,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
 	"dictionary": {
 		"description": "A skilled sword fighter who once fought alongside the Oracle Knight. With new and improved arms to match her ever growing swordsmanship, Ruby enveloped her enemies in flames, cutting the gods down alongside her companions.  Having very sharp senses due to her nature as a fox-person, she could sense every one of the gods' moves before anyone else. As the battle drew on, she used her body to shield the Oracle Knight, suffering a serious wound in the process. The outcome of this battle remains uncertain, and no records concerning Ruby have been found after this time.",
 		"evolution": "I've changed even more this time!<br>Now any opponent I face<br>stands no chance of winning!",
 		"fusion": "Can't you give me a bit more power?<br>You see, there's lots of people<br>I wanna protect!",
 		"summon": "I would do anything for him.<br>I mean, I love him!"
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"prev": "10645"
@@ -305,7 +391,8 @@
 				"bc drop rate% buff": 15,
 				"conditions": [],
 				"hc drop rate% buff": 15,
-				"passive id": "19"
+				"passive id": "19",
+				"passive target": "self"
 			}
 		],
 		"id": "2301",
@@ -315,23 +402,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 953,
-	"hit dmg% distribution": [
-		10,
-		10,
-		5,
-		10,
-		5,
-		5,
-		15,
-		10,
-		10,
-		5,
-		5,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 13,
 	"id": 10646,
 	"imp": {
 		"max atk": "600",
@@ -358,7 +428,18 @@
 		"name": "闘神の栄冠"
 	},
 	"lord damage range": "2377~2656",
-	"max bc generated": 39,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "熾旋の鳳燥神ルビィ",
 	"overdrive stats": {
 		"atk%": 100,
@@ -367,51 +448,124 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な炎属性４０連ダメージ＆確率で攻撃力を１ターン低下＆味方全体に３ターン、確率で攻撃力を１ターン低下する効果を付与",
-		"hit dmg% distribution": [
-			4,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			4,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			5,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					14,
+					17,
+					20,
+					23,
+					26,
+					29,
+					32,
+					35,
+					38,
+					41,
+					44,
+					47,
+					50,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105,
+					111,
+					114,
+					117,
+					120,
+					123,
+					126,
+					129,
+					132,
+					135,
+					138,
+					141,
+					144,
+					147,
+					150
+				],
+				"hit dmg% distribution": [
+					4,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					4,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					5,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 40,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "51"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 40,
+		"desc": "敵全体に強力な炎属性４０連ダメージ＆確率で攻撃力を１ターン低下＆味方全体に３ターン、確率で攻撃力を１ターン低下する効果を付与",
+		"drop check count": 1,
 		"id": "110646",
 		"levels": [
 			{
@@ -765,7 +919,6 @@
 				]
 			}
 		],
-		"max bc generated": 40,
 		"name": "ルビィ・ヴァニッシュ"
 	},
 	"sell caution": false,
@@ -784,45 +937,112 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な炎属性３４連ダメージ＆味方全体に３ターン、通常攻撃ＨＩＴ数をかなり増加・回復力に応じて攻撃力を超絶アップ",
-		"hit dmg% distribution": [
-			6,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			6,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			10,
-			6,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					14,
+					17,
+					20,
+					23,
+					26,
+					29,
+					32,
+					35,
+					38,
+					41,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					111,
+					114,
+					117,
+					120,
+					123,
+					126,
+					129,
+					132,
+					135,
+					138,
+					141,
+					144,
+					147,
+					150
+				],
+				"hit dmg% distribution": [
+					6,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					6,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					10,
+					6,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 34,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "26"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 34,
+		"desc": "敵全体に超強力な炎属性３４連ダメージ＆味方全体に３ターン、通常攻撃ＨＩＴ数をかなり増加・回復力に応じて攻撃力を超絶アップ",
+		"drop check count": 1,
 		"id": "210646",
 		"levels": [
 			{
@@ -855,288 +1075,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 34,
 		"name": "ヒュペリオン"
 	}
 }

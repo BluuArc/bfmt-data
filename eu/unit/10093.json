@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,17 +25,42 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 120
+		},
+		"idle": {
+			"total number of frames": 192
+		},
+		"move": {
+			"total number of frames": 192
+		}
+	},
 	"bb": {
-		"desc": "5 combo Fire elemental attack on all enemies",
-		"hit dmg% distribution": [
-			25,
-			25,
-			25,
-			25,
-			25
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					40,
+					47,
+					54,
+					61,
+					68
+				],
+				"hit dmg% distribution": [
+					25,
+					25,
+					25,
+					25,
+					25
+				],
+				"hit dmg% distribution (total)": 125,
+				"hits": 5,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 125,
-		"hits": 5,
+		"desc": "5 combo Fire elemental attack on all enemies",
+		"drop check count": 1,
 		"id": "10093",
 		"levels": [
 			{
@@ -169,20 +194,38 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "Mega Breath"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 8,
+	"damage frames": {
+		"frame times": [
+			45,
+			52,
+			59,
+			66,
+			73
+		],
+		"hit dmg% distribution": [
+			25,
+			25,
+			25,
+			25,
+			25
+		],
+		"hit dmg% distribution (total)": 125,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A fire dragon that lives in the Agni volcanoes. When a Firedrake ages an astounding number of years, he becomes the Dragon Graven. With absolute confidence in his strength, he desires to increase it even more. He looks down on humans but will aid one that he deems worthy. However, many have been burnt to ashes after asking for his assistance.",
 		"evolution": "I used to hate humans,<br>but it seems there are a<br>few promising ones.",
 		"fusion": "Hmm, you will do.<br>Now feel the intense heat<br>from my breath!",
 		"summon": "A human wants my help?<br>You look strong enough...<br>Let it be!"
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 200000,
@@ -220,15 +263,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 112,
-	"hit dmg% distribution": [
-		25,
-		25,
-		25,
-		25,
-		25
-	],
-	"hit dmg% distribution (total)": 125,
-	"hits": 5,
 	"id": 10093,
 	"imp": {
 		"max atk": "200",
@@ -249,7 +283,18 @@
 		"name": "Fire's Protection"
 	},
 	"lord damage range": "853~953",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 8,
+			"move speed type": "1",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 8,
+			"move speed type": "1",
+			"move type": "3"
+		}
+	},
 	"name": "Dragon Graven",
 	"rarity": 4,
 	"sell caution": false,

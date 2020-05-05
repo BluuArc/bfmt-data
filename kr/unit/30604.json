@@ -25,21 +25,62 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 108
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 목속성 9연속 데미지＆3턴간 아군 전체의 크리티컬 확률 상승",
-		"hit dmg% distribution": [
-			11,
-			11,
-			11,
-			11,
-			11,
-			11,
-			11,
-			11,
-			12
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					26,
+					30,
+					34,
+					38,
+					42,
+					46,
+					50,
+					60,
+					65
+				],
+				"hit dmg% distribution": [
+					11,
+					11,
+					11,
+					11,
+					11,
+					11,
+					11,
+					11,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "적 전체에게 강력한 목속성 9연속 데미지＆3턴간 아군 전체의 크리티컬 확률 상승",
+		"drop check count": 1,
 		"id": "30604",
 		"levels": [
 			{
@@ -263,21 +304,45 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "그리프스 브리즈"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-15T01:31:57.000Z",
-		"updatedAt": "2015-11-04T13:19:00.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 30600,
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			26,
+			31,
+			36,
+			41,
+			46,
+			51,
+			54,
+			59
+		],
+		"hit dmg% distribution": [
+			12,
+			12,
+			12,
+			12,
+			12,
+			12,
+			14,
+			14
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A dual-wielding swordsman who once fought alongside the Oracle Knight against the gods who sought to destroy humankind. Though originally a very skillful and prominent knight in Vriksha, he suddenly gave up his post to go on a journey of learning. The reason behind his decision remains unclear, but it is highly speculated that he grew bored once no more worthy rivals were to be found. As he proceeded with his journey, he slayed countless demons, though it is said that he always showed an expression of disappointment once the fighting was over, promptly moving on to the next region.",
 		"evolution": " ",
 		"fusion": "This is pointless...<br>I'm already strong.<br>More power is unnecessary.",
 		"summon": "You want to use my powers?<br>All right.<br>Just don't bore me to death."
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"cost": 500000,
@@ -314,18 +379,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 957,
-	"hit dmg% distribution": [
-		12,
-		12,
-		12,
-		12,
-		12,
-		12,
-		14,
-		14
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 30604,
 	"imp": {
 		"max atk": "140",
@@ -346,7 +399,18 @@
 		"name": "섬격의 패인"
 	},
 	"lord damage range": "1666~1861",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "풍치신 디온",
 	"rarity": 5,
 	"sell caution": false,

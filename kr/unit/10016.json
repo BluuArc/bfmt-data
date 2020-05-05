@@ -31,24 +31,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 191
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 화속성 12연속 데미지",
-		"hit dmg% distribution": [
-			10,
-			15,
-			12,
-			8,
-			7,
-			6,
-			4,
-			4,
-			13,
-			7,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					16,
+					36,
+					54,
+					72,
+					80,
+					88,
+					96,
+					104,
+					124,
+					128,
+					132,
+					136
+				],
+				"hit dmg% distribution": [
+					10,
+					15,
+					12,
+					8,
+					7,
+					6,
+					4,
+					4,
+					13,
+					7,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "적 전체에게 강력한 화속성 12연속 데미지",
+		"drop check count": 1,
 		"id": "10016",
 		"levels": [
 			{
@@ -182,21 +214,49 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "극한 플레어 라이드"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 10010,
 	"cost": 38,
+	"damage frames": {
+		"frame times": [
+			16,
+			36,
+			54,
+			72,
+			90,
+			108,
+			124,
+			128,
+			132,
+			136
+		],
+		"hit dmg% distribution": [
+			10,
+			20,
+			14,
+			10,
+			6,
+			6,
+			13,
+			7,
+			7,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
 	"dictionary": {
 		"description": "Along with his friend's wings, Vargas headed towards the center of the battle against the gods only to find a young girl who hated humans running rampant in the forest. He defeated the girl while still wounded, later regretting having taken her life even after all the damage she had caused. At that moment a knight appeared before him, leading to an intense duel in which Vargas would obtain powers greater than those of a god. However, after hearing the knight speak he stopped fighting back, losing his life to the blade that struck him as he smiled. With no one to defend it, the Agni empire began to crumble after this hero's death.",
 		"evolution": "God, human, it doesn't matter!<br>I'll keep growing stronger to protect<br>everything precious to me!",
 		"fusion": "Burn, Dandelga!<br>Set my soul ablaze,<br>and reduce all our enemies to ashes!",
 		"summon": "My life's just a small price to pay.<br>My will shall burn forever<br>to light the future of the people!"
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"prev": "10015"
@@ -217,6 +277,7 @@
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
@@ -229,7 +290,8 @@
 				],
 				"elemental weakness multiplier%": 50,
 				"fire units do extra elemental weakness dmg": true,
-				"passive id": "50"
+				"passive id": "50",
+				"passive target": "self"
 			}
 		],
 		"id": "100",
@@ -239,20 +301,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 801,
-	"hit dmg% distribution": [
-		10,
-		20,
-		14,
-		10,
-		6,
-		6,
-		13,
-		7,
-		7,
-		7
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 10016,
 	"imp": {
 		"max atk": "680",
@@ -277,7 +325,18 @@
 		"name": "염봉신의 힘"
 	},
 	"lord damage range": "2235~2496",
-	"max bc generated": 30,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "찬란한 패염신 발가스",
 	"overdrive stats": {
 		"atk%": 100,
@@ -286,25 +345,60 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "적 전체에게 강력한 화속성 14연속 데미지＆3턴간 아군 전체의 공격력 대폭 상승",
-		"hit dmg% distribution": [
-			8,
-			15,
-			10,
-			8,
-			7,
-			6,
-			4,
-			4,
-			10,
-			7,
-			7,
-			7,
-			4,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					16,
+					36,
+					54,
+					72,
+					80,
+					88,
+					96,
+					104,
+					124,
+					128,
+					132,
+					136,
+					140,
+					144
+				],
+				"hit dmg% distribution": [
+					8,
+					15,
+					10,
+					8,
+					7,
+					6,
+					4,
+					4,
+					10,
+					7,
+					7,
+					7,
+					4,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					160
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "적 전체에게 강력한 화속성 14연속 데미지＆3턴간 아군 전체의 공격력 대폭 상승",
+		"drop check count": 1,
 		"id": "110016",
 		"levels": [
 			{
@@ -528,7 +622,6 @@
 				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "브레이블리 세이비어"
 	},
 	"sell caution": false,
@@ -547,35 +640,92 @@
 		}
 	},
 	"ubb": {
-		"desc": "적 전체에게 아주 강력한 화속성 24연속 데미지＆2턴간 공격력 초대폭 저하&3턴간 아군 전체의 공격력 대폭 상승",
-		"hit dmg% distribution": [
-			6,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			6,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					16,
+					26,
+					36,
+					44,
+					54,
+					62,
+					70,
+					76,
+					82,
+					88,
+					92,
+					96,
+					100,
+					104,
+					124,
+					127,
+					130,
+					133,
+					136,
+					139,
+					142,
+					145,
+					148,
+					151
+				],
+				"hit dmg% distribution": [
+					6,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					6,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 24,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					160
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 24,
+		"desc": "적 전체에게 아주 강력한 화속성 24연속 데미지＆2턴간 공격력 초대폭 저하&3턴간 아군 전체의 공격력 대폭 상승",
+		"drop check count": 1,
 		"id": "210016",
 		"levels": [
 			{
@@ -611,315 +761,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 24,
 		"name": "이그니드 바이저"
 	}
 }

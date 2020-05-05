@@ -31,14 +31,48 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 76
+		},
+		"idle": {
+			"total number of frames": 44
+		},
+		"move": {
+			"total number of frames": 36
+		}
+	},
 	"bb": {
-		"desc": "2 combo Water elemental attack on single Enemy & probable Weakening effect",
-		"hit dmg% distribution": [
-			50,
-			50
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					50,
+					55
+				],
+				"hit dmg% distribution": [
+					50,
+					50
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 2,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 2,
+		"desc": "2 combo Water elemental attack on single Enemy & probable Weakening effect",
+		"drop check count": 1,
 		"id": "20061",
 		"levels": [
 			{
@@ -232,20 +266,32 @@
 				]
 			}
 		],
-		"max bc generated": 2,
 		"name": "Crazy Slash"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 3,
+	"damage frames": {
+		"frame times": [
+			50,
+			55
+		],
+		"hit dmg% distribution": [
+			60,
+			40
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "A novice pirate active in the seas near the ruined Sama Kingdom. From his relaxed appearance and speech, he was often made light of by enemies who would soon regret it. With deceivingly quick movements and a hearty strike, he would cut down opponents in a flash. In his day, his captain would always say, \"As long as there be scum around, there be wine to drink.\"",
 		"evolution": " ",
 		"fusion": "Yo ho! Fusion time!<br>Time to power up!",
 		"summon": "I am a pirate!<br>A pirate's life for me!<br>Yo ho, I'll tag along with you!"
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"cost": 50000,
@@ -272,12 +318,6 @@
 	"gender": "male",
 	"getting type": "not eligible for achievement",
 	"guide_id": 81,
-	"hit dmg% distribution": [
-		60,
-		40
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 20061,
 	"imp": {
 		"max atk": "120",
@@ -298,7 +338,18 @@
 		"name": "Pure Light"
 	},
 	"lord damage range": "698~780",
-	"max bc generated": 4,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "Pirate Verica",
 	"rarity": 2,
 	"sell caution": false,

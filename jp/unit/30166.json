@@ -19,27 +19,86 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 97
+		},
+		"idle": {
+			"total number of frames": 76
+		},
+		"move": {
+			"total number of frames": 17
+		}
+	},
 	"bb": {
-		"desc": "敵単体に強力な樹属性１５連ダメージ＆味方全体に３ターン、確率で毒・怪我・弱体・病気を発生する効果を付与＆１ターン、被ダメージを半分に軽減",
-		"hit dmg% distribution": [
-			44,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					16,
+					19,
+					22,
+					25,
+					28,
+					31,
+					33,
+					35,
+					37,
+					39,
+					41,
+					43,
+					45,
+					47,
+					49
+				],
+				"hit dmg% distribution": [
+					44,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "敵単体に強力な樹属性１５連ダメージ＆味方全体に３ターン、確率で毒・怪我・弱体・病気を発生する効果を付与＆１ターン、被ダメージを半分に軽減",
+		"drop check count": 2,
 		"id": "30166",
 		"levels": [
 			{
@@ -363,21 +422,53 @@
 				]
 			}
 		],
-		"max bc generated": 30,
 		"name": "グランドウィーヴ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 30160,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			16,
+			20,
+			23,
+			26,
+			29,
+			31,
+			33,
+			35,
+			37,
+			39,
+			41,
+			43
+		],
+		"hit dmg% distribution": [
+			50,
+			5,
+			5,
+			4,
+			5,
+			4,
+			5,
+			4,
+			5,
+			4,
+			5,
+			4
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
 	"dictionary": {
 		"description": "One of the four legendary warriors who fought to save the Kingdom of Palmyna. Managing to seal Cardes in the underworld, Edea fell into a deep slumber while still clad in her sparkling armor, Lafdranya. However, after hearing her comrades call her name, Edea woke once again, weakening the seal on Cardes in the process. Having decided anew to defeat the Fallen God alongside her dear friends, Edea's Lafdranya transformed itself into a great sword in order to help its owner's will become a reality.",
 		"evolution": "You can't build a future by just<br>being defensive! I chose to fight<br>to live alongside my friends!",
 		"fusion": "I shall accept it all.<br>After all, the reason I am here<br>is because I wished it so.",
 		"summon": "Lafdranya used all of its power<br>to help me... I will never forget<br>such a noble sacrifice..."
 	},
+	"drop check count": 3,
 	"element": "earth",
 	"evolution": {
 		"prev": "30165"
@@ -398,11 +489,13 @@
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -433,22 +526,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 948,
-	"hit dmg% distribution": [
-		50,
-		5,
-		5,
-		4,
-		5,
-		4,
-		5,
-		4,
-		5,
-		4,
-		5,
-		4
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 30166,
 	"imp": {
 		"max atk": "300",
@@ -478,7 +555,18 @@
 		"name": "樹鎧麗神の力"
 	},
 	"lord damage range": "2141~2392",
-	"max bc generated": 36,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "覇鎧の麗神姫エデア",
 	"overdrive stats": {
 		"atk%": 100,
@@ -487,29 +575,80 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な樹属性１８連ダメージ＆味方全体に３ターン、確率で毒・怪我・弱体・病気を発生する効果を付与＆１ターン、被ダメージを半分に軽減",
-		"hit dmg% distribution": [
-			44,
-			3,
-			3,
-			4,
-			3,
-			3,
-			4,
-			3,
-			3,
-			4,
-			3,
-			3,
-			4,
-			3,
-			3,
-			4,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					16,
+					19,
+					22,
+					25,
+					28,
+					31,
+					33,
+					35,
+					37,
+					39,
+					41,
+					43,
+					45,
+					47,
+					49,
+					51,
+					53,
+					55
+				],
+				"hit dmg% distribution": [
+					44,
+					3,
+					3,
+					4,
+					3,
+					3,
+					4,
+					3,
+					3,
+					4,
+					3,
+					3,
+					4,
+					3,
+					3,
+					4,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "敵全体に強力な樹属性１８連ダメージ＆味方全体に３ターン、確率で毒・怪我・弱体・病気を発生する効果を付与＆１ターン、被ダメージを半分に軽減",
+		"drop check count": 1,
 		"id": "130166",
 		"levels": [
 			{
@@ -833,7 +972,6 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "ラストパグローム"
 	},
 	"sell caution": false,
@@ -852,32 +990,86 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な樹属性２１連ダメージ＆味方全体に２ターン、確率で攻撃力を１ターン超絶低下する効果を付与＆１ターン、被ダメージを１/４に軽減",
-		"hit dmg% distribution": [
-			35,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					16,
+					19,
+					22,
+					25,
+					28,
+					31,
+					33,
+					35,
+					37,
+					39,
+					41,
+					43,
+					45,
+					47,
+					49,
+					51,
+					53,
+					55,
+					57,
+					59,
+					61
+				],
+				"hit dmg% distribution": [
+					35,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 21,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "51"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 21,
+		"desc": "敵全体に超強力な樹属性２１連ダメージ＆味方全体に２ターン、確率で攻撃力を１ターン超絶低下する効果を付与＆１ターン、被ダメージを１/４に軽減",
+		"drop check count": 1,
 		"id": "230166",
 		"levels": [
 			{
@@ -910,288 +1102,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"inflict atk% debuff (2)": -50,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"inflict atk% debuff (2)": -50,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"inflict atk% debuff (2)": -50,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"inflict atk% debuff (2)": -50,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"inflict atk% debuff (2)": -50,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"inflict atk% debuff (2)": -50,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"inflict atk% debuff (2)": -50,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"inflict atk% debuff (2)": -50,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"inflict atk% debuff (2)": -50,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 21,
 		"name": "アタラクシア"
 	}
 }

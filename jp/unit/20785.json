@@ -19,24 +19,80 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 84
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性１２連ダメージ＆味方全体の全状態異常を回復＆３ターン、攻撃力に応じて回復力をアップ",
-		"hit dmg% distribution": [
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			12
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					40,
+					48,
+					56,
+					64,
+					72,
+					80,
+					88,
+					96,
+					104,
+					112,
+					120,
+					143
+				],
+				"hit dmg% distribution": [
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "敵全体に水属性１２連ダメージ＆味方全体の全状態異常を回復＆３ターン、攻撃力に応じて回復力をアップ",
+		"drop check count": 1,
 		"id": "20785",
 		"levels": [
 			{
@@ -430,15 +486,35 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "マハブフダイン"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-02-24T21:58:31.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20780,
 	"cost": 25,
+	"damage frames": {
+		"frame times": [
+			29,
+			33,
+			41,
+			45,
+			53,
+			57
+		],
+		"hit dmg% distribution": [
+			22,
+			11,
+			22,
+			11,
+			22,
+			12
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
+	"drop check count": 5,
 	"element": "water",
 	"evolution": {
 		"prev": "20784"
@@ -447,16 +523,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 1327,
-	"hit dmg% distribution": [
-		22,
-		11,
-		22,
-		11,
-		22,
-		12
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 20785,
 	"imp": {
 		"max atk": "320",
@@ -497,30 +563,101 @@
 		"name": "神殺しの横に立つ少女"
 	},
 	"lord damage range": "1620~1809",
-	"max bc generated": 30,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "アサヒ",
 	"rarity": 6,
 	"sbb": {
-		"desc": "敵全体に強力な水属性１５連ダメージ＆味方全体の全状態異常を回復＆３ターン、攻撃力に応じて回復力をアップ＆２ターン、防御貫通効果を付与",
-		"hit dmg% distribution": [
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			13,
-			9
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					40,
+					44,
+					48,
+					52,
+					56,
+					60,
+					64,
+					68,
+					72,
+					76,
+					80,
+					84,
+					88,
+					130,
+					133
+				],
+				"hit dmg% distribution": [
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					13,
+					9
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "敵全体に強力な水属性１５連ダメージ＆味方全体の全状態異常を回復＆３ターン、攻撃力に応じて回復力をアップ＆２ターン、防御貫通効果を付与",
+		"drop check count": 1,
 		"id": "120785",
 		"levels": [
 			{
@@ -994,7 +1131,6 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "アイスエイジ"
 	},
 	"sell caution": false,

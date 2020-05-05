@@ -25,27 +25,86 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 90
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に闇属性１５連ダメージ＆ＯＤゲージを少し増加＆味方全体に３ターン、闇属性ユニットの攻撃力をアップ",
-		"hit dmg% distribution": [
-			11,
-			10,
-			9,
-			8,
-			8,
-			7,
-			7,
-			6,
-			6,
-			5,
-			5,
-			5,
-			5,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					38,
+					44,
+					49,
+					53,
+					56,
+					59,
+					62,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86
+				],
+				"hit dmg% distribution": [
+					11,
+					10,
+					9,
+					8,
+					8,
+					7,
+					7,
+					6,
+					6,
+					5,
+					5,
+					5,
+					5,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "43"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "敵全体に闇属性１５連ダメージ＆ＯＤゲージを少し増加＆味方全体に３ターン、闇属性ユニットの攻撃力をアップ",
+		"drop check count": 1,
 		"id": "60356",
 		"levels": [
 			{
@@ -339,15 +398,53 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "冥黒の神刃"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-14T16:14:07.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60350,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			38,
+			44,
+			49,
+			53,
+			56,
+			59,
+			62,
+			65,
+			68,
+			71,
+			74,
+			77
+		],
+		"hit dmg% distribution": [
+			13,
+			11,
+			10,
+			9,
+			9,
+			9,
+			8,
+			7,
+			6,
+			6,
+			6,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
+	"dictionary": {
+		"description": "As he realized that everything was over, he cursed his own weakness. In despair, he set his mind upon following his friends and companions to certain death in battle against the gods. Just then, the voices of his friends echoed in his mind. Smirking, he thought, \"Even in death, will you give me no rest?\" With that, he began wiping away the last traces of his existence. He was never seen again. One theory is that he started a new life under his long-hated family name, but even now, the truth is cloaked under the shadows of history.",
+		"evolution": "Stand strong...and never look back.<br>I'm right behind you.<br>And I'm not alone, either.",
+		"fusion": "I have never faced a battle so horrendous as burning away my own past. Yet, I have faith in the future...in humanity!",
+		"summon": "My...no...our dying wish.<br>The will of those who inherit this wish shall become guiding lights for our future."
+	},
+	"drop check count": 4,
 	"element": "dark",
 	"evolution": {
 		"prev": "60355"
@@ -359,11 +456,13 @@
 			{
 				"conditions": [],
 				"hit increase/hit": 1,
-				"passive id": "37"
+				"passive id": "37",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -385,22 +484,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1235,
-	"hit dmg% distribution": [
-		13,
-		11,
-		10,
-		9,
-		9,
-		9,
-		8,
-		7,
-		6,
-		6,
-		6,
-		6
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 60356,
 	"imp": {
 		"max atk": "440",
@@ -430,7 +513,18 @@
 		"name": "聡影神の断罪"
 	},
 	"lord damage range": "2378~2657",
-	"max bc generated": 48,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "暗剋の幻闘師ゼファー",
 	"overdrive stats": {
 		"atk%": 100,
@@ -439,30 +533,82 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な闇属性１９連ダメージ＆ＯＤゲージを少し増加＆味方全体に３ターン、攻撃力・防御力・回復力をかなりアップ",
-		"hit dmg% distribution": [
-			10,
-			9,
-			9,
-			8,
-			7,
-			6,
-			6,
-			5,
-			5,
-			5,
-			4,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					38,
+					43,
+					47,
+					50,
+					53,
+					56,
+					59,
+					62,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86,
+					89,
+					92,
+					95
+				],
+				"hit dmg% distribution": [
+					10,
+					9,
+					9,
+					8,
+					7,
+					6,
+					6,
+					5,
+					5,
+					5,
+					4,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 19,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "43"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 19,
+		"desc": "敵全体に強力な闇属性１９連ダメージ＆ＯＤゲージを少し増加＆味方全体に３ターン、攻撃力・防御力・回復力をかなりアップ",
+		"drop check count": 1,
 		"id": "160356",
 		"levels": [
 			{
@@ -776,7 +922,6 @@
 				]
 			}
 		],
-		"max bc generated": 19,
 		"name": "サヴェイジネメシス"
 	},
 	"sell caution": false,
@@ -795,34 +940,102 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な闇属性２３連ダメージ＆ＯＤゲージを増加＆味方全体に闇属性のバリアを付与＆３ターン、通常攻撃ＨＩＴ数を大幅に増加",
-		"hit dmg% distribution": [
-			8,
-			7,
-			7,
-			7,
-			6,
-			6,
-			5,
-			5,
-			5,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					38,
+					43,
+					47,
+					50,
+					53,
+					56,
+					59,
+					62,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101,
+					104,
+					107
+				],
+				"hit dmg% distribution": [
+					8,
+					7,
+					7,
+					7,
+					6,
+					6,
+					5,
+					5,
+					5,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 23,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "26"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "62"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "43"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 23,
+		"desc": "敵全体に超強力な闇属性２３連ダメージ＆ＯＤゲージを増加＆味方全体に闇属性のバリアを付与＆３ターン、通常攻撃ＨＩＴ数を大幅に増加",
+		"drop check count": 1,
 		"id": "260356",
 		"levels": [
 			{
@@ -863,360 +1076,8 @@
 						"target type": "4"
 					}
 				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 3,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase od gauge%": 25,
-						"proc id": "43",
-						"target area": "single",
-						"target type": "4"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 3,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase od gauge%": 25,
-						"proc id": "43",
-						"target area": "single",
-						"target type": "4"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 3,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase od gauge%": 25,
-						"proc id": "43",
-						"target area": "single",
-						"target type": "4"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 3,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase od gauge%": 25,
-						"proc id": "43",
-						"target area": "single",
-						"target type": "4"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 3,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase od gauge%": 25,
-						"proc id": "43",
-						"target area": "single",
-						"target type": "4"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 3,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase od gauge%": 25,
-						"proc id": "43",
-						"target area": "single",
-						"target type": "4"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 3,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase od gauge%": 25,
-						"proc id": "43",
-						"target area": "single",
-						"target type": "4"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 3,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase od gauge%": 25,
-						"proc id": "43",
-						"target area": "single",
-						"target type": "4"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 3,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase od gauge%": 25,
-						"proc id": "43",
-						"target area": "single",
-						"target type": "4"
-					}
-				]
 			}
 		],
-		"max bc generated": 23,
 		"name": "冥異空『ダアト・シーカー』"
 	}
 }

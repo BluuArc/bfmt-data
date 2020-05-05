@@ -19,23 +19,78 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 188
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性１１連ダメージ＆確率で攻撃力を１ターン大幅に低下＆味方全体に３ターン、水・雷属性の弱点属性ダメージをアップ",
-		"hit dmg% distribution": [
-			9,
-			9,
-			9,
-			9,
-			9,
-			9,
-			9,
-			9,
-			9,
-			9,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					41,
+					44,
+					74,
+					77,
+					80,
+					94,
+					97,
+					100,
+					114,
+					117,
+					120
+				],
+				"hit dmg% distribution": [
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 11,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "55"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 11,
+		"desc": "敵全体に雷属性１１連ダメージ＆確率で攻撃力を１ターン大幅に低下＆味方全体に３ターン、水・雷属性の弱点属性ダメージをアップ",
+		"drop check count": 1,
 		"id": "40594",
 		"levels": [
 			{
@@ -389,20 +444,36 @@
 				]
 			}
 		],
-		"max bc generated": 11,
 		"name": "序ノ巻『景』"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40590,
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			41,
+			74,
+			94,
+			110
+		],
+		"hit dmg% distribution": [
+			25,
+			25,
+			25,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A type of swordswoman known as a \"kunoichi\" from another world. Born into a clan known as the \"shinobi,\" she inherited the great talents of her ancestors at birth. Though she was a mighty warrior who could dispose of her enemies in a flash as quick as lightning, she quarreled with her clan from time to time as she yearned for her freedom. Thus, the elders of her village sent her on a quest to gain more knowledge in order to correct her rebellious personality. However, when she returned to her village she found her clan drowned in their own blood and a girl headed towards a mysterious void.",
 		"fusion": "Yes, I became stronger!<br>What? You did this?<br>Umm... Should I say thanks?",
 		"summon": "Shadow Scroll Kagura,<br>on the scene!<br>How was that? Did I do it right?"
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -439,14 +510,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 987,
-	"hit dmg% distribution": [
-		25,
-		25,
-		25,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 40594,
 	"imp": {
 		"max atk": "200",
@@ -467,7 +530,18 @@
 		"name": "重激の神光"
 	},
 	"lord damage range": "1704~1904",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "幻影神カグラ",
 	"rarity": 5,
 	"sell caution": false,

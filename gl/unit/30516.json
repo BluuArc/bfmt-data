@@ -19,29 +19,90 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 193
+		},
+		"idle": {
+			"total number of frames": 124
+		},
+		"move": {
+			"total number of frames": 4
+		}
+	},
 	"bb": {
-		"desc": "17 combo powerful Earth attack on all foes, probable 1 turn Atk, Def reduction & adds Injury effect to attack for 3 turns",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			5,
-			5,
-			5,
-			5,
-			5,
-			6,
-			6,
-			6,
-			7,
-			7,
-			7,
-			8,
-			8,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					56,
+					60,
+					64,
+					68,
+					72,
+					76,
+					80,
+					84,
+					88,
+					92,
+					96,
+					100,
+					104,
+					108,
+					112,
+					116,
+					120
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					5,
+					5,
+					5,
+					5,
+					5,
+					6,
+					6,
+					6,
+					7,
+					7,
+					7,
+					8,
+					8,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 17,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 17,
+		"desc": "17 combo powerful Earth attack on all foes, probable 1 turn Atk, Def reduction & adds Injury effect to attack for 3 turns",
+		"drop check count": 1,
 		"id": "30516",
 		"levels": [
 			{
@@ -415,21 +476,57 @@
 				]
 			}
 		],
-		"max bc generated": 17,
 		"name": "Emerald Rage"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-11-25T16:41:02.000Z",
-		"updatedAt": "2015-12-04T07:58:12.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 30510,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			56,
+			61,
+			66,
+			71,
+			76,
+			81,
+			86,
+			91,
+			96,
+			101,
+			106,
+			111,
+			116,
+			121
+		],
+		"hit dmg% distribution": [
+			6,
+			6,
+			6,
+			7,
+			7,
+			7,
+			7,
+			7,
+			7,
+			8,
+			8,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 14
+	},
 	"dictionary": {
 		"description": "After going mad with demonic power, Ragshelm's rampage was momentarily stopped by a knight wielding a blade of fire. Unfortunately, it wasn't long before the demonic power within the ancient dragon retook control over its body, and the destruction began once again. Ragshelm somehow in Ishgria along with all the beings that had surrounded him, destroying everything in its path. This is said to have taken a toll on its body, which led the dragon to its own ruin. However, it is unknown whether or not the warriors the ancient dragon fought against were by it side when this happened.",
 		"evolution": "The...demonic power...within me...<br>Makes...me...destroy...<br>You...bear...the power...of chaos",
 		"fusion": "More... Test...my...limit...<br>I shall...satiate...<br>Your thirst...for...power...",
 		"summon": "His fire...destroyed me...once...<br>But I...was...resurrected...<br>And fell...into darkness...anew..."
 	},
+	"drop check count": 3,
 	"element": "earth",
 	"evolution": {
 		"prev": "30515"
@@ -447,11 +544,13 @@
 				"atk% buff when enemy has sick": true,
 				"atk% buff when enemy has weaken": true,
 				"conditions": [],
-				"passive id": "74"
+				"passive id": "74",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -473,24 +572,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 1086,
-	"hit dmg% distribution": [
-		6,
-		6,
-		6,
-		7,
-		7,
-		7,
-		7,
-		7,
-		7,
-		8,
-		8,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 14,
 	"id": 30516,
 	"imp": {
 		"max atk": "340",
@@ -520,7 +601,18 @@
 		"name": "Dragon God's Miasma"
 	},
 	"lord damage range": "2185~2440",
-	"max bc generated": 42,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "Immortal Dragon Ragshelm",
 	"overdrive stats": {
 		"atk%": 100,
@@ -529,30 +621,94 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "19 combo powerful Earth attack on all foes, probable 2 turn Atk, Def reduction, boosts enemies' Spark vulnerability for 2 turns & adds Injury effect to attack for 3 turns",
-		"hit dmg% distribution": [
-			3,
-			3,
-			3,
-			4,
-			4,
-			4,
-			4,
-			4,
-			5,
-			5,
-			5,
-			6,
-			6,
-			6,
-			7,
-			7,
-			8,
-			8,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					56,
+					60,
+					64,
+					68,
+					72,
+					76,
+					80,
+					84,
+					88,
+					92,
+					96,
+					100,
+					104,
+					108,
+					112,
+					116,
+					120,
+					124,
+					128
+				],
+				"hit dmg% distribution": [
+					3,
+					3,
+					3,
+					4,
+					4,
+					4,
+					4,
+					4,
+					5,
+					5,
+					5,
+					6,
+					6,
+					6,
+					7,
+					7,
+					8,
+					8,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 19,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "58"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 19,
+		"desc": "19 combo powerful Earth attack on all foes, probable 2 turn Atk, Def reduction, boosts enemies' Spark vulnerability for 2 turns & adds Injury effect to attack for 3 turns",
+		"drop check count": 1,
 		"id": "130516",
 		"levels": [
 			{
@@ -1016,7 +1172,6 @@
 				]
 			}
 		],
-		"max bc generated": 19,
 		"name": "Tyrant Vertex"
 	},
 	"sell caution": false,
@@ -1035,32 +1190,86 @@
 		}
 	},
 	"ubb": {
-		"desc": "21 combo massive Earth attack on all foes, adds 1 turn huge Atk reduction effect to attack for 2 turns & boosts enemies' Spark vulnerability for 2 turns",
-		"hit dmg% distribution": [
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			4,
-			5,
-			4,
-			5,
-			6,
-			5,
-			6,
-			7,
-			6,
-			7,
-			6,
-			7,
-			6,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					56,
+					60,
+					64,
+					68,
+					72,
+					76,
+					80,
+					84,
+					88,
+					92,
+					96,
+					100,
+					104,
+					108,
+					112,
+					116,
+					120,
+					124,
+					128,
+					132,
+					136
+				],
+				"hit dmg% distribution": [
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					4,
+					5,
+					4,
+					5,
+					6,
+					5,
+					6,
+					7,
+					6,
+					7,
+					6,
+					7,
+					6,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 21,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					10
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "51"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "58"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 21,
+		"desc": "21 combo massive Earth attack on all foes, adds 1 turn huge Atk reduction effect to attack for 2 turns & boosts enemies' Spark vulnerability for 2 turns",
+		"drop check count": 1,
 		"id": "230516",
 		"levels": [
 			{
@@ -1094,297 +1303,8 @@
 						"target type": "enemy"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"inflict atk% debuff (2)": -60,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"inflict atk% debuff (2)": -60,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"inflict atk% debuff (2)": -60,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"inflict atk% debuff (2)": -60,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"inflict atk% debuff (2)": -60,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"inflict atk% debuff (2)": -60,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"inflict atk% debuff (2)": -60,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"inflict atk% debuff (2)": -60,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"inflict atk% debuff (2)": -60,
-						"inflict atk% debuff chance% (74)": 10,
-						"proc id": "51",
-						"stat% debuff turns": 1,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
 			}
 		],
-		"max bc generated": 21,
 		"name": "Miasma of Chaos"
 	}
 }

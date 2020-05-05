@@ -25,27 +25,98 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 160
+		},
+		"idle": {
+			"total number of frames": 118
+		},
+		"move": {
+			"total number of frames": 9
+		}
+	},
 	"bb": {
-		"desc": "敵全体に樹属性１５連ダメージ＆味方のＢＢゲージを大幅に増加＆味方全体に３ターン、ＢＣ・ＨＣ出現率をアップ・アイテム出現率をかなりアップ・ＯＤゲージ増加量をアップ",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			10,
-			8,
-			6,
-			9,
-			9,
-			9,
-			9
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					17,
+					20,
+					23,
+					26,
+					29,
+					32,
+					35,
+					38,
+					62,
+					66,
+					70,
+					80,
+					85,
+					90,
+					95
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					10,
+					8,
+					6,
+					9,
+					9,
+					9,
+					9
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "84"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "敵全体に樹属性１５連ダメージ＆味方のＢＢゲージを大幅に増加＆味方全体に３ターン、ＢＣ・ＨＣ出現率をアップ・アイテム出現率をかなりアップ・ＯＤゲージ増加量をアップ",
+		"drop check count": 1,
 		"id": "30446",
 		"levels": [
 			{
@@ -429,15 +500,51 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "インヴィジブルグリップ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-14T16:14:07.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 30440,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			17,
+			20,
+			23,
+			26,
+			29,
+			32,
+			35,
+			38,
+			62,
+			66,
+			70,
+			80,
+			85,
+			90
+		],
+		"hit dmg% distribution": [
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			12,
+			10,
+			8,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 14
+	},
+	"drop check count": 3,
 	"element": "earth",
 	"evolution": {
 		"prev": "30445"
@@ -450,18 +557,21 @@
 				"atk% buff": 20,
 				"conditions": [
 					{
-						"unknown": "5,3"
+						"sphere category required": "Drop",
+						"sphere category required (raw)": "3"
 					}
 				],
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
 				"conditions": [],
 				"hit increase/hit": 1,
-				"passive id": "37"
+				"passive id": "37",
+				"passive target": "self"
 			}
 		],
 		"id": "12900",
@@ -471,24 +581,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1259,
-	"hit dmg% distribution": [
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		12,
-		10,
-		8,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 14,
 	"id": 30446,
 	"imp": {
 		"max atk": "440",
@@ -521,7 +613,18 @@
 		"name": "大怪盗神の奥義"
 	},
 	"lord damage range": "2365~2642",
-	"max bc generated": 42,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "宝義の盗神ゼルナイト",
 	"overdrive stats": {
 		"atk%": 100,
@@ -530,51 +633,136 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な樹属性４０連ダメージ（ダメージの一部を吸収）＆味方のＢＢゲージを大幅に増加＆味方全体に３ターン、ＢＣ・ＨＣ出現率をアップ・アイテム出現率をかなりアップ・被ダメージ時、ＢＢゲージをかなり増加",
-		"hit dmg% distribution": [
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					17,
+					20,
+					23,
+					26,
+					29,
+					32,
+					35,
+					38,
+					41,
+					44,
+					47,
+					50,
+					53,
+					56,
+					59,
+					62,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101,
+					104,
+					107,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134
+				],
+				"hit dmg% distribution": [
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 40,
+				"proc id": "14"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 40,
+		"desc": "敵全体に強力な樹属性４０連ダメージ（ダメージの一部を吸収）＆味方のＢＢゲージを大幅に増加＆味方全体に３ターン、ＢＣ・ＨＣ出現率をアップ・アイテム出現率をかなりアップ・被ダメージ時、ＢＢゲージをかなり増加",
+		"drop check count": 1,
 		"id": "130446",
 		"levels": [
 			{
@@ -998,7 +1186,6 @@
 				]
 			}
 		],
-		"max bc generated": 40,
 		"name": "伝家の宝盗"
 	},
 	"sell caution": false,
@@ -1017,31 +1204,96 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な樹属性２０連ダメージ＆味方全体に３ターン、攻撃力を超絶アップ・通常攻撃ＨＩＴ数をかなり増加・ＢＣ・ＨＣ出現率を大幅にアップ・アイテム出現率をかなりアップ",
-		"hit dmg% distribution": [
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			8,
-			4,
-			4,
-			3,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					17,
+					20,
+					23,
+					26,
+					29,
+					32,
+					35,
+					38,
+					41,
+					44,
+					62,
+					65,
+					68,
+					71,
+					80,
+					84,
+					88,
+					92,
+					96,
+					100
+				],
+				"hit dmg% distribution": [
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					8,
+					4,
+					4,
+					3,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "26"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "敵全体に超強力な樹属性２０連ダメージ＆味方全体に３ターン、攻撃力を超絶アップ・通常攻撃ＨＩＴ数をかなり増加・ＢＣ・ＨＣ出現率を大幅にアップ・アイテム出現率をかなりアップ",
+		"drop check count": 1,
 		"id": "230446",
 		"levels": [
 			{
@@ -1084,378 +1336,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 50,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 50,
-						"item drop rate% buff (11)": 3,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 50,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 50,
-						"item drop rate% buff (11)": 3,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 50,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 50,
-						"item drop rate% buff (11)": 3,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 50,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 50,
-						"item drop rate% buff (11)": 3,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 50,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 50,
-						"item drop rate% buff (11)": 3,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 50,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 50,
-						"item drop rate% buff (11)": 3,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 50,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 50,
-						"item drop rate% buff (11)": 3,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 50,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 50,
-						"item drop rate% buff (11)": 3,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 50,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 50,
-						"item drop rate% buff (11)": 3,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "その名は怪盗ゼルナイト"
 	}
 }

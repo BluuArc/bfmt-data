@@ -19,17 +19,66 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 96
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 17
+		}
+	},
 	"bb": {
-		"desc": "5 combo Dark attack on all foes & probable random status ailment infliction",
-		"hit dmg% distribution": [
-			35,
-			25,
-			20,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					60,
+					64,
+					68,
+					72,
+					76
+				],
+				"hit dmg% distribution": [
+					35,
+					25,
+					20,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "5 combo Dark attack on all foes & probable random status ailment infliction",
+		"drop check count": 1,
 		"id": "60821",
 		"levels": [
 			{
@@ -333,20 +382,32 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "Chapter 2: Kahla"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-12-30T09:59:43.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 60820,
 	"cost": 4,
+	"damage frames": {
+		"frame times": [
+			60,
+			64
+		],
+		"hit dmg% distribution": [
+			70,
+			30
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "A tome holding supreme magical power. It was originally a possession belonging to an individual who crossed from Grand Gaia to Ishgria. However, it was touched by evil when its owner lost it, and began to manifest disturbing magical hands from the locations where dark magical secrets were recorded within it. It is said that any seized by the hands will be pulled into the book with merciless strength, and that their health will be drained. Afterwards, their chewed-up remains will be expelled once again.",
 		"fusion": "Hehehe...",
 		"summon": "Who...are you?"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 50000,
@@ -373,12 +434,6 @@
 	"gender": "other",
 	"getting type": "not eligible for achievement",
 	"guide_id": 1168,
-	"hit dmg% distribution": [
-		70,
-		30
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 60821,
 	"imp": {
 		"max atk": "120",
@@ -407,7 +462,18 @@
 		"name": "Pandemic Spread"
 	},
 	"lord damage range": "845~944",
-	"max bc generated": 4,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Goetia",
 	"rarity": 2,
 	"sell caution": false,

@@ -25,24 +25,92 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 197
+		},
+		"idle": {
+			"total number of frames": 128
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "12 combo powerful Light attack on all foes, adds Light, Dark elements to attack for 3 turns, reduces damage taken by 50% for 1 turn & removes all status ailments",
-		"hit dmg% distribution": [
-			10,
-			7,
-			5,
-			3,
-			2,
-			27,
-			18,
-			10,
-			8,
-			5,
-			3,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					29,
+					32,
+					35,
+					38,
+					41,
+					78,
+					82,
+					86,
+					90,
+					94,
+					98,
+					102
+				],
+				"hit dmg% distribution": [
+					10,
+					7,
+					5,
+					3,
+					2,
+					27,
+					18,
+					10,
+					8,
+					5,
+					3,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "12 combo powerful Light attack on all foes, adds Light, Dark elements to attack for 3 turns, reduces damage taken by 50% for 1 turn & removes all status ailments",
+		"drop check count": 1,
 		"id": "50756",
 		"levels": [
 			{
@@ -536,21 +604,47 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "Innocent Light's Judgment"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-27T14:43:14.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 50750,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			29,
+			32,
+			35,
+			78,
+			83,
+			88,
+			93,
+			98,
+			103
+		],
+		"hit dmg% distribution": [
+			10,
+			5,
+			5,
+			30,
+			20,
+			14,
+			8,
+			5,
+			3
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 9
+	},
 	"dictionary": {
 		"description": "A Summoner selected to join the covert \"Ishgria's Recon Squad.\" Immediately after touching ground in Ishgria, Krantz was appointed as the acting commander of the squadron, whose members decreased to just three after suffering the attack of a terrible beast. Shortly afterwards, another powerful demon made its appearance, and thus Krantz made a choice. He would stay behind with Libera to face the demon, while the remaining member of their squadron reported the findings Unfortunately, that member would never return to Elgaia.",
 		"evolution": "It'd be a lie to say that I have no<br>regrets, but I can definitely say<br>that I did my very best.",
 		"fusion": "I don't overthink things anymore.<br>I just believe in my own judgment,<br>and keep aiming higher!",
 		"summon": "I was entrusted with the future,<br>and now I'll entrust it to another.<br>I'm sure that person will..."
 	},
+	"drop check count": 4,
 	"element": "light",
 	"evolution": {
 		"prev": "50755"
@@ -563,11 +657,13 @@
 				"conditions": [],
 				"dmg reduction chance%": 20,
 				"dmg reduction%": 20,
-				"passive id": "14"
+				"passive id": "14",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"passive id": "48",
+				"passive target": "self",
 				"reduced bb bc cost%": 20
 			}
 		],
@@ -578,19 +674,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1019,
-	"hit dmg% distribution": [
-		10,
-		5,
-		5,
-		30,
-		20,
-		14,
-		8,
-		5,
-		3
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 9,
 	"id": 50756,
 	"imp": {
 		"max atk": "300",
@@ -618,7 +701,18 @@
 		"name": "Five Lights' Destiny"
 	},
 	"lord damage range": "2284~2552",
-	"max bc generated": 36,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Virtuous Champion Krantz",
 	"overdrive stats": {
 		"atk%": 100,
@@ -627,27 +721,88 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "16 combo powerful Light attack on all foes, greatly recovers HP, adds Light, Dark elements to attack for 3 turns & reduces damage taken by 50% for 1 turn",
-		"hit dmg% distribution": [
-			10,
-			7,
-			5,
-			3,
-			3,
-			2,
-			2,
-			23,
-			13,
-			9,
-			7,
-			5,
-			4,
-			3,
-			2,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					29,
+					32,
+					35,
+					38,
+					41,
+					44,
+					47,
+					78,
+					82,
+					86,
+					90,
+					94,
+					98,
+					102,
+					106,
+					110
+				],
+				"hit dmg% distribution": [
+					10,
+					7,
+					5,
+					3,
+					3,
+					2,
+					2,
+					23,
+					13,
+					9,
+					7,
+					5,
+					4,
+					3,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo powerful Light attack on all foes, greatly recovers HP, adds Light, Dark elements to attack for 3 turns & reduces damage taken by 50% for 1 turn",
+		"drop check count": 1,
 		"id": "150756",
 		"levels": [
 			{
@@ -1061,7 +1216,6 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Charis Claymore"
 	},
 	"sell caution": false,
@@ -1080,31 +1234,84 @@
 		}
 	},
 	"ubb": {
-		"desc": "20 combo massive Light attack on all foes & boosts Atk relative to Def for 3 turns and reduces damage taken by 75% for 2 turns",
-		"hit dmg% distribution": [
-			9,
-			7,
-			5,
-			3,
-			3,
-			2,
-			2,
-			2,
-			2,
-			2,
-			19,
-			11,
-			8,
-			7,
-			5,
-			4,
-			3,
-			2,
-			2,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					29,
+					32,
+					35,
+					38,
+					41,
+					44,
+					47,
+					50,
+					53,
+					56,
+					78,
+					82,
+					86,
+					90,
+					94,
+					98,
+					102,
+					106,
+					110,
+					114
+				],
+				"hit dmg% distribution": [
+					9,
+					7,
+					5,
+					3,
+					3,
+					2,
+					2,
+					2,
+					2,
+					2,
+					19,
+					11,
+					8,
+					7,
+					5,
+					4,
+					3,
+					2,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "20 combo massive Light attack on all foes & boosts Atk relative to Def for 3 turns and reduces damage taken by 75% for 2 turns",
+		"drop check count": 1,
 		"id": "250756",
 		"levels": [
 			{
@@ -1136,279 +1343,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Earth Divider"
 	}
 }

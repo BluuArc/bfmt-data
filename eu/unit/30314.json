@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 155
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 64
+		}
+	},
 	"bb": {
-		"desc": "8 combo powerful Earth attack on all enemies & boost to HC drop rate for 3 turns",
-		"hit dmg% distribution": [
-			13,
-			12,
-			13,
-			12,
-			13,
-			12,
-			13,
-			12
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					102,
+					117,
+					132,
+					147,
+					162,
+					177,
+					192,
+					207
+				],
+				"hit dmg% distribution": [
+					13,
+					12,
+					13,
+					12,
+					13,
+					12,
+					13,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo powerful Earth attack on all enemies & boost to HC drop rate for 3 turns",
+		"drop check count": 1,
 		"id": "30314",
 		"levels": [
 			{
@@ -252,20 +292,42 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Jungle Rage"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 16,
+	"damage frames": {
+		"frame times": [
+			102,
+			117,
+			132,
+			147,
+			162,
+			177,
+			192
+		],
+		"hit dmg% distribution": [
+			15,
+			14,
+			14,
+			15,
+			14,
+			14,
+			14
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A talented magician and former Guardian who rebelled against the gods. When Sodis defected Luly was quick to offer help as she thought it might be fun. She saw all gods, humans, monsters, and even plants as equal, and it's doubtful she even understood what treason meant. Because of this it's said that even when her friends came to fight each other on the battlefield she was able to weild her magical powers without constraint, and enjoyed the battle from the bottom of her heart.",
 		"evolution": "Huh? What happened?<br>I feel a bit better now.<br>I don't need an explanation.",
 		"fusion": "That was cool!<br>Let me try next time!<br>How do I do it?",
 		"summon": "What a funny person, you are!<br>You're a Summoner? What's that?<br>What do you do? Are you strong?"
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"cost": 500000,
@@ -303,17 +365,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 452,
-	"hit dmg% distribution": [
-		15,
-		14,
-		14,
-		15,
-		14,
-		14,
-		14
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 30314,
 	"imp": {
 		"max atk": "140",
@@ -334,7 +385,18 @@
 		"name": "Thunder Barrier"
 	},
 	"lord damage range": "1508~1684",
-	"max bc generated": 14,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
 	"name": "Havoc Queen Luly",
 	"rarity": 5,
 	"sell caution": false,

@@ -19,27 +19,86 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 151
+		},
+		"idle": {
+			"total number of frames": 240
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "15 combo Thunder elemental attack on all enemies & all status ailments removed and nullified for 3 turns",
-		"hit dmg% distribution": [
-			12,
-			7,
-			6,
-			5,
-			7,
-			6,
-			7,
-			5,
-			7,
-			6,
-			7,
-			5,
-			7,
-			6,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					50,
+					56,
+					62,
+					68,
+					74,
+					80,
+					86,
+					92,
+					98,
+					104,
+					110,
+					116,
+					122,
+					128,
+					134
+				],
+				"hit dmg% distribution": [
+					12,
+					7,
+					6,
+					5,
+					7,
+					6,
+					7,
+					5,
+					7,
+					6,
+					7,
+					5,
+					7,
+					6,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "1833.3/110",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo Thunder elemental attack on all enemies & all status ailments removed and nullified for 3 turns",
+		"drop check count": 1,
 		"id": "40536",
 		"levels": [
 			{
@@ -473,21 +532,51 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Divine Purge"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 40530,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			50,
+			56,
+			62,
+			68,
+			74,
+			80,
+			86,
+			92,
+			98,
+			104,
+			110
+		],
+		"hit dmg% distribution": [
+			15,
+			10,
+			9,
+			9,
+			9,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
 	"dictionary": {
 		"description": "A former disciple of Creator Maxwell who was sealed in Ishgria. Once he woke from his slumber, he saw before him a disciple single-handedly wielding a sword. After the disciple uttered that \"everything was going according to plan,\" Kanon delivered a counterattack. The thunder he struck within the barrier caused all of the disciples to disperse, which drove him to roam around looking for a new opponent to face. Though it is believed that no being possessed the ability to guess what he was thinking, or to predict his movements, a disciple that knew him did say that once Kanon was on the move, he always made a great impact.",
 		"evolution": "Is the world ending?<br>......<br>You're quite interesting.",
 		"fusion": "Those who advance, don't advance at all.<br>......<br>It should be obvious.",
 		"summon": "Everything's going according to plan.<br>......<br>No matter what has happened."
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"prev": "40535"
@@ -502,6 +591,7 @@
 				"injury resist%": 100,
 				"paralysis resist%": 100,
 				"passive id": "4",
+				"passive target": "self",
 				"poison resist%": 100,
 				"sick resist%": 100,
 				"weaken resist%": 100
@@ -514,21 +604,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 861,
-	"hit dmg% distribution": [
-		15,
-		10,
-		9,
-		9,
-		9,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 11,
 	"id": 40536,
 	"imp": {
 		"max atk": "440",
@@ -559,7 +634,18 @@
 		"name": "Eternal Flora"
 	},
 	"lord damage range": "1964~2195",
-	"max bc generated": 22,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "Heavenly Emperor Kanon",
 	"overdrive stats": {
 		"atk%": 100,
@@ -568,30 +654,82 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "19 combo Thunder elemental attack on all enemies, all status ailments removed & big boost to Def for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					50,
+					55,
+					60,
+					65,
+					70,
+					75,
+					80,
+					85,
+					90,
+					96,
+					102,
+					108,
+					114,
+					120,
+					126,
+					132,
+					138,
+					144,
+					150
+				],
+				"hit dmg% distribution": [
+					10,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 19,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 19,
+		"desc": "19 combo Thunder elemental attack on all enemies, all status ailments removed & big boost to Def for 3 turns",
+		"drop check count": 1,
 		"id": "140536",
 		"levels": [
 			{
@@ -985,7 +1123,6 @@
 				]
 			}
 		],
-		"max bc generated": 19,
 		"name": "Ex Firmament"
 	},
 	"sell caution": false,
@@ -1004,34 +1141,90 @@
 		}
 	},
 	"ubb": {
-		"desc": "23 combo Thunder elemental attack on all enemies, reduces damage taken by half for 3 turns & big boost to Def for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			10,
-			3,
-			3,
-			4,
-			3,
-			4,
-			10,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					50,
+					55,
+					60,
+					65,
+					70,
+					75,
+					80,
+					85,
+					90,
+					95,
+					100,
+					105,
+					110,
+					115,
+					120,
+					125,
+					130,
+					135,
+					140,
+					145,
+					150,
+					155,
+					160
+				],
+				"hit dmg% distribution": [
+					10,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					10,
+					3,
+					3,
+					4,
+					3,
+					4,
+					10,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 23,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 23,
+		"desc": "23 combo Thunder elemental attack on all enemies, reduces damage taken by half for 3 turns & big boost to Def for 3 turns",
+		"drop check count": 1,
 		"id": "240536",
 		"levels": [
 			{
@@ -1063,279 +1256,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 23,
 		"name": "Annihilation"
 	}
 }

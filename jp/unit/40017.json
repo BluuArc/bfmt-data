@@ -31,14 +31,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 156
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 4
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性２連ダメージ＆味方全体に３ターン、攻撃力を大幅にアップ・スパークダメージを大幅にアップ",
-		"hit dmg% distribution": [
-			10,
-			90
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					12,
+					67
+				],
+				"hit dmg% distribution": [
+					10,
+					90
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 2,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 2,
+		"desc": "敵全体に雷属性２連ダメージ＆味方全体に３ターン、攻撃力を大幅にアップ・スパークダメージを大幅にアップ",
+		"drop check count": 15,
 		"id": "40017",
 		"levels": [
 			{
@@ -342,15 +388,27 @@
 				]
 			}
 		],
-		"max bc generated": 30,
 		"name": "雷皇陣『天極』"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-02-24T21:58:31.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40010,
 	"cost": 45,
+	"damage frames": {
+		"frame times": [
+			12,
+			67
+		],
+		"hit dmg% distribution": [
+			10,
+			90
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
+	"drop check count": 22,
 	"element": "thunder",
 	"evolution": {
 		"prev": "40016"
@@ -371,6 +429,7 @@
 				"def% buff": 30,
 				"hp% buff": 30,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 30
 			},
 			{
@@ -382,7 +441,8 @@
 					}
 				],
 				"crit multiplier%": 50,
-				"passive id": "34"
+				"passive id": "34",
+				"passive target": "self"
 			},
 			{
 				"conditions": [
@@ -393,7 +453,8 @@
 					}
 				],
 				"damage% for spark": 50,
-				"passive id": "31"
+				"passive id": "31",
+				"passive target": "self"
 			}
 		],
 		"id": "410",
@@ -593,12 +654,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1305,
-	"hit dmg% distribution": [
-		10,
-		90
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 40017,
 	"imp": {
 		"max atk": "1100",
@@ -638,7 +693,18 @@
 		"name": "幻雷の創心"
 	},
 	"lord damage range": "2793~3120",
-	"max bc generated": 44,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "絶雷の大神将エゼル",
 	"overdrive stats": {
 		"atk%": 100,
@@ -647,31 +713,108 @@
 	},
 	"rarity": 8,
 	"sbb": {
-		"desc": "敵全体に強力な雷属性２０連ダメージ＆味方全体に３ターン、攻撃力を大幅にアップ・スパークダメージを大幅にアップ・確率でスパーククリティカルが発生・雷属性の弱点属性ダメージをかなりアップ",
-		"hit dmg% distribution": [
-			8,
-			3,
-			2,
-			3,
-			2,
-			3,
-			46,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "66.7/4",
+				"frame times": [
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30,
+					33,
+					67,
+					70,
+					73,
+					76,
+					79,
+					82,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99
+				],
+				"hit dmg% distribution": [
+					8,
+					3,
+					2,
+					3,
+					2,
+					3,
+					46,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "83"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "55"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "敵全体に強力な雷属性２０連ダメージ＆味方全体に３ターン、攻撃力を大幅にアップ・スパークダメージを大幅にアップ・確率でスパーククリティカルが発生・雷属性の弱点属性ダメージをかなりアップ",
+		"drop check count": 1,
 		"id": "140017",
 		"levels": [
 			{
@@ -1155,7 +1298,6 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "ヴァルゼ＝スペルビア"
 	},
 	"sell caution": false,
@@ -1174,13 +1316,60 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な雷属性２連ダメージ＆スパークダメージ耐性を２ターン超絶低下＆味方全体に３ターン、スパークダメージを超絶アップ・確率でスパーククリティカルが発生",
-		"hit dmg% distribution": [
-			10,
-			90
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					12,
+					67
+				],
+				"hit dmg% distribution": [
+					10,
+					90
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 2,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "83"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "58"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 2,
+		"desc": "敵全体に超強力な雷属性２連ダメージ＆スパークダメージ耐性を２ターン超絶低下＆味方全体に３ターン、スパークダメージを超絶アップ・確率でスパーククリティカルが発生",
+		"drop check count": 30,
 		"id": "240017",
 		"levels": [
 			{
@@ -1221,360 +1410,8 @@
 						"target type": "enemy"
 					}
 				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "23",
-						"spark dmg% buff (40)": 250,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 50,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "23",
-						"spark dmg% buff (40)": 250,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 50,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "23",
-						"spark dmg% buff (40)": 250,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 50,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "23",
-						"spark dmg% buff (40)": 250,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 50,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "23",
-						"spark dmg% buff (40)": 250,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 50,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "23",
-						"spark dmg% buff (40)": 250,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 50,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "23",
-						"spark dmg% buff (40)": 250,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 50,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "23",
-						"spark dmg% buff (40)": 250,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 50,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "23",
-						"spark dmg% buff (40)": 250,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "83",
-						"spark dmg inc buff turns (131)": 3,
-						"spark dmg inc chance%": 50,
-						"spark dmg inc% buff": 50,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 1,
-						"spark dmg% received": 100,
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
 			}
 		],
-		"max bc generated": 60,
 		"name": "大雷天覇"
 	}
 }

@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,8 +19,34 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 94
+		},
+		"idle": {
+			"total number of frames": 76
+		},
+		"move": {
+			"total number of frames": 10
+		}
+	},
 	"bb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					6
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			}
+		],
 		"desc": "Gradual recovery to all allies' HP for 3 turns",
+		"drop check count": 1,
 		"id": "10113",
 		"levels": [
 			{
@@ -178,15 +204,32 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 8,
+	"damage frames": {
+		"frame times": [
+			30,
+			35,
+			40,
+			45
+		],
+		"hit dmg% distribution": [
+			25,
+			25,
+			25,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A holy bird born from a volcano once every few millennia.<br>It is a phoenix that has matured over the span of many years but still attacks by turning into a fireball. It allies with and defends those with ambition and a love of justice. History books speak of a Lava Phoenix appearing at the start of revolutions or coup d'états and aiding those who fight for justice.",
 		"evolution": "Summoner, you have a <br>good, stout heart.<br>I promise to defend you.",
 		"fusion": "This newfound power...<br>I will use it to <br>protect you.",
 		"summon": "You, Summoner who fights <br>with virtue and ambition...<br>Accept my protection."
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 200000,
@@ -224,14 +267,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 136,
-	"hit dmg% distribution": [
-		25,
-		25,
-		25,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 10113,
 	"imp": {
 		"max atk": "200",
@@ -252,7 +287,18 @@
 		"name": "Loving Spirit"
 	},
 	"lord damage range": "914~1022",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Lava Phoenix",
 	"rarity": 4,
 	"sell caution": false,

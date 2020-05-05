@@ -19,13 +19,34 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 64
+		},
+		"idle": {
+			"total number of frames": 46
+		},
+		"move": {
+			"total number of frames": 35
+		}
+	},
 	"bb": {
-		"desc": "敵単体に光属性ダメージ＆自分のＢＣ出現率をアップ",
-		"hit dmg% distribution": [
-			100
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					30
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 1,
+		"desc": "敵単体に光属性ダメージ＆自分のＢＣ出現率をアップ",
+		"drop check count": 5,
 		"id": "50030",
 		"levels": [
 			{
@@ -159,21 +180,31 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "噛みつきフォトン"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50030,
 	"cost": 1,
+	"damage frames": {
+		"frame times": [
+			30
+		],
+		"hit dmg% distribution": [
+			100
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 1
+	},
 	"dictionary": {
 		"description": "A type of slime with a sparkling body. They are a very common creature, although their origin is unknown. Some think they were made at the time of creation, and have since increased in number. Most are basically kind. When they find a person walking at night, they offer themselves as lamps. However, since there are so many, some have become violent and will attack humans.",
 		"evolution": " ",
 		"fusion": "What's this? I've gotten brighter.<br>Mind if I shine my light on you?",
 		"summon": "I'll light up your way,<br>so please, take me with you..."
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"cost": 1000,
@@ -190,11 +221,6 @@
 	"gender": "other",
 	"getting type": "not eligible for achievement",
 	"guide_id": 51,
-	"hit dmg% distribution": [
-		100
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 1,
 	"id": 50030,
 	"imp": {
 		"max atk": "80",
@@ -204,7 +230,18 @@
 	},
 	"kind": "normal",
 	"lord damage range": "365~408",
-	"max bc generated": 2,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "ヒカルス",
 	"rarity": 1,
 	"sell caution": false,

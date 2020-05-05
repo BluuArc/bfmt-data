@@ -19,27 +19,86 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 110
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性１５連ダメージ＆味方のＢＢゲージを大幅に増加＆味方全体に３ターン、クリティカル率を大幅にアップ",
-		"hit dmg% distribution": [
-			15,
-			12,
-			9,
-			8,
-			7,
-			6,
-			6,
-			5,
-			5,
-			5,
-			5,
-			5,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					45,
+					49,
+					53,
+					57,
+					61,
+					65,
+					69,
+					73,
+					77,
+					81,
+					85,
+					89,
+					93,
+					97,
+					101
+				],
+				"hit dmg% distribution": [
+					15,
+					12,
+					9,
+					8,
+					7,
+					6,
+					6,
+					5,
+					5,
+					5,
+					5,
+					5,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "敵全体に雷属性１５連ダメージ＆味方のＢＢゲージを大幅に増加＆味方全体に３ターン、クリティカル率を大幅にアップ",
+		"drop check count": 1,
 		"id": "40646",
 		"levels": [
 			{
@@ -333,21 +392,51 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "黄雷轟天焦"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-30T18:49:29.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40640,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			45,
+			49,
+			53,
+			57,
+			61,
+			65,
+			69,
+			73,
+			77,
+			81,
+			85
+		],
+		"hit dmg% distribution": [
+			21,
+			13,
+			10,
+			9,
+			8,
+			8,
+			7,
+			7,
+			6,
+			6,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
 	"dictionary": {
 		"description": "An ancient dragon which kept cultivating its friendship with a demon. Eldora's friend Jed took control over Mildran while persecuting its dethroned ruler, and then named himself the new king. Jed sought to unify Ishgria under his dominion, but the betrayal of his subordinates would soon bring him to his own ruin. And thus, in order to forget its friend's regretful fate, Eldora began its rampage in Ishgria once again. The ancient dragon destroyed the capital and most of what is known of ancient Ishgria's civilization, bringing with it an era of pure chaos.",
 		"evolution": "I shall continue moving forth, if<br>that is what you wish. No matter the<br>destruction which lies ahead, I shall<br>fulfill the role you have given me.",
 		"fusion": "Friendship between man and dragon.<br>It may sound like nonsense,<br>but I have no objections...",
 		"summon": "Human, demon... It matters not.<br>Most creatures are worthless.<br>This is why I destroyed it all..."
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"prev": "40645"
@@ -360,7 +449,8 @@
 				"atk% buff": 50,
 				"bb gauge above % buff requirement": 100,
 				"conditions": [],
-				"passive id": "30"
+				"passive id": "30",
+				"passive target": "self"
 			}
 		],
 		"id": "7800",
@@ -370,21 +460,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 1101,
-	"hit dmg% distribution": [
-		21,
-		13,
-		10,
-		9,
-		8,
-		8,
-		7,
-		7,
-		6,
-		6,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 11,
 	"id": 40646,
 	"imp": {
 		"max atk": "300",
@@ -417,7 +492,18 @@
 		"name": "護水雷の龍鱗"
 	},
 	"lord damage range": "2377~2656",
-	"max bc generated": 33,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "輝神黄帝龍エルドーラ",
 	"overdrive stats": {
 		"atk%": 100,
@@ -426,29 +512,92 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な雷属性１８連ダメージ＆味方のＢＢゲージを大幅に増加＆味方全体に３ターン、クリティカル率超絶をアップ・クリティカルダメージをアップ",
-		"hit dmg% distribution": [
-			12,
-			10,
-			9,
-			8,
-			8,
-			7,
-			6,
-			5,
-			5,
-			4,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					45,
+					48,
+					51,
+					54,
+					57,
+					60,
+					63,
+					66,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96
+				],
+				"hit dmg% distribution": [
+					12,
+					10,
+					9,
+					8,
+					8,
+					7,
+					6,
+					5,
+					5,
+					4,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "敵全体に強力な雷属性１８連ダメージ＆味方のＢＢゲージを大幅に増加＆味方全体に３ターン、クリティカル率超絶をアップ・クリティカルダメージをアップ",
+		"drop check count": 1,
 		"id": "140646",
 		"levels": [
 			{
@@ -822,7 +971,6 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "クリューサオル・レクトル"
 	},
 	"sell caution": false,
@@ -841,31 +989,84 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な雷属性２０連ダメージ＆味方全体に３ターン、クリティカルダメージを超絶アップ・最大ＨＰに応じて攻撃力をかなりアップ",
-		"hit dmg% distribution": [
-			11,
-			9,
-			8,
-			8,
-			8,
-			7,
-			6,
-			5,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					45,
+					48,
+					51,
+					54,
+					57,
+					60,
+					63,
+					66,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102
+				],
+				"hit dmg% distribution": [
+					11,
+					9,
+					8,
+					8,
+					8,
+					7,
+					6,
+					5,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "敵全体に超強力な雷属性２０連ダメージ＆味方全体に３ターン、クリティカルダメージを超絶アップ・最大ＨＰに応じて攻撃力をかなりアップ",
+		"drop check count": 1,
 		"id": "240646",
 		"levels": [
 			{
@@ -897,279 +1098,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 20,
-						"converted attribute": "hp",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 20,
-						"converted attribute": "hp",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 20,
-						"converted attribute": "hp",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 20,
-						"converted attribute": "hp",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 20,
-						"converted attribute": "hp",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 20,
-						"converted attribute": "hp",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 20,
-						"converted attribute": "hp",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 20,
-						"converted attribute": "hp",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 20,
-						"converted attribute": "hp",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "神臥雷宮"
 	}
 }

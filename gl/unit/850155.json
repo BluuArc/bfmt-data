@@ -19,21 +19,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "9 combo Water, Earth and Light attack on all enemies & boost to Atk, Def and Rec for all allies for 3 turns",
-		"hit dmg% distribution": [
-			15,
-			14,
-			12,
-			9,
-			11,
-			12,
-			10,
-			9,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					83,
+					87,
+					92,
+					98,
+					105,
+					113,
+					122,
+					132,
+					142
+				],
+				"hit dmg% distribution": [
+					15,
+					14,
+					12,
+					9,
+					11,
+					12,
+					10,
+					9,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					170
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "9 combo Water, Earth, Light attack on all foes & boosts Atk, Def, Rec for 3 turns",
+		"drop check count": 2,
 		"id": "8515002",
 		"levels": [
 			{
@@ -317,21 +350,41 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Decorating Frenzy"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-09-17T03:58:43.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 850150,
 	"cost": 17,
+	"damage frames": {
+		"frame times": [
+			82,
+			86,
+			90,
+			94,
+			100,
+			110
+		],
+		"hit dmg% distribution": [
+			20,
+			15,
+			15,
+			10,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A lovely rabbit tamer from the mysterious world of Paskua. After a long period of scavenging atop her Bianco, Carrol began to find mysterious eggs that varied in both color and size hiding in different places throughout the whole of Grand Gaia. Sensing a strange power emanating from them, she began checking every nook and cranny of all the regions she visited hoping to find more of these mystical eggs to collect for her precious basket. However, she started to notice that the enemy encounters during her hunt kept increasing, and thus decided to train herself, as well as Bianco, to fight off the dangers of the land. In time she became a pretty capable fighter, though it is said that Bianco sometimes refused to fight if not given a carrot or two as an incentive first.",
 		"evolution": "This search is proving difficult,<br>but we won't give up so easily.<br>We'll find them, you'll see!",
 		"fusion": "Wow, thanks a lot!<br>You wouldn't happen to have anything<br>for Bianco though, would you?",
 		"summon": "No journey goes without peril,<br>so I must grow stronger!<br>To the hunt!"
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -369,16 +422,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 8121,
-	"hit dmg% distribution": [
-		20,
-		15,
-		15,
-		10,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 850155,
 	"imp": {
 		"max atk": "200",
@@ -400,7 +443,18 @@
 		"name": "Basket of Dyed Eggs"
 	},
 	"lord damage range": "1468~1640",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		}
+	},
 	"name": "Egg Hunter Carrol",
 	"rarity": 5,
 	"sell caution": false,

@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 161
+		},
+		"idle": {
+			"total number of frames": 50
+		},
+		"move": {
+			"total number of frames": 12
+		}
+	},
 	"bb": {
-		"desc": "10 combo Dark elemental attack on all enemies & adds Dark and Light elements to attack for all allies for 3 turns ",
-		"hit dmg% distribution": [
-			10,
-			8,
-			10,
-			8,
-			11,
-			9,
-			11,
-			12,
-			11,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					29,
+					33,
+					53,
+					57,
+					77,
+					86,
+					95,
+					109,
+					112,
+					115
+				],
+				"hit dmg% distribution": [
+					10,
+					8,
+					10,
+					8,
+					11,
+					9,
+					11,
+					12,
+					11,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo Dark elemental attack on all enemies & adds Dark and Light elements to attack for all allies for 3 turns ",
+		"drop check count": 1,
 		"id": "60593",
 		"levels": [
 			{
@@ -284,20 +326,40 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Plum Scent"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-09-03T04:48:35.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			29,
+			53,
+			77,
+			86,
+			95,
+			109
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			15,
+			12,
+			15,
+			18
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A young human male with jet black wings. Fearing that he was the child of a demon, he was abandoned by his parents immediately after his birth. Fortunately, an old man found the discarded baby while wondering in the forest, and raised him as his own. This elder seems to have been from another world, but very little is known about him. He taught Ardin how to survive by equipping him with an otherworldly sword, and pushing him into sword fighting training. Once the elder lost his life to illness, Ardin set off on a lone journey with his sword in hand.",
 		"evolution": " ",
 		"fusion": "What is this, charity?!<br>What do you mean I can't refuse it?!<br>It must mean that I'm a prisoner...",
 		"summon": "You want me to lend a hand?<br>Even when I look like this?<br>Hmph, you're an interesting one."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 200000,
@@ -334,16 +396,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 730,
-	"hit dmg% distribution": [
-		20,
-		20,
-		15,
-		12,
-		15,
-		18
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 60593,
 	"imp": {
 		"max atk": "160",
@@ -365,7 +417,18 @@
 		"name": "Five Light's Power"
 	},
 	"lord damage range": "1461~1631",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0015,
+			"move speed type": "5",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0015,
+			"move speed type": "5",
+			"move type": "1"
+		}
+	},
 	"name": "Dark Winged Ardin",
 	"rarity": 4,
 	"sell caution": false,

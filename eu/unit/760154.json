@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,16 +25,40 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 195
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 10
+		}
+	},
 	"bb": {
-		"desc": "4 combo dark elemental attack on all enemies & Partial Hp drain (30% DMG = HP SELF)",
-		"hit dmg% distribution": [
-			25,
-			25,
-			25,
-			25
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					65,
+					85,
+					105,
+					106
+				],
+				"hit dmg% distribution": [
+					25,
+					25,
+					25,
+					25
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "14"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "4 combo dark elemental attack on all enemies & Partial Hp drain (30% DMG = HP SELF)",
+		"drop check count": 0,
 		"id": "760154",
 		"levels": [
 			{
@@ -188,14 +212,32 @@
 				]
 			}
 		],
-		"max bc generated": 0,
 		"name": "Curve ball"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 17,
+	"damage frames": {
+		"frame times": [
+			65,
+			85,
+			86,
+			105,
+			106
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
+	"drop check count": 4,
 	"element": "dark",
 	"evolution": {
 		"cost": 500000,
@@ -233,15 +275,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7104,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 760154,
 	"imp": {
 		"max atk": "400",
@@ -270,7 +303,18 @@
 		"name": "Determining match"
 	},
 	"lord damage range": "1815~2028",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
 	"name": "Endbringer Pig-Bull",
 	"rarity": 5,
 	"sell caution": false,

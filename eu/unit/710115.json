@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,25 +25,58 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 116
+		},
+		"idle": {
+			"total number of frames": 84
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "13 combo Fire elemental attack on all enemies",
-		"hit dmg% distribution": [
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			16,
-			7,
-			7,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					56,
+					62,
+					68,
+					74,
+					80,
+					86,
+					94,
+					102,
+					110,
+					118,
+					123,
+					127,
+					130
+				],
+				"hit dmg% distribution": [
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					16,
+					7,
+					7,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 13,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 13,
+		"desc": "13 combo Fire elemental attack on all enemies",
+		"drop check count": 1,
 		"id": "710115",
 		"levels": [
 			{
@@ -177,14 +210,46 @@
 				]
 			}
 		],
-		"max bc generated": 13,
 		"name": "Souls ignition"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 24,
+	"damage frames": {
+		"frame times": [
+			8,
+			23,
+			29,
+			38,
+			44,
+			48,
+			56,
+			66,
+			76,
+			86,
+			92,
+			96
+		],
+		"hit dmg% distribution": [
+			8,
+			8,
+			8,
+			12,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"prev": "710114"
@@ -193,22 +258,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7022,
-	"hit dmg% distribution": [
-		8,
-		8,
-		8,
-		12,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 710115,
 	"imp": {
 		"max atk": "420",
@@ -235,31 +284,67 @@
 		"name": "Torch of Valhalla"
 	},
 	"lord damage range": "1955~2184",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Mischievous Skalmold",
 	"rarity": 6,
 	"sbb": {
-		"desc": "16 combo Fire elemental attack on all enemies & partial HP drain & chance of inflicting a random status ailment​",
-		"hit dmg% distribution": [
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			10,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					56,
+					62,
+					68,
+					74,
+					80,
+					86,
+					94,
+					102,
+					110,
+					118,
+					120,
+					124,
+					128,
+					132,
+					134,
+					136
+				],
+				"hit dmg% distribution": [
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					10,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "14"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo Fire elemental attack on all enemies & partial HP drain & chance of inflicting a random status ailment​",
+		"drop check count": 1,
 		"id": "1710115",
 		"levels": [
 			{
@@ -593,7 +678,6 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Souls in Hell"
 	},
 	"sell caution": false,

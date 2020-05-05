@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 80
+		},
+		"idle": {
+			"total number of frames": 56
+		},
+		"move": {
+			"total number of frames": 7
+		}
+	},
 	"bb": {
-		"desc": "8 combo powerful Fire attack on all enemies & probable Curse effect",
-		"hit dmg% distribution": [
-			13,
-			13,
-			13,
-			13,
-			13,
-			13,
-			22,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					30,
+					38,
+					46,
+					54,
+					62,
+					70,
+					78,
+					84
+				],
+				"hit dmg% distribution": [
+					13,
+					13,
+					13,
+					13,
+					13,
+					13,
+					22,
+					20
+				],
+				"hit dmg% distribution (total)": 120,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 120,
-		"hits": 8,
+		"desc": "8 combo powerful Fire attack on all enemies & probable Curse effect",
+		"drop check count": 1,
 		"id": "10284",
 		"levels": [
 			{
@@ -242,20 +282,42 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Rakshasa Execution"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			26,
+			34,
+			42,
+			50,
+			58,
+			66,
+			74
+		],
+		"hit dmg% distribution": [
+			13,
+			13,
+			13,
+			13,
+			13,
+			13,
+			22
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "The former knight turned into an evil demon by the armor that curses any who wear it. Though the curse took away his sorrow, his former personality remained. Despite the deep regret he felt for his own actions many appeared before him in hopes of vanquishing him only to become sacrifices to his armor. It is said that the one to finally defeat him was a twin sword wielding warrior dressed in black armor. It is said that the evil demon seemed weakened during their battle, though even now none know why.",
 		"evolution": "Have a look.<br>Human blood has added to<br>my armor's brilliant shine.",
 		"fusion": "Stop it!<br>I'm going to lose control!<br>The demon inside is waking.",
 		"summon": "Do you wish to command<br>even this cursed armor of mine?<br>Then I put my trust in you!"
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -293,17 +355,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 378,
-	"hit dmg% distribution": [
-		13,
-		13,
-		13,
-		13,
-		13,
-		13,
-		22
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 10284,
 	"imp": {
 		"max atk": "200",
@@ -332,7 +383,18 @@
 		"name": "Pandemic Spread"
 	},
 	"lord damage range": "1597~1784",
-	"max bc generated": 21,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Rakshasa Vishra",
 	"rarity": 5,
 	"sell caution": false,

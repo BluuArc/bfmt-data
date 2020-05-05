@@ -19,8 +19,82 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 161
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					90
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			}
+		],
 		"desc": "Slightly boosts BB gauge, greatly recovers HP, removes all status ailments & gradually recovers HP, BB gauge for 3 turns",
+		"drop check count": 1,
 		"id": "50836",
 		"levels": [
 			{
@@ -588,16 +662,45 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-28T13:11:01.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 50830,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			88,
+			92,
+			96,
+			100,
+			104,
+			108,
+			112,
+			116,
+			120,
+			124
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
 	"dictionary": {
 		"description": "As the gods continued their merciless killing of countless innocents throughout the war,  Charla finally revealed her role as a priestess of La Veda, and officially revolted against the gods. Shortly afterwards, Charla recruited a group of warrior priests to protect her people as they fled to the new promised land. As their leader, she chose to fight at the vanguard to eliminate any incoming threats from the gods. Although the other priests tried to convince her to flee with them as the war drew to a close, she chose to stay and fight in order to atone for her self-proclaimed heresy.",
 		"evolution": "I shall be your sword!<br>I will point this blade<br>at all of your enemies!",
 		"fusion": "The comfort the light brings...<br>I thought it would last forever...<br>But that's all in the past now...",
 		"summon": "I believed in the gods till the end,<br>but wanted to save people even more.<br>I shall pay for all my sins!"
 	},
+	"drop check count": 4,
 	"element": "light",
 	"evolution": {
 		"prev": "50835"
@@ -612,6 +715,7 @@
 				"injury resist%": 100,
 				"paralysis resist%": 100,
 				"passive id": "4",
+				"passive target": "self",
 				"poison resist%": 100,
 				"sick resist%": 100,
 				"weaken resist%": 100
@@ -624,7 +728,8 @@
 				},
 				"conditions": [],
 				"hp below % buff activation": 20,
-				"passive id": "55"
+				"passive id": "55",
+				"passive target": "self"
 			}
 		],
 		"id": "9000",
@@ -634,20 +739,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1152,
-	"hit dmg% distribution": [
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 50836,
 	"imp": {
 		"max atk": "340",
@@ -683,7 +774,18 @@
 		"name": "Glorious Sanctification"
 	},
 	"lord damage range": "2328~2600",
-	"max bc generated": 40,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
 	"name": "Merciful Beacon Charla",
 	"overdrive stats": {
 		"atk%": 100,
@@ -692,7 +794,70 @@
 	},
 	"rarity": 7,
 	"sbb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					90
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "67"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			}
+		],
 		"desc": "Boosts BB gauge & boosts critical damage, greatly boosts Spark damage and probable BB gauge boost from Spark damage for 3 turns",
+		"drop check count": 1,
 		"id": "150836",
 		"levels": [
 			{
@@ -1184,369 +1349,60 @@
 		}
 	},
 	"ubb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					90
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "56"
+			}
+		],
 		"desc": "50% damage reduction for 3 turns, probable resistance against 1 KO attack & fully recovers HP and enormously boosts BB gauge for 3 turns",
+		"drop check count": 1,
 		"id": "250836",
 		"levels": [
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 50,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 90,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 50,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 90,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 50,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 90,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 50,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 90,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 50,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 90,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 50,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 90,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 50,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 90,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 50,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 90,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"dmg% reduction": 50,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 50,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 90,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
 			{
 				"bc cost": 20,
 				"effects": [

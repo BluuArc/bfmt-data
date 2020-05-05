@@ -19,27 +19,78 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "15 combo Dark attack on all foes, adds Poison, Weak effects to attack",
-		"hit dmg% distribution": [
-			7,
-			7,
-			7,
-			7,
-			9,
-			8,
-			7,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					62,
+					72,
+					82,
+					92,
+					115,
+					130,
+					142,
+					152,
+					160,
+					168,
+					176,
+					182,
+					188,
+					194,
+					200
+				],
+				"hit dmg% distribution": [
+					7,
+					7,
+					7,
+					7,
+					9,
+					8,
+					7,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					10
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo Dark attack on all foes, adds Poison, Weak effects to attack",
+		"drop check count": 1,
 		"id": "860147",
 		"levels": [
 			{
@@ -343,21 +394,55 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Gehenna's Anguish"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-27T14:43:14.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 860140,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			62,
+			72,
+			82,
+			92,
+			102,
+			119,
+			136,
+			157,
+			166,
+			175,
+			184,
+			193,
+			202
+		],
+		"hit dmg% distribution": [
+			9,
+			7,
+			6,
+			7,
+			12,
+			9,
+			8,
+			8,
+			7,
+			6,
+			8,
+			6,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
 	"dictionary": {
 		"description": "Having lost Athensphere's undercity to the horde of Hellhounds, Hadaron made the decision to withdraw from the battlefield. Confused as to why and how his friend had succumbed to such madness, Hadaron set off on a mission to find Gazia. During his long journey across the chaos of the Void, he witnessed the atrocities wrought by Gazia. Augmented with the power of the Netherhound, Hadaron developed the Netherhound's superior stealth and hunting abilities. In time, he discovered that the souls of the beasts infused into the machines still lived on. The Netherhounds somehow looked upon Hadaron as if he was part of their pack. Taking advantage of that flaw, Hadaron established himself as the \"Alpha Hound\", proving himself the strongest amongst them by taking down a great many of Gazia's mechanical beasts. Having subjugated Gazia's Netherhounds, he used them as his eyes and ears, fighting under the cover of darkness. Hadaron became a dreaded phantom capable of attacking from almost anywhere, rapidly destroying key targets and facilities before vanishing without a trace. ",
 		"evolution": "See them, I do. Hear them, I do.<br>Smell them...I do. Sense them,<br>do you not? Yes…<br>Let us unleash the hounds of death!",
 		"fusion": "Ahh… My brother…<br>You've allowed power to consume you.<br> That is a mistake I will not make!",
 		"summon": "Purgatory is where I hunt. And there<br>is where my enemies shall burn.<br>And from the pits of this hell<br>we shall rise once more!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "860146"
@@ -375,7 +460,8 @@
 					}
 				],
 				"hp% buff": 50,
-				"passive id": "1"
+				"passive id": "1",
+				"passive target": "self"
 			},
 			{
 				"conditions": [
@@ -386,7 +472,8 @@
 					}
 				],
 				"crit multiplier%": 75,
-				"passive id": "34"
+				"passive id": "34",
+				"passive target": "self"
 			}
 		],
 		"id": "860147",
@@ -396,23 +483,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 8141,
-	"hit dmg% distribution": [
-		9,
-		7,
-		6,
-		7,
-		12,
-		9,
-		8,
-		8,
-		7,
-		6,
-		8,
-		6,
-		7
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 13,
 	"id": 860147,
 	"imp": {
 		"max atk": "440",
@@ -445,7 +515,18 @@
 		"name": "Curse of the Immortal"
 	},
 	"lord damage range": "2527~2823",
-	"max bc generated": 26,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Deathless Hadaron",
 	"overdrive stats": {
 		"atk%": 100,
@@ -454,28 +535,82 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "17 combo powerful Dark attack on single foe, boosts Def, critical hit rate for 3 turns, casts stealth on self for 2 turns, massively boosting own attack, critical hit rate for 2 turns and critical damage for 1 turn",
-		"hit dmg% distribution": [
-			6,
-			5,
-			6,
-			5,
-			6,
-			7,
-			8,
-			7,
-			6,
-			6,
-			6,
-			6,
-			6,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					62,
+					70,
+					78,
+					86,
+					92,
+					100,
+					108,
+					152,
+					156,
+					"1 60",
+					164,
+					168,
+					172,
+					176,
+					180,
+					184,
+					188
+				],
+				"hit dmg% distribution": [
+					6,
+					5,
+					6,
+					5,
+					6,
+					7,
+					8,
+					7,
+					6,
+					6,
+					6,
+					6,
+					6,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 17,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					10
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [],
+				"hit dmg% distribution": [],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "10001"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [],
+				"hit dmg% distribution": [],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "54"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 17,
+		"desc": "17 combo powerful Dark attack on single foe, boosts Def, critical hit rate for 3 turns, casts stealth on self for 2 turns, massively boosting own attack, critical hit rate for 2 turns and critical damage for 1 turn",
+		"drop check count": 2,
 		"id": "1860147",
 		"levels": [
 			{
@@ -879,7 +1014,6 @@
 				]
 			}
 		],
-		"max bc generated": 34,
 		"name": "Grave Sacrifice"
 	},
 	"sell caution": false,
@@ -898,30 +1032,90 @@
 		}
 	},
 	"ubb": {
-		"desc": "19 combo massive Dark attack on all foes, greatly reduces Atk, Def & adds Poison, Weak, Sick, Injury effects to attack for 3 turns & renders self able to withstand a KO attack",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			5,
-			4,
-			5,
-			4,
-			4,
-			5,
-			6,
-			6,
-			5,
-			6,
-			6,
-			7,
-			6,
-			6,
-			7,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					62,
+					71,
+					80,
+					89,
+					98,
+					107,
+					116,
+					122,
+					128,
+					134,
+					140,
+					146,
+					151,
+					156,
+					161,
+					166,
+					171,
+					176,
+					181
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					5,
+					4,
+					5,
+					4,
+					4,
+					5,
+					6,
+					6,
+					5,
+					6,
+					6,
+					7,
+					6,
+					6,
+					7,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 19,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [],
+				"hit dmg% distribution": [],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					200
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "7"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 19,
+		"desc": "19 combo massive Dark attack on all foes, greatly reduces Atk, Def & adds Poison, Weak, Sick, Injury effects to attack for 3 turns & renders self able to withstand a KO attack",
+		"drop check count": 1,
 		"id": "2860147",
 		"levels": [
 			{
@@ -970,432 +1164,8 @@
 						"target type": "self"
 					}
 				]
-			},
-			{
-				"bc cost": 26,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 75
-						},
-						"buff #2": {
-							"def% buff (4)": -75,
-							"proc chance%": 75
-						},
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury% buff": 100,
-						"poison% buff": 100,
-						"proc id": "40",
-						"sick% buff": 100,
-						"target area": "aoe",
-						"target type": "party",
-						"weaken% buff": 100
-					},
-					{
-						"angel idol buff (12)": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 26,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 75
-						},
-						"buff #2": {
-							"def% buff (4)": -75,
-							"proc chance%": 75
-						},
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury% buff": 100,
-						"poison% buff": 100,
-						"proc id": "40",
-						"sick% buff": 100,
-						"target area": "aoe",
-						"target type": "party",
-						"weaken% buff": 100
-					},
-					{
-						"angel idol buff (12)": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 26,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 75
-						},
-						"buff #2": {
-							"def% buff (4)": -75,
-							"proc chance%": 75
-						},
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury% buff": 100,
-						"poison% buff": 100,
-						"proc id": "40",
-						"sick% buff": 100,
-						"target area": "aoe",
-						"target type": "party",
-						"weaken% buff": 100
-					},
-					{
-						"angel idol buff (12)": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 26,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 75
-						},
-						"buff #2": {
-							"def% buff (4)": -75,
-							"proc chance%": 75
-						},
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury% buff": 100,
-						"poison% buff": 100,
-						"proc id": "40",
-						"sick% buff": 100,
-						"target area": "aoe",
-						"target type": "party",
-						"weaken% buff": 100
-					},
-					{
-						"angel idol buff (12)": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 26,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 75
-						},
-						"buff #2": {
-							"def% buff (4)": -75,
-							"proc chance%": 75
-						},
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury% buff": 100,
-						"poison% buff": 100,
-						"proc id": "40",
-						"sick% buff": 100,
-						"target area": "aoe",
-						"target type": "party",
-						"weaken% buff": 100
-					},
-					{
-						"angel idol buff (12)": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 26,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 75
-						},
-						"buff #2": {
-							"def% buff (4)": -75,
-							"proc chance%": 75
-						},
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury% buff": 100,
-						"poison% buff": 100,
-						"proc id": "40",
-						"sick% buff": 100,
-						"target area": "aoe",
-						"target type": "party",
-						"weaken% buff": 100
-					},
-					{
-						"angel idol buff (12)": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 26,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 75
-						},
-						"buff #2": {
-							"def% buff (4)": -75,
-							"proc chance%": 75
-						},
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury% buff": 100,
-						"poison% buff": 100,
-						"proc id": "40",
-						"sick% buff": 100,
-						"target area": "aoe",
-						"target type": "party",
-						"weaken% buff": 100
-					},
-					{
-						"angel idol buff (12)": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 26,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 75
-						},
-						"buff #2": {
-							"def% buff (4)": -75,
-							"proc chance%": 75
-						},
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury% buff": 100,
-						"poison% buff": 100,
-						"proc id": "40",
-						"sick% buff": 100,
-						"target area": "aoe",
-						"target type": "party",
-						"weaken% buff": 100
-					},
-					{
-						"angel idol buff (12)": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 26,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 75
-						},
-						"buff #2": {
-							"def% buff (4)": -75,
-							"proc chance%": 75
-						},
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury% buff": 100,
-						"poison% buff": 100,
-						"proc id": "40",
-						"sick% buff": 100,
-						"target area": "aoe",
-						"target type": "party",
-						"weaken% buff": 100
-					},
-					{
-						"angel idol buff (12)": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "self"
-					}
-				]
 			}
 		],
-		"max bc generated": 19,
 		"name": "Eternal Pandemonium"
 	}
 }

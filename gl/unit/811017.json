@@ -19,30 +19,84 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "18 combo powerful Fire, Light attack on all foes, largely boosts critical hit rate for 3 turns & adds Injury, Weak to attack for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			2,
-			2,
-			2,
-			10,
-			2,
-			2,
-			2,
-			10,
-			2,
-			2,
-			2,
-			10,
-			2,
-			2,
-			2,
-			2,
-			34
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					50,
+					52,
+					54,
+					56,
+					100,
+					102,
+					104,
+					106,
+					150,
+					152,
+					154,
+					156,
+					180,
+					182,
+					184,
+					186,
+					188,
+					240
+				],
+				"hit dmg% distribution": [
+					10,
+					2,
+					2,
+					2,
+					10,
+					2,
+					2,
+					2,
+					10,
+					2,
+					2,
+					2,
+					10,
+					2,
+					2,
+					2,
+					2,
+					34
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					150
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo powerful Fire, Light attack on all foes, largely boosts critical hit rate for 3 turns & adds Injury, Weak to attack for 3 turns",
+		"drop check count": 1,
 		"id": "811017",
 		"levels": [
 			{
@@ -386,21 +440,53 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Infernal Solstice"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-11-25T16:41:02.000Z",
-		"updatedAt": "2015-12-04T07:58:12.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 811010,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			50,
+			52,
+			54,
+			100,
+			102,
+			104,
+			150,
+			152,
+			154,
+			180,
+			182,
+			240
+		],
+		"hit dmg% distribution": [
+			10,
+			5,
+			5,
+			10,
+			5,
+			5,
+			10,
+			5,
+			5,
+			10,
+			5,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
 	"dictionary": {
 		"description": "An otherworldly deity from an unknown dimension, Lucia possessed a special ability to grow stronger by assimilating the powers of others. Upon her entry into Ishgria, Lucia was immediately confronted by some of the higher ranking gods. However, even in her weakened state, the gods were no match for her. After a fierce battle, Lucia finally regained her soul and reaffirmed her divinity. However, her triumph was short-lived, as an intricate memory trap created by the greater gods set off shortly after her soul fusion. Lucia's rage and resentment rose to unimaginable levels, redirected at the demons of Ishgria. Her flames of hatred swept over the land as she proceeded to assimilate countless demons, which would eventually corrupt her divinity. Henceforth, Lucia was known as the Perdition Goddess.",
 		"evolution": "At long last!<br>My divinity has... Ugh!<br>What is happening to me? Argh!",
 		"fusion": "Kyahaha!<br>I keep killing and feeding<br>but these emotions of mine just<br>won't stop!",
 		"summon": "The gods are my allies.<br>All demons shall be purified!<br>For I am the Perdition Goddess!"
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"prev": "811016"
@@ -413,6 +499,7 @@
 				"bb atk% buff": 100,
 				"conditions": [],
 				"passive id": "64",
+				"passive target": "self",
 				"sbb atk% buff": 100,
 				"ubb atk% buff": 100
 			}
@@ -424,22 +511,6 @@
 	"gender": "female",
 	"getting type": "not eligible for achievement",
 	"guide_id": 8151,
-	"hit dmg% distribution": [
-		10,
-		5,
-		5,
-		10,
-		5,
-		5,
-		10,
-		5,
-		5,
-		10,
-		5,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 811017,
 	"imp": {
 		"max atk": "600",
@@ -466,7 +537,18 @@
 		"name": "Divine Ruler's Wrath"
 	},
 	"lord damage range": "2253~2516",
-	"max bc generated": 36,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Perdition Goddess Lucia",
 	"overdrive stats": {
 		"atk%": 100,
@@ -475,43 +557,108 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "32 combo powerful Fire, Light attack on all foes, largely boosts Spark damage for 3 turns & 1 turn Atk, Def reduction for 3 turns",
-		"hit dmg% distribution": [
-			5,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			5,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			5,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			5,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			26
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					50,
+					52,
+					54,
+					56,
+					58,
+					60,
+					62,
+					100,
+					102,
+					104,
+					106,
+					108,
+					110,
+					112,
+					150,
+					152,
+					154,
+					156,
+					158,
+					160,
+					162,
+					180,
+					182,
+					184,
+					186,
+					188,
+					190,
+					192,
+					194,
+					196,
+					198,
+					240
+				],
+				"hit dmg% distribution": [
+					5,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					5,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					5,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					5,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					26
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 32,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					150
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "51"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 32,
+		"desc": "32 combo powerful Fire, Light attack on all foes, largely boosts Spark damage for 3 turns & 1 turn Atk, Def reduction for 3 turns",
+		"drop check count": 1,
 		"id": "1811017",
 		"levels": [
 			{
@@ -875,7 +1022,6 @@
 				]
 			}
 		],
-		"max bc generated": 32,
 		"name": "Equilibrium Ascendance"
 	},
 	"sell caution": true,
@@ -894,47 +1040,116 @@
 		}
 	},
 	"ubb": {
-		"desc": "36 combo massive Fire, Light attack on all foes, boosts BB Atk for 3 turns & largely boosts elemental based damage for 3 turns",
-		"hit dmg% distribution": [
-			5,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			5,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			5,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			5,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			18
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					50,
+					52,
+					54,
+					56,
+					58,
+					60,
+					62,
+					64,
+					100,
+					102,
+					104,
+					106,
+					108,
+					110,
+					112,
+					114,
+					116,
+					150,
+					152,
+					154,
+					156,
+					158,
+					160,
+					162,
+					164,
+					166,
+					180,
+					182,
+					184,
+					186,
+					188,
+					190,
+					192,
+					194,
+					196,
+					240
+				],
+				"hit dmg% distribution": [
+					5,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					5,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					5,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					5,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					18
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 36,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					150
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "35"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 36,
+		"desc": "36 combo massive Fire, Light attack on all foes, boosts BB Atk for 3 turns & largely boosts elemental based damage for 3 turns",
+		"drop check count": 1,
 		"id": "2811017",
 		"levels": [
 			{
@@ -969,306 +1184,8 @@
 						"unknown proc param": "1,2,3,4,5,6,1,3,160"
 					}
 				]
-			},
-			{
-				"bc cost": 24,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bb atk% buff": 300,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 300,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 300
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "35",
-						"unknown proc param": "1,2,3,4,5,6,1,3,160"
-					}
-				]
-			},
-			{
-				"bc cost": 24,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bb atk% buff": 300,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 300,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 300
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "35",
-						"unknown proc param": "1,2,3,4,5,6,1,3,160"
-					}
-				]
-			},
-			{
-				"bc cost": 24,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bb atk% buff": 300,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 300,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 300
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "35",
-						"unknown proc param": "1,2,3,4,5,6,1,3,160"
-					}
-				]
-			},
-			{
-				"bc cost": 24,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bb atk% buff": 300,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 300,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 300
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "35",
-						"unknown proc param": "1,2,3,4,5,6,1,3,160"
-					}
-				]
-			},
-			{
-				"bc cost": 24,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bb atk% buff": 300,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 300,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 300
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "35",
-						"unknown proc param": "1,2,3,4,5,6,1,3,160"
-					}
-				]
-			},
-			{
-				"bc cost": 24,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bb atk% buff": 300,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 300,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 300
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "35",
-						"unknown proc param": "1,2,3,4,5,6,1,3,160"
-					}
-				]
-			},
-			{
-				"bc cost": 24,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bb atk% buff": 300,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 300,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 300
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "35",
-						"unknown proc param": "1,2,3,4,5,6,1,3,160"
-					}
-				]
-			},
-			{
-				"bc cost": 24,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bb atk% buff": 300,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 300,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 300
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "35",
-						"unknown proc param": "1,2,3,4,5,6,1,3,160"
-					}
-				]
-			},
-			{
-				"bc cost": 24,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bb atk% buff": 300,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 300,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 300
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "35",
-						"unknown proc param": "1,2,3,4,5,6,1,3,160"
-					}
-				]
 			}
 		],
-		"max bc generated": 36,
 		"name": "Purgatorial Judgement"
 	}
 }

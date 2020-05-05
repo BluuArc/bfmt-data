@@ -19,27 +19,74 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 122
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 7
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性１５連ダメージ＆味方全体のＨＰを大回復",
-		"hit dmg% distribution": [
-			17,
-			10,
-			9,
-			8,
-			7,
-			7,
-			6,
-			6,
-			5,
-			4,
-			5,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					80,
+					83,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101,
+					104,
+					107,
+					110,
+					113,
+					116,
+					119,
+					122
+				],
+				"hit dmg% distribution": [
+					17,
+					10,
+					9,
+					8,
+					7,
+					7,
+					6,
+					6,
+					5,
+					4,
+					5,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					160
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "敵全体に雷属性１５連ダメージ＆味方全体のＨＰを大回復",
+		"drop check count": 1,
 		"id": "40235",
 		"levels": [
 			{
@@ -263,21 +310,45 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "ランブリングローム"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40230,
 	"cost": 30,
+	"damage frames": {
+		"frame times": [
+			80,
+			84,
+			88,
+			92,
+			96,
+			100,
+			104,
+			108
+		],
+		"hit dmg% distribution": [
+			30,
+			15,
+			15,
+			8,
+			8,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A mock Unit modeled after Paris, a Summoner from the Randall Empire. After a certain incident took place Paris had become very depressed, but a request from the Akras Summoners' Hall pinned her against a demon on the battlefield, and she underwent a personal change quickly afterwards. Though she tended to rely more on others' power rather than on her own, her self-confidence grew, finally allowing her to break free from the shackles she had created for her own herself. With Paris's latent potential now fully awakened, this mock Unit seems to continue doing what Noel bids.",
 		"evolution": "I choose my own path.<br>Settling on that makes me feel<br>like I've grown somewhat...",
 		"fusion": "You want to see the real me?<br>I'll show you, if you like.<br>I'll make an exception just for you.",
 		"summon": "I shall falter no longer.<br>I will follow my own path,<br>no matter where it leads me!"
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"cost": 1500000,
@@ -315,18 +386,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 849,
-	"hit dmg% distribution": [
-		30,
-		15,
-		15,
-		8,
-		8,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 40235,
 	"imp": {
 		"max atk": "200",
@@ -353,37 +412,103 @@
 		"name": "聖統姫神の守護"
 	},
 	"lord damage range": "1909~2132",
-	"max bc generated": 32,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		}
+	},
 	"name": "雷煌閃神パリス",
 	"rarity": 6,
 	"sbb": {
-		"desc": "敵全体に強力な雷属性２２連ダメージ＆味方全体に３ターン、防御力・回復力をかなりアップ・ＨＣ出現率をかなりアップ",
-		"hit dmg% distribution": [
-			10,
-			7,
-			4,
-			4,
-			4,
-			4,
-			4,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			5,
-			4,
-			4,
-			4,
-			4,
-			5,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					80,
+					83,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101,
+					104,
+					107,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134,
+					137,
+					140,
+					143
+				],
+				"hit dmg% distribution": [
+					10,
+					7,
+					4,
+					4,
+					4,
+					4,
+					4,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					5,
+					4,
+					4,
+					4,
+					4,
+					5,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					170
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "敵全体に強力な雷属性２２連ダメージ＆味方全体に３ターン、防御力・回復力をかなりアップ・ＨＣ出現率をかなりアップ",
+		"drop check count": 1,
 		"id": "140235",
 		"levels": [
 			{
@@ -697,7 +822,6 @@
 				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "レガリア・フルグライト"
 	},
 	"sell caution": true,

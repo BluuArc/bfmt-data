@@ -19,23 +19,66 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 162
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性１１連ダメージ＆味方全体に２ターン、防御貫通効果を付与",
-		"hit dmg% distribution": [
-			16,
-			7,
-			6,
-			7,
-			6,
-			7,
-			6,
-			7,
-			6,
-			16,
-			16
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					21,
+					29,
+					37,
+					45,
+					53,
+					61,
+					69,
+					77,
+					85,
+					93,
+					101
+				],
+				"hit dmg% distribution": [
+					16,
+					7,
+					6,
+					7,
+					6,
+					7,
+					6,
+					7,
+					6,
+					16,
+					16
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 11,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 11,
+		"desc": "敵全体に水属性１１連ダメージ＆味方全体に２ターン、防御貫通効果を付与",
+		"drop check count": 1,
 		"id": "20654",
 		"levels": [
 			{
@@ -249,20 +292,42 @@
 				]
 			}
 		],
-		"max bc generated": 11,
 		"name": "早く、命令を"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20650,
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			21,
+			25,
+			29,
+			91,
+			95,
+			99,
+			103
+		],
+		"hit dmg% distribution": [
+			30,
+			8,
+			8,
+			30,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A captain of the Sorcerer’s Army from another world guided by the Chain Chronicle. She is a “sealer,” meaning her body is covered in magic seals which allow her to use magic freely even in melee combat. A magic warrior originally molded to concern herself only with following orders from her master, she first began developing more complex emotions after joining the Volunteer Army. Though she is aware that this \"inefficient behavior\" is not part of her original design, her mentality is changing in favor of expressing such emotions outside the battlefield.",
 		"fusion": "My apologies.<br>The function used to express my<br>uncomfortability is faulty.",
 		"summon": "I must follow your every order.<br>That is what my superiors told me."
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"cost": 500000,
@@ -299,17 +364,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 1059,
-	"hit dmg% distribution": [
-		30,
-		8,
-		8,
-		30,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 20654,
 	"imp": {
 		"max atk": "300",
@@ -336,7 +390,18 @@
 		"name": "氷の心"
 	},
 	"lord damage range": "1694~1892",
-	"max bc generated": 14,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "ユニ",
 	"rarity": 5,
 	"sell caution": false,

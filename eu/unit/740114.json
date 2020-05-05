@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,28 +25,76 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 133
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "16 combo Thunder elemental attack on all enemies & probable Injury and Weakness effect",
-		"hit dmg% distribution": [
-			8,
-			5,
-			8,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			13
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					32,
+					36,
+					40,
+					44,
+					48,
+					52,
+					56,
+					60,
+					64,
+					68,
+					72,
+					76,
+					80,
+					84,
+					96,
+					106
+				],
+				"hit dmg% distribution": [
+					8,
+					5,
+					8,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					13
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo Thunder elemental attack on all enemies & probable Injury and Weakness effect",
+		"drop check count": 1,
 		"id": "740114",
 		"levels": [
 			{
@@ -260,14 +308,48 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Hammer Time"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			40,
+			44,
+			48,
+			52,
+			56,
+			60,
+			64,
+			68,
+			72,
+			76,
+			80,
+			84,
+			88
+		],
+		"hit dmg% distribution": [
+			8,
+			4,
+			6,
+			9,
+			6,
+			10,
+			6,
+			10,
+			6,
+			10,
+			6,
+			10,
+			9
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -305,23 +387,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7030,
-	"hit dmg% distribution": [
-		8,
-		4,
-		6,
-		9,
-		6,
-		10,
-		6,
-		10,
-		6,
-		10,
-		6,
-		10,
-		9
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 13,
 	"id": 740114,
 	"imp": {
 		"max atk": "340",
@@ -348,7 +413,18 @@
 		"name": "Light of Valhalla"
 	},
 	"lord damage range": "1117~1248",
-	"max bc generated": 39,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Holy Thrud",
 	"rarity": 5,
 	"sell caution": false,

@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,8 +19,58 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 227
+		},
+		"idle": {
+			"total number of frames": 90
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "Removes and negates all status ailments for 3 turns & Gradually recovers BB gauge (8 BC / turns) for 3 turns​",
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "10"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			}
+		],
+		"desc": "Removes and negates all status ailments for 3 turns & Gradually recovers BB gauge (5 BC / turns) for 3 turns.",
+		"drop check count": 2,
 		"id": "750145",
 		"levels": [
 			{
@@ -358,33 +408,79 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 27,
+	"damage frames": {
+		"frame times": [
+			70,
+			82,
+			88,
+			94,
+			98,
+			102,
+			104,
+			106,
+			108,
+			112,
+			116,
+			120
+		],
+		"hit dmg% distribution": [
+			12,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
+		"cost": 1500000,
+		"mats": [
+			{
+				"id": "50354",
+				"name": "Miracle Totem",
+				"type": "unit"
+			},
+			{
+				"id": "750122",
+				"name": "Wonder Mirror Idol",
+				"type": "unit"
+			},
+			{
+				"id": "50394",
+				"name": "Light Mecha God",
+				"type": "unit"
+			},
+			{
+				"id": "50123",
+				"name": "Light Totem",
+				"type": "unit"
+			},
+			{
+				"id": "60224",
+				"name": "Metal Mimic",
+				"type": "unit"
+			}
+		],
+		"next": "750146",
 		"prev": "750144"
 	},
 	"exp_pattern": 20,
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7074,
-	"hit dmg% distribution": [
-		12,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 750145,
 	"imp": {
 		"max atk": "300",
@@ -409,11 +505,61 @@
 		"name": "Ascendance of the Light Eagle"
 	},
 	"lord damage range": "1690~1888",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": "?",
+			"move speed type": "3",
+			"move type": "0"
+		}
+	},
 	"name": "Queen Magena",
 	"rarity": 6,
 	"sbb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
+		],
 		"desc": "Gradually recovers BB gauge (6 BC / turns) for 3 turns​ & Adds fire, water, earth and thunder elements to Atk of all allies for 3 turns & Probable drastic damage cut for 1 turn (30% Chance -50% reduction)",
+		"drop check count": 2,
 		"id": "1750145",
 		"levels": [
 			{

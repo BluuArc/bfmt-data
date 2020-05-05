@@ -19,30 +19,92 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 168
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "18 combo massive Light attack on single foe, greatly boosts own Atk, Def, Rec for 3 turns & fills own BB gauge to max",
-		"hit dmg% distribution": [
-			10,
-			5,
-			3,
-			4,
-			4,
-			4,
-			10,
-			9,
-			8,
-			7,
-			6,
-			6,
-			5,
-			5,
-			4,
-			4,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					13,
+					18,
+					23,
+					43,
+					52,
+					62,
+					95,
+					99,
+					103,
+					107,
+					111,
+					115,
+					119,
+					123,
+					127,
+					131,
+					135,
+					139
+				],
+				"hit dmg% distribution": [
+					10,
+					5,
+					3,
+					4,
+					4,
+					4,
+					10,
+					9,
+					8,
+					7,
+					6,
+					6,
+					5,
+					5,
+					4,
+					4,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "78"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo massive Light attack on single foe, greatly boosts own Atk, Def, Rec for 3 turns & fills own BB gauge to max",
+		"drop check count": 2,
 		"id": "50316",
 		"levels": [
 			{
@@ -336,21 +398,55 @@
 				]
 			}
 		],
-		"max bc generated": 36,
 		"name": "Actrinia Blaster"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-03-09T11:47:24.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 50310,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			13,
+			20,
+			43,
+			52,
+			62,
+			95,
+			100,
+			105,
+			110,
+			115,
+			120,
+			125,
+			130
+		],
+		"hit dmg% distribution": [
+			11,
+			8,
+			5,
+			5,
+			5,
+			13,
+			11,
+			9,
+			8,
+			7,
+			6,
+			6,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
 	"dictionary": {
 		"description": "She protected her master from the gods' savage attacks, but upon confirming her master's safety, all of her functions shut down. The words she wished to say to her tearful master were left unspoken. Until, one day, she restarted after sleeping for a long time. Reeze had transplanted a part of herself into Lilith. Her master laid beside her, smiling, and she spoke the words of gratitude that she could not before. It is said that the two then departed on a journey to find the comrades they had left behind.",
 		"evolution": "System recovery complete.<br>Separate energy source detected.<br>Rapid enhancements anticipated.",
 		"fusion": "Not only will I grow stronger,<br>the part of my master within me<br>will grow more powerful as well.<br>I cannot thank you enough.",
 		"summon": "Now that my master exists within me,<br>my AI has become unstable.<br>Friends...feelings...love…<br>These are difficult to comprehend."
 	},
+	"drop check count": 3,
 	"element": "light",
 	"evolution": {
 		"prev": "50315"
@@ -371,11 +467,13 @@
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -396,23 +494,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 1198,
-	"hit dmg% distribution": [
-		11,
-		8,
-		5,
-		5,
-		5,
-		13,
-		11,
-		9,
-		8,
-		7,
-		6,
-		6,
-		6
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 13,
 	"id": 50316,
 	"imp": {
 		"max atk": "440",
@@ -439,7 +520,18 @@
 		"name": "Five Lights' Flash"
 	},
 	"lord damage range": "2388~2667",
-	"max bc generated": 39,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Executioner Lilith XTF",
 	"overdrive stats": {
 		"atk%": 100,
@@ -448,35 +540,92 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "24 combo massive Light attack on single foe (damage relative to remaining HP), fills own BB gauge to max & slightly boosts OD gauge",
-		"hit dmg% distribution": [
-			8,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			9,
-			7,
-			6,
-			6,
-			5,
-			5,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					13,
+					17,
+					21,
+					25,
+					43,
+					46,
+					52,
+					55,
+					62,
+					65,
+					95,
+					98,
+					101,
+					104,
+					107,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134
+				],
+				"hit dmg% distribution": [
+					8,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					9,
+					7,
+					6,
+					6,
+					5,
+					5,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 24,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "43"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 24,
+		"desc": "24 combo massive Light attack on single foe (damage relative to remaining HP), fills own BB gauge to max & slightly boosts OD gauge",
+		"drop check count": 2,
 		"id": "150316",
 		"levels": [
 			{
@@ -770,7 +919,6 @@
 				]
 			}
 		],
-		"max bc generated": 48,
 		"name": "Limit Release: Ionia Force"
 	},
 	"sell caution": false,
@@ -789,18 +937,120 @@
 		}
 	},
 	"ubb": {
-		"desc": "7 combo massive Light attack on single foe, 20 combo massive Light attack on all foes, greatly boosts Atk, Def, Rec for 3 turns & fills BB gauge to max",
-		"hit dmg% distribution": [
-			20,
-			13,
-			12,
-			10,
-			15,
-			15,
-			15
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					13,
+					17,
+					21,
+					25,
+					43,
+					52,
+					62
+				],
+				"hit dmg% distribution": [
+					20,
+					13,
+					12,
+					10,
+					15,
+					15,
+					15
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 7,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					95,
+					98,
+					101,
+					104,
+					107,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134,
+					137,
+					140,
+					143,
+					146,
+					149,
+					153
+				],
+				"hit dmg% distribution": [
+					9,
+					4,
+					5,
+					7,
+					6,
+					4,
+					3,
+					4,
+					5,
+					7,
+					6,
+					4,
+					3,
+					4,
+					5,
+					7,
+					6,
+					4,
+					3,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 7,
+		"desc": "7 combo massive Light attack on single foe, 20 combo massive Light attack on all foes, greatly boosts Atk, Def, Rec for 3 turns & fills BB gauge to max",
+		"drop check count": 2,
 		"id": "250316",
 		"levels": [
 			{
@@ -846,405 +1096,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"bb atk%": 1000,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge": 999,
-						"proc id": "31",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb bc fill%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "4",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"bb atk%": 1000,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge": 999,
-						"proc id": "31",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb bc fill%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "4",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"bb atk%": 1000,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge": 999,
-						"proc id": "31",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb bc fill%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "4",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"bb atk%": 1000,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge": 999,
-						"proc id": "31",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb bc fill%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "4",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"bb atk%": 1000,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge": 999,
-						"proc id": "31",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb bc fill%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "4",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"bb atk%": 1000,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge": 999,
-						"proc id": "31",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb bc fill%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "4",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"bb atk%": 1000,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge": 999,
-						"proc id": "31",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb bc fill%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "4",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"bb atk%": 1000,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge": 999,
-						"proc id": "31",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb bc fill%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "4",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"bb atk%": 1000,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge": 999,
-						"proc id": "31",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb bc fill%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "4",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 200,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "XTF Model Sia Breaker"
 	}
 }

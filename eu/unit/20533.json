@@ -31,21 +31,62 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 115
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 10
+		}
+	},
 	"bb": {
-		"desc": "9 combo Water elemental attack on all enemies & slight chance of decreasing Atk and Def for one turn",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			14,
-			12,
-			12,
-			12
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					21,
+					24,
+					27,
+					30,
+					31,
+					40,
+					44,
+					48,
+					52
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					14,
+					12,
+					12,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "9 combo Water elemental attack on all enemies & slight chance of decreasing Atk and Def for one turn",
+		"drop check count": 1,
 		"id": "20533",
 		"levels": [
 			{
@@ -339,20 +380,42 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "Acheron"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			21,
+			26,
+			31,
+			36,
+			40,
+			44,
+			48
+		],
+		"hit dmg% distribution": [
+			12,
+			12,
+			12,
+			12,
+			18,
+			17,
+			17
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A disciple who descended to Bariura in order to seal an ancient dragon. It is said that she did not intend to save the human race by doing this, but rather, to preserve the order and balance of the world. At the same time, Grand Gaia was battling against the 12 Guardians of the Gods after the deities had decided to destroy humankind. However, many speculate that Belfura felt that the dragon was a much more imminent threat. Some say that behind her always stood a dormant snow and thunder dragon she had sealed with her powers.",
 		"evolution": " ",
 		"fusion": "A human lending me power?!<br>Ugh, how humiliating...<br>You will pay for this someday.",
 		"summon": "I know not the future of humans.<br>But chaos cannot be tolerated.<br>I shall help you."
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"cost": 200000,
@@ -389,17 +452,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 759,
-	"hit dmg% distribution": [
-		12,
-		12,
-		12,
-		12,
-		18,
-		17,
-		17
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 20533,
 	"imp": {
 		"max atk": "140",
@@ -428,7 +480,18 @@
 		"name": "Epidemic Wave"
 	},
 	"lord damage range": "1300~1452",
-	"max bc generated": 14,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "Disciple Belfura",
 	"rarity": 4,
 	"sell caution": false,

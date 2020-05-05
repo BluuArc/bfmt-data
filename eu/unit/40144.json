@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,18 +25,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 76
+		},
+		"idle": {
+			"total number of frames": 44
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "6 combo Thunder elemental attack on all enemies & probable Injury effect",
-		"hit dmg% distribution": [
-			16,
-			17,
-			17,
-			16,
-			17,
-			17
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					32,
+					35,
+					38,
+					41,
+					44,
+					47
+				],
+				"hit dmg% distribution": [
+					16,
+					17,
+					17,
+					16,
+					17,
+					17
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "6 combo Thunder elemental attack on all enemies & probable Injury effect",
+		"drop check count": 1,
 		"id": "40145",
 		"levels": [
 			{
@@ -230,20 +268,40 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "Lightning Kick"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			32,
+			35,
+			38,
+			41,
+			44,
+			47
+		],
+		"hit dmg% distribution": [
+			16,
+			17,
+			17,
+			16,
+			17,
+			17
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A fighter who trained at the Toltya Dojo. He continued his training in various places, but after hearing of Nemia's countless victories decided to seclude himself in the mountains. Zeln, whose sole desire was strength, saw his abilities grow beyond even his own limits. Having completed his training, Zeln returned to his dojo to find Nemia under attack from the gods. With a smile on his face he dashingly tried to save her, though what he got in return was her fist.",
 		"evolution": "Thunder isn't just fast, you know.<br>Allow me to show you how<br>I got my name!",
 		"fusion": "Surely I'm not the only<br>one who's grown stronger.<br>More! I need more power!",
 		"summon": "I'm not just fast, <br>these phantasmagoric moves<br>or the essence of my being!"
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -281,16 +339,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 438,
-	"hit dmg% distribution": [
-		16,
-		17,
-		17,
-		16,
-		17,
-		17
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 40144,
 	"imp": {
 		"max atk": "140",
@@ -311,7 +359,18 @@
 		"name": "Dynasty Power"
 	},
 	"lord damage range": "1477~1650",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Thunder Punt Zeln",
 	"rarity": 5,
 	"sell caution": false,

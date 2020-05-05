@@ -19,18 +19,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 93
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 1명에게 암속성 6연속 데미지&3턴간 자신의 방어력 절반을 공격력으로 변환",
-		"hit dmg% distribution": [
-			18,
-			16,
-			16,
-			18,
-			16,
-			16
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					31,
+					34,
+					37,
+					54,
+					57,
+					60
+				],
+				"hit dmg% distribution": [
+					18,
+					16,
+					16,
+					18,
+					16,
+					16
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "적 1명에게 암속성 6연속 데미지&3턴간 자신의 방어력 절반을 공격력으로 변환",
+		"drop check count": 1,
 		"id": "60212",
 		"levels": [
 			{
@@ -254,21 +292,37 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "블랙 해저드"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 60210,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			31,
+			37,
+			54,
+			60
+		],
+		"hit dmg% distribution": [
+			25,
+			25,
+			25,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A soldier from the plebeian Bariura Empire. Since he was sent to the front lines to fight as a soldier, he was successful in many exploits and promoted to knighthood. After that he continued with his service, earning him numerous medals and the rank of army commander. Though the way he climbed up the military ranks without undertaking much damage was outstanding, he was really bad at social activities, and was thus shunned by other knights. Though he was usually very gentle and ordinary, in the battlefield he became a merciless demon, making him a presence feared by both friend and foe.",
 		"evolution": " ",
 		"fusion": "As my thanks to you, I will train you.<br> I will teach you the rules and physical abilities you'll need to survive on the field.",
 		"summon": "I am Bahvel, a knight of Bariura. <br>I may still be inexperienced as a knight, but I'll carry out every one of your commands.<br>That's a promise."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 100000,
@@ -305,14 +359,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 589,
-	"hit dmg% distribution": [
-		25,
-		25,
-		25,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 60212,
 	"imp": {
 		"max atk": "100",
@@ -336,7 +382,18 @@
 		"name": "암신의 가호"
 	},
 	"lord damage range": "959~1072",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "검암장군 하벨",
 	"rarity": 3,
 	"sell caution": false,

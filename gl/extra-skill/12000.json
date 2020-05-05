@@ -1,0 +1,46 @@
+{
+	"associated_units": [
+		"10516"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-04-07T13:46:48.000Z",
+		"updatedAt": "2016-04-07T13:46:48.000Z"
+	},
+	"desc": "「羅獄焔燼メドブレア」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「３ターン、状態異常の敵へのダメージを大幅にアップ」を追加",
+	"effects": [
+		{
+			"atk% buff": 20,
+			"conditions": [
+				{
+					"item required": [
+						"49940"
+					]
+				}
+			],
+			"def% buff": 20,
+			"hp% buff": 20,
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 20
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"atk% buff turns (110)": 3,
+					"atk% buff when enemy has ailment": 160,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "65",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "百錬万丈",
+	"target": "self"
+}

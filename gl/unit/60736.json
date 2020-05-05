@@ -19,27 +19,74 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 187
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "15 combo powerful Dark attack on all enemies & boosts BB gauge when attacked for 3 turns ",
-		"hit dmg% distribution": [
-			16,
-			12,
-			10,
-			9,
-			8,
-			7,
-			7,
-			6,
-			5,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					82,
+					86,
+					90,
+					94,
+					98,
+					102,
+					106,
+					110,
+					114,
+					118,
+					122,
+					126,
+					130,
+					134,
+					138
+				],
+				"hit dmg% distribution": [
+					16,
+					12,
+					10,
+					9,
+					8,
+					7,
+					7,
+					6,
+					5,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo powerful Dark attack on all enemies & boosts BB gauge when attacked for 3 turns ",
+		"drop check count": 1,
 		"id": "60736",
 		"levels": [
 			{
@@ -273,21 +320,49 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Vicious Revenant"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 60730,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			82,
+			87,
+			92,
+			97,
+			102,
+			107,
+			112,
+			117,
+			122,
+			127
+		],
+		"hit dmg% distribution": [
+			20,
+			15,
+			10,
+			10,
+			10,
+			10,
+			10,
+			5,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
 	"dictionary": {
 		"description": "In the midst of the fight against the gods, Yuura fell in battle, losing his life whilst trying to protect one of his comrades. The reason why this course of action of his has not been studied in greater detail is perhaps due to the great amount of people who attested to seeing him rise again from the dead, fighting until his body had disintegrated. Yuura, who transcended death even if for a brief moment, revealed to the Oracle Knight that he had once been entrusted to kill him. Simultaneously, he also created an opening to land a fatal blow against the god who meant to destroy humanity.",
 		"evolution": "Hey, you sure hung in there.<br>Now leave the rest to me.<br>I'll beat your enemies for you.",
 		"fusion": "Ha ha ha! Your face is so funny!<br>No, that was a compliment!<br>Don't get mad! I'm serious!",
 		"summon": "Even though she was so full of doubt<br>she still did her best for her<br>friends. What a piece of work."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "60735"
@@ -300,7 +375,8 @@
 				"atk% buff": 80,
 				"bb gauge above % buff requirement": 100,
 				"conditions": [],
-				"passive id": "30"
+				"passive id": "30",
+				"passive target": "self"
 			}
 		],
 		"id": "2601",
@@ -310,20 +386,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 968,
-	"hit dmg% distribution": [
-		20,
-		15,
-		10,
-		10,
-		10,
-		10,
-		10,
-		5,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 60736,
 	"imp": {
 		"max atk": "600",
@@ -350,7 +412,18 @@
 		"name": "Artemis's Force"
 	},
 	"lord damage range": "2352~2628",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "Grand Malediction Yuura",
 	"overdrive stats": {
 		"atk%": 100,
@@ -359,31 +432,84 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "20 combo powerful Dark attack on single enemy, fills own BB gauge to max & additional attack at end of turn for 3 turns",
-		"hit dmg% distribution": [
-			12,
-			9,
-			8,
-			7,
-			6,
-			6,
-			5,
-			5,
-			5,
-			4,
-			4,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					82,
+					87,
+					92,
+					97,
+					102,
+					107,
+					112,
+					117,
+					122,
+					127,
+					132,
+					137,
+					142,
+					147,
+					152,
+					157,
+					162,
+					167,
+					172,
+					177
+				],
+				"hit dmg% distribution": [
+					12,
+					9,
+					8,
+					7,
+					6,
+					6,
+					5,
+					5,
+					5,
+					4,
+					4,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "20 combo powerful Dark attack on single enemy, fills own BB gauge to max & additional attack at end of turn for 3 turns",
+		"drop check count": 2,
 		"id": "160736",
 		"levels": [
 			{
@@ -697,7 +823,6 @@
 				]
 			}
 		],
-		"max bc generated": 40,
 		"name": "Necromancy: Eldorobe"
 	},
 	"sell caution": false,
@@ -716,35 +841,80 @@
 		}
 	},
 	"ubb": {
-		"desc": "24 combo massive Dark attack on single enemy & hugely boosts critical hit damage for 3 turns",
-		"hit dmg% distribution": [
-			9,
-			8,
-			8,
-			7,
-			7,
-			6,
-			6,
-			5,
-			5,
-			4,
-			4,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			2,
-			2,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					82,
+					87,
+					92,
+					97,
+					102,
+					107,
+					112,
+					117,
+					122,
+					127,
+					132,
+					137,
+					142,
+					147,
+					152,
+					157,
+					162,
+					167,
+					172,
+					177,
+					182,
+					187,
+					192,
+					197
+				],
+				"hit dmg% distribution": [
+					9,
+					8,
+					8,
+					7,
+					7,
+					6,
+					6,
+					5,
+					5,
+					4,
+					4,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					2,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 24,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 24,
+		"desc": "24 combo massive Dark attack on single enemy & hugely boosts critical hit damage for 3 turns",
+		"drop check count": 2,
 		"id": "260736",
 		"levels": [
 			{
@@ -767,198 +937,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 450,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 450,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 450,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 450,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 450,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 450,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 450,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 450,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 2000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 450,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 48,
 		"name": "Abyssal Depletion"
 	}
 }

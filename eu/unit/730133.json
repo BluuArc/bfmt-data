@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,16 +25,40 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 146
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 16
+		}
+	},
 	"bb": {
-		"desc": "4 combo massive Earth attack on all enemies",
-		"hit dmg% distribution": [
-			25,
-			25,
-			25,
-			25
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					26,
+					30,
+					34,
+					38
+				],
+				"hit dmg% distribution": [
+					25,
+					25,
+					25,
+					25
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "4 combo massive Earth attack on all enemies",
+		"drop check count": 1,
 		"id": "730133",
 		"levels": [
 			{
@@ -168,14 +192,42 @@
 				]
 			}
 		],
-		"max bc generated": 4,
 		"name": "100 Fists"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 8,
+	"damage frames": {
+		"frame times": [
+			18,
+			35,
+			50,
+			65,
+			80,
+			83,
+			86,
+			89,
+			92,
+			94
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
+	"drop check count": 3,
 	"element": "earth",
 	"evolution": {
 		"cost": 200000,
@@ -212,20 +264,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7048,
-	"hit dmg% distribution": [
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 730133,
 	"imp": {
 		"max atk": "220",
@@ -251,7 +289,18 @@
 		"name": "Legionarius Aura"
 	},
 	"lord damage range": "1676~1872",
-	"max bc generated": 30,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "sotnarG",
 	"rarity": 4,
 	"sell caution": false,

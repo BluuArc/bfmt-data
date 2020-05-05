@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,24 +25,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 143
+		},
+		"idle": {
+			"total number of frames": 95
+		},
+		"move": {
+			"total number of frames": 12
+		}
+	},
 	"bb": {
-		"desc": "12 combo Light elemental attack on all enemies",
-		"hit dmg% distribution": [
-			8,
-			8,
-			8,
-			15,
-			8,
-			8,
-			8,
-			15,
-			8,
-			8,
-			30,
-			30
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					58,
+					62,
+					66,
+					70,
+					74,
+					78,
+					82,
+					86,
+					90,
+					94,
+					100,
+					104
+				],
+				"hit dmg% distribution": [
+					8,
+					8,
+					8,
+					15,
+					8,
+					8,
+					8,
+					15,
+					8,
+					8,
+					30,
+					30
+				],
+				"hit dmg% distribution (total)": 154,
+				"hits": 12,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 154,
-		"hits": 12,
+		"desc": "12 combo Light elemental attack on all enemies",
+		"drop check count": 1,
 		"id": "750014",
 		"levels": [
 			{
@@ -176,31 +208,74 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "Jingle Bells"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			58,
+			62,
+			66,
+			70,
+			74,
+			78,
+			82,
+			86
+		],
+		"hit dmg% distribution": [
+			12,
+			12,
+			12,
+			12,
+			12,
+			12,
+			12,
+			16
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
+	"drop check count": 2,
 	"element": "light",
+	"evolution": {
+		"cost": 500000,
+		"mats": [
+			{
+				"id": "50354",
+				"name": "Miracle Totem",
+				"type": "unit"
+			},
+			{
+				"id": "750012",
+				"name": "Christmas Idol",
+				"type": "unit"
+			},
+			{
+				"id": "750122",
+				"name": "Wonder Mirror Idol",
+				"type": "unit"
+			},
+			{
+				"id": "50123",
+				"name": "Light Totem",
+				"type": "unit"
+			},
+			{
+				"id": "60224",
+				"name": "Metal Mimic",
+				"type": "unit"
+			}
+		],
+		"next": "750015"
+	},
 	"exp_pattern": 20,
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7003,
-	"hit dmg% distribution": [
-		12,
-		12,
-		12,
-		12,
-		12,
-		12,
-		12,
-		16
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 750014,
 	"imp": {
 		"max atk": "300",
@@ -213,17 +288,28 @@
 		"desc": "Huge boost to drop rates during battle, especially during Christmas season",
 		"effects": [
 			{
-				"item drop rate% buff": 25,
-				"karma drop rate% buff": 25,
+				"item drop rate% buff": 10,
+				"karma drop rate% buff": 10,
 				"passive id": "19",
-				"zel drop rate% buff": 25
+				"zel drop rate% buff": 10
 			}
 		],
 		"id": "750014",
 		"name": "Chimney Sweep"
 	},
 	"lord damage range": "1053~1177",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Santa",
 	"rarity": 5,
 	"sell caution": false,

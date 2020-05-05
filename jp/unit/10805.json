@@ -19,23 +19,78 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 79
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性１１連ダメージ＆味方全体に３ターン、ＢＣ・ＨＣ出現率をアップ・スパークダメージをかなりアップ",
-		"hit dmg% distribution": [
-			10,
-			9,
-			7,
-			7,
-			5,
-			15,
-			13,
-			10,
-			10,
-			8,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					11,
+					14,
+					17,
+					20,
+					23,
+					31,
+					34,
+					37,
+					40,
+					43,
+					46
+				],
+				"hit dmg% distribution": [
+					10,
+					9,
+					7,
+					7,
+					5,
+					15,
+					13,
+					10,
+					10,
+					8,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 11,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 11,
+		"desc": "敵全体に炎属性１１連ダメージ＆味方全体に３ターン、ＢＣ・ＨＣ出現率をアップ・スパークダメージをかなりアップ",
+		"drop check count": 1,
 		"id": "10805",
 		"levels": [
 			{
@@ -339,21 +394,45 @@
 				]
 			}
 		],
-		"max bc generated": 11,
 		"name": "リジッドインガルフ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-14T16:14:07.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10800,
 	"cost": 30,
+	"damage frames": {
+		"frame times": [
+			11,
+			14,
+			17,
+			31,
+			34,
+			37,
+			40,
+			43
+		],
+		"hit dmg% distribution": [
+			14,
+			12,
+			10,
+			18,
+			15,
+			12,
+			10,
+			9
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A weapon of mass destruction created by an otherworldly deity. On learning that Klaus and Isterio were being resurrected in another world after being slain by Gildorf, his master followed them to Elgaia, accompanied by Gildorf. The two primary gods awaited them there, having been resurrected by humans. However, the two were changed, having been transformed by otherworldly technologies. A scientist attempted to upgrade Gildorf with Elgaian technology when he struggled to stop the rampaging deities.",
 		"evolution": "New device confirmed.<br>This power will<br>allow greater destruction.",
 		"fusion": "Energy source confirmed.<br>Firepower upgrade confirmed.<br>Maximum capacity not achieved.",
 		"summon": "I am a god-slaying weapon.<br>I destroy the indestructible. <br>Destruction is a part of me."
 	},
+	"drop check count": 4,
 	"element": "fire",
 	"evolution": {
 		"cost": 1500000,
@@ -391,18 +470,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 1237,
-	"hit dmg% distribution": [
-		14,
-		12,
-		10,
-		18,
-		15,
-		12,
-		10,
-		9
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 10805,
 	"imp": {
 		"max atk": "400",
@@ -428,16 +495,73 @@
 		"name": "鋼獄神の破力"
 	},
 	"lord damage range": "2281~2548",
-	"max bc generated": 32,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "煉鬼鋼神ギルドルフ",
 	"rarity": 6,
 	"sbb": {
-		"desc": "敵全体に強力な炎属性ダメージ＆敵単体に強力な炎属性ダメージ＆３ターン、自分のスパークダメージをかなりアップ＆自分のＢＢゲージを満タンにする",
-		"hit dmg% distribution": [
-			100
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					31
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					11
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 1,
+		"desc": "敵全体に強力な炎属性ダメージ＆敵単体に強力な炎属性ダメージ＆３ターン、自分のスパークダメージをかなりアップ＆自分のＢＢゲージを満タンにする",
+		"drop check count": 20,
 		"id": "110805",
 		"levels": [
 			{
@@ -791,7 +915,6 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "滅式ギルドルフ・アーム"
 	},
 	"sell caution": false,

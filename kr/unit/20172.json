@@ -19,18 +19,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 110
+		},
+		"idle": {
+			"total number of frames": 70
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "적 1명에게 수속성 6연속 데미지＆확률로 질병 효과",
-		"hit dmg% distribution": [
-			30,
-			10,
-			10,
-			30,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					52,
+					58,
+					64,
+					76,
+					82,
+					88
+				],
+				"hit dmg% distribution": [
+					30,
+					10,
+					10,
+					30,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "적 1명에게 수속성 6연속 데미지＆확률로 질병 효과",
+		"drop check count": 3,
 		"id": "20172",
 		"levels": [
 			{
@@ -234,21 +272,33 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "바랑가 스톰"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 20170,
 	"cost": 5,
+	"damage frames": {
+		"frame times": [
+			52,
+			76
+		],
+		"hit dmg% distribution": [
+			50,
+			50
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "A monster that gains all the knowledge held by the people it devours. Its defense is also greatly increased by the armor it wears which was stolen from humans it found in the past. They rarely form large groups, but they do seem to communicate with each other via a means of communication specific to their race which is comprised of gestures and very basic speech. It's even been said that Hrungnirs have formed militant groups to take revenge on humans who have attacked a certain individual's residence. ",
 		"evolution": "Have you seen me?<br>Look at how wonderful<br>my armor is!",
 		"fusion": "Give me lots more!<br>If you do, I will become<br>more intelligent!",
 		"summon": "My favorite thing is<br>the wisdom of humans!<br>You are wise too, right?"
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"prev": "20171"
@@ -257,12 +307,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 272,
-	"hit dmg% distribution": [
-		50,
-		50
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 20172,
 	"imp": {
 		"max atk": "120",
@@ -283,7 +327,18 @@
 		"name": "중격의 빛"
 	},
 	"lord damage range": "701~784",
-	"max bc generated": 4,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "후룬그닐",
 	"rarity": 3,
 	"sell caution": false,

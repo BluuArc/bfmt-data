@@ -19,24 +19,80 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 179
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 9
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 화속성 12연속 데미지＆3턴간 아군 전체의 공격력<comma> 크리티컬 확률<comma> 스파크 시 데미지 상승",
-		"hit dmg% distribution": [
-			12,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					15,
+					30,
+					45,
+					60,
+					75,
+					90,
+					105,
+					120,
+					135,
+					150,
+					165,
+					180
+				],
+				"hit dmg% distribution": [
+					12,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "적 전체에게 화속성 12연속 데미지＆3턴간 아군 전체의 공격력<comma> 크리티컬 확률<comma> 스파크 시 데미지 상승",
+		"drop check count": 1,
 		"id": "10534",
 		"levels": [
 			{
@@ -350,15 +406,39 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "어뢰선풍참"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 10530,
 	"cost": 16,
+	"damage frames": {
+		"frame times": [
+			14,
+			28,
+			44,
+			79,
+			83,
+			102,
+			106,
+			110
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			10,
+			12,
+			12,
+			13,
+			13,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"prev": "10533"
@@ -367,18 +447,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 734,
-	"hit dmg% distribution": [
-		10,
-		10,
-		10,
-		12,
-		12,
-		13,
-		13,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 10534,
 	"imp": {
 		"max atk": "300",
@@ -403,7 +471,18 @@
 		"name": "성검의 용사"
 	},
 	"lord damage range": "1536~1716",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "랜디",
 	"rarity": 5,
 	"sell caution": false,

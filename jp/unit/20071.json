@@ -25,14 +25,48 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 80
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "敵単体に水属性２連ダメージ＆高確率で毒状態にする",
-		"hit dmg% distribution": [
-			50,
-			50
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					30,
+					50
+				],
+				"hit dmg% distribution": [
+					50,
+					50
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 2,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 2,
+		"desc": "敵単体に水属性２連ダメージ＆高確率で毒状態にする",
+		"drop check count": 3,
 		"id": "20071",
 		"levels": [
 			{
@@ -226,21 +260,33 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "スネークリッパー"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20070,
 	"cost": 2,
+	"damage frames": {
+		"frame times": [
+			30,
+			50
+		],
+		"hit dmg% distribution": [
+			50,
+			50
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "Magic beings that are half woman, half snake. It is rumored their bodies attract men lost at sea. When a man gets close, their snake tail grabs them and drags them to the ocean floor. Captured men are said to become Ramia's food or slaves, but since none have ever returned, it's unclear which is true. They are dangerous, but many men still wish to see one just once.",
 		"evolution": " ",
 		"fusion": "Oh, is this a tribute to me?<br>So sweet, now how should I<br>reward you?",
 		"summon": "Don't I look good?<br>Take me with you and I<br>promise to treat you right."
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"cost": 50000,
@@ -267,12 +313,6 @@
 	"gender": "other",
 	"getting type": "not eligible for achievement",
 	"guide_id": 89,
-	"hit dmg% distribution": [
-		50,
-		50
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 20071,
 	"imp": {
 		"max atk": "100",
@@ -282,7 +322,18 @@
 	},
 	"kind": "normal",
 	"lord damage range": "670~748",
-	"max bc generated": 4,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "ラミア",
 	"rarity": 2,
 	"sell caution": false,

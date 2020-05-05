@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 96
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "8 combo Fire attack on single enemy & probable Poison effect",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			15,
-			15,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					14,
+					18,
+					24,
+					26,
+					29,
+					33,
+					37,
+					40
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					15,
+					15,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo Fire attack on single enemy & probable Poison effect",
+		"drop check count": 1,
 		"id": "10063",
 		"levels": [
 			{
@@ -242,20 +282,44 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Poisonado"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-09-03T04:48:35.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 9,
+	"damage frames": {
+		"frame times": [
+			14,
+			18,
+			24,
+			26,
+			29,
+			33,
+			37,
+			40
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			15,
+			20,
+			15,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A great thief who once claimed the ruined Agni Empire as his territory. Leon and his twin blades often found themselves pitted against the authority of gods and public officials. However, during this time he was held up as someone who fought against anyone that tormented humans. He paid little mind to this words, and further continued stealing as if to make sure it was known that he was still in fact a thief. ",
 		"evolution": "Once a thief, always a thief.<br>I've no interest in becoming<br>a hero or anything like that!",
 		"fusion": "Not a bad reward.<br>I'll help you out in return<br>for your trouble.",
 		"summon": "I'll always be a thief!<br>If you understand what I mean,<br>I'll lend you my power!"
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"prev": "10062"
@@ -264,18 +328,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 312,
-	"hit dmg% distribution": [
-		10,
-		10,
-		15,
-		20,
-		15,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 10063,
 	"imp": {
 		"max atk": "200",
@@ -296,7 +348,18 @@
 		"name": "Abundant Flash"
 	},
 	"lord damage range": "1025~1146",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Great Thief Leon",
 	"rarity": 4,
 	"sell caution": false,

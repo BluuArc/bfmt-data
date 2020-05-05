@@ -19,17 +19,46 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "5 combo powerful Thunder attack on single foe & probable Poison, Paralysis effects",
-		"hit dmg% distribution": [
-			20,
-			20,
-			20,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					60,
+					75,
+					96,
+					145,
+					147
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					20,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "5 combo powerful Thunder attack on single foe & probable Poison, Paralysis effects",
+		"drop check count": 5,
 		"id": "840325",
 		"levels": [
 			{
@@ -243,20 +272,38 @@
 				]
 			}
 		],
-		"max bc generated": 25,
 		"name": "Lucky Shots"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-03-09T11:47:24.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 840320,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			60,
+			75,
+			96,
+			145,
+			147
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "Far off in the Borderlands, there was a mundane, little town not much different from a village. The only daughter of the town mayor, Ravenna, happened to be a ravishing beauty as well, a blooming flower amidst the dust and gloom of the isolated town. One day, Ravenna ran off into the woods to escape the prospect of entertaining the lecherous suitors fawning over her hand in marriage. Somewhat of a klutz herself, Ravenna was rather clumsy and slipped over some wet rocks in a stream, injuring her ankle. To her dismay, a pack of wolves appeared. Ravenna was about to scream when a young man leapt into the scene with pistols blazing, battling and slaying the beasts in a manner of fighting she had never seen before. It was love at first sight for Ravenna, and it is said that she ran off with the dashing youth called Randolph, never to return to her home again.",
 		"fusion": "Oh Randolph!<br>I can shoot too! Let me help...<br>*Splat* Ouch!! That hurt...",
 		"summon": "I'm so tired of this town!<br>Will you take me with you?<br>I'm good at making cupcakes!"
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -293,15 +340,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 8180,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 840325,
 	"imp": {
 		"max atk": "200",
@@ -323,7 +361,18 @@
 		"name": "Klutz!"
 	},
 	"lord damage range": "1856~2073",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		}
+	},
 	"name": "Ravenna",
 	"rarity": 5,
 	"sell caution": false,

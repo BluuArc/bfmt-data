@@ -19,8 +19,58 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					60
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					220
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [],
+				"hit dmg% distribution": [],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "44"
+			}
+		],
 		"desc": "Gradually recovers HP, all status ailments removed and negated & additional damage dealing effect to all foes at end of turn for 3 turns",
+		"drop check count": 2,
 		"id": "850147",
 		"levels": [
 			{
@@ -588,16 +638,49 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-27T14:43:14.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 850140,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			47,
+			60,
+			73,
+			86,
+			99,
+			112,
+			150,
+			160,
+			170,
+			180,
+			190,
+			200
+		],
+		"hit dmg% distribution": [
+			5,
+			7,
+			6,
+			7,
+			8,
+			6,
+			9,
+			10,
+			11,
+			10,
+			12,
+			9
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
 	"dictionary": {
 		"description": "During the dark ages of Athensphere, the war slowly took its toll on the demigods. Having witnessed the endless carnage brought upon her people, Aurelia's soul wept in silence. Amidst the death and destruction, a dark seed was sown within Aurelia's bright soul. In time, her grief turned into spite towards the one who began the war. For the first time in her life, Aurelia felt a deep dark passion stirring within her. To end the ravages of war, she had to end the source of it all. With her newfound conviction, Aurelia picked up her harp and poured her soul into the birth of a new tune. A winged spirit emerged from within her, singing softly behind her ears an unholy melody that drained the life-force from anyone who had so successfully earned the ire of the benign demigod. ",
 		"evolution": "Aahh...yes! That's it!<br>My new tune is finally complete!<br>*Chuckles*<br>I wonder…will you listen to it?",
 		"fusion": "You have my gratitude, Summoner. With<br>this power, I can put an end to this<br>madness. Fret not my children...<br>It'll all be over soon.",
 		"summon": "La, la de da... Oh! You startled me!<br>Please be more careful my dear.<br>I cannot be held responsible<br>should something happen to you…"
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"prev": "850146"
@@ -616,6 +699,7 @@
 				],
 				"def% buff": 40,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 40
 			},
 			{
@@ -629,7 +713,8 @@
 						]
 					}
 				],
-				"passive id": "25"
+				"passive id": "25",
+				"passive target": "self"
 			}
 		],
 		"id": "850147",
@@ -639,22 +724,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 8140,
-	"hit dmg% distribution": [
-		5,
-		7,
-		6,
-		7,
-		8,
-		6,
-		9,
-		10,
-		11,
-		10,
-		12,
-		9
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 850147,
 	"imp": {
 		"max atk": "440",
@@ -690,7 +759,18 @@
 		"name": "Grace of the Divine"
 	},
 	"lord damage range": "2015~2251",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
 	"name": "Archangel Aurelia",
 	"overdrive stats": {
 		"atk%": 100,
@@ -699,27 +779,84 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "16 combo powerful Light attack on all foes, greatly recovers HP & boosts Def relative to Rec to all allies & gradually boosts BB gauge for 3 turns",
-		"hit dmg% distribution": [
-			7,
-			6,
-			7,
-			6,
-			7,
-			8,
-			8,
-			6,
-			5,
-			6,
-			7,
-			6,
-			5,
-			5,
-			6,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					42,
+					57,
+					72,
+					87,
+					102,
+					114,
+					124,
+					132,
+					140,
+					148,
+					156,
+					164,
+					172,
+					180,
+					188,
+					196
+				],
+				"hit dmg% distribution": [
+					7,
+					6,
+					7,
+					6,
+					7,
+					8,
+					8,
+					6,
+					5,
+					6,
+					7,
+					6,
+					5,
+					5,
+					6,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [],
+				"hit dmg% distribution": [],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "19"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo powerful Light attack on all foes, greatly recovers HP & boosts Def relative to Rec to all allies & gradually boosts BB gauge for 3 turns",
+		"drop check count": 1,
 		"id": "1850147",
 		"levels": [
 			{
@@ -1113,7 +1250,6 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Aria of Finality"
 	},
 	"sell caution": false,
@@ -1132,32 +1268,86 @@
 		}
 	},
 	"ubb": {
-		"desc": "21 combo massive Light attack on all foes, fully restores HP for 3 turns & probable resistance against 1 KO attack for all allies",
-		"hit dmg% distribution": [
-			6,
-			4,
-			5,
-			4,
-			5,
-			6,
-			6,
-			5,
-			4,
-			5,
-			6,
-			5,
-			4,
-			4,
-			5,
-			4,
-			5,
-			4,
-			4,
-			5,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					52,
+					67,
+					80,
+					91,
+					100,
+					107,
+					112,
+					117,
+					121,
+					125,
+					129,
+					133,
+					137,
+					141,
+					145,
+					149,
+					153,
+					157,
+					161,
+					165,
+					169
+				],
+				"hit dmg% distribution": [
+					6,
+					4,
+					5,
+					4,
+					5,
+					6,
+					6,
+					5,
+					4,
+					5,
+					6,
+					5,
+					4,
+					4,
+					5,
+					4,
+					5,
+					4,
+					4,
+					5,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 21,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "56"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 21,
+		"desc": "21 combo massive Light attack on all foes, fully restores HP for 3 turns & probable resistance against 1 KO attack for all allies",
+		"drop check count": 1,
 		"id": "2850147",
 		"levels": [
 			{
@@ -1191,297 +1381,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 21,
 		"name": "Song of the Seraph"
 	}
 }

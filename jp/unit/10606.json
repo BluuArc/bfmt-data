@@ -19,32 +19,84 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 177
+		},
+		"idle": {
+			"total number of frames": 88
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性２０連ダメージ＆味方全体に３ターン、スパークダメージをかなりアップ",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			10,
-			6,
-			6,
-			6,
-			6,
-			6,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50,
+					55,
+					84,
+					88,
+					92,
+					96,
+					100,
+					104,
+					108,
+					112,
+					116,
+					120
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					10,
+					6,
+					6,
+					6,
+					6,
+					6,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "敵全体に炎属性２０連ダメージ＆味方全体に３ターン、スパークダメージをかなりアップ",
+		"drop check count": 1,
 		"id": "10606",
 		"levels": [
 			{
@@ -258,21 +310,45 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "フラム・アラドヴァル"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10600,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			84,
+			88,
+			92,
+			96,
+			100,
+			104,
+			108,
+			112
+		],
+		"hit dmg% distribution": [
+			16,
+			11,
+			16,
+			11,
+			14,
+			10,
+			12,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "One of the sacred Guardians of Meirith. While out on a mission, she received word of some heretics who planned to defy Karna Masta, and decided to return immediately. This choice would mean leaving her friend Quaid behind in the territory they had been exploring, but according to legend, Claire chose to go with her brother in the end. Once she had returned to the Holy Emperor's side, she faced off against a group of bladed warriors, ultimately falling in battle as she tried to protect her brother. Too weakened by the wounds she had received during her previous mission to recover, she left her last words to her beloved brother.",
 		"evolution": "The will to protect is<br>the precious emotion that<br>acts as the source of my power.",
 		"fusion": "Your ignorance resembles that of my<br>younger brother and that worries me.<br>I can't just let it be...",
 		"summon": "Why do I always attract the helpless?<br>It would seem I can't escape<br>my role as a big sister. Hehe."
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"prev": "10605"
@@ -309,6 +385,7 @@
 				"def% buff": 30,
 				"hp% buff": 30,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 30
 			}
 		],
@@ -319,18 +396,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 885,
-	"hit dmg% distribution": [
-		16,
-		11,
-		16,
-		11,
-		14,
-		10,
-		12,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 10606,
 	"imp": {
 		"max atk": "300",
@@ -356,7 +421,18 @@
 		"name": "閃統神の栄冠"
 	},
 	"lord damage range": "2245~2508",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "紅槍の双神騎クレア",
 	"overdrive stats": {
 		"atk%": 100,
@@ -365,41 +441,104 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な炎属性３０連ダメージ＆味方全体に３ターン、スパークダメージを大幅にアップ・ＢＣ出現率をかなりアップ",
-		"hit dmg% distribution": [
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			9,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			3,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50,
+					55,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114,
+					117,
+					120,
+					123,
+					126,
+					129,
+					132,
+					135,
+					138,
+					141
+				],
+				"hit dmg% distribution": [
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					9,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					3,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 30,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 30,
+		"desc": "敵全体に強力な炎属性３０連ダメージ＆味方全体に３ターン、スパークダメージを大幅にアップ・ＢＣ出現率をかなりアップ",
+		"drop check count": 1,
 		"id": "110606",
 		"levels": [
 			{
@@ -693,7 +832,6 @@
 				]
 			}
 		],
-		"max bc generated": 30,
 		"name": "紅蓮穿『デゾンブレイズ』"
 	},
 	"sell caution": false,
@@ -712,51 +850,124 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な炎属性４０連ダメージ＆味方全体に３ターン、スパークダメージを超絶アップ・攻撃力を超絶アップ",
-		"hit dmg% distribution": [
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			9,
-			3,
-			3,
-			2,
-			3,
-			3,
-			2,
-			3,
-			3,
-			2,
-			3,
-			3,
-			2,
-			3,
-			3,
-			2,
-			3,
-			3,
-			2,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					10,
+					13,
+					16,
+					19,
+					22,
+					25,
+					28,
+					32,
+					36,
+					40,
+					44,
+					48,
+					52,
+					56,
+					60,
+					64,
+					68,
+					72,
+					76,
+					80,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114,
+					117,
+					120,
+					123,
+					126,
+					129,
+					132,
+					135,
+					138,
+					141
+				],
+				"hit dmg% distribution": [
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					9,
+					3,
+					3,
+					2,
+					3,
+					3,
+					2,
+					3,
+					3,
+					2,
+					3,
+					3,
+					2,
+					3,
+					3,
+					2,
+					3,
+					3,
+					2,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 40,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 40,
+		"desc": "敵全体に超強力な炎属性４０連ダメージ＆味方全体に３ターン、スパークダメージを超絶アップ・攻撃力を超絶アップ",
+		"drop check count": 1,
 		"id": "210606",
 		"levels": [
 			{
@@ -788,279 +999,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 40,
 		"name": "ソールエクスファニス"
 	}
 }

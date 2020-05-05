@@ -19,19 +19,58 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 83
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 16
+		}
+	},
 	"bb": {
-		"desc": "적 1명에게 목속성 7연속 데미지&확률로 마비 효과",
-		"hit dmg% distribution": [
-			22,
-			13,
-			13,
-			13,
-			13,
-			13,
-			13
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					7,
+					23,
+					30,
+					32,
+					34,
+					36,
+					38
+				],
+				"hit dmg% distribution": [
+					22,
+					13,
+					13,
+					13,
+					13,
+					13,
+					13
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 7,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					90
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 7,
+		"desc": "적 1명에게 목속성 7연속 데미지&확률로 마비 효과",
+		"drop check count": 1,
 		"id": "30223",
 		"levels": [
 			{
@@ -225,21 +264,41 @@
 				]
 			}
 		],
-		"max bc generated": 7,
 		"name": "룬 이펙트"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 30220,
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			7,
+			23,
+			30,
+			32,
+			34,
+			36
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			15,
+			15,
+			15,
+			15
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "An elf knight who served as a bodyguard for the duke of the Principality of Vriksha. When the great war against the gods started, Ristrall remained in the dukedom in order to fight for the humans, according to the orders he had received from the elf princess Lemenara. Although at first he disliked humans, it is said that by this time his prejudice had waned. Ristrall, who as a knight elf fought in the name of humans, became the symbol of loyalty towards the family alongside Leore, who although human himself, had managed to become the Pixy Lord.",
 		"evolution": "After placing so much trust in me,<br> as a knight I am bound by oath to return the favor.",
 		"fusion": "Humans think of so many different things.<br> To think that they gave birth to desire and wisdom.",
 		"summon": "So you acknowledge my place in the battlefield.<br> Hmph, good. It's not like I dislike fighting anyway."
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"prev": "30222"
@@ -248,16 +307,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 584,
-	"hit dmg% distribution": [
-		20,
-		20,
-		15,
-		15,
-		15,
-		15
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 30223,
 	"imp": {
 		"max atk": "160",
@@ -280,7 +329,18 @@
 		"name": "역탈의 엄명"
 	},
 	"lord damage range": "1164~1301",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "환마장군 리스테랄",
 	"rarity": 4,
 	"sell caution": false,

@@ -19,22 +19,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 179
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "10 combo powerful Dark attack on all foes & boosts Spark damage for 3 turns",
-		"hit dmg% distribution": [
-			16,
-			8,
-			11,
-			7,
-			12,
-			8,
-			11,
-			8,
-			12,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134,
+					137
+				],
+				"hit dmg% distribution": [
+					16,
+					8,
+					11,
+					7,
+					12,
+					8,
+					11,
+					8,
+					12,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo powerful Dark attack on all foes & boosts Spark damage for 3 turns",
+		"drop check count": 1,
 		"id": "60575",
 		"levels": [
 			{
@@ -248,30 +290,66 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Sledge Rumble"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-27T14:43:14.000Z",
-		"updatedAt": "2015-09-03T04:48:35.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 60570,
 	"cost": 29,
+	"damage frames": {
+		"frame times": [
+			110
+		],
+		"hit dmg% distribution": [
+			100
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 1
+	},
 	"dictionary": {
 		"description": "The daughter of a nobleman from the Amdahl Empire. Though she boasted of great skill with the demon flail her father had given her, she let herself be captured in order to help the twin princesses escape when Amdahl was invaded by Palmyna. She then developed a deep grudge against those who sought to steal away her country, and broke out of the prison using the strong physique she had inherited from her father. Once outside, she targeted Palmyna only to find that it had already been destroyed. Losing the reason behind the anger that had burned inside of her, she decided to fight against the God Army instead, using her demon flail to pulverize the gods.",
 		"fusion": "You use quite the interesting power,<br>but it still relies on people.<br>It's nothing to boast of.",
 		"summon": "The insolent Summoner asking for my<br>help, is you? It would seem I<br>can't escape my rotten luck..."
 	},
+	"drop check count": 15,
 	"element": "dark",
+	"evolution": {
+		"cost": 1500000,
+		"mats": [
+			{
+				"id": "60344",
+				"name": "Dark Mecha God",
+				"type": "unit"
+			},
+			{
+				"id": "50354",
+				"name": "Miracle Totem",
+				"type": "unit"
+			},
+			{
+				"id": "60123",
+				"name": "Dark Totem",
+				"type": "unit"
+			},
+			{
+				"id": "60201",
+				"name": "Dark Pot",
+				"type": "unit"
+			},
+			{
+				"id": "60224",
+				"name": "Metal Mimic",
+				"type": "unit"
+			}
+		],
+		"next": "60576"
+	},
 	"exp_pattern": 20,
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 1000,
-	"hit dmg% distribution": [
-		100
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 1,
 	"id": 60575,
 	"imp": {
 		"max atk": "240",
@@ -296,16 +374,49 @@
 		"name": "Iron Flash"
 	},
 	"lord damage range": "1953~2181",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "Grudge Flail Sylvia",
 	"rarity": 6,
 	"sbb": {
-		"desc": "Massive Dark attack on single foe & probable 1 turn Def reduction",
-		"hit dmg% distribution": [
-			100
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					110
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 1,
+		"desc": "Massive Dark attack on single foe & probable 1 turn Def reduction",
+		"drop check count": 30,
 		"id": "160575",
 		"levels": [
 			{
@@ -559,7 +670,6 @@
 				]
 			}
 		],
-		"max bc generated": 30,
 		"name": "Destruction Flail"
 	},
 	"sell caution": false,

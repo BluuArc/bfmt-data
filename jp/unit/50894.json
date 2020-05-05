@@ -19,21 +19,86 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 202
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 21
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光属性９連ダメージ＆味方全体の全状態異常を回復＆３ターン、全状態異常を無効＆１ターン、攻撃力・防御力・回復力を低下する効果を無効",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					75,
+					82,
+					89,
+					96,
+					103,
+					110,
+					117,
+					124,
+					140
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "73"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "敵全体に光属性９連ダメージ＆味方全体の全状態異常を回復＆３ターン、全状態異常を無効＆１ターン、攻撃力・防御力・回復力を低下する効果を無効",
+		"drop check count": 1,
 		"id": "50894",
 		"levels": [
 			{
@@ -567,20 +632,40 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "光還印"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-14T16:14:07.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50890,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			75,
+			85,
+			95,
+			105,
+			115,
+			140
+		],
+		"hit dmg% distribution": [
+			15,
+			15,
+			15,
+			15,
+			15,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A scholar from another world. His world had specialized, advanced mechanical technology, but he turned to the magic of other worlds out of dissatisfaction with it. It is said that he gained powers greater than the gods through his use of unique forms of magic built upon a foundation of technological reasoning. In light of the wars between the gods underway in his world, he began a plan to create a new power. However, he was flung to Elgaia by an accident during his research, leading him to meet some unexpected individuals.",
 		"fusion": "Strengthening via Summoning.<br>The most fundamental of<br>fundamentals, huh?<br>And essential, as well.",
 		"summon": "This... Is this Summoning?!<br>I never imagined thatI would be Summoned myself."
 	},
+	"drop check count": 3,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -617,16 +702,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1248,
-	"hit dmg% distribution": [
-		15,
-		15,
-		15,
-		15,
-		15,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 50894,
 	"imp": {
 		"max atk": "140",
@@ -650,7 +725,18 @@
 		"name": "幻剣将の力"
 	},
 	"lord damage range": "1681~1878",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "法亢神レイハード",
 	"rarity": 5,
 	"sell caution": false,

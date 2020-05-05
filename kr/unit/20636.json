@@ -19,24 +19,80 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 145
+		},
+		"idle": {
+			"total number of frames": 72
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 수속성 12연속 데미지&3턴간 아군 전체의 공격에 화수속성 부여&2턴간 화목속성 유닛에게 받는 데미지 조금 감소",
-		"hit dmg% distribution": [
-			20,
-			17,
-			13,
-			11,
-			9,
-			7,
-			6,
-			5,
-			4,
-			3,
-			3,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					63,
+					66,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96
+				],
+				"hit dmg% distribution": [
+					20,
+					17,
+					13,
+					11,
+					9,
+					7,
+					6,
+					5,
+					4,
+					3,
+					3,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "39"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "적 전체에게 강력한 수속성 12연속 데미지&3턴간 아군 전체의 공격에 화수속성 부여&2턴간 화목속성 유닛에게 받는 데미지 조금 감소",
+		"drop check count": 1,
 		"id": "20636",
 		"levels": [
 			{
@@ -380,21 +436,45 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "빙염의 가시칼날"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T09:12:07.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 20630,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			63,
+			66,
+			69,
+			72,
+			75,
+			78,
+			81,
+			84
+		],
+		"hit dmg% distribution": [
+			22,
+			18,
+			16,
+			11,
+			9,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A Summoner selected to join the covert \"Ishgria's Recon Squad.\" After the squadron separated itself from its commander, it faced the sudden attack of a dangerous creature, and all members got dispersed. Iris was left completely isolated, though after surveying the land she came across a being that called herself a goddess. That was the last time anyone heard from her. Furthermore, it was Iris who carried most of the detailed reports concerning the findings her squad had made in Ishgria, so the whereabouts of such reports remain a mystery.",
 		"evolution": "So this is evolution... I see...<br>Thank you, I finally understand...<br>Let me fight with you...",
 		"fusion": "Yes, this is very good.<br>If I had to compare it something...<br>Oh, I don't think I have the words...",
 		"summon": "My beliefs will never change...<br>But I did try switching camps.<br>The outcome is...a secret..."
 	},
+	"drop check count": 4,
 	"element": "water",
 	"evolution": {
 		"prev": "20635"
@@ -406,7 +486,8 @@
 			{
 				"conditions": [],
 				"hit increase/hit": 1,
-				"passive id": "37"
+				"passive id": "37",
+				"passive target": "self"
 			}
 		],
 		"id": "5100",
@@ -416,18 +497,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1010,
-	"hit dmg% distribution": [
-		22,
-		18,
-		16,
-		11,
-		9,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 20636,
 	"imp": {
 		"max atk": "300",
@@ -457,7 +526,18 @@
 		"name": "통천신의 성스러운 보호벽"
 	},
 	"lord damage range": "2384~2662",
-	"max bc generated": 32,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "남빛 명천령신 아이리스",
 	"overdrive stats": {
 		"atk%": 100,
@@ -466,26 +546,86 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "적 전체에게 강력한 수속성 15연속 데미지&3턴간 아군 전체의 공격에 화수속성 부여&적의 공격력과 방어력 1턴간 저하시키는 효과 부여&2턴간 화목속성 유닛에게 받는 데미지 조금 감소",
-		"hit dmg% distribution": [
-			18,
-			15,
-			11,
-			10,
-			9,
-			7,
-			6,
-			5,
-			4,
-			3,
-			3,
-			3,
-			2,
-			2,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					63,
+					66,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105
+				],
+				"hit dmg% distribution": [
+					18,
+					15,
+					11,
+					10,
+					9,
+					7,
+					6,
+					5,
+					4,
+					3,
+					3,
+					3,
+					2,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "51"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "39"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "적 전체에게 강력한 수속성 15연속 데미지&3턴간 아군 전체의 공격에 화수속성 부여&적의 공격력과 방어력 1턴간 저하시키는 효과 부여&2턴간 화목속성 유닛에게 받는 데미지 조금 감소",
+		"drop check count": 1,
 		"id": "120636",
 		"levels": [
 			{
@@ -949,7 +1089,6 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "컬트 그라우잠"
 	},
 	"sell caution": false,
@@ -968,31 +1107,84 @@
 		}
 	},
 	"ubb": {
-		"desc": "적 전체에게 아주 강력한 수속성 20연속 데미지&3턴간 아군 전체에게 화수속성이 약점 속성에 부여하는 데미지 상승 효과 부여&2턴간 화목속성 유닛에게 받는 데미지 초대폭 감소",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					63,
+					65,
+					67,
+					69,
+					71,
+					73,
+					75,
+					77,
+					79,
+					81,
+					83,
+					85,
+					87,
+					89,
+					91,
+					93,
+					95,
+					97,
+					99,
+					101
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "55"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "39"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "적 전체에게 아주 강력한 수속성 20연속 데미지&3턴간 아군 전체에게 화수속성이 약점 속성에 부여하는 데미지 상승 효과 부여&2턴간 화목속성 유닛에게 받는 데미지 초대폭 감소",
+		"drop check count": 1,
 		"id": "220636",
 		"levels": [
 			{
@@ -1027,306 +1219,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 400,
-						"fire units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"dmg% mitigation for elemental attacks": 100,
-						"dmg% mitigation for elemental attacks buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate earth attacks": true,
-						"mitigate fire attacks": true,
-						"proc id": "39",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 400,
-						"fire units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"dmg% mitigation for elemental attacks": 100,
-						"dmg% mitigation for elemental attacks buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate earth attacks": true,
-						"mitigate fire attacks": true,
-						"proc id": "39",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 400,
-						"fire units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"dmg% mitigation for elemental attacks": 100,
-						"dmg% mitigation for elemental attacks buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate earth attacks": true,
-						"mitigate fire attacks": true,
-						"proc id": "39",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 400,
-						"fire units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"dmg% mitigation for elemental attacks": 100,
-						"dmg% mitigation for elemental attacks buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate earth attacks": true,
-						"mitigate fire attacks": true,
-						"proc id": "39",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 400,
-						"fire units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"dmg% mitigation for elemental attacks": 100,
-						"dmg% mitigation for elemental attacks buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate earth attacks": true,
-						"mitigate fire attacks": true,
-						"proc id": "39",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 400,
-						"fire units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"dmg% mitigation for elemental attacks": 100,
-						"dmg% mitigation for elemental attacks buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate earth attacks": true,
-						"mitigate fire attacks": true,
-						"proc id": "39",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 400,
-						"fire units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"dmg% mitigation for elemental attacks": 100,
-						"dmg% mitigation for elemental attacks buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate earth attacks": true,
-						"mitigate fire attacks": true,
-						"proc id": "39",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 400,
-						"fire units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"dmg% mitigation for elemental attacks": 100,
-						"dmg% mitigation for elemental attacks buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate earth attacks": true,
-						"mitigate fire attacks": true,
-						"proc id": "39",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 400,
-						"fire units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"dmg% mitigation for elemental attacks": 100,
-						"dmg% mitigation for elemental attacks buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate earth attacks": true,
-						"mitigate fire attacks": true,
-						"proc id": "39",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "차가운 바다의 십자가"
 	}
 }

@@ -19,24 +19,80 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 218
+		},
+		"idle": {
+			"total number of frames": 54
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性１２連ダメージ＆３ターン、ターン終了時に追加ダメージ＆味方全体に３ターン、通常攻撃ＨＩＴ数を増加",
-		"hit dmg% distribution": [
-			11,
-			11,
-			11,
-			11,
-			16,
-			10,
-			9,
-			6,
-			5,
-			4,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					5,
+					19,
+					32,
+					54,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131
+				],
+				"hit dmg% distribution": [
+					11,
+					11,
+					11,
+					11,
+					16,
+					10,
+					9,
+					6,
+					5,
+					4,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "26"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "敵全体に雷属性１２連ダメージ＆３ターン、ターン終了時に追加ダメージ＆味方全体に３ターン、通常攻撃ＨＩＴ数を増加",
+		"drop check count": 1,
 		"id": "40666",
 		"levels": [
 			{
@@ -360,21 +416,45 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "雷皇幻武連拳"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T19:18:05.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40660,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			5,
+			19,
+			32,
+			54,
+			110,
+			114,
+			118,
+			122
+		],
+		"hit dmg% distribution": [
+			13,
+			13,
+			13,
+			13,
+			19,
+			13,
+			10,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "An instructor of the Toltya School of Martial Arts. The last time Rahgan ever fought was against the God Army troops which sought to destroy those fleeing towards the new promised land. He had grown so powerful after his recovery that his pupils thought he had beaten death itself. However, when he vomited blood on the battlefield, they soon realized otherwise. The God Army saw this as an opening to attack him full force, but Rahgan's strength was such that he stood right back up and did not stop fighting until every god around him had been pulverized.",
 		"evolution": "My time is here!<br>Curse this short life of mine!<br>You shall hear the Thunderbird roar!",
 		"fusion": "*Cough* *cough* *gasp*<br>What...?<br>Don't make such a fuss<br>over a little blood!",
 		"summon": "I do not fear death.<br>I just want to protect<br>those precious to me.<br>That's what really scares me."
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"prev": "40665"
@@ -386,11 +466,13 @@
 			{
 				"conditions": [],
 				"hit increase/hit": 1,
-				"passive id": "37"
+				"passive id": "37",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -412,18 +494,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1149,
-	"hit dmg% distribution": [
-		13,
-		13,
-		13,
-		13,
-		19,
-		13,
-		10,
-		6
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 40666,
 	"imp": {
 		"max atk": "440",
@@ -455,7 +525,18 @@
 		"name": "絶武剛神の闘拳"
 	},
 	"lord damage range": "2585~2888",
-	"max bc generated": 32,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "雷盡豪破神ラガン",
 	"overdrive stats": {
 		"atk%": 100,
@@ -464,26 +545,86 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な雷属性１５連ダメージ（連続発動で威力アップ）＆３ターン、ターン終了時に追加ダメージ＆味方全体に３ターン、通常攻撃ＨＩＴ数を増加＆防御力に応じて攻撃力をかなりアップ",
-		"hit dmg% distribution": [
-			10,
-			3,
-			10,
-			3,
-			10,
-			10,
-			3,
-			14,
-			9,
-			7,
-			6,
-			5,
-			4,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					5,
+					8,
+					19,
+					22,
+					32,
+					54,
+					57,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131
+				],
+				"hit dmg% distribution": [
+					10,
+					3,
+					10,
+					3,
+					10,
+					10,
+					3,
+					14,
+					9,
+					7,
+					6,
+					5,
+					4,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "64"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "26"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "敵全体に強力な雷属性１５連ダメージ（連続発動で威力アップ）＆３ターン、ターン終了時に追加ダメージ＆味方全体に３ターン、通常攻撃ＨＩＴ数を増加＆防御力に応じて攻撃力をかなりアップ",
+		"drop check count": 1,
 		"id": "140666",
 		"levels": [
 			{
@@ -917,7 +1058,6 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "天壊衝『無皇鳳霞』"
 	},
 	"sell caution": false,
@@ -936,31 +1076,96 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な雷属性２０連ダメージ＆３ターン、ターン終了時に強力な追加ダメージ＆味方全体に３ターン、通常攻撃ＨＩＴ数をかなり増加・攻撃力を超絶アップ",
-		"hit dmg% distribution": [
-			9,
-			3,
-			8,
-			3,
-			8,
-			3,
-			9,
-			3,
-			12,
-			7,
-			5,
-			4,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					5,
+					8,
+					19,
+					22,
+					32,
+					35,
+					54,
+					57,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134,
+					137,
+					140,
+					143
+				],
+				"hit dmg% distribution": [
+					9,
+					3,
+					8,
+					3,
+					8,
+					3,
+					9,
+					3,
+					12,
+					7,
+					5,
+					4,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "26"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "敵全体に超強力な雷属性２０連ダメージ＆３ターン、ターン終了時に強力な追加ダメージ＆味方全体に３ターン、通常攻撃ＨＩＴ数をかなり増加・攻撃力を超絶アップ",
+		"drop check count": 1,
 		"id": "240666",
 		"levels": [
 			{
@@ -1004,387 +1209,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "天刔魔盡の極"
 	}
 }

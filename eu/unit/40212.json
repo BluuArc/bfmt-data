@@ -19,15 +19,50 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 126
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 31
+		}
+	},
 	"bb": {
-		"desc": "3 combo Thunder elemental attack on single enemy & probable Injury and Weak effect",
-		"hit dmg% distribution": [
-			30,
-			30,
-			40
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					30,
+					49,
+					76
+				],
+				"hit dmg% distribution": [
+					30,
+					30,
+					40
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 3,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 3,
+		"desc": "3 combo Thunder elemental attack on single enemy & probable Injury and Weak effect",
+		"drop check count": 1,
 		"id": "40212",
 		"levels": [
 			{
@@ -241,20 +276,34 @@
 				]
 			}
 		],
-		"max bc generated": 3,
 		"name": "Thunder Spear Attack"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 7,
+	"damage frames": {
+		"frame times": [
+			30,
+			49,
+			76
+		],
+		"hit dmg% distribution": [
+			30,
+			30,
+			40
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "The eldest daughter of an aristocratic family from Palmyna, she had a very strong sense of justice, and whenever anything happened within the domain she would race to the scene with her beloved halberd to solve the issue herself. Her parents thought this dangerous and tried to stop her, but her fair judgment received strong public support which forced them to approve. She mercilessly cut down criminals with what they revered to as her \"Bolt Pike of Judgment.\"",
 		"evolution": " ",
 		"fusion": "I will become stronger!<br>Leave everything to me!",
 		"summon": "Did you summon me?<br>If so, then let us bring justice<br>to where it is needed!"
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"cost": 100000,
@@ -286,13 +335,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 296,
-	"hit dmg% distribution": [
-		30,
-		30,
-		40
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 40212,
 	"imp": {
 		"max atk": "160",
@@ -313,7 +355,18 @@
 		"name": "Valiant Power"
 	},
 	"lord damage range": "931~1040",
-	"max bc generated": 9,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Bolt Pike Amy",
 	"rarity": 3,
 	"sell caution": false,

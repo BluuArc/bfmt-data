@@ -25,17 +25,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 140
+		},
+		"idle": {
+			"total number of frames": 124
+		},
+		"move": {
+			"total number of frames": 19
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 수속성 5연속 데미지＆확률로 부상 효과",
-		"hit dmg% distribution": [
-			60,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					78,
+					88,
+					98,
+					108,
+					118
+				],
+				"hit dmg% distribution": [
+					60,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "적 전체에게 강력한 수속성 5연속 데미지＆확률로 부상 효과",
+		"drop check count": 1,
 		"id": "20314",
 		"levels": [
 			{
@@ -229,15 +266,29 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "비상뇌천격"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 20310,
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			73,
+			83,
+			93
+		],
+		"hit dmg% distribution": [
+			80,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"prev": "20313"
@@ -246,13 +297,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 406,
-	"hit dmg% distribution": [
-		80,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 20314,
 	"imp": {
 		"max atk": "260",
@@ -274,7 +318,18 @@
 		"name": "용진"
 	},
 	"lord damage range": "1418~1584",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "시프",
 	"rarity": 5,
 	"sell caution": false,

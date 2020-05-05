@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,30 +25,80 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 149
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "18 combo powerful Dark attack on all enemies & big boost to Atk, Def and Rec for 3 turns",
-		"hit dmg% distribution": [
-			20,
-			10,
-			5,
-			5,
-			4,
-			5,
-			5,
-			3,
-			5,
-			4,
-			5,
-			5,
-			4,
-			3,
-			5,
-			3,
-			5,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					27,
+					30,
+					41,
+					45,
+					49,
+					53,
+					57,
+					61,
+					65,
+					69,
+					73,
+					77,
+					81,
+					85,
+					89,
+					93,
+					97,
+					101
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					5,
+					5,
+					4,
+					5,
+					5,
+					3,
+					5,
+					4,
+					5,
+					5,
+					4,
+					3,
+					5,
+					3,
+					5,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					145
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo powerful Dark attack on all enemies & big boost to Atk, Def and Rec for 3 turns",
+		"drop check count": 1,
 		"id": "60664",
 		"levels": [
 			{
@@ -292,20 +342,42 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Cluster Pain"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			27,
+			30,
+			41,
+			45,
+			49,
+			53,
+			57
+		],
+		"hit dmg% distribution": [
+			40,
+			14,
+			10,
+			9,
+			7,
+			13,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A disciple who once served the Holy Emperor Karna Masta. According to legend, she was the Holy Emperor's most trusted disciple and was adored by a multitude of gods. However, one day she suddenly left Karna Masta's side for reasons that remain unknown. Many possible reasons have been discussed, but since there are accounts that state she fought another high ranking god afterwards, it is most commonly believed that she betrayed Karna Masta out of pure self-interest. This clashes completely with previous records regarding her conduct and attitude though, and therefore this theory is still disputed today.",
 		"evolution": " ",
 		"fusion": "My wishes matter not.<br>I am a being of destruction.<br>I only serve to invite misfortune.",
 		"summon": "A Summoner?<br>How nostalgic.<br>Oh, don't mind me."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 500000,
@@ -342,17 +414,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 865,
-	"hit dmg% distribution": [
-		40,
-		14,
-		10,
-		9,
-		7,
-		13,
-		7
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 60664,
 	"imp": {
 		"max atk": "200",
@@ -373,7 +434,18 @@
 		"name": "Fighting Strobe"
 	},
 	"lord damage range": "1635~1827",
-	"max bc generated": 14,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Misfortune Feeva",
 	"rarity": 5,
 	"sell caution": false,

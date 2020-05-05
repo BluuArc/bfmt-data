@@ -19,21 +19,62 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 118
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵単体に水属性９連ダメージ＆味方全体に３ターン、防御力に応じて攻撃力をアップ",
-		"hit dmg% distribution": [
-			15,
-			10,
-			5,
-			25,
-			15,
-			10,
-			10,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					21,
+					25,
+					29,
+					64,
+					68,
+					72,
+					76,
+					80,
+					84
+				],
+				"hit dmg% distribution": [
+					15,
+					10,
+					5,
+					25,
+					15,
+					10,
+					10,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "敵単体に水属性９連ダメージ＆味方全体に３ターン、防御力に応じて攻撃力をアップ",
+		"drop check count": 2,
 		"id": "20593",
 		"levels": [
 			{
@@ -257,21 +298,39 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "クラージュブレイド"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20590,
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			21,
+			25,
+			64,
+			68,
+			72
+		],
+		"hit dmg% distribution": [
+			20,
+			5,
+			55,
+			15,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A knight from the Sama Kingdom who lived during the times of the great war. Lionel was left for dead after his disappearance during the battle against the God Army, but recent developments show that he was swallowed by a dimensional vortex leading to Ishgria which appeared in the midst of battle. Though he had his hands full fighting off fearsome beasts and demons in a strange land, Lionel never stopped worrying about Arius, and kept searching for a way to return to him in Grand Gaia. However, it seems he was unable to fulfill his wishes in the end.",
 		"evolution": "The battlefield has helped me grow.<br>How I would have loved for Prince<br>Arius to have seen me thus...",
 		"fusion": "Wait for me, my prince!<br>I shall grow stronger, and aid you<br>with my sword in battle!",
 		"summon": "My blade belongs to Prince Arius!<br>But if you do not require an oath,<br>then I can lend you a hand."
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"prev": "20592"
@@ -280,15 +339,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1026,
-	"hit dmg% distribution": [
-		20,
-		5,
-		55,
-		15,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 20593,
 	"imp": {
 		"max atk": "120",
@@ -311,7 +361,18 @@
 		"name": "剣豪の闘志"
 	},
 	"lord damage range": "1192~1332",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "青騎将ライオネル",
 	"rarity": 4,
 	"sell caution": false,

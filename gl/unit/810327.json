@@ -19,28 +19,80 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "16 combo powerful Fire attack on all foes, partial HP drain, probable Injury, Curse effects & additional attack at turn's end for 3 turns",
-		"hit dmg% distribution": [
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			10,
-			6,
-			6,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					43,
+					46,
+					49,
+					52,
+					55,
+					58,
+					61,
+					64,
+					67,
+					70,
+					100,
+					110,
+					130,
+					135,
+					160,
+					162
+				],
+				"hit dmg% distribution": [
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					10,
+					6,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "14"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo powerful Fire attack on all foes, partial HP drain, probable Injury, Curse effects & additional attack at turn's end for 3 turns",
+		"drop check count": 1,
 		"id": "810327",
 		"levels": [
 			{
@@ -384,21 +436,63 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Cursed Ravage"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-03-09T11:47:24.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 810320,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			43,
+			46,
+			49,
+			52,
+			55,
+			58,
+			61,
+			64,
+			67,
+			70,
+			100,
+			110,
+			130,
+			135,
+			160,
+			162,
+			164
+		],
+		"hit dmg% distribution": [
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			7,
+			7,
+			7,
+			7,
+			8,
+			7,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 17
+	},
 	"dictionary": {
 		"description": "Randolph was the first to wake and witness the carnage. Controlling his shock and confusion with great mental fortitude, he discovered that he could sense traces of some type of magical residue. His mind bent on the possibility of tracking down the culprit, he woke and led Ravenna in pursuit. Randolph discovered that he possessed heightened physical abilities after the incident, and each morning he would wake up together with Ravenna in tattered clothing, covered in blood. Eventually, the shadowy forms of a wolf and raven lurking about them became visible. Their grim quest led them to a warlock performing some kind of ritual over the ominous figure of a winged wolf with a raven's head. Randolph immediately recognized the robed man and attacked relentlessly. After a fierce battle, they defeated the warlock and his minions. However, upon touching the artifact, their memories got jolted and to their dread, they discovered that they were the ones responsible for the massacre and random murders they had encountered during their journey. Each night, by being near one another, their shadow beasts would possess their partner--the wolf took over Randolph's body, and the raven took Ravenna's. This possession would then make them lose control over themselves, setting them off on a rampage. Randolph completely lost focus of himself as memories of discovering the artifact and falling prey to its curse in the catacombs flooded into his mind. It is said that later Randolph let out a heartbroken howl that made the earth tremble when he found out that Ravenna had gone missing. To this day, he still searches for his beloved.",
 		"evolution": "Rawr!!<br>The Blood Moon calls!<br>Blood! I want blood!!",
 		"fusion": "Ravenna, where are you?!<br>To the ends of the world,<br>I shall search for you...",
 		"summon": "My friends... Comrades...<br>Oh, what have I done?<br>Was it...my fault?"
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"prev": "810326"
@@ -435,16 +529,19 @@
 				"def% buff": 30,
 				"hp% buff": 30,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 30
 			},
 			{
 				"conditions": [],
 				"hit increase/hit": 1,
-				"passive id": "37"
+				"passive id": "37",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -467,27 +564,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 8179,
-	"hit dmg% distribution": [
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		7,
-		7,
-		7,
-		7,
-		8,
-		7,
-		7
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 17,
 	"id": 810327,
 	"imp": {
 		"max atk": "500",
@@ -519,7 +595,18 @@
 		"name": "Empowering Soul Howl"
 	},
 	"lord damage range": "2514~2808",
-	"max bc generated": 51,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Lycanthrope Randolph",
 	"overdrive stats": {
 		"atk%": 100,
@@ -528,31 +615,92 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "20 combo powerful Fire attack on all foes, casts stealth on self boosting own Atk and critical hit rate for 2 turns, partial HP drain, additional attack at turn's end for 3 turns & lowers own Def by 50% for 1 turn",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			6,
-			6,
-			7,
-			7,
-			5,
-			5,
-			5,
-			9,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					43,
+					46,
+					49,
+					52,
+					55,
+					58,
+					61,
+					64,
+					67,
+					70,
+					100,
+					105,
+					110,
+					130,
+					135,
+					140,
+					160,
+					162,
+					164,
+					166
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					6,
+					6,
+					7,
+					7,
+					5,
+					5,
+					5,
+					9,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "14"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [],
+				"hit dmg% distribution": [],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "10001"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "78"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "20 combo powerful Fire attack on all foes, casts stealth on self boosting own Atk and critical hit rate for 2 turns, partial HP drain, additional attack at turn's end for 3 turns & lowers own Def by 50% for 1 turn",
+		"drop check count": 1,
 		"id": "1810327",
 		"levels": [
 			{
@@ -986,7 +1134,6 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Shadowflame Dance"
 	},
 	"sell caution": false,
@@ -1005,41 +1152,128 @@
 		}
 	},
 	"ubb": {
-		"desc": "30 combo massive Fire, Dark attack on all foes, massively boosts Atk, Rec for 3 turns, hugely boosts Atk relative to Rec for 3 turns, additional massive attack at turn's end for 3 turns & lowers own Def by 100% for 2 turns",
-		"hit dmg% distribution": [
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			4,
-			3,
-			5,
-			4,
-			3,
-			3,
-			4,
-			5,
-			4,
-			4,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					43,
+					45,
+					47,
+					49,
+					51,
+					53,
+					55,
+					57,
+					59,
+					61,
+					63,
+					65,
+					67,
+					70,
+					100,
+					103,
+					106,
+					110,
+					113,
+					130,
+					133,
+					136,
+					139,
+					160,
+					162,
+					164,
+					166,
+					168,
+					170,
+					172
+				],
+				"hit dmg% distribution": [
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					4,
+					3,
+					5,
+					4,
+					3,
+					3,
+					4,
+					5,
+					4,
+					4,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 30,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "78"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 30,
+		"desc": "30 combo massive Fire, Dark attack on all foes, massively boosts Atk, Rec for 3 turns, hugely boosts Atk relative to Rec for 3 turns, additional massive attack at turn's end for 3 turns & lowers own Def by 100% for 2 turns",
+		"drop check count": 1,
 		"id": "2810327",
 		"levels": [
 			{
@@ -1095,495 +1329,8 @@
 						"target type": "self"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 130,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 300,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 300,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -100,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 130,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 300,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 300,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -100,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 130,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 300,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 300,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -100,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 130,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 300,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 300,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -100,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 130,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 300,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 300,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -100,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 130,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 300,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 300,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -100,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 130,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 300,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 300,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -100,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 130,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 300,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 300,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -100,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 130,
-						"converted attribute": "recovery",
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 300,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 300,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -100,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
 			}
 		],
-		"max bc generated": 30,
 		"name": "Volsunga Eclipse"
 	}
 }

@@ -19,17 +19,78 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 70
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 51
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光属性５連ダメージ＆味方全体のＨＰを回復・全状態異常を回復＆２ターン、ガード時のダメージ軽減率を少しアップ",
-		"hit dmg% distribution": [
-			30,
-			27,
-			15,
-			15,
-			13
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					26,
+					29,
+					32,
+					35,
+					38
+				],
+				"hit dmg% distribution": [
+					30,
+					27,
+					15,
+					15,
+					13
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					50
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "68"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "敵全体に光属性５連ダメージ＆味方全体のＨＰを回復・全状態異常を回復＆２ターン、ガード時のダメージ軽減率を少しアップ",
+		"drop check count": 2,
 		"id": "50904",
 		"levels": [
 			{
@@ -503,15 +564,31 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "この剣に誓いし約束"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-14T16:14:07.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50900,
 	"cost": 16,
+	"damage frames": {
+		"frame times": [
+			26,
+			29,
+			32,
+			35
+		],
+		"hit dmg% distribution": [
+			35,
+			25,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
+	"drop check count": 5,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -548,14 +625,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1228,
-	"hit dmg% distribution": [
-		35,
-		25,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 50904,
 	"imp": {
 		"max atk": "300",
@@ -581,7 +650,18 @@
 		"name": "騎士たる者の資質"
 	},
 	"lord damage range": "1396~1560",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "救国の白騎士アーサー",
 	"rarity": 5,
 	"sell caution": false,

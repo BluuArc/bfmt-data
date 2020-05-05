@@ -19,17 +19,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 85
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "5 combo Water attack on all foes & probable 1 turn Atk reduction",
-		"hit dmg% distribution": [
-			30,
-			25,
-			20,
-			15,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					23,
+					27,
+					35,
+					39,
+					43
+				],
+				"hit dmg% distribution": [
+					30,
+					25,
+					20,
+					15,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "5 combo Water attack on all foes & probable 1 turn Atk reduction",
+		"drop check count": 1,
 		"id": "20661",
 		"levels": [
 			{
@@ -273,20 +310,34 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "Freezing Beak"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-12-30T09:59:43.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 20660,
 	"cost": 4,
+	"damage frames": {
+		"frame times": [
+			23,
+			27,
+			35
+		],
+		"hit dmg% distribution": [
+			45,
+			30,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A migratory bird native to Ishgria. It favors waterfront areas, and is able to store enormous amounts of water inside its body. As a result, its body and wings remain wet no matter how long it is in flight. It is said that many desert animals will prioritize hunting this bird on spotting it. It feeds primarily on small animals, but has been known to attack even humans with its razor-sharp claws when hungry.",
 		"fusion": "*Screech* *squawk!* ",
 		"summon": "Caw, caw! "
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"cost": 50000,
@@ -313,13 +364,6 @@
 	"gender": "other",
 	"getting type": "not eligible for achievement",
 	"guide_id": 1160,
-	"hit dmg% distribution": [
-		45,
-		30,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 20661,
 	"imp": {
 		"max atk": "120",
@@ -342,7 +386,18 @@
 		"name": "Hunter's Spirit"
 	},
 	"lord damage range": "587~657",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "Aerigila",
 	"rarity": 2,
 	"sell caution": false,

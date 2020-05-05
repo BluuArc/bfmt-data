@@ -25,19 +25,46 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 90
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性７連ダメージ",
-		"hit dmg% distribution": [
-			5,
-			5,
-			10,
-			10,
-			20,
-			25,
-			25
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					10,
+					14,
+					26,
+					30,
+					34,
+					40,
+					46
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					10,
+					10,
+					20,
+					25,
+					25
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 7,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 7,
+		"desc": "敵全体に水属性７連ダメージ",
+		"drop check count": 1,
 		"id": "20013",
 		"levels": [
 			{
@@ -171,21 +198,35 @@
 				]
 			}
 		],
-		"max bc generated": 7,
 		"name": "ブリザードペイン"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20010,
 	"cost": 8,
+	"damage frames": {
+		"frame times": [
+			10,
+			26,
+			30
+		],
+		"hit dmg% distribution": [
+			20,
+			50,
+			30
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A swordswoman from the ruined Sama Kingdom, she later became one of the Six Heroes. During a civil war in the Sama Kingdom, she aided the king and as chief of the Savat people, led them to many military victories. The king granted her the title Gilles De Lava, meaning savior of the kingdom. The Savat were pleased, but i'ts rumored she was always looking for a reason to quit.",
 		"evolution": "If it helps my people,<br>I will gladly wield this sword!",
 		"fusion": "I can hear them calling...<br>I need to become stronger...",
 		"summon": "How'd you summon me?<br>You must be pretty strong.<br>I'll lend you my power."
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 200000,
@@ -223,13 +264,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 7,
-	"hit dmg% distribution": [
-		20,
-		50,
-		30
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 20013,
 	"imp": {
 		"max atk": "200",
@@ -253,7 +287,18 @@
 		"name": "水創神の力"
 	},
 	"lord damage range": "1089~1216",
-	"max bc generated": 9,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "氷輝姫セレナ",
 	"rarity": 4,
 	"sell caution": false,

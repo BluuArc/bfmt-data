@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,16 +25,48 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 102
+		},
+		"idle": {
+			"total number of frames": 108
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "4 combo Fire and Dark elemental attack on single enemy and adds Dark element to attack for 3 turns",
-		"hit dmg% distribution": [
-			25,
-			25,
-			25,
-			25
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					6,
+					12,
+					18,
+					24
+				],
+				"hit dmg% distribution": [
+					25,
+					25,
+					25,
+					25
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [],
+				"hit dmg% distribution": [],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "4 combo Fire and Dark elemental attack on single enemy and adds Dark element to attack for 3 turns",
+		"drop check count": 1,
 		"id": "710014",
 		"levels": [
 			{
@@ -308,14 +340,30 @@
 				]
 			}
 		],
-		"max bc generated": 4,
 		"name": "Ominous Blaze"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			6,
+			12,
+			18,
+			24
+		],
+		"hit dmg% distribution": [
+			25,
+			25,
+			25,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -353,14 +401,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 7001,
-	"hit dmg% distribution": [
-		25,
-		25,
-		25,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 710014,
 	"imp": {
 		"max atk": "360",
@@ -385,7 +425,18 @@
 		"name": "Blaze of Purgatory"
 	},
 	"lord damage range": "1303~1456",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Wandering Lancer Jack",
 	"rarity": 5,
 	"sell caution": false,

@@ -25,34 +25,104 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "22 combo powerful Light attack on all foes, reduces damage taken by 50% for 1 turn, boosts Def relative to Atk for 3 turns & boost to BB gauge when guarding for all allies",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			5,
-			5,
-			5,
-			5,
-			5,
-			4,
-			4,
-			5,
-			5,
-			4,
-			4,
-			4,
-			4,
-			5,
-			5,
-			4,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					19,
+					31,
+					50,
+					57,
+					64,
+					71,
+					78,
+					85,
+					182,
+					190,
+					197,
+					203,
+					209,
+					215,
+					221,
+					227,
+					233,
+					239,
+					245,
+					251,
+					257,
+					263
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					5,
+					5,
+					5,
+					5,
+					5,
+					4,
+					4,
+					5,
+					5,
+					4,
+					4,
+					4,
+					4,
+					5,
+					5,
+					4,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "69"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "22 combo powerful Light attack on all foes, reduces damage taken by 50% for 1 turn, boosts Def relative to Atk for 3 turns & boost to BB gauge when guarding for all allies",
+		"drop check count": 1,
 		"id": "850347",
 		"levels": [
 			{
@@ -436,21 +506,61 @@
 				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "Aigis IX: Photonic Collapse"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-28T13:11:01.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 850340,
 	"cost": 45,
+	"damage frames": {
+		"frame times": [
+			19,
+			29,
+			50,
+			60,
+			74,
+			84,
+			182,
+			191,
+			200,
+			209,
+			218,
+			227,
+			236,
+			245,
+			254,
+			263
+		],
+		"hit dmg% distribution": [
+			5,
+			6,
+			6,
+			7,
+			6,
+			7,
+			7,
+			6,
+			6,
+			6,
+			6,
+			6,
+			7,
+			6,
+			7,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 16
+	},
 	"dictionary": {
 		"description": "A mock unit modeled after Gazia, the traitorous demi-god who brought about the destruction of an entire civilization. Evidence pointing to Gazia’s dark fascinations on evolution and his undying thirst for knowledge could be said to have led to his eventual descent into madness. Utilizing centuries worth of knowledge he had accumulated from his research, his heavily augmented body would have been the ultimate synergy of science and magic, a walking weapon of mass destruction. When asked about validity of the Unit’s accuracy compared to original Gazia, all Noel mentioned was \"it takes a genius to understand another genius.\"",
 		"evolution": "HAHAHA! And to think they call me mad!<br>Are you certain that helping me, your enemy,<br>is the wisest course of action?",
 		"fusion": "Are you certain you are not in need<br>of \"Fusion\" yourself? Do you not see<br>that it could more efficient?",
 		"summon": "Pinnacle? Limits? Such are the<br>concepts that I simply cannot fathom!<br>I am of unlimited potential!"
 	},
+	"drop check count": 3,
 	"element": "light",
 	"evolution": {
 		"prev": "850346"
@@ -468,11 +578,13 @@
 				"mitigate light attacks": true,
 				"mitigate thunder attacks": true,
 				"mitigate water attacks": true,
-				"passive id": "62"
+				"passive id": "62",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -493,26 +605,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 8143,
-	"hit dmg% distribution": [
-		5,
-		6,
-		6,
-		7,
-		6,
-		7,
-		7,
-		6,
-		6,
-		6,
-		6,
-		6,
-		7,
-		6,
-		7,
-		6
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 16,
 	"id": 850347,
 	"imp": {
 		"max atk": "440",
@@ -552,7 +644,18 @@
 		"name": "Heretical Domination"
 	},
 	"lord damage range": "2467~2756",
-	"max bc generated": 48,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Mad Heretic Gazia",
 	"overdrive stats": {
 		"atk%": 100,
@@ -561,43 +664,120 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "32 combo powerful Light attack on all foes, reduces damage taken by 50% for 1 turn, boosts Atk relative to Def for 3 turns & boosts BB Atk for 3 turns for all allies",
-		"hit dmg% distribution": [
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			4,
-			4,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					19,
+					29,
+					37,
+					44,
+					51,
+					58,
+					65,
+					72,
+					79,
+					86,
+					182,
+					188,
+					193,
+					197,
+					201,
+					205,
+					209,
+					213,
+					217,
+					221,
+					225,
+					229,
+					233,
+					237,
+					241,
+					245,
+					249,
+					253,
+					257,
+					261,
+					265,
+					269
+				],
+				"hit dmg% distribution": [
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					4,
+					4,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 32,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					240
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 32,
+		"desc": "32 combo powerful Light attack on all foes, reduces damage taken by 50% for 1 turn, boosts Atk relative to Def for 3 turns & boosts BB Atk for 3 turns for all allies",
+		"drop check count": 1,
 		"id": "1850347",
 		"levels": [
 			{
@@ -1021,7 +1201,6 @@
 				]
 			}
 		],
-		"max bc generated": 32,
 		"name": "Origin: Atomize"
 	},
 	"sell caution": true,
@@ -1040,51 +1219,124 @@
 		}
 	},
 	"ubb": {
-		"desc": "40 combo massive Light attack on all foes, reduces damage taken by 75% for 2 turns & creates a Dark elemental barrier for all allies",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					19,
+					29,
+					37,
+					44,
+					51,
+					58,
+					65,
+					72,
+					79,
+					86,
+					182,
+					185,
+					188,
+					191,
+					194,
+					197,
+					200,
+					203,
+					206,
+					209,
+					212,
+					215,
+					218,
+					221,
+					224,
+					227,
+					230,
+					233,
+					236,
+					239,
+					242,
+					245,
+					248,
+					251,
+					254,
+					257,
+					260,
+					263,
+					266,
+					269
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 40,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					260
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "62"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 40,
+		"desc": "40 combo massive Light attack on all foes, reduces damage taken by 75% for 2 turns & creates a Dark elemental barrier for all allies",
+		"drop check count": 1,
 		"id": "2850347",
 		"levels": [
 			{
@@ -1119,306 +1371,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 2000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 10000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 2000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 10000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 2000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 10000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 2000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 10000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 2000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 10000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 2000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 10000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 2000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 10000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 2000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 10000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 2000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "dark",
-						"elemental barrier hp": 10000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 40,
 		"name": "Genesis: Universal Collide"
 	}
 }

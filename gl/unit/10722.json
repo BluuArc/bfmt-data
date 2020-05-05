@@ -19,20 +19,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 112
+		},
+		"idle": {
+			"total number of frames": 84
+		},
+		"move": {
+			"total number of frames": 51
+		}
+	},
 	"bb": {
-		"desc": "8 combo Fire attack on single foe & slightly boosts BB gauge fill rate for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			26,
-			18,
-			10,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					10,
+					18,
+					27,
+					37,
+					70,
+					74,
+					78,
+					82
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					26,
+					18,
+					10,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "52"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo Fire attack on single foe & slightly boosts BB gauge fill rate for 3 turns",
+		"drop check count": 2,
 		"id": "10722",
 		"levels": [
 			{
@@ -246,20 +286,38 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Burning Clout"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-12-30T09:59:43.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 10720,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			10,
+			18,
+			27,
+			37,
+			70
+		],
+		"hit dmg% distribution": [
+			15,
+			15,
+			15,
+			15,
+			40
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A wild animal native to Ishgria. After reaching maturity, it becomes bipedal, and the flames extending from its haunches split in two. The crystal on its forehead moves to its chest as well in maturity, but how this shift occurs is not well understood. It grows increasingly territorial, and will mercilessly attack any who enter its terrain. Facing it is not to be taken lightly, as the attacks launched with its newly-developed arms will quickly send anyone flying.",
 		"evolution": "*Growl...* ",
 		"fusion": "Roar! "
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"prev": "10721"
@@ -268,15 +326,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 1159,
-	"hit dmg% distribution": [
-		15,
-		15,
-		15,
-		15,
-		40
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 10722,
 	"imp": {
 		"max atk": "160",
@@ -299,7 +348,18 @@
 		"name": "Shining War Blade"
 	},
 	"lord damage range": "1056~1180",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "Garfon",
 	"rarity": 3,
 	"sell caution": false,

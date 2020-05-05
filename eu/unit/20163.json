@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,17 +19,42 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 99
+		},
+		"idle": {
+			"total number of frames": 76
+		},
+		"move": {
+			"total number of frames": 76
+		}
+	},
 	"bb": {
-		"desc": "5 Combo Powerful Water Attack on All enemies",
-		"hit dmg% distribution": [
-			20,
-			20,
-			20,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "500.0/30",
+				"frame times": [
+					66,
+					76,
+					86,
+					96,
+					106
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					20,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "5 Combo Powerful Water Attack on All enemies",
+		"drop check count": 1,
 		"id": "20163",
 		"levels": [
 			{
@@ -163,20 +188,38 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "Diamond Dust"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			66,
+			68,
+			70,
+			72,
+			74
+		],
+		"hit dmg% distribution": [
+			25,
+			15,
+			25,
+			15,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "One of the four legendary warriors who fought to save the Kingdom of Palmyna.<br>As a priest, Dean initially struggled with the idea of fighting against the gods––until he saw the carnage they were wreaking, that is. He used his sway over the frosty elements to freeze his enemies in their tracks. Though often described as a rowdy, somewhat coarse individual, his relentless banter also served as a source of much-needed comic relief among the four warriors.",
 		"evolution": "You’re more capable than I thought.<br>Looks like I misjudged you.<br>Now let’s show the world we mean business!",
 		"fusion": "That’s the stuff!<br>Now I’m even stronger than before!<br>You and me: we’re unstoppable!",
 		"summon": "So you’re the one who saw<br>fit to summon me?<br>Very well. When do we get started?"
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 200000,
@@ -214,15 +257,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 243,
-	"hit dmg% distribution": [
-		25,
-		15,
-		25,
-		15,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 20163,
 	"imp": {
 		"max atk": "120",
@@ -246,7 +280,18 @@
 		"name": "Water God's Power"
 	},
 	"lord damage range": "1231~1375",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "3"
+		}
+	},
 	"name": "Ice Mage Dean",
 	"rarity": 4,
 	"sell caution": false,

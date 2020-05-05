@@ -19,27 +19,86 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 161
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性１５連ダメージ＆味方全体に３ターン、スパーク時、ＢＢゲージを少し増加＆１ターン、被ダメージを半分に軽減",
-		"hit dmg% distribution": [
-			6,
-			6,
-			6,
-			6,
-			6,
-			16,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					23,
+					28,
+					34,
+					40,
+					46,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86,
+					89,
+					92,
+					95
+				],
+				"hit dmg% distribution": [
+					6,
+					6,
+					6,
+					6,
+					6,
+					16,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "67"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "敵全体に雷属性１５連ダメージ＆味方全体に３ターン、スパーク時、ＢＢゲージを少し増加＆１ターン、被ダメージを半分に軽減",
+		"drop check count": 1,
 		"id": "40696",
 		"levels": [
 			{
@@ -353,21 +412,45 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "テトラ・ブルワーク"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-14T16:14:07.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40690,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			23,
+			28,
+			34,
+			40,
+			46,
+			68,
+			72,
+			75
+		],
+		"hit dmg% distribution": [
+			12,
+			12,
+			12,
+			12,
+			12,
+			17,
+			13,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "Upon venturing into Elgaia, she encountered another goddess. Not long after, she came to understand that this goddess was opposed to her protection of humans, and that the same goddess had been behind her conflicts with other gods. However, the battle between the two goddesses ended as soon as it began. The goddesses were not simply antithetical to each other, their powers were also identical in scope. Flung apart, both goddesses' bodies went on to benefit another world, although neither desired this outcome.",
 		"evolution": "Having learned the reason<br>behind my own divinity,<br>I shall evolve…",
 		"fusion": "They are foolish at times,<br>but people are capable of<br>boundless kindness.<br>I love you.",
 		"summon": "She is my reason for being.<br>And she is my antithesis…<br>Meeting her was my end."
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"prev": "40695"
@@ -381,13 +464,15 @@
 				"bc fill when attacked low": 2,
 				"bc fill when attacked%": 100,
 				"conditions": [],
-				"passive id": "25"
+				"passive id": "25",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"dmg reduction chance%": 20,
 				"dmg reduction%": 20,
-				"passive id": "14"
+				"passive id": "14",
+				"passive target": "self"
 			}
 		],
 		"id": "12500",
@@ -397,18 +482,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1247,
-	"hit dmg% distribution": [
-		12,
-		12,
-		12,
-		12,
-		12,
-		17,
-		13,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 40696,
 	"imp": {
 		"max atk": "300",
@@ -439,7 +512,18 @@
 		"name": "紫麗宮の皇磁域"
 	},
 	"lord damage range": "2238~2500",
-	"max bc generated": 32,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "麗刻の磁宮神ラフィル",
 	"overdrive stats": {
 		"atk%": 100,
@@ -448,28 +532,90 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な雷属性１７連ダメージ＆味方全体に３ターン、スパーク時、ＢＢゲージを少し増加・被ダメージ時、ＢＢゲージをかなり増加＆１ターン、被ダメージを半分に軽減",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			5,
-			15,
-			6,
-			5,
-			6,
-			5,
-			6,
-			5,
-			6,
-			5,
-			6,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					23,
+					28,
+					34,
+					40,
+					46,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					5,
+					15,
+					6,
+					5,
+					6,
+					5,
+					6,
+					5,
+					6,
+					5,
+					6,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 17,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "67"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 17,
+		"desc": "敵全体に強力な雷属性１７連ダメージ＆味方全体に３ターン、スパーク時、ＢＢゲージを少し増加・被ダメージ時、ＢＢゲージをかなり増加＆１ターン、被ダメージを半分に軽減",
+		"drop check count": 1,
 		"id": "140696",
 		"levels": [
 			{
@@ -883,7 +1029,6 @@
 				]
 			}
 		],
-		"max bc generated": 17,
 		"name": "機衛皇磁宮"
 	},
 	"sell caution": false,
@@ -902,33 +1047,100 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な雷属性２２連ダメージ＆味方全体に３ターン、被ダメージを１/４に軽減・ターン毎にＨＰを全回復・ＢＢゲージを超絶増加",
-		"hit dmg% distribution": [
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			15,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					23,
+					27,
+					31,
+					35,
+					39,
+					43,
+					47,
+					51,
+					55,
+					59,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101
+				],
+				"hit dmg% distribution": [
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					15,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "敵全体に超強力な雷属性２２連ダメージ＆味方全体に３ターン、被ダメージを１/４に軽減・ターン毎にＨＰを全回復・ＢＢゲージを超絶増加",
+		"drop check count": 1,
 		"id": "240696",
 		"levels": [
 			{
@@ -969,360 +1181,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 3,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "唯紫刻『ミセリコルディア』"
 	}
 }

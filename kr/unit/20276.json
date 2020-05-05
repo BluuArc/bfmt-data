@@ -19,13 +19,46 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 249
+		},
+		"idle": {
+			"total number of frames": 208
+		},
+		"move": {
+			"total number of frames": 208
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 수속성 데미지&1턴간 받는 데미지 반감",
-		"hit dmg% distribution": [
-			100
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					141
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 1,
+		"desc": "적 전체에게 강력한 수속성 데미지&1턴간 받는 데미지 반감",
+		"drop check count": 20,
 		"id": "20276",
 		"levels": [
 			{
@@ -249,21 +282,49 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "라스트럼 가드"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T09:12:07.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 20270,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			140,
+			147,
+			154,
+			161,
+			168,
+			173,
+			180,
+			187,
+			194,
+			201
+		],
+		"hit dmg% distribution": [
+			12,
+			10,
+			9,
+			10,
+			8,
+			11,
+			10,
+			11,
+			9,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
 	"dictionary": {
 		"description": "A super freezing weapon created by the gods which turned against its creators during the invasion of the God Army thanks to the influence of a rebellious angel. However, having suffered continuous attacks, its functionality began to break down. As its consciousness and movements began to slow down, it acquired its own free will, and choose to accept it before its body was completely destroyed. Now with a soul, the weapon managed to evolve into its final form in order to defend the young lady it swore to protect.",
 		"evolution": "What is my new name...?<br>I must protect Lira.",
 		"fusion": "Contact... 3 to 8 ratio.<br>Evolution possible.<br>Basic functions...operational.",
 		"summon": "Protect...Lira.<br>Conversion 4A7.<br>Must risk own life..."
 	},
+	"drop check count": 4,
 	"element": "water",
 	"evolution": {
 		"prev": "20275"
@@ -284,11 +345,13 @@
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -312,20 +375,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 975,
-	"hit dmg% distribution": [
-		12,
-		10,
-		9,
-		10,
-		8,
-		11,
-		10,
-		11,
-		9,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 20276,
 	"imp": {
 		"max atk": "300",
@@ -352,7 +401,18 @@
 		"name": "빙산신의 성역"
 	},
 	"lord damage range": "1862~2080",
-	"max bc generated": 40,
+	"movement": {
+		"attack": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "3"
+		}
+	},
 	"name": "빙악신 젤 데우스",
 	"overdrive stats": {
 		"atk%": 100,
@@ -361,12 +421,46 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "적 전체에게 강력한 수속성 데미지&3턴간 아군 전체의 방어력 상승&1턴간 받는 데미지 반감",
-		"hit dmg% distribution": [
-			100
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					141
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 1,
+		"desc": "적 전체에게 강력한 수속성 데미지&3턴간 아군 전체의 방어력 상승&1턴간 받는 데미지 반감",
+		"drop check count": 25,
 		"id": "120276",
 		"levels": [
 			{
@@ -680,7 +774,6 @@
 				]
 			}
 		],
-		"max bc generated": 25,
 		"name": "Ａ.Ｇ.Ｗ"
 	},
 	"sell caution": false,
@@ -699,31 +792,96 @@
 		}
 	},
 	"ubb": {
-		"desc": "적 전체에게 아주 강력한 수속성 20연속 데미지&3턴간 아군 전체의 방어력 상승&아군 전체에게 방어력에 따라 공격력 상승 효과 부여&2턴간 받는 데미지 25%로 감소",
-		"hit dmg% distribution": [
-			9,
-			4,
-			3,
-			5,
-			5,
-			2,
-			5,
-			6,
-			3,
-			5,
-			4,
-			5,
-			3,
-			5,
-			7,
-			5,
-			4,
-			5,
-			9,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					141,
+					145,
+					149,
+					153,
+					157,
+					161,
+					165,
+					169,
+					173,
+					177,
+					181,
+					185,
+					189,
+					193,
+					197,
+					201,
+					205,
+					209,
+					213,
+					217
+				],
+				"hit dmg% distribution": [
+					9,
+					4,
+					3,
+					5,
+					5,
+					2,
+					5,
+					6,
+					3,
+					5,
+					4,
+					5,
+					3,
+					5,
+					7,
+					5,
+					4,
+					5,
+					9,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "적 전체에게 아주 강력한 수속성 20연속 데미지&3턴간 아군 전체의 방어력 상승&아군 전체에게 방어력에 따라 공격력 상승 효과 부여&2턴간 받는 데미지 25%로 감소",
+		"drop check count": 1,
 		"id": "220276",
 		"levels": [
 			{
@@ -764,360 +922,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 40,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 40,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 40,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 40,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 40,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 40,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 40,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 40,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 40,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 100,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "풀 디제네레이트"
 	}
 }

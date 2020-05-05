@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,32 +25,84 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 220
+		},
+		"idle": {
+			"total number of frames": 48
+		},
+		"move": {
+			"total number of frames": 10
+		}
+	},
 	"bb": {
-		"desc": "20 Combo thunder elemental Atk on single enemy & Adds Def ignoring effect to Atk for all allies for 2 turns",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					130,
+					131,
+					132,
+					133,
+					134,
+					135,
+					136,
+					136,
+					137,
+					138,
+					139,
+					140,
+					141,
+					142,
+					143,
+					144,
+					145,
+					146,
+					147,
+					148
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "20 Combo thunder elemental Atk on single enemy & Adds Def ignoring effect to Atk for all allies for 2 turns",
+		"drop check count": 1,
 		"id": "740145",
 		"levels": [
 			{
@@ -264,14 +316,28 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Mighty Ram Charge"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 27,
+	"damage frames": {
+		"frame times": [
+			130,
+			132,
+			134
+		],
+		"hit dmg% distribution": [
+			34,
+			33,
+			33
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
+	"drop check count": 7,
 	"element": "thunder",
 	"evolution": {
 		"prev": "740144"
@@ -280,13 +346,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7071,
-	"hit dmg% distribution": [
-		34,
-		33,
-		33
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 740145,
 	"imp": {
 		"max atk": "460",
@@ -311,16 +370,61 @@
 		"name": "King of the Ram "
 	},
 	"lord damage range": "2024~2262",
-	"max bc generated": 21,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "King Jason",
 	"rarity": 6,
 	"sbb": {
-		"desc": "1 Incredibly Powerful thunder elemental Atk on all enemies (25% Crit & +50% BC self) & Adds Def ignoring effect to Atk for 2 turns & Boosts Spark Dmg for all allies for 3 turns (80%)",
-		"hit dmg% distribution": [
-			100
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					130
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 1,
+		"desc": "1 Incredibly Powerful thunder elemental Atk on all enemies (25% Crit & +50% BC self) & Adds Def ignoring effect to Atk for 2 turns & Boosts Spark Dmg for all allies for 3 turns (80%)",
+		"drop check count": 25,
 		"id": "1740145",
 		"levels": [
 			{
@@ -634,7 +738,6 @@
 				]
 			}
 		],
-		"max bc generated": 25,
 		"name": "Ram Great Shock"
 	},
 	"sell caution": false,

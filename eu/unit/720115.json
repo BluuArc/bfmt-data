@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,25 +25,70 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 152
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "13 combo Water elemental attack on all enemies & ATTK Boost attk for all allies for 2 turns",
-		"hit dmg% distribution": [
-			7,
-			7,
-			7,
-			7,
-			16,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					51,
+					54,
+					57,
+					70,
+					73,
+					76,
+					84,
+					87,
+					90,
+					93,
+					95,
+					97,
+					100
+				],
+				"hit dmg% distribution": [
+					7,
+					7,
+					7,
+					7,
+					16,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 13,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 13,
+		"desc": "13 combo Water elemental attack on all enemies & ATTK Boost attk for all allies for 2 turns",
+		"drop check count": 1,
 		"id": "720115",
 		"levels": [
 			{
@@ -267,14 +312,46 @@
 				]
 			}
 		],
-		"max bc generated": 13,
 		"name": "Creature from the black lagoon"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 24,
+	"damage frames": {
+		"frame times": [
+			8,
+			23,
+			29,
+			38,
+			44,
+			48,
+			56,
+			66,
+			76,
+			86,
+			92,
+			96
+		],
+		"hit dmg% distribution": [
+			8,
+			8,
+			12,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"prev": "720114"
@@ -283,22 +360,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7025,
-	"hit dmg% distribution": [
-		8,
-		8,
-		12,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 720115,
 	"imp": {
 		"max atk": "340",
@@ -325,33 +386,83 @@
 		"name": "Torch of Valhalla"
 	},
 	"lord damage range": "1778~1986",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Goddess Svafa",
 	"rarity": 6,
 	"sbb": {
-		"desc": "18 combo Water elemental attack on all enemies & ATTK Boost attk for all allies for 3 turns & Boosts Def for all allies for 3 turns",
-		"hit dmg% distribution": [
-			5,
-			10,
-			10,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					51,
+					54,
+					57,
+					70,
+					73,
+					76,
+					84,
+					87,
+					90,
+					96,
+					98,
+					100,
+					102,
+					104,
+					106,
+					108,
+					110,
+					112
+				],
+				"hit dmg% distribution": [
+					5,
+					10,
+					10,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo Water elemental attak on all enemies & Boosts Atk for all allies for 3 turns & Boosts Def for all allies for 3 turns",
+		"drop check count": 1,
 		"id": "1720115",
 		"levels": [
 			{
@@ -585,7 +696,6 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Creature of the Abyss"
 	},
 	"sell caution": false,

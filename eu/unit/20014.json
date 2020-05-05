@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,48 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 90
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "8 combo Water elemental power attack on all enemies",
-		"hit dmg% distribution": [
-			5,
-			5,
-			10,
-			10,
-			20,
-			15,
-			15,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					10,
+					14,
+					26,
+					30,
+					34,
+					40,
+					46,
+					52
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					10,
+					10,
+					20,
+					15,
+					15,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo Water elemental power attack on all enemies",
+		"drop check count": 1,
 		"id": "20014",
 		"levels": [
 			{
@@ -172,20 +200,36 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Cocytus Zero"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-09-03T04:48:35.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			10,
+			25,
+			30,
+			34
+		],
+		"hit dmg% distribution": [
+			10,
+			50,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A swordswoman from the ruined Sama Kingdom. She is the savior of her kingdom, and one of the six heroes. During the great war she refused Sama Kingdom's call and led the Savat people to save the masses. Her sword, Lexida, showed its true power in response to her skill, cutting down the gods with a cold pale blue strike. She gave the people courage and terrified the gods.",
 		"evolution": "I do not fear the gods!<br>Watch as Lexida puts them <br>in their place!",
 		"fusion": "Watch this!<br>Lexida, lend me your strength!",
 		"summon": "I was actually summoned!?<br>Amazing! Now, let me show you<br>the power of my Lexida!"
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 500000,
@@ -223,14 +267,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 8,
-	"hit dmg% distribution": [
-		10,
-		50,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 20014,
 	"imp": {
 		"max atk": "300",
@@ -254,7 +290,18 @@
 		"name": "Water God's Power"
 	},
 	"lord damage range": "1261~1409",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Ice Goddess Selena",
 	"rarity": 5,
 	"sell caution": false,

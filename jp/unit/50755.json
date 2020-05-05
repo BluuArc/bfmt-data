@@ -25,22 +25,88 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 185
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光属性１０連ダメージ＆味方全体の全状態異常を回復＆３ターン、攻撃に光・闇属性を付与＆１ターン、被ダメージを半分に軽減",
-		"hit dmg% distribution": [
-			14,
-			3,
-			3,
-			3,
-			33,
-			16,
-			11,
-			8,
-			5,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					29,
+					32,
+					35,
+					38,
+					78,
+					82,
+					86,
+					90,
+					94,
+					98
+				],
+				"hit dmg% distribution": [
+					14,
+					3,
+					3,
+					3,
+					33,
+					16,
+					11,
+					8,
+					5,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "敵全体に光属性１０連ダメージ＆味方全体の全状態異常を回復＆３ターン、攻撃に光・闇属性を付与＆１ターン、被ダメージを半分に軽減",
+		"drop check count": 1,
 		"id": "50755",
 		"levels": [
 			{
@@ -534,21 +600,43 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "光陣蒼空断"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50750,
 	"cost": 30,
+	"damage frames": {
+		"frame times": [
+			29,
+			32,
+			78,
+			83,
+			88,
+			93,
+			98
+		],
+		"hit dmg% distribution": [
+			10,
+			5,
+			35,
+			20,
+			15,
+			10,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "The former commander of the now defunct 9th Squadron of the Demon Slayers. As he was surveying the region of Lizeria, Krantz encountered some beings who were hurting humans, leading him to engage in a fierce battle against them. The reason why Lizeria became void of power and remained out of the reach of Four Fallen Gods' rule was because of what Krantz had accomplished there. However, when he went to investigate a mysterious tower in the crucial location of La Veda, he was unable to report anything about it due to his estranged relationship with technology.",
 		"evolution": "How's that?! Not to shabby, eh? Now<br>with all this energy, I'll complete<br>all my missions in one go!",
 		"fusion": "This feels nice! This power<br>is from that science stuff, right?<br>Sorry, I just wanted to say that...",
 		"summon": "I'm awful with machines.<br>I did try studying them, but... I<br>learned about everything else though!"
 	},
+	"drop check count": 4,
 	"element": "light",
 	"evolution": {
 		"cost": 1500000,
@@ -586,17 +674,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1018,
-	"hit dmg% distribution": [
-		10,
-		5,
-		35,
-		20,
-		15,
-		10,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 50755,
 	"imp": {
 		"max atk": "200",
@@ -619,29 +696,99 @@
 		"name": "五光霊神の力"
 	},
 	"lord damage range": "2027~2264",
-	"max bc generated": 28,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "聖皚貴神クランツ",
 	"rarity": 6,
 	"sbb": {
-		"desc": "敵全体に強力な光属性１４連ダメージ＆味方全体のＨＰを大回復＆３ターン、攻撃に光・闇属性を付与＆１ターン、被ダメージを半分に軽減",
-		"hit dmg% distribution": [
-			12,
-			5,
-			3,
-			3,
-			2,
-			2,
-			28,
-			14,
-			9,
-			8,
-			5,
-			4,
-			3,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					29,
+					32,
+					35,
+					38,
+					41,
+					43,
+					78,
+					82,
+					86,
+					90,
+					94,
+					98,
+					102,
+					106
+				],
+				"hit dmg% distribution": [
+					12,
+					5,
+					3,
+					3,
+					2,
+					2,
+					28,
+					14,
+					9,
+					8,
+					5,
+					4,
+					3,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "敵全体に強力な光属性１４連ダメージ＆味方全体のＨＰを大回復＆３ターン、攻撃に光・闇属性を付与＆１ターン、被ダメージを半分に軽減",
+		"drop check count": 1,
 		"id": "150755",
 		"levels": [
 			{
@@ -1055,7 +1202,6 @@
 				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "ミラ・クレイモア"
 	},
 	"sell caution": false,

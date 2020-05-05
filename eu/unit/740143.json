@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,26 +25,72 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 135
+		},
+		"idle": {
+			"total number of frames": 72
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "14 combo Thunder elemental attack on single enemy & adds Def ignoring effect to attack for 2 turns",
-		"hit dmg% distribution": [
-			7,
-			7,
-			7,
-			7,
-			9,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					32,
+					36,
+					40,
+					44,
+					48,
+					52,
+					56,
+					60,
+					64,
+					68,
+					72,
+					76,
+					80,
+					84
+				],
+				"hit dmg% distribution": [
+					7,
+					7,
+					7,
+					7,
+					9,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "14 combo Thunder elemental attack on single enemy & adds Def ignoring effect to attack for 2 turns",
+		"drop check count": 1,
 		"id": "740143",
 		"levels": [
 			{
@@ -258,14 +304,24 @@
 				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "Ram Charge"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			70
+		],
+		"hit dmg% distribution": [
+			100
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 1
+	},
+	"drop check count": 18,
 	"element": "thunder",
 	"evolution": {
 		"cost": 200000,
@@ -302,11 +358,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7069,
-	"hit dmg% distribution": [
-		100
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 1,
 	"id": 740143,
 	"imp": {
 		"max atk": "200",
@@ -331,7 +382,18 @@
 		"name": "Shy Ram"
 	},
 	"lord damage range": "1415~1580",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Lord Jason",
 	"rarity": 4,
 	"sell caution": false,

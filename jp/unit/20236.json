@@ -19,30 +19,92 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 301
+		},
+		"idle": {
+			"total number of frames": 160
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性１８連ダメージ＆３ターン、自分の攻撃力・防御力・回復力をかなりアップ＆味方全体に３ターン、攻撃ＢＢの威力をかなりアップ",
-		"hit dmg% distribution": [
-			8,
-			4,
-			3,
-			3,
-			3,
-			8,
-			4,
-			4,
-			10,
-			8,
-			7,
-			5,
-			4,
-			10,
-			7,
-			5,
-			4,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					7,
+					12,
+					24,
+					39,
+					54,
+					75,
+					79,
+					83,
+					120,
+					125,
+					130,
+					135,
+					140,
+					173,
+					177,
+					181,
+					185,
+					189
+				],
+				"hit dmg% distribution": [
+					8,
+					4,
+					3,
+					3,
+					3,
+					8,
+					4,
+					4,
+					10,
+					8,
+					7,
+					5,
+					4,
+					10,
+					7,
+					5,
+					4,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "78"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "敵全体に水属性１８連ダメージ＆３ターン、自分の攻撃力・防御力・回復力をかなりアップ＆味方全体に３ターン、攻撃ＢＢの威力をかなりアップ",
+		"drop check count": 1,
 		"id": "20236",
 		"levels": [
 			{
@@ -376,21 +438,61 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "魔神蒼竜破斬"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-11-29T21:47:45.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20230,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			7,
+			12,
+			24,
+			39,
+			54,
+			75,
+			79,
+			83,
+			120,
+			125,
+			130,
+			135,
+			140,
+			173,
+			177,
+			181
+		],
+		"hit dmg% distribution": [
+			8,
+			5,
+			3,
+			3,
+			3,
+			9,
+			5,
+			4,
+			12,
+			9,
+			8,
+			5,
+			4,
+			10,
+			6,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 16
+	},
 	"dictionary": {
 		"description": "A Unit modeled after Karl, a Summoner belonging to the Akras Summoners' Hall. He gained the ability to use his demonic powers freely by acknowledging the demon blood that flows through his veins and accepting the power within it as part of himself. However, if the words of one of his demonic father's closest aides are to be believed, Karl's powers are even greater still. His latent powers sparked both excitement and apprehension among the ranks of the Summoners' Hall.",
 		"evolution": "The source of my powers is demonic.<br>And what's wrong with that?!<br>I am Karl, a Summoner of the<br>Akras Summoners' Hall!",
 		"fusion": "I won't deny myself any longer.<br>For the friends who believed in me,<br>I will accept my demonic powers!",
 		"summon": "Now, let's get moving buddy!<br>Nothing scares me if we're together.<br>I can live my life<br>the way I'm meant to!"
 	},
+	"drop check count": 4,
 	"element": "water",
 	"evolution": {
 		"prev": "20235"
@@ -402,6 +504,7 @@
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -421,6 +524,7 @@
 				"conditions": [],
 				"def% buff": 50,
 				"passive id": "30",
+				"passive target": "self",
 				"rec% buff": 50
 			}
 		],
@@ -431,26 +535,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1219,
-	"hit dmg% distribution": [
-		8,
-		5,
-		3,
-		3,
-		3,
-		9,
-		5,
-		4,
-		12,
-		9,
-		8,
-		5,
-		4,
-		10,
-		6,
-		6
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 16,
 	"id": 20236,
 	"imp": {
 		"max atk": "600",
@@ -488,7 +572,18 @@
 		"name": "勇蒼竜神の豪咆"
 	},
 	"lord damage range": "2467~2757",
-	"max bc generated": 64,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "氷勇の神皇騎カル",
 	"overdrive stats": {
 		"atk%": 100,
@@ -497,37 +592,108 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な水属性２６連ダメージ（連続発動で威力アップ）＆ＯＤゲージを少し増加＆味方全体に３ターン、攻撃ＢＢの威力をかなりアップ・最大ＨＰに応じて攻撃力をアップ",
-		"hit dmg% distribution": [
-			6,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			5,
-			3,
-			3,
-			9,
-			5,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			8,
-			5,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					7,
+					11,
+					15,
+					24,
+					34,
+					44,
+					54,
+					64,
+					75,
+					79,
+					83,
+					120,
+					125,
+					130,
+					135,
+					140,
+					145,
+					150,
+					155,
+					160,
+					165,
+					173,
+					177,
+					181,
+					185,
+					189
+				],
+				"hit dmg% distribution": [
+					6,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					5,
+					3,
+					3,
+					9,
+					5,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					8,
+					5,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 26,
+				"proc id": "64"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "43"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 26,
+		"desc": "敵全体に強力な水属性２６連ダメージ（連続発動で威力アップ）＆ＯＤゲージを少し増加＆味方全体に３ターン、攻撃ＢＢの威力をかなりアップ・最大ＨＰに応じて攻撃力をアップ",
+		"drop check count": 1,
 		"id": "120236",
 		"levels": [
 			{
@@ -951,7 +1117,6 @@
 				]
 			}
 		],
-		"max bc generated": 26,
 		"name": "皇魔凄迅 蒼竜破斬"
 	},
 	"sell caution": true,
@@ -970,39 +1135,112 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な水属性２８連ダメージ（残りＨＰが多いほど、威力をアップ）＆味方全体に３ターン、攻撃ＢＢの威力を超絶アップ・攻撃力・防御力を超絶アップ＆２ターン、ＢＢゲージを超絶増加",
-		"hit dmg% distribution": [
-			5,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			5,
-			3,
-			3,
-			8,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			8,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					7,
+					11,
+					15,
+					24,
+					34,
+					44,
+					54,
+					64,
+					75,
+					79,
+					83,
+					120,
+					125,
+					130,
+					135,
+					140,
+					145,
+					150,
+					155,
+					160,
+					165,
+					173,
+					177,
+					181,
+					185,
+					189,
+					193,
+					197
+				],
+				"hit dmg% distribution": [
+					5,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					5,
+					3,
+					3,
+					8,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					8,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 28,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 28,
+		"desc": "敵全体に超強力な水属性２８連ダメージ（残りＨＰが多いほど、威力をアップ）＆味方全体に３ターン、攻撃ＢＢの威力を超絶アップ・攻撃力・防御力を超絶アップ＆２ターン、ＢＢゲージを超絶増加",
+		"drop check count": 1,
 		"id": "220236",
 		"levels": [
 			{
@@ -1047,396 +1285,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 2,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 2,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 2,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 2,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 2,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 2,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 2,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 2,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "16.7/1",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"increase bb gauge gradual": 999,
-						"increase bb gauge gradual turns (37)": 2,
-						"proc id": "19",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 28,
 		"name": "神覇凍界『天零』"
 	}
 }

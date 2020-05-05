@@ -19,18 +19,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 101
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 31
+		}
+	},
 	"bb": {
-		"desc": "6 combo Thunder attack on all foes & probability of slight Spark damage boost for 2 turns",
-		"hit dmg% distribution": [
-			30,
-			20,
-			17,
-			13,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					28,
+					33,
+					38,
+					43,
+					48,
+					53
+				],
+				"hit dmg% distribution": [
+					30,
+					20,
+					17,
+					13,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "58"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "6 combo Thunder attack on all foes & probability of slight Spark damage boost for 2 turns",
+		"drop check count": 2,
 		"id": "40631",
 		"levels": [
 			{
@@ -244,20 +282,36 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "Thunderous Roar"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-12-30T09:59:43.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 40630,
 	"cost": 4,
+	"damage frames": {
+		"frame times": [
+			28,
+			33,
+			38,
+			43
+		],
+		"hit dmg% distribution": [
+			35,
+			30,
+			20,
+			15
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A thunder dragon that has swallowed one of the amethysts mined deep in the crystal caverns of Ishgria. Originally a regular thunder dragon that lived in the caverns, it ingested an amethyst after mistaking it for prey. Most of its abdomen was then consumed by the amethyst's magical influence. The amethyst glows brilliantly and beautifully, almost bewitchingly. However, while the thunder dragon gained impressive resilience from it, the evil residing in the crystal caused the dragon to go on rampages in which it attacks both friends and foes alike.",
 		"fusion": "Grr! *snarl...*",
 		"summon": "Rooaaarr..."
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 50000,
@@ -284,14 +338,6 @@
 	"gender": "other",
 	"getting type": "not eligible for achievement",
 	"guide_id": 1164,
-	"hit dmg% distribution": [
-		35,
-		30,
-		20,
-		15
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 40631,
 	"imp": {
 		"max atk": "120",
@@ -313,7 +359,18 @@
 		"name": "Art of Theft"
 	},
 	"lord damage range": "879~982",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "Raidenil",
 	"rarity": 2,
 	"sell caution": false,

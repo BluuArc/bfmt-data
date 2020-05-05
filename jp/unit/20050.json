@@ -31,16 +31,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 67
+		},
+		"idle": {
+			"total number of frames": 44
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵単体に水属性４連ダメージ＆高確率で病気状態にする",
-		"hit dmg% distribution": [
-			25,
-			25,
-			25,
-			25
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					13,
+					16,
+					32,
+					35
+				],
+				"hit dmg% distribution": [
+					25,
+					25,
+					25,
+					25
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "敵単体に水属性４連ダメージ＆高確率で病気状態にする",
+		"drop check count": 1,
 		"id": "20050",
 		"levels": [
 			{
@@ -244,21 +280,33 @@
 				]
 			}
 		],
-		"max bc generated": 4,
 		"name": "スパイラルランス"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20050,
 	"cost": 2,
+	"damage frames": {
+		"frame times": [
+			13,
+			32
+		],
+		"hit dmg% distribution": [
+			60,
+			60
+		],
+		"hit dmg% distribution (total)": 120,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "A magical aquatic being that lives in the oceans of Grand Gaia. They are often found in the tales of humans. They usually live in the sea or on the shore, but they are found anywhere where there is water, including rivers and lakes. A human can easily run into one. They move in groups and are observed to be very dangerous when hunting larger beasts.",
 		"evolution": " ",
 		"fusion": "Kishashashasha!<br>You now understand how strong I've gotten.",
 		"summon": "Kishashasha!<br>I like you.<br>I'll join you."
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"cost": 2500,
@@ -275,12 +323,6 @@
 	"gender": "other",
 	"getting type": "not eligible for achievement",
 	"guide_id": 69,
-	"hit dmg% distribution": [
-		60,
-		60
-	],
-	"hit dmg% distribution (total)": 120,
-	"hits": 2,
 	"id": 20050,
 	"imp": {
 		"max atk": "60",
@@ -290,7 +332,18 @@
 	},
 	"kind": "normal",
 	"lord damage range": "494~553",
-	"max bc generated": 4,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "マーマン",
 	"rarity": 1,
 	"sell caution": false,

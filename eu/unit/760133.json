@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 109
+		},
+		"idle": {
+			"total number of frames": 78
+		},
+		"move": {
+			"total number of frames": 18
+		}
+	},
 	"bb": {
-		"desc": "10 combo massive Dark attack on single enemy",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					26,
+					30,
+					47,
+					68,
+					90,
+					100,
+					110,
+					120,
+					130,
+					130
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo massive Dark attack on single enemy",
+		"drop check count": 2,
 		"id": "760133",
 		"levels": [
 			{
@@ -174,14 +204,38 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Dark Paracetamol"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			40,
+			44,
+			46,
+			48,
+			51,
+			53,
+			90,
+			92
+		],
+		"hit dmg% distribution": [
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			44
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 200000,
@@ -218,18 +272,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7057,
-	"hit dmg% distribution": [
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		44
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 760133,
 	"imp": {
 		"max atk": "220",
@@ -254,7 +296,18 @@
 		"name": "Dark Embrace"
 	},
 	"lord damage range": "1303~1456",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "arbeZ",
 	"rarity": 4,
 	"sell caution": false,

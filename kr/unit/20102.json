@@ -25,17 +25,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 73
+		},
+		"idle": {
+			"total number of frames": 42
+		},
+		"move": {
+			"total number of frames": 21
+		}
+	},
 	"bb": {
-		"desc": "적 1명에게 강력한수속성5연속 데미지&확률로 약화효과",
-		"hit dmg% distribution": [
-			40,
-			30,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					18,
+					33,
+					70,
+					75,
+					80
+				],
+				"hit dmg% distribution": [
+					40,
+					30,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "적 1명에게 강력한수속성5연속 데미지&확률로 약화효과",
+		"drop check count": 1,
 		"id": "20102",
 		"levels": [
 			{
@@ -229,21 +266,33 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "패동연격"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2015-11-04T13:19:00.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 20100,
 	"cost": 5,
+	"damage frames": {
+		"frame times": [
+			18,
+			33
+		],
+		"hit dmg% distribution": [
+			60,
+			40
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "A knight from the ruined Sama Kingdom. Sergio was isolated as a heretic for secretly training by himself in the Cavalry Corps, whose aim was group combat. However, his skills far surpassed the others, and he was reluctantly made the leader of a commando unit. His own unit feared him, and called him the Ice Knight after the cold way he cuts down his enemies.",
 		"evolution": " ",
 		"fusion": "What does power mean<br>to you??<br>Show me your answer in combat.",
 		"summon": "So you need my blade?<br>Hmm, alright.<br>Stay behind me. I'll defend you."
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 100000,
@@ -270,12 +319,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 125,
-	"hit dmg% distribution": [
-		60,
-		40
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 20102,
 	"imp": {
 		"max atk": "120",
@@ -296,7 +339,18 @@
 		"name": "맹자의 힘"
 	},
 	"lord damage range": "838~936",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "빙기사 세이리오스",
 	"rarity": 3,
 	"sell caution": false,

@@ -25,27 +25,86 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 174
+		},
+		"idle": {
+			"total number of frames": 78
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 뇌속성 15연속 데미지&2턴간 확률로 적이 받는 스파크 데미지 조금 상승&3턴간 아군 전체의 공격에 목뇌속성 부여",
-		"hit dmg% distribution": [
-			17,
-			10,
-			5,
-			6,
-			4,
-			3,
-			6,
-			4,
-			5,
-			6,
-			4,
-			6,
-			4,
-			5,
-			15
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					11,
+					14,
+					17,
+					37,
+					40,
+					43,
+					48,
+					51,
+					54,
+					69,
+					72,
+					77,
+					80,
+					85,
+					90
+				],
+				"hit dmg% distribution": [
+					17,
+					10,
+					5,
+					6,
+					4,
+					3,
+					6,
+					4,
+					5,
+					6,
+					4,
+					6,
+					4,
+					5,
+					15
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "58"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "적 전체에게 강력한 뇌속성 15연속 데미지&2턴간 확률로 적이 받는 스파크 데미지 조금 상승&3턴간 아군 전체의 공격에 목뇌속성 부여",
+		"drop check count": 1,
 		"id": "40606",
 		"levels": [
 			{
@@ -379,21 +438,55 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "뇌수곤 천신가르기"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T09:12:07.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 40600,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			11,
+			15,
+			37,
+			40,
+			48,
+			51,
+			54,
+			69,
+			72,
+			77,
+			80,
+			85,
+			90
+		],
+		"hit dmg% distribution": [
+			20,
+			10,
+			6,
+			4,
+			6,
+			4,
+			5,
+			6,
+			4,
+			6,
+			4,
+			5,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
 	"dictionary": {
 		"description": "A Summoner selected to join the covert \"Ishgria's Recon Squad.\" Not only did they have to fear the demons of Ishgria, but the squad was also ambushed by a terrible beast when they reached their destination. Rhoa then concocted a plan to overcome this obstacle by using a machine he found in some ancient ruins to help his comrades escape. Though he had decided he would sacrifice himself in the process, the female Summoner he despised so much suddenly appeared to aid him, foiling his plan in the process. Rhoa then smiled bitterly and fought the beast alongside her. However, no records ever mention them regrouping with their friends.",
 		"evolution": "I know what this is.<br>Yeah, I can be the serious type too,<br>if it means I'd be helping you out.",
 		"fusion": "Thanks for all the help, really.<br>What? I'm not noisy all the time.<br>Let's just chill for a minute.",
 		"summon": "This chick and I acknowledged each<br>other's abilities, but still argued.<br>She was just so annoying."
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"prev": "40605"
@@ -407,11 +500,13 @@
 				"bc fill on spark low": 1,
 				"bc fill on spark%": 100,
 				"conditions": [],
-				"passive id": "47"
+				"passive id": "47",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -433,23 +528,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1016,
-	"hit dmg% distribution": [
-		20,
-		10,
-		6,
-		4,
-		6,
-		4,
-		5,
-		6,
-		4,
-		6,
-		4,
-		5,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 13,
 	"id": 40606,
 	"imp": {
 		"max atk": "600",
@@ -481,7 +559,18 @@
 		"name": "섬통천신의 영력"
 	},
 	"lord damage range": "2542~2840",
-	"max bc generated": 39,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "폭풍의 뇌혼신 로아",
 	"overdrive stats": {
 		"atk%": 100,
@@ -490,30 +579,94 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "적 전체에게 강력한 뇌속성 19연속 데미지&2턴간 확률로 적이 받는 스파크 데미지 조금 상승&3턴간 아군 전체의 공격에 목뇌속성 부여&스파크 시의 데미지 상승",
-		"hit dmg% distribution": [
-			15,
-			10,
-			5,
-			5,
-			3,
-			3,
-			5,
-			3,
-			5,
-			6,
-			3,
-			6,
-			3,
-			5,
-			12,
-			4,
-			3,
-			2,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					11,
+					14,
+					17,
+					37,
+					40,
+					43,
+					48,
+					51,
+					54,
+					69,
+					72,
+					77,
+					80,
+					85,
+					90,
+					93,
+					96,
+					99,
+					102
+				],
+				"hit dmg% distribution": [
+					15,
+					10,
+					5,
+					5,
+					3,
+					3,
+					5,
+					3,
+					5,
+					6,
+					3,
+					6,
+					3,
+					5,
+					12,
+					4,
+					3,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 19,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "58"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 19,
+		"desc": "적 전체에게 강력한 뇌속성 19연속 데미지&2턴간 확률로 적이 받는 스파크 데미지 조금 상승&3턴간 아군 전체의 공격에 목뇌속성 부여&스파크 시의 데미지 상승",
+		"drop check count": 1,
 		"id": "140606",
 		"levels": [
 			{
@@ -927,7 +1080,6 @@
 				]
 			}
 		],
-		"max bc generated": 19,
 		"name": "뇌수곤 총운천신가르기"
 	},
 	"sell caution": false,
@@ -946,34 +1098,90 @@
 		}
 	},
 	"ubb": {
-		"desc": "적 전체에게 아주 강력한 뇌속성 23연속 데미지&1턴간 적이 받는 스파크 데미지 상승&3턴간 아군 전체의 스파크 시의 데미지 상승",
-		"hit dmg% distribution": [
-			13,
-			9,
-			5,
-			3,
-			2,
-			2,
-			2,
-			5,
-			3,
-			3,
-			5,
-			3,
-			4,
-			5,
-			3,
-			5,
-			3,
-			4,
-			10,
-			4,
-			3,
-			2,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					11,
+					14,
+					17,
+					20,
+					23,
+					26,
+					29,
+					37,
+					40,
+					43,
+					48,
+					51,
+					54,
+					69,
+					72,
+					77,
+					80,
+					85,
+					90,
+					93,
+					96,
+					99,
+					102
+				],
+				"hit dmg% distribution": [
+					13,
+					9,
+					5,
+					3,
+					2,
+					2,
+					2,
+					5,
+					3,
+					3,
+					5,
+					3,
+					4,
+					5,
+					3,
+					5,
+					3,
+					4,
+					10,
+					4,
+					3,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 23,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "58"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 23,
+		"desc": "적 전체에게 아주 강력한 뇌속성 23연속 데미지&1턴간 적이 받는 스파크 데미지 상승&3턴간 아군 전체의 스파크 시의 데미지 상승",
+		"drop check count": 1,
 		"id": "240606",
 		"levels": [
 			{
@@ -1005,279 +1213,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 0,
-						"spark dmg% received": 50,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 0,
-						"spark dmg% received": 50,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 0,
-						"spark dmg% received": 50,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 0,
-						"spark dmg% received": 50,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 0,
-						"spark dmg% received": 50,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 0,
-						"spark dmg% received": 50,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 0,
-						"spark dmg% received": 50,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 0,
-						"spark dmg% received": 50,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "58",
-						"spark dmg received apply%": 100,
-						"spark dmg received debuff turns (94)": 0,
-						"spark dmg% received": 50,
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 23,
 		"name": "천뇌절 범이 우는 폭풍"
 	}
 }

@@ -19,15 +19,50 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 70
+		},
+		"idle": {
+			"total number of frames": 84
+		},
+		"move": {
+			"total number of frames": 42
+		}
+	},
 	"bb": {
-		"desc": "적 1명에게 뇌속성 3연속 데미지＆확률로 마비 효과",
-		"hit dmg% distribution": [
-			34,
-			33,
-			33
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					36,
+					45,
+					54
+				],
+				"hit dmg% distribution": [
+					34,
+					33,
+					33
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 3,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 3,
+		"desc": "적 1명에게 뇌속성 3연속 데미지＆확률로 마비 효과",
+		"drop check count": 3,
 		"id": "40261",
 		"levels": [
 			{
@@ -231,21 +266,33 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "석화 부리"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 40260,
 	"cost": 4,
+	"damage frames": {
+		"frame times": [
+			36,
+			54
+		],
+		"hit dmg% distribution": [
+			50,
+			50
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "A highly poisonous and frightening beast. According to some reports, this beast was born from the rotten egg of a rooster which was incubated by reptiles. Though full of contradictions, this process is believed to have been used in order to produce this demons for dark magic purposes. The poisonous miasma that the Cockatrice releases can defeat enemies at great distances, and the springs it has touched with its beak can never be drank from again. There are also legends which state that its strong poison can be used as materials to make miraculous medicine.",
 		"evolution": " ",
 		"fusion": "Cluck, cluck... B'gawk!",
 		"summon": "Cock-a-doodle-doo!<br>B'gawk!"
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 50000,
@@ -277,12 +324,6 @@
 	"gender": "other",
 	"getting type": "not eligible for achievement",
 	"guide_id": 635,
-	"hit dmg% distribution": [
-		50,
-		50
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 40261,
 	"imp": {
 		"max atk": "100",
@@ -303,7 +344,18 @@
 		"name": "투쟁의 빛"
 	},
 	"lord damage range": "724~809",
-	"max bc generated": 4,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "코카트리스",
 	"rarity": 2,
 	"sell caution": false,

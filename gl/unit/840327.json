@@ -19,13 +19,62 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "1 combo powerful Thunder attack on all foes and additional attack on single foe, probable Poison, Paralysis effects & boosts BB gauge of all allies",
-		"hit dmg% distribution": [
-			100
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					95
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					135
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 1,
+		"desc": "1 combo powerful Thunder attack on all foes and additional attack on single foe, probable Poison, Paralysis effects & boosts BB gauge of all allies",
+		"drop check count": 27,
 		"id": "840327",
 		"levels": [
 			{
@@ -389,21 +438,31 @@
 				]
 			}
 		],
-		"max bc generated": 27,
 		"name": "Spark Barrage"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-03-09T11:47:24.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 840320,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			97
+		],
+		"hit dmg% distribution": [
+			100
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 1
+	},
 	"dictionary": {
 		"description": "Ravenna's shock and horror turned into fury as she followed Randolph's lead to investigate the tragedy and seek vengeance. She discovered that she possessed heightened physical abilities after the incident, and each morning she would wake up together with Randolph in tattered clothing, covered in blood. Eventually, the shadowy forms of a wolf and raven lurking about them became visible. Their grim quest led them to a warlock performing some kind of ritual over the ominous figure of a winged wolf with a raven's head. As Randolph attacked, Ravenna found it odd that the warlock would repeatedly cry out for them to stop and listen. After a fierce battle, they defeated the warlock and his minions. However, upon touching the artifact, their memories got jolted and to their dread, they discovered that they were the ones responsible for the massacre and random murders encountered during their journey. Each night, by being near one another, their shadow beasts would possess their partner--the wolf took over Randolph's body, and the raven took Ravenna's. This possession would then make them lose control over themselves, setting them off on a rampage. Ravenna was torn by despair and guilt, and at that moment, she made the heartbreaking decision to prevent any further bloodshed. It is said that Ravenna fled into the wilderness and threw herself off a cliff. Be it truth or fabrication, there have been witnesses in the area claiming to have spotted gigantic dark wings in the sky that night.",
 		"evolution": "*Screech*<br>Tonight is a good night...<br>To hunt and dye the land crimson!",
 		"fusion": "My spirit is broken...<br>My soul torn asunder...<br>Farewell Randolph, my love...",
 		"summon": "This is not happening...<br>Who did this?!<br>I shall have vengeance!"
 	},
+	"drop check count": 45,
 	"element": "thunder",
 	"evolution": {
 		"prev": "840326"
@@ -440,11 +499,13 @@
 				"def% buff": 30,
 				"hp% buff": 30,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 30
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -467,7 +528,8 @@
 				"angel idol recover chance% low": 50,
 				"angel idol recover counts": 2,
 				"conditions": [],
-				"passive id": "69"
+				"passive id": "69",
+				"passive target": "self"
 			}
 		],
 		"id": "840327",
@@ -477,11 +539,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 8182,
-	"hit dmg% distribution": [
-		100
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 1,
 	"id": 840327,
 	"imp": {
 		"max atk": "440",
@@ -515,7 +572,18 @@
 		"name": "Silhouette of the Valkyrie"
 	},
 	"lord damage range": "2579~2880",
-	"max bc generated": 45,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		}
+	},
 	"name": "Landeythan Ravenna",
 	"overdrive stats": {
 		"atk%": 100,
@@ -524,12 +592,58 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "1 combo powerful Thunder attack on single foe (consecutive uses boost damage), fills own BB gauge to max, boosts own Spark damage for 2 turns & lowers own Def, Rec by 30% for 1 turn",
-		"hit dmg% distribution": [
-			100
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					95
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "64"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "78"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 1,
+		"desc": "1 combo powerful Thunder attack on single foe (consecutive uses boost damage), fills own BB gauge to max, boosts own Spark damage for 2 turns & lowers own Def, Rec by 30% for 1 turn",
+		"drop check count": 40,
 		"id": "1840327",
 		"levels": [
 			{
@@ -923,7 +1037,6 @@
 				]
 			}
 		],
-		"max bc generated": 40,
 		"name": "Volt Ray"
 	},
 	"sell caution": false,
@@ -942,12 +1055,58 @@
 		}
 	},
 	"ubb": {
-		"desc": "1 combo massive Thunder, Dark attack on single foe, enormously boosts own critical and Spark damage for 1 turn & lowers own Def, Rec by 50% for 2 turns",
-		"hit dmg% distribution": [
-			100
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					95
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "78"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 1,
+		"desc": "1 combo massive Thunder, Dark attack on single foe, enormously boosts own critical and Spark damage for 1 turn & lowers own Def, Rec by 50% for 2 turns",
+		"drop check count": 47,
 		"id": "2840327",
 		"levels": [
 			{
@@ -990,378 +1149,8 @@
 						"target type": "self"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 3500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 1,
-						"crit multiplier%": 400,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -50,
-						"self rec% buff": -50,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 3500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 1,
-						"crit multiplier%": 400,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -50,
-						"self rec% buff": -50,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 3500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 1,
-						"crit multiplier%": 400,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -50,
-						"self rec% buff": -50,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 3500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 1,
-						"crit multiplier%": 400,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -50,
-						"self rec% buff": -50,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 3500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 1,
-						"crit multiplier%": 400,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -50,
-						"self rec% buff": -50,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 3500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 1,
-						"crit multiplier%": 400,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -50,
-						"self rec% buff": -50,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 3500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 1,
-						"crit multiplier%": 400,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -50,
-						"self rec% buff": -50,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 3500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 1,
-						"crit multiplier%": 400,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -50,
-						"self rec% buff": -50,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 3500,
-						"bb elements": [
-							"dark"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "single",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 1,
-						"crit multiplier%": 400,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": -50,
-						"self rec% buff": -50,
-						"self stat buff turns": 2,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
 			}
 		],
-		"max bc generated": 47,
 		"name": "Land Waster"
 	}
 }

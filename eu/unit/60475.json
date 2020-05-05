@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 146
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "10 combo powerful Dark attack on all enemies & probable Injury effect ",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			20,
-			15,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					40,
+					55,
+					70,
+					85,
+					100,
+					115,
+					130,
+					145,
+					160,
+					175
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					20,
+					15,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo powerful Dark attack on all enemies & probable Injury effect ",
+		"drop check count": 1,
 		"id": "60475",
 		"levels": [
 			{
@@ -244,20 +286,40 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Damballa"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 27,
+	"damage frames": {
+		"frame times": [
+			40,
+			50,
+			60,
+			75,
+			81,
+			87
+		],
+		"hit dmg% distribution": [
+			10,
+			15,
+			15,
+			20,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A god that was once imprisoned for having committed a grave crime. During the great war against the humans he learned that the goddess Zellha set off to the oppressed Bariura Empire in order to settle a personal grudge. Fearing total chaos and annihilation of the area, Kajah prevented her from entering the empire, leaving him to carry out the same role in her stead. Having exposed himself as the god of judgment, he then had to strictly judge a great number of criminals and sinners mercilessly. He was greatly feared by many.",
 		"evolution": "According to our contract, <br>let's release the evil that is my power!<br>We should move forward holding onto our crimes.",
 		"fusion": "The secret art of Fusion that was created by humans...<br> It is incredible, yet terrifying.<br> I wonder if it changed the way humans were judged.",
 		"summon": "If I was able to come back to this world...<br>it must mean that you need my powers of judgment.<br> Let's punish all criminals!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "60474"
@@ -266,16 +328,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 578,
-	"hit dmg% distribution": [
-		10,
-		15,
-		15,
-		20,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 60475,
 	"imp": {
 		"max atk": "400",
@@ -297,30 +349,77 @@
 		"name": "Supreme Demon Power"
 	},
 	"lord damage range": "2077~2321",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "Evil God Kajah",
 	"rarity": 6,
 	"sbb": {
-		"desc": "15 combo massive Dark attack on all enemies & probable Injury effect ",
-		"hit dmg% distribution": [
-			6,
-			7,
-			6,
-			10,
-			6,
-			7,
-			6,
-			7,
-			6,
-			7,
-			6,
-			7,
-			6,
-			7,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					50,
+					60,
+					70,
+					80,
+					90,
+					100,
+					110,
+					120,
+					130,
+					140,
+					150,
+					160,
+					170,
+					180,
+					190
+				],
+				"hit dmg% distribution": [
+					6,
+					7,
+					6,
+					10,
+					6,
+					7,
+					6,
+					7,
+					6,
+					7,
+					6,
+					7,
+					6,
+					7,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo massive Dark attack on all enemies & probable Injury effect ",
+		"drop check count": 1,
 		"id": "160475",
 		"levels": [
 			{
@@ -524,7 +623,6 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Morteisma"
 	},
 	"sell caution": false,

@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 125
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "8 combo Water elemental attack on all enemies & Boost ATK for all allies for 2 turns",
-		"hit dmg% distribution": [
-			20,
-			10,
-			10,
-			20,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					51,
+					54,
+					57,
+					60,
+					71,
+					74,
+					77,
+					80
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					10,
+					20,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo Water elemental attack on all enemies & Boost ATK for all allies for 2 turns",
+		"drop check count": 1,
 		"id": "720113",
 		"levels": [
 			{
@@ -262,14 +302,38 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Nasty Hail"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			51,
+			54,
+			57,
+			61,
+			66,
+			71,
+			74,
+			77
+		],
+		"hit dmg% distribution": [
+			15,
+			12,
+			12,
+			15,
+			12,
+			12,
+			11,
+			11
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"cost": 200000,
@@ -306,18 +370,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7023,
-	"hit dmg% distribution": [
-		15,
-		12,
-		12,
-		15,
-		12,
-		12,
-		11,
-		11
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 720113,
 	"imp": {
 		"max atk": "220",
@@ -344,7 +396,18 @@
 		"name": "Light of Valhalla"
 	},
 	"lord damage range": "1268~1417",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Svafa",
 	"rarity": 4,
 	"sell caution": false,

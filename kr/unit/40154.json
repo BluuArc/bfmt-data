@@ -19,16 +19,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 127
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 뇌속성 4연속 데미지＆확률로 부상 효과",
-		"hit dmg% distribution": [
-			60,
-			20,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					70,
+					72,
+					74,
+					76
+				],
+				"hit dmg% distribution": [
+					60,
+					20,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "적 전체에게 뇌속성 4연속 데미지＆확률로 부상 효과",
+		"drop check count": 1,
 		"id": "40154",
 		"levels": [
 			{
@@ -232,21 +268,35 @@
 				]
 			}
 		],
-		"max bc generated": 4,
 		"name": "내 발명품을 보여줄게!"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 40150,
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			65,
+			67,
+			69
+		],
+		"hit dmg% distribution": [
+			80,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A young girl with the ability to control lightning. After toiling tirelessly to optimize her hammer, Elulu eventually succeeded in developing a model capable of discharging the same amount of energy as an actual bolt of lightning. When combined with an explosive burst of anti-gravity, Elulu’s hammer released a force potent enough to cause seismic shifts. Those who saw her unleash a mighty blow with her hammer likened her to a goddess from a creation myth.",
 		"evolution": "Upgrade complete!<br>Prepare to witness the ultimate<br>power of lightning!",
 		"fusion": "Maximum voltage... <br>Output primed...<br>Full boost ahead!",
 		"summon": "Flash of lightning!<br>The roaring swing of the hammer!<br>I'll render all numb with my power!"
 	},
+	"drop check count": 6,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -284,13 +334,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 232,
-	"hit dmg% distribution": [
-		80,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 40154,
 	"imp": {
 		"max atk": "200",
@@ -311,7 +354,18 @@
 		"name": "중격의 섬광"
 	},
 	"lord damage range": "1482~1656",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "창추뇌신 에루루",
 	"rarity": 5,
 	"sell caution": false,

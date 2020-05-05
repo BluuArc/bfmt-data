@@ -19,27 +19,86 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 138
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "15 combo powerful Thunder attack on all foes, boosts Spark damage for 3 turns & boosts BC, HC drop rate",
-		"hit dmg% distribution": [
-			14,
-			8,
-			4,
-			3,
-			3,
-			17,
-			10,
-			9,
-			8,
-			6,
-			5,
-			4,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					26,
+					30,
+					34,
+					38,
+					42,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105,
+					108
+				],
+				"hit dmg% distribution": [
+					14,
+					8,
+					4,
+					3,
+					3,
+					17,
+					10,
+					9,
+					8,
+					6,
+					5,
+					4,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo powerful Thunder attack on all foes, boosts Spark damage for 3 turns & boosts BC, HC drop rate",
+		"drop check count": 1,
 		"id": "40616",
 		"levels": [
 			{
@@ -343,21 +402,53 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Morus Mysterica"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T16:25:19.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 40610,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			26,
+			30,
+			34,
+			81,
+			84,
+			87,
+			90,
+			93,
+			96,
+			99,
+			102,
+			105
+		],
+		"hit dmg% distribution": [
+			15,
+			10,
+			5,
+			20,
+			12,
+			10,
+			8,
+			6,
+			5,
+			3,
+			3,
+			3
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
 	"dictionary": {
 		"description": "The disciple who bestowed one of the Sacred Treasures upon a human. The two treasures she came to mold did not hold much power at first. It was not until she was persecuted by the gods that the power of the treasures began to grow amidst their long battle. There are tales that claim Mahalu sought this dispute with the gods for the very purpose of strengthening the treasures she held, and that she only used humans in order to accomplish this goal. However, many refute such heinous claims citing the words she left behind when she gifted Duran with the Sacred Blade.",
 		"evolution": "Thank you...<br>You've made me stronger...<br>Let's go forth together...",
 		"fusion": "I think it's nice that you're<br>aiming so high up.<br>I mean that as a compliment.",
 		"summon": "I think I wronged him.<br>What I did bound his life to mine.<br>I just wanted to save humanity..."
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"prev": "40615"
@@ -369,14 +460,16 @@
 			{
 				"conditions": [],
 				"damage% for spark": 40,
-				"passive id": "31"
+				"passive id": "31",
+				"passive target": "self"
 			},
 			{
 				"bc fill on spark high": 1,
 				"bc fill on spark low": 1,
 				"bc fill on spark%": 100,
 				"conditions": [],
-				"passive id": "47"
+				"passive id": "47",
+				"passive target": "self"
 			}
 		],
 		"id": "6300",
@@ -386,22 +479,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1050,
-	"hit dmg% distribution": [
-		15,
-		10,
-		5,
-		20,
-		12,
-		10,
-		8,
-		6,
-		5,
-		3,
-		3,
-		3
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 40616,
 	"imp": {
 		"max atk": "600",
@@ -432,7 +509,18 @@
 		"name": "Deity's Violet Light"
 	},
 	"lord damage range": "2449~2736",
-	"max bc generated": 36,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Storm Chieftess Mahalu",
 	"overdrive stats": {
 		"atk%": 100,
@@ -441,28 +529,90 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "17 combo powerful Thunder attack on all foes, boosts Atk, Spark damage for 3 turns & boosts BC, HC drop rate",
-		"hit dmg% distribution": [
-			14,
-			7,
-			4,
-			3,
-			3,
-			2,
-			17,
-			9,
-			8,
-			7,
-			6,
-			5,
-			4,
-			3,
-			3,
-			3,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					26,
+					29,
+					32,
+					35,
+					38,
+					41,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111
+				],
+				"hit dmg% distribution": [
+					14,
+					7,
+					4,
+					3,
+					3,
+					2,
+					17,
+					9,
+					8,
+					7,
+					6,
+					5,
+					4,
+					3,
+					3,
+					3,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 17,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 17,
+		"desc": "17 combo powerful Thunder attack on all foes, boosts Atk, Spark damage for 3 turns & boosts BC, HC drop rate",
+		"drop check count": 1,
 		"id": "140616",
 		"levels": [
 			{
@@ -856,7 +1006,6 @@
 				]
 			}
 		],
-		"max bc generated": 17,
 		"name": "Tonatiuh Call"
 	},
 	"sell caution": false,
@@ -875,32 +1024,86 @@
 		}
 	},
 	"ubb": {
-		"desc": "21 combo massive Thunder attack on all foes, boosts Spark damage and greatly boosts Atk for 3 turns",
-		"hit dmg% distribution": [
-			13,
-			6,
-			4,
-			3,
-			3,
-			2,
-			2,
-			2,
-			17,
-			9,
-			7,
-			6,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			2,
-			2,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					26,
+					29,
+					32,
+					35,
+					38,
+					41,
+					44,
+					48,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114,
+					117
+				],
+				"hit dmg% distribution": [
+					13,
+					6,
+					4,
+					3,
+					3,
+					2,
+					2,
+					2,
+					17,
+					9,
+					7,
+					6,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					2,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 21,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 21,
+		"desc": "21 combo massive Thunder attack on all foes, boosts Spark damage and greatly boosts Atk for 3 turns",
+		"drop check count": 1,
 		"id": "240616",
 		"levels": [
 			{
@@ -932,279 +1135,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 21,
 		"name": "Treasure: Sacred Axe"
 	}
 }

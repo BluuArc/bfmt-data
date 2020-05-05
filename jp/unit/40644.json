@@ -19,22 +19,76 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 110
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性１０連ダメージ＆味方のＢＢゲージをかなり増加＆味方全体に３ターン、クリティカル率をかなりアップ",
-		"hit dmg% distribution": [
-			25,
-			17,
-			10,
-			10,
-			8,
-			8,
-			6,
-			6,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					45,
+					49,
+					53,
+					57,
+					61,
+					65,
+					69,
+					73,
+					77,
+					81
+				],
+				"hit dmg% distribution": [
+					25,
+					17,
+					10,
+					10,
+					8,
+					8,
+					6,
+					6,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "敵全体に雷属性１０連ダメージ＆味方のＢＢゲージをかなり増加＆味方全体に３ターン、クリティカル率をかなりアップ",
+		"drop check count": 1,
 		"id": "40644",
 		"levels": [
 			{
@@ -328,20 +382,40 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "黄雷飛焦"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-30T18:49:29.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40640,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			45,
+			49,
+			53,
+			57,
+			61,
+			65
+		],
+		"hit dmg% distribution": [
+			35,
+			20,
+			15,
+			15,
+			10,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "An ancient dragon which ruled over the element of Thunder, using it to torment the inhabitants of ancient Ishgria. The lightning this dragon called from the heavens is said to have torn the continent into pieces. Belzeft continued its role as the bearer of natural disasters until one day his rampage unexpectedly came to a stop. Legend has it this was thanks to the friendship the dragon had built with a certain demon. Belzeft continued cultivating this friendship until one day its demon friend met an idealistic king.",
 		"fusion": "Very well...<br>I shall lend you more power than<br>what you have granted me in return...",
 		"summon": "A new encounter...<br>Will I ever meet anyone else<br>willing to open their heart to me?"
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -378,16 +452,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 1099,
-	"hit dmg% distribution": [
-		35,
-		20,
-		15,
-		15,
-		10,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 40644,
 	"imp": {
 		"max atk": "140",
@@ -410,7 +474,18 @@
 		"name": "水雷の結界"
 	},
 	"lord damage range": "1747~1952",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "黄雷龍ベルゼフト",
 	"rarity": 5,
 	"sell caution": false,

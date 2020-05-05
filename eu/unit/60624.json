@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 107
+		},
+		"idle": {
+			"total number of frames": 76
+		},
+		"move": {
+			"total number of frames": 25
+		}
+	},
 	"bb": {
-		"desc": "10 combo powerful Dark attack on all enemies & adds Poison and Curse effect to attack for 3 turns",
-		"hit dmg% distribution": [
-			18,
-			18,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					43,
+					47,
+					65,
+					69,
+					73,
+					77,
+					81,
+					85,
+					89,
+					93
+				],
+				"hit dmg% distribution": [
+					18,
+					18,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo powerful Dark attack on all enemies & adds Poison and Curse effect to attack for 3 turns",
+		"drop check count": 1,
 		"id": "60624",
 		"levels": [
 			{
@@ -264,20 +306,40 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Necro Hazard"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 18,
+	"damage frames": {
+		"frame times": [
+			43,
+			47,
+			65,
+			71,
+			77,
+			83
+		],
+		"hit dmg% distribution": [
+			24,
+			24,
+			13,
+			13,
+			13,
+			13
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A demon claiming to be the \"destroyer of the world through chaos.\" Waking an ancient sleeping dragon, he made sure that it destroyed the whole of Bariura. Ignoring the queen's plea to stop such destruction, Varfed watched with a smile like none he had shown before as Arus drew his sword against the dragon. The demon immediately fed the dragon his power, turning the creature against the enraged knight and the queen. However, it is said that another knight showed herself all of the sudden, helping the queen and the blazing knight to escape.",
 		"evolution": "So, I've evolved.<br>However, this is not enough.<br>My wish must become a reality...",
 		"fusion": "Human...I am grateful.<br>This is because you've chosen to grant power<br>even to the likes of me.",
 		"summon": "I have grown more curious<br>about what you seek. Heh heh,<br>I shall pledge myself to you.<br>For now."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 500000,
@@ -315,16 +377,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 772,
-	"hit dmg% distribution": [
-		24,
-		24,
-		13,
-		13,
-		13,
-		13
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 60624,
 	"imp": {
 		"max atk": "160",
@@ -347,7 +399,18 @@
 		"name": "Chaos God's Possession"
 	},
 	"lord damage range": "1688~1886",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Draconian Varfed",
 	"rarity": 5,
 	"sell caution": false,

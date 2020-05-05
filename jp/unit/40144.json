@@ -25,18 +25,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 76
+		},
+		"idle": {
+			"total number of frames": 44
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性６連ダメージ＆確率で怪我状態にする",
-		"hit dmg% distribution": [
-			16,
-			17,
-			17,
-			16,
-			17,
-			17
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					32,
+					35,
+					38,
+					41,
+					44,
+					47
+				],
+				"hit dmg% distribution": [
+					16,
+					17,
+					17,
+					16,
+					17,
+					17
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "敵全体に雷属性６連ダメージ＆確率で怪我状態にする",
+		"drop check count": 1,
 		"id": "40145",
 		"levels": [
 			{
@@ -230,21 +268,41 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "雷迅神蹴"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40140,
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			32,
+			35,
+			38,
+			41,
+			44,
+			47
+		],
+		"hit dmg% distribution": [
+			16,
+			17,
+			17,
+			16,
+			17,
+			17
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A fighter who trained at the Toltya Dojo. He continued his training in various places, but after hearing of Nemia's countless victories decided to seclude himself in the mountains. Zeln, whose sole desire was strength, saw his abilities grow beyond even his own limits. Having completed his training, Zeln returned to his dojo to find Nemia under attack from the gods. With a smile on his face he dashingly tried to save her, though what he got in return was her fist.",
 		"evolution": "Thunder isn't just fast, you know.<br>Allow me to show you how<br>I got my name!",
 		"fusion": "Surely I'm not the only<br>one who's grown stronger.<br>More! I need more power!",
 		"summon": "I'm not just fast, <br>these phantasmagoric moves<br>or the essence of my being!"
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -282,16 +340,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 438,
-	"hit dmg% distribution": [
-		16,
-		17,
-		17,
-		16,
-		17,
-		17
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 40144,
 	"imp": {
 		"max atk": "140",
@@ -312,7 +360,18 @@
 		"name": "覇王の力"
 	},
 	"lord damage range": "1477~1650",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "雷迅神ゼレン",
 	"rarity": 5,
 	"sell caution": false,

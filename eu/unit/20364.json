@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,24 +25,68 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 111
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "12 combo Water elemental attack on single enemy & Earth element added to attack for 3 turns",
-		"hit dmg% distribution": [
-			12,
-			9,
-			7,
-			8,
-			8,
-			7,
-			9,
-			8,
-			7,
-			8,
-			9,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					7,
+					20,
+					26,
+					32,
+					38,
+					43,
+					48,
+					53,
+					57,
+					61,
+					65,
+					69
+				],
+				"hit dmg% distribution": [
+					12,
+					9,
+					7,
+					8,
+					8,
+					7,
+					9,
+					8,
+					7,
+					8,
+					9,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "12 combo Water elemental attack on single enemy & Earth element added to attack for 3 turns",
+		"drop check count": 1,
 		"id": "20364",
 		"levels": [
 			{
@@ -276,20 +320,48 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "Varna Rising"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 16,
+	"damage frames": {
+		"frame times": [
+			8,
+			21,
+			29,
+			37,
+			44,
+			51,
+			56,
+			60,
+			64,
+			70
+		],
+		"hit dmg% distribution": [
+			15,
+			10,
+			9,
+			10,
+			9,
+			11,
+			9,
+			8,
+			9,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
 	"dictionary": {
 		"description": "A knight sworn to the Sama Kingdom. Her father started a civil war there, in hopes to purge the navy of its corruption. Unbeknownst to them, he was playing into the hands of their rival kingdom. Lucina and Selena spared no effort in trying to rescue him from the ravages of war. However, he vanished leaving a mysterious letter--one with the whereabouts of the mother she assumed to be dead. ",
 		"evolution": "Something inside me is...<br>waking up...<br>What is this feeling?",
 		"fusion": "Brute force isn't perfect.<br>But it's all I know.<br>No more denying that.",
 		"summon": "My blade has its faults.<br>And so do I. If we're a burden,<br>get rid of us both. "
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 500000,
@@ -327,20 +399,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 534,
-	"hit dmg% distribution": [
-		15,
-		10,
-		9,
-		10,
-		9,
-		11,
-		9,
-		8,
-		9,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 20364,
 	"imp": {
 		"max atk": "160",
@@ -362,7 +420,18 @@
 		"name": "Five Light's Force"
 	},
 	"lord damage range": "1526~1704",
-	"max bc generated": 30,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Azure Warrior Lucina",
 	"rarity": 5,
 	"sell caution": false,

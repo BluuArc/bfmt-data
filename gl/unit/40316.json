@@ -31,23 +31,78 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 166
+		},
+		"idle": {
+			"total number of frames": 56
+		},
+		"move": {
+			"total number of frames": 45
+		}
+	},
 	"bb": {
-		"desc": "11 combo powerful Thunder attack on all foes, probable Paralysis, Curse effects & gradually restores HP for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			9,
-			8,
-			7,
-			7,
-			7,
-			7,
-			8,
-			10,
-			12,
-			15
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					48,
+					53,
+					58,
+					63,
+					68,
+					73,
+					78,
+					83,
+					88,
+					92,
+					96
+				],
+				"hit dmg% distribution": [
+					10,
+					9,
+					8,
+					7,
+					7,
+					7,
+					7,
+					8,
+					10,
+					12,
+					15
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 11,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 11,
+		"desc": "11 combo powerful Thunder attack on all foes, probable Paralysis, Curse effects & gradually restores HP for 3 turns",
+		"drop check count": 1,
 		"id": "40316",
 		"levels": [
 			{
@@ -361,21 +416,45 @@
 				]
 			}
 		],
-		"max bc generated": 11,
 		"name": "Enteral Grace"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T10:28:24.000Z",
-		"updatedAt": "2016-02-04T14:52:26.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 40310,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			48,
+			57,
+			66,
+			75,
+			84,
+			88,
+			92,
+			96
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			10,
+			10,
+			11,
+			13,
+			15,
+			21
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "The will of the gods was absolute to Rina. No matter what punishments they gave the human race, she believed they were all well-deserved. This is the very reason why she would eventually find herself at a loss after committing a heroic act which would deviate from her beliefs. As she watched one of her impious comrades fall at the hands of Farlon, she stepped in and took the second blow from his sword in her former comrade's stead. The survivor of this incident would then go on to declare that at that moment Rina became more divine than any god could ever hope to be.",
 		"evolution": "I rebelled against the gods then.<br>But that brought me closer to them.<br>Was that their intention?",
 		"fusion": "I can feel the gods' power in you.<br>Have I been forgiven...?<br>Please tell me I have...",
 		"summon": "My faith does not waver.<br>The gods matter to me most.<br>They...they're precious to me..."
 	},
+	"drop check count": 5,
 	"element": "thunder",
 	"evolution": {
 		"prev": "40315"
@@ -389,14 +468,16 @@
 				"dmg% to hp% when attacked chance%": 25,
 				"dmg% to hp% when attacked high": 20,
 				"dmg% to hp% when attacked low": 20,
-				"passive id": "24"
+				"passive id": "24",
+				"passive target": "self"
 			},
 			{
 				"bc fill when attacked high": 3,
 				"bc fill when attacked low": 2,
 				"bc fill when attacked%": 100,
 				"conditions": [],
-				"passive id": "25"
+				"passive id": "25",
+				"passive target": "self"
 			}
 		],
 		"id": "9600",
@@ -406,18 +487,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1175,
-	"hit dmg% distribution": [
-		10,
-		10,
-		10,
-		10,
-		11,
-		13,
-		15,
-		21
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 40316,
 	"imp": {
 		"max atk": "440",
@@ -450,7 +519,18 @@
 		"name": "Golden Thunder's Power"
 	},
 	"lord damage range": "2148~2399",
-	"max bc generated": 40,
+	"movement": {
+		"attack": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "2"
+		}
+	},
 	"name": "Gilded Dogma Rina",
 	"overdrive stats": {
 		"atk%": 100,
@@ -459,27 +539,88 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "16 combo powerful Thunder attack on all foes, gradually restores HP for 3 turns, probable random status ailment infliction and BB gauge boost when attacked for 3 turns",
-		"hit dmg% distribution": [
-			8,
-			6,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			6,
-			7,
-			8,
-			9,
-			11,
-			12
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					48,
+					51,
+					54,
+					57,
+					60,
+					63,
+					66,
+					69,
+					72,
+					75,
+					78,
+					83,
+					87,
+					91,
+					95,
+					99
+				],
+				"hit dmg% distribution": [
+					8,
+					6,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					6,
+					7,
+					8,
+					9,
+					11,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "53"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo powerful Thunder attack on all foes, gradually restores HP for 3 turns, probable random status ailment infliction and BB gauge boost when attacked for 3 turns",
+		"drop check count": 1,
 		"id": "140316",
 		"levels": [
 			{
@@ -943,7 +1084,6 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Exxod Spectrum"
 	},
 	"sell caution": false,
@@ -962,31 +1102,96 @@
 		}
 	},
 	"ubb": {
-		"desc": "20 combo massive Thunder attack on all foes, gradually restores HP and probable random status ailment infliction when attacked for 3 turns & enormously boosts BB gauge when attacked for 5 turns",
-		"hit dmg% distribution": [
-			8,
-			5,
-			4,
-			4,
-			4,
-			5,
-			7,
-			5,
-			4,
-			4,
-			4,
-			5,
-			7,
-			5,
-			4,
-			4,
-			4,
-			5,
-			7,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					48,
+					51,
+					54,
+					57,
+					60,
+					63,
+					66,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105
+				],
+				"hit dmg% distribution": [
+					8,
+					5,
+					4,
+					4,
+					4,
+					5,
+					7,
+					5,
+					4,
+					4,
+					4,
+					5,
+					7,
+					5,
+					4,
+					4,
+					4,
+					5,
+					7,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "53"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "20 combo massive Thunder attack on all foes, gradually restores HP and probable random status ailment infliction when attacked for 3 turns & enormously boosts BB gauge when attacked for 5 turns",
+		"drop check count": 1,
 		"id": "240316",
 		"levels": [
 			{
@@ -1034,423 +1239,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 5,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 100,
-						"counter inflict injury% (81)": 100,
-						"counter inflict paralysis% (83)": 100,
-						"counter inflict poison% (78)": 100,
-						"counter inflict sick% (80)": 100,
-						"counter inflict weaken% (79)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 5,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 100,
-						"counter inflict injury% (81)": 100,
-						"counter inflict paralysis% (83)": 100,
-						"counter inflict poison% (78)": 100,
-						"counter inflict sick% (80)": 100,
-						"counter inflict weaken% (79)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 5,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 100,
-						"counter inflict injury% (81)": 100,
-						"counter inflict paralysis% (83)": 100,
-						"counter inflict poison% (78)": 100,
-						"counter inflict sick% (80)": 100,
-						"counter inflict weaken% (79)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 5,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 100,
-						"counter inflict injury% (81)": 100,
-						"counter inflict paralysis% (83)": 100,
-						"counter inflict poison% (78)": 100,
-						"counter inflict sick% (80)": 100,
-						"counter inflict weaken% (79)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 5,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 100,
-						"counter inflict injury% (81)": 100,
-						"counter inflict paralysis% (83)": 100,
-						"counter inflict poison% (78)": 100,
-						"counter inflict sick% (80)": 100,
-						"counter inflict weaken% (79)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 5,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 100,
-						"counter inflict injury% (81)": 100,
-						"counter inflict paralysis% (83)": 100,
-						"counter inflict poison% (78)": 100,
-						"counter inflict sick% (80)": 100,
-						"counter inflict weaken% (79)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 5,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 100,
-						"counter inflict injury% (81)": 100,
-						"counter inflict paralysis% (83)": 100,
-						"counter inflict poison% (78)": 100,
-						"counter inflict sick% (80)": 100,
-						"counter inflict weaken% (79)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 5,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 100,
-						"counter inflict injury% (81)": 100,
-						"counter inflict paralysis% (83)": 100,
-						"counter inflict poison% (78)": 100,
-						"counter inflict sick% (80)": 100,
-						"counter inflict weaken% (79)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"gradual heal high": 99999,
-						"gradual heal low": 98999,
-						"gradual heal turns (8)": 3,
-						"proc id": "3",
-						"rec added% (from target)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 5,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 100,
-						"counter inflict injury% (81)": 100,
-						"counter inflict paralysis% (83)": 100,
-						"counter inflict poison% (78)": 100,
-						"counter inflict sick% (80)": 100,
-						"counter inflict weaken% (79)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Gods' Light: Latreia"
 	}
 }

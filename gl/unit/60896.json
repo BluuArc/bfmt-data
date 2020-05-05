@@ -19,26 +19,96 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 164
+		},
+		"idle": {
+			"total number of frames": 84
+		},
+		"move": {
+			"total number of frames": 84
+		}
+	},
 	"bb": {
-		"desc": "14 combo Dark attack on all foes, greatly boosts BB Atk for 3 turns, probable Spark critical for 3 turns & enormously boosts BB gauge for 1 turn",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			12,
-			11,
-			10,
-			9,
-			7,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					15,
+					25,
+					35,
+					43,
+					47,
+					51,
+					55,
+					59,
+					63,
+					67,
+					71,
+					75,
+					79,
+					83
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					12,
+					11,
+					10,
+					9,
+					7,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "83"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "14 combo Dark attack on all foes, greatly boosts BB Atk for 3 turns, probable Spark critical for 3 turns & enormously boosts BB gauge for 1 turn",
+		"drop check count": 1,
 		"id": "60896",
 		"levels": [
 			{
@@ -432,21 +502,51 @@
 				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "Dimension Warp: Phi Region"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-03-09T11:47:24.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 60890,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			15,
+			25,
+			35,
+			43,
+			47,
+			51,
+			56,
+			61,
+			66,
+			71,
+			76
+		],
+		"hit dmg% distribution": [
+			7,
+			7,
+			6,
+			11,
+			11,
+			11,
+			10,
+			10,
+			9,
+			9,
+			9
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
 	"dictionary": {
 		"description": "Malbelle recognized upon meeting the other goddess that their existences were incompatible. Immediately afterwards, a battle between the two began and ended with their simultaneous destruction. The three Summoners who visited the site of the battle afterwards and investigated her remains told of finding a technique she had developed. This technique allowed for the infinite replication of real souls. The records she left would go on to play a key role in the completion of Mock Units, but that is a tale to be told at a later time.",
 		"evolution": "Truths are unnecessary…<br>Falsehoods are also unnecessary…<br>Simply make me stronger.",
 		"fusion": "My legacy has made humanity<br>even more foolish…<br>Am I more foolish still?",
 		"summon": "She and I are two sides of a coin…<br>Beings that must never meet.<br>Our chance meeting was our doom."
 	},
+	"drop check count": 4,
 	"element": "dark",
 	"evolution": {
 		"prev": "60895"
@@ -459,13 +559,15 @@
 				"atk% buff": 80,
 				"conditions": [],
 				"hp above % buff requirement": 100,
-				"passive id": "11"
+				"passive id": "11",
+				"passive target": "self"
 			},
 			{
 				"atk% buff": 50,
 				"bb gauge above % buff requirement": 100,
 				"conditions": [],
-				"passive id": "30"
+				"passive id": "30",
+				"passive target": "self"
 			}
 		],
 		"id": "12700",
@@ -475,21 +577,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1253,
-	"hit dmg% distribution": [
-		7,
-		7,
-		6,
-		11,
-		11,
-		11,
-		10,
-		10,
-		9,
-		9,
-		9
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 11,
 	"id": 60896,
 	"imp": {
 		"max atk": "600",
@@ -514,7 +601,18 @@
 		"name": "Dark Lady's Annihilation"
 	},
 	"lord damage range": "2564~2864",
-	"max bc generated": 44,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
 	"name": "Ghastly Blaster Malbelle",
 	"overdrive stats": {
 		"atk%": 100,
@@ -523,29 +621,104 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "18 combo powerful Dark attack on all foes (consecutive uses boost damage), additional powerful attack at turn's end, greatly boosts BB Atk and probable Spark critical for 3 turns & fills own BB gauge to max",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			9,
-			8,
-			8,
-			7,
-			7,
-			6,
-			6,
-			6,
-			5,
-			5,
-			5,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					15,
+					25,
+					35,
+					43,
+					47,
+					51,
+					55,
+					59,
+					63,
+					67,
+					71,
+					75,
+					79,
+					83,
+					87,
+					91,
+					95,
+					99
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					9,
+					8,
+					8,
+					7,
+					7,
+					6,
+					6,
+					6,
+					5,
+					5,
+					5,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "64"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "83"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo powerful Dark attack on all foes (consecutive uses boost damage), additional powerful attack at turn's end, greatly boosts BB Atk and probable Spark critical for 3 turns & fills own BB gauge to max",
+		"drop check count": 1,
 		"id": "160896",
 		"levels": [
 			{
@@ -1059,7 +1232,6 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Integral Decoherence"
 	},
 	"sell caution": false,
@@ -1078,34 +1250,102 @@
 		}
 	},
 	"ubb": {
-		"desc": "23 combo massive Dark attack on all foes (damage relative to remaining HP), massive attack at turn's end, enormously boosts Spark damage for 3 turns & Spark damage enormously boosts BB gauge for 3 turns",
-		"hit dmg% distribution": [
-			7,
-			3,
-			4,
-			4,
-			5,
-			3,
-			4,
-			4,
-			10,
-			4,
-			5,
-			4,
-			4,
-			3,
-			5,
-			3,
-			5,
-			3,
-			4,
-			4,
-			5,
-			3,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					15,
+					19,
+					23,
+					27,
+					31,
+					35,
+					39,
+					43,
+					47,
+					52,
+					57,
+					62,
+					67,
+					72,
+					77,
+					82,
+					87,
+					92,
+					97,
+					102,
+					107,
+					112,
+					117
+				],
+				"hit dmg% distribution": [
+					7,
+					3,
+					4,
+					4,
+					5,
+					3,
+					4,
+					4,
+					10,
+					4,
+					5,
+					4,
+					4,
+					3,
+					5,
+					3,
+					5,
+					3,
+					4,
+					4,
+					5,
+					3,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 23,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "67"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 23,
+		"desc": "23 combo massive Dark attack on all foes (damage relative to remaining HP), massive attack at turn's end, enormously boosts Spark damage for 3 turns & Spark damage enormously boosts BB gauge for 3 turns",
+		"drop check count": 1,
 		"id": "260896",
 		"levels": [
 			{
@@ -1149,387 +1389,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 800,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill on spark buff turns (111)": 3,
-						"bc fill on spark high": 8,
-						"bc fill on spark low": 5,
-						"bc fill on spark%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "67",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 800,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill on spark buff turns (111)": 3,
-						"bc fill on spark high": 8,
-						"bc fill on spark low": 5,
-						"bc fill on spark%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "67",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 800,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill on spark buff turns (111)": 3,
-						"bc fill on spark high": 8,
-						"bc fill on spark low": 5,
-						"bc fill on spark%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "67",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 800,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill on spark buff turns (111)": 3,
-						"bc fill on spark high": 8,
-						"bc fill on spark low": 5,
-						"bc fill on spark%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "67",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 800,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill on spark buff turns (111)": 3,
-						"bc fill on spark high": 8,
-						"bc fill on spark low": 5,
-						"bc fill on spark%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "67",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 800,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill on spark buff turns (111)": 3,
-						"bc fill on spark high": 8,
-						"bc fill on spark low": 5,
-						"bc fill on spark%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "67",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 800,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill on spark buff turns (111)": 3,
-						"bc fill on spark high": 8,
-						"bc fill on spark low": 5,
-						"bc fill on spark%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "67",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 800,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill on spark buff turns (111)": 3,
-						"bc fill on spark high": 8,
-						"bc fill on spark low": 5,
-						"bc fill on spark%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "67",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 800,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 1000,
-						"dot element affected": true,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill on spark buff turns (111)": 3,
-						"bc fill on spark high": 8,
-						"bc fill on spark low": 5,
-						"bc fill on spark%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "67",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 23,
 		"name": "Divide Paradox"
 	}
 }

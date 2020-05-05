@@ -19,30 +19,92 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 164
+		},
+		"idle": {
+			"total number of frames": 104
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に闇属性１８連ダメージ＆味方全体のＨＰを大回復・全状態異常を回復",
-		"hit dmg% distribution": [
-			6,
-			5,
-			3,
-			4,
-			3,
-			5,
-			4,
-			4,
-			3,
-			4,
-			5,
-			4,
-			30,
-			5,
-			4,
-			3,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					12,
+					17,
+					22,
+					27,
+					32,
+					37,
+					42,
+					47,
+					52,
+					57,
+					62,
+					67,
+					87,
+					91,
+					95,
+					99,
+					103,
+					107
+				],
+				"hit dmg% distribution": [
+					6,
+					5,
+					3,
+					4,
+					3,
+					5,
+					4,
+					4,
+					3,
+					4,
+					5,
+					4,
+					30,
+					5,
+					4,
+					3,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					87
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "敵全体に闇属性１８連ダメージ＆味方全体のＨＰを大回復・全状態異常を回復",
+		"drop check count": 1,
 		"id": "60676",
 		"levels": [
 			{
@@ -436,21 +498,55 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "キュアカタストロフ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60670,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			14,
+			21,
+			28,
+			35,
+			42,
+			49,
+			56,
+			63,
+			70,
+			109,
+			115,
+			121,
+			127
+		],
+		"hit dmg% distribution": [
+			8,
+			3,
+			4,
+			3,
+			4,
+			3,
+			2,
+			3,
+			2,
+			25,
+			18,
+			13,
+			12
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
 	"dictionary": {
 		"description": "One of the sacred Guardians of Meirith. As soon as she learned that Karna Masta was being targeted, she decided to stay behind in Ishgria without a moment's hesitation. And though most of her comrades smiled bitterly at her decision, Fadahl was the only one to treat her kindly. She then entrusted him with a letter meant for her sister Themis, though Fadahl would prove unable to deliver it to her. Even so, Ivris faced the demons of Ishgria with the same resolution she had shown before, all in order to protect her beloved family.",
 		"evolution": "Having the will to protect someone<br>is more important than having talent.<br>But you knew that, right?",
 		"fusion": "You're very kind...<br>Almost as kind as my elder sister.<br>Can I spoil you a little? Hehe.",
 		"summon": "I'll protect my family, always!<br>I may not get along with my sister,<br>but it's not like I hate her!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "60675"
@@ -467,7 +563,8 @@
 				},
 				"conditions": [],
 				"hp below % buff activation": 20,
-				"passive id": "55"
+				"passive id": "55",
+				"passive target": "self"
 			}
 		],
 		"id": "2000",
@@ -477,23 +574,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 900,
-	"hit dmg% distribution": [
-		8,
-		3,
-		4,
-		3,
-		4,
-		3,
-		2,
-		3,
-		2,
-		25,
-		18,
-		13,
-		12
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 13,
 	"id": 60676,
 	"imp": {
 		"max atk": "340",
@@ -529,7 +609,18 @@
 		"name": "永遠の命輝"
 	},
 	"lord damage range": "2104~2350",
-	"max bc generated": 26,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "冥星宝神イヴリス",
 	"overdrive stats": {
 		"atk%": 100,
@@ -538,7 +629,58 @@
 	},
 	"rarity": 7,
 	"sbb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					87
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			}
+		],
 		"desc": "味方のＢＢゲージを大幅に増加＆味方全体のＨＰを大回復・全状態異常を回復＆３ターン、全状態異常を無効",
+		"drop check count": 1,
 		"id": "160676",
 		"levels": [
 			{
@@ -1070,33 +1212,100 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な闇属性２２連ダメージ＆味方全体の全状態異常を回復＆ランダムで２回、一度だけ戦闘不能を耐える効果を付与",
-		"hit dmg% distribution": [
-			5,
-			3,
-			4,
-			3,
-			4,
-			5,
-			3,
-			4,
-			3,
-			4,
-			6,
-			3,
-			20,
-			5,
-			6,
-			3,
-			4,
-			2,
-			4,
-			2,
-			3,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					12,
+					17,
+					22,
+					27,
+					32,
+					37,
+					42,
+					47,
+					52,
+					57,
+					62,
+					67,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114
+				],
+				"hit dmg% distribution": [
+					5,
+					3,
+					4,
+					3,
+					4,
+					5,
+					3,
+					4,
+					3,
+					4,
+					6,
+					3,
+					20,
+					5,
+					6,
+					3,
+					4,
+					2,
+					4,
+					2,
+					3,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					87
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "7"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "7"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "敵全体に超強力な闇属性２２連ダメージ＆味方全体の全状態異常を回復＆ランダムで２回、一度だけ戦闘不能を耐える効果を付与",
+		"drop check count": 1,
 		"id": "260676",
 		"levels": [
 			{
@@ -1144,423 +1353,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					},
-					{
-						"angel idol buff (12)": true,
-						"angel idol recover hp%": 50,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "7",
-						"target area": "single",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "ニルヴァーナ"
 	}
 }

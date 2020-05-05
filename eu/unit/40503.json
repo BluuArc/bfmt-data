@@ -19,18 +19,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 147
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 15
+		}
+	},
 	"bb": {
-		"desc": "6 combo powerful Thunder attack on single enemy & reduces damage taken by half for 1 turn",
-		"hit dmg% distribution": [
-			6,
-			6,
-			6,
-			6,
-			6,
-			70
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					40,
+					44,
+					48,
+					52,
+					56,
+					90
+				],
+				"hit dmg% distribution": [
+					6,
+					6,
+					6,
+					6,
+					6,
+					70
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "6 combo powerful Thunder attack on single enemy & reduces damage taken by half for 1 turn",
+		"drop check count": 1,
 		"id": "40503",
 		"levels": [
 			{
@@ -244,20 +282,34 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "Rise & Fall"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			40,
+			46,
+			90
+		],
+		"hit dmg% distribution": [
+			15,
+			15,
+			70
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A knight from a small country around the Bariura region with a past shrouded in mystery. As a knight, she didn't stand out in any particular way, serving as a quiet presence in her order. The records left behind concerning her exploits begin from the time when she had been deployed to another country, later saving the lives of a compatriot swordsman and a queen. It is said that when these last two were attacked by an ancient dragon, she appeared with the roar of lightning, saving both from the creature's attack.",
 		"evolution": " ",
 		"fusion": "People can become stronger<br>without relying on this technique.<br>I am certain of it.",
 		"summon": "Don't expect me to run to the rescue.<br>I'm no one.<br>I am only a mere knight."
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"cost": 200000,
@@ -294,13 +346,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 765,
-	"hit dmg% distribution": [
-		15,
-		15,
-		70
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 40503,
 	"imp": {
 		"max atk": "160",
@@ -321,7 +366,18 @@
 		"name": "Monarch's Magic"
 	},
 	"lord damage range": "1333~1490",
-	"max bc generated": 9,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Thunder Guard Shera",
 	"rarity": 4,
 	"sell caution": false,

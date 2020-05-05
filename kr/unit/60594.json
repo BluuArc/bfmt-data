@@ -25,25 +25,70 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 196
+		},
+		"idle": {
+			"total number of frames": 50
+		},
+		"move": {
+			"total number of frames": 12
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 암속성 13연속 데미지＆3턴간 아군 전체의 공격에 암광속성 부여",
-		"hit dmg% distribution": [
-			9,
-			7,
-			9,
-			7,
-			8,
-			6,
-			8,
-			5,
-			4,
-			5,
-			12,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					34,
+					55,
+					59,
+					79,
+					88,
+					94,
+					103,
+					112,
+					121,
+					137,
+					140,
+					143
+				],
+				"hit dmg% distribution": [
+					9,
+					7,
+					9,
+					7,
+					8,
+					6,
+					8,
+					5,
+					4,
+					5,
+					12,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 13,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 13,
+		"desc": "적 전체에게 강력한 암속성 13연속 데미지＆3턴간 아군 전체의 공격에 암광속성 부여",
+		"drop check count": 1,
 		"id": "60594",
 		"levels": [
 			{
@@ -287,21 +332,47 @@
 				]
 			}
 		],
-		"max bc generated": 13,
 		"name": "산연화"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 60590,
 	"cost": 18,
+	"damage frames": {
+		"frame times": [
+			30,
+			55,
+			79,
+			88,
+			94,
+			103,
+			112,
+			121,
+			137
+		],
+		"hit dmg% distribution": [
+			18,
+			18,
+			10,
+			8,
+			10,
+			8,
+			5,
+			8,
+			15
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 9
+	},
 	"dictionary": {
 		"description": "A vagrant with jet black wings. Wandering about aimlessly, he learned how to fence and use magic through his own self-taught training. He used his powers to save people in all regions, gaining more companions by the minute as he moved along. Most of his new allies are said to have been people who, like him, had been ostracized from society. When the invasion of the gods began, he set out to destroy the Fallen God Lagzal, but the god annihilated all of his comrades, leaving Ardin to grieve for them alone.",
 		"evolution": "What a familiar feeling...<br>Is it a memory from my time with them?<br>Nah, I'm overthinking things.",
 		"fusion": "If you're looking for compensation,<br>you might as well quit now.<br>I make promises to no one.",
 		"summon": "Who dares summon me?!<br>Hahaha, just kidding.<br>I'll help you out!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 500000,
@@ -339,19 +410,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 731,
-	"hit dmg% distribution": [
-		18,
-		18,
-		10,
-		8,
-		10,
-		8,
-		5,
-		8,
-		15
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 9,
 	"id": 60594,
 	"imp": {
 		"max atk": "200",
@@ -373,7 +431,18 @@
 		"name": "오광신의 힘"
 	},
 	"lord damage range": "1760~1966",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 0.0015,
+			"move speed type": "5",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0015,
+			"move speed type": "5",
+			"move type": "1"
+		}
+	},
 	"name": "흑익신 아딘",
 	"rarity": 5,
 	"sell caution": false,

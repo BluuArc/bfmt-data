@@ -19,20 +19,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 113
+		},
+		"idle": {
+			"total number of frames": 120
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性８連ダメージ＆確率で弱体状態にする",
-		"hit dmg% distribution": [
-			10,
-			60,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					38,
+					49,
+					55,
+					61,
+					67,
+					73,
+					79,
+					85
+				],
+				"hit dmg% distribution": [
+					10,
+					60,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "敵全体に炎属性８連ダメージ＆確率で弱体状態にする",
+		"drop check count": 2,
 		"id": "10145",
 		"levels": [
 			{
@@ -226,21 +266,33 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "ラースヴォルケーノ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10140,
 	"cost": 26,
+	"damage frames": {
+		"frame times": [
+			38,
+			49
+		],
+		"hit dmg% distribution": [
+			10,
+			90
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "A former blacksmith from the Agni Empire. After entrusting Dandelga to a hero, he once again headed towards the volcano in order to forge a large amount of weapons with which to supply those retaliating against the gods. Since the God Army's blacksmiths were supplying the deities with very strong arms as well, Galant saw them as the greatest threat. Therefore, he tried to siege the volcano, eventually getting into an intense skirmish with a single blacksmith. Making the firepower of the volcano his own, it is said that a demon-like shadow began manifesting behind him after he created countless weapons for battle.",
 		"evolution": "The path of the smith is never over!<br>I still have to prove<br>that I'm the best blacksmith around!",
 		"fusion": "The fire forges my soul!<br>More, make it burn brighter!<br>The flames can still grow much bigger!",
 		"summon": "If you can Summon a top blacksmith,<br>it must mean you're a top Summoner.<br>We're the best team ever!"
 	},
+	"drop check count": 10,
 	"element": "fire",
 	"evolution": {
 		"prev": "10144"
@@ -249,12 +301,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 839,
-	"hit dmg% distribution": [
-		10,
-		90
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 10145,
 	"imp": {
 		"max atk": "240",
@@ -275,17 +321,63 @@
 		"name": "重激の神光"
 	},
 	"lord damage range": "1665~1860",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "鍛帝神匠ガーラント",
 	"rarity": 6,
 	"sbb": {
-		"desc": "敵全体に強力な炎属性２連ダメージ＆味方のＢＢゲージを増加＆味方全体に３ターン、防御力をかなりアップ",
-		"hit dmg% distribution": [
-			5,
-			95
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					38,
+					49
+				],
+				"hit dmg% distribution": [
+					5,
+					95
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 2,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 2,
+		"desc": "敵全体に強力な炎属性２連ダメージ＆味方のＢＢゲージを増加＆味方全体に３ターン、防御力をかなりアップ",
+		"drop check count": 10,
 		"id": "110145",
 		"levels": [
 			{
@@ -569,7 +661,6 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "アスラ・ディアマント"
 	},
 	"sell caution": false,

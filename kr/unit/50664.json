@@ -25,21 +25,74 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 167
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 광속성 9연속 데미지＆확률로 1턴간 공격력과 방어력 저하＆3턴간 아군 전체의 공격에 약화와 저주 효과 부여",
-		"hit dmg% distribution": [
-			20,
-			10,
-			9,
-			11,
-			10,
-			8,
-			10,
-			12,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					80,
+					90,
+					100,
+					110,
+					130,
+					140,
+					150,
+					160,
+					170
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					9,
+					11,
+					10,
+					8,
+					10,
+					12,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "적 전체에게 강력한 광속성 9연속 데미지＆확률로 1턴간 공격력과 방어력 저하＆3턴간 아군 전체의 공격에 약화와 저주 효과 부여",
+		"drop check count": 1,
 		"id": "50664",
 		"levels": [
 			{
@@ -423,21 +476,39 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "라 빈큘럼"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-15T01:31:57.000Z",
-		"updatedAt": "2015-11-04T13:19:00.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 50660,
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			83,
+			87,
+			111,
+			115,
+			119
+		],
+		"hit dmg% distribution": [
+			40,
+			10,
+			30,
+			12,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "One of the sacred Guardians of Meirith, who worshipped the Holy Emperor Karna Masta in the La Veda Republic. Originally, Fadahl had quite a promising future in store as a priest until he suddenly contracted an incurable disease. However, he never gave up on his recovery, and one day he was chosen to serve as a Guardian. It was then when Karna Masta gifted him with a divine piece of armor which finally healed his terrible disease. From that point forward it is said that Fadahl believed the life of the gods to be more important than his own.",
 		"evolution": " ",
 		"fusion": "You should consider this wisely.<br>Are you sure it is me<br>you should be strengthening?",
 		"summon": "I was summoned by a human?<br>How interesting... I wonder if this<br>is also the will of the gods."
 	},
+	"drop check count": 3,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -474,15 +545,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 895,
-	"hit dmg% distribution": [
-		40,
-		10,
-		30,
-		12,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 50664,
 	"imp": {
 		"max atk": "140",
@@ -511,7 +573,18 @@
 		"name": "악역의 만연"
 	},
 	"lord damage range": "1549~1730",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "마도현신 패덜",
 	"rarity": 5,
 	"sell caution": false,

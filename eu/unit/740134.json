@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 120
+		},
+		"idle": {
+			"total number of frames": 121
+		},
+		"move": {
+			"total number of frames": 176
+		}
+	},
 	"bb": {
-		"desc": "10 combo Thunder elemental attack on all enemies & adds Thunder & light to attack for all allies for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					26,
+					30,
+					47,
+					68,
+					90,
+					100,
+					110,
+					120,
+					125,
+					130
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo Thunder elemental attack on all enemies & adds Thunder & light to attack for all allies for 3 turns",
+		"drop check count": 1,
 		"id": "740134",
 		"levels": [
 			{
@@ -284,14 +326,40 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Enhanced Bow of Lightning"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			68,
+			70,
+			72,
+			76,
+			80,
+			84,
+			88,
+			92,
+			96
+		],
+		"hit dmg% distribution": [
+			11,
+			11,
+			12,
+			11,
+			11,
+			11,
+			11,
+			11,
+			11
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 9
+	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -329,19 +397,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 7052,
-	"hit dmg% distribution": [
-		11,
-		11,
-		12,
-		11,
-		11,
-		11,
-		11,
-		11,
-		11
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 9,
 	"id": 740134,
 	"imp": {
 		"max atk": "240",
@@ -368,7 +423,18 @@
 		"name": "Crystal Clear 2.0"
 	},
 	"lord damage range": "1508~1684",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
 	"name": "Holy tuanregguJ",
 	"rarity": 5,
 	"sell caution": false,

@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,18 +19,44 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 269
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 52
+		}
+	},
 	"bb": {
-		"desc": "6 combo Water elemental power attack on all enemies",
-		"hit dmg% distribution": [
-			15,
-			15,
-			15,
-			15,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					48,
+					60,
+					72,
+					84,
+					96,
+					108
+				],
+				"hit dmg% distribution": [
+					15,
+					15,
+					15,
+					15,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "6 combo Water elemental power attack on all enemies",
+		"drop check count": 1,
 		"id": "20114",
 		"levels": [
 			{
@@ -164,20 +190,38 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "Calamity Wave"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			48,
+			54,
+			60,
+			66,
+			72
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "The greatest of all of the sea drakes, said to be their creator. Legend has it that its birth traces back to the birth of the world, and that all of the world's seas were created by it. It is said to be comparatively gentle, but once provoked, its rage is unforgiving, causing storm after storm until the the seas part and everything sinks to the abyss.",
 		"evolution": "Do you think you can handle<br>the power that controls the entire sea?",
 		"fusion": "I've lived for an eternity,<br>yet still grow stronger <br>every day...",
 		"summon": "My existence is eternal.<br>I live to serve you.<br>Do not forget that."
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 500000,
@@ -215,15 +259,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 140,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 20114,
 	"imp": {
 		"max atk": "140",
@@ -244,7 +279,18 @@
 		"name": "Ares' Authority"
 	},
 	"lord damage range": "1021~1140",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 8,
+			"move speed type": "1",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 8,
+			"move speed type": "1",
+			"move type": "3"
+		}
+	},
 	"name": "Malnaplis",
 	"rarity": 5,
 	"sell caution": false,

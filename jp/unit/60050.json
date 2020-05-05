@@ -31,14 +31,48 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 68
+		},
+		"idle": {
+			"total number of frames": 66
+		},
+		"move": {
+			"total number of frames": 48
+		}
+	},
 	"bb": {
-		"desc": "敵単体に闇属性２連ダメージ＆高確率で病気状態にする",
-		"hit dmg% distribution": [
-			50,
-			50
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					30,
+					36
+				],
+				"hit dmg% distribution": [
+					50,
+					50
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 2,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 2,
+		"desc": "敵単体に闇属性２連ダメージ＆高確率で病気状態にする",
+		"drop check count": 1,
 		"id": "60050",
 		"levels": [
 			{
@@ -242,21 +276,31 @@
 				]
 			}
 		],
-		"max bc generated": 2,
 		"name": "ボーンスマッシュ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60050,
 	"cost": 2,
+	"damage frames": {
+		"frame times": [
+			30
+		],
+		"hit dmg% distribution": [
+			100
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 1
+	},
 	"dictionary": {
 		"description": "An undead monster that moves freely thanks to the power of darkness in its bones. People tend to mistakenly think it still has a soul, but it is actually controlled by a dark force. It is unintelligent and doesn't sense pain, but it does have a very strong will to survive. It's said that it attacks those with a soul out to envy.",
 		"evolution": " ",
 		"fusion": "I-I will become stronger!<br>I will become stronger and <br>never have to die!!",
 		"summon": "Ugh, I-I can't defeat you.<br>You are m-my master..."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 2500,
@@ -273,11 +317,6 @@
 	"gender": "other",
 	"getting type": "not eligible for achievement",
 	"guide_id": 77,
-	"hit dmg% distribution": [
-		100
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 1,
 	"id": 60050,
 	"imp": {
 		"max atk": "40",
@@ -287,7 +326,18 @@
 	},
 	"kind": "normal",
 	"lord damage range": "589~659",
-	"max bc generated": 2,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "スケルトン",
 	"rarity": 1,
 	"sell caution": false,

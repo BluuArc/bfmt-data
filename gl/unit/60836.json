@@ -19,24 +19,68 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 157
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 17
+		}
+	},
 	"bb": {
-		"desc": "12 combo powerful Dark attack on all foes & damage taken boosts BB gauge for 3 turns",
-		"hit dmg% distribution": [
-			11,
-			10,
-			10,
-			9,
-			9,
-			8,
-			8,
-			7,
-			7,
-			7,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					89,
+					93,
+					97,
+					101,
+					105,
+					109,
+					113,
+					117,
+					121,
+					125,
+					129,
+					133
+				],
+				"hit dmg% distribution": [
+					11,
+					10,
+					10,
+					9,
+					9,
+					8,
+					8,
+					7,
+					7,
+					7,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "12 combo powerful Dark attack on all foes & damage taken boosts BB gauge for 3 turns",
+		"drop check count": 1,
 		"id": "60836",
 		"levels": [
 			{
@@ -270,21 +314,45 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "Absolute Ruin"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-11-25T16:41:02.000Z",
-		"updatedAt": "2015-12-04T07:58:12.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 60830,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			89,
+			94,
+			99,
+			104,
+			109,
+			114,
+			119,
+			124
+		],
+		"hit dmg% distribution": [
+			21,
+			18,
+			15,
+			13,
+			11,
+			9,
+			8,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "An ancient dragon which longed for chaos. Once Mildran and Estoria had agreed to an alliance, their plans to eliminate all senseless fighting in Ishgria was something that Reviora had not expected. For that very reason, the ancient dragon was forced to take matter into its own hands, and attacked Estoria. However, Reviora's attack was stopped by the queen's closest associate and confidant. The violent fight that ensued between the two afterwards was of such a scale that it altered the entire landscape. They were both last seen making their way to the ocean, never to be heard of again.",
 		"evolution": "I shall protect you...<br>I believe you are<br>chaos incarnate...",
 		"fusion": "This ability...<br>The art of summoning indeed embraces<br>the power of darkness...",
 		"summon": "Everything is born of chaos.<br>Without it, there is no order.<br>Thus all living beings long for it..."
 	},
+	"drop check count": 3,
 	"element": "dark",
 	"evolution": {
 		"prev": "60835"
@@ -298,7 +366,8 @@
 				"hp drain chance%": 100,
 				"hp drain% high": 8,
 				"hp drain% low": 5,
-				"passive id": "17"
+				"passive id": "17",
+				"passive target": "self"
 			}
 		],
 		"id": "8000",
@@ -308,18 +377,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 1107,
-	"hit dmg% distribution": [
-		21,
-		18,
-		15,
-		13,
-		11,
-		9,
-		8,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 60836,
 	"imp": {
 		"max atk": "600",
@@ -351,7 +408,18 @@
 		"name": "Shining Darkness Scales"
 	},
 	"lord damage range": "2436~2721",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "Tenebrous Wings Reviora",
 	"overdrive stats": {
 		"atk%": 100,
@@ -360,30 +428,70 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "19 combo powerful Dark attack on all foes (consecutive uses boost damage) & boosts BB gauge fill rate for 3 turns",
-		"hit dmg% distribution": [
-			8,
-			7,
-			7,
-			7,
-			7,
-			6,
-			6,
-			6,
-			5,
-			5,
-			5,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					89,
+					92,
+					95,
+					98,
+					101,
+					104,
+					107,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134,
+					137,
+					140,
+					143
+				],
+				"hit dmg% distribution": [
+					8,
+					7,
+					7,
+					7,
+					7,
+					6,
+					6,
+					6,
+					5,
+					5,
+					5,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 19,
+				"proc id": "64"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "52"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 19,
+		"desc": "19 combo powerful Dark attack on all foes (consecutive uses boost damage) & boosts BB gauge fill rate for 3 turns",
+		"drop check count": 1,
 		"id": "160836",
 		"levels": [
 			{
@@ -617,7 +725,6 @@
 				]
 			}
 		],
-		"max bc generated": 19,
 		"name": "Void Ancestry"
 	},
 	"sell caution": false,
@@ -636,32 +743,86 @@
 		}
 	},
 	"ubb": {
-		"desc": "21 combo massive Dark attack on all foes, boosts BB Atk and damage taken hugely boosts BB gauge for 3 turns",
-		"hit dmg% distribution": [
-			8,
-			6,
-			6,
-			6,
-			6,
-			6,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					89,
+					92,
+					95,
+					98,
+					101,
+					104,
+					107,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134,
+					137,
+					140,
+					143,
+					146,
+					149
+				],
+				"hit dmg% distribution": [
+					8,
+					6,
+					6,
+					6,
+					6,
+					6,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 21,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 21,
+		"desc": "21 combo massive Dark attack on all foes, boosts BB Atk and damage taken hugely boosts BB gauge for 3 turns",
+		"drop check count": 1,
 		"id": "260836",
 		"levels": [
 			{
@@ -696,306 +857,8 @@
 						"ubb atk% buff": 500
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 500,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 500,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 500
-					}
-				]
 			}
 		],
-		"max bc generated": 21,
 		"name": "Dark Nihility"
 	}
 }

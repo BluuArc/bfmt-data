@@ -31,17 +31,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 137
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 70
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性５連ダメージ＆高確率で弱体状態にする",
-		"hit dmg% distribution": [
-			20,
-			20,
-			20,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					53,
+					66,
+					79,
+					87,
+					97
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					20,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "敵全体に炎属性５連ダメージ＆高確率で弱体状態にする",
+		"drop check count": 3,
 		"id": "10262",
 		"levels": [
 			{
@@ -245,21 +282,37 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "フレアボム"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10260,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			53,
+			66,
+			79,
+			87
+		],
+		"hit dmg% distribution": [
+			25,
+			25,
+			25,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "The king of the coal creatures who was miraculously born hundreds of years ago when a volcano erupted. It decided to use its fire powers after some humans tried to capture Bozdells. It is said that many Bozdells were trapped, but when the king suddenly appeared, he commanded all Bozdells to work together as brothers, and they managed to escape. At that moment, all of their kidnappers were turned into cinders. There are shocking tales regarding this creature like the one told above, but it actually seems to enjoy always being submerged in hot lava. ",
 		"evolution": "Bombs! Bombs!<br>Hmm?! Boom!<br>I've become a king.",
 		"fusion": "Bombs are so delicious!<br>Gimme some more!",
 		"summon": "Bombs...<br>Summoner,<br>could you take me to a pool of lava?"
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"prev": "10261"
@@ -268,14 +321,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 630,
-	"hit dmg% distribution": [
-		25,
-		25,
-		25,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 10262,
 	"imp": {
 		"max atk": "120",
@@ -296,7 +341,18 @@
 		"name": "重激の輝き"
 	},
 	"lord damage range": "1029~1150",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "キングボズデル",
 	"rarity": 3,
 	"sell caution": false,

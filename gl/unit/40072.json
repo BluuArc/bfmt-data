@@ -31,16 +31,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 78
+		},
+		"idle": {
+			"total number of frames": 44
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "4 combo Thunder elemental attack on single Enemy & probable Injury effect",
-		"hit dmg% distribution": [
-			25,
-			25,
-			25,
-			25
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					40,
+					43,
+					47,
+					50
+				],
+				"hit dmg% distribution": [
+					25,
+					25,
+					25,
+					25
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "4 combo Thunder elemental attack on single Enemy & probable Injury effect",
+		"drop check count": 3,
 		"id": "40072",
 		"levels": [
 			{
@@ -244,21 +280,35 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "Destructive Attack"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-08-14T00:39:50.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 40070,
 	"cost": 5,
+	"damage frames": {
+		"frame times": [
+			40,
+			43,
+			47
+		],
+		"hit dmg% distribution": [
+			50,
+			30,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "An extremely powerful monster from the giant tribe. They are warlike, just like all giants. Above all, they like tough combat with strong opponents. They are more intelligent than they look, and have a unique philosophy that says \"fighting for food is hunting, not combat.\" Thus, they won't plunder, and get food by capturing others and forcing them into slavery.",
 		"evolution": "As I get stronger, <br>I become happier.<br>Are you happy?",
 		"fusion": "My power is my <br>strength in combat!<br>Now lets fight!",
 		"summon": "My power of destruction is<br>capable of destroying everything.<br>You think you can control me?"
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"cost": 100000,
@@ -291,13 +341,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 94,
-	"hit dmg% distribution": [
-		50,
-		30,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 40072,
 	"imp": {
 		"max atk": "120",
@@ -318,7 +361,18 @@
 		"name": "Soul Light"
 	},
 	"lord damage range": "911~1018",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "Cyclops",
 	"rarity": 3,
 	"sell caution": false,

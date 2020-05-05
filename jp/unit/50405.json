@@ -31,23 +31,66 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 104
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光属性１１連ダメージ＆確率で怪我状態にする",
-		"hit dmg% distribution": [
-			15,
-			7,
-			14,
-			15,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					10,
+					14,
+					38,
+					45,
+					51,
+					56,
+					61,
+					73,
+					85,
+					97,
+					109
+				],
+				"hit dmg% distribution": [
+					15,
+					7,
+					14,
+					15,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 11,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 11,
+		"desc": "敵全体に光属性１１連ダメージ＆確率で怪我状態にする",
+		"drop check count": 1,
 		"id": "50405",
 		"levels": [
 			{
@@ -251,21 +294,47 @@
 				]
 			}
 		],
-		"max bc generated": 11,
 		"name": "アストラルエデン"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50400,
 	"cost": 26,
+	"damage frames": {
+		"frame times": [
+			10,
+			14,
+			30,
+			45,
+			51,
+			56,
+			61,
+			67,
+			73
+		],
+		"hit dmg% distribution": [
+			20,
+			9,
+			15,
+			15,
+			8,
+			8,
+			15,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 9
+	},
 	"dictionary": {
 		"description": "One of the 12 Guardians, charged with vanquishing the traitors. The battle with his traitor brother got more out of control than anyone had expected. It's said a smile came across Alyut's face as he and his brother exchanged death blows. After several hours, Alyut put all he had into one final blow which Sodis then took directly. Sodis then spoke to his younger brother who sat listening, unaware of the presence lurking in his own shadow.",
 		"evolution": "People's minds are shaken by time.<br>However, no matter how dark things<br>get, light will surely come!",
 		"fusion": "I still believe in the reason<br>why I started my training.<br>Surely that is all I need.",
 		"summon": "The will of the gods is with me!<br>I will be your blade so that we <br>can cut out a brighter future!"
 	},
+	"drop check count": 3,
 	"element": "light",
 	"evolution": {
 		"cost": 1500000,
@@ -303,19 +372,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 514,
-	"hit dmg% distribution": [
-		20,
-		9,
-		15,
-		15,
-		8,
-		8,
-		15,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 9,
 	"id": 50405,
 	"imp": {
 		"max atk": "400",
@@ -339,29 +395,87 @@
 		"name": "光統神の力"
 	},
 	"lord damage range": "1633~1825",
-	"max bc generated": 27,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "聖戦神アリュート",
 	"rarity": 6,
 	"sbb": {
-		"desc": "敵全体に強力な光属性１４連ダメージ＆味方全体に３ターン、ターン毎にＨＰをかなり回復・ＢＢゲージを増加",
-		"hit dmg% distribution": [
-			12,
-			5,
-			11,
-			12,
-			5,
-			5,
-			5,
-			5,
-			6,
-			6,
-			7,
-			7,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					10,
+					14,
+					38,
+					45,
+					51,
+					56,
+					61,
+					71,
+					81,
+					91,
+					101,
+					111,
+					121,
+					131
+				],
+				"hit dmg% distribution": [
+					12,
+					5,
+					11,
+					12,
+					5,
+					5,
+					5,
+					5,
+					6,
+					6,
+					7,
+					7,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "敵全体に強力な光属性１４連ダメージ＆味方全体に３ターン、ターン毎にＨＰをかなり回復・ＢＢゲージを増加",
+		"drop check count": 1,
 		"id": "150405",
 		"levels": [
 			{
@@ -675,7 +789,6 @@
 				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "光の世界"
 	},
 	"sell caution": false,

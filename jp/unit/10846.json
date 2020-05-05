@@ -19,23 +19,78 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 127
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 4
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性１１連ダメージ＆味方全体の全状態異常を回復＆３ターン、ＢＣ獲得時の増加量をかなりアップ",
-		"hit dmg% distribution": [
-			7,
-			8,
-			9,
-			11,
-			16,
-			13,
-			10,
-			8,
-			7,
-			6,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					56,
+					59,
+					62,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86
+				],
+				"hit dmg% distribution": [
+					7,
+					8,
+					9,
+					11,
+					16,
+					13,
+					10,
+					8,
+					7,
+					6,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 11,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "52"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 11,
+		"desc": "敵全体に炎属性１１連ダメージ＆味方全体の全状態異常を回復＆３ターン、ＢＣ獲得時の増加量をかなりアップ",
+		"drop check count": 1,
 		"id": "10846",
 		"levels": [
 			{
@@ -419,15 +474,39 @@
 				]
 			}
 		],
-		"max bc generated": 11,
 		"name": "アクリーション"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-02-24T21:58:31.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10840,
 	"cost": 43,
+	"damage frames": {
+		"frame times": [
+			56,
+			59,
+			62,
+			65,
+			68,
+			71,
+			74,
+			77
+		],
+		"hit dmg% distribution": [
+			8,
+			9,
+			10,
+			13,
+			18,
+			16,
+			14,
+			12
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
+	"drop check count": 5,
 	"element": "fire",
 	"evolution": {
 		"cost": 3000000,
@@ -485,6 +564,7 @@
 				"injury resist%": 100,
 				"paralysis resist%": 100,
 				"passive id": "4",
+				"passive target": "self",
 				"poison resist%": 100,
 				"sick resist%": 100,
 				"weaken resist%": 100
@@ -492,6 +572,7 @@
 			{
 				"conditions": [],
 				"passive id": "53",
+				"passive target": "self",
 				"strong base element damage resist%": 100,
 				"strong buffed element damage resist%": 100
 			}
@@ -503,18 +584,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1308,
-	"hit dmg% distribution": [
-		8,
-		9,
-		10,
-		13,
-		18,
-		16,
-		14,
-		12
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 10846,
 	"imp": {
 		"max atk": "440",
@@ -553,7 +622,18 @@
 		"name": "幻聖天の神域"
 	},
 	"lord damage range": "2281~2548",
-	"max bc generated": 40,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "聖神紀クリューク",
 	"overdrive stats": {
 		"atk%": 100,
@@ -562,27 +642,88 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な炎属性1６連ダメージ（残りＨＰが多いほど威力をアップ）＆味方全体の全状態異常を回復＆３ターン、ＢＣ獲得時の増加量をかなりアップ・攻撃力に応じて防御力をアップ",
-		"hit dmg% distribution": [
-			6,
-			7,
-			8,
-			9,
-			13,
-			9,
-			7,
-			6,
-			6,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					56,
+					59,
+					62,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101
+				],
+				"hit dmg% distribution": [
+					6,
+					7,
+					8,
+					9,
+					13,
+					9,
+					7,
+					6,
+					6,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "52"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "敵全体に強力な炎属性１６連ダメージ（残りＨＰが多いほど威力をアップ）＆味方全体の全状態異常を回復＆３ターン、ＢＣ獲得時の増加量をかなりアップ・攻撃力に応じて防御力をアップ",
+		"drop check count": 1,
 		"id": "110846",
 		"levels": [
 			{
@@ -1076,7 +1217,6 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "ヴァーディクト"
 	},
 	"sell caution": false,
@@ -1095,31 +1235,96 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な炎属性２０連ダメージ＆味方全体の最大ＨＰを大幅にアップ＆３ターン、被ダメージを１/４に軽減・被ダメージ時、確率で全状態異常をランダムに発生する効果を付与",
-		"hit dmg% distribution": [
-			4,
-			5,
-			6,
-			7,
-			12,
-			8,
-			7,
-			6,
-			6,
-			5,
-			5,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					56,
+					59,
+					62,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86,
+					90,
+					94,
+					98,
+					102,
+					106,
+					110,
+					114,
+					118,
+					122
+				],
+				"hit dmg% distribution": [
+					4,
+					5,
+					6,
+					7,
+					12,
+					8,
+					7,
+					6,
+					6,
+					5,
+					5,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "8"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "53"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "敵全体に超強力な炎属性２０連ダメージ＆味方全体の最大ＨＰを大幅にアップ＆３ターン、被ダメージを１/４に軽減・被ダメージ時、確率で全状態異常をランダムに発生する効果を付与",
+		"drop check count": 1,
 		"id": "210846",
 		"levels": [
 			{
@@ -1162,378 +1367,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1300,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 80,
-						"counter inflict injury% (81)": 80,
-						"counter inflict paralysis% (83)": 80,
-						"counter inflict poison% (78)": 80,
-						"counter inflict sick% (80)": 80,
-						"counter inflict weaken% (79)": 80,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1300,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 80,
-						"counter inflict injury% (81)": 80,
-						"counter inflict paralysis% (83)": 80,
-						"counter inflict poison% (78)": 80,
-						"counter inflict sick% (80)": 80,
-						"counter inflict weaken% (79)": 80,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1300,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 80,
-						"counter inflict injury% (81)": 80,
-						"counter inflict paralysis% (83)": 80,
-						"counter inflict poison% (78)": 80,
-						"counter inflict sick% (80)": 80,
-						"counter inflict weaken% (79)": 80,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1300,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 80,
-						"counter inflict injury% (81)": 80,
-						"counter inflict paralysis% (83)": 80,
-						"counter inflict poison% (78)": 80,
-						"counter inflict sick% (80)": 80,
-						"counter inflict weaken% (79)": 80,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1300,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 80,
-						"counter inflict injury% (81)": 80,
-						"counter inflict paralysis% (83)": 80,
-						"counter inflict poison% (78)": 80,
-						"counter inflict sick% (80)": 80,
-						"counter inflict weaken% (79)": 80,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1300,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 80,
-						"counter inflict injury% (81)": 80,
-						"counter inflict paralysis% (83)": 80,
-						"counter inflict poison% (78)": 80,
-						"counter inflict sick% (80)": 80,
-						"counter inflict weaken% (79)": 80,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1300,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 80,
-						"counter inflict injury% (81)": 80,
-						"counter inflict paralysis% (83)": 80,
-						"counter inflict poison% (78)": 80,
-						"counter inflict sick% (80)": 80,
-						"counter inflict weaken% (79)": 80,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1300,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 80,
-						"counter inflict injury% (81)": 80,
-						"counter inflict paralysis% (83)": 80,
-						"counter inflict poison% (78)": 80,
-						"counter inflict sick% (80)": 80,
-						"counter inflict weaken% (79)": 80,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1300,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"counter inflict ailment turns": 3,
-						"counter inflict curse% (82)": 80,
-						"counter inflict injury% (81)": 80,
-						"counter inflict paralysis% (83)": 80,
-						"counter inflict poison% (78)": 80,
-						"counter inflict sick% (80)": 80,
-						"counter inflict weaken% (79)": 80,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "53",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "聖紀の浄火"
 	}
 }

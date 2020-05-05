@@ -1,0 +1,39 @@
+{
+	"associated_units": [
+		"20366"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-04-07T13:46:48.000Z",
+		"updatedAt": "2016-04-07T13:46:48.000Z"
+	},
+	"desc": "ＨＰが満タン時、攻撃力をかなりアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、最大ＨＰに応じて防御力をアップ」を追加",
+	"effects": [
+		{
+			"atk% buff": 80,
+			"conditions": [],
+			"hp above % buff requirement": 100,
+			"passive id": "11",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"% converted turns": 3,
+					"converted attribute": "hp",
+					"def% buff (47)": 15,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "母なる海嘯",
+	"target": "self"
+}

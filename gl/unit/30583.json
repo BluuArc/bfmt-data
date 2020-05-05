@@ -19,22 +19,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 101
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "10 combo Earth attack on single foe & boosts Spark damage for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			5,
-			20,
-			15,
-			10,
-			10,
-			10,
-			10,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					15,
+					19,
+					25,
+					29,
+					33,
+					37,
+					40,
+					43,
+					46,
+					49
+				],
+				"hit dmg% distribution": [
+					10,
+					5,
+					20,
+					15,
+					10,
+					10,
+					10,
+					10,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo Earth attack on single foe & boosts Spark damage for 3 turns",
+		"drop check count": 2,
 		"id": "30583",
 		"levels": [
 			{
@@ -248,21 +290,41 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Albero Cleaver"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T16:25:19.000Z",
-		"updatedAt": "2016-02-04T14:52:26.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 30580,
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			15,
+			19,
+			25,
+			29,
+			33,
+			37
+		],
+		"hit dmg% distribution": [
+			25,
+			5,
+			10,
+			45,
+			10,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A beast-like youngster who crossed over to the strange land of Ishgria. After he left Grand Gaia without a trace, his presence was confirmed in Ishgria, where he continued his travels. At first Mau believed he had simply stumbled upon a different region of Grand Gaia, unaware of the fact that he had traveled to a different world. However, as he fought fearsome beasts and demons while roaming Ishgria, it is said that Mau felt sort of nostalgic about the unfamiliar place he found himself in.",
 		"evolution": "I have new power!<br>Me so happy.<br>I can continue journey now!",
 		"fusion": "I keep getting stronger.<br>Give me more, more power!<br>I fight for you!",
 		"summon": "You summon me,<br>so I come here.<br>I fight, no problem!"
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"prev": "30582"
@@ -271,16 +333,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 1028,
-	"hit dmg% distribution": [
-		25,
-		5,
-		10,
-		45,
-		10,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 30583,
 	"imp": {
 		"max atk": "200",
@@ -301,7 +353,18 @@
 		"name": "Forest Lord's Power"
 	},
 	"lord damage range": "1488~1662",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Wild Beast Mau",
 	"rarity": 4,
 	"sell caution": false,

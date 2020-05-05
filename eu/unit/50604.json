@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 113
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 12
+		}
+	},
 	"bb": {
-		"desc": "10 combo Light powerful attack on all enemies & adds Paralysis and Weakness effect to attack for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			8,
-			10,
-			8,
-			10,
-			8,
-			20,
-			9,
-			9,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					35,
+					38,
+					44,
+					47,
+					52,
+					55,
+					66,
+					69,
+					72,
+					75
+				],
+				"hit dmg% distribution": [
+					10,
+					8,
+					10,
+					8,
+					10,
+					8,
+					20,
+					9,
+					9,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo Light powerful attack on all enemies & adds Paralysis and Weakness effect to attack for 3 turns",
+		"drop check count": 1,
 		"id": "50604",
 		"levels": [
 			{
@@ -264,20 +306,44 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Spiral Shine"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 18,
+	"damage frames": {
+		"frame times": [
+			35,
+			38,
+			44,
+			47,
+			52,
+			55,
+			66,
+			69
+		],
+		"hit dmg% distribution": [
+			16,
+			8,
+			15,
+			8,
+			15,
+			8,
+			20,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "The queen of a small country in the Bariura region which was destroyed by an ancient dragon. She set off to find the dragon not to take revenge, but to defeat it in order to prevent it from causing any further damage. After failing to persuade the dragon and subsequently being hurt by the creature, more companions joined the queen and the knight in their journey. Along with a disciple and a former disciple, her support and that of her comrades helped to change the knight's mind. It is said that after witnessing this she felt the need to keep a strong disposition, but simultaneously somewhat lonely. ",
 		"evolution": "This power...<br>I have finally been acknowledged...<br>If this is true, I shall not let you down!",
 		"fusion": "I wish to become stronger...<br>For my own sake as well...<br>Oh, pardon me. I said nothing...",
 		"summon": "I have an unseemly side as well.<br>Will you still accept me?<br>Then, I shall become your sword!"
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -315,18 +381,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 769,
-	"hit dmg% distribution": [
-		16,
-		8,
-		15,
-		8,
-		15,
-		8,
-		20,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 50604,
 	"imp": {
 		"max atk": "200",
@@ -352,7 +406,18 @@
 		"name": "Divine Gale"
 	},
 	"lord damage range": "1657~1852",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Poinsettia Priscilla",
 	"rarity": 5,
 	"sell caution": false,

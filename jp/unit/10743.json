@@ -19,20 +19,72 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 97
+		},
+		"idle": {
+			"total number of frames": 55
+		},
+		"move": {
+			"total number of frames": 9
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性８連ダメージ＆味方全体に３ターン、攻撃ＢＢの威力を少しアップ・ＢＣ獲得時の増加量を少しアップ",
-		"hit dmg% distribution": [
-			15,
-			8,
-			5,
-			15,
-			8,
-			5,
-			30,
-			14
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					5,
+					8,
+					11,
+					22,
+					25,
+					28,
+					54,
+					60
+				],
+				"hit dmg% distribution": [
+					15,
+					8,
+					5,
+					15,
+					8,
+					5,
+					30,
+					14
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "52"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "敵全体に炎属性８連ダメージ＆味方全体に３ターン、攻撃ＢＢの威力を少しアップ・ＢＣ獲得時の増加量を少しアップ",
+		"drop check count": 1,
 		"id": "10743",
 		"levels": [
 			{
@@ -346,20 +398,38 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "アーデント・アーツ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-30T18:49:29.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10740,
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			5,
+			9,
+			22,
+			26,
+			54
+		],
+		"hit dmg% distribution": [
+			20,
+			10,
+			20,
+			10,
+			40
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A mock Unit based on Elise, the young receptionist in charge of handling the Raid requests from the Akras Summoners' Hall. Though she no longer fights on the field, Elise was once the vice-commander of the \"Silver Knights,\" the 21st Division of the Demon Slayers. Noah, the commander of the Silver Knights, thought very highly of Elise's abilities, and considered her his most trusted ally and advisor. Unlike him, however, Elise paid a lot more attention to minor details, which earned her the trust of her comrades as well.",
 		"fusion": "In return for this power,<br>I'll do my very best.<br>Although I don't really know<br>how much use I'll be...",
 		"summon": "Are you here to accept a mission?<br>What?! I've been summoned?!<br>Do you really think I can help?"
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 200000,
@@ -396,15 +466,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 1108,
-	"hit dmg% distribution": [
-		20,
-		10,
-		20,
-		10,
-		40
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 10743,
 	"imp": {
 		"max atk": "200",
@@ -431,7 +492,18 @@
 		"name": "銀騎士隊の印"
 	},
 	"lord damage range": "1145~1279",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "調査員エリーゼ",
 	"rarity": 4,
 	"sell caution": true,

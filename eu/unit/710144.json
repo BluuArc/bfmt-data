@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 112
+		},
+		"idle": {
+			"total number of frames": 72
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "10 combo Fire elemental attack all ennemies & Greatly recovers own HP",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					56,
+					62,
+					68,
+					74,
+					80,
+					86,
+					94,
+					102,
+					110,
+					118
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo Fire elemental attack all enemies & Greatly recovers own HP",
+		"drop check count": 1,
 		"id": "710144",
 		"levels": [
 			{
@@ -264,14 +306,36 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Wolf Bite"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 17,
+	"damage frames": {
+		"frame times": [
+			56,
+			62,
+			68,
+			74,
+			80,
+			86,
+			94
+		],
+		"hit dmg% distribution": [
+			14,
+			16,
+			14,
+			14,
+			14,
+			14,
+			14
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -309,17 +373,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7061,
-	"hit dmg% distribution": [
-		14,
-		16,
-		14,
-		14,
-		14,
-		14,
-		14
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 710144,
 	"imp": {
 		"max atk": "260",
@@ -343,7 +396,18 @@
 		"name": "Strength of the Pack"
 	},
 	"lord damage range": "1693~1891",
-	"max bc generated": 21,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Count Heinrich",
 	"rarity": 5,
 	"sell caution": false,

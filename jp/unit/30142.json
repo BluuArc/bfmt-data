@@ -31,16 +31,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 85
+		},
+		"idle": {
+			"total number of frames": 40
+		},
+		"move": {
+			"total number of frames": 7
+		}
+	},
 	"bb": {
-		"desc": "敵単体に樹属性４連ダメージ＆高確率で怪我・弱体状態にする",
-		"hit dmg% distribution": [
-			20,
-			20,
-			20,
-			40
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					28,
+					34,
+					62,
+					68
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					20,
+					40
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "敵単体に樹属性４連ダメージ＆高確率で怪我・弱体状態にする",
+		"drop check count": 2,
 		"id": "30142",
 		"levels": [
 			{
@@ -244,21 +280,37 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "アダマントクラック"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 30140,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			28,
+			34,
+			62,
+			68
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			40
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A boxer who studied martial arts at the Toltya Dojo in Sama. Surrounded from childhood by burly men locked in the pursuit of strength, Nemia was sensitive about the manly mannerisms she had picked up. Upon reaching Vriksha to find her true parents, she was dismayed to find herself the butt of many a cruel joke about her rough and ready manner. She soon turned her tormentors’ jibes into howls of pain, however, and made quite the name for herself wherever she went.",
 		"evolution": "Nice!<br>That’s this training level finished.<br>Okay, it’s time to take things a notch higher!",
 		"fusion": "Yes, YES!!<br>Soon I’ll be the strongest person alive!",
 		"summon": "Have no fear––I’m here to help!<br>Hm? You thought I was a boy?<br>I DARE you to say that again!"
 	},
+	"drop check count": 3,
 	"element": "earth",
 	"evolution": {
 		"cost": 100000,
@@ -296,14 +348,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 210,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		40
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 30142,
 	"imp": {
 		"max atk": "100",
@@ -324,7 +368,18 @@
 		"name": "猛者の力"
 	},
 	"lord damage range": "1016~1135",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "剛拳闘士ネミア",
 	"rarity": 3,
 	"sell caution": false,

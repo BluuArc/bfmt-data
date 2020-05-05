@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 46
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "10 combo Light elemental attack on single enemy & probable probably Paralysis and Curse effect",
-		"hit dmg% distribution": [
-			20,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					36,
+					44,
+					54,
+					64,
+					66,
+					74,
+					76,
+					70,
+					84,
+					86
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					20
+				],
+				"hit dmg% distribution (total)": 120,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 120,
-		"hits": 10,
+		"desc": "10 combo Light elemental attack on single enemy & probable probably Paralysis and Curse effect",
+		"drop check count": 1,
 		"id": "750113",
 		"levels": [
 			{
@@ -244,14 +286,38 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Claw Scratch"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			36,
+			44,
+			54,
+			64,
+			66,
+			74,
+			84,
+			86
+		],
+		"hit dmg% distribution": [
+			20,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"cost": 200000,
@@ -288,18 +354,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7032,
-	"hit dmg% distribution": [
-		20,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 750113,
 	"imp": {
 		"max atk": "220",
@@ -326,7 +380,18 @@
 		"name": "Light of Valhalla"
 	},
 	"lord damage range": "1467~1639",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Alvitr",
 	"rarity": 4,
 	"sell caution": false,

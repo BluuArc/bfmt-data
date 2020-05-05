@@ -25,17 +25,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 201
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 10
+		}
+	},
 	"bb": {
-		"desc": "敵単体に雷属性５連ダメージ＆高確率で麻痺状態にする",
-		"hit dmg% distribution": [
-			25,
-			10,
-			20,
-			10,
-			35
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					27,
+					44,
+					87,
+					104,
+					147
+				],
+				"hit dmg% distribution": [
+					25,
+					10,
+					20,
+					10,
+					35
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "敵単体に雷属性５連ダメージ＆高確率で麻痺状態にする",
+		"drop check count": 1,
 		"id": "40102",
 		"levels": [
 			{
@@ -229,21 +266,39 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "フラッシュストリーム"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40100,
 	"cost": 5,
+	"damage frames": {
+		"frame times": [
+			27,
+			44,
+			87,
+			104,
+			147
+		],
+		"hit dmg% distribution": [
+			25,
+			10,
+			20,
+			10,
+			35
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A knight from the ruined Atharva Republic. His mid-air, dual wielding fighting style earned him the name Sky Knight. Extremely loyal, Falma will follow his lord's commands without question, and works hard to carry them out. He's close friends with Sky Boss Grafl, and it's said their friendship came from them noticing how different they really were.",
 		"evolution": " ",
 		"fusion": "A knight must become stronger!<br>I aim to take my dual blade skill to an even higher level!",
 		"summon": "These dual blades are <br>my pride as a knight!<br>Can you handle this power?"
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 100000,
@@ -270,15 +325,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 129,
-	"hit dmg% distribution": [
-		25,
-		10,
-		20,
-		10,
-		35
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 40102,
 	"imp": {
 		"max atk": "120",
@@ -299,7 +345,18 @@
 		"name": "猛者の力"
 	},
 	"lord damage range": "888~993",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "空千騎ファルマ",
 	"rarity": 3,
 	"sell caution": false,

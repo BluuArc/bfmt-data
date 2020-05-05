@@ -25,17 +25,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 62
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 7
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 암속성 5연속 데미지＆낮은 확률로 저주 효과",
-		"hit dmg% distribution": [
-			30,
-			30,
-			20,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					19,
+					20,
+					21,
+					22,
+					23
+				],
+				"hit dmg% distribution": [
+					30,
+					30,
+					20,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "적 전체에게 암속성 5연속 데미지＆낮은 확률로 저주 효과",
+		"drop check count": 1,
 		"id": "60152",
 		"levels": [
 			{
@@ -229,21 +266,37 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "어새신 대거"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 60150,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			19,
+			20,
+			21,
+			22
+		],
+		"hit dmg% distribution": [
+			35,
+			30,
+			20,
+			15
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A ninja said to have lived in the ruined Bariura Empire. After the rumors of Oboro died down, a member of the imperial family was assassinated after advocating peace and a reduction in war expenditures. Rumors spread that the perpetrator was dressed in black, yet somehow Oboro's name never came up. It was almost as if someone had tried to erase any evidence that he had any involvement in the incident.",
 		"evolution": "Are you trying to lead me<br>further into darkness?<br>Alright, I'll be your blade.",
 		"fusion": "......<br>You who gives me power...<br>Whose life are you after?",
 		"summon": "A shinobi's place is in the dark.<br>I don't speak,<br>I just accomplish my missions!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 100000,
@@ -281,14 +334,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 219,
-	"hit dmg% distribution": [
-		35,
-		30,
-		20,
-		15
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 60152,
 	"imp": {
 		"max atk": "120",
@@ -309,7 +354,18 @@
 		"name": "전쟁신의 빛"
 	},
 	"lord damage range": "885~990",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 8,
+			"move speed type": "1",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 8,
+			"move speed type": "1",
+			"move type": "2"
+		}
+	},
 	"name": "암살자 오보로",
 	"rarity": 3,
 	"sell caution": false,

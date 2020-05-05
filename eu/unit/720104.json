@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 84
+		},
+		"idle": {
+			"total number of frames": 42
+		},
+		"move": {
+			"total number of frames": 21
+		}
+	},
 	"bb": {
-		"desc": "8 combo powerful Water attack on single enemy & probable Weak effect",
-		"hit dmg% distribution": [
-			20,
-			10,
-			20,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					24,
+					28,
+					40,
+					44,
+					73,
+					78,
+					83,
+					88
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					20,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo powerful Water attack on single enemy & probable Weak effect",
+		"drop check count": 1,
 		"id": "720104",
 		"levels": [
 			{
@@ -232,30 +272,72 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Glacier Crush"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			24,
+			28,
+			40,
+			44,
+			47,
+			50,
+			53
+		],
+		"hit dmg% distribution": [
+			25,
+			10,
+			25,
+			10,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
+	"drop check count": 4,
 	"element": "water",
+	"evolution": {
+		"cost": 500000,
+		"mats": [
+			{
+				"id": "50354",
+				"name": "Miracle Totem",
+				"type": "unit"
+			},
+			{
+				"id": "20133",
+				"name": "Water Totem",
+				"type": "unit"
+			},
+			{
+				"id": "20191",
+				"name": "Water Pot",
+				"type": "unit"
+			},
+			{
+				"id": "60224",
+				"name": "Metal Mimic",
+				"type": "unit"
+			},
+			{
+				"id": "720012",
+				"name": "Love Idol",
+				"type": "unit"
+			}
+		],
+		"next": "720105"
+	},
 	"exp_pattern": 15,
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7039,
-	"hit dmg% distribution": [
-		25,
-		10,
-		25,
-		10,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 720104,
 	"imp": {
 		"max atk": "200",
@@ -276,7 +358,18 @@
 		"name": "Dynasty Power"
 	},
 	"lord damage range": "1391~1554",
-	"max bc generated": 28,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Lovestruck Sergio",
 	"rarity": 5,
 	"sell caution": false,

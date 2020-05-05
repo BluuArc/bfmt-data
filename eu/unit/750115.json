@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,27 +25,74 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 124
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "15 combo massive Light attack on single enemy & probable Curse and Paralysis effect",
-		"hit dmg% distribution": [
-			6,
-			6,
-			6,
-			6,
-			6,
-			16,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					30,
+					32,
+					34,
+					36,
+					38,
+					40,
+					42,
+					44,
+					46,
+					48,
+					50,
+					52,
+					54,
+					56,
+					58
+				],
+				"hit dmg% distribution": [
+					6,
+					6,
+					6,
+					6,
+					6,
+					16,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo massive Light attack on single enemy & probable Curse and Paralysis effect",
+		"drop check count": 1,
 		"id": "750115",
 		"levels": [
 			{
@@ -249,14 +296,46 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Claw gash"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 30,
+	"damage frames": {
+		"frame times": [
+			8,
+			23,
+			29,
+			38,
+			44,
+			48,
+			56,
+			66,
+			76,
+			86,
+			92,
+			96
+		],
+		"hit dmg% distribution": [
+			8,
+			8,
+			12,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"prev": "750114"
@@ -265,22 +344,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7034,
-	"hit dmg% distribution": [
-		8,
-		8,
-		12,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 750115,
 	"imp": {
 		"max atk": "340",
@@ -307,31 +370,79 @@
 		"name": "Torch of Valhalla"
 	},
 	"lord damage range": "1955~2184",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Goddess Alvitr",
 	"rarity": 6,
 	"sbb": {
-		"desc": "16 combo cataclysmic Light attack on single enemy & Curse, Paralysis, Poison",
-		"hit dmg% distribution": [
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			10,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					36,
+					44,
+					54,
+					64,
+					66,
+					70,
+					74,
+					76,
+					84,
+					86,
+					128,
+					132,
+					134,
+					136,
+					138,
+					140
+				],
+				"hit dmg% distribution": [
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					10,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo cataclysmic Light attack on single enemy & Probable Curse, Paralysis and Poison effect",
+		"drop check count": 2,
 		"id": "1750115",
 		"levels": [
 			{
@@ -545,7 +656,6 @@
 				]
 			}
 		],
-		"max bc generated": 32,
 		"name": "Infinite claws"
 	},
 	"sell caution": false,

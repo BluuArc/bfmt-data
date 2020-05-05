@@ -19,16 +19,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "4 combo massive Fire attack on single enemy, adds Def ignoring effect to attack for 2 turns & chance of greatly reducing enemy's Atk and for 2 turns ",
-		"hit dmg% distribution": [
-			15,
-			30,
-			28,
-			27
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					35,
+					87,
+					92,
+					97
+				],
+				"hit dmg% distribution": [
+					15,
+					30,
+					28,
+					27
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "4 combo massive Fire attack on single enemy, adds Def ignoring effect to attack for 2 turns & chance of greatly reducing enemy's Atk and for 2 turns ",
+		"drop check count": 8,
 		"id": "810525",
 		"levels": [
 			{
@@ -362,21 +402,33 @@
 				]
 			}
 		],
-		"max bc generated": 32,
 		"name": "Phoenix Shot"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 810520,
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			35,
+			87
+		],
+		"hit dmg% distribution": [
+			25,
+			75
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "Little is known about Grandt's past. It is said that Grandt used to serve in the Elysian royal army and got booted due to his refusal to obey the chain of command. He often devised his own strategies in the field, jeopardizing pre-planned operations. Although his impromptu tactics worked and made his missions a success, his actions were not favored by the leaders of the army. When he left the army, everything bored him other than being on the field. Grandt then started taking contracts from different companies and militant sectors, sometimes working together with other skilled mercenaries on dangerous missions and assassinations. When Elysia came under attack from the gods, he was recruited by the royal court to eliminate Draegar.",
 		"evolution": " ",
 		"fusion": "Survival of the fittest!",
 		"summon": "My sword will slice through evil, my shots shall ring in the darkness... For the right price."
 	},
+	"drop check count": 9,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -403,8 +455,8 @@
 			},
 			{
 				"id": "880001",
-				"name": "Ruby Relic",
-				"type": "item"
+				"name": "880001",
+				"type": "unit"
 			}
 		],
 		"next": "810526"
@@ -413,12 +465,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 8123,
-	"hit dmg% distribution": [
-		25,
-		75
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 810525,
 	"imp": {
 		"max atk": "240",
@@ -439,7 +485,18 @@
 		"name": "Flashing Slash"
 	},
 	"lord damage range": "1760~1965",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Grandt",
 	"rarity": 5,
 	"sell caution": false,

@@ -19,22 +19,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 146
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 17
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性１０連ダメージ＆味方全体に３ターン、攻撃力をかなりアップ・クリティカル率を大幅にアップ",
-		"hit dmg% distribution": [
-			11,
-			8,
-			5,
-			12,
-			19,
-			15,
-			11,
-			8,
-			6,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					17,
+					21,
+					25,
+					61,
+					77,
+					93,
+					100,
+					106,
+					112,
+					118
+				],
+				"hit dmg% distribution": [
+					11,
+					8,
+					5,
+					12,
+					19,
+					15,
+					11,
+					8,
+					6,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "敵全体に炎属性１０連ダメージ＆味方全体に３ターン、攻撃力をかなりアップ・クリティカル率を大幅にアップ",
+		"drop check count": 1,
 		"id": "10754",
 		"levels": [
 			{
@@ -268,20 +310,42 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "フレアダスト"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T19:18:05.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10750,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			17,
+			21,
+			61,
+			77,
+			93,
+			100,
+			107
+		],
+		"hit dmg% distribution": [
+			15,
+			10,
+			13,
+			20,
+			18,
+			14,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A knight who served the Agni Empire before the great war with the gods. Formal records depicting his service state that he vanished after having been granted an audience with the emperor at the time. Many speculated that he disappeared in order to carry out the emperor's secret orders, which was proven to be true thanks to documents that surfaced afterwards. However, he would later suffer an accident that would leave him in a state of amnesia while on his mission. According to a certain blacksmith's diary, Avant was found wandering about during the latter half of the great war.",
 		"fusion": "I know I'll regain my powers...<br>Then it's off to the field again.<br>Wait, did I say \"again\"?",
 		"summon": "Are you inviting me to a new battle?<br>Very well then.<br>I just have to wield my sword again."
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -318,17 +382,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1138,
-	"hit dmg% distribution": [
-		15,
-		10,
-		13,
-		20,
-		18,
-		14,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 10754,
 	"imp": {
 		"max atk": "260",
@@ -349,7 +402,18 @@
 		"name": "覇王の天啓"
 	},
 	"lord damage range": "1910~2134",
-	"max bc generated": 21,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "覇炎戦神アヴァン",
 	"rarity": 5,
 	"sell caution": false,

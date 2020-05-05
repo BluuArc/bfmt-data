@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,22 +19,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 105
+		},
+		"idle": {
+			"total number of frames": 156
+		},
+		"move": {
+			"total number of frames": 56
+		}
+	},
 	"bb": {
-		"desc": "Thunder elemental attack on single enemy & boost to BC drop rate",
-		"hit dmg% distribution": [
-			9,
-			9,
-			9,
-			9,
-			9,
-			11,
-			11,
-			11,
-			11,
-			11
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0,
+					11,
+					22,
+					33,
+					44,
+					48,
+					52,
+					56,
+					60,
+					64
+				],
+				"hit dmg% distribution": [
+					9,
+					9,
+					9,
+					9,
+					9,
+					11,
+					11,
+					11,
+					11,
+					11
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "Thunder elemental attack on single enemy & boost to BC drop rate",
+		"drop check count": 2,
 		"id": "50063",
 		"levels": [
 			{
@@ -178,20 +208,40 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Skyward Glave"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-09-03T04:48:35.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			1,
+			12,
+			23,
+			34,
+			45,
+			56
+		],
+		"hit dmg% distribution": [
+			16,
+			16,
+			17,
+			17,
+			17,
+			17
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A mythical beast with a virtuous sword attached to its forehead, and rainbow wings covering its back. Said to be the sacred horse which pulled the tanks of the God Army, or a divine beast that can cut through the darkness, this creature is considered the best creation the gods ever made. The blade on its forehead is sharper than any sword humans are capable of producing, and it is said to be particularly effective when cutting down demons. For this reason Remuihl is believed to be a natural enemy of the demon race, and has thus come to adorn the temples of many countries as a charm of protection against evil.",
 		"evolution": "You now possess the sword of light.<br>I will destroy anything in your path.",
 		"fusion": "My wings are shining.<br>This is proof of your noble heart.<br>You should be proud.",
 		"summon": "My horn will crush all evil.<br>If your heart is untrue,<br>I shall cut you in half."
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"prev": "50061"
@@ -200,16 +250,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 703,
-	"hit dmg% distribution": [
-		16,
-		16,
-		17,
-		17,
-		17,
-		17
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 50063,
 	"imp": {
 		"max atk": "160",
@@ -230,7 +270,18 @@
 		"name": "Pure Shining"
 	},
 	"lord damage range": "953~1064",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Remuihl",
 	"rarity": 4,
 	"sell caution": false,

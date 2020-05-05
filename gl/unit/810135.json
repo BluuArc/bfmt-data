@@ -19,22 +19,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "10 combo powerful Fire attack on all enemies, casts Taunt & massive boost to own Def for 1 turn",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "333.3/20",
+				"frame times": [
+					15,
+					20,
+					45,
+					55,
+					65,
+					75,
+					95,
+					105,
+					115,
+					125
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [],
+				"hit dmg% distribution": [],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "10000"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo powerful Fire attack on all enemies, casts Taunt & massive boost to own Def for 1 turn",
+		"drop check count": 1,
 		"id": "8310063",
 		"levels": [
 			{
@@ -238,21 +268,45 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Tempest Thrust"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-09-17T03:58:43.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 810130,
 	"cost": 17,
+	"damage frames": {
+		"frame times": [
+			35,
+			40,
+			65,
+			75,
+			85,
+			115,
+			125,
+			135
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			10,
+			15,
+			15,
+			10,
+			15,
+			15
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "Ultor was created by the old gods, birthed from fire and stone. He had a natural desire for battle and glory, wields the strength of a thousand men, and has great talent in combat. He was in charge of defending the lost lands of Athensphere, appointed by the leader of the demi-gods, Zedus. Athensphere's defense force never lost a single battle until Gazia, a corrupted demi-god, went on the offensive against the utopian lands, throwing everything into chaos. Although Ultor never lost his fights, the defensive force had fallen, and Athenshpere was forsaken by the old gods, cast into the abyss of the Vortex. Till today, he fights on, struggling to reclaim and preserve the promised utopian lands of Athensphere.",
 		"evolution": "One day...Gazia will pay for what he's done!",
 		"fusion": "I'll smash as they come, one by one I'll take all of them down!",
 		"summon": "Honor and Glory!"
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -290,18 +344,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 8050,
-	"hit dmg% distribution": [
-		10,
-		10,
-		10,
-		15,
-		15,
-		10,
-		15,
-		15
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 810135,
 	"imp": {
 		"max atk": "220",
@@ -333,7 +375,18 @@
 		"name": "Heroic Stance"
 	},
 	"lord damage range": "1596~1783",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "Valiant Ultor",
 	"rarity": 5,
 	"sell caution": false,

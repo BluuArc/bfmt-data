@@ -25,17 +25,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 69
+		},
+		"idle": {
+			"total number of frames": 44
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 뇌속성 5연속 데미지＆낮은 확률로 부상 효과",
-		"hit dmg% distribution": [
-			20,
-			20,
-			20,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					32,
+					35,
+					38,
+					41,
+					44
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					20,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "적 전체에게 뇌속성 5연속 데미지＆낮은 확률로 부상 효과",
+		"drop check count": 1,
 		"id": "40144",
 		"levels": [
 			{
@@ -229,21 +266,39 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "비연뇌신연각"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 40140,
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			32,
+			35,
+			38,
+			41,
+			44
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A fighter hailing from the Republic of Atalva who trained at the Toltya Dojo in the Sama Kingdom. After completing his training, Zeln set out on a journey to look for Nemia while continuing to hone his skills. He followed tales of Nemia’s exploits across the land, leaving a trail of humbled challengers in his wake. It’s said that he rescued Nemia from the jaws of death while fighting the gods in Sama, but whether this is true or not is a matter for debate.",
 		"evolution": "Say hello to my evolved form! This is the true face of the Lightning King.",
 		"fusion": "Come to me, power! Forge my body into a blade capable of saving the one I love!",
 		"summon": "Summoner!<br>Can you cure people of their regrets?<br>If so, my power is yours to command."
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"cost": 200000,
@@ -281,15 +336,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 214,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 40143,
 	"imp": {
 		"max atk": "120",
@@ -310,7 +356,18 @@
 		"name": "왕자의 힘"
 	},
 	"lord damage range": "1168~1305",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "질풍신뢰왕 제렌",
 	"rarity": 4,
 	"sell caution": false,

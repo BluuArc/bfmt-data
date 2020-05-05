@@ -19,21 +19,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "9 combo powerful Thunder attack on single enemy & boost to Spark damage for 3 turns",
-		"hit dmg% distribution": [
-			6,
-			7,
-			6,
-			7,
-			7,
-			7,
-			20,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					45,
+					50,
+					55,
+					60,
+					65,
+					100,
+					110,
+					120
+				],
+				"hit dmg% distribution": [
+					6,
+					7,
+					6,
+					7,
+					7,
+					7,
+					20,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "9 combo powerful Thunder attack on single enemy & boost to Spark damage for 3 turns",
+		"drop check count": 2,
 		"id": "8501441",
 		"levels": [
 			{
@@ -247,21 +280,39 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Thunder Blitz"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-10-06T03:45:35.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 840140,
 	"cost": 27,
+	"damage frames": {
+		"frame times": [
+			50,
+			120,
+			130,
+			140,
+			150
+		],
+		"hit dmg% distribution": [
+			30,
+			17,
+			17,
+			17,
+			19
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "Zedus was the first demi-god created by the old gods in an attempt to establish a utopian land. Birthed from a ravaging lightning storm, he wielded the power of electric carnage and could strike down any foe within moments. With his exceptional leadership skills, he guided the rest of the demi-gods toward achieving new milestones of civilization. Seeing potential in the talented tinkerer Gazia, Zedus assigned him to  technological research for the development of Athensphere. However, as time went by, Gazia experimented with forbidden technology that disrupted the balance of nature. Fearing that it would become uncontrollable, Zedus ordered him to shut down his research. Gazia created an iron army before Zedus could stop him, starting the augmentation wars which led to the old gods forsaking the once utopian lands of Athensphere. Desperate to regain control, Zedus made a hard decision to use the enemy's power against itself. Tearing apart a mighty Grievesnare, he armed himself with all the power he could salvage and control...",
 		"evolution": "So this is the power Gazia dreams of..",
 		"fusion": "This power of mine will be a temporary strength for my victory!",
 		"summon": "When you are desperate and jaded, anything goes. I will take back Athensphere!"
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -299,15 +350,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 8066,
-	"hit dmg% distribution": [
-		30,
-		17,
-		17,
-		17,
-		19
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 840146,
 	"imp": {
 		"max atk": "300",
@@ -336,18 +378,65 @@
 		"name": "Zedus' Providence"
 	},
 	"lord damage range": "1955~2184",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Boltdrive Zedus",
 	"rarity": 6,
 	"sbb": {
-		"desc": "3 combo massive Thunder attack on all enemies, boost to Spark damage for 3 turns & adds chance of decreasing Atk and Def for 1 turn",
-		"hit dmg% distribution": [
-			20,
-			20,
-			60
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					50,
+					90
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					60
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 3,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 3,
+		"desc": "3 combo massive Thunder attack on all enemies, boost to Spark damage for 3 turns & adds chance of decreasing Atk and Def for 1 turn",
+		"drop check count": 8,
 		"id": "8501442",
 		"levels": [
 			{
@@ -721,7 +810,6 @@
 				]
 			}
 		],
-		"max bc generated": 24,
 		"name": "Judgment"
 	},
 	"sell caution": false,

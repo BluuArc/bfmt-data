@@ -19,22 +19,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 146
+		},
+		"idle": {
+			"total number of frames": 88
+		},
+		"move": {
+			"total number of frames": 21
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 암속성 10연속 데미지&확률로 1턴간 공격력 저하",
-		"hit dmg% distribution": [
-			23,
-			19,
-			14,
-			10,
-			9,
-			7,
-			6,
-			5,
-			4,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					40,
+					45,
+					50,
+					55,
+					60,
+					65,
+					70,
+					75,
+					80,
+					85
+				],
+				"hit dmg% distribution": [
+					23,
+					19,
+					14,
+					10,
+					9,
+					7,
+					6,
+					5,
+					4,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "적 전체에게 강력한 암속성 10연속 데미지&확률로 1턴간 공격력 저하",
+		"drop check count": 1,
 		"id": "60565",
 		"levels": [
 			{
@@ -288,20 +330,44 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "소서리 완드"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T09:12:07.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 60560,
 	"cost": 29,
+	"damage frames": {
+		"frame times": [
+			40,
+			45,
+			50,
+			55,
+			60,
+			65,
+			70,
+			75
+		],
+		"hit dmg% distribution": [
+			25,
+			21,
+			16,
+			11,
+			9,
+			7,
+			6,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A magician from the Bariura Empire belonging to the special military force supervised directly by Shida. Though her personality was gentle, her beloved demonic lantern is said to have held a great amount of dark power. Due to her lantern's ability to absorb and materialize any surrounding chemical elements, Shida took a particular interest in Lumie and had her help him conduct confidential experiments in absolute secrecy. Their research progressed at a faster rate than they had initially expected, but Lumie distanced herself from it all shortly afterwards to conduct her on experiments.",
 		"fusion": "I can feel my lantern's will...<br>If it keeps absorbing dark power,<br>I don't know what will happen.",
 		"summon": "Are you keen on my lantern or me?<br>I'll show you lots of spirits<br>to celebrate our meeting."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 1500000,
@@ -338,18 +404,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 998,
-	"hit dmg% distribution": [
-		25,
-		21,
-		16,
-		11,
-		9,
-		7,
-		6,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 60565,
 	"imp": {
 		"max atk": "400",
@@ -379,27 +433,95 @@
 		"name": "흔들리는 악마의 등불"
 	},
 	"lord damage range": "1726~1929",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "마정등공주 루미에",
 	"rarity": 6,
 	"sbb": {
-		"desc": "적 전체에게 강력한 암속성 12연속 데미지&확률로 1턴간 공격력 저하&3턴간 아군 전체의 HP 서서히 회복&BB게이지 서서히 증가",
-		"hit dmg% distribution": [
-			19,
-			14,
-			10,
-			9,
-			8,
-			8,
-			7,
-			7,
-			6,
-			5,
-			4,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					40,
+					45,
+					50,
+					55,
+					60,
+					65,
+					70,
+					75,
+					80,
+					85,
+					90,
+					95
+				],
+				"hit dmg% distribution": [
+					19,
+					14,
+					10,
+					9,
+					8,
+					8,
+					7,
+					7,
+					6,
+					5,
+					4,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "적 전체에게 강력한 암속성 12연속 데미지&확률로 1턴간 공격력 저하&3턴간 아군 전체의 HP 서서히 회복&BB게이지 서서히 증가",
+		"drop check count": 1,
 		"id": "160565",
 		"levels": [
 			{
@@ -833,7 +955,6 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "그룸 시어"
 	},
 	"sell caution": false,

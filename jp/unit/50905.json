@@ -19,22 +19,88 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 70
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 51
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光属性１０連ダメージ＆味方全体のＨＰを回復・全状態異常を回復＆２ターン、ガード時のダメージ軽減率をアップ",
-		"hit dmg% distribution": [
-			15,
-			15,
-			11,
-			11,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					26,
+					30,
+					34,
+					38,
+					42,
+					46,
+					50,
+					54,
+					58,
+					62
+				],
+				"hit dmg% distribution": [
+					15,
+					15,
+					11,
+					11,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					70
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "68"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "敵全体に光属性１０連ダメージ＆味方全体のＨＰを回復・全状態異常を回復＆２ターン、ガード時のダメージ軽減率をアップ",
+		"drop check count": 2,
 		"id": "50905",
 		"levels": [
 			{
@@ -508,15 +574,35 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "ライト・オブ・ナイト"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-14T16:14:07.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50900,
 	"cost": 25,
+	"damage frames": {
+		"frame times": [
+			26,
+			29,
+			32,
+			35,
+			38,
+			41
+		],
+		"hit dmg% distribution": [
+			25,
+			21,
+			15,
+			15,
+			12,
+			12
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
+	"drop check count": 5,
 	"element": "light",
 	"evolution": {
 		"prev": "50904"
@@ -525,16 +611,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1229,
-	"hit dmg% distribution": [
-		25,
-		21,
-		15,
-		15,
-		12,
-		12
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 50905,
 	"imp": {
 		"max atk": "400",
@@ -566,29 +642,87 @@
 		"name": "白き騎士のイデア"
 	},
 	"lord damage range": "1639~1830",
-	"max bc generated": 30,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "救国の白騎士アーサー",
 	"rarity": 6,
 	"sbb": {
-		"desc": "敵全体に強力な光属性１４連ダメージ＆味方全体に１ターン、被ダメージを軽減＆３ターン、攻撃力に応じて防御力をアップ",
-		"hit dmg% distribution": [
-			13,
-			10,
-			6,
-			6,
-			6,
-			6,
-			10,
-			9,
-			9,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					26,
+					31,
+					36,
+					41,
+					46,
+					51,
+					56,
+					61,
+					66,
+					71,
+					76,
+					81,
+					86,
+					91
+				],
+				"hit dmg% distribution": [
+					13,
+					10,
+					6,
+					6,
+					6,
+					6,
+					10,
+					9,
+					9,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "敵全体に強力な光属性１４連ダメージ＆味方全体に１ターン、被ダメージを軽減＆３ターン、攻撃力に応じて防御力をアップ",
+		"drop check count": 1,
 		"id": "150905",
 		"levels": [
 			{
@@ -892,7 +1026,6 @@
 				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "この剣に刻みし追億の日々"
 	},
 	"sell caution": false,

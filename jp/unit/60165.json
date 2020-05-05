@@ -25,22 +25,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 131
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 60
+		}
+	},
 	"bb": {
-		"desc": "敵全体に闇属性１０連ダメージ＆確率で毒状態にする",
-		"hit dmg% distribution": [
-			10,
-			9,
-			10,
-			9,
-			10,
-			9,
-			10,
-			9,
-			9,
-			15
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "666.7/40",
+				"frame times": [
+					42,
+					50,
+					58,
+					66,
+					74,
+					82,
+					90,
+					98,
+					106,
+					130
+				],
+				"hit dmg% distribution": [
+					10,
+					9,
+					10,
+					9,
+					10,
+					9,
+					10,
+					9,
+					9,
+					15
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "敵全体に闇属性１０連ダメージ＆確率で毒状態にする",
+		"drop check count": 1,
 		"id": "60165",
 		"levels": [
 			{
@@ -244,21 +286,47 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "アスモデウス"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60160,
 	"cost": 22,
+	"damage frames": {
+		"frame times": [
+			42,
+			50,
+			58,
+			66,
+			74,
+			82,
+			90,
+			98,
+			116
+		],
+		"hit dmg% distribution": [
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			16,
+			16,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 9
+	},
 	"dictionary": {
 		"description": "A sorceress specializing in necromancy. Her hopes of reviving her dead lover were dashed by Dilias. He had consumed the soul of the man she so longed to see. After learning the truth she went mad, cursing the entire world. She dedicated all her magic to seeing that all spirits were returned to a world of nothingness, as she wished to see what would be left after gods, men, the living, and the dead were all destroyed.",
 		"evolution": "There is no peace here.<br>That is why I must destroy all.<br>All can rest in peace then.",
 		"fusion": "I will soon break at this rate.<br>I can't forgive anything anymore.<br>Not even myself...",
 		"summon": "Why do you appear before me?<br>I've nothing but despair now.<br>Do you still desire to battle?"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "60164"
@@ -267,19 +335,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 476,
-	"hit dmg% distribution": [
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		16,
-		16,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 9,
 	"id": 60165,
 	"imp": {
 		"max atk": "300",
@@ -302,27 +357,83 @@
 		"name": "魂の灯火"
 	},
 	"lord damage range": "1490~1664",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 2,
+			"move speed type": "4",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 2,
+			"move speed type": "4",
+			"move type": "3"
+		}
+	},
 	"name": "死星霊神レムリア",
 	"rarity": 6,
 	"sbb": {
-		"desc": "敵全体に強力な闇属性１２連ダメージ＆確率で全状態異常をランダムに発生",
-		"hit dmg% distribution": [
-			10,
-			7,
-			7,
-			7,
-			10,
-			7,
-			10,
-			7,
-			10,
-			7,
-			8,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "666.7/40",
+				"frame times": [
+					42,
+					50,
+					58,
+					66,
+					74,
+					82,
+					90,
+					98,
+					106,
+					114,
+					122,
+					130
+				],
+				"hit dmg% distribution": [
+					10,
+					7,
+					7,
+					7,
+					10,
+					7,
+					10,
+					7,
+					10,
+					7,
+					8,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "敵全体に強力な闇属性１２連ダメージ＆確率で全状態異常をランダムに発生",
+		"drop check count": 1,
 		"id": "160165",
 		"levels": [
 			{
@@ -636,7 +747,6 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "闇の世界"
 	},
 	"sell caution": false,

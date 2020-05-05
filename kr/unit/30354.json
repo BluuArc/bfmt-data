@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 128
+		},
+		"idle": {
+			"total number of frames": 126
+		},
+		"move": {
+			"total number of frames": 136
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 목속성 8연속 데미지＆3턴간 공격에 수속성 부여",
-		"hit dmg% distribution": [
-			15,
-			10,
-			10,
-			25,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					39,
+					49,
+					59,
+					79,
+					87,
+					95,
+					103,
+					111
+				],
+				"hit dmg% distribution": [
+					15,
+					10,
+					10,
+					25,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "적 전체에게 목속성 8연속 데미지＆3턴간 공격에 수속성 부여",
+		"drop check count": 1,
 		"id": "30354",
 		"levels": [
 			{
@@ -272,21 +312,39 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "크랙 헤일"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 30350,
 	"cost": 16,
+	"damage frames": {
+		"frame times": [
+			45,
+			55,
+			82,
+			88,
+			94
+		],
+		"hit dmg% distribution": [
+			25,
+			15,
+			30,
+			20,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A mild-mannered general of the Principality of Vriksha, whose bolstered defenses, combined with Douglas' pulverizing attacks, drove the gods away time after time. The night before Douglas left to intercept the army of gods by himself, he confessed to Darvan that his armor was from another world. He also informed him that though Darvan could unleash his armor's full potential, controlling it would be a different ordeal altogether.",
 		"evolution": "My armor's potential has been unleashed.<br>Can you handle it?<br>I should ask myself that too.",
 		"fusion": "Ideas and principles...<br>they were meaningless in that war.<br>I know that now.",
 		"summon": "No enemy army is too big.<br>I won't run away.<br>So neither should you."
 	},
+	"drop check count": 3,
 	"element": "earth",
 	"evolution": {
 		"cost": 500000,
@@ -324,15 +382,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 537,
-	"hit dmg% distribution": [
-		25,
-		15,
-		30,
-		20,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 30354,
 	"imp": {
 		"max atk": "160",
@@ -354,7 +403,18 @@
 		"name": "오광신의 힘"
 	},
 	"lord damage range": "1416~1582",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "중장비신 다르반",
 	"rarity": 5,
 	"sell caution": false,

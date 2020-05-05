@@ -19,30 +19,92 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 148
+		},
+		"idle": {
+			"total number of frames": 90
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "18 combo powerful all non-dark elemental attack on all foes, negates all status ailments and adds Light element to attack for 3 turns",
-		"hit dmg% distribution": [
-			3,
-			3,
-			3,
-			4,
-			4,
-			5,
-			5,
-			5,
-			5,
-			6,
-			6,
-			7,
-			7,
-			10,
-			9,
-			8,
-			6,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					7,
+					12,
+					18,
+					23,
+					28,
+					33,
+					37,
+					41,
+					45,
+					49,
+					53,
+					57,
+					61,
+					75,
+					80,
+					85,
+					90,
+					95
+				],
+				"hit dmg% distribution": [
+					3,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5,
+					5,
+					5,
+					6,
+					6,
+					7,
+					7,
+					10,
+					9,
+					8,
+					6,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo powerful all non-dark elemental attack on all foes, negates all status ailments and adds Light element to attack for 3 turns",
+		"drop check count": 1,
 		"id": "50276",
 		"levels": [
 			{
@@ -456,21 +518,61 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Aspros"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-27T14:43:14.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 50270,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			7,
+			12,
+			18,
+			23,
+			28,
+			33,
+			37,
+			41,
+			45,
+			49,
+			53,
+			57,
+			61,
+			75,
+			80,
+			85
+		],
+		"hit dmg% distribution": [
+			4,
+			4,
+			4,
+			5,
+			5,
+			5,
+			6,
+			6,
+			6,
+			7,
+			7,
+			7,
+			7,
+			10,
+			9,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 16
+	},
 	"dictionary": {
 		"description": "A ten-winged figure that laid waste to Lizeria. His identity turned out to be one of the \"Six Armors\" that had been created by a scientist from another world. Having been destroyed by DUEL-GX, another of the Six Armors, its functions came to a complete stop. However, after the people of Grand Gaia were eradicated by the gods, Melchio came back to life as a monstrous being very unlike his original self. He continued to fight the gods until his half-broken armor was completely destroyed, though the reasons behind this course of action remain unknown.",
 		"evolution": "I am already... If not...<br>I...represent the gods...<br>I must...restore...order...",
 		"fusion": "I shall...destroy the Fallen Gods...<br>Thus I need more power...<br>It's a promise I made...long ago...",
 		"summon": "The world was already destroyed...<br>I...am...a vessel...<br>An...instrument...of the...gods..."
 	},
+	"drop check count": 3,
 	"element": "light",
 	"evolution": {
 		"prev": "50275"
@@ -491,11 +593,13 @@
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -526,26 +630,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 1004,
-	"hit dmg% distribution": [
-		4,
-		4,
-		4,
-		5,
-		5,
-		5,
-		6,
-		6,
-		6,
-		7,
-		7,
-		7,
-		7,
-		10,
-		9,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 16,
 	"id": 50276,
 	"imp": {
 		"max atk": "440",
@@ -576,7 +660,18 @@
 		"name": "Destructive Threat"
 	},
 	"lord damage range": "2091~2335",
-	"max bc generated": 48,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Invictus Xeno Melchio",
 	"overdrive stats": {
 		"atk%": 100,
@@ -585,31 +680,96 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "20 combo powerful all non-dark elemental attack on all foes & negates all status ailments, adds Light element to attack and boosts Def relative to Atk for 3 turns",
-		"hit dmg% distribution": [
-			3,
-			3,
-			3,
-			4,
-			4,
-			4,
-			4,
-			5,
-			5,
-			5,
-			6,
-			6,
-			6,
-			10,
-			9,
-			8,
-			6,
-			4,
-			3,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					7,
+					12,
+					18,
+					23,
+					28,
+					33,
+					37,
+					41,
+					45,
+					49,
+					53,
+					57,
+					61,
+					75,
+					80,
+					85,
+					90,
+					95,
+					100,
+					105
+				],
+				"hit dmg% distribution": [
+					3,
+					3,
+					3,
+					4,
+					4,
+					4,
+					4,
+					5,
+					5,
+					5,
+					6,
+					6,
+					6,
+					10,
+					9,
+					8,
+					6,
+					4,
+					3,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "20 combo powerful all non-dark elemental attack on all foes & negates all status ailments, adds Light element to attack and boosts Def relative to Atk for 3 turns",
+		"drop check count": 1,
 		"id": "150276",
 		"levels": [
 			{
@@ -1113,7 +1273,6 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Belial Close"
 	},
 	"sell caution": false,
@@ -1132,35 +1291,104 @@
 		}
 	},
 	"ubb": {
-		"desc": "24 combo massive all non-dark elemental attack on all foes, removes all status ailments and negates them for 3 turns & reduces damage taken by 75% for 1 turn",
-		"hit dmg% distribution": [
-			2,
-			2,
-			3,
-			3,
-			3,
-			4,
-			4,
-			4,
-			5,
-			5,
-			5,
-			6,
-			6,
-			10,
-			7,
-			6,
-			5,
-			4,
-			4,
-			3,
-			3,
-			2,
-			2,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					7,
+					12,
+					18,
+					23,
+					28,
+					33,
+					37,
+					41,
+					45,
+					49,
+					53,
+					57,
+					61,
+					75,
+					79,
+					83,
+					87,
+					91,
+					95,
+					99,
+					103,
+					107,
+					111,
+					115
+				],
+				"hit dmg% distribution": [
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4,
+					4,
+					5,
+					5,
+					5,
+					6,
+					6,
+					10,
+					7,
+					6,
+					5,
+					4,
+					4,
+					3,
+					3,
+					2,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 24,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					140
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 24,
+		"desc": "24 combo massive all non-dark elemental attack on all foes, removes all status ailments and negates them for 3 turns & reduces damage taken by 75% for 1 turn",
+		"drop check count": 1,
 		"id": "250276",
 		"levels": [
 			{
@@ -1218,513 +1446,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"fire",
-							"water",
-							"earth"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "17",
-						"resist curse% (34)": 100,
-						"resist injury% (33)": 100,
-						"resist paralysis% (35)": 100,
-						"resist poison% (30)": 100,
-						"resist sick% (32)": 100,
-						"resist status ails turns": 3,
-						"resist weaken% (31)": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"fire",
-							"water",
-							"earth"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "17",
-						"resist curse% (34)": 100,
-						"resist injury% (33)": 100,
-						"resist paralysis% (35)": 100,
-						"resist poison% (30)": 100,
-						"resist sick% (32)": 100,
-						"resist status ails turns": 3,
-						"resist weaken% (31)": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"fire",
-							"water",
-							"earth"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "17",
-						"resist curse% (34)": 100,
-						"resist injury% (33)": 100,
-						"resist paralysis% (35)": 100,
-						"resist poison% (30)": 100,
-						"resist sick% (32)": 100,
-						"resist status ails turns": 3,
-						"resist weaken% (31)": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"fire",
-							"water",
-							"earth"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "17",
-						"resist curse% (34)": 100,
-						"resist injury% (33)": 100,
-						"resist paralysis% (35)": 100,
-						"resist poison% (30)": 100,
-						"resist sick% (32)": 100,
-						"resist status ails turns": 3,
-						"resist weaken% (31)": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"fire",
-							"water",
-							"earth"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "17",
-						"resist curse% (34)": 100,
-						"resist injury% (33)": 100,
-						"resist paralysis% (35)": 100,
-						"resist poison% (30)": 100,
-						"resist sick% (32)": 100,
-						"resist status ails turns": 3,
-						"resist weaken% (31)": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"fire",
-							"water",
-							"earth"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "17",
-						"resist curse% (34)": 100,
-						"resist injury% (33)": 100,
-						"resist paralysis% (35)": 100,
-						"resist poison% (30)": 100,
-						"resist sick% (32)": 100,
-						"resist status ails turns": 3,
-						"resist weaken% (31)": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"fire",
-							"water",
-							"earth"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "17",
-						"resist curse% (34)": 100,
-						"resist injury% (33)": 100,
-						"resist paralysis% (35)": 100,
-						"resist poison% (30)": 100,
-						"resist sick% (32)": 100,
-						"resist status ails turns": 3,
-						"resist weaken% (31)": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"fire",
-							"water",
-							"earth"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "17",
-						"resist curse% (34)": 100,
-						"resist injury% (33)": 100,
-						"resist paralysis% (35)": 100,
-						"resist poison% (30)": 100,
-						"resist sick% (32)": 100,
-						"resist status ails turns": 3,
-						"resist weaken% (31)": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb elements": [
-							"fire",
-							"water",
-							"earth"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "17",
-						"resist curse% (34)": 100,
-						"resist injury% (33)": 100,
-						"resist paralysis% (35)": 100,
-						"resist poison% (30)": 100,
-						"resist sick% (32)": 100,
-						"resist status ails turns": 3,
-						"resist weaken% (31)": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 75,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 24,
 		"name": "Dusk Demon's Advent"
 	}
 }

@@ -19,24 +19,68 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 205
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 암속성 12연속 데미지&3턴간 아군 전체의 스파크 시의 데미지 상승",
-		"hit dmg% distribution": [
-			15,
-			7,
-			11,
-			5,
-			10,
-			4,
-			11,
-			6,
-			11,
-			4,
-			10,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134,
+					137,
+					140,
+					143
+				],
+				"hit dmg% distribution": [
+					15,
+					7,
+					11,
+					5,
+					10,
+					4,
+					11,
+					6,
+					11,
+					4,
+					10,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "적 전체에게 강력한 암속성 12연속 데미지&3턴간 아군 전체의 스파크 시의 데미지 상승",
+		"drop check count": 1,
 		"id": "60576",
 		"levels": [
 			{
@@ -250,21 +294,33 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "슬레지 글로브"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T09:12:07.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 60570,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			110,
+			123
+		],
+		"hit dmg% distribution": [
+			50,
+			50
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "The daughter of a nobleman from the Amdahl Empire, which was destroyed by the Kingdom of Palmyna. As her flail thirsted for revenge, she continued to pulverize the God Army without hesitation. However, when one of the gods felt threatened by her, she was teleported to Ishgria. After a sudden flash of light she saw a land full of chaos spread before her. Assuming she had reached the land of the dead, she set off to find the relatives she had lost when Amdahl fell with frustration written on her face. The paths she walked were all decorated by the corpses of the demons she pulverized along the way.",
 		"evolution": "So you want to see the real me?<br>You're a curious one indeed.<br>Would you like me to crush you? Hehe.",
 		"fusion": "You seem to understand my taste.<br>I think of you a bit more highly now.<br>Just a tad bit.",
 		"summon": "I know the past is unchangeable.<br>But I want to believe we can let<br>it go in lieu of a happy future."
 	},
+	"drop check count": 8,
 	"element": "dark",
 	"evolution": {
 		"prev": "60575"
@@ -277,6 +333,7 @@
 				"bb atk% buff": 150,
 				"conditions": [],
 				"passive id": "64",
+				"passive target": "self",
 				"sbb atk% buff": 150,
 				"ubb atk% buff": 150
 			}
@@ -288,12 +345,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 1001,
-	"hit dmg% distribution": [
-		50,
-		50
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 60576,
 	"imp": {
 		"max atk": "440",
@@ -318,7 +369,18 @@
 		"name": "강철 공주의 섬황"
 	},
 	"lord damage range": "2245~2508",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "명계의 사슬공주 실비아",
 	"overdrive stats": {
 		"atk%": 100,
@@ -327,13 +389,36 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "적 1명에게 아주 강력한 암속성 2연속 데미지&확률로 1턴간 방어력 저하",
-		"hit dmg% distribution": [
-			50,
-			50
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					110,
+					123
+				],
+				"hit dmg% distribution": [
+					50,
+					50
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 2,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 2,
+		"desc": "적 1명에게 아주 강력한 암속성 2연속 데미지&확률로 1턴간 방어력 저하",
+		"drop check count": 20,
 		"id": "160576",
 		"levels": [
 			{
@@ -587,7 +672,6 @@
 				]
 			}
 		],
-		"max bc generated": 40,
 		"name": "패계의 마강구"
 	},
 	"sell caution": false,
@@ -606,31 +690,72 @@
 		}
 	},
 	"ubb": {
-		"desc": "적 전체에게 아주 강력한 암속성 20연속 데미지&1턴간 자신의 스파크 시 데미지 초대폭 상승",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134,
+					137,
+					140,
+					143,
+					146,
+					149,
+					152,
+					155,
+					158,
+					161,
+					164,
+					167
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "적 전체에게 아주 강력한 암속성 20연속 데미지&1턴간 자신의 스파크 시 데미지 초대폭 상승",
+		"drop check count": 1,
 		"id": "260576",
 		"levels": [
 			{
@@ -653,198 +778,8 @@
 						"target type": "self"
 					}
 				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 300,
-						"target area": "single",
-						"target type": "self"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "드레드노트"
 	}
 }

@@ -25,23 +25,66 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 149
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 9
+		}
+	},
 	"bb": {
-		"desc": "敵全体に闇属性１１連ダメージ＆確率で弱体・怪我状態にする",
-		"hit dmg% distribution": [
-			10,
-			5,
-			5,
-			10,
-			5,
-			5,
-			30,
-			8,
-			7,
-			8,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					6,
+					10,
+					14,
+					39,
+					43,
+					47,
+					79,
+					83,
+					87,
+					91,
+					95
+				],
+				"hit dmg% distribution": [
+					10,
+					5,
+					5,
+					10,
+					5,
+					5,
+					30,
+					8,
+					7,
+					8,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 11,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 11,
+		"desc": "敵全体に闇属性１１連ダメージ＆確率で弱体・怪我状態にする",
+		"drop check count": 1,
 		"id": "60543",
 		"levels": [
 			{
@@ -255,21 +298,45 @@
 				]
 			}
 		],
-		"max bc generated": 11,
 		"name": "レイヴンフラクチャー"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60540,
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			6,
+			10,
+			39,
+			43,
+			79,
+			83,
+			87,
+			91
+		],
+		"hit dmg% distribution": [
+			15,
+			8,
+			15,
+			8,
+			30,
+			9,
+			8,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "The disciple of the god Afla Dilith. He has the tendency to acknowledge the strength of those who possess it, regardless of their race. This does not mean that he considers them as equals, but rather that they have the potential to become valuable subordinates for himself. Using his underlings to fight on the battlefield, he is rarely seen at the front lines. However, it is said that during his battle with the servants of the last Fallen God, Zevalhua, this disciple attacked with his own power for once, dying enemy after enemy bright red with their own blood.",
 		"evolution": " ",
 		"fusion": "Human.<br>Do you seek more power<br>though you live so sinfully?",
 		"summon": "If you could enslave me,<br>you must really possess<br>terrifying powers."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 200000,
@@ -306,18 +373,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 675,
-	"hit dmg% distribution": [
-		15,
-		8,
-		15,
-		8,
-		30,
-		9,
-		8,
-		7
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 60543,
 	"imp": {
 		"max atk": "140",
@@ -340,7 +395,18 @@
 		"name": "黒の神気"
 	},
 	"lord damage range": "1257~1404",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "神徒ザーグ",
 	"rarity": 4,
 	"sell caution": false,

@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,21 +25,50 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 164
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 46
+		}
+	},
 	"bb": {
-		"desc": "9 combo Dark elemental attack on all enemies",
-		"hit dmg% distribution": [
-			8,
-			8,
-			9,
-			10,
-			11,
-			12,
-			13,
-			14,
-			15
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					54,
+					64,
+					74,
+					84,
+					94,
+					104,
+					114,
+					124,
+					134
+				],
+				"hit dmg% distribution": [
+					8,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "9 combo Dark elemental attack on all enemies",
+		"drop check count": 1,
 		"id": "60274",
 		"levels": [
 			{
@@ -173,20 +202,40 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "Demon Execution"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 16,
+	"damage frames": {
+		"frame times": [
+			54,
+			64,
+			74,
+			84,
+			98,
+			112
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			20,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A girl with a human mother and demon father. As a demon she challenged the White Beast, but during her fight she couldn't completely ignore her human half. Lost, having given up on the only life she'd ever known, she was asked by the White Beast to help vanquish a disastrous beast. With Golem, which her father had left behind, by her side as always, she bravely nodded as if this were her chance to make up for her sins.",
 		"evolution": "I understand now.<br>All that flows inside of me,<br>it all makes up who I am...",
 		"fusion": "The stronger I get, <br>the more demonic I feel.<br>But still, as part human...",
 		"summon": "I am Lira, a magistra.<br>I'm both demon and human.<br>How do I appear to you?<br>"
 	},
+	"drop check count": 3,
 	"element": "dark",
 	"evolution": {
 		"cost": 500000,
@@ -224,16 +273,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 426,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		20,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 60274,
 	"imp": {
 		"max atk": "200",
@@ -262,7 +301,18 @@
 		"name": "Pandemic Spread"
 	},
 	"lord damage range": "1460~1630",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "2"
+		}
+	},
 	"name": "Magistra Lira",
 	"rarity": 5,
 	"sell caution": false,

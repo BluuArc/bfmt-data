@@ -31,17 +31,42 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 99
+		},
+		"idle": {
+			"total number of frames": 56
+		},
+		"move": {
+			"total number of frames": 14
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性５連ダメージ",
-		"hit dmg% distribution": [
-			25,
-			30,
-			15,
-			15,
-			15
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					30,
+					40,
+					60,
+					75,
+					90
+				],
+				"hit dmg% distribution": [
+					25,
+					30,
+					15,
+					15,
+					15
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "敵全体に雷属性５連ダメージ",
+		"drop check count": 1,
 		"id": "40013",
 		"levels": [
 			{
@@ -175,21 +200,33 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "雷神烈破斬"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40010,
 	"cost": 8,
+	"damage frames": {
+		"frame times": [
+			30,
+			40
+		],
+		"hit dmg% distribution": [
+			80,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "A warrior from the ruined Atharva Republic, he later became one of the Six Heroes. While training, he found the Thunder Sword Batootha among the treasure he received when he defeated Behemoth. It held the power of lighting, bringing Eze's skill to a whole new level. He could tear through armor like paper, and people call him the Thunder King. They still talk of his bravery.",
 		"evolution": "Thunder Sword Batootha's lighting will burn this image <br>into your mind!",
 		"fusion": "Whoa!<br>Feel the electricty flow from<br>Thunder Sword Batootha!",
 		"summon": "Thunder Sword Batootha! <br>Turn all those foolish enough<br>to face me into ash!"
 	},
+	"drop check count": 7,
 	"element": "thunder",
 	"evolution": {
 		"cost": 200000,
@@ -227,12 +264,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 15,
-	"hit dmg% distribution": [
-		80,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 40013,
 	"imp": {
 		"max atk": "260",
@@ -256,7 +287,18 @@
 		"name": "雷創神の力"
 	},
 	"lord damage range": "1204~1345",
-	"max bc generated": 14,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "雷武王エゼル",
 	"rarity": 4,
 	"sell caution": false,

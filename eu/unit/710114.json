@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 79
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "10 combo Fire elemental attack on all enemies",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					56,
+					62,
+					68,
+					74,
+					80,
+					86,
+					94,
+					102,
+					110,
+					118
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo Fire elemental attack on all enemies",
+		"drop check count": 1,
 		"id": "710114",
 		"levels": [
 			{
@@ -174,14 +204,42 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Fire on Earth"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			8,
+			23,
+			29,
+			38,
+			44,
+			48,
+			56,
+			66,
+			76,
+			86
+		],
+		"hit dmg% distribution": [
+			6,
+			6,
+			6,
+			6,
+			12,
+			12,
+			13,
+			13,
+			13,
+			13
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -219,20 +277,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7021,
-	"hit dmg% distribution": [
-		6,
-		6,
-		6,
-		6,
-		12,
-		12,
-		13,
-		13,
-		13,
-		13
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 710114,
 	"imp": {
 		"max atk": "400",
@@ -259,7 +303,18 @@
 		"name": "Light of Valhalla"
 	},
 	"lord damage range": "1769~1976",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Holy Skalmold",
 	"rarity": 5,
 	"sell caution": false,

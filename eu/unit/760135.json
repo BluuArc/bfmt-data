@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,27 +25,62 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 195
+		},
+		"idle": {
+			"total number of frames": 90
+		},
+		"move": {
+			"total number of frames": 18
+		}
+	},
 	"bb": {
-		"desc": "15 combo massive dark attack on single enemy",
-		"hit dmg% distribution": [
-			10,
-			10,
-			8,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					52,
+					54,
+					56,
+					75,
+					76,
+					77,
+					110,
+					111,
+					112,
+					113,
+					114,
+					115,
+					116,
+					117,
+					118
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					8,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo massive dark attack on single enemy",
+		"drop check count": 1,
 		"id": "760135",
 		"levels": [
 			{
@@ -179,14 +214,46 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Dark Amputation"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 27,
+	"damage frames": {
+		"frame times": [
+			52,
+			53,
+			54,
+			56,
+			75,
+			76,
+			110,
+			111,
+			112,
+			113,
+			114,
+			115
+		],
+		"hit dmg% distribution": [
+			12,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "760134"
@@ -195,22 +262,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7059,
-	"hit dmg% distribution": [
-		12,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 760135,
 	"imp": {
 		"max atk": "480",
@@ -235,31 +286,79 @@
 		"name": "Dark Coma"
 	},
 	"lord damage range": "2070~2312",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "God arbeZ",
 	"rarity": 6,
 	"sbb": {
-		"desc": "16 combo massive dark attack on single enemy & Fills own BB gauge (100%)",
-		"hit dmg% distribution": [
-			10,
-			10,
-			8,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					52,
+					53,
+					54,
+					75,
+					76,
+					110,
+					111,
+					112,
+					113,
+					114,
+					115,
+					116,
+					117,
+					118,
+					119,
+					120
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					8,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					70
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo massive dark attack on single enemy & Fills own BB gauge (100%)",
+		"drop check count": 2,
 		"id": "1760135",
 		"levels": [
 			{
@@ -463,7 +562,6 @@
 				]
 			}
 		],
-		"max bc generated": 32,
 		"name": "Dark Grace"
 	},
 	"sell caution": false,

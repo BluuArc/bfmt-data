@@ -19,16 +19,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 114
+		},
+		"idle": {
+			"total number of frames": 84
+		},
+		"move": {
+			"total number of frames": 84
+		}
+	},
 	"bb": {
-		"desc": "적 전체에 목속성 4연속 데미지&확률로 저주효과",
-		"hit dmg% distribution": [
-			25,
-			25,
-			25,
-			25
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					60,
+					68,
+					76,
+					84
+				],
+				"hit dmg% distribution": [
+					25,
+					25,
+					25,
+					25
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "적 전체에 목속성 4연속 데미지&확률로 저주효과",
+		"drop check count": 3,
 		"id": "30262",
 		"levels": [
 			{
@@ -232,21 +268,37 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "커즈 포트"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2015-08-14T00:39:50.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 30260,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			68,
+			76,
+			84,
+			92
+		],
+		"hit dmg% distribution": [
+			40,
+			20,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A wicked demon known as the leader of the Tinpalls. Although she seems very cute, this demon wields terrifying powers. Living in the depths of the forest, she spends her life toying with the humans the Tinpalls bring with them. It is said that when famous warriors and clergymen visit the forest, these demons seek them out in order to corrupt them. The fairies have long been their enemy, and they constantly fight each other in places unknown to humans.",
 		"evolution": "Wow! Thanks a lot!<br>With this I can...hehe...",
 		"fusion": "That was delicious!<br>But I want to eat more.<br>Can I? Can I?",
 		"summon": "Nice to meet you!<br>Are you a Summoner?<br>I will do my best!"
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"prev": "30261"
@@ -255,14 +307,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 634,
-	"hit dmg% distribution": [
-		40,
-		20,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 30262,
 	"imp": {
 		"max atk": "120",
@@ -283,7 +327,18 @@
 		"name": "나무의 수호"
 	},
 	"lord damage range": "809~903",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "나무정령 피니아",
 	"rarity": 3,
 	"sell caution": false,

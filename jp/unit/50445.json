@@ -31,30 +31,92 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 306
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 15
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光属性１８連ダメージ＆味方全体に３ターン、ターン毎にＨＰを回復・ＢＢゲージをかなり増加",
-		"hit dmg% distribution": [
-			10,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			10,
-			4,
-			4,
-			4,
-			10,
-			8,
-			7,
-			6,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					9,
+					14,
+					18,
+					22,
+					27,
+					32,
+					37,
+					42,
+					47,
+					51,
+					57,
+					63,
+					70,
+					135,
+					140,
+					145,
+					150,
+					155
+				],
+				"hit dmg% distribution": [
+					10,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					10,
+					4,
+					4,
+					4,
+					10,
+					8,
+					7,
+					6,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "敵全体に光属性１８連ダメージ＆味方全体に３ターン、ターン毎にＨＰを回復・ＢＢゲージをかなり増加",
+		"drop check count": 1,
 		"id": "50445",
 		"levels": [
 			{
@@ -368,21 +430,55 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "ローグ・アンビシオン"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50440,
 	"cost": 30,
+	"damage frames": {
+		"frame times": [
+			9,
+			18,
+			27,
+			35,
+			42,
+			50,
+			56,
+			62,
+			135,
+			140,
+			145,
+			150,
+			155
+		],
+		"hit dmg% distribution": [
+			8,
+			8,
+			8,
+			8,
+			8,
+			8,
+			6,
+			6,
+			8,
+			8,
+			8,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
 	"dictionary": {
 		"description": "A mock Unit modeled after Eriole, the commanding officer of the Randall Empire's \"Imperial Guard.\" As a child, he grew up in the same orphanage as his aide, Tesla. Resenting the noble family that cost Tesla her eyesight, he came to hate those of privileged origin. However, this side of himself was one he shared with no one but Tesla. The mock Unit that Noel created included this dark side of Eriole, allowing it to reach an incredible amount of power. According to Noel, the fully unleashed power of this Eriole rivals even that of the gods'.",
 		"evolution": "So now you've seen this side of me...<br>Grant me power then!<br>Power to fulfill my ambitions!",
 		"fusion": "I don't care where it comes from...<br>I need power...<br>Power to destroy it all...",
 		"summon": "The privileged only cause harm!<br>One day all nobility<br>will meet its end at my hands!"
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"prev": "50444"
@@ -391,23 +487,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 846,
-	"hit dmg% distribution": [
-		8,
-		8,
-		8,
-		8,
-		8,
-		8,
-		6,
-		6,
-		8,
-		8,
-		8,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 13,
 	"id": 50445,
 	"imp": {
 		"max atk": "300",
@@ -438,40 +517,109 @@
 		"name": "天帝の威光"
 	},
 	"lord damage range": "2005~2240",
-	"max bc generated": 26,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "漆翼の天帝エリオール",
 	"rarity": 6,
 	"sbb": {
-		"desc": "敵全体に強力な光属性２５連ダメージ＆確率で攻撃力・防御力を１ターン大幅に低下＆味方全体に３ターン、攻撃力・防御力をかなりアップ",
-		"hit dmg% distribution": [
-			8,
-			4,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			4,
-			6,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					9,
+					14,
+					18,
+					22,
+					27,
+					32,
+					37,
+					42,
+					47,
+					51,
+					57,
+					63,
+					70,
+					77,
+					84,
+					91,
+					135,
+					140,
+					145,
+					150,
+					155,
+					160,
+					165,
+					170,
+					175
+				],
+				"hit dmg% distribution": [
+					8,
+					4,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					4,
+					6,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 25,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 25,
+		"desc": "敵全体に強力な光属性２５連ダメージ＆確率で攻撃力・防御力を１ターン大幅に低下＆味方全体に３ターン、攻撃力・防御力をかなりアップ",
+		"drop check count": 1,
 		"id": "150445",
 		"levels": [
 			{
@@ -865,7 +1013,6 @@
 				]
 			}
 		],
-		"max bc generated": 25,
 		"name": "黒意天究の裁き"
 	},
 	"sell caution": true,

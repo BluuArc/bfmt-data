@@ -25,25 +25,82 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 126
+		},
+		"idle": {
+			"total number of frames": 78
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "13 combo powerful Water attack on all foes, probable Poison, Injury effects & boosts critical hit rate for 3 turns",
-		"hit dmg% distribution": [
-			8,
-			5,
-			5,
-			8,
-			5,
-			5,
-			10,
-			9,
-			9,
-			9,
-			9,
-			9,
-			9
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					14,
+					19,
+					22,
+					29,
+					34,
+					37,
+					73,
+					76,
+					79,
+					82,
+					85,
+					88,
+					91
+				],
+				"hit dmg% distribution": [
+					8,
+					5,
+					5,
+					8,
+					5,
+					5,
+					10,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 13,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 13,
+		"desc": "13 combo powerful Water attack on all foes, probable Poison, Injury effects & boosts critical hit rate for 3 turns",
+		"drop check count": 1,
 		"id": "20326",
 		"levels": [
 			{
@@ -347,21 +404,51 @@
 				]
 			}
 		],
-		"max bc generated": 13,
 		"name": "Morte Verto"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T16:25:19.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 20320,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			14,
+			19,
+			22,
+			29,
+			34,
+			37,
+			73,
+			77,
+			81,
+			85,
+			89
+		],
+		"hit dmg% distribution": [
+			10,
+			5,
+			5,
+			10,
+			5,
+			5,
+			12,
+			12,
+			12,
+			12,
+			12
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
 	"dictionary": {
 		"description": "After losing an eye to the blade of a former comrade, Signas was rescued from certain death by Grybe, who struggled to keep Farlon at bay. Badly injured, Signas tried to make her way towards Sodis only to witness a horrible scene. It was then when Signas erased her name from the history books and began training a secret resistance against the gods. No one knows what became of her afterwards, but some legends claim that she volunteered to take care of the children who had fled from the wrath of the gods, earning her a reputation as the \"One-Eyed Swordswoman.\"",
 		"evolution": "Losing a battle is not the same<br>as giving up on everything.<br>I'll fight once more, for you.",
 		"fusion": "Even if you make me stronger,<br>I still won't be able to save anyone.<br>You're better off helping others.",
 		"summon": "Working together is difficult,<br>but it brings out our true powers.<br>If we could all just join forces..."
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"prev": "20325"
@@ -375,7 +462,8 @@
 				"bc fill on crit min": 4,
 				"bc fill on crit%": 100,
 				"conditions": [],
-				"passive id": "65"
+				"passive id": "65",
+				"passive target": "self"
 			}
 		],
 		"id": "5700",
@@ -385,21 +473,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1036,
-	"hit dmg% distribution": [
-		10,
-		5,
-		5,
-		10,
-		5,
-		5,
-		12,
-		12,
-		12,
-		12,
-		12
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 11,
 	"id": 20326,
 	"imp": {
 		"max atk": "340",
@@ -429,7 +502,18 @@
 		"name": "Strong Conviction"
 	},
 	"lord damage range": "2331~2604",
-	"max bc generated": 33,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Blizzard Fang Signas",
 	"overdrive stats": {
 		"atk%": 100,
@@ -438,27 +522,88 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "16 combo powerful Water attack on all foes & boosts Water elemental damage, boosts critical hit rate and critical damage for 3 turns",
-		"hit dmg% distribution": [
-			8,
-			4,
-			4,
-			4,
-			8,
-			4,
-			4,
-			4,
-			11,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					14,
+					17,
+					20,
+					23,
+					29,
+					32,
+					35,
+					38,
+					73,
+					76,
+					79,
+					82,
+					85,
+					88,
+					91,
+					94
+				],
+				"hit dmg% distribution": [
+					8,
+					4,
+					4,
+					4,
+					8,
+					4,
+					4,
+					4,
+					11,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo powerful Water attack on all foes & boosts Water elemental damage, boosts critical hit rate and critical damage for 3 turns",
+		"drop check count": 1,
 		"id": "120326",
 		"levels": [
 			{
@@ -852,7 +997,6 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Congelatio"
 	},
 	"sell caution": false,
@@ -871,33 +1015,88 @@
 		}
 	},
 	"ubb": {
-		"desc": "22 combo massive Water attack on all foes, hugely boosts critical damage for 3 turns & massively reduces Fire elemental damage for 2 turns",
-		"hit dmg% distribution": [
-			8,
-			4,
-			3,
-			2,
-			8,
-			4,
-			3,
-			3,
-			2,
-			2,
-			11,
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					14,
+					17,
+					20,
+					23,
+					29,
+					32,
+					35,
+					38,
+					41,
+					44,
+					73,
+					76,
+					79,
+					82,
+					85,
+					88,
+					91,
+					94,
+					97,
+					100,
+					103,
+					106
+				],
+				"hit dmg% distribution": [
+					8,
+					4,
+					3,
+					2,
+					8,
+					4,
+					3,
+					3,
+					2,
+					2,
+					11,
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "16"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "22 combo massive Water attack on all foes, hugely boosts critical damage for 3 turns & massively reduces Fire elemental damage for 2 turns",
+		"drop check count": 1,
 		"id": "220326",
 		"levels": [
 			{
@@ -928,270 +1127,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate fire attacks (21)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate fire attacks (21)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate fire attacks (21)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate fire attacks (21)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate fire attacks (21)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate fire attacks (21)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate fire attacks (21)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate fire attacks (21)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate fire attacks (21)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "Gallant Survivor"
 	}
 }

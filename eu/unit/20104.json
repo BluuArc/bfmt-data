@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 84
+		},
+		"idle": {
+			"total number of frames": 42
+		},
+		"move": {
+			"total number of frames": 21
+		}
+	},
 	"bb": {
-		"desc": "8 combo powerful Water attack on single enemy & probable Weak effect",
-		"hit dmg% distribution": [
-			20,
-			10,
-			20,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					24,
+					28,
+					40,
+					44,
+					73,
+					78,
+					83,
+					88
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					20,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo powerful Water attack on single enemy & probable Weak effect",
+		"drop check count": 1,
 		"id": "20104",
 		"levels": [
 			{
@@ -232,20 +272,42 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Glacier Crush"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			24,
+			28,
+			40,
+			44,
+			47,
+			50,
+			53
+		],
+		"hit dmg% distribution": [
+			25,
+			10,
+			25,
+			10,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A knight from the ruined Sama Kingdom. Injured in the fight against the gods, he collapsed and was prepared to die. But as the final strike came, his troops rushed forward to protect him. Though he refused to befriend them, many of them admired his indifference. Watching them, Sergio found the strength to swing his sword of ice to protect the people. ",
 		"evolution": "Strength comes from solitude.<br>Why then did I fail to find power<br>in my isolation?<br>",
 		"fusion": "To be strengthened by one whom I thought of as a burden…<br>Such irony.",
 		"summon": "What kind of strength can you give me?<br>Will that be worth a swing of my sword?"
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 500000,
@@ -283,17 +345,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 327,
-	"hit dmg% distribution": [
-		25,
-		10,
-		25,
-		10,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 20104,
 	"imp": {
 		"max atk": "200",
@@ -314,7 +365,18 @@
 		"name": "Dynasty Power"
 	},
 	"lord damage range": "1325~1480",
-	"max bc generated": 21,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Ice Knight Sergio",
 	"rarity": 5,
 	"sell caution": false,

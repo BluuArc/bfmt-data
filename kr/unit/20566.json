@@ -19,27 +19,74 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 154
+		},
+		"idle": {
+			"total number of frames": 128
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 수속성 15연속 데미지＆3턴간 스파크 시 데미지 상승",
-		"hit dmg% distribution": [
-			10,
-			5,
-			5,
-			10,
-			5,
-			5,
-			20,
-			8,
-			5,
-			5,
-			5,
-			5,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					34,
+					38,
+					51,
+					55,
+					59,
+					83,
+					87,
+					91,
+					95,
+					99,
+					104,
+					109,
+					114,
+					119
+				],
+				"hit dmg% distribution": [
+					10,
+					5,
+					5,
+					10,
+					5,
+					5,
+					20,
+					8,
+					5,
+					5,
+					5,
+					5,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "적 전체에게 강력한 수속성 15연속 데미지＆3턴간 스파크 시 데미지 상승",
+		"drop check count": 1,
 		"id": "20566",
 		"levels": [
 			{
@@ -253,21 +300,51 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "오비탈 블레이즈"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-15T01:31:57.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 20560,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			30,
+			36,
+			51,
+			55,
+			83,
+			87,
+			91,
+			95,
+			99,
+			103,
+			107
+		],
+		"hit dmg% distribution": [
+			10,
+			5,
+			10,
+			5,
+			20,
+			10,
+			10,
+			10,
+			10,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
 	"dictionary": {
 		"description": "A disciple who was sealed in Ishgria. Having run into a barrier created by a higher ranking god, Tazer was attacked by a thunder wielding disciple. He used his friend's power, which he had just recovered from Afla Dilith, and managed to deal with the assault. However, another disciple attacked him promptly afterwards, stating that the situation they were in was a competition meant to select a disciple worthy of more power. Though suspicious of the disciple's words, Tazer jumped into the battlefield regardless, unaware that he would ultimately be sealed where he stood.",
 		"evolution": "I didn't choose to master power,<br>but the things that come with it!<br>I beat my friend to that one.",
 		"fusion": "You wanna make me stronger?<br>Then I'll make it up to you!<br>I'll even risk my life to do it!",
 		"summon": "No one believes in gods anymore.<br>I only believe in the friend who fought<br>with me, and in you."
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"prev": "20565"
@@ -280,7 +357,8 @@
 				"atk% buff": 80,
 				"bb gauge above % buff requirement": 100,
 				"conditions": [],
-				"passive id": "30"
+				"passive id": "30",
+				"passive target": "self"
 			}
 		],
 		"id": "800",
@@ -290,21 +368,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 855,
-	"hit dmg% distribution": [
-		10,
-		5,
-		10,
-		5,
-		20,
-		10,
-		10,
-		10,
-		10,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 11,
 	"id": 20566,
 	"imp": {
 		"max atk": "440",
@@ -330,7 +393,18 @@
 		"name": "섬통신의 황화"
 	},
 	"lord damage range": "2255~2519",
-	"max bc generated": 22,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "푸른 관통신황제 테이저",
 	"overdrive stats": {
 		"atk%": 100,
@@ -339,30 +413,82 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "적 1명에게 아주 강력한 수속성 19연속 데미지＆자신의 BB게이지를 가득 채움＆3턴간 자신의 스파크 데미지 대폭 상승",
-		"hit dmg% distribution": [
-			10,
-			4,
-			4,
-			10,
-			4,
-			4,
-			10,
-			10,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					34,
+					38,
+					51,
+					55,
+					59,
+					83,
+					87,
+					91,
+					95,
+					99,
+					103,
+					107,
+					111,
+					115,
+					119,
+					123,
+					127,
+					131
+				],
+				"hit dmg% distribution": [
+					10,
+					4,
+					4,
+					10,
+					4,
+					4,
+					10,
+					10,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 19,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 19,
+		"desc": "적 1명에게 아주 강력한 수속성 19연속 데미지＆자신의 BB게이지를 가득 채움＆3턴간 자신의 스파크 데미지 대폭 상승",
+		"drop check count": 2,
 		"id": "120566",
 		"levels": [
 			{
@@ -646,7 +772,6 @@
 				]
 			}
 		],
-		"max bc generated": 38,
 		"name": "알브 디퓨전"
 	},
 	"sell caution": false,
@@ -665,33 +790,88 @@
 		}
 	},
 	"ubb": {
-		"desc": "적 전체에게 강력한 수속성 22연속 데미지＆아군에게 2턴간 방어력 무시 공격 부여＆3턴간 스파크 시 데미지 대폭 상승",
-		"hit dmg% distribution": [
-			10,
-			3,
-			3,
-			10,
-			3,
-			3,
-			10,
-			10,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					34,
+					38,
+					51,
+					55,
+					59,
+					83,
+					87,
+					91,
+					95,
+					99,
+					103,
+					107,
+					111,
+					115,
+					119,
+					123,
+					127,
+					131,
+					135,
+					139,
+					143
+				],
+				"hit dmg% distribution": [
+					10,
+					3,
+					3,
+					10,
+					3,
+					3,
+					10,
+					10,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "적 전체에게 강력한 수속성 22연속 데미지＆아군에게 2턴간 방어력 무시 공격 부여＆3턴간 스파크 시 데미지 대폭 상승",
+		"drop check count": 1,
 		"id": "220566",
 		"levels": [
 			{
@@ -722,270 +902,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"defense% ignore": 100,
-						"defense% ignore turns (39)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "22",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"defense% ignore": 100,
-						"defense% ignore turns (39)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "22",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"defense% ignore": 100,
-						"defense% ignore turns (39)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "22",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"defense% ignore": 100,
-						"defense% ignore turns (39)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "22",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"defense% ignore": 100,
-						"defense% ignore turns (39)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "22",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"defense% ignore": 100,
-						"defense% ignore turns (39)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "22",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"defense% ignore": 100,
-						"defense% ignore turns (39)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "22",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"defense% ignore": 100,
-						"defense% ignore turns (39)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "22",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"defense% ignore": 100,
-						"defense% ignore turns (39)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "22",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "에기르 컬래머티"
 	}
 }

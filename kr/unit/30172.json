@@ -19,17 +19,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 89
+		},
+		"idle": {
+			"total number of frames": 58
+		},
+		"move": {
+			"total number of frames": 16
+		}
+	},
 	"bb": {
-		"desc": "적 1명에게 목속성 5연속 데미지＆확률로 마비 효과",
-		"hit dmg% distribution": [
-			20,
-			20,
-			20,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					53,
+					55,
+					57,
+					59,
+					61
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					20,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "적 1명에게 목속성 5연속 데미지＆확률로 마비 효과",
+		"drop check count": 3,
 		"id": "30172",
 		"levels": [
 			{
@@ -233,21 +270,31 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "바인드 호크"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 30170,
 	"cost": 5,
+	"damage frames": {
+		"frame times": [
+			53
+		],
+		"hit dmg% distribution": [
+			100
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 1
+	},
 	"dictionary": {
 		"description": "A member of an elven race which bears the power of the earth. Powerful enough to be known as a \"Prince\" by others, this individual fights wielding a halberd larger than its own body. Even more skillful than other Dwarves, equipment and accessories made by a Dwarf Prince are often traded as high value items. However, they don't really care about price, instead concentrating on making sure the person they sell to is worthy of owning what they've made.",
 		"evolution": "Oh, how the power flows...<br>Surely now I can swing an<br>even larger axe!",
 		"fusion": "I'm bursting with power!<br>Not even the young'uns can <br>beat me like this!",
 		"summon": "I think you'd look good in<br>what I've made here, boss.<br>Alright! Let's fight together!"
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"prev": "30171"
@@ -256,11 +303,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 274,
-	"hit dmg% distribution": [
-		100
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 1,
 	"id": 30172,
 	"imp": {
 		"max atk": "120",
@@ -281,7 +323,18 @@
 		"name": "부의 빛"
 	},
 	"lord damage range": "916~1024",
-	"max bc generated": 2,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "드워프 왕",
 	"rarity": 3,
 	"sell caution": false,

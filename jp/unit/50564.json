@@ -25,32 +25,84 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 222
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光・闇属性２０連ダメージ＆味方全体に３ターン、スパークダメージをアップ",
-		"hit dmg% distribution": [
-			8,
-			4,
-			4,
-			8,
-			4,
-			3,
-			4,
-			8,
-			4,
-			4,
-			10,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			6,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					5,
+					23,
+					41,
+					53,
+					71,
+					83,
+					89,
+					101,
+					119,
+					137,
+					149,
+					155,
+					161,
+					167,
+					173,
+					179,
+					185,
+					191,
+					194,
+					197
+				],
+				"hit dmg% distribution": [
+					8,
+					4,
+					4,
+					8,
+					4,
+					3,
+					4,
+					8,
+					4,
+					4,
+					10,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					6,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					110
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "敵全体に光・闇属性２０連ダメージ＆味方全体に３ターン、スパークダメージをアップ",
+		"drop check count": 1,
 		"id": "50564",
 		"levels": [
 			{
@@ -294,21 +346,63 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "マグノリア"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50560,
 	"cost": 17,
+	"damage frames": {
+		"frame times": [
+			9,
+			15,
+			21,
+			38,
+			44,
+			50,
+			56,
+			71,
+			83,
+			89,
+			95,
+			101,
+			121,
+			125,
+			129,
+			133,
+			137
+		],
+		"hit dmg% distribution": [
+			6,
+			5,
+			5,
+			8,
+			4,
+			4,
+			4,
+			10,
+			5,
+			5,
+			5,
+			5,
+			14,
+			5,
+			5,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 17
+	},
 	"dictionary": {
 		"description": "An amnesiac girl from the foreign land of Grand Gaia and Deemo, the strange being that saved her. Thinking there may be clues to the girl's past in Grand Gaia, the two decided to go and look. However, they found themselves landing in the middle of a war between the gods and man. Without any other choice, the girl armed herself with a rapier. Together with Deemo, she fought back gods and monsters alike, and it's said the two ventured around to countless villages and came to touch the hearts of many people.",
 		"evolution": "Your wings are pretty, Deemo.<br>They're so big and white.<br>You look even cooler than before!",
 		"fusion": "What a useful technique you have.<br>It'd be nice if we could use this<br>to help our trees grow, too.",
 		"summon": "So this is Grand Gaia.<br>I've never been here before!<br>Is it OK if I look around?"
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -346,27 +440,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 642,
-	"hit dmg% distribution": [
-		6,
-		5,
-		5,
-		8,
-		4,
-		4,
-		4,
-		10,
-		5,
-		5,
-		5,
-		5,
-		14,
-		5,
-		5,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 17,
 	"id": 50564,
 	"imp": {
 		"max atk": "300",
@@ -389,7 +462,18 @@
 		"name": "オールチャーミング"
 	},
 	"lord damage range": "1396~1560",
-	"max bc generated": 34,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Deemoと女の子",
 	"rarity": 5,
 	"sell caution": false,

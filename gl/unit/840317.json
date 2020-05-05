@@ -19,22 +19,88 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 235
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "10 combo powerful Thunder attack on all foes, 50% damage reduction for 1 turn, guarding boosts BB gauge for 3 turns & boosts damage reduced while guarding",
-		"hit dmg% distribution": [
-			15,
-			12,
-			8,
-			20,
-			11,
-			9,
-			8,
-			7,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					74,
+					106,
+					120,
+					160,
+					164,
+					167,
+					170,
+					173,
+					176,
+					179
+				],
+				"hit dmg% distribution": [
+					15,
+					12,
+					8,
+					20,
+					11,
+					9,
+					8,
+					7,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "69"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "68"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo powerful Thunder attack on all foes, 50% damage reduction for 1 turn, guarding boosts BB gauge for 3 turns & boosts damage reduced while guarding",
+		"drop check count": 2,
 		"id": "840317",
 		"levels": [
 			{
@@ -408,21 +474,45 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Impetus Claustra"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T10:28:24.000Z",
-		"updatedAt": "2016-02-04T14:52:26.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 840310,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			18,
+			74,
+			106,
+			160,
+			164,
+			167,
+			170,
+			173
+		],
+		"hit dmg% distribution": [
+			10,
+			15,
+			30,
+			20,
+			9,
+			6,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A Champion knighted by the Emperor of the Deva himself. In light of his outstanding record, Mikael was made Lord Commander of the Deva Army. After the crushing defeat suffered during the Deva's 313th military expedition, Mikael's presence was considered a gift from the old gods. His prowess at siege warfare kept the Morokai at bay while the Deva licked their wounds. Determined to discover the whereabouts of his brother, Mikael dispatched scouts to find him. After years of searching, he received word of a deserter seeking refuge in a distant outland untouched by the war. Eager to find his brother, Mikael entrusted command to his aide and travelled to the location indicated by his scouts. True enough, in a small farm he found his brother disheveled and dressed in rags, tilling the earth. With rage coursing through him, Mikael drew his blade, prepared to strike down his apostate brother. But before he could cut his brother down, he heard the wailing of a baby behind him. Turning around, he saw the face of a horrified Morokai woman, clutching a babe to her bosom. The sight of the crying babe drained away his rage, filling him with emotions he could not explain. Without a word, Mikael dropped his weapon and returned to Myrranthia, the land of the Deva.",
 		"evolution": "I am sworn to serve the Deva.<br>But taking the life of an innocent...<br>That is something I cannot do.",
 		"fusion": "For all the power I possess,<br>I could not save my brother.<br>But now there is another...<br>Another one I must protect.",
 		"summon": "I am the shield of the Deva.<br>The defender of the righteous.<br>By the Emperor's will,<br>it shall be so."
 	},
+	"drop check count": 5,
 	"element": "thunder",
 	"evolution": {
 		"prev": "840316"
@@ -440,7 +530,8 @@
 						]
 					}
 				],
-				"passive id": "32"
+				"passive id": "32",
+				"passive target": "self"
 			},
 			{
 				"bc fill when attacked high": 3,
@@ -453,12 +544,14 @@
 						]
 					}
 				],
-				"passive id": "25"
+				"passive id": "25",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"elemental weakness multiplier%": 125,
 				"passive id": "50",
+				"passive target": "self",
 				"thunder units do extra elemental weakness dmg": true
 			}
 		],
@@ -469,18 +562,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 8163,
-	"hit dmg% distribution": [
-		10,
-		15,
-		30,
-		20,
-		9,
-		6,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 840317,
 	"imp": {
 		"max atk": "400",
@@ -521,7 +602,18 @@
 		"name": "Storm Champion's Bastion"
 	},
 	"lord damage range": "2346~2621",
-	"max bc generated": 40,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Storm Champion Mikael",
 	"overdrive stats": {
 		"atk%": 100,
@@ -530,23 +622,80 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "12 combo powerful Thunder attack on single foe (damage relative to remaining HP), 50% damage reduction for 1 turn & boosts Def relative to Atk and boosts Def for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			5,
-			10,
-			7,
-			3,
-			26,
-			10,
-			8,
-			6,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					74,
+					79,
+					106,
+					111,
+					116,
+					160,
+					164,
+					167,
+					170,
+					173,
+					176,
+					179
+				],
+				"hit dmg% distribution": [
+					10,
+					5,
+					10,
+					7,
+					3,
+					26,
+					10,
+					8,
+					6,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "12 combo powerful Thunder attack on single foe (damage relative to remaining HP), 50% damage reduction for 1 turn & boosts Def relative to Atk and boosts Def for 3 turns",
+		"drop check count": 5,
 		"id": "1840317",
 		"levels": [
 			{
@@ -960,7 +1109,6 @@
 				]
 			}
 		],
-		"max bc generated": 60,
 		"name": "Incitus Fragor"
 	},
 	"sell caution": false,
@@ -979,25 +1127,96 @@
 		}
 	},
 	"ubb": {
-		"desc": "14 combo massive Thunder attack on all foes, reduces all damage to 1 for 1 turn (2 turns for self) & boosts Atk, Def and boosts Def relative to Atk for 3 turns",
-		"hit dmg% distribution": [
-			8,
-			3,
-			3,
-			10,
-			4,
-			4,
-			4,
-			25,
-			10,
-			8,
-			6,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					74,
+					79,
+					84,
+					106,
+					111,
+					116,
+					121,
+					160,
+					164,
+					167,
+					170,
+					173,
+					176,
+					179
+				],
+				"hit dmg% distribution": [
+					8,
+					3,
+					3,
+					10,
+					4,
+					4,
+					4,
+					25,
+					10,
+					8,
+					6,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "14 combo massive Thunder attack on all foes, reduces all damage to 1 for 1 turn (2 turns for self) & boosts Atk, Def and boosts Def relative to Atk for 3 turns",
+		"drop check count": 2,
 		"id": "2840317",
 		"levels": [
 			{
@@ -1047,441 +1266,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "attack",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "attack",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "attack",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "attack",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "attack",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "attack",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "attack",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "attack",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "single",
-						"target type": "self"
-					},
-					{
-						"atk% buff (1)": 250,
-						"buff turns": 3,
-						"def% buff (3)": 250,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"converted attribute": "attack",
-						"def% buff (47)": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 28,
 		"name": "Tempestatem Ludicium"
 	}
 }

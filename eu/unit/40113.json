@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,15 +25,38 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 44
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 44
+		}
+	},
 	"bb": {
-		"desc": "3 combo Thunder elemental power attack on all enemies",
-		"hit dmg% distribution": [
-			33,
-			33,
-			34
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					29,
+					33,
+					37
+				],
+				"hit dmg% distribution": [
+					33,
+					33,
+					34
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 3,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 3,
+		"desc": "3 combo Thunder elemental power attack on all enemies",
+		"drop check count": 1,
 		"id": "40113",
 		"levels": [
 			{
@@ -167,20 +190,34 @@
 				]
 			}
 		],
-		"max bc generated": 3,
 		"name": "Meteor Zapper"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 8,
+	"damage frames": {
+		"frame times": [
+			29,
+			33,
+			37
+		],
+		"hit dmg% distribution": [
+			60,
+			30,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A beast characterized by its muscular body and giant horns.<br>Behemoths can't coexist with other behemoths. They will fight to the death if they meet. Those that survive this struggle become a King Behemoth. Their roar symbolize death, and those who hear it can do little more than sit and pray that the storm doesn't come their way.",
 		"evolution": "Lead me to my prey!<br>I will make quick work of it!",
 		"fusion": "Roar!!<br>Let my power grow!!",
 		"summon": "Growl! My roar signals <br>the end of a life. <br>Endure it and become my master!"
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"cost": 200000,
@@ -218,13 +255,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 145,
-	"hit dmg% distribution": [
-		60,
-		30,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 40113,
 	"imp": {
 		"max atk": "200",
@@ -245,7 +275,18 @@
 		"name": "Intense Flash"
 	},
 	"lord damage range": "925~1033",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "King Behemoth",
 	"rarity": 4,
 	"sell caution": false,

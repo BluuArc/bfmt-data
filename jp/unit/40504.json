@@ -19,20 +19,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 147
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 15
+		}
+	},
 	"bb": {
-		"desc": "敵単体に雷属性８連ダメージ＆味方全体に１ターン、被ダメージを半分に軽減",
-		"hit dmg% distribution": [
-			6,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			70
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					40,
+					43,
+					46,
+					49,
+					52,
+					55,
+					58,
+					90
+				],
+				"hit dmg% distribution": [
+					6,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					70
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "敵単体に雷属性８連ダメージ＆味方全体に１ターン、被ダメージを半分に軽減",
+		"drop check count": 1,
 		"id": "40504",
 		"levels": [
 			{
@@ -246,21 +286,37 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "バニッシュボルト"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40500,
 	"cost": 18,
+	"damage frames": {
+		"frame times": [
+			40,
+			43,
+			46,
+			90
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			10,
+			70
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A knight sworn to serve in a small country around the Bariura region. After saving both the injured queen and swordsman, she succeeded in escaping with them from the ancient dragon. However, she was suddenly attacked by a disciple who claimed Shera had betrayed the gods, as she was a disciple as well. In response, Shera stated that she would not allow for the destruction of the human race. Reaching no real conclusion after their battle, Shera decided simply to protect not only the queen and the swordsman, but the disciple as well.",
 		"evolution": "Child! Hope with all your might!<br>Because when you do<br>we will be able to advance further!",
 		"fusion": "There are many ways to grow stronger.<br>It seems that I need your help<br>in my current state.",
 		"summon": "Your wish has reached me.<br>It shall be granted.<br>I will become your shield."
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -298,14 +354,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 766,
-	"hit dmg% distribution": [
-		10,
-		10,
-		10,
-		70
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 40504,
 	"imp": {
 		"max atk": "200",
@@ -326,7 +374,18 @@
 		"name": "覇王の魔力"
 	},
 	"lord damage range": "1584~1770",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "守天雷姫シエラ",
 	"rarity": 5,
 	"sell caution": false,

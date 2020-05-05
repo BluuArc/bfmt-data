@@ -25,19 +25,58 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 108
+		},
+		"idle": {
+			"total number of frames": 76
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性７連ダメージ＆確率で怪我状態にする",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			20,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					12,
+					16,
+					27,
+					31,
+					62,
+					70,
+					78
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					20,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 7,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 7,
+		"desc": "敵全体に水属性７連ダメージ＆確率で怪我状態にする",
+		"drop check count": 1,
 		"id": "20324",
 		"levels": [
 			{
@@ -241,21 +280,39 @@
 				]
 			}
 		],
-		"max bc generated": 7,
 		"name": "モルテアニマ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20320,
 	"cost": 16,
+	"damage frames": {
+		"frame times": [
+			12,
+			16,
+			27,
+			62,
+			66
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			20,
+			30,
+			30
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A former Guardian who turned her aim on the gods themselves. She acted quickly after getting word of Sodis' defection. Quickly rushing to his side, she cut down all those who were chasing after him. Afterwards scholars would say that she believed more in him than she ever had in the gods and that, even if he should become the bad guy, she would put her life on the line to follow him.",
 		"evolution": "I put my trust in him.<br>I still trust him even now.<br>It's as simple as that.",
 		"fusion": "You're pretty interesting.<br>No need to be polite with me.<br>Pretty sure I've told you before.",
 		"summon": "I'm Signas.<br>Do I need to say more?<br>I don't like troublesome things."
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 500000,
@@ -293,15 +350,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 450,
-	"hit dmg% distribution": [
-		10,
-		10,
-		20,
-		30,
-		30
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 20324,
 	"imp": {
 		"max atk": "160",
@@ -322,7 +370,18 @@
 		"name": "炎の結界"
 	},
 	"lord damage range": "1732~1934",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "雪獅神シグネス",
 	"rarity": 5,
 	"sell caution": false,

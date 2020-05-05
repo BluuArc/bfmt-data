@@ -31,16 +31,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 64
+		},
+		"idle": {
+			"total number of frames": 42
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "4 combo Earth elemental attack on single Enemy & probable Injury effect",
-		"hit dmg% distribution": [
-			30,
-			20,
-			30,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					36,
+					38,
+					40,
+					42
+				],
+				"hit dmg% distribution": [
+					30,
+					20,
+					30,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "4 combo Earth elemental attack on single Enemy & probable Injury effect",
+		"drop check count": 1,
 		"id": "30061",
 		"levels": [
 			{
@@ -234,20 +270,34 @@
 				]
 			}
 		],
-		"max bc generated": 4,
 		"name": "Great Beheading"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 3,
+	"damage frames": {
+		"frame times": [
+			36,
+			38,
+			40
+		],
+		"hit dmg% distribution": [
+			40,
+			35,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A bandit from the forested mountain bordering the ruined Vriksha Duchy. A useless man that the people of Vriksha called rude, vulgar and mean. However, his power with an axe was explosive, and they said he could level a large tree in a single swing. When he came to town the many people who admired him would bring him food stolen from the rich.",
 		"evolution": " ",
 		"fusion": "Oh, how nice.<br>Guess I can live off you<br>a bit longer.",
 		"summon": "I don't fight for<br>anyone but myself.<br>Still, I'll help you."
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"cost": 50000,
@@ -274,13 +324,6 @@
 	"gender": "male",
 	"getting type": "not eligible for achievement",
 	"guide_id": 83,
-	"hit dmg% distribution": [
-		40,
-		35,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 30061,
 	"imp": {
 		"max atk": "120",
@@ -301,7 +344,18 @@
 		"name": "Intense Light"
 	},
 	"lord damage range": "750~838",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Bandit Zaza",
 	"rarity": 2,
 	"sell caution": false,

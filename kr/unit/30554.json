@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 121
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 목속성 8연속 데미지＆3턴간 공격에 중독<comma> 약화<comma>저주<comma>마비 효과 부여",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			25,
-			15,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					45,
+					60,
+					89,
+					93,
+					97,
+					101,
+					105
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					25,
+					15,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "적 전체에게 목속성 8연속 데미지＆3턴간 공격에 중독<comma> 약화<comma>저주<comma>마비 효과 부여",
+		"drop check count": 1,
 		"id": "30554",
 		"levels": [
 			{
@@ -282,21 +322,39 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "로제 스피넬"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-15T01:31:57.000Z",
-		"updatedAt": "2015-11-04T13:19:00.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 30550,
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			75,
+			81,
+			85,
+			89,
+			93
+		],
+		"hit dmg% distribution": [
+			30,
+			20,
+			20,
+			20,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A disciple who once served Cardes the Malevolent. Possessing the ability to manipulate the spirits found in plants and nature, it is rumored that her passive abilities were on a phenomenal level. However, being a sensitive introvert she had low self-confidence, and disliked using force against others. Due to her particular personality and the amazing powers she held, she was despised by a multitude of gods. It is believed that Cardes intervened in many of the unwanted disputes she had with various gods, helping her escape from them.",
 		"evolution": " ",
 		"fusion": "I'm grateful for this power, but<br>I don't wanna fight needlessly...<br>Is that too much to ask?",
 		"summon": "What?<br>You summoned me?<br>Wow, I'm so happy that you need me..."
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"cost": 500000,
@@ -333,15 +391,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 856,
-	"hit dmg% distribution": [
-		30,
-		20,
-		20,
-		20,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 30554,
 	"imp": {
 		"max atk": "200",
@@ -370,7 +419,18 @@
 		"name": "악역의 만연"
 	},
 	"lord damage range": "1584~1770",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "가시나무신 토라",
 	"rarity": 5,
 	"sell caution": false,

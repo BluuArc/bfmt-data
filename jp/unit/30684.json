@@ -19,21 +19,86 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 127
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に樹属性９連ダメージ＆味方全体の全状態異常を回復＆１ターン、被ダメージを半分に軽減＆３ターン、防御力をかなりアップ",
-		"hit dmg% distribution": [
-			22,
-			12,
-			6,
-			13,
-			7,
-			17,
-			9,
-			8,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					15,
+					19,
+					23,
+					38,
+					42,
+					60,
+					64,
+					68,
+					72
+				],
+				"hit dmg% distribution": [
+					22,
+					12,
+					6,
+					13,
+					7,
+					17,
+					9,
+					8,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "敵全体に樹属性９連ダメージ＆味方全体の全状態異常を回復＆１ターン、被ダメージを半分に軽減＆３ターン、防御力をかなりアップ",
+		"drop check count": 1,
 		"id": "30684",
 		"levels": [
 			{
@@ -507,20 +572,42 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "アストフォール"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T19:18:05.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 30680,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			15,
+			19,
+			38,
+			42,
+			60,
+			64,
+			68
+		],
+		"hit dmg% distribution": [
+			25,
+			12,
+			15,
+			8,
+			20,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A La Veda swordsman who surfaced about a decade before the appearance of the Ten-Winged Tormentor. Being the strongest Veda style fencing master, Dolk inherited the name of \"Zelban.\" However, he soon found an incredibly talented pupil to whom he would pass this title, as he was more concerned about perfecting his craft, rather than serving as an instructor. Thus, his deeds left behind as \"Zelban\" are not many, though his skills reached outstanding new levels after he gave up his title.",
 		"fusion": "Use whatever you require.<br>I know nothing of summoning, but I'll<br>accept it if it makes me stronger.",
 		"summon": "I am not Zelban.<br>I'm the man who was once Zelban.<br>If you're fine with that,<br>I shall lend you a hand."
 	},
+	"drop check count": 3,
 	"element": "earth",
 	"evolution": {
 		"cost": 500000,
@@ -557,17 +644,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1144,
-	"hit dmg% distribution": [
-		25,
-		12,
-		15,
-		8,
-		20,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 30684,
 	"imp": {
 		"max atk": "200",
@@ -591,7 +667,18 @@
 		"name": "幻剣将の力"
 	},
 	"lord damage range": "1739~1942",
-	"max bc generated": 21,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "剣神帝ドルク",
 	"rarity": 5,
 	"sell caution": false,

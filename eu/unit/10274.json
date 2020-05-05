@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 106
+		},
+		"idle": {
+			"total number of frames": 128
+		},
+		"move": {
+			"total number of frames": 88
+		}
+	},
 	"bb": {
-		"desc": "10 combo powerful Fire attack on all enemies & boost in Spark damage for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					56,
+					62,
+					68,
+					74,
+					80,
+					86,
+					94,
+					102,
+					110,
+					118
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					110
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo powerful Fire attack on all enemies & boost in Spark damage for 3 turns",
+		"drop check count": 1,
 		"id": "10274",
 		"levels": [
 			{
@@ -254,20 +296,44 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Kagutsuki"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 16,
+	"damage frames": {
+		"frame times": [
+			8,
+			23,
+			38,
+			48,
+			56,
+			66,
+			76,
+			86
+		],
+		"hit dmg% distribution": [
+			8,
+			8,
+			8,
+			8,
+			17,
+			17,
+			17,
+			17
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A disastrous beast that long ago was a great threat to the Sama Kingdom. Though the source of his power was sealed away by the Ice Keep, it was once again released by Elsel, the angel who rebelled against the gods. Now free, the beast whose blazing power rivaled the sun itself used his power to burn away the order the gods had brought to the land. Having turned countless cities to ash he was eventually taken out by a half human half mage girl and a massive magical beast, though there are many theories as to how this actually happened.",
 		"evolution": "Ha ha ha ha!<br>I am destruction!<br>My flames end all!",
 		"fusion": "What kind of fool would grant<br>more power to a beast like me?<br>Do you know something I don't?",
 		"summon": "So you require a demon's aid?<br>To have summoned me, you<br>must be the real dangerous one."
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -305,18 +371,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 416,
-	"hit dmg% distribution": [
-		8,
-		8,
-		8,
-		8,
-		17,
-		17,
-		17,
-		17
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 10274,
 	"imp": {
 		"max atk": "200",
@@ -337,7 +391,18 @@
 		"name": "Ares' Authority"
 	},
 	"lord damage range": "1551~1732",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Kagutsuchi",
 	"rarity": 5,
 	"sell caution": false,

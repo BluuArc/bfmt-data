@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,19 +25,58 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 73
+		},
+		"idle": {
+			"total number of frames": 42
+		},
+		"move": {
+			"total number of frames": 21
+		}
+	},
 	"bb": {
-		"desc": "7 combo Water elemental power attack on single Enemy & probable Weakening effect",
-		"hit dmg% distribution": [
-			20,
-			20,
-			20,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					18,
+					26,
+					33,
+					70,
+					75,
+					80,
+					85
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					20,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 7,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 7,
+		"desc": "7 combo Water elemental power attack on single Enemy & probable Weakening effect",
+		"drop check count": 1,
 		"id": "20103",
 		"levels": [
 			{
@@ -231,20 +270,38 @@
 				]
 			}
 		],
-		"max bc generated": 7,
 		"name": "Royal Ice Blade"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 8,
+	"damage frames": {
+		"frame times": [
+			18,
+			33,
+			50,
+			54,
+			58
+		],
+		"hit dmg% distribution": [
+			40,
+			30,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A knight from the ruined Sama Kingdom. He was the commander of a Sama Kingdom Cavalry commando unit, but left to face the gods alone when the war began. Some admired him and tried to join, but Sergio refused them. He was always aloof even while being admired by people for his battles with the gods. At some point, he earned the title Ice Ruler.",
 		"evolution": "I don't need any allies.<br>I'm fine as long as there are enemies to slay.",
 		"fusion": "Can I grow even stronger?<br>Is that your answer?",
 		"summon": "People call me the Ice Ruler<br>You want me to join you?<br>Interesting. This should be fun."
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"cost": 200000,
@@ -282,15 +339,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 126,
-	"hit dmg% distribution": [
-		40,
-		30,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 20103,
 	"imp": {
 		"max atk": "160",
@@ -311,7 +359,18 @@
 		"name": "Royal Power"
 	},
 	"lord damage range": "1020~1139",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Ice Ruler Sergio",
 	"rarity": 4,
 	"sell caution": false,

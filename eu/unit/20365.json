@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,26 +25,72 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 180
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 12
+		}
+	},
 	"bb": {
-		"desc": "14 combo Water elemental attack on single enemy & Earth element added to attack for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			8,
-			7,
-			6,
-			7,
-			7,
-			6,
-			7,
-			7,
-			6,
-			8,
-			6,
-			7,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					38,
+					40,
+					42,
+					53,
+					64,
+					74,
+					83,
+					92,
+					100,
+					107,
+					115,
+					122,
+					129,
+					136
+				],
+				"hit dmg% distribution": [
+					10,
+					8,
+					7,
+					6,
+					7,
+					7,
+					6,
+					7,
+					7,
+					6,
+					8,
+					6,
+					7,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "14 combo Water elemental attack on single enemy & Earth element added to attack for 3 turns",
+		"drop check count": 1,
 		"id": "20365",
 		"levels": [
 			{
@@ -278,20 +324,52 @@
 				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "Mobius Wave"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 26,
+	"damage frames": {
+		"frame times": [
+			36,
+			41,
+			43,
+			54,
+			67,
+			78,
+			88,
+			98,
+			109,
+			122,
+			130,
+			138
+		],
+		"hit dmg% distribution": [
+			9,
+			10,
+			12,
+			7,
+			8,
+			7,
+			8,
+			7,
+			8,
+			7,
+			8,
+			9
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
 	"dictionary": {
 		"description": "A knight sworn to the Sama Kingdom. Relying on a letter left by her father, she learned through her travels that her mother was the daughter of the ruler of all the fauna in the oceanic depths. She knew she could deny her divine marine powers no longer, instead unleashing them when the war against the gods began. Rushing back to her friend's side in her homeland, her awakened prowess with the sword was enough to drive them away from Selena in an instant.",
 		"evolution": "I feel so free...<br>So... clear!<br>This feels great!",
 		"fusion": "I can feel it.<br>Both Water and Earth.<br>It must be my mother...",
 		"summon": "I've come to grips with<br>my imperfections. So I hope<br>you will too."
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"prev": "20364"
@@ -300,22 +378,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 535,
-	"hit dmg% distribution": [
-		9,
-		10,
-		12,
-		7,
-		8,
-		7,
-		8,
-		7,
-		8,
-		7,
-		8,
-		9
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 20365,
 	"imp": {
 		"max atk": "240",
@@ -341,31 +403,91 @@
 		"name": "Five Light's Destruction"
 	},
 	"lord damage range": "1788~1997",
-	"max bc generated": 36,
+	"movement": {
+		"attack": {
+			"move speed": 2,
+			"move speed type": "4",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 2,
+			"move speed type": "4",
+			"move type": "2"
+		}
+	},
 	"name": "Azure Goddess Lucina",
 	"rarity": 6,
 	"sbb": {
-		"desc": "16 combo Water elemental attack on single enemy & boost to Atk for all Units and Earth element added to attack for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			7,
-			5,
-			6,
-			7,
-			5,
-			6,
-			7,
-			5,
-			6,
-			7,
-			5,
-			6,
-			5,
-			6,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					38,
+					40,
+					42,
+					54,
+					62,
+					70,
+					78,
+					84,
+					91,
+					98,
+					105,
+					112,
+					118,
+					123,
+					129,
+					135
+				],
+				"hit dmg% distribution": [
+					10,
+					7,
+					5,
+					6,
+					7,
+					5,
+					6,
+					7,
+					5,
+					6,
+					7,
+					5,
+					6,
+					5,
+					6,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo Water elemental attack on all enemies & boost to Atk for all Units and Earth element added to attack for 3 turns",
+		"drop check count": 1,
 		"id": "120365",
 		"levels": [
 			{
@@ -689,7 +811,6 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Grand Tundra"
 	},
 	"sell caution": false,

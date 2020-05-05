@@ -25,18 +25,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 97
+		},
+		"idle": {
+			"total number of frames": 94
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に闇属性６連ダメージ＆高確率で毒状態にする",
-		"hit dmg% distribution": [
-			15,
-			13,
-			13,
-			23,
-			18,
-			18
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					44,
+					48,
+					52,
+					59,
+					65,
+					71
+				],
+				"hit dmg% distribution": [
+					15,
+					13,
+					13,
+					23,
+					18,
+					18
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "敵全体に闇属性６連ダメージ＆高確率で毒状態にする",
+		"drop check count": 3,
 		"id": "60261",
 		"levels": [
 			{
@@ -240,21 +278,39 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "ポイズンフォール"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60260,
 	"cost": 4,
+	"damage frames": {
+		"frame times": [
+			44,
+			50,
+			59,
+			65,
+			71
+		],
+		"hit dmg% distribution": [
+			23,
+			17,
+			22,
+			19,
+			19
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A gigantic arachnid demon that digs its nest underground. Not the usual kind of spider, this abomination is actually believed to have been born from a type of demon species. Since the entrance to its nest is cleverly hidden under dirt and dried leaves, it sprays its web from underground to trap any creatures passing by. With a web tougher than steel itself, it brings its prey into its nest and slowly melts the living creature alive with its digestive juices.",
 		"evolution": " ",
 		"fusion": "*Creak* *creak*<br>Kssh...",
 		"summon": "*Creak* *creak*<br>Kssh...Kssh!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 50000,
@@ -286,15 +342,6 @@
 	"gender": "other",
 	"getting type": "not eligible for achievement",
 	"guide_id": 639,
-	"hit dmg% distribution": [
-		23,
-		17,
-		22,
-		19,
-		19
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 60261,
 	"imp": {
 		"max atk": "100",
@@ -315,7 +362,18 @@
 		"name": "魂の輝き"
 	},
 	"lord damage range": "894~999",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "ダークスパイダー",
 	"rarity": 2,
 	"sell caution": false,

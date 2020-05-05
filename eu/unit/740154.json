@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 248
+		},
+		"idle": {
+			"total number of frames": 48
+		},
+		"move": {
+			"total number of frames": 10
+		}
+	},
 	"bb": {
-		"desc": "8 combo thunder elemental attack on all ennemies & Adds paralysis to attack for 3 turns (7%)",
-		"hit dmg% distribution": [
-			13,
-			13,
-			13,
-			13,
-			12,
-			12,
-			12,
-			12
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					60,
+					62,
+					64,
+					66,
+					68,
+					70,
+					88,
+					100
+				],
+				"hit dmg% distribution": [
+					13,
+					13,
+					13,
+					13,
+					12,
+					12,
+					12,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo thunder elemental attack on all enemies & Adds paralysis to attack for 3 turns (7%)",
+		"drop check count": 1,
 		"id": "740154",
 		"levels": [
 			{
@@ -252,14 +292,36 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Celestial thunder"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 17,
+	"damage frames": {
+		"frame times": [
+			60,
+			62,
+			64,
+			66,
+			68,
+			88,
+			100
+		],
+		"hit dmg% distribution": [
+			15,
+			15,
+			14,
+			14,
+			14,
+			14,
+			14
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -297,17 +359,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7096,
-	"hit dmg% distribution": [
-		15,
-		15,
-		14,
-		14,
-		14,
-		14,
-		14
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 740154,
 	"imp": {
 		"max atk": "240",
@@ -338,7 +389,18 @@
 		"name": "Air superiority"
 	},
 	"lord damage range": "1508~1684",
-	"max bc generated": 21,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "High Crash Belt",
 	"rarity": 5,
 	"sell caution": false,

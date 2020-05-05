@@ -25,21 +25,66 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "9 combo powerful Fire attack on all foes, adds Def ignoring effect to attack for 2 turns & boosts Atk and critical hit rate for 3 turns",
-		"hit dmg% distribution": [
-			6,
-			8,
-			11,
-			14,
-			17,
-			15,
-			12,
-			10,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					48,
+					53,
+					58,
+					63,
+					68,
+					73,
+					78,
+					93,
+					98
+				],
+				"hit dmg% distribution": [
+					6,
+					8,
+					11,
+					14,
+					17,
+					15,
+					12,
+					10,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "9 combo powerful Fire attack on all foes, adds Def ignoring effect to attack for 2 turns & boosts Atk and critical hit rate for 3 turns",
+		"drop check count": 1,
 		"id": "810315",
 		"levels": [
 			{
@@ -353,20 +398,42 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "Velkar Cleave"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-11-25T16:41:02.000Z",
-		"updatedAt": "2015-12-04T07:58:12.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 810310,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			58,
+			63,
+			68,
+			74,
+			81,
+			88,
+			95
+		],
+		"hit dmg% distribution": [
+			10,
+			12,
+			15,
+			20,
+			17,
+			14,
+			12
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A savage Morokai berserker from the world of Eneroth. Born into a lineage of legendary warriors, Korzan was the son and heir to the Overlord of the most powerful Morokai Warband in all of Baldemar, homeland of the warlike Morokai. A terrifying genius at fighting, Korzan towered above most warriors even before he could be considered a grown man. He was believed to be \"blessed\" by the Spirit of Fire, a patron of war and a symbol of power. Matched with his battle prowess was an equally volatile personality that made him an extremely difficult person to deal with. The only person that he would open his heart to was his younger sister. In her presence, it is said that Korzan became an entirely different person.",
 		"fusion": "I am not your bootlicker!<br>With or without your help, my foes<br>are nothing but dirt beneath my feet!",
 		"summon": "I am Korzan of the Morokai,<br>chosen by the Great Spirit of Fire!<br>They'll soon learn to fear my name!"
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -403,17 +470,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 8152,
-	"hit dmg% distribution": [
-		10,
-		12,
-		15,
-		20,
-		17,
-		14,
-		12
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 810315,
 	"imp": {
 		"max atk": "260",
@@ -439,7 +495,18 @@
 		"name": "Unbridled Fury"
 	},
 	"lord damage range": "1986~2219",
-	"max bc generated": 21,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Berserker Korzan",
 	"rarity": 5,
 	"sell caution": false,

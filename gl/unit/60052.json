@@ -31,18 +31,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 101
+		},
+		"idle": {
+			"total number of frames": 48
+		},
+		"move": {
+			"total number of frames": 9
+		}
+	},
 	"bb": {
-		"desc": "6 combo Dark elemental attack on single enemy & probable Sick effect",
-		"hit dmg% distribution": [
-			15,
-			15,
-			15,
-			15,
-			21,
-			19
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					33,
+					37,
+					44,
+					51,
+					58,
+					65
+				],
+				"hit dmg% distribution": [
+					15,
+					15,
+					15,
+					15,
+					21,
+					19
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "6 combo Dark elemental attack on single enemy & probable Sick effect",
+		"drop check count": 1,
 		"id": "60052",
 		"levels": [
 			{
@@ -246,21 +284,37 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "Skull Vine"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-08-14T00:39:50.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 60050,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			40,
+			46,
+			52,
+			58
+		],
+		"hit dmg% distribution": [
+			22,
+			22,
+			26,
+			30
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "An undead monster born from bones infused with the power of darkness. Though normally they show little interest outside of the enemy in front of them, occassionally individuals appear that command larger groups in hopes of leading more to their deaths. Orders are in place that say should one of these especially harmful Skeletons be discovered it should be immediately destroyed. With their love for preying on villages, where the bones of the dead then become new Skeletons, ignoring their threat would only lead to their army growing stronger.",
 		"evolution": "A-Awaiting command, M-Master!<br>G-Give me m-more tr-troops!<br>I'll destroy y-your enemies!",
 		"fusion": "M-More! We n-need more!<br>More tr-troops! More!",
 		"summon": "C-Command me t-to f-fight<br>for y-you s-sir!<br>Y-You are m-my Master!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "60051"
@@ -269,14 +323,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 523,
-	"hit dmg% distribution": [
-		22,
-		22,
-		26,
-		30
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 60052,
 	"imp": {
 		"max atk": "80",
@@ -297,7 +343,18 @@
 		"name": "Soul Light"
 	},
 	"lord damage range": "1038~1160",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "Skull Lord",
 	"rarity": 3,
 	"sell caution": false,

@@ -25,24 +25,80 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 141
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "敵全体に闇属性１２連ダメージ＆確率で呪い・病気状態にする＆味方全体に３ターン、状態異常の敵へのダメージをかなりアップ",
-		"hit dmg% distribution": [
-			18,
-			13,
-			11,
-			10,
-			9,
-			8,
-			7,
-			6,
-			5,
-			5,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					70,
+					73,
+					76,
+					79,
+					82,
+					85,
+					88,
+					91,
+					94,
+					97,
+					100,
+					103
+				],
+				"hit dmg% distribution": [
+					18,
+					13,
+					11,
+					10,
+					9,
+					8,
+					7,
+					6,
+					5,
+					5,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "65"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "敵全体に闇属性１２連ダメージ＆確率で呪い・病気状態にする＆味方全体に３ターン、状態異常の敵へのダメージをかなりアップ",
+		"drop check count": 1,
 		"id": "60786",
 		"levels": [
 			{
@@ -336,21 +392,45 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "ジェノ・ヴェンジェンス"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-30T18:49:29.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60780,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			70,
+			73,
+			76,
+			79,
+			82,
+			85,
+			88,
+			91
+		],
+		"hit dmg% distribution": [
+			25,
+			17,
+			13,
+			11,
+			10,
+			9,
+			8,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A mock Unit modeled after Mirfah, survivor of Ishgria's Recon Squad. The land of Ishgria, with its countless demons, proved too harsh for a human to survive alone. Subsequently, this apparently led him to sacrifice much in order to gain the power required for survival. However, there was one thing that he never let go of: the Recon Squad's records. To this day, Mirfah has yet to tell the full story contained within them.",
 		"evolution": "I was changed by an alien power,<br>and now I'll evolve to a new form.<br>Am I still a man? Or am I a demon?",
 		"fusion": "I don't care how I get stronger.<br>I must live on...<br>For the members of the Recon Squad.",
 		"summon": "Rhoa, your research<br>has borne fruit over the ages.<br>Someday, I'll give you a full report."
 	},
+	"drop check count": 4,
 	"element": "dark",
 	"evolution": {
 		"prev": "60785"
@@ -362,7 +442,8 @@
 			{
 				"conditions": [],
 				"od fill rate%": 20,
-				"passive id": "70"
+				"passive id": "70",
+				"passive target": "self"
 			}
 		],
 		"id": "8100",
@@ -372,18 +453,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1121,
-	"hit dmg% distribution": [
-		25,
-		17,
-		13,
-		11,
-		10,
-		9,
-		8,
-		7
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 60786,
 	"imp": {
 		"max atk": "600",
@@ -414,7 +483,18 @@
 		"name": "閻煉神の剛毅"
 	},
 	"lord damage range": "2141~2392",
-	"max bc generated": 32,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "閻獄の厳神鬼ミーファ",
 	"overdrive stats": {
 		"atk%": 100,
@@ -423,27 +503,76 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な闇属性１６連ダメージ＆味方全体に３ターン、被ダメージ時、確率で呪い・病気を発生する効果を付与・状態異常の敵へのダメージを大幅にアップ",
-		"hit dmg% distribution": [
-			14,
-			10,
-			9,
-			9,
-			8,
-			7,
-			7,
-			6,
-			5,
-			5,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					70,
+					73,
+					76,
+					79,
+					82,
+					85,
+					88,
+					91,
+					94,
+					97,
+					100,
+					103,
+					106,
+					109,
+					112,
+					115
+				],
+				"hit dmg% distribution": [
+					14,
+					10,
+					9,
+					9,
+					8,
+					7,
+					7,
+					6,
+					5,
+					5,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "53"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "65"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "敵全体に強力な闇属性１６連ダメージ＆味方全体に３ターン、被ダメージ時、確率で呪い・病気を発生する効果を付与・状態異常の敵へのダメージを大幅にアップ",
+		"drop check count": 1,
 		"id": "160786",
 		"levels": [
 			{
@@ -747,7 +876,6 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "竜骸残輝"
 	},
 	"sell caution": false,
@@ -766,31 +894,108 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な闇属性２０連ダメージ＆全状態異常をランダムに発生＆３ターン、ターン終了時に強力な追加ダメージ＆味方全体に３ターン、状態異常の敵へのダメージを超絶アップ",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			4,
-			15,
-			11,
-			9,
-			7,
-			5,
-			4,
-			4,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					40,
+					50,
+					60,
+					70,
+					73,
+					76,
+					79,
+					82,
+					85,
+					88,
+					91,
+					94,
+					97,
+					100,
+					103,
+					106,
+					109,
+					112,
+					115
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					4,
+					15,
+					11,
+					9,
+					7,
+					5,
+					4,
+					4,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "65"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "敵全体に超強力な闇属性２０連ダメージ＆全状態異常をランダムに発生＆３ターン、ターン終了時に強力な追加ダメージ＆味方全体に３ターン、状態異常の敵へのダメージを超絶アップ",
+		"drop check count": 1,
 		"id": "260786",
 		"levels": [
 			{
@@ -842,459 +1047,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury%": 100,
-						"poison%": 100,
-						"proc id": "11",
-						"sick%": 100,
-						"target area": "aoe",
-						"target type": "enemy",
-						"weaken%": 100
-					},
-					{
-						"curse%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"paralysis%": 100,
-						"proc id": "11",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff turns (110)": 3,
-						"atk% buff when enemy has ailment": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "65",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury%": 100,
-						"poison%": 100,
-						"proc id": "11",
-						"sick%": 100,
-						"target area": "aoe",
-						"target type": "enemy",
-						"weaken%": 100
-					},
-					{
-						"curse%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"paralysis%": 100,
-						"proc id": "11",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff turns (110)": 3,
-						"atk% buff when enemy has ailment": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "65",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury%": 100,
-						"poison%": 100,
-						"proc id": "11",
-						"sick%": 100,
-						"target area": "aoe",
-						"target type": "enemy",
-						"weaken%": 100
-					},
-					{
-						"curse%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"paralysis%": 100,
-						"proc id": "11",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff turns (110)": 3,
-						"atk% buff when enemy has ailment": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "65",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury%": 100,
-						"poison%": 100,
-						"proc id": "11",
-						"sick%": 100,
-						"target area": "aoe",
-						"target type": "enemy",
-						"weaken%": 100
-					},
-					{
-						"curse%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"paralysis%": 100,
-						"proc id": "11",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff turns (110)": 3,
-						"atk% buff when enemy has ailment": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "65",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury%": 100,
-						"poison%": 100,
-						"proc id": "11",
-						"sick%": 100,
-						"target area": "aoe",
-						"target type": "enemy",
-						"weaken%": 100
-					},
-					{
-						"curse%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"paralysis%": 100,
-						"proc id": "11",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff turns (110)": 3,
-						"atk% buff when enemy has ailment": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "65",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury%": 100,
-						"poison%": 100,
-						"proc id": "11",
-						"sick%": 100,
-						"target area": "aoe",
-						"target type": "enemy",
-						"weaken%": 100
-					},
-					{
-						"curse%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"paralysis%": 100,
-						"proc id": "11",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff turns (110)": 3,
-						"atk% buff when enemy has ailment": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "65",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury%": 100,
-						"poison%": 100,
-						"proc id": "11",
-						"sick%": 100,
-						"target area": "aoe",
-						"target type": "enemy",
-						"weaken%": 100
-					},
-					{
-						"curse%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"paralysis%": 100,
-						"proc id": "11",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff turns (110)": 3,
-						"atk% buff when enemy has ailment": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "65",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury%": 100,
-						"poison%": 100,
-						"proc id": "11",
-						"sick%": 100,
-						"target area": "aoe",
-						"target type": "enemy",
-						"weaken%": 100
-					},
-					{
-						"curse%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"paralysis%": 100,
-						"proc id": "11",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff turns (110)": 3,
-						"atk% buff when enemy has ailment": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "65",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"injury%": 100,
-						"poison%": 100,
-						"proc id": "11",
-						"sick%": 100,
-						"target area": "aoe",
-						"target type": "enemy",
-						"weaken%": 100
-					},
-					{
-						"curse%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"paralysis%": 100,
-						"proc id": "11",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff turns (110)": 3,
-						"atk% buff when enemy has ailment": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "65",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "閻傀燼『アンテノーラ』"
 	}
 }

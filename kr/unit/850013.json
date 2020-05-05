@@ -19,18 +19,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 115
+		},
+		"idle": {
+			"total number of frames": 150
+		},
+		"move": {
+			"total number of frames": 150
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 빛속성 6연속 데미지&2턴 동안 아군전체 방어력 상승",
-		"hit dmg% distribution": [
-			15,
-			20,
-			20,
-			15,
-			10,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					24,
+					26,
+					28,
+					80,
+					90,
+					100
+				],
+				"hit dmg% distribution": [
+					15,
+					20,
+					20,
+					15,
+					10,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [],
+				"hit dmg% distribution": [],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "적 전체에게 빛속성 6연속 데미지&2턴 동안 아군전체 방어력 상승",
+		"drop check count": 1,
 		"id": "8550011",
 		"levels": [
 			{
@@ -244,21 +278,41 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "로얄 스트레이트"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 850010,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			25,
+			27,
+			35,
+			38,
+			76,
+			83
+		],
+		"hit dmg% distribution": [
+			15,
+			15,
+			15,
+			15,
+			15,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "Princess of the ruined Elysian Kingdom. Estia lost her mother soon after she was born, and her father dedicated himself to military matters. The people around her were kind to her and always let her have her way, but she never had a true friend. This was until a young boy about the same age as her was introduced to her and made her pageboy.",
 		"evolution": " ",
 		"fusion": "What did you just give me?<br>It felt wonderful!<br>Do you have more?",
 		"summon": "The only people I trust are<br>my father and Xenon.<br>You might be the third person."
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"cost": 100000,
@@ -295,16 +349,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 1045,
-	"hit dmg% distribution": [
-		15,
-		15,
-		15,
-		15,
-		15,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 850013,
 	"imp": {
 		"max atk": "100",
@@ -328,7 +372,18 @@
 		"name": "황제의 빛"
 	},
 	"lord damage range": "1116~1246",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
 	"name": "왕녀 에스티아",
 	"rarity": 3,
 	"sell caution": false,

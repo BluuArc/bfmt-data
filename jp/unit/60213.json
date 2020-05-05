@@ -19,20 +19,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 106
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "敵単体に闇属性８連ダメージ＆３ターン、自分の防御力の半分を転換して攻撃力をアップ",
-		"hit dmg% distribution": [
-			14,
-			12,
-			12,
-			12,
-			14,
-			12,
-			12,
-			12
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					31,
+					35,
+					39,
+					43,
+					63,
+					67,
+					71,
+					75
+				],
+				"hit dmg% distribution": [
+					14,
+					12,
+					12,
+					12,
+					14,
+					12,
+					12,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "敵単体に闇属性８連ダメージ＆３ターン、自分の防御力の半分を転換して攻撃力をアップ",
+		"drop check count": 1,
 		"id": "60213",
 		"levels": [
 			{
@@ -256,21 +296,41 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "ブラックベーゼ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60210,
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			31,
+			37,
+			43,
+			63,
+			69,
+			75
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			13,
+			14,
+			13
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A soldier from the plebeian Bariura Empire. For some reason he got along well with one of the Six Heroes, Magress, and the pair were called \"the friends without many friends.\" However, Bahvel was wrongly accused of having entrapped Magress's father, when in reality it had been someone else who had done it out of jealousy towards him. Whilst in battle, Bahvel suffered a great wound on his face , which dispelled any doubts he had had about fighting the furious Magress. Afterwards he came to hide his wound with a helmet, and continued to lend Magress his power behind the scenes.",
 		"evolution": "You're curious about the helmet, right?<br>I only wear it to hide my scar, <br>otherwise it makes that guy anxious.",
 		"fusion": "I don't know if I'm still inexperienced as a knight, <br>but I've lead a life thus far that I've never been ashamed of.",
 		"summon": "Do you understand my beliefs?<br>If you can grasp that, then I can answer to you with my full power."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "60212"
@@ -279,16 +339,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 590,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		13,
-		14,
-		13
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 60213,
 	"imp": {
 		"max atk": "140",
@@ -312,7 +362,18 @@
 		"name": "闇創神の加護"
 	},
 	"lord damage range": "1126~1259",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "黒大帝ハーヴェル",
 	"rarity": 4,
 	"sell caution": false,

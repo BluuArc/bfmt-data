@@ -25,34 +25,100 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 282
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光・闇属性２２連ダメージ＆味方全体に３ターン、スパークダメージをかなりアップ・ターン毎にＨＰをかなり回復",
-		"hit dmg% distribution": [
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			5,
-			5,
-			5,
-			4,
-			5,
-			4,
-			5,
-			3,
-			3,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					11,
+					27,
+					35,
+					51,
+					59,
+					75,
+					83,
+					99,
+					107,
+					123,
+					139,
+					155,
+					163,
+					179,
+					187,
+					191,
+					195,
+					203,
+					211,
+					219,
+					235,
+					251
+				],
+				"hit dmg% distribution": [
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					5,
+					5,
+					5,
+					4,
+					5,
+					4,
+					5,
+					3,
+					3,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "敵全体に光・闇属性２２連ダメージ＆味方全体に３ターン、スパークダメージをかなりアップ・ターン毎にＨＰをかなり回復",
+		"drop check count": 1,
 		"id": "50565",
 		"levels": [
 			{
@@ -396,21 +462,69 @@
 				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "ＡＮｉＭＡ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-22T21:50:39.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50560,
 	"cost": 25,
+	"damage frames": {
+		"frame times": [
+			11,
+			17,
+			23,
+			29,
+			41,
+			47,
+			53,
+			59,
+			72,
+			85,
+			98,
+			111,
+			124,
+			132,
+			140,
+			148,
+			178,
+			184,
+			190,
+			196
+		],
+		"hit dmg% distribution": [
+			7,
+			5,
+			5,
+			5,
+			6,
+			5,
+			5,
+			5,
+			3,
+			3,
+			3,
+			3,
+			5,
+			4,
+			4,
+			4,
+			10,
+			7,
+			6,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 20
+	},
 	"dictionary": {
 		"description": "An amnesiac girl from the foreign land of Grand Gaia and Deemo, the strange being that saved her. The girl and Deemo took off from Grand Gaia and eventually landed in Ishgria. There, they were sponsored by a certain demon patron who helped them set up a live performance. However, many of the demons who heard their music cast it aside as something for the weak. Though some say that other demons were moved by Deemo and the Girl's songs, inspiring them to place value in things other than battle.",
 		"evolution": "Wow, we changed again!<br>Even flowers are blooming around us.<br>But what are these blossoms...?",
 		"fusion": "This technique makes me feel warm...<br>I feel a gentleness from it.<br>It's like Deemo's music.",
 		"summon": "We've made it somewhere new again.<br>Deemo, let's share our music<br>with everyone here too!"
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"prev": "50564"
@@ -419,30 +533,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 1170,
-	"hit dmg% distribution": [
-		7,
-		5,
-		5,
-		5,
-		6,
-		5,
-		5,
-		5,
-		3,
-		3,
-		3,
-		3,
-		5,
-		4,
-		4,
-		4,
-		10,
-		7,
-		6,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 20,
 	"id": 50565,
 	"imp": {
 		"max atk": "400",
@@ -481,47 +571,123 @@
 		"name": "ホワイト・ノーツ"
 	},
 	"lord damage range": "1769~1976",
-	"max bc generated": 40,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Deemoと女の子",
 	"rarity": 6,
 	"sbb": {
-		"desc": "敵全体に強力な光・闇属性３２連ダメージ＆味方全体に３ターン、スパーク時、確率でＢＢゲージを少し増加・ダメージをかなりアップ",
-		"hit dmg% distribution": [
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					11,
+					18,
+					25,
+					32,
+					39,
+					46,
+					53,
+					60,
+					67,
+					74,
+					81,
+					88,
+					95,
+					102,
+					109,
+					116,
+					123,
+					130,
+					137,
+					144,
+					151,
+					158,
+					165,
+					172,
+					179,
+					186,
+					193,
+					200,
+					207,
+					214,
+					221,
+					228
+				],
+				"hit dmg% distribution": [
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 32,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "67"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 32,
+		"desc": "敵全体に強力な光・闇属性３２連ダメージ＆味方全体に３ターン、スパーク時、確率でＢＢゲージを少し増加・ダメージをかなりアップ",
+		"drop check count": 1,
 		"id": "150565",
 		"levels": [
 			{
@@ -865,7 +1031,6 @@
 				]
 			}
 		],
-		"max bc generated": 32,
 		"name": "ミュオソティス"
 	},
 	"sell caution": false,

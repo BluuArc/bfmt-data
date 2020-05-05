@@ -19,20 +19,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "8 combo powerful Light attack on all foes & 50% damage reduction for 1 turn",
-		"hit dmg% distribution": [
-			16,
-			13,
-			10,
-			20,
-			14,
-			11,
-			9,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					9,
+					14,
+					19,
+					100,
+					105,
+					111,
+					118,
+					126
+				],
+				"hit dmg% distribution": [
+					16,
+					13,
+					10,
+					20,
+					14,
+					11,
+					9,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo powerful Light attack on all foes & 50% damage reduction for 1 turn",
+		"drop check count": 1,
 		"id": "850265",
 		"levels": [
 			{
@@ -246,20 +278,42 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Humans are truly foolish!"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-28T13:11:01.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 850260,
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			9,
+			14,
+			19,
+			100,
+			105,
+			111,
+			118
+		],
+		"hit dmg% distribution": [
+			18,
+			13,
+			9,
+			20,
+			17,
+			13,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A forest sprite from another world guided by the Chain Chronicle. Born the inheritor of the scared power of the Silver Wolf, which is said to be the Forest King, Barienna is also a chosen \"forest guide.\" She serves the chief of the Sea Breeze Tribe and has been charged with the duty of protecting the forest and her people. Her kindness and devotion toward the forest sprites earned her their love and respect. However, Barienna remains wary of outsiders and the people from other tribes. She exudes a completely different aura in the presence of strangers, adopting a standoffish demeanor and looking upon them with disdain.",
 		"fusion": "I… I can handle myself!<br>It's not as if I needed you help.<br>Hmph!",
 		"summon": "Don't you even think about it!<br>It's not that I want to help you.<br>I'm only here at my liege's request!"
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"cost": 200000,
@@ -296,17 +350,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 8144,
-	"hit dmg% distribution": [
-		18,
-		13,
-		9,
-		20,
-		17,
-		13,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 850265,
 	"imp": {
 		"max atk": "300",
@@ -340,7 +383,18 @@
 		"name": "Mana Expertise"
 	},
 	"lord damage range": "1443~1612",
-	"max bc generated": 14,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Barienna",
 	"rarity": 5,
 	"sell caution": false,

@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,8 +19,34 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 101
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 36
+		}
+	},
 	"bb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					146
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
+		],
 		"desc": "Greatly boosts Atk, Def, and Rec for all allies for 3 turns",
+		"drop check count": 1,
 		"id": "50305",
 		"levels": [
 			{
@@ -188,15 +214,36 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 25,
+	"damage frames": {
+		"frame times": [
+			50,
+			60,
+			70,
+			80,
+			90,
+			100
+		],
+		"hit dmg% distribution": [
+			20,
+			16,
+			16,
+			16,
+			16,
+			16
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "Despite being the Keeper of Order, this white beast bore his fangs to the gods. He disappeared after his battle with a certain angel, but appeared once again after the gods began their invasion. It is said his appearence had changed, and he was able to release his full power. Having recovered, pure white wings spread from his back as he raced toward the Half Blood Girl and the Rebel Angel who continued to resist the gods' invasion. As he fought alongside them the two, it is said the White Beast's roar rattled even the gods themselves.",
 		"evolution": "The beast inside me has awaken.<br>You, who desires strength!<br>Let me show you my true form!",
 		"fusion": "Summoner.<br>Forget not that with great power<br>comes great responsibility.",
 		"summon": "Hear me roar!<br>I am the Keeper of Order,<br>Leorone, Shining King of all Beasts!"
 	},
+	"drop check count": 4,
 	"element": "light",
 	"evolution": {
 		"prev": "50304"
@@ -205,16 +252,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 492,
-	"hit dmg% distribution": [
-		20,
-		16,
-		16,
-		16,
-		16,
-		16
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 50305,
 	"imp": {
 		"max atk": "300",
@@ -236,25 +273,67 @@
 		"name": "Raging Might"
 	},
 	"lord damage range": "1862~2080",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
 	"name": "Leorone",
 	"rarity": 6,
 	"sbb": {
-		"desc": "10 combo powerful Light attack on all enemies & great boost to Atk, Def, and Rec for all allies",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					50,
+					58,
+					66,
+					74,
+					82,
+					90,
+					98,
+					106,
+					114,
+					122
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo powerful Light attack on all enemies & great boost to Atk, Def, and Rec for all allies",
+		"drop check count": 1,
 		"id": "150305",
 		"levels": [
 			{
@@ -498,7 +577,6 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "White Moon"
 	},
 	"sell caution": false,

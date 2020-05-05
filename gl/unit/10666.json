@@ -19,32 +19,96 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 220
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "20 combo powerful Fire attack on all foes, gradually boosts BB gauge for 3 turns & boosts BB gauge",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					55,
+					60,
+					65,
+					70,
+					75,
+					80,
+					85,
+					90,
+					95,
+					100,
+					105,
+					110,
+					115,
+					120,
+					125,
+					130,
+					135,
+					140,
+					145,
+					150
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "20 combo powerful Fire attack on all foes, gradually boosts BB gauge for 3 turns & boosts BB gauge",
+		"drop check count": 1,
 		"id": "10666",
 		"levels": [
 			{
@@ -328,21 +392,65 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Baerum Rampage"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 10660,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			55,
+			61,
+			67,
+			73,
+			79,
+			85,
+			91,
+			97,
+			103,
+			109,
+			115,
+			121,
+			127,
+			133,
+			139,
+			145,
+			151,
+			157
+		],
+		"hit dmg% distribution": [
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			5,
+			6,
+			6,
+			6,
+			6,
+			6,
+			6,
+			6,
+			6,
+			6,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 18
+	},
 	"dictionary": {
 		"description": "The aerial force commander of an empire from another world. Though she found herself involved in a war on an unknown territory, her resolve to fight was absolute. Her ingenuity and boldness lead her faction to countless victories over other camps, which is said to have threatened even the demons who ruled such lands. Her name echoed throughout the whole of Ishgria, though most demons failed to recognize she was human, and unknowingly considered her one of their own. However, not a single soul in the land ever came to know her reason for fighting.",
 		"evolution": "Demons and humans are no different.<br>We are all terrible creatures<br>unable to work together.",
 		"fusion": "Continue training. One day your<br>efforts will turn into confidence,<br>and ultimately into your charm.",
 		"summon": "This is who I am.<br>I'm ready for betrayal, but even so,<br>I want to trust you."
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"prev": "10665"
@@ -354,7 +462,8 @@
 			{
 				"conditions": [],
 				"hit increase/hit": 1,
-				"passive id": "37"
+				"passive id": "37",
+				"passive target": "self"
 			}
 		],
 		"id": "3800",
@@ -364,28 +473,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 980,
-	"hit dmg% distribution": [
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		5,
-		6,
-		6,
-		6,
-		6,
-		6,
-		6,
-		6,
-		6,
-		6,
-		6
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 18,
 	"id": 10666,
 	"imp": {
 		"max atk": "440",
@@ -417,7 +504,18 @@
 		"name": "Fire God's Great Inquisition"
 	},
 	"lord damage range": "2356~2632",
-	"max bc generated": 36,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Inferno Rifle Bestie",
 	"overdrive stats": {
 		"atk%": 100,
@@ -426,33 +524,88 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "22 combo powerful Fire attack on all foes, damage taken boosts BB gauge and boosts BB gauge fill rate for 3 turns ",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					55,
+					60,
+					65,
+					70,
+					75,
+					80,
+					85,
+					90,
+					95,
+					100,
+					105,
+					110,
+					115,
+					120,
+					125,
+					130,
+					135,
+					140,
+					145,
+					150,
+					155,
+					160
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "52"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "22 combo powerful Fire attack on all foes, damage taken boosts BB gauge and boosts BB gauge fill rate for 3 turns ",
+		"drop check count": 1,
 		"id": "110666",
 		"levels": [
 			{
@@ -766,7 +919,6 @@
 				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "All troops, follow me!"
 	},
 	"sell caution": false,
@@ -785,35 +937,92 @@
 		}
 	},
 	"ubb": {
-		"desc": "24 combo massive Fire attack on all foes, greatly boosts Atk, Def and damage taken hugely boosts BB gauge for 3 turns",
-		"hit dmg% distribution": [
-			4,
-			4,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					55,
+					60,
+					65,
+					70,
+					75,
+					80,
+					85,
+					90,
+					95,
+					100,
+					105,
+					110,
+					115,
+					120,
+					125,
+					130,
+					135,
+					140,
+					145,
+					150,
+					155,
+					160,
+					165,
+					170
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 24,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					25
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 24,
+		"desc": "24 combo massive Fire attack on all foes, greatly boosts Atk, Def and damage taken hugely boosts BB gauge for 3 turns",
+		"drop check count": 1,
 		"id": "210666",
 		"levels": [
 			{
@@ -848,306 +1057,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc fill when attacked high": 50,
-						"bc fill when attacked low": 50,
-						"bc fill when attacked turns (38)": 3,
-						"bc fill when attacked%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "20",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 24,
 		"name": "Arsenal Exhaustion"
 	}
 }

@@ -19,19 +19,58 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 128
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 21
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷・光属性７連ダメージ＆確率で怪我状態にする",
-		"hit dmg% distribution": [
-			15,
-			15,
-			30,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					24,
+					28,
+					84,
+					88,
+					92,
+					96,
+					100
+				],
+				"hit dmg% distribution": [
+					15,
+					15,
+					30,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 7,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 7,
+		"desc": "敵全体に雷・光属性７連ダメージ＆確率で怪我状態にする",
+		"drop check count": 1,
 		"id": "40243",
 		"levels": [
 			{
@@ -265,21 +304,39 @@
 				]
 			}
 		],
-		"max bc generated": 7,
 		"name": "第三神式『イカズチ』"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40240,
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			24,
+			28,
+			84,
+			88,
+			92
+		],
+		"hit dmg% distribution": [
+			15,
+			15,
+			30,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "The third youngest of the Six Sibyl Sisters who fought against the gods in order to save the humans. Of all the sisters and their unique personalities she took on a coordinating role having one of the more moderate personalities of the lot. She was aware of the sins of the humans when the gods came to destroy them, but she decided to fight with her sisters in protecting them instead of watching them disappear. It's said that after she split from the three of her sisters who defected, Zele continued trying to persuade them not to fight until the very end. ",
 		"evolution": " ",
 		"fusion": "I know the importance of power.<br>Without strength you cannot <br>convey your will to others.",
 		"summon": "I hate the humans who brought<br>harm to my sisters and I.<br>You, however, are an exception."
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 200000,
@@ -316,15 +373,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 397,
-	"hit dmg% distribution": [
-		15,
-		15,
-		30,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 40243,
 	"imp": {
 		"max atk": "160",
@@ -349,7 +397,18 @@
 		"name": "雷光の力"
 	},
 	"lord damage range": "1152~1287",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "雷の女神ゼーレ",
 	"rarity": 4,
 	"sell caution": false,

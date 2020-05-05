@@ -19,14 +19,48 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 105
+		},
+		"idle": {
+			"total number of frames": 48
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 뇌속성 2연속 데미지&확률로 부상 효과",
-		"hit dmg% distribution": [
-			80,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					58,
+					60
+				],
+				"hit dmg% distribution": [
+					80,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 2,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 2,
+		"desc": "적 전체에게 뇌속성 2연속 데미지&확률로 부상 효과",
+		"drop check count": 1,
 		"id": "40152",
 		"levels": [
 			{
@@ -230,21 +264,31 @@
 				]
 			}
 		],
-		"max bc generated": 2,
 		"name": "너 때릴거야!"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2015-08-14T00:39:50.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 40150,
 	"cost": 5,
+	"damage frames": {
+		"frame times": [
+			56
+		],
+		"hit dmg% distribution": [
+			100
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 1
+	},
 	"dictionary": {
 		"description": "A young girl with a passion for controlling lightning. After miraculously surviving a lightning strike as a child, she grew up to harbor an overwhelming fascination with all things storm-related. Desperate to harness the power of lightning herself, she developed a hammer capable of transforming its wielder’s swing into a burst of electrical energy. Eager to put her invention to the test, she set out, hammer in hand, to hunt monsters in dangerous lands.",
 		"evolution": " ",
 		"fusion": "The voltage isn’t high enough!<br>I need to find a way to charge<br>this even more...",
 		"summon": "You’re a Summoner, right?<br>There's something intriguing about you,<br>but I'm pretty interesting too, ya know!"
 	},
+	"drop check count": 8,
 	"element": "thunder",
 	"evolution": {
 		"cost": 100000,
@@ -276,11 +320,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 230,
-	"hit dmg% distribution": [
-		100
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 1,
 	"id": 40152,
 	"imp": {
 		"max atk": "120",
@@ -301,7 +340,18 @@
 		"name": "중격의 빛"
 	},
 	"lord damage range": "1005~1123",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "발명가 에루루",
 	"rarity": 3,
 	"sell caution": false,

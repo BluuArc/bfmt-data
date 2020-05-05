@@ -25,20 +25,48 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 90
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 수속성 8연속 데미지",
-		"hit dmg% distribution": [
-			5,
-			5,
-			10,
-			10,
-			20,
-			15,
-			15,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					18,
+					22,
+					34,
+					38,
+					42,
+					48,
+					54,
+					60
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					10,
+					10,
+					20,
+					15,
+					15,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "적 전체에게 강력한 수속성 8연속 데미지",
+		"drop check count": 1,
 		"id": "20015",
 		"levels": [
 			{
@@ -172,21 +200,41 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "라스트 블리자드"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 20010,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			10,
+			13,
+			25,
+			30,
+			34,
+			40
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			40,
+			20,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A swordswoman from the ruined Sama Kingdom. She is the savior of her kingdom, and one of the Six Heroes. The Savat people she led all lost their lives in the great war. As the last one standing, she tried to end her life, but a voice from her sword Lexida halted her. It was the voices of her fallen countrymen. With her allies' souls in her sword, she fought with more strength and beauty than ever before.",
 		"evolution": "Spirits residing within my Lexida!<br>Once again, lend me your power!<br>The power to destroy the gods!",
 		"fusion": "Don't worry, I'm here.<br>Fight with all you have<br>until the sword in your heart breaks.",
 		"summon": "You who have summoned me.<br>I'm not easy to command.<br>Don't say I didn't warn you!"
 	},
+	"drop check count": 4,
 	"element": "water",
 	"evolution": {
 		"cost": 1500000,
@@ -224,16 +272,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 339,
-	"hit dmg% distribution": [
-		10,
-		10,
-		40,
-		20,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 20015,
 	"imp": {
 		"max atk": "400",
@@ -258,27 +296,71 @@
 		"name": "수경신의 힘"
 	},
 	"lord damage range": "1533~1712",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "광빙의 여신 세레나",
 	"rarity": 6,
 	"sbb": {
-		"desc": "적 전체에게 수속성 12연속 데미지＆3턴간 아군 전체를 서서히 회복",
-		"hit dmg% distribution": [
-			20,
-			5,
-			10,
-			5,
-			10,
-			5,
-			10,
-			5,
-			10,
-			5,
-			5,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					28,
+					30,
+					32,
+					36,
+					40,
+					46,
+					52,
+					58,
+					66,
+					74,
+					82,
+					110
+				],
+				"hit dmg% distribution": [
+					20,
+					5,
+					10,
+					5,
+					10,
+					5,
+					10,
+					5,
+					10,
+					5,
+					5,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					160
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "적 전체에게 수속성 12연속 데미지＆3턴간 아군 전체를 서서히 회복",
+		"drop check count": 1,
 		"id": "120015",
 		"levels": [
 			{
@@ -512,7 +594,6 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "에스트레알 캘리버"
 	},
 	"sell caution": false,

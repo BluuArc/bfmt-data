@@ -19,17 +19,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 131
+		},
+		"idle": {
+			"total number of frames": 44
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性５連ダメージ＆味方全体に１ターン、被ダメージを軽減",
-		"hit dmg% distribution": [
-			15,
-			40,
-			30,
-			10,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					29,
+					82,
+					85,
+					88,
+					91
+				],
+				"hit dmg% distribution": [
+					15,
+					40,
+					30,
+					10,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					29
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "敵全体に炎属性５連ダメージ＆味方全体に１ターン、被ダメージを軽減",
+		"drop check count": 1,
 		"id": "10622",
 		"levels": [
 			{
@@ -243,20 +280,36 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "重装華"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10620,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			29,
+			82,
+			85,
+			88
+		],
+		"hit dmg% distribution": [
+			30,
+			20,
+			20,
+			30
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A female knight from the La Veda Republic who lived before the great war against the gods took place. Extremely talented in the art of battle and a natural warrior, Anje is said to have been expected to become a great knight. Many believe that though she was the silent type, she was kind and loving to animals, and a very fervent worshipper of the gods. Anje was last seen offering a morning prayer to the gods before she vanished without a trace. Countless knights of the kingdom were sent out in search of her, but she was never found.",
 		"fusion": "Thank you...<br>I'm glad to know...<br>That I'm of some use...",
 		"summon": "I've been summoned...?<br>Nice to meet you...<br>I shall be your lance and shield..."
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 100000,
@@ -293,14 +346,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 1023,
-	"hit dmg% distribution": [
-		30,
-		20,
-		20,
-		30
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 10622,
 	"imp": {
 		"max atk": "120",
@@ -323,7 +368,18 @@
 		"name": "紅盾の陣"
 	},
 	"lord damage range": "1013~1131",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "重騎アンジェ",
 	"rarity": 3,
 	"sell caution": false,

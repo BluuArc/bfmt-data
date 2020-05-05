@@ -19,25 +19,82 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 180
+		},
+		"idle": {
+			"total number of frames": 78
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "13 combo powerful Dark attack on all foes, raises normal hit amount for 3 turns & greatly boosts BC, HC drop rate",
-		"hit dmg% distribution": [
-			19,
-			15,
-			10,
-			9,
-			7,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					78,
+					81,
+					84,
+					87,
+					90,
+					94,
+					98,
+					102,
+					106,
+					110,
+					114,
+					118,
+					122
+				],
+				"hit dmg% distribution": [
+					19,
+					15,
+					10,
+					9,
+					7,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 13,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "26"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 13,
+		"desc": "13 combo powerful Dark attack on all foes, raises normal hit amount for 3 turns & greatly boosts BC, HC drop rate",
+		"drop check count": 1,
 		"id": "60776",
 		"levels": [
 			{
@@ -341,21 +398,45 @@
 				]
 			}
 		],
-		"max bc generated": 13,
 		"name": "Noble Imperium"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T16:25:19.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 60770,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			77,
+			80,
+			83,
+			87,
+			91,
+			96,
+			101,
+			107
+		],
+		"hit dmg% distribution": [
+			27,
+			18,
+			14,
+			12,
+			10,
+			8,
+			6,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "Wielder of the Sacred Dagger. It has been discovered during recent surveys conducted in Ishgria that even a handful of demons knew of the existence of the Sacred Treasures as well. Though there is evidence suggesting that one of these demons sought to collect all the treasures in order to destroy the world, myth has it that a young man bearing the Sacred Dagger prevented this from happening by giving birth to one nightmare after another. However, no information regarding the successors of Charis's family has been unearthed after this occurrence.",
 		"evolution": "Err... Umm...<br>As a thanks to you,<br>I'll  work even harder...",
 		"fusion": "Thank you...<br>But when I really think about it,<br>showing my gratitude is embarrassing.",
 		"summon": "As the guardian of the Sacred<br>Treasures, I must fulfill my role.<br>That should be enough, right?"
 	},
+	"drop check count": 3,
 	"element": "dark",
 	"evolution": {
 		"prev": "60775"
@@ -368,7 +449,8 @@
 				"bc drop rate% buff": 15,
 				"conditions": [],
 				"hc drop rate% buff": 15,
-				"passive id": "19"
+				"passive id": "19",
+				"passive target": "self"
 			},
 			{
 				"buff": {
@@ -377,7 +459,8 @@
 				},
 				"conditions": [],
 				"damage dealt threshold buff activation": 100000,
-				"passive id": "80"
+				"passive id": "80",
+				"passive target": "self"
 			}
 		],
 		"id": "6500",
@@ -387,18 +470,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1056,
-	"hit dmg% distribution": [
-		27,
-		18,
-		14,
-		12,
-		10,
-		8,
-		6,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 60776,
 	"imp": {
 		"max atk": "600",
@@ -425,7 +496,18 @@
 		"name": "Shadow God's Anima"
 	},
 	"lord damage range": "2563~2863",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "Soul Covenant Charis",
 	"overdrive stats": {
 		"atk%": 100,
@@ -434,29 +516,80 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "18 combo powerful Dark attack on all foes, raises normal hit amount and boosts Atk relative to Def for 3 turns",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			15,
-			8,
-			7,
-			7,
-			7,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					37,
+					44,
+					51,
+					78,
+					81,
+					84,
+					87,
+					90,
+					94,
+					98,
+					102,
+					106,
+					110,
+					114,
+					118,
+					122,
+					126
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					15,
+					8,
+					7,
+					7,
+					7,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "26"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo powerful Dark attack on all foes, raises normal hit amount and boosts Atk relative to Def for 3 turns",
+		"drop check count": 1,
 		"id": "160776",
 		"levels": [
 			{
@@ -760,7 +893,6 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Shadow God Oath"
 	},
 	"sell caution": false,
@@ -779,32 +911,86 @@
 		}
 	},
 	"ubb": {
-		"desc": "21 combo massive Dark attack on all foes, raises normal hit amount for 3 turns & greatly boosts BC, HC drop rate",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			13,
-			8,
-			6,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					36,
+					42,
+					48,
+					54,
+					60,
+					78,
+					81,
+					84,
+					87,
+					90,
+					94,
+					98,
+					102,
+					106,
+					110,
+					114,
+					118,
+					122,
+					126,
+					130
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					13,
+					8,
+					6,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 21,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "26"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 21,
+		"desc": "21 combo massive Dark attack on all foes, raises normal hit amount for 3 turns & greatly boosts BC, HC drop rate",
+		"drop check count": 1,
 		"id": "260776",
 		"levels": [
 			{
@@ -837,288 +1023,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 100,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 100,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 100,
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 21,
 		"name": "Treasure: Sacred Dagger"
 	}
 }

@@ -19,22 +19,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 146
+		},
+		"idle": {
+			"total number of frames": 88
+		},
+		"move": {
+			"total number of frames": 21
+		}
+	},
 	"bb": {
-		"desc": "10 combo powerful Dark attack on all foes & probable 1 turn Atk reduction",
-		"hit dmg% distribution": [
-			23,
-			19,
-			14,
-			10,
-			9,
-			7,
-			6,
-			5,
-			4,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					40,
+					45,
+					50,
+					55,
+					60,
+					65,
+					70,
+					75,
+					80,
+					85
+				],
+				"hit dmg% distribution": [
+					23,
+					19,
+					14,
+					10,
+					9,
+					7,
+					6,
+					5,
+					4,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo powerful Dark attack on all foes & probable 1 turn Atk reduction",
+		"drop check count": 1,
 		"id": "60565",
 		"levels": [
 			{
@@ -288,37 +330,80 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Sorcery Wand"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-27T14:43:14.000Z",
-		"updatedAt": "2015-09-03T04:48:35.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 60560,
 	"cost": 29,
+	"damage frames": {
+		"frame times": [
+			40,
+			45,
+			50,
+			55,
+			60,
+			65,
+			70,
+			75
+		],
+		"hit dmg% distribution": [
+			25,
+			21,
+			16,
+			11,
+			9,
+			7,
+			6,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A magician from the Bariura Empire belonging to the special military force supervised directly by Shida. Though her personality was gentle, her beloved demonic lantern is said to have held a great amount of dark power. Due to her lantern's ability to absorb and materialize any surrounding chemical elements, Shida took a particular interest in Lumie and had her help him conduct confidential experiments in absolute secrecy. Their research progressed at a faster rate than they had initially expected, but Lumie distanced herself from it all shortly afterwards to conduct her on experiments.",
 		"fusion": "I can feel my lantern's will...<br>If it keeps absorbing dark power,<br>I don't know what will happen.",
 		"summon": "Are you keen on my lantern or me?<br>I'll show you lots of spirits<br>to celebrate our meeting."
 	},
+	"drop check count": 2,
 	"element": "dark",
+	"evolution": {
+		"cost": 1500000,
+		"mats": [
+			{
+				"id": "60344",
+				"name": "Dark Mecha God",
+				"type": "unit"
+			},
+			{
+				"id": "50354",
+				"name": "Miracle Totem",
+				"type": "unit"
+			},
+			{
+				"id": "60123",
+				"name": "Dark Totem",
+				"type": "unit"
+			},
+			{
+				"id": "60201",
+				"name": "Dark Pot",
+				"type": "unit"
+			},
+			{
+				"id": "60224",
+				"name": "Metal Mimic",
+				"type": "unit"
+			}
+		],
+		"next": "60566"
+	},
 	"exp_pattern": 20,
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 998,
-	"hit dmg% distribution": [
-		25,
-		21,
-		16,
-		11,
-		9,
-		7,
-		6,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 60565,
 	"imp": {
 		"max atk": "400",
@@ -348,27 +433,95 @@
 		"name": "Demon Lantern's Flicker"
 	},
 	"lord damage range": "1726~1929",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "Dark Lantern Lumie",
 	"rarity": 6,
 	"sbb": {
-		"desc": "12 combo powerful Dark attack on all foes,  probable 1 turn Atk reduction & gradually recovers HP and boosts BB gauge for 3 turns",
-		"hit dmg% distribution": [
-			19,
-			14,
-			10,
-			9,
-			8,
-			8,
-			7,
-			7,
-			6,
-			5,
-			4,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					40,
+					45,
+					50,
+					55,
+					60,
+					65,
+					70,
+					75,
+					80,
+					85,
+					90,
+					95
+				],
+				"hit dmg% distribution": [
+					19,
+					14,
+					10,
+					9,
+					8,
+					8,
+					7,
+					7,
+					6,
+					5,
+					4,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "12 combo powerful Dark attack on all foes,  probable 1 turn Atk reduction & gradually recovers HP and boosts BB gauge for 3 turns",
+		"drop check count": 1,
 		"id": "160565",
 		"levels": [
 			{
@@ -802,7 +955,6 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "Sheer Gloom"
 	},
 	"sell caution": false,

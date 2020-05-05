@@ -19,20 +19,72 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 155
+		},
+		"idle": {
+			"total number of frames": 57
+		},
+		"move": {
+			"total number of frames": 7
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性８連ダメージ＆確率で全状態異常をランダムに発生",
-		"hit dmg% distribution": [
-			15,
-			15,
-			15,
-			15,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					67,
+					72,
+					77,
+					82,
+					87,
+					92,
+					97,
+					102
+				],
+				"hit dmg% distribution": [
+					15,
+					15,
+					15,
+					15,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "敵全体に雷属性８連ダメージ＆確率で全状態異常をランダムに発生",
+		"drop check count": 1,
 		"id": "40584",
 		"levels": [
 			{
@@ -346,21 +398,39 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "雷刃鋼堅"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40580,
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			67,
+			72,
+			77,
+			82,
+			87
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A warrior who once fought against the gods alongside the Oracle Knight. Born to a poor family in Bariura, Balgran lived a simple, yet happy life with his parents and younger sister. However, one fateful day his younger sister was selected as a candidate to become the Oracle Maiden, and subsequently taken to the shrine to fulfill her duties. When Balgran tried to go with her, the holy men from the shrine prohibited him from accompanying his sister. After this incident, he concealed his identity and began training in the hopes that one day he would be able to use such skills to protect his sister.",
 		"evolution": " ",
 		"fusion": "This may be selfish of me,<br>but I want you to use this power<br>to protect a certain someone.",
 		"summon": "My name is Balgran!<br>I will protect you against anything!<br>I promise you!"
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -397,15 +467,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 960,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 40584,
 	"imp": {
 		"max atk": "140",
@@ -426,7 +487,18 @@
 		"name": "創神の加護"
 	},
 	"lord damage range": "1612~1801",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "雷剛神バルグラン",
 	"rarity": 5,
 	"sell caution": false,

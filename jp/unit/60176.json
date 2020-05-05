@@ -19,30 +19,92 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 169
+		},
+		"idle": {
+			"total number of frames": 200
+		},
+		"move": {
+			"total number of frames": 25
+		}
+	},
 	"bb": {
-		"desc": "敵全体に闇属性１８連ダメージ＆確率で呪い状態にする＆味方全体に３ターン、確率で呪いを発生する効果を付与",
-		"hit dmg% distribution": [
-			8,
-			5,
-			4,
-			4,
-			7,
-			5,
-			5,
-			6,
-			6,
-			4,
-			5,
-			4,
-			6,
-			4,
-			5,
-			5,
-			8,
-			9
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114,
+					117,
+					120,
+					123,
+					126,
+					129,
+					132,
+					135,
+					138,
+					141,
+					144
+				],
+				"hit dmg% distribution": [
+					8,
+					5,
+					4,
+					4,
+					7,
+					5,
+					5,
+					6,
+					6,
+					4,
+					5,
+					4,
+					6,
+					4,
+					5,
+					5,
+					8,
+					9
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "敵全体に闇属性１８連ダメージ＆確率で呪い状態にする＆味方全体に３ターン、確率で呪いを発生する効果を付与",
+		"drop check count": 1,
 		"id": "60176",
 		"levels": [
 			{
@@ -326,21 +388,61 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "久怨殲洸蟲"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60170,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			93,
+			96,
+			99,
+			102,
+			105,
+			108,
+			111,
+			114,
+			117,
+			120,
+			123,
+			126,
+			129,
+			132,
+			135,
+			138
+		],
+		"hit dmg% distribution": [
+			9,
+			6,
+			4,
+			5,
+			6,
+			8,
+			5,
+			8,
+			9,
+			4,
+			5,
+			5,
+			7,
+			4,
+			5,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 16
+	},
 	"dictionary": {
 		"description": "A dancing girl who came from another world. Having joined forces with Sefia to confront the gods during the last stages of the great war, Kikuri was absorbed into another world amidst all the fighting. No one ever saw her again after that, but it is said that she met her great rival in battle within the vortex she had fallen into. However, no records exist of that battle either, though there is a rumor that lingers till this day which claims that Kikuri's last words were \"It was so much fun fighting you.\"",
 		"evolution": "These are my burial clothes.<br>Scarlet is beautiful, right? Can<br>I add some of your color to it too?",
 		"fusion": "The fate of a flower is to wither.<br>Once you've helped me bloom,<br>won't you wither away for me too?",
 		"summon": "It was all so fun back then. He he.<br>The memories are so painful.<br>I wish the pain would cut deeper."
 	},
+	"drop check count": 3,
 	"element": "dark",
 	"evolution": {
 		"prev": "60175"
@@ -361,6 +463,7 @@
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
@@ -374,6 +477,7 @@
 				"curse%": 8,
 				"paralysis%": 8,
 				"passive id": "20",
+				"passive target": "self",
 				"poison%": 8
 			},
 			{
@@ -386,6 +490,7 @@
 				],
 				"injury%": 10,
 				"passive id": "20",
+				"passive target": "self",
 				"sick%": 10,
 				"weaken%": 10
 			}
@@ -397,26 +502,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 881,
-	"hit dmg% distribution": [
-		9,
-		6,
-		4,
-		5,
-		6,
-		8,
-		5,
-		8,
-		9,
-		4,
-		5,
-		5,
-		7,
-		4,
-		5,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 16,
 	"id": 60176,
 	"imp": {
 		"max atk": "440",
@@ -444,7 +529,18 @@
 		"name": "闇紅華神の力"
 	},
 	"lord damage range": "2181~2436",
-	"max bc generated": 48,
+	"movement": {
+		"attack": {
+			"move speed": 2,
+			"move speed type": "4",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 2,
+			"move speed type": "4",
+			"move type": "2"
+		}
+	},
 	"name": "神獄の夜葬姫キクリ",
 	"overdrive stats": {
 		"atk%": 100,
@@ -453,33 +549,88 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な闇属性２２連ダメージ＆味方全体に３ターン、確率で呪いを発生する効果を付与・被ダメージ時、ＢＢゲージをかなり増加",
-		"hit dmg% distribution": [
-			8,
-			4,
-			5,
-			4,
-			5,
-			4,
-			5,
-			3,
-			4,
-			5,
-			3,
-			4,
-			5,
-			4,
-			4,
-			5,
-			6,
-			4,
-			3,
-			4,
-			5,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114,
+					117,
+					120,
+					123,
+					126,
+					129,
+					132,
+					135,
+					138,
+					141,
+					144,
+					147,
+					150,
+					153,
+					156
+				],
+				"hit dmg% distribution": [
+					8,
+					4,
+					5,
+					4,
+					5,
+					4,
+					5,
+					3,
+					4,
+					5,
+					3,
+					4,
+					5,
+					4,
+					4,
+					5,
+					6,
+					4,
+					3,
+					4,
+					5,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "敵全体に強力な闇属性２２連ダメージ＆味方全体に３ターン、確率で呪いを発生する効果を付与・被ダメージ時、ＢＢゲージをかなり増加",
+		"drop check count": 2,
 		"id": "160176",
 		"levels": [
 			{
@@ -793,7 +944,6 @@
 				]
 			}
 		],
-		"max bc generated": 44,
 		"name": "屍昏葬の雨"
 	},
 	"sell caution": false,
@@ -812,36 +962,94 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な闇属性２５連ダメージ＆３ターン、ターン終了時に追加ダメージ＆味方全体に３ターン、攻撃力を超絶アップ",
-		"hit dmg% distribution": [
-			7,
-			4,
-			3,
-			3,
-			5,
-			4,
-			4,
-			3,
-			4,
-			4,
-			3,
-			4,
-			3,
-			6,
-			3,
-			5,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			5,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114,
+					117,
+					120,
+					123,
+					126,
+					129,
+					132,
+					135,
+					138,
+					141,
+					144,
+					147,
+					150,
+					153,
+					156,
+					159,
+					162,
+					165
+				],
+				"hit dmg% distribution": [
+					7,
+					4,
+					3,
+					3,
+					5,
+					4,
+					4,
+					3,
+					4,
+					4,
+					3,
+					4,
+					3,
+					6,
+					3,
+					5,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					5,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 25,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 25,
+		"desc": "敵全体に超強力な闇属性２５連ダメージ＆３ターン、ターン終了時に追加ダメージ＆味方全体に３ターン、攻撃力を超絶アップ",
+		"drop check count": 2,
 		"id": "260176",
 		"levels": [
 			{
@@ -876,306 +1084,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 200,
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 50,
 		"name": "終の仇華"
 	}
 }

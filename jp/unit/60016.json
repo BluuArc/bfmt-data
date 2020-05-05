@@ -19,22 +19,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 151
+		},
+		"idle": {
+			"total number of frames": 102
+		},
+		"move": {
+			"total number of frames": 84
+		}
+	},
 	"bb": {
-		"desc": "敵全体に闇属性１０連ダメージ",
-		"hit dmg% distribution": [
-			20,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			10,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					52,
+					58,
+					64,
+					70,
+					76,
+					82,
+					88,
+					94,
+					100,
+					106
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					10,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "敵全体に闇属性１０連ダメージ",
+		"drop check count": 1,
 		"id": "60016",
 		"levels": [
 			{
@@ -168,21 +198,43 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "アビスグルーム"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60010,
 	"cost": 38,
+	"damage frames": {
+		"frame times": [
+			52,
+			56,
+			60,
+			64,
+			68,
+			72,
+			76
+		],
+		"hit dmg% distribution": [
+			40,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "As his comrades fell at the hands of Narza, Magress fell into quite the predicament himself. Amongst his friends was one who although having previously claimed to hate traitors, sacrificed himself in order to save Magress. Consumed by the rage of vengeance, Magress slaughtered Narza while completely covered in wounds. A lone knight appeared shortly after to relay a message to him. Magress discarded every piece of his heavy armor except for his beloved lance, and though unable to move, challenged the mysterious knight to a duel he couldn't win. As he perished, Magress uttered words of gratitude for being able to die as a knight.",
 		"evolution": "Vengeance made me strong.<br>But my friends showed me the right path.<br>I'll become a legendary knight!",
 		"fusion": "The overwhelming darkness is powerful.<br>However, a strong heart able to contain it<br>is also key.",
 		"summon": "The pride of a knight.<br>That should be the source of my power.<br>But I failed to realize that sooner."
 	},
+	"drop check count": 6,
 	"element": "dark",
 	"evolution": {
 		"cost": 3000000,
@@ -247,6 +299,7 @@
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
@@ -258,7 +311,8 @@
 					}
 				],
 				"ignore def%": 50,
-				"passive id": "29"
+				"passive id": "29",
+				"passive target": "self"
 			}
 		],
 		"id": "600",
@@ -268,17 +322,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 806,
-	"hit dmg% distribution": [
-		40,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 60016,
 	"imp": {
 		"max atk": "840",
@@ -303,7 +346,18 @@
 		"name": "闇喰神の力"
 	},
 	"lord damage range": "1862~2080",
-	"max bc generated": 42,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "黒闇の真騎神マグルス",
 	"overdrive stats": {
 		"atk%": 100,
@@ -312,23 +366,56 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な闇属性１２連ダメージ＆味方全体に３ターン、防御力をかなりアップ",
-		"hit dmg% distribution": [
-			20,
-			10,
-			10,
-			10,
-			10,
-			10,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					52,
+					58,
+					64,
+					70,
+					76,
+					82,
+					88,
+					94,
+					100,
+					106,
+					112,
+					118
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					10,
+					10,
+					10,
+					10,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					144
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "敵全体に強力な闇属性１２連ダメージ＆味方全体に３ターン、防御力をかなりアップ",
+		"drop check count": 1,
 		"id": "160016",
 		"levels": [
 			{
@@ -552,7 +639,6 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "ダーケストゲイズ"
 	},
 	"sell caution": false,
@@ -571,33 +657,88 @@
 		}
 	},
 	"ubb": {
-		"desc": "敵全体に超強力な闇属性２２連ダメージ＆味方全体に３ターン、防御力を超絶アップ＆１ターン、被ダメージを超絶軽減",
-		"hit dmg% distribution": [
-			10,
-			10,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					52,
+					58,
+					64,
+					70,
+					76,
+					82,
+					88,
+					94,
+					100,
+					106,
+					112,
+					118,
+					124,
+					130,
+					136,
+					142,
+					148,
+					154,
+					160,
+					166,
+					172,
+					178
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					220
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					220
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "敵全体に超強力な闇属性２２連ダメージ＆味方全体に３ターン、防御力を超絶アップ＆１ターン、被ダメージを超絶軽減",
+		"drop check count": 1,
 		"id": "260016",
 		"levels": [
 			{
@@ -629,279 +770,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"def% buff (3)": 200,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "ブラックエンド"
 	}
 }

@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,21 +25,50 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 146
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 16
+		}
+	},
 	"bb": {
-		"desc": "9 combo massive Earth attack on all enemies",
-		"hit dmg% distribution": [
-			12,
-			11,
-			11,
-			11,
-			11,
-			11,
-			11,
-			11,
-			11
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					26,
+					30,
+					47,
+					68,
+					90,
+					100,
+					110,
+					120,
+					130
+				],
+				"hit dmg% distribution": [
+					12,
+					11,
+					11,
+					11,
+					11,
+					11,
+					11,
+					11,
+					11
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "9 combo massive Earth attack on all enemies",
+		"drop check count": 1,
 		"id": "730134",
 		"levels": [
 			{
@@ -173,14 +202,42 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "10000 Fists"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			18,
+			35,
+			50,
+			65,
+			80,
+			83,
+			86,
+			89,
+			92,
+			94
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"cost": 500000,
@@ -218,20 +275,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7049,
-	"hit dmg% distribution": [
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 730134,
 	"imp": {
 		"max atk": "260",
@@ -257,7 +300,18 @@
 		"name": "Centurion Aura"
 	},
 	"lord damage range": "1825~2038",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Holy sotnarG",
 	"rarity": 5,
 	"sell caution": false,

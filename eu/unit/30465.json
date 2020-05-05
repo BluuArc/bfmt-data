@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,42 +25,92 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 127
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 12
+		}
+	},
 	"bb": {
-		"desc": "30 combo powerful Earth attack on single enemy & boost HC drop rate",
-		"hit dmg% distribution": [
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			13,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					20,
+					22,
+					24,
+					26,
+					28,
+					30,
+					32,
+					34,
+					36,
+					38,
+					40,
+					42,
+					44,
+					46,
+					48,
+					50,
+					52,
+					54,
+					56,
+					58,
+					60,
+					62,
+					64,
+					66,
+					68,
+					70,
+					72,
+					74,
+					76,
+					78
+				],
+				"hit dmg% distribution": [
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					13,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 30,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 30,
+		"desc": "30 combo powerful Earth attack on single enemy & boost HC drop rate",
+		"drop check count": 1,
 		"id": "30465",
 		"levels": [
 			{
@@ -204,20 +254,54 @@
 				]
 			}
 		],
-		"max bc generated": 30,
 		"name": "No one else will get hurt!"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 27,
+	"damage frames": {
+		"frame times": [
+			20,
+			23,
+			26,
+			29,
+			34,
+			37,
+			41,
+			47,
+			49,
+			54,
+			74,
+			78,
+			82
+		],
+		"hit dmg% distribution": [
+			10,
+			5,
+			5,
+			7,
+			7,
+			7,
+			7,
+			7,
+			7,
+			7,
+			21,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
 	"dictionary": {
 		"description": "The second princess of the Principality of Vriksha who sought to protect the faeries’ grove from the god army. After living in the forest, her heart full of vengeance changed, and she decided to protect the forest instead. However, the forest would also come to suffer an invasion from the god army. Always looking forward, she fought with her treasure sword in hand, releasing the tremendous power she had built up and defeating one god after another. Recent studies remark that the precious sword was once a present to the king of Vriksha from the pixie king for the purpose of protecting the forest. It is believed that once the princess took on that role, its true strength was unleashed.",
 		"evolution": "I definitely feel power<br>coming from my  sword.<br>These children's will.<br>I want to answer to it!",
 		"fusion": "My will to save this forest<br>made my sword stronger.<br>But why is that?",
 		"summon": "I don't know what my sister<br>expected from me.<br>But I know I'm on the right path!"
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"prev": "30464"
@@ -226,23 +310,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 663,
-	"hit dmg% distribution": [
-		10,
-		5,
-		5,
-		7,
-		7,
-		7,
-		7,
-		7,
-		7,
-		7,
-		21,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 13,
 	"id": 30465,
 	"imp": {
 		"max atk": "300",
@@ -263,35 +330,87 @@
 		"name": "Ares' Excelsior"
 	},
 	"lord damage range": "1828~2042",
-	"max bc generated": 26,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Flora Goddess Faris",
 	"rarity": 6,
 	"sbb": {
-		"desc": "20 combo powerful Earth attack on all enemies, boost HC drop rate & boost to critical hit rate for all allies for 3 turns",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					20,
+					24,
+					28,
+					32,
+					36,
+					40,
+					44,
+					46,
+					50,
+					54,
+					58,
+					62,
+					66,
+					70,
+					74,
+					78,
+					82,
+					86,
+					90,
+					94
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "20 combo powerful Earth attack on all enemies, boost HC drop rate & boost to critical hit rate for all allies for 3 turns",
+		"drop check count": 1,
 		"id": "130465",
 		"levels": [
 			{
@@ -525,7 +644,6 @@
 				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Treasure blade, empower me!"
 	},
 	"sell caution": false,

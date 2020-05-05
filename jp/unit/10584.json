@@ -19,20 +19,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 147
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 201
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性８連ダメージ＆味方全体に２ターン、防御貫通効果を付与",
-		"hit dmg% distribution": [
-			5,
-			4,
-			30,
-			13,
-			12,
-			12,
-			12,
-			12
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					34,
+					92,
+					96,
+					100,
+					104,
+					108,
+					112
+				],
+				"hit dmg% distribution": [
+					5,
+					4,
+					30,
+					13,
+					12,
+					12,
+					12,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "敵全体に炎属性８連ダメージ＆味方全体に２ターン、防御貫通効果を付与",
+		"drop check count": 1,
 		"id": "10584",
 		"levels": [
 			{
@@ -246,21 +286,37 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "インフェルノフォール"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10580,
 	"cost": 18,
+	"damage frames": {
+		"frame times": [
+			30,
+			34,
+			92,
+			96
+		],
+		"hit dmg% distribution": [
+			15,
+			13,
+			50,
+			22
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A blacksmith specializing in helmets and a famed magic wielding soldier. When placed on the battlefield as a mercenary, he insisted on having the most extravagant armor, eventually beginning to make it himself. The beauty of the delicate adornments on his helmet gained him fame as a blacksmith, procuring customers from noble families, such as knights, and even the emperor himself. However, at this point in time he wished to be recognized only for his skills as a soldier, and it is rumored that he refused the emperor's request for his services for this very reason.",
 		"evolution": "The most suitable armor for you<br>should be made by your own self!<br>That's my motto!",
 		"fusion": "Interested in my armor, I see.<br>Well then, I'll show it to ya.<br>But don't you dare touch it!",
 		"summon": "I'm Vanberk, the strongest soldier!<br>I'm but a simple blacksmith, you say?<br>You wanna fight?!"
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -298,14 +354,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 816,
-	"hit dmg% distribution": [
-		15,
-		13,
-		50,
-		22
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 10584,
 	"imp": {
 		"max atk": "140",
@@ -326,7 +374,18 @@
 		"name": "閃撃の覇刃"
 	},
 	"lord damage range": "1743~1947",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "堅武神ヴァンベルク",
 	"rarity": 5,
 	"sell caution": false,

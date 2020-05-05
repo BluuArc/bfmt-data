@@ -19,21 +19,62 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 144
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 21
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷・光属性９連ダメージ＆確率で怪我状態にする",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			20,
-			10,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					24,
+					28,
+					32,
+					96,
+					100,
+					104,
+					108,
+					112,
+					116
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					20,
+					10,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "敵全体に雷・光属性９連ダメージ＆確率で怪我状態にする",
+		"drop check count": 1,
 		"id": "40244",
 		"levels": [
 			{
@@ -267,21 +308,45 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "第七神式『デンシン』"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40240,
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			24,
+			28,
+			32,
+			96,
+			100,
+			104,
+			108,
+			112
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			10,
+			30,
+			10,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "The third youngest of the Six Sibyl Sisters. During the second half of the war between the gods and the humans she fought against the Fresh Blood Sisters. As former coordinator of their group she tried convincing them to stop fighting. However, as Paula's cruel acts toward humans grew in intensity, she had no choice but to use force to end her appalling behavior. She grew powerful with determination, unleashing an unforgiving torrent of lightning on her sister. ",
 		"evolution": "I didn't have enough power before.<br>I wonder if now I might have <br>what it takes to stop her.",
 		"fusion": "My older sister used to tell<br>me that I think too much.<br>Do you know what she meant?",
 		"summon": "I will always love my sisters.<br>You knew this when you summoned<br>me, didn't you Summoner?"
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -319,18 +384,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 398,
-	"hit dmg% distribution": [
-		10,
-		10,
-		10,
-		30,
-		10,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 40244,
 	"imp": {
 		"max atk": "200",
@@ -355,7 +408,18 @@
 		"name": "雷光神の力"
 	},
 	"lord damage range": "1374~1535",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "真雷の女神ゼーレ",
 	"rarity": 5,
 	"sell caution": false,

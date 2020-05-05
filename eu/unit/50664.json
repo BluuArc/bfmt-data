@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,21 +25,74 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 167
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "9 combo powerful Light attack on all foes, chance of lowering Atk, Def for 1 turn & adds Weak, Curse to allies' attack for 3 turns",
-		"hit dmg% distribution": [
-			20,
-			10,
-			9,
-			11,
-			10,
-			8,
-			10,
-			12,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					80,
+					90,
+					100,
+					110,
+					130,
+					140,
+					150,
+					160,
+					170
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					9,
+					11,
+					10,
+					8,
+					10,
+					12,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "9 combo powerful Light attack on all foes, chance of lowering Atk, Def for 1 turn & adds Weak, Curse to allies' attack for 3 turns",
+		"drop check count": 1,
 		"id": "50664",
 		"levels": [
 			{
@@ -423,20 +476,38 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "Rah Winkrum"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			83,
+			87,
+			111,
+			115,
+			119
+		],
+		"hit dmg% distribution": [
+			40,
+			10,
+			30,
+			12,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "One of the sacred Guardians of Meirith, who worshipped the Holy Emperor Karna Masta in the La Veda Republic. Originally, Fadahl had quite a promising future in store as a priest until he suddenly contracted an incurable disease. However, he never gave up on his recovery, and one day he was chosen to serve as a Guardian. It was then when Karna Masta gifted him with a divine piece of armor which finally healed his terrible disease. From that point forward it is said that Fadahl believed the life of the gods to be more important than his own.",
 		"evolution": " ",
 		"fusion": "You should consider this wisely.<br>Are you sure it is me<br>you should be strengthening?",
 		"summon": "I was summoned by a human?<br>How interesting... I wonder if this<br>is also the will of the gods."
 	},
+	"drop check count": 3,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -473,15 +544,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 895,
-	"hit dmg% distribution": [
-		40,
-		10,
-		30,
-		12,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 50664,
 	"imp": {
 		"max atk": "140",
@@ -510,7 +572,18 @@
 		"name": "Pandemic Spread"
 	},
 	"lord damage range": "1549~1730",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "Noble Sage Fadahl",
 	"rarity": 5,
 	"sell caution": false,

@@ -25,16 +25,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 61
+		},
+		"idle": {
+			"total number of frames": 44
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 뇌속성 4연속 데미지＆낮은 확률로 부상 효과",
-		"hit dmg% distribution": [
-			25,
-			25,
-			25,
-			25
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					28,
+					30,
+					33,
+					36
+				],
+				"hit dmg% distribution": [
+					25,
+					25,
+					25,
+					25
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "적 전체에게 뇌속성 4연속 데미지＆낮은 확률로 부상 효과",
+		"drop check count": 1,
 		"id": "40143",
 		"levels": [
 			{
@@ -228,21 +264,37 @@
 				]
 			}
 		],
-		"max bc generated": 4,
 		"name": "비연뇌속연각"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 40140,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			28,
+			30,
+			33,
+			36
+		],
+		"hit dmg% distribution": [
+			25,
+			25,
+			25,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A fighter hailing from the Republic of Atalva who trained at the Toltya Dojo in the Sama Kingdom.<br>After Nemia left the dojo to look for her parents, Zeln began to focus on his training so that he might one day be able to follow after her. His legs, already strong from all the running away he’d done as a child, seemed like the natural place to start. Before long, he had developed his signature Lightning Kick, a flurry of kicks so fast it defied belief.",
 		"evolution": "My new and evolved kick technique is faster than lightning. Think you can keep up?",
 		"fusion": "It’s still not enough! My kick needs to be stronger if I’m to impress her!",
 		"summon": "It’s finally my turn to shine! Just wait’ll you see this kick I’ve been working on!"
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"cost": 100000,
@@ -280,14 +332,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 213,
-	"hit dmg% distribution": [
-		25,
-		25,
-		25,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 40142,
 	"imp": {
 		"max atk": "80",
@@ -308,7 +352,18 @@
 		"name": "맹자의 힘"
 	},
 	"lord damage range": "1004~1122",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "질풍신뢰 제렌",
 	"rarity": 3,
 	"sell caution": false,

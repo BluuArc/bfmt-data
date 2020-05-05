@@ -19,22 +19,76 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 151
+		},
+		"idle": {
+			"total number of frames": 48
+		},
+		"move": {
+			"total number of frames": 12
+		}
+	},
 	"bb": {
-		"desc": "10 combo powerful Water attack on all foes & boosts critical hit rate and critical damage for 3 turns",
-		"hit dmg% distribution": [
-			18,
-			4,
-			4,
-			12,
-			4,
-			4,
-			22,
-			15,
-			10,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					29,
+					32,
+					35,
+					53,
+					56,
+					59,
+					79,
+					83,
+					87,
+					91
+				],
+				"hit dmg% distribution": [
+					18,
+					4,
+					4,
+					12,
+					4,
+					4,
+					22,
+					15,
+					10,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo powerful Water attack on all foes & boosts critical hit rate and critical damage for 3 turns",
+		"drop check count": 1,
 		"id": "20724",
 		"levels": [
 			{
@@ -338,20 +392,38 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Demon Frost Flash"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T10:28:24.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 20720,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			29,
+			53,
+			79,
+			83,
+			87
+		],
+		"hit dmg% distribution": [
+			23,
+			15,
+			30,
+			20,
+			12
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A masked swordsman who fought for the people during the dawn of Elgaia. Not long after the great migration, a great demonic beast attacked some of the inhabitants of the reclaimed lands, and Farzen was the one to save them. There are no records about him prior to the event, but every event of his that follows was seemingly spectacular. Interestingly, Farzen was not his birth name, but a name believed to have been given to him by someone else, which spread around later on. Legend has it that Farzen never divulged any information concerning his origins.",
 		"fusion": "This warm light...<br>It's bathing my weak body...",
 		"summon": "I'm no one.<br>I don't need to be anyone.<br>I just serve Summoners now."
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 500000,
@@ -388,15 +460,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1203,
-	"hit dmg% distribution": [
-		23,
-		15,
-		30,
-		20,
-		12
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 20724,
 	"imp": {
 		"max atk": "260",
@@ -417,7 +480,18 @@
 		"name": "Dynasty Power"
 	},
 	"lord damage range": "1848~2064",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Ice Knight Farzen",
 	"rarity": 5,
 	"sell caution": false,

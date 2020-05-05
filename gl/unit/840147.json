@@ -19,23 +19,70 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "11 combo powerful Thunder and Light attack on all foes, boosts Spark damage & boosts all Elemental Weakness damage for 3 turns",
-		"hit dmg% distribution": [
-			7,
-			8,
-			7,
-			7,
-			8,
-			9,
-			10,
-			11,
-			10,
-			11,
-			12
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					45,
+					50,
+					55,
+					60,
+					65,
+					130,
+					136,
+					143,
+					151,
+					160,
+					170
+				],
+				"hit dmg% distribution": [
+					7,
+					8,
+					7,
+					7,
+					8,
+					9,
+					10,
+					11,
+					10,
+					11,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 11,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "55"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 11,
+		"desc": "11 combo powerful Thunder and Light attack on all foes, boosts Spark damage & boosts all Elemental Weakness damage for 3 turns",
+		"drop check count": 2,
 		"id": "840147",
 		"levels": [
 			{
@@ -419,21 +466,45 @@
 				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "Thunder Impulse"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T16:25:19.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 840140,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			12,
+			45,
+			51,
+			57,
+			63,
+			130,
+			140,
+			150
+		],
+		"hit dmg% distribution": [
+			10,
+			9,
+			10,
+			11,
+			10,
+			15,
+			17,
+			18
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "During the second invasion of Athensphere, Gazia unleashed another horde of mechanical beasts that dwarfed the first. Zedus knew that the city was lost and that his people did not stand a chance against Gazia and his mechanical army. But Zedus had not given up. He ordered the City of Athensphere to be abandoned and it's people evacuated. Tridon was to carry the citzens to safety aboard his ships. Ultor, Hadaron and Aurelia remained behind to hold off Gazia's horde while the people fled. Zedus knew that he didn't have enough time to evacuate an entire city. He had to buy them more no matter the cost. Climbing to the highest point of the imperial palace, Zedus poured his life force into one final attack, summoning a lightning storm that engulfed the entire city. Lightning bolts fell relentlessly upon Athensphere, each taking the form of a raging Thunder beast that hunted its enemy with terrifying speed. When the storm subsided, the only sounds to be heard came from the distant harbour packed with frightened people desperate to flee the city. With a final breath, Zedus bade his people one last farewell. Little did he know that a far greater disaster was about to befall Athensphere.",
 		"evolution": "You may take away our home, but you'll never take away<br>our spirit. We will rise again once more, stronger than ever!<br>I will give my life to protect what I hold dearest!",
 		"fusion": "This strength… this power...<br>I can feel it coursing through my veins.<br>Will it grant me the power to protect my people!",
 		"summon": "I am Zedus, Lord of Athensphere!<br>If you walk the path of the righteous,<br>I shall guide you to victory!"
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"prev": "840146"
@@ -454,6 +525,7 @@
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
@@ -465,6 +537,7 @@
 					}
 				],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -487,18 +560,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 8139,
-	"hit dmg% distribution": [
-		10,
-		9,
-		10,
-		11,
-		10,
-		15,
-		17,
-		18
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 840147,
 	"imp": {
 		"max atk": "440",
@@ -527,7 +588,18 @@
 		"name": "Testament of the Almighty"
 	},
 	"lord damage range": "2421~2704",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "Imperator Zedus",
 	"overdrive stats": {
 		"atk%": 100,
@@ -536,23 +608,80 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "12 combo powerful Thunder and Light attack on all foes, boosts critical and Spark damage for 3 turns & chance of reducing enemies' Atk and Def for 1 turn",
-		"hit dmg% distribution": [
-			6,
-			6,
-			7,
-			6,
-			7,
-			9,
-			9,
-			10,
-			11,
-			10,
-			10,
-			9
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					45,
+					50,
+					55,
+					60,
+					65,
+					130,
+					135,
+					141,
+					148,
+					156,
+					164,
+					172
+				],
+				"hit dmg% distribution": [
+					6,
+					6,
+					7,
+					6,
+					7,
+					9,
+					9,
+					10,
+					11,
+					10,
+					10,
+					9
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "12 combo powerful Thunder and Light attack on all foes, boosts critical and Spark damage for 3 turns & chance of reducing enemies' Atk and Def for 1 turn",
+		"drop check count": 2,
 		"id": "1840147",
 		"levels": [
 			{
@@ -1036,7 +1165,6 @@
 				]
 			}
 		],
-		"max bc generated": 24,
 		"name": "Retribution"
 	},
 	"sell caution": false,
@@ -1055,25 +1183,84 @@
 		}
 	},
 	"ubb": {
-		"desc": "14 combo massive Thunder and Light attack on all foes, huge boost to critical damage, Spark damage & Elemental Weakness damage for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			8,
-			7,
-			8,
-			7,
-			7,
-			7,
-			6,
-			7,
-			7,
-			7,
-			6,
-			7,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					45,
+					75,
+					95,
+					115,
+					135,
+					145,
+					155,
+					165,
+					175,
+					185,
+					195,
+					205,
+					215,
+					225
+				],
+				"hit dmg% distribution": [
+					10,
+					8,
+					7,
+					8,
+					7,
+					7,
+					7,
+					6,
+					7,
+					7,
+					7,
+					6,
+					7,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "29"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					120
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "55"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "14 combo massive Thunder and Light attack on all foes, huge boost to critical damage, Spark damage & Elemental Weakness damage for 3 turns",
+		"drop check count": 2,
 		"id": "2840147",
 		"levels": [
 			{
@@ -1121,423 +1308,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dark units do extra elemental weakness dmg": true,
-						"earth units do extra elemental weakness dmg": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 150,
-						"fire units do extra elemental weakness dmg": true,
-						"light units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"thunder units do extra elemental weakness dmg": true,
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dark units do extra elemental weakness dmg": true,
-						"earth units do extra elemental weakness dmg": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 150,
-						"fire units do extra elemental weakness dmg": true,
-						"light units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"thunder units do extra elemental weakness dmg": true,
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dark units do extra elemental weakness dmg": true,
-						"earth units do extra elemental weakness dmg": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 150,
-						"fire units do extra elemental weakness dmg": true,
-						"light units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"thunder units do extra elemental weakness dmg": true,
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dark units do extra elemental weakness dmg": true,
-						"earth units do extra elemental weakness dmg": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 150,
-						"fire units do extra elemental weakness dmg": true,
-						"light units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"thunder units do extra elemental weakness dmg": true,
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dark units do extra elemental weakness dmg": true,
-						"earth units do extra elemental weakness dmg": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 150,
-						"fire units do extra elemental weakness dmg": true,
-						"light units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"thunder units do extra elemental weakness dmg": true,
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dark units do extra elemental weakness dmg": true,
-						"earth units do extra elemental weakness dmg": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 150,
-						"fire units do extra elemental weakness dmg": true,
-						"light units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"thunder units do extra elemental weakness dmg": true,
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dark units do extra elemental weakness dmg": true,
-						"earth units do extra elemental weakness dmg": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 150,
-						"fire units do extra elemental weakness dmg": true,
-						"light units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"thunder units do extra elemental weakness dmg": true,
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dark units do extra elemental weakness dmg": true,
-						"earth units do extra elemental weakness dmg": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 150,
-						"fire units do extra elemental weakness dmg": true,
-						"light units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"thunder units do extra elemental weakness dmg": true,
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb elements": [
-							"light"
-						],
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "29",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "23",
-						"spark dmg% buff (40)": 120,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dark units do extra elemental weakness dmg": true,
-						"earth units do extra elemental weakness dmg": true,
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental weakness buff turns": 3,
-						"elemental weakness multiplier%": 150,
-						"fire units do extra elemental weakness dmg": true,
-						"light units do extra elemental weakness dmg": true,
-						"proc id": "55",
-						"target area": "aoe",
-						"target type": "party",
-						"thunder units do extra elemental weakness dmg": true,
-						"water units do extra elemental weakness dmg": true
-					},
-					{
-						"buff turns (84)": 3,
-						"crit multiplier%": 300,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "54",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 28,
 		"name": "For Athensphere!"
 	}
 }

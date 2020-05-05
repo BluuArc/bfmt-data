@@ -19,21 +19,74 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 133
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "敵全体に雷属性８連ダメージ＆味方全体に３ターン、スパークダメージをアップ・ＢＣ・ＨＣ出現率をアップ",
-		"hit dmg% distribution": [
-			20,
-			10,
-			5,
-			5,
-			30,
-			10,
-			8,
-			6,
-			6
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					23,
+					27,
+					31,
+					35,
+					81,
+					85,
+					89,
+					93,
+					97
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					5,
+					5,
+					30,
+					10,
+					8,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "敵全体に雷属性８連ダメージ＆味方全体に３ターン、スパークダメージをアップ・ＢＣ・ＨＣ出現率をアップ",
+		"drop check count": 1,
 		"id": "40614",
 		"levels": [
 			{
@@ -337,20 +390,38 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "モルス・ヘイズ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 40610,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			23,
+			28,
+			81,
+			85,
+			89
+		],
+		"hit dmg% distribution": [
+			30,
+			10,
+			35,
+			15,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "The supposed goddess who granted the Sacred Blade to a human who would slay powerful demons in her name. Tales of Mahalu were erased by the gods to punish her for endowing humans with powers they did not deserve. Though most of the gods had no knowledge of the Nine Sacred Treasures that existed in Grand Gaia, Mahalu accidentally found two of them and gave them new names. She took one of the treasures for her own, and gave the other to a human who would repel the demons menacing Grand Gaia.",
 		"fusion": "You're giving me power?<br>How amusing.<br>Oh no, don't mind me.<br>Continue.",
 		"summon": "Allow me to fight with you.<br>I know I can grow stronger.<br>So please, let's go together..."
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -387,15 +458,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1048,
-	"hit dmg% distribution": [
-		30,
-		10,
-		35,
-		15,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 40614,
 	"imp": {
 		"max atk": "260",
@@ -416,7 +478,18 @@
 		"name": "重激の神光"
 	},
 	"lord damage range": "1769~1976",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "紫雷斧神マハル",
 	"rarity": 5,
 	"sell caution": false,

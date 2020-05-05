@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,19 +19,46 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 122
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 52
+		}
+	},
 	"bb": {
-		"desc": "7 Combo Powerful Thunder Attack on All enemies",
-		"hit dmg% distribution": [
-			15,
-			14,
-			14,
-			15,
-			14,
-			14,
-			14
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					78,
+					84,
+					90,
+					96,
+					102,
+					108,
+					114
+				],
+				"hit dmg% distribution": [
+					15,
+					14,
+					14,
+					15,
+					14,
+					14,
+					14
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 7,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 7,
+		"desc": "7 Combo Powerful Thunder Attack on All enemies",
+		"drop check count": 1,
 		"id": "40164",
 		"levels": [
 			{
@@ -165,20 +192,38 @@
 				]
 			}
 		],
-		"max bc generated": 7,
 		"name": "Rising Nova"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 15,
+	"damage frames": {
+		"frame times": [
+			78,
+			84,
+			90,
+			96,
+			102
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "One of the four legendary warriors who fought to save the Kingdom of Palmyna. In the final showdown with the gods attacking Palmyna, Loch played a vital role, and it was he who struck the final blow against the commander of the gods. Unfortunately, Edea was gravely wounded trying to protect Loch in battle. Legend has it that, in a fit of rage, Loch unleashed an attack that shook the world’s very foundations.",
 		"evolution": "Can you feel it?<br>The soul residing within my arrow.<br>This is the true Loch!",
 		"fusion": "Hahaha!<br>My anger is increases with my strength.<br>The gods will pay for what they did!",
 		"summon": "My arrows are god killers. <br>What will you do with such<br>power at your disposal?"
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -216,15 +261,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 250,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 40164,
 	"imp": {
 		"max atk": "200",
@@ -248,7 +284,18 @@
 		"name": "Thunder God's Power"
 	},
 	"lord damage range": "1419~1586",
-	"max bc generated": 15,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
 	"name": "Zeus Bow Loch",
 	"rarity": 5,
 	"sell caution": false,

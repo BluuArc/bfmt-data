@@ -25,20 +25,84 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 177
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光属性８連ダメージ＆味方全体の全状態異常を回復＆３ターン、攻撃に光・闇属性を付与＆１ターン、被ダメージを半分に軽減",
-		"hit dmg% distribution": [
-			14,
-			3,
-			3,
-			35,
-			19,
-			13,
-			8,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					29,
+					33,
+					37,
+					76,
+					80,
+					84,
+					88,
+					92
+				],
+				"hit dmg% distribution": [
+					14,
+					3,
+					3,
+					35,
+					19,
+					13,
+					8,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "敵全体に光属性８連ダメージ＆味方全体の全状態異常を回復＆３ターン、攻撃に光・闇属性を付与＆１ターン、被ダメージを半分に軽減",
+		"drop check count": 1,
 		"id": "50754",
 		"levels": [
 			{
@@ -532,20 +596,38 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "光刃蒼断"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50750,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			29,
+			76,
+			80,
+			84,
+			88
+		],
+		"hit dmg% distribution": [
+			15,
+			40,
+			20,
+			15,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A Summoner who joined the Akras Summoners' Hall when it first began operations. Since Krantz was a soldier of humble origins from the Elgaia Federation, records of his infancy are scarce. However, once he became a Summoner under the tutelage of the Summoners of Old, his talents began to blossom rapidly in a very short amount of time, reaching extremely high levels. Bearing the burden of the next generation on his shoulders, the Summoners of Old expected many great things from him, though he had one big problem. Since he was so terrible at handling machines, there were no records he could leave behind concerning otherworldly technology and techniques.",
 		"fusion": "I want to become stronger!<br>I mean, if I get stronger,<br>I can help more people, right?",
 		"summon": "Thanks for summoning me!<br>Just you wait!<br>I'll become your strength!"
 	},
+	"drop check count": 4,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -582,15 +664,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1017,
-	"hit dmg% distribution": [
-		15,
-		40,
-		20,
-		15,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 50754,
 	"imp": {
 		"max atk": "140",
@@ -612,7 +685,18 @@
 		"name": "五光神の力"
 	},
 	"lord damage range": "1672~1867",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "聖皚神クランツ",
 	"rarity": 5,
 	"sell caution": false,

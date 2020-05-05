@@ -25,20 +25,84 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 177
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 광속성 8연속 데미지&3턴간 아군 전체의 공격에 광암속성 부여&1턴간 받는 데미지 반감&모든 상태이상 회복",
-		"hit dmg% distribution": [
-			14,
-			3,
-			3,
-			35,
-			19,
-			13,
-			8,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					29,
+					33,
+					37,
+					76,
+					80,
+					84,
+					88,
+					92
+				],
+				"hit dmg% distribution": [
+					14,
+					3,
+					3,
+					35,
+					19,
+					13,
+					8,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "적 전체에게 강력한 광속성 8연속 데미지&3턴간 아군 전체의 공격에 광암속성 부여&1턴간 받는 데미지 반감&모든 상태이상 회복",
+		"drop check count": 1,
 		"id": "50754",
 		"levels": [
 			{
@@ -532,20 +596,38 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "광인창단"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T09:12:07.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 50750,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			29,
+			76,
+			80,
+			84,
+			88
+		],
+		"hit dmg% distribution": [
+			15,
+			40,
+			20,
+			15,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A Summoner who joined the Akras Summoners' Hall when it first began operations. Since Krantz was a soldier of humble origins from the Elgaia Federation, records of his infancy are scarce. However, once he became a Summoner under the tutelage of the Summoners of Old, his talents began to blossom rapidly in a very short amount of time, reaching extremely high levels. Bearing the burden of the next generation on his shoulders, the Summoners of Old expected many great things from him, though he had one big problem. Since he was so terrible at handling machines, there were no records he could leave behind concerning otherworldly technology and techniques.",
 		"fusion": "I want to become stronger!<br>I mean, if I get stronger,<br>I can help more people, right?",
 		"summon": "Thanks for summoning me!<br>Just you wait!<br>I'll become your strength!"
 	},
+	"drop check count": 4,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -582,15 +664,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1017,
-	"hit dmg% distribution": [
-		15,
-		40,
-		20,
-		15,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 50754,
 	"imp": {
 		"max atk": "140",
@@ -612,7 +685,18 @@
 		"name": "오광신의 힘"
 	},
 	"lord damage range": "1672~1867",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "하얀 신성신 크란츠",
 	"rarity": 5,
 	"sell caution": false,

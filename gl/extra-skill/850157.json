@@ -1,0 +1,52 @@
+{
+	"associated_units": [
+		"850157"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-04-07T13:46:48.000Z",
+		"updatedAt": "2016-04-07T13:46:48.000Z"
+	},
+	"desc": "Slightly boost BC, HC efficacy & adds status ailment removal effect to BB/SBB",
+	"effects": [
+		{
+			"conditions": [],
+			"hc effectiveness%": 15,
+			"passive id": "10",
+			"passive target": "self"
+		},
+		{
+			"bb gauge fill rate%": 15,
+			"conditions": [],
+			"passive id": "32",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"ailments cured": [
+						"poison",
+						"weaken",
+						"sick",
+						"injury",
+						"curse",
+						"paralysis",
+						"atk down",
+						"def down",
+						"rec down"
+					],
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "38",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "Sweet Disposition",
+	"target": "self"
+}

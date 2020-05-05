@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,8 +19,46 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 239
+		},
+		"idle": {
+			"total number of frames": 66
+		},
+		"move": {
+			"total number of frames": 12
+		}
+	},
 	"bb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
+		],
 		"desc": "Boosts Atk & adds Fire element to attack for all allies for 3 turns",
+		"drop check count": 1,
 		"id": "10255",
 		"levels": [
 			{
@@ -268,9 +306,48 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 23,
+	"damage frames": {
+		"frame times": [
+			12,
+			31,
+			46,
+			58,
+			68,
+			77,
+			85,
+			94,
+			102,
+			108,
+			113,
+			140,
+			144,
+			150,
+			180
+		],
+		"hit dmg% distribution": [
+			7,
+			6,
+			7,
+			6,
+			7,
+			6,
+			7,
+			6,
+			7,
+			6,
+			7,
+			8,
+			8,
+			6,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 15
+	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"prev": "710254"
@@ -279,25 +356,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7005,
-	"hit dmg% distribution": [
-		7,
-		6,
-		7,
-		6,
-		7,
-		6,
-		7,
-		6,
-		7,
-		6,
-		7,
-		8,
-		8,
-		6,
-		6
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 15,
 	"id": 710255,
 	"imp": {
 		"max atk": "200",
@@ -323,33 +381,95 @@
 		"name": "Five Light's Creation"
 	},
 	"lord damage range": "1795~2005",
-	"max bc generated": 30,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 2,
+			"move speed type": "4",
+			"move type": "3"
+		}
+	},
 	"name": "Party Axe Michele",
 	"rarity": 6,
 	"sbb": {
-		"desc": "18 combo Fire elemental attack on all enemies, boosts Atk & adds Fire element to attack for 3 turns",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			10,
-			10,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					11,
+					30,
+					45,
+					57,
+					67,
+					76,
+					84,
+					93,
+					101,
+					107,
+					112,
+					139,
+					143,
+					147,
+					151,
+					155,
+					159,
+					163
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					10,
+					10,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo Fire elemental attack on all enemies, boosts Atk & adds Fire element to attack for 3 turns",
+		"drop check count": 1,
 		"id": "110255",
 		"levels": [
 			{
@@ -673,7 +793,6 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Meggido Cross"
 	},
 	"sell caution": false,

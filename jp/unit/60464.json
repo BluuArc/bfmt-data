@@ -25,20 +25,84 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 76
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に闇属性８連ダメージ＆確率で全状態異常をランダムに発生＆味方全体に３ターン、通常攻撃ＨＩＴ数を増加",
-		"hit dmg% distribution": [
-			35,
-			15,
-			10,
-			10,
-			8,
-			8,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30,
+					33
+				],
+				"hit dmg% distribution": [
+					35,
+					15,
+					10,
+					10,
+					8,
+					8,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "26"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "敵全体に闇属性８連ダメージ＆確率で全状態異常をランダムに発生＆味方全体に３ターン、通常攻撃ＨＩＴ数を増加",
+		"drop check count": 1,
 		"id": "60464",
 		"levels": [
 			{
@@ -432,15 +496,35 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "ゼーレクライム"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-24T21:46:15.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60460,
 	"cost": 16,
+	"damage frames": {
+		"frame times": [
+			12,
+			16,
+			20,
+			24,
+			30,
+			36
+		],
+		"hit dmg% distribution": [
+			35,
+			15,
+			10,
+			10,
+			15,
+			15
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
+	"drop check count": 4,
 	"element": "dark",
 	"evolution": {
 		"cost": 500000,
@@ -478,16 +562,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1296,
-	"hit dmg% distribution": [
-		35,
-		15,
-		10,
-		10,
-		15,
-		15
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 60464,
 	"imp": {
 		"max atk": "200",
@@ -520,7 +594,18 @@
 		"name": "悪疫神の冥戒"
 	},
 	"lord damage range": "1710~1910",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "罪剣神ジェイド",
 	"rarity": 5,
 	"sell caution": false,

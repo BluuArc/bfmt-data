@@ -19,20 +19,84 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 123
+		},
+		"idle": {
+			"total number of frames": 54
+		},
+		"move": {
+			"total number of frames": 104
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性８連ダメージ＆３ターン、ターン終了時に追加ダメージ＆味方全体の最大ＨＰを少しアップ＆味方全体に３ターン、ターン毎にＨＰをかなり回復",
-		"hit dmg% distribution": [
-			35,
-			15,
-			12,
-			11,
-			10,
-			7,
-			6,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					10,
+					13,
+					16,
+					19,
+					22,
+					25,
+					28,
+					31
+				],
+				"hit dmg% distribution": [
+					35,
+					15,
+					12,
+					11,
+					10,
+					7,
+					6,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "8"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "敵全体に水属性８連ダメージ＆３ターン、ターン終了時に追加ダメージ＆味方全体の最大ＨＰを少しアップ＆味方全体に３ターン、ターン毎にＨＰをかなり回復",
+		"drop check count": 1,
 		"id": "20644",
 		"levels": [
 			{
@@ -446,20 +510,40 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "アドヴァースウェイブ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20640,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			10,
+			13,
+			16,
+			19,
+			22,
+			25
+		],
+		"hit dmg% distribution": [
+			45,
+			23,
+			11,
+			9,
+			7,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "The disciple who discovered the power of the Nine Sacred Treasures. Due to his betrayal against the gods, all records having to do with Quartz were erased as his punishment, including those which showed the name of the god he served. Though not many accounts about him remain after his persecution into Ishgria, by connecting what little information does exist researchers have gathered that it was Quartz who discovered the nine dormant powers of Grand Gaia, acquiring two of them for himself. Nowadays it is also speculated that it was him who gave the Nine Sacred Treasures their names.",
 		"fusion": "Living beings grow with experience,<br>but summoning is different.<br>It's quite the strange art.",
 		"summon": "Why are you looking for me?<br>Are you after my knowledge?<br>Well, not like it matters."
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"cost": 500000,
@@ -496,16 +580,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1042,
-	"hit dmg% distribution": [
-		45,
-		23,
-		11,
-		9,
-		7,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 20644,
 	"imp": {
 		"max atk": "140",
@@ -526,7 +600,18 @@
 		"name": "覇王の天啓"
 	},
 	"lord damage range": "1676~1872",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "2"
+		}
+	},
 	"name": "蒼波杖神コルツ",
 	"rarity": 5,
 	"sell caution": false,

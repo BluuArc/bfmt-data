@@ -31,18 +31,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 194
+		},
+		"idle": {
+			"total number of frames": 56
+		},
+		"move": {
+			"total number of frames": 9
+		}
+	},
 	"bb": {
-		"desc": "적 1명에게 뇌속성 6연속 데미지＆확률로 약화 효과",
-		"hit dmg% distribution": [
-			20,
-			15,
-			15,
-			15,
-			15,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					72,
+					82,
+					92,
+					102,
+					112,
+					130
+				],
+				"hit dmg% distribution": [
+					20,
+					15,
+					15,
+					15,
+					15,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "적 1명에게 뇌속성 6연속 데미지＆확률로 약화 효과",
+		"drop check count": 3,
 		"id": "40172",
 		"levels": [
 			{
@@ -246,21 +284,35 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "고르곤 스파크"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 40170,
 	"cost": 5,
+	"damage frames": {
+		"frame times": [
+			72,
+			90,
+			130
+		],
+		"hit dmg% distribution": [
+			20,
+			30,
+			50
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "The evolved form of Empusa with stronger demon abilities. It's said that those she looks upon are rendered motionless. Her lust for precious metals is stronger than ever, though they are not necessary in improving her abilities. Outside of wearing precious metals, she also seems to enjoy collecting them. She also has no problem declaring the golden snakes coming from her head as her most attractive feature.",
 		"evolution": "Hmm, this is new!<br>Hehe, I look forward to<br>our adventures together!",
 		"fusion": "I don't mind fusion,<br>but if you're going to do it<br>then how about a Jewel God?",
 		"summon": "Aren't my snakes pretty?<br>Come on, take a look!<br>They're sparkling beautifully!!"
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"prev": "40171"
@@ -269,13 +321,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 276,
-	"hit dmg% distribution": [
-		20,
-		30,
-		50
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 40172,
 	"imp": {
 		"max atk": "120",
@@ -296,7 +341,18 @@
 		"name": "영혼의 빛"
 	},
 	"lord damage range": "798~892",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "고르곤",
 	"rarity": 3,
 	"sell caution": false,

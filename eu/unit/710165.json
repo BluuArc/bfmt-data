@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,21 +19,74 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 94
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 60
+		}
+	},
 	"bb": {
-		"desc": "9 combo Fire attack on all enemies & additional attack at end of turn for 3 turns (200%) & probable Curse (40%) and Paralysis effect (40%)",
-		"hit dmg% distribution": [
-			12,
-			12,
-			12,
-			12,
-			13,
-			13,
-			7,
-			6,
-			13
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					46,
+					48,
+					50,
+					52,
+					54,
+					58,
+					62,
+					64,
+					66
+				],
+				"hit dmg% distribution": [
+					12,
+					12,
+					12,
+					12,
+					13,
+					13,
+					7,
+					6,
+					13
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					50
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					50
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "9 combo Fire attack on all enemies & additional attack at end of turn for 3 turns (200%) & probable Curse (40%) and Paralysis effect (40%)",
+		"drop check count": 1,
 		"id": "710165",
 		"levels": [
 			{
@@ -357,14 +410,44 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "Pyroclasm"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 29,
+	"damage frames": {
+		"frame times": [
+			46,
+			48,
+			50,
+			52,
+			54,
+			56,
+			58,
+			60,
+			61,
+			62,
+			64
+		],
+		"hit dmg% distribution": [
+			14,
+			14,
+			14,
+			7,
+			7,
+			7,
+			8,
+			7,
+			7,
+			8,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -402,21 +485,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7110,
-	"hit dmg% distribution": [
-		14,
-		14,
-		14,
-		7,
-		7,
-		7,
-		8,
-		7,
-		7,
-		8,
-		7
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 11,
 	"id": 710165,
 	"imp": {
 		"max atk": "340",
@@ -455,45 +523,119 @@
 		"name": "Greater Scheme"
 	},
 	"lord damage range": "1953~2181",
-	"max bc generated": 33,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
 	"name": "Witch Morgana",
 	"rarity": 6,
 	"sbb": {
-		"desc": "30 combo Fire attack on all enemies & additional attack at end of turn for 3 turns (300%) & adds Curse (10%) and Paralysis (10%) to Atk for all allies",
-		"hit dmg% distribution": [
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			3,
-			4,
-			4,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					45,
+					46,
+					47,
+					48,
+					49,
+					50,
+					51,
+					52,
+					53,
+					54,
+					55,
+					56,
+					57,
+					58,
+					59,
+					60,
+					61,
+					62,
+					63,
+					64,
+					65,
+					66,
+					67,
+					68,
+					69,
+					70,
+					71,
+					72,
+					73,
+					74
+				],
+				"hit dmg% distribution": [
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					3,
+					4,
+					4,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 30,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					50
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 30,
+		"desc": "30 combo Fire attack on all enemies & additional attack at end of turn for 3 turns (300%) & adds Curse (10%) and Paralysis (10%) to Atk for all allies",
+		"drop check count": 1,
 		"id": "1710165",
 		"levels": [
 			{
@@ -827,7 +969,6 @@
 				]
 			}
 		],
-		"max bc generated": 30,
 		"name": "Fairy Ancestry"
 	},
 	"sell caution": false,

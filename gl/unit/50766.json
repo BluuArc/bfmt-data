@@ -19,27 +19,86 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 176
+		},
+		"idle": {
+			"total number of frames": 68
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "15 combo powerful Light attack on all foes, greatly boosts Atk, Def, Rec for 3 turns & boosts Light elemental damage",
-		"hit dmg% distribution": [
-			13,
-			6,
-			5,
-			4,
-			3,
-			3,
-			3,
-			18,
-			11,
-			9,
-			8,
-			6,
-			5,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					17,
+					20,
+					23,
+					26,
+					29,
+					32,
+					35,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101,
+					104,
+					107
+				],
+				"hit dmg% distribution": [
+					13,
+					6,
+					5,
+					4,
+					3,
+					3,
+					3,
+					18,
+					11,
+					9,
+					8,
+					6,
+					5,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "55"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo powerful Light attack on all foes, greatly boosts Atk, Def, Rec for 3 turns & boosts Light elemental damage",
+		"drop check count": 1,
 		"id": "50766",
 		"levels": [
 			{
@@ -373,21 +432,53 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Lance of Light: Parousia"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T16:25:19.000Z",
-		"updatedAt": "2016-02-04T14:52:26.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 50760,
 	"cost": 42,
+	"damage frames": {
+		"frame times": [
+			17,
+			20,
+			24,
+			28,
+			86,
+			89,
+			92,
+			95,
+			98,
+			101,
+			104,
+			107
+		],
+		"hit dmg% distribution": [
+			12,
+			9,
+			8,
+			5,
+			17,
+			12,
+			8,
+			8,
+			6,
+			5,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
 	"dictionary": {
 		"description": "A being always mentioned with the Sacred Lance. No one was ever able to tell what type of being Nadore was, but there is no doubt that her existence influenced the course of human history. A literary work found recently during a survey of Ishgria tells of a demon legend in which she appears. According to it, whoever holds the Sacred Lance in their possession will gain the power to change the world. However, the end of such legend also states that Nadore refused to become anyone's property, setting out to change the world on her own accord.",
 		"evolution": "You've evolved me yet again.<br>Along with the Sacred Lance.<br>Let us save the world together then.",
 		"fusion": "Those who know the essence of power,<br>have not forsaken their hearts.<br>Please continue making me stronger.",
 		"summon": "I don't think.<br>The lance guides me and its bearer.<br>That means I'm strong enough<br>to control my thoughts."
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"prev": "50765"
@@ -400,7 +491,8 @@
 				"conditions": [],
 				"elemental weakness multiplier%": 50,
 				"light units do extra elemental weakness dmg": true,
-				"passive id": "50"
+				"passive id": "50",
+				"passive target": "self"
 			},
 			{
 				"buff": {
@@ -410,7 +502,8 @@
 				},
 				"conditions": [],
 				"damage threshold buff activation": 10000,
-				"passive id": "78"
+				"passive id": "78",
+				"passive target": "self"
 			},
 			{
 				"buff": {
@@ -420,7 +513,8 @@
 				},
 				"conditions": [],
 				"damage threshold buff activation": 10000,
-				"passive id": "78"
+				"passive id": "78",
+				"passive target": "self"
 			}
 		],
 		"id": "6400",
@@ -430,22 +524,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1053,
-	"hit dmg% distribution": [
-		12,
-		9,
-		8,
-		5,
-		17,
-		12,
-		8,
-		8,
-		6,
-		5,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 50766,
 	"imp": {
 		"max atk": "440",
@@ -478,7 +556,18 @@
 		"name": "Radiant Deity's Commandment"
 	},
 	"lord damage range": "2240~2502",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Angelic Champion Nadore",
 	"overdrive stats": {
 		"atk%": 100,
@@ -487,29 +576,92 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "18 combo powerful Light attack on all foes, greatly boosts Atk, Def, Rec for 3 turns, boosts Light elemental damage & damage taken greatly boosts BB gauge",
-		"hit dmg% distribution": [
-			11,
-			6,
-			5,
-			4,
-			3,
-			3,
-			3,
-			3,
-			15,
-			10,
-			8,
-			7,
-			6,
-			4,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					17,
+					20,
+					23,
+					26,
+					29,
+					32,
+					35,
+					38,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101,
+					104,
+					107,
+					110,
+					113
+				],
+				"hit dmg% distribution": [
+					11,
+					6,
+					5,
+					4,
+					3,
+					3,
+					3,
+					3,
+					15,
+					10,
+					8,
+					7,
+					6,
+					4,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "55"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo powerful Light attack on all foes, greatly boosts Atk, Def, Rec for 3 turns, boosts Light elemental damage & damage taken greatly boosts BB gauge",
+		"drop check count": 1,
 		"id": "150766",
 		"levels": [
 			{
@@ -943,7 +1095,6 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Dea Geirskogul"
 	},
 	"sell caution": false,
@@ -962,31 +1113,84 @@
 		}
 	},
 	"ubb": {
-		"desc": "20 combo massive Light attack on all foes (damage relative to remaining HP), fully recovers HP & reduces damage taken to 1 for 1 turn",
-		"hit dmg% distribution": [
-			10,
-			5,
-			5,
-			4,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			15,
-			9,
-			7,
-			6,
-			5,
-			4,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					17,
+					20,
+					23,
+					26,
+					29,
+					33,
+					37,
+					41,
+					45,
+					49,
+					86,
+					89,
+					92,
+					95,
+					99,
+					103,
+					107,
+					111,
+					115,
+					119
+				],
+				"hit dmg% distribution": [
+					10,
+					5,
+					5,
+					4,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					15,
+					9,
+					7,
+					6,
+					5,
+					4,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					140
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "20 combo massive Light attack on all foes (damage relative to remaining HP), fully recovers HP & reduces damage taken to 1 for 1 turn",
+		"drop check count": 1,
 		"id": "250766",
 		"levels": [
 			{
@@ -1020,297 +1224,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1000,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"dmg% reduction": 100,
-						"dmg% reduction turns (36)": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "18",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Treasure: Sacred Lance"
 	}
 }

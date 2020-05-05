@@ -19,22 +19,76 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 151
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 뇌속성 10연속 데미지＆모든 상태이상 회복하고 3턴간 무효화",
-		"hit dmg% distribution": [
-			15,
-			10,
-			10,
-			9,
-			10,
-			9,
-			10,
-			9,
-			9,
-			9
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					50,
+					56,
+					62,
+					68,
+					74,
+					80,
+					86,
+					92,
+					98,
+					104
+				],
+				"hit dmg% distribution": [
+					15,
+					10,
+					10,
+					9,
+					10,
+					9,
+					10,
+					9,
+					9,
+					9
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "1833.3/110",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "17"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "적 전체에게 뇌속성 10연속 데미지＆모든 상태이상 회복하고 3턴간 무효화",
+		"drop check count": 1,
 		"id": "40534",
 		"levels": [
 			{
@@ -468,21 +522,43 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "신엄의 경계"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-15T01:31:57.000Z",
-		"updatedAt": "2015-11-04T13:19:00.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 40530,
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			50,
+			58,
+			66,
+			74,
+			82,
+			90,
+			98
+		],
+		"hit dmg% distribution": [
+			25,
+			20,
+			15,
+			10,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A disciple who once served Creator Maxwell. On top of being the silent type, the few utterances left by him in historical accounts are all incomprehensible riddles. Thanks to his constant pursuit of perfection his abilities were said to be equally matched to those of the Fallen Gods. However, not only did he demand perfection from himself, but from those around him as well. Thus it is rumored that when Kanon came across servants he deemed to be worthless, he would dispose of them mercilessly. Apparently in the midst of all this, very few others besides his mistress Maxwell could actually understand him.",
 		"evolution": " ",
 		"fusion": "You're there, aren't you?<br>......<br>Understood.",
 		"summon": "Humans have the power to summon?<br>......<br>I see now."
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -519,17 +595,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 859,
-	"hit dmg% distribution": [
-		25,
-		20,
-		15,
-		10,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 40534,
 	"imp": {
 		"max atk": "200",
@@ -555,7 +620,18 @@
 		"name": "창궁의 신풍"
 	},
 	"lord damage range": "1455~1626",
-	"max bc generated": 14,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "경계신 카논",
 	"rarity": 5,
 	"sell caution": false,

@@ -25,17 +25,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 129
+		},
+		"idle": {
+			"total number of frames": 84
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 수속성 5연속 데미지＆3턴간 스파크 시 데미지 상승",
-		"hit dmg% distribution": [
-			20,
-			20,
-			20,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					14,
+					19,
+					54,
+					57,
+					60
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					20,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "적 전체에게 수속성 5연속 데미지＆3턴간 스파크 시 데미지 상승",
+		"drop check count": 1,
 		"id": "20353",
 		"levels": [
 			{
@@ -249,21 +286,35 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "플랫 혼"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 20350,
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			15,
+			55,
+			60
+		],
+		"hit dmg% distribution": [
+			40,
+			30,
+			30
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A young spearman who had been newly recruited into the 12 Guardians. It's said the dexterous dual spear-wielder was Alyut's closest friend. The prudishly polite Raydn was expected to be lieutenant to the future leader Alyut who was currently second in line to command. He worked hard to live up to these expectations, eventually attaining abilities that rivaled even Sodis.",
 		"evolution": " ",
 		"fusion": "What an interesting skill you have.<br>However, though it trains the body,<br>it does nothing for the soul.",
 		"summon": "A Summoner.<br>I see how it is.<br>I accept your request."
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 200000,
@@ -300,13 +351,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 503,
-	"hit dmg% distribution": [
-		40,
-		30,
-		30
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 20353,
 	"imp": {
 		"max atk": "160",
@@ -330,7 +374,18 @@
 		"name": "수신의 힘"
 	},
 	"lord damage range": "1266~1415",
-	"max bc generated": 9,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "이창황제 레디온",
 	"rarity": 4,
 	"sell caution": false,

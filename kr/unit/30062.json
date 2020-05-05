@@ -31,17 +31,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 80
+		},
+		"idle": {
+			"total number of frames": 42
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "적 1명에게 목속성 5연속 데미지&확률로 부상 효과",
-		"hit dmg% distribution": [
-			50,
-			20,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					31,
+					35,
+					39,
+					43,
+					46
+				],
+				"hit dmg% distribution": [
+					50,
+					20,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "적 1명에게 목속성 5연속 데미지&확률로 부상 효과",
+		"drop check count": 1,
 		"id": "30062",
 		"levels": [
 			{
@@ -245,21 +282,39 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "전부대파참"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2015-11-04T13:19:00.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 30060,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			31,
+			35,
+			39,
+			43,
+			46
+		],
+		"hit dmg% distribution": [
+			50,
+			20,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A bandit boss from the forested mountain bordering the ruined Vriksha Duchy. Zaza continued his banditry, and the followers that admired him made him head bandit. He tried to decline by saying it was too much trouble, but when some of his underlings were killed by the gods, he showed a rage like never before, taking on the gods with his axe.",
 		"evolution": "Don't bother flattering me!<br>I'm not doing anything that I<br>don't want to. ",
 		"fusion": "Ahaha!<br>So you need my help <br>after all?",
 		"summon": "What a pain...<br>But I guess I'll give it a <br>go since you summoned me."
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"cost": 100000,
@@ -292,15 +347,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 84,
-	"hit dmg% distribution": [
-		50,
-		20,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 30062,
 	"imp": {
 		"max atk": "160",
@@ -321,7 +367,18 @@
 		"name": "중격의 반짝임"
 	},
 	"lord damage range": "938~1048",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "산적두목 자잔",
 	"rarity": 3,
 	"sell caution": false,

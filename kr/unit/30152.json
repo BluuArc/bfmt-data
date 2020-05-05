@@ -19,18 +19,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 133
+		},
+		"idle": {
+			"total number of frames": 40
+		},
+		"move": {
+			"total number of frames": 39
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 목속성 6연속 데미지&확률로 약화효과",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			10,
-			50
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					20,
+					25,
+					30,
+					35,
+					40,
+					79
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					50
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "적 전체에게 목속성 6연속 데미지&확률로 약화효과",
+		"drop check count": 1,
 		"id": "30152",
 		"levels": [
 			{
@@ -234,21 +272,37 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "미라쥬 니들"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2015-08-14T00:39:50.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 30150,
 	"cost": 5,
+	"damage frames": {
+		"frame times": [
+			20,
+			30,
+			40,
+			79
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			40
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A young boy who was raised by Titania as a pixy. Abandoned in a faeries’ grove as a baby, he grew up thinking he was a pixy until the day he realized he looked different than everyone else. Shocked to discover the truth about his childhood, he embarked on a journey to find other humans as a means of coming to terms with his new identity. While on his travels, he heard about the gods’ plan to destroy the world.",
 		"evolution": " ",
 		"fusion": "I haven’t felt this way in some time.<br>I feel... strong again, somehow.",
 		"summon": "You’re a human Summoner?<br>What would you say to helping<br>me protect the pixies?"
 	},
+	"drop check count": 4,
 	"element": "earth",
 	"evolution": {
 		"cost": 100000,
@@ -280,14 +334,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 227,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		40
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 30152,
 	"imp": {
 		"max atk": "120",
@@ -308,7 +354,18 @@
 		"name": "맹자의 힘"
 	},
 	"lord damage range": "879~982",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "귀품있는 레올",
 	"rarity": 3,
 	"sell caution": false,

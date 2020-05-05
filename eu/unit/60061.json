@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,16 +19,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 142
+		},
+		"idle": {
+			"total number of frames": 36
+		},
+		"move": {
+			"total number of frames": 36
+		}
+	},
 	"bb": {
-		"desc": "4 combo Dark elemental attack on single Enemy & probable Poison effect",
-		"hit dmg% distribution": [
-			25,
-			25,
-			25,
-			25
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					72,
+					79,
+					86,
+					93
+				],
+				"hit dmg% distribution": [
+					25,
+					25,
+					25,
+					25
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "4 combo Dark elemental attack on single Enemy & probable Poison effect",
+		"drop check count": 1,
 		"id": "60061",
 		"levels": [
 			{
@@ -222,20 +258,34 @@
 				]
 			}
 		],
-		"max bc generated": 4,
 		"name": "Golgon Eye"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 3,
+	"damage frames": {
+		"frame times": [
+			65,
+			72,
+			79
+		],
+		"hit dmg% distribution": [
+			33,
+			33,
+			34
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A demon with snakes instead of hair. Humans who look into her eyes are cursed and turned to stone. Not only are they highly poisonous, the snakes on her head have high vitality and will live for a while even if cut from her head. Many soldiers have lost their lives to these snakes, making Medusa a dangerous demon even after she's been defeated.",
 		"evolution": " ",
 		"fusion": "Careful now.<br>You'll turn to stone if you <br>fall in love with me...",
 		"summon": "<br>Don't look at my eyes,<br>they'll turn you to stone!<br>I look forward to our journey!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 50000,
@@ -262,13 +312,6 @@
 	"gender": "other",
 	"getting type": "not eligible for achievement",
 	"guide_id": 97,
-	"hit dmg% distribution": [
-		33,
-		33,
-		34
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 60061,
 	"imp": {
 		"max atk": "100",
@@ -289,7 +332,18 @@
 		"name": "Soul Light"
 	},
 	"lord damage range": "544~608",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "3"
+		}
+	},
 	"name": "Medusa",
 	"rarity": 2,
 	"sell caution": false,

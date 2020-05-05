@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,26 +25,72 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 117
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
 	"bb": {
-		"desc": "14 combo Thunder elemental attack on all enemies & probable Injury and Weakness effect",
-		"hit dmg% distribution": [
-			10,
-			7,
-			10,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			10,
-			10,
-			10,
-			10,
-			15
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					32,
+					36,
+					40,
+					44,
+					48,
+					52,
+					56,
+					60,
+					64,
+					68,
+					72,
+					76,
+					80,
+					84
+				],
+				"hit dmg% distribution": [
+					10,
+					7,
+					10,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					10,
+					10,
+					10,
+					10,
+					15
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "14 combo Thunder elemental attack on all enemies & probable Injury and Weakness effect",
+		"drop check count": 1,
 		"id": "740113",
 		"levels": [
 			{
@@ -258,14 +304,44 @@
 				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "Hammer Kiss"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 10,
+	"damage frames": {
+		"frame times": [
+			40,
+			44,
+			48,
+			52,
+			56,
+			60,
+			64,
+			68,
+			72,
+			76,
+			80
+		],
+		"hit dmg% distribution": [
+			12,
+			5,
+			7,
+			12,
+			7,
+			12,
+			7,
+			12,
+			7,
+			12,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"cost": 200000,
@@ -302,21 +378,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 7029,
-	"hit dmg% distribution": [
-		12,
-		5,
-		7,
-		12,
-		7,
-		12,
-		7,
-		12,
-		7,
-		12,
-		7
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 11,
 	"id": 740113,
 	"imp": {
 		"max atk": "300",
@@ -343,7 +404,18 @@
 		"name": "Light of Valhalla"
 	},
 	"lord damage range": "1024~1144",
-	"max bc generated": 33,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Thrud",
 	"rarity": 4,
 	"sell caution": false,

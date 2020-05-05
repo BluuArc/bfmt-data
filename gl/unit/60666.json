@@ -25,40 +25,100 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 204
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 4
+		}
+	},
 	"bb": {
-		"desc": "28 combo powerful Dark attack on all enemies & big boost to Atk, Def and Rec for 3 turns",
-		"hit dmg% distribution": [
-			15,
-			4,
-			3,
-			2,
-			3,
-			3,
-			4,
-			2,
-			4,
-			3,
-			4,
-			3,
-			4,
-			2,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			2,
-			3,
-			4,
-			2,
-			3,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					64,
+					67,
+					70,
+					73,
+					80,
+					84,
+					88,
+					92,
+					96,
+					100,
+					104,
+					108,
+					112,
+					116,
+					120,
+					124,
+					128,
+					132,
+					136,
+					140,
+					144,
+					148,
+					152,
+					156,
+					160,
+					164,
+					168,
+					172
+				],
+				"hit dmg% distribution": [
+					15,
+					4,
+					3,
+					2,
+					3,
+					3,
+					4,
+					2,
+					4,
+					3,
+					4,
+					3,
+					4,
+					2,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					2,
+					3,
+					4,
+					2,
+					3,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 28,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					152
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 28,
+		"desc": "28 combo powerful Dark attack on all enemies & big boost to Atk, Def and Rec for 3 turns",
+		"drop check count": 1,
 		"id": "60666",
 		"levels": [
 			{
@@ -302,21 +362,55 @@
 				]
 			}
 		],
-		"max bc generated": 28,
 		"name": "Magna Nebula"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 60660,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			64,
+			67,
+			70,
+			80,
+			84,
+			88,
+			92,
+			96,
+			100,
+			104,
+			108,
+			112,
+			116
+		],
+		"hit dmg% distribution": [
+			30,
+			5,
+			7,
+			5,
+			5,
+			6,
+			7,
+			5,
+			6,
+			5,
+			6,
+			7,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
 	"dictionary": {
 		"description": "A former disciple of the Holy Emperor Karna Masta who was sealed in Ishgria. Finding herself sealed within a barrier and with her fellow peers battling each other, Feeva did not fight against them, but instead chose to conserve her power. After the disciples had been battling for a long time, the high ranking god that sought to destroy them finally appeared. This prompted her to finally release her true power, as if she had somehow been expecting this to happen. Thanks to Feeva's well-timed intervention, the god failed in destroying the Six Pillars, managing to only seal them away for good. ",
 		"evolution": "I need to return to that world!<br>There are still things I must do there!",
 		"fusion": "You have my thanks.<br>Heh, who would have thought I'd be able<br>to speak to someone this freely again.",
 		"summon": "Certain fear.<br>Certain malice.<br>I swear to overcome it all!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "60665"
@@ -330,14 +424,16 @@
 				"dmg% to hp% when attacked chance%": 25,
 				"dmg% to hp% when attacked high": 20,
 				"dmg% to hp% when attacked low": 20,
-				"passive id": "24"
+				"passive id": "24",
+				"passive target": "self"
 			},
 			{
 				"conditions": [],
 				"hp drain chance%": 100,
 				"hp drain% high": 8,
 				"hp drain% low": 5,
-				"passive id": "17"
+				"passive id": "17",
+				"passive target": "self"
 			}
 		],
 		"id": "1200",
@@ -347,23 +443,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 867,
-	"hit dmg% distribution": [
-		30,
-		5,
-		7,
-		5,
-		5,
-		6,
-		7,
-		5,
-		6,
-		5,
-		6,
-		7,
-		6
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 13,
 	"id": 60666,
 	"imp": {
 		"max atk": "440",
@@ -388,7 +467,18 @@
 		"name": "War God's Wave"
 	},
 	"lord damage range": "2236~2498",
-	"max bc generated": 26,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Cataclysm Empress Feeva",
 	"overdrive stats": {
 		"atk%": 100,
@@ -397,47 +487,104 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "36 combo powerful Dark attack on all enemies & big boost to BC and HC drop rate for 3 turns",
-		"hit dmg% distribution": [
-			20,
-			2,
-			3,
-			2,
-			1,
-			3,
-			2,
-			2,
-			3,
-			3,
-			2,
-			3,
-			1,
-			2,
-			1,
-			3,
-			4,
-			3,
-			1,
-			3,
-			4,
-			3,
-			3,
-			2,
-			3,
-			1,
-			2,
-			1,
-			2,
-			3,
-			2,
-			3,
-			3,
-			1,
-			2,
-			1
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					64,
+					68,
+					80,
+					83,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101,
+					104,
+					107,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134,
+					137,
+					140,
+					143,
+					146,
+					149,
+					152,
+					155,
+					158,
+					161,
+					164,
+					167,
+					170,
+					173,
+					176,
+					179
+				],
+				"hit dmg% distribution": [
+					20,
+					2,
+					3,
+					2,
+					1,
+					3,
+					2,
+					2,
+					3,
+					3,
+					2,
+					3,
+					1,
+					2,
+					1,
+					3,
+					4,
+					3,
+					1,
+					3,
+					4,
+					3,
+					3,
+					2,
+					3,
+					1,
+					2,
+					1,
+					2,
+					3,
+					2,
+					3,
+					3,
+					1,
+					2,
+					1
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 36,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 36,
+		"desc": "36 combo powerful Dark attack on all enemies & big boost to BC and HC drop rate for 3 turns",
+		"drop check count": 1,
 		"id": "160666",
 		"levels": [
 			{
@@ -661,7 +808,6 @@
 				]
 			}
 		],
-		"max bc generated": 36,
 		"name": "Obsidian Raid"
 	},
 	"sell caution": false,
@@ -680,33 +826,76 @@
 		}
 	},
 	"ubb": {
-		"desc": "22 combo powerful Dark attack on all enemies & big boost to Atk, Def and Rec for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			10,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					64,
+					68,
+					80,
+					83,
+					86,
+					89,
+					92,
+					95,
+					98,
+					101,
+					104,
+					107,
+					110,
+					113,
+					116,
+					119,
+					122,
+					125,
+					128,
+					131,
+					134,
+					137
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					145
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "22 combo powerful Dark attack on all enemies & big boost to Atk, Def and Rec for 3 turns",
+		"drop check count": 1,
 		"id": "260666",
 		"levels": [
 			{
@@ -732,225 +921,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 170,
-						"buff turns": 3,
-						"def% buff (3)": 170,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 170,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 170,
-						"buff turns": 3,
-						"def% buff (3)": 170,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 170,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 170,
-						"buff turns": 3,
-						"def% buff (3)": 170,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 170,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 170,
-						"buff turns": 3,
-						"def% buff (3)": 170,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 170,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 170,
-						"buff turns": 3,
-						"def% buff (3)": 170,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 170,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 170,
-						"buff turns": 3,
-						"def% buff (3)": 170,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 170,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 170,
-						"buff turns": 3,
-						"def% buff (3)": 170,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 170,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 170,
-						"buff turns": 3,
-						"def% buff (3)": 170,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 170,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 15,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 170,
-						"buff turns": 3,
-						"def% buff (3)": 170,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 170,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "Ferus Astaroth"
 	}
 }

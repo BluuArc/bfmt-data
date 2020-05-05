@@ -31,18 +31,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 208
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "敵単体に闇属性６連ダメージ＆高確率で呪い状態にする",
-		"hit dmg% distribution": [
-			15,
-			15,
-			15,
-			15,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					96,
+					100,
+					104,
+					108,
+					112,
+					116
+				],
+				"hit dmg% distribution": [
+					15,
+					15,
+					15,
+					15,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "敵単体に闇属性６連ダメージ＆高確率で呪い状態にする",
+		"drop check count": 1,
 		"id": "60104",
 		"levels": [
 			{
@@ -246,21 +284,37 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "闇の異界"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 60100,
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			96,
+			126,
+			144,
+			162
+		],
+		"hit dmg% distribution": [
+			55,
+			15,
+			15,
+			15
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "The god that rules over death. Lodaga does not grant death, rather he is death itself. Only seen by those on the brink of death, those who do see him know to prepare themselves for what's coming next. Meanwhile, some think he is gracious and that he appears before his targets in order to give them time to put their affairs in order. Those who believe this are thought to be odd, though.",
 		"evolution": "I will stay with you until you<br>fall into eternal rest.",
 		"fusion": "The only difference between <br>the living and the dead is whether <br>they reside here or in hell.",
 		"summon": "Death makes all men equal.<br>Are you one to dispute this?<br>Or perhaps you're different?"
 	},
+	"drop check count": 4,
 	"element": "dark",
 	"evolution": {
 		"cost": 500000,
@@ -298,14 +352,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 152,
-	"hit dmg% distribution": [
-		55,
-		15,
-		15,
-		15
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 60104,
 	"imp": {
 		"max atk": "260",
@@ -326,7 +372,18 @@
 		"name": "重激の閃光"
 	},
 	"lord damage range": "1438~1606",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "死神ログ・ダーナ",
 	"rarity": 5,
 	"sell caution": false,

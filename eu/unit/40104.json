@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 134
+		},
+		"idle": {
+			"total number of frames": 40
+		},
+		"move": {
+			"total number of frames": 10
+		}
+	},
 	"bb": {
-		"desc": "8 combo powerful Thunder attack on single enemy & probable Paralysis effect",
-		"hit dmg% distribution": [
-			15,
-			10,
-			15,
-			10,
-			15,
-			10,
-			15,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					17,
+					28,
+					49,
+					60,
+					89,
+					92,
+					95,
+					98
+				],
+				"hit dmg% distribution": [
+					15,
+					10,
+					15,
+					10,
+					15,
+					10,
+					15,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo powerful Thunder attack on single enemy & probable Paralysis effect",
+		"drop check count": 1,
 		"id": "40104",
 		"levels": [
 			{
@@ -232,20 +272,44 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Rising Arc"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			17,
+			28,
+			49,
+			60,
+			89,
+			92,
+			95,
+			98
+		],
+		"hit dmg% distribution": [
+			15,
+			10,
+			15,
+			10,
+			20,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "A mighty dual-wielding knight of the Atharva Republic, he journeyed the skies in his good friend Grafl's ship, vanquishing countless gods along the way. In an attempt to defeat him, the leader of the gods began attacking his ship while he was away. Watching his good friend and his ship fall under heavy attack from the gods, Falma's anger reached its peak. Earth shattering lightning surged from his blades as he screamed, \"My friends are here with me, in my blades!\"",
 		"evolution": "This isn't over yet!<br>I have a promise to keep!<br>That is why I must evolve!",
 		"fusion": "Lightning, gather in my blades!<br>Give me the power to<br>vanquish the gods! ",
 		"summon": "The glistening of my blades <br>is a sign of everlasting friendship!<br>Are you worthy of leading me?"
 	},
+	"drop check count": 3,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -283,18 +347,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 329,
-	"hit dmg% distribution": [
-		15,
-		10,
-		15,
-		10,
-		20,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 40104,
 	"imp": {
 		"max atk": "200",
@@ -315,7 +367,18 @@
 		"name": "Dynasty Power"
 	},
 	"lord damage range": "1439~1607",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Sky Legend Falma",
 	"rarity": 5,
 	"sell caution": false,

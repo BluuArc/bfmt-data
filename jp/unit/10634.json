@@ -19,22 +19,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 176
+		},
+		"idle": {
+			"total number of frames": 76
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性１０連ダメージ＆味方全体に３ターン、確率で怪我・弱体を発生する効果を付与",
-		"hit dmg% distribution": [
-			7,
-			8,
-			9,
-			12,
-			15,
-			15,
-			10,
-			9,
-			8,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					78,
+					84,
+					90,
+					96,
+					102,
+					108,
+					114,
+					120,
+					126,
+					132
+				],
+				"hit dmg% distribution": [
+					7,
+					8,
+					9,
+					12,
+					15,
+					15,
+					10,
+					9,
+					8,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					150
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "敵全体に炎属性１０連ダメージ＆味方全体に３ターン、確率で怪我・弱体を発生する効果を付与",
+		"drop check count": 1,
 		"id": "10634",
 		"levels": [
 			{
@@ -258,21 +300,45 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "へヴィフェルド"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10630,
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			78,
+			84,
+			90,
+			96,
+			102,
+			108,
+			114,
+			120
+		],
+		"hit dmg% distribution": [
+			5,
+			10,
+			20,
+			20,
+			15,
+			15,
+			10,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "An ancient dragon with live fire within itself. A being from ancient times with destructive powers rivaling those of demons. Legend claims that its movements on land alone shaped continents. Its cries were also said to cause mountains to erupt like fountains of hot magma. These legends were believed to have originated from the fear of natural disasters, but since the recent confirmation of the existence of ancient dragons, many claim that some truth can be found in myth after all.",
 		"evolution": " ",
 		"fusion": "You dare force upon me<br>your pathetic human knowledge...?<br>So be it...",
 		"summon": "Seeker of destruction...<br>You have released me...<br>Now everything shall burn to ashes..."
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -309,18 +375,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 908,
-	"hit dmg% distribution": [
-		5,
-		10,
-		20,
-		20,
-		15,
-		15,
-		10,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 10634,
 	"imp": {
 		"max atk": "140",
@@ -343,7 +397,18 @@
 		"name": "炎樹の結界"
 	},
 	"lord damage range": "1679~1876",
-	"max bc generated": 16,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "赫竜神レグラード",
 	"rarity": 5,
 	"sell caution": false,

@@ -19,19 +19,58 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 131
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 암속성 7연속 데미지&확률로 1턴간 방어력 저하",
-		"hit dmg% distribution": [
-			20,
-			20,
-			20,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					60,
+					63,
+					66,
+					69,
+					72,
+					75,
+					78
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					20,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 7,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 7,
+		"desc": "적 전체에게 암속성 7연속 데미지&확률로 1턴간 방어력 저하",
+		"drop check count": 1,
 		"id": "60682",
 		"levels": [
 			{
@@ -285,20 +324,34 @@
 				]
 			}
 		],
-		"max bc generated": 7,
 		"name": "이블 브레스"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-15T01:31:57.000Z",
-		"updatedAt": "2015-11-04T13:19:00.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 60680,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			60,
+			63,
+			66
+		],
+		"hit dmg% distribution": [
+			33,
+			33,
+			34
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A demonic beast composed of parts taken from many different creatures. Since it seems improbable that this type of creature is born in Ishgria's natural habitat, many speculate that it is the creation of another demon who used various parts of different creatures to bring it to life. The Bilmera's cry renders its opponents unable to move, allowing it to quickly devour their souls. However, having so many brains attached to its body sometimes throws the Bilmera into a wild confusion, causing it to lose control over its own power. Some of these creatures have been known to wait for their end while in this state.",
 		"fusion": "This won't suffice.<br>We still have much to achieve<br>before reaching our final form.",
 		"summon": "You want me to help you?<br>If you bring me fresh souls,<br>I may consider it."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 100000,
@@ -335,13 +388,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 944,
-	"hit dmg% distribution": [
-		33,
-		33,
-		34
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 60682,
 	"imp": {
 		"max atk": "160",
@@ -362,7 +408,18 @@
 		"name": "투쟁의 기세"
 	},
 	"lord damage range": "1207~1348",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "합성마 빌마이라",
 	"rarity": 3,
 	"sell caution": false,

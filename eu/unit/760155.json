@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,17 +25,42 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 160
+		},
+		"idle": {
+			"total number of frames": 36
+		},
+		"move": {
+			"total number of frames": 18
+		}
+	},
 	"bb": {
-		"desc": "5 combo dark elemental attack on all enemies & Partial Hp drain (40% DMG = HP SELF)",
-		"hit dmg% distribution": [
-			20,
-			20,
-			20,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					15,
+					35,
+					55,
+					75,
+					95
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					20,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "14"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "5 combo dark elemental attack on all enemies & Partial Hp drain (40% DMG = HP SELF)",
+		"drop check count": 1,
 		"id": "760155",
 		"levels": [
 			{
@@ -189,14 +214,34 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "Home Run!"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-11-06T15:14:57.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 28,
+	"damage frames": {
+		"frame times": [
+			15,
+			31,
+			47,
+			63,
+			79,
+			95
+		],
+		"hit dmg% distribution": [
+			17,
+			17,
+			17,
+			17,
+			16,
+			16
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
+	"drop check count": 4,
 	"element": "dark",
 	"evolution": {
 		"prev": "760154"
@@ -205,16 +250,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 7105,
-	"hit dmg% distribution": [
-		17,
-		17,
-		17,
-		17,
-		16,
-		16
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 760155,
 	"imp": {
 		"max atk": "500",
@@ -243,17 +278,63 @@
 		"name": "Memorable match"
 	},
 	"lord damage range": "2188~2444",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Warlord Pig-Bull",
 	"rarity": 6,
 	"sbb": {
-		"desc": "2 massive Dark elemental attack on all enemies & Hurt himself ( -5000 Hp) & Renders self able to withstand a KO",
-		"hit dmg% distribution": [
-			50,
-			50
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					15,
+					95
+				],
+				"hit dmg% distribution": [
+					50,
+					50
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 2,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					100
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "28"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					20
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "7"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 2,
+		"desc": "2 massive Dark elemental attack on all enemies & Hurt himself ( -5000 Hp) & Renders self able to withstand a KO",
+		"drop check count": 12,
 		"id": "1760155",
 		"levels": [
 			{
@@ -527,7 +608,6 @@
 				]
 			}
 		],
-		"max bc generated": 24,
 		"name": "No future!"
 	},
 	"sell caution": false,

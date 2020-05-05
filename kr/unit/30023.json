@@ -25,18 +25,44 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 96
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 52
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 목속성 6연속 데미지",
-		"hit dmg% distribution": [
-			17,
-			16,
-			17,
-			16,
-			17,
-			17
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					28,
+					32,
+					42,
+					46,
+					56,
+					60
+				],
+				"hit dmg% distribution": [
+					17,
+					16,
+					17,
+					16,
+					17,
+					17
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "적 전체에게 강력한 목속성 6연속 데미지",
+		"drop check count": 1,
 		"id": "30023",
 		"levels": [
 			{
@@ -170,21 +196,41 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "슈팅 스타"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 30020,
 	"cost": 9,
+	"damage frames": {
+		"frame times": [
+			28,
+			32,
+			42,
+			46,
+			56,
+			60
+		],
+		"hit dmg% distribution": [
+			17,
+			16,
+			17,
+			16,
+			17,
+			17
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "A former hunter, Lario was an expert archer and lead bow for the Principality of Vriksha's second princess' bodyguards. He was successful in the military and rumored to be the princess' lover, but he dreamed of returning to his carefree hunter's life. However, he never got his wish and continued to protect the princess until the time of the great collapse.",
 		"evolution": "I promise you,<br>I never miss my target!",
 		"fusion": "Alright here we go!<br>Aim... Steady... Release!",
 		"summon": "My arrow never misses,<br>but your aim is dreadful!<br>It looks like you need me."
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"cost": 200000,
@@ -222,16 +268,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 33,
-	"hit dmg% distribution": [
-		17,
-		16,
-		17,
-		16,
-		17,
-		17
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 30023,
 	"imp": {
 		"max atk": "200",
@@ -252,7 +288,18 @@
 		"name": "투쟁의 섬광"
 	},
 	"lord damage range": "896~1001",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 8,
+			"move speed type": "1",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 8,
+			"move speed type": "1",
+			"move type": "3"
+		}
+	},
 	"name": "청사수왕 라리오",
 	"rarity": 4,
 	"sell caution": false,

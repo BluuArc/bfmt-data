@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,20 +25,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 106
+		},
+		"idle": {
+			"total number of frames": 76
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "8 combo Thunder elemental attack on all enemies & boost to BC drop rate for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			10,
-			20,
-			20,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					20,
+					23,
+					54,
+					58,
+					62,
+					70,
+					78,
+					86
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					20,
+					20,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo Thunder elemental attack on all enemies & boost to BC drop rate for 3 turns",
+		"drop check count": 1,
 		"id": "40273",
 		"levels": [
 			{
@@ -252,20 +292,40 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "Angelic Wave"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			20,
+			23,
+			62,
+			66,
+			70,
+			74
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			20,
+			20,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "The angel who judged those who defied the gods. Kushra's powers far surpassed everyone else's, and it's unknown exactly how many magical beings she sealed away. The beautiful way she danced in the sky coupled with her thunderous twin blade attack was a nightmare come true for any who betrayed the gods. But as faithful to the gods as she was, upon meeting a raging beast that'd been sealed away, she did something bizarre. She was captivated by the Fiery Beast, the power of which no one could ever truly restrain. ",
 		"evolution": " ",
 		"fusion": "What's this powerful emotion<br>boiling up inside of me?<br>I feel like I want to just fly away.",
 		"summon": "You're my new Master.<br>Command me, Kushra.<br>Let me slay all sinners!"
 	},
+	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
 		"cost": 200000,
@@ -302,16 +362,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 421,
-	"hit dmg% distribution": [
-		10,
-		10,
-		20,
-		20,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 40273,
 	"imp": {
 		"max atk": "160",
@@ -337,7 +387,18 @@
 		"name": "Cleansing Breeze"
 	},
 	"lord damage range": "1177~1315",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Sky Angel Kushra",
 	"rarity": 4,
 	"sell caution": false,

@@ -25,17 +25,54 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 140
+		},
+		"idle": {
+			"total number of frames": 124
+		},
+		"move": {
+			"total number of frames": 19
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性５連ダメージ＆確率で怪我状態にする",
-		"hit dmg% distribution": [
-			60,
-			10,
-			10,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					78,
+					88,
+					98,
+					108,
+					118
+				],
+				"hit dmg% distribution": [
+					60,
+					10,
+					10,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "敵全体に水属性５連ダメージ＆確率で怪我状態にする",
+		"drop check count": 1,
 		"id": "20314",
 		"levels": [
 			{
@@ -229,15 +266,29 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "飛翔脳天撃"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20310,
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			73,
+			83,
+			93
+		],
+		"hit dmg% distribution": [
+			80,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"prev": "20313"
@@ -246,13 +297,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 406,
-	"hit dmg% distribution": [
-		80,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 20314,
 	"imp": {
 		"max atk": "260",
@@ -274,7 +318,18 @@
 		"name": "龍陣"
 	},
 	"lord damage range": "1418~1584",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "シフ",
 	"rarity": 5,
 	"sell caution": false,

@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,21 +25,74 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 104
+		},
+		"idle": {
+			"total number of frames": 70
+		},
+		"move": {
+			"total number of frames": 19
+		}
+	},
 	"bb": {
-		"desc": "9 combo powerful Earth attack on single enemy & chance of inflicting a random status ailment ",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			10,
-			15,
-			10,
-			15,
-			10,
-			10
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					13,
+					17,
+					28,
+					38,
+					45,
+					49,
+					55,
+					60,
+					65
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					10,
+					15,
+					10,
+					15,
+					10,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 9,
+		"desc": "9 combo powerful Earth attack on single enemy & chance of inflicting a random status ailment ",
+		"drop check count": 1,
 		"id": "30424",
 		"levels": [
 			{
@@ -353,20 +406,42 @@
 				]
 			}
 		],
-		"max bc generated": 9,
 		"name": "Killer Ball"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 17,
+	"damage frames": {
+		"frame times": [
+			13,
+			17,
+			28,
+			38,
+			45,
+			55,
+			60
+		],
+		"hit dmg% distribution": [
+			10,
+			15,
+			10,
+			10,
+			15,
+			20,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A goddess that was once imprisoned for having committed a grave crime. Tasked with the destruction of humanity during the great war, she fought as the spokeswoman for the flora that had been ignored and damaged by humans. She found the buildings made by humans \"repulsive\" and continued to destroy them. On the other hand, she revived the plant life in the many lands she conquered, making it carnivorous in order for it to be able to defend itself.",
 		"evolution": "There is new life budding...<br> Does this mean that the world <br>has become beautiful and whole once again?",
 		"fusion": "The flora is breathing...<br>I shall take this power<br>in order to build a utopia with my beloved sister.",
 		"summon": "Let's make a promise to respect nature.<br>I shall only answer to the Summoner who keeps this promise."
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"cost": 500000,
@@ -404,17 +479,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 568,
-	"hit dmg% distribution": [
-		10,
-		15,
-		10,
-		10,
-		15,
-		20,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 30424,
 	"imp": {
 		"max atk": "200",
@@ -443,7 +507,18 @@
 		"name": "Pandemic Spread"
 	},
 	"lord damage range": "1460~1630",
-	"max bc generated": 14,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		}
+	},
 	"name": "Ivy Nalmika",
 	"rarity": 5,
 	"sell caution": false,

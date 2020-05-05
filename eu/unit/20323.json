@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,18 +25,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 108
+		},
+		"idle": {
+			"total number of frames": 76
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "6 combo Water elemental attack on all enemies & probable Injury effect",
-		"hit dmg% distribution": [
-			15,
-			15,
-			15,
-			15,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					12,
+					16,
+					27,
+					31,
+					62,
+					66
+				],
+				"hit dmg% distribution": [
+					15,
+					15,
+					15,
+					15,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "6 combo Water elemental attack on all enemies & probable Injury effect",
+		"drop check count": 1,
 		"id": "20323",
 		"levels": [
 			{
@@ -240,20 +278,36 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "Molte Nix"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			12,
+			27,
+			62,
+			66
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			30,
+			30
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "One of the 12 Guardians of the Gods. Signas, who grew up alone in the freezing cold mountains, detested being with humans. The only one she opened her heart to was Sodis, the person who brought her into the 12 Guardians and the one person who understood her. He didn't require Signas to act as part of the group, instead allowing her to follow her own thoughts and will. In this, she was different from the other Guardians, acting not of divine will but of her own judgement.",
 		"evolution": " ",
 		"fusion": "Worry not,<br>I am only here to<br>fulfill my duty.",
 		"summon": "Me? I'm Signas.<br>I'm one of the 12 Guardians.<br>Anyway, nice to meet you."
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 200000,
@@ -290,14 +344,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 449,
-	"hit dmg% distribution": [
-		20,
-		20,
-		30,
-		30
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 20323,
 	"imp": {
 		"max atk": "140",
@@ -318,7 +364,18 @@
 		"name": "Fire's Protection"
 	},
 	"lord damage range": "1382~1544",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Snow Cub Signas",
 	"rarity": 4,
 	"sell caution": false,

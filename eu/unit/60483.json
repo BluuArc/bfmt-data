@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,22 +25,64 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 197
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "10 combo powerful Dark attack on all enemies & probable Poison and Curse effects",
-		"hit dmg% distribution": [
-			10,
-			8,
-			8,
-			8,
-			5,
-			5,
-			5,
-			25,
-			15,
-			11
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					10,
+					25,
+					41,
+					53,
+					68,
+					83,
+					98,
+					118,
+					122,
+					126
+				],
+				"hit dmg% distribution": [
+					10,
+					8,
+					8,
+					8,
+					5,
+					5,
+					5,
+					25,
+					15,
+					11
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "10 combo powerful Dark attack on all enemies & probable Poison and Curse effects",
+		"drop check count": 1,
 		"id": "60483",
 		"levels": [
 			{
@@ -254,20 +296,42 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "Dimension X"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-09-03T04:48:35.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			10,
+			25,
+			41,
+			118,
+			122,
+			126,
+			130
+		],
+		"hit dmg% distribution": [
+			20,
+			15,
+			10,
+			20,
+			20,
+			10,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A disciple of the divine emperor Zevalhua. In the battle against the god Afla Dilith, she fought in her master's stead, invading his dreaded Agni Region to take on the Summoners. A master of deception, she set countless traps and was beyond ecstatic when they captured their targets. Though extremely skilled at combat, her obsession with the results of her cunningness sometimes gets the better of her.",
 		"evolution": " ",
 		"fusion": "So that's summoning, eh?<br>Looks impressive when<br>a weakling like you does it.",
 		"summon": "I'm being punished...<br>No way a human like<br>you could summon me!"
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"cost": 200000,
@@ -304,17 +368,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 548,
-	"hit dmg% distribution": [
-		20,
-		15,
-		10,
-		20,
-		20,
-		10,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 60483,
 	"imp": {
 		"max atk": "140",
@@ -341,7 +394,18 @@
 		"name": "Royal Oppression"
 	},
 	"lord damage range": "1196~1336",
-	"max bc generated": 14,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Disciple Mare",
 	"rarity": 4,
 	"sell caution": false,

@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,19 +25,58 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 113
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 12
+		}
+	},
 	"bb": {
-		"desc": "7 combo Light powerful attack on all enemies & adds Paralysis and Weakness effect to attack for 3 turns",
-		"hit dmg% distribution": [
-			10,
-			10,
-			10,
-			30,
-			14,
-			13,
-			13
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					35,
+					44,
+					52,
+					66,
+					69,
+					72,
+					75
+				],
+				"hit dmg% distribution": [
+					10,
+					10,
+					10,
+					30,
+					14,
+					13,
+					13
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 7,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 7,
+		"desc": "7 combo Light powerful attack on all enemies & adds Paralysis and Weakness effect to attack for 3 turns",
+		"drop check count": 1,
 		"id": "50603",
 		"levels": [
 			{
@@ -261,20 +300,38 @@
 				]
 			}
 		],
-		"max bc generated": 7,
 		"name": "Crescent Waltz"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			35,
+			44,
+			52,
+			66,
+			69
+		],
+		"hit dmg% distribution": [
+			20,
+			20,
+			20,
+			30,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "The queen of a small country in the Bariura region. Her kingdom was suddenly destroyed by an ancient dragon. Excelling as a swordswoman as well, she survived this tragic situation, remembering the last words the late king had uttered whilst she stared at the piles of rubble before her. \"It is your royal duty to protect the people.\" With those words in mind she wished not for vengeance, but fought to save her people instead. However, on her travels she met a knight thirsting for revenge, and though she did not sympathize with this, they still managed to cooperate.",
 		"evolution": " ",
 		"fusion": "How much power do you seek?<br>Revenge only leads to more revenge.<br>Forget the past, face the future!",
 		"summon": "Tell me of your pain.<br>I shall save you from it.<br>It is my duty as royalty."
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"cost": 200000,
@@ -311,15 +368,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 768,
-	"hit dmg% distribution": [
-		20,
-		20,
-		20,
-		30,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 50603,
 	"imp": {
 		"max atk": "160",
@@ -345,7 +393,18 @@
 		"name": "Cleansing Breeze"
 	},
 	"lord damage range": "1392~1555",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Royal Edge Priscilla",
 	"rarity": 4,
 	"sell caution": false,

@@ -2,8 +2,8 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 50,
-			"target conditions": "hp_75pr_under",
+			"chance%": 60,
+			"target conditions": "random",
 			"target type": "party"
 		},
 		{
@@ -19,8 +19,46 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 143
+		},
+		"idle": {
+			"total number of frames": 56
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
+		],
 		"desc": "Increases allies' BB gauge & adds Thunder element to attack for 3 turns",
+		"drop check count": 1,
 		"id": "40254",
 		"levels": [
 			{
@@ -248,15 +286,34 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			40,
+			90,
+			96,
+			100,
+			104
+		],
+		"hit dmg% distribution": [
+			50,
+			20,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A mysterious knight from the La Veda Republic. He found himself face to face with Melchio, a powerful enemy out to enslave humanity. Met with the seemingly indomitable force that he longed to clash with, he evolved into a new state of mind. Having challenged himself and lost so many times as a lone knight, he decided to throw his old ways away and rally the support of his friends in order to defeat this enemy. It is said that those who gathered to fight alongside him received the power of the lightning that surged from his sword.",
 		"evolution": "Defeat makes you stronger.<br>However, I would like to survive<br>without having to experience it.",
 		"fusion": "So this is what it's like to<br>accompany a Summoner, eh?<br>Not a bad combo, I must say.",
 		"summon": "Shall I show you the <br>hidden side of power?<br>I wonder how you will change?"
 	},
+	"drop check count": 4,
 	"element": "thunder",
 	"evolution": {
 		"cost": 500000,
@@ -294,15 +351,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 353,
-	"hit dmg% distribution": [
-		50,
-		20,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 40254,
 	"imp": {
 		"max atk": "140",
@@ -324,7 +372,18 @@
 		"name": "Five Light's Force"
 	},
 	"lord damage range": "1689~1887",
-	"max bc generated": 20,
+	"movement": {
+		"attack": {
+			"move speed": 0.0015,
+			"move speed type": "5",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "3"
+		}
+	},
 	"name": "Drake God Lodin",
 	"rarity": 5,
 	"sell caution": false,

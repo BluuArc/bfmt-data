@@ -25,17 +25,42 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 90
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性５連ダメージ",
-		"hit dmg% distribution": [
-			15,
-			15,
-			25,
-			25,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					10,
+					14,
+					26,
+					30,
+					34
+				],
+				"hit dmg% distribution": [
+					15,
+					15,
+					25,
+					25,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 5,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 5,
+		"desc": "敵全体に水属性５連ダメージ",
+		"drop check count": 1,
 		"id": "20012",
 		"levels": [
 			{
@@ -169,21 +194,33 @@
 				]
 			}
 		],
-		"max bc generated": 5,
 		"name": "ディヴァインヘイル"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20010,
 	"cost": 4,
+	"damage frames": {
+		"frame times": [
+			26,
+			30
+		],
+		"hit dmg% distribution": [
+			50,
+			50
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 2
+	},
 	"dictionary": {
 		"description": "A swordswoman from the ruined Sama Kingdom, she later became one of the Six Heroes. At 18, she folded to the pressure around her and took up the treasured sword Lexida as proof of her chiefdom. She had always rejected the sword, but it was a good fit for her quick and ice cold style. Those who faced her are said to have felt a freezing cold before battle.",
 		"evolution": " ",
 		"fusion": "I can feel it growing stronger...<br>My connection with the treasured sword, Lexida.",
 		"summon": "You need me, huh?<br>You seem quite suitable,<br>let me show you my power!"
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 100000,
@@ -206,12 +243,6 @@
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 6,
-	"hit dmg% distribution": [
-		50,
-		50
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 2,
 	"id": 20012,
 	"imp": {
 		"max atk": "160",
@@ -235,7 +266,18 @@
 		"name": "水神の力"
 	},
 	"lord damage range": "854~954",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "氷剣士セレナ",
 	"rarity": 3,
 	"sell caution": false,

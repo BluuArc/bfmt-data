@@ -19,20 +19,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 123
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "8 combo Earth attack on single foe & boosts Spark damage for 3 turns",
-		"hit dmg% distribution": [
-			15,
-			10,
-			5,
-			25,
-			15,
-			15,
-			10,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					15,
+					19,
+					23,
+					44,
+					48,
+					52,
+					55,
+					58
+				],
+				"hit dmg% distribution": [
+					15,
+					10,
+					5,
+					25,
+					15,
+					15,
+					10,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "8 combo Earth attack on single foe & boosts Spark damage for 3 turns",
+		"drop check count": 2,
 		"id": "30582",
 		"levels": [
 			{
@@ -246,20 +286,36 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Baum Cleaver"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-09-29T16:25:19.000Z",
-		"updatedAt": "2016-02-04T14:52:26.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 30580,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			15,
+			44,
+			48,
+			52
+		],
+		"hit dmg% distribution": [
+			30,
+			15,
+			45,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A beast-like youngster who traveled to Grand Gaia in the midst of the war against the gods. As Mau journeyed in search of the missing young lady who had served as his patron, he became the target of many attacks due to his unusual appearance. However, using his unique body to the best of his ability, he never allowed for any of his enemies to touch a hair on his head. Mau would later come to face Zegar in battle in the Agni empire, but the reason for their altercation is unknown. The last thing known about Mau is that he helped those who had been attacked by the God Army before he mysteriously disappeared.",
 		"fusion": "There are lots of people after me.<br>But I'm way too smart<br>to lose to those dummies!",
 		"summon": "Need more power for journey.<br>To train, I fight with you.<br>I help you!"
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"cost": 100000,
@@ -296,14 +352,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 1027,
-	"hit dmg% distribution": [
-		30,
-		15,
-		45,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 30582,
 	"imp": {
 		"max atk": "160",
@@ -324,7 +372,18 @@
 		"name": "Forest Beast's Power"
 	},
 	"lord damage range": "1228~1371",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
 	"name": "Mau",
 	"rarity": 3,
 	"sell caution": false,

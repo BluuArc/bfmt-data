@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,19 +25,46 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 160
+		},
+		"idle": {
+			"total number of frames": 120
+		},
+		"move": {
+			"total number of frames": 9
+		}
+	},
 	"bb": {
-		"desc": "7 combo Light and Dark elemental attack on all enemies",
-		"hit dmg% distribution": [
-			16,
-			14,
-			14,
-			14,
-			14,
-			14,
-			14
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					114,
+					120,
+					126,
+					132,
+					138,
+					144,
+					150
+				],
+				"hit dmg% distribution": [
+					16,
+					14,
+					14,
+					14,
+					14,
+					14,
+					14
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 7,
+				"proc id": "29"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 7,
+		"desc": "7 combo Light and Dark elemental attack on all enemies",
+		"drop check count": 1,
 		"id": "50483",
 		"levels": [
 			{
@@ -211,20 +238,40 @@
 				]
 			}
 		],
-		"max bc generated": 7,
 		"name": "Ibelize"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-07-22T13:36:13.000Z",
-		"updatedAt": "2015-10-05T10:44:49.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			114,
+			117,
+			120,
+			150,
+			173,
+			196
+		],
+		"hit dmg% distribution": [
+			25,
+			25,
+			25,
+			8,
+			9,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "Long before the battle between the humans and the gods, there was an abominable angel who passed judgment. Not discriminating between gods nor humans, he would appear before sinners with his three faces and pass his sentence. His right face represents crimes, and his left represents a defense. It is said that the last face in the middle passes the final sentence, and if the prosecuted is found guilty, it is judged by a merciless attack. Though fair, judging trespassers without a chance of salvation made him feared by the humans, as well as by the gods. He was called the \"Black Angel.\"",
 		"evolution": " ",
 		"fusion": "Thou sacrificest others<br>to strengthen others as well.<br>Thy judgment is...",
 		"summon": "I only care about passing my judgment.<br>It is my only purpose.<br>Dost thou object against it?"
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"cost": 200000,
@@ -261,16 +308,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 622,
-	"hit dmg% distribution": [
-		25,
-		25,
-		25,
-		8,
-		9,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 50483,
 	"imp": {
 		"max atk": "140",
@@ -295,7 +332,18 @@
 		"name": "Fallen Emperor's Power"
 	},
 	"lord damage range": "1371~1531",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Dark Angel Azael",
 	"rarity": 4,
 	"sell caution": false,

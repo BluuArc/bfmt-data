@@ -19,25 +19,94 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 198
+		},
+		"idle": {
+			"total number of frames": 102
+		},
+		"move": {
+			"total number of frames": 15
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性１３連ダメージ＆味方全体に３ターン、ターン毎にＨＰを大回復・被ダメージ時、確率でＨＰを少し回復＆低確率で一度だけ戦闘不能を耐える効果を付与",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			14,
-			12,
-			11,
-			10,
-			8,
-			7,
-			7,
-			6,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					75,
+					79,
+					83,
+					87,
+					90,
+					94,
+					98,
+					102,
+					106,
+					110,
+					114,
+					118,
+					122
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					14,
+					12,
+					11,
+					10,
+					8,
+					7,
+					7,
+					6,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 13,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "85"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "56"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 13,
+		"desc": "敵全体に炎属性１３連ダメージ＆味方全体に３ターン、ターン毎にＨＰを大回復・被ダメージ時、確率でＨＰを少し回復＆低確率で一度だけ戦闘不能を耐える効果を付与",
+		"drop check count": 1,
 		"id": "10116",
 		"levels": [
 			{
@@ -451,15 +520,51 @@
 				]
 			}
 		],
-		"max bc generated": 13,
 		"name": "ヴェルメリオフェザー"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-14T16:14:07.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10110,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			75,
+			79,
+			83,
+			87,
+			90,
+			94,
+			98,
+			102,
+			106,
+			110,
+			114
+		],
+		"hit dmg% distribution": [
+			7,
+			7,
+			7,
+			7,
+			15,
+			13,
+			10,
+			9,
+			9,
+			8,
+			8
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
+	"dictionary": {
+		"description": "The culmination of all phoenixes in Grand Gaia. Its brilliant wings burned with eidolon flame, capable of both crushing enemies and healing wounds. According to legend, after the God Army invaded its ancient volcanic home, Levarza offered aid to the human resistance, working countless miracles. As the war raged to an end, all hope seemed lost until Levarza burned its own body to ash, creating a wall of flame between the humans and the God Army. It's said that this wall of iridescent flame has continued to shine upon and protect Levarza's beloved humans.",
+		"evolution": "My eidolon flame illuminates this world. If but one soul believes, my flame shall bring hope to even the deepest darkness.",
+		"fusion": "Leave this to me. My wings of flame shall bring ruin to your foes, and soothe the injuries of your companions.",
+		"summon": "The eidolon flame is my eternal legacy. Even if my body should burn to ash, I swear to always protect."
+	},
+	"drop check count": 4,
 	"element": "fire",
 	"evolution": {
 		"prev": "10115"
@@ -476,7 +581,8 @@
 				},
 				"conditions": [],
 				"hp below % buff activation": 20,
-				"passive id": "55"
+				"passive id": "55",
+				"passive target": "self"
 			}
 		],
 		"id": "11600",
@@ -486,21 +592,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 1232,
-	"hit dmg% distribution": [
-		7,
-		7,
-		7,
-		7,
-		15,
-		13,
-		10,
-		9,
-		9,
-		8,
-		8
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 11,
 	"id": 10116,
 	"imp": {
 		"max atk": "600",
@@ -538,7 +629,18 @@
 		"name": "慈愛の浄化炎"
 	},
 	"lord damage range": "2141~2392",
-	"max bc generated": 44,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "神鳳巡機レヴァルザー",
 	"overdrive stats": {
 		"atk%": 100,
@@ -548,28 +650,90 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "敵全体に強力な炎属性１７連ダメージ＆３ターン、ターン終了時に追加ダメージ＆味方全体のＨＰをかなり回復＆３ターン、最大ＨＰに応じて防御力をアップ",
-		"hit dmg% distribution": [
-			4,
-			4,
-			4,
-			4,
-			4,
-			11,
-			10,
-			9,
-			8,
-			7,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					94,
+					98,
+					102,
+					106,
+					110,
+					114,
+					118,
+					122,
+					126,
+					130,
+					134
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					4,
+					4,
+					4,
+					11,
+					10,
+					9,
+					8,
+					7,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 17,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					150
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					0
+				],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 17,
+		"desc": "敵全体に強力な炎属性１７連ダメージ＆３ターン、ターン終了時に追加ダメージ＆味方全体のＨＰをかなり回復＆３ターン、最大ＨＰに応じて防御力をアップ",
+		"drop check count": 1,
 		"id": "110116",
 		"levels": [
 			{
@@ -993,7 +1157,6 @@
 				]
 			}
 		],
-		"max bc generated": 17,
 		"name": "リナセンス・ソアー"
 	},
 	"sell caution": false,
@@ -1012,360 +1175,60 @@
 		}
 	},
 	"ubb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					90
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					50
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "66"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					0
+				],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "8"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "62"
+			}
+		],
 		"desc": "味方全体のＨＰを全回復＆高確率で戦闘不能を回復・最大ＨＰをかなりアップ＆炎属性のバリアを付与",
+		"drop check count": 1,
 		"id": "210116",
 		"levels": [
-			{
-				"bc cost": 35,
-				"effects": [
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "66",
-						"revive unit chance%": 66,
-						"revive unit hp%": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "fire",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 35,
-				"effects": [
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "66",
-						"revive unit chance%": 66,
-						"revive unit hp%": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "fire",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 35,
-				"effects": [
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "66",
-						"revive unit chance%": 66,
-						"revive unit hp%": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "fire",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 35,
-				"effects": [
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "66",
-						"revive unit chance%": 66,
-						"revive unit hp%": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "fire",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 35,
-				"effects": [
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "66",
-						"revive unit chance%": 66,
-						"revive unit hp%": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "fire",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 35,
-				"effects": [
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "66",
-						"revive unit chance%": 66,
-						"revive unit hp%": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "fire",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 35,
-				"effects": [
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "66",
-						"revive unit chance%": 66,
-						"revive unit hp%": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "fire",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 35,
-				"effects": [
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "66",
-						"revive unit chance%": 66,
-						"revive unit hp%": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "fire",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 35,
-				"effects": [
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"heal high": 99999,
-						"heal low": 98999,
-						"proc id": "2",
-						"rec added% (from healer)": 10,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "66",
-						"revive unit chance%": 66,
-						"revive unit hp%": 100,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 25,
-						"proc id": "8",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "fire",
-						"elemental barrier hp": 20000,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
 			{
 				"bc cost": 35,
 				"effects": [

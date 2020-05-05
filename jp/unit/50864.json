@@ -19,22 +19,76 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 83
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 49
+		}
+	},
 	"bb": {
-		"desc": "敵全体に光属性１０連ダメージ＆確率で攻撃力を１ターン大幅に低下＆味方全体に３ターン、スパークダメージをかなりアップ",
-		"hit dmg% distribution": [
-			27,
-			13,
-			8,
-			8,
-			8,
-			8,
-			7,
-			7,
-			7,
-			7
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					13,
+					16,
+					19,
+					22,
+					25,
+					28,
+					31,
+					34,
+					37,
+					40
+				],
+				"hit dmg% distribution": [
+					27,
+					13,
+					8,
+					8,
+					8,
+					8,
+					7,
+					7,
+					7,
+					7
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "敵全体に光属性１０連ダメージ＆確率で攻撃力を１ターン大幅に低下＆味方全体に３ターン、スパークダメージをかなりアップ",
+		"drop check count": 1,
 		"id": "50864",
 		"levels": [
 			{
@@ -368,20 +422,40 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "白龍の雷牙"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-22T21:50:39.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 50860,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			13,
+			17,
+			21,
+			25,
+			29,
+			33
+		],
+		"hit dmg% distribution": [
+			30,
+			20,
+			15,
+			15,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
 	"dictionary": {
 		"description": "An ancient dragon which dwelled in the mountains around the Sama region. Legend has it that bathing in the blood of Folg would grant one immortality. For this reason, many attempted climbing the mountains it inhabited to gain the gift of eternal life, though word has it this was a feat no one ever accomplished. Folg is believed to have also been a dangerous dragon capable of irreparable damage, but due to its usually gentle nature, no records of it going on a rampage have ever been found. Some even speculate that Folg stayed in the mountains to help prevent the invasion of demons from another world.",
 		"fusion": "So you plan to fight demons?<br>Then I shall join your plight.<br>No thanks are necessary.",
 		"summon": "I have no interest in humans,<br>but I do care about Summoners.<br>I shall remain with you briefly."
 	},
+	"drop check count": 3,
 	"element": "light",
 	"evolution": {
 		"cost": 500000,
@@ -418,16 +492,6 @@
 	"gender": "other",
 	"getting type": "rare summon",
 	"guide_id": 1188,
-	"hit dmg% distribution": [
-		30,
-		20,
-		15,
-		15,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 50864,
 	"imp": {
 		"max atk": "260",
@@ -450,7 +514,18 @@
 		"name": "刹那の威光"
 	},
 	"lord damage range": "1857~2074",
-	"max bc generated": 18,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		}
+	},
 	"name": "白龍神フォルグ",
 	"rarity": 5,
 	"sell caution": false,

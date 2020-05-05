@@ -19,28 +19,100 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 142
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 27
+		}
+	},
 	"bb": {
-		"desc": "16 combo powerful Water attack on all foes, probable Paralysis, Sick, adds Paralysis, Sick effects to attack for 3 turns & removes all status ailments",
-		"hit dmg% distribution": [
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			32,
-			10,
-			8,
-			6,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86
+				],
+				"hit dmg% distribution": [
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					32,
+					10,
+					8,
+					6,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "40"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "16 combo powerful Water attack on all foes, probable Paralysis, Sick, adds Paralysis, Sick effects to attack for 3 turns & removes all status ailments",
+		"drop check count": 1,
 		"id": "20286",
 		"levels": [
 			{
@@ -514,21 +586,57 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "Hail Dissolution"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-11-25T16:41:02.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 20280,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			8,
+			12,
+			16,
+			20,
+			24,
+			28,
+			65,
+			68,
+			71,
+			74,
+			77,
+			80,
+			83,
+			86
+		],
+		"hit dmg% distribution": [
+			4,
+			3,
+			4,
+			3,
+			4,
+			3,
+			35,
+			10,
+			8,
+			6,
+			5,
+			5,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 14
+	},
 	"dictionary": {
 		"description": "During the battle against the gods, Reeze's friends came to her rescue. However, they each began falling one by one in battle as she cursed her own powerlessness. At that moment, a gate towards another world opened, bringing with it a curious object. This object had the ability to change Reeze into one of the Six Armors, and had actually been sent by her older brother. It was then when Reeze decided to abandon her humanity to gain the Armors' power. Once the battle was over, it is said that all that was left beside her was an immobile mechanical doll.",
 		"evolution": "My name is Reeze...<br>No. 3 of Reis's Six Armors...<br>A human and Armor hybrid...",
 		"fusion": "I can't feel pain anymore...<br>That fills me with great sadness...<br>Please tell me what I should do...",
 		"summon": "My brother, he...<br>No. It won't change anything.<br>It was me who wanted this power..."
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"prev": "20285"
@@ -549,11 +657,13 @@
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -580,24 +690,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1085,
-	"hit dmg% distribution": [
-		4,
-		3,
-		4,
-		3,
-		4,
-		3,
-		35,
-		10,
-		8,
-		6,
-		5,
-		5,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 14,
 	"id": 20286,
 	"imp": {
 		"max atk": "440",
@@ -635,7 +727,18 @@
 		"name": "Eternal Star Life"
 	},
 	"lord damage range": "2253~2517",
-	"max bc generated": 42,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Hailstorm Armor Reeze",
 	"overdrive stats": {
 		"atk%": 100,
@@ -644,29 +747,92 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "18 combo powerful Water attack on all foes, greatly boosts own Atk, Def, Rec for 3 turns, boosts Def relative to Rec for 3 turns & removes all status ailments",
-		"hit dmg% distribution": [
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			31,
-			10,
-			8,
-			6,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40,
+					44,
+					65,
+					68,
+					71,
+					74,
+					77,
+					80,
+					83,
+					86
+				],
+				"hit dmg% distribution": [
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					31,
+					10,
+					8,
+					6,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "78"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 18,
+		"desc": "18 combo powerful Water attack on all foes, greatly boosts own Atk, Def, Rec for 3 turns, boosts Def relative to Rec for 3 turns & removes all status ailments",
+		"drop check count": 1,
 		"id": "120286",
 		"levels": [
 			{
@@ -1160,7 +1326,6 @@
 				]
 			}
 		],
-		"max bc generated": 18,
 		"name": "Unleashed Armor: Rift Rise"
 	},
 	"sell caution": false,
@@ -1179,33 +1344,88 @@
 		}
 	},
 	"ubb": {
-		"desc": "22 combo massive Water attack on all foes, removes all status ailments & probable resistance against 1 KO attack",
-		"hit dmg% distribution": [
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			2,
-			24,
-			9,
-			7,
-			6,
-			5,
-			5,
-			4,
-			4,
-			4,
-			4,
-			4,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40,
+					44,
+					65,
+					68,
+					71,
+					74,
+					77,
+					81,
+					85,
+					89,
+					93,
+					97,
+					101,
+					105
+				],
+				"hit dmg% distribution": [
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					24,
+					9,
+					7,
+					6,
+					5,
+					5,
+					4,
+					4,
+					4,
+					4,
+					4,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "38"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "56"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "22 combo massive Water attack on all foes, removes all status ailments & probable resistance against 1 KO attack",
+		"drop check count": 1,
 		"id": "220286",
 		"levels": [
 			{
@@ -1246,360 +1466,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 20,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"ailments cured": [
-							"poison",
-							"weaken",
-							"sick",
-							"injury",
-							"curse",
-							"paralysis",
-							"atk down",
-							"def down",
-							"rec down"
-						],
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "38",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"angel idol buff turns (91)": 140,
-						"angel idol recover chance%": 50,
-						"angel idol recover hp%": 100,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "56",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "Terminus Ad Quem"
 	}
 }

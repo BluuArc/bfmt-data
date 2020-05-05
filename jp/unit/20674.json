@@ -19,22 +19,76 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 180
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性１０連ダメージ＆確率でスパークダメージ耐性を２ターン低下＆味方全体に３ターン、ターン毎にＢＢゲージを増加",
-		"hit dmg% distribution": [
-			18,
-			8,
-			8,
-			21,
-			16,
-			8,
-			6,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					7,
+					19,
+					55,
+					96,
+					101,
+					106,
+					111,
+					116,
+					121,
+					126
+				],
+				"hit dmg% distribution": [
+					18,
+					8,
+					8,
+					21,
+					16,
+					8,
+					6,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "58"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "敵全体に水属性１０連ダメージ＆確率でスパークダメージ耐性を２ターン低下＆味方全体に３ターン、ターン毎にＢＢゲージを増加",
+		"drop check count": 1,
 		"id": "20674",
 		"levels": [
 			{
@@ -338,20 +392,44 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "キュアノスグレイヴ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-30T18:49:29.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20670,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			7,
+			19,
+			55,
+			96,
+			103,
+			110,
+			117,
+			124
+		],
+		"hit dmg% distribution": [
+			25,
+			10,
+			10,
+			20,
+			16,
+			8,
+			6,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
 	"dictionary": {
 		"description": "The queen of Estria and leader of a national alliance in Ancient Ishgria. In olden times, there was a demon ruler in Ishgria which encouraged other demons to fight each other in order to gain enormous power. However, by the time Savia had gained the same leadership position, she had grown tired of all the endless fighting. It was then when the new and innovative nation of Mildran made its appearance, defeating countless demons along the way.",
 		"fusion": "This is so tedious.<br>Can't you do this<br>in a better fashion somehow?",
 		"summon": "A world full of insolent beings<br>would not be missed, don't you agree?<br>Why do I bother with this struggle?"
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 500000,
@@ -388,18 +466,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1093,
-	"hit dmg% distribution": [
-		25,
-		10,
-		10,
-		20,
-		16,
-		8,
-		6,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 8,
 	"id": 20674,
 	"imp": {
 		"max atk": "260",
@@ -421,7 +487,18 @@
 		"name": "覇王の霊力"
 	},
 	"lord damage range": "1840~2056",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "凄臨神妃サヴィア",
 	"rarity": 5,
 	"sell caution": false,

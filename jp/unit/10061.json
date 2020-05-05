@@ -25,16 +25,52 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 86
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "敵単体に炎属性４連ダメージ＆高確率で毒状態にする",
-		"hit dmg% distribution": [
-			10,
-			20,
-			30,
-			40
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					15,
+					23,
+					30,
+					36
+				],
+				"hit dmg% distribution": [
+					10,
+					20,
+					30,
+					40
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 4,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 4,
+		"desc": "敵単体に炎属性４連ダメージ＆高確率で毒状態にする",
+		"drop check count": 1,
 		"id": "10061",
 		"levels": [
 			{
@@ -228,21 +264,37 @@
 				]
 			}
 		],
-		"max bc generated": 4,
 		"name": "ポイズンゲイル"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10060,
 	"cost": 3,
+	"damage frames": {
+		"frame times": [
+			15,
+			23,
+			30,
+			36
+		],
+		"hit dmg% distribution": [
+			10,
+			20,
+			30,
+			40
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A bandit ruling the territories around the ruined Agni Empire. Raised in an orphanage, he left in a rage knowing that Imperial subsidies were being embezzled by a vicious official. He then made his name as a bandit, targeting detestable government officials, soldiers and merchants. Wielding dual-knives, he's known to hurt, but never kill his targets.",
 		"evolution": " ",
 		"fusion": "So you want more from me?<br>Hah! How's this!",
 		"summon": "You need my help?<br>Alright, but in exchange,<br>I'll be taking a large reward."
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 50000,
@@ -269,14 +321,6 @@
 	"gender": "male",
 	"getting type": "not eligible for achievement",
 	"guide_id": 79,
-	"hit dmg% distribution": [
-		10,
-		20,
-		30,
-		40
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 10061,
 	"imp": {
 		"max atk": "120",
@@ -297,7 +341,18 @@
 		"name": "富の輝き"
 	},
 	"lord damage range": "590~660",
-	"max bc generated": 8,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "盗賊レナード",
 	"rarity": 2,
 	"sell caution": false,

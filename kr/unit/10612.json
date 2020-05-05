@@ -19,18 +19,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 133
+		},
+		"idle": {
+			"total number of frames": 85
+		},
+		"move": {
+			"total number of frames": 85
+		}
+	},
 	"bb": {
-		"desc": "적 1명에게 화속성 6연속 데미지＆확률로 중독과 질병 효과",
-		"hit dmg% distribution": [
-			20,
-			20,
-			15,
-			15,
-			15,
-			15
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					62,
+					67,
+					72,
+					77,
+					82,
+					87
+				],
+				"hit dmg% distribution": [
+					20,
+					20,
+					15,
+					15,
+					15,
+					15
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "적 1명에게 화속성 6연속 데미지＆확률로 중독과 질병 효과",
+		"drop check count": 2,
 		"id": "10612",
 		"levels": [
 			{
@@ -244,20 +282,34 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "프레임 페인"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-10-15T01:31:57.000Z",
-		"updatedAt": "2015-11-04T13:19:00.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 10610,
 	"cost": 6,
+	"damage frames": {
+		"frame times": [
+			62,
+			71,
+			80
+		],
+		"hit dmg% distribution": [
+			35,
+			55,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A plant in Ishgria decorated with a strange pattern. The vivid colors of the Brangea lure creatures towards it, devouring them with its sharp teeth in a matter of seconds. Its only natural instinct is to feed itself to survive, so it often moves around in order to find nourishment to consume. Not only does it consume living creatures, but also any nutritious minerals that it happens to find to replenish its energy.",
 		"fusion": "You've given me nourishment.<br>However, it's not enough.<br>I need lots more...",
 		"summon": "Who are you?<br>Well, if you bring me food,<br>it doesn't really matter."
 	},
+	"drop check count": 2,
 	"element": "fire",
 	"evolution": {
 		"cost": 100000,
@@ -294,13 +346,6 @@
 	"gender": "other",
 	"getting type": "farmable",
 	"guide_id": 934,
-	"hit dmg% distribution": [
-		35,
-		55,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 10612,
 	"imp": {
 		"max atk": "100",
@@ -329,7 +374,18 @@
 		"name": "악역의 파문"
 	},
 	"lord damage range": "1037~1159",
-	"max bc generated": 6,
+	"movement": {
+		"attack": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "3"
+		}
+	},
 	"name": "악마의 꽃 브란지아",
 	"rarity": 3,
 	"sell caution": false,

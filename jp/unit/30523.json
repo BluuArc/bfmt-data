@@ -19,20 +19,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 101
+		},
+		"idle": {
+			"total number of frames": 87
+		},
+		"move": {
+			"total number of frames": 11
+		}
+	},
 	"bb": {
-		"desc": "敵全体に樹属性８連ダメージ＆確率で麻痺状態にする",
-		"hit dmg% distribution": [
-			11,
-			10,
-			10,
-			11,
-			10,
-			16,
-			16,
-			16
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					12,
+					16,
+					20,
+					32,
+					39,
+					60,
+					64,
+					68
+				],
+				"hit dmg% distribution": [
+					11,
+					10,
+					10,
+					11,
+					10,
+					16,
+					16,
+					16
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 8,
+		"desc": "敵全体に樹属性８連ダメージ＆確率で麻痺状態にする",
+		"drop check count": 1,
 		"id": "30523",
 		"levels": [
 			{
@@ -236,15 +276,35 @@
 				]
 			}
 		],
-		"max bc generated": 8,
 		"name": "ヴァラ・シル"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 30520,
 	"cost": 12,
+	"damage frames": {
+		"frame times": [
+			12,
+			18,
+			32,
+			38,
+			60,
+			66
+		],
+		"hit dmg% distribution": [
+			15,
+			13,
+			15,
+			13,
+			24,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 6
+	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"cost": 200000,
@@ -281,16 +341,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 798,
-	"hit dmg% distribution": [
-		15,
-		13,
-		15,
-		13,
-		24,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 6,
 	"id": 30523,
 	"imp": {
 		"max atk": "160",
@@ -317,7 +367,18 @@
 		"name": "銀の鋭光"
 	},
 	"lord damage range": "1047~1170",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "ビルボ",
 	"rarity": 4,
 	"sell caution": false,

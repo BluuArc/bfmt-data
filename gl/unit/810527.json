@@ -19,18 +19,60 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"error": "sam file not supported"
+	},
 	"bb": {
-		"desc": "6 combo massive Fire attack on single enemy, adds Def ignoring effect to attack for 2 turns & chance of greatly reducing enemy's Atk and for 2 turns",
-		"hit dmg% distribution": [
-			8,
-			7,
-			25,
-			23,
-			21,
-			19
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					35,
+					75,
+					105,
+					109,
+					113,
+					117
+				],
+				"hit dmg% distribution": [
+					8,
+					7,
+					25,
+					23,
+					21,
+					19
+				],
+				"hit dmg% distribution (total)": 103,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 103,
-		"hits": 6,
+		"desc": "6 combo massive Fire attack on single enemy, adds Def ignoring effect to attack for 2 turns & chance of greatly reducing enemy's Atk and for 2 turns",
+		"drop check count": 8,
 		"id": "810527",
 		"levels": [
 			{
@@ -364,21 +406,37 @@
 				]
 			}
 		],
-		"max bc generated": 48,
 		"name": "Garuda Impact"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2016-01-15T05:35:32.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 810520,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			35,
+			75,
+			85,
+			105
+		],
+		"hit dmg% distribution": [
+			10,
+			7,
+			8,
+			75
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "Recruited by the royal court to eliminate Draegar, a demi-god sent by the corrupt gods to end the Elysian bloodline by assassinating Estia. Grandt met Elaina in the ranks of mercenaries he  had joined in order to carry out his mission. However, when his squad caught Draegar off guard, it wasn't enough to defeat him, and the squad was wiped out. Grandt was heavily injured during the fight, and Elaina, who managed to survive long enough, teleported both Grandt and herself to safety. The days following the failed mission attempt, Elaina and Grandt managed to secure the help of a powerful Summoner from the far dimensions of the Vortex. Securing the regions plagued with the advancing enemy forces of the gods, the final showdown with Draegar was at hand. While Grandt led the final offensive against Draegar by scouting ahead, an explosive battle could be heard from a distance before the offensive party arrived to face the crazed demi-god. As the battle with Draegar commenced, Grandt was nowhere to be found. Bloodstained remnants of a gunblade lay wasted on the battle grounds.",
 		"evolution": "I will accomplish my mission, even if it costs me my last breath...",
 		"fusion": "The mission will be accomplished. Now I train.",
 		"summon": "All mighty evils will eventually fall, and I will be the one to bring them down."
 	},
+	"drop check count": 8,
 	"element": "fire",
 	"evolution": {
 		"prev": "810526"
@@ -395,6 +453,7 @@
 				"fire units do extra elemental weakness dmg": true,
 				"light units do extra elemental weakness dmg": true,
 				"passive id": "50",
+				"passive target": "self",
 				"thunder units do extra elemental weakness dmg": true,
 				"water units do extra elemental weakness dmg": true
 			}
@@ -406,14 +465,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 8125,
-	"hit dmg% distribution": [
-		10,
-		7,
-		8,
-		75
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 810527,
 	"imp": {
 		"max atk": "520",
@@ -439,7 +490,18 @@
 		"name": "Flashing Crimson Prescience"
 	},
 	"lord damage range": "2411~2693",
-	"max bc generated": 32,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Slayer Grandt",
 	"overdrive stats": {
 		"atk%": 100,
@@ -448,23 +510,68 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "12 combo massive Fire attack on all enemies, adds chance of greatly reducing enemies' Atk for 1 turn and boosts own Atk relative to one’s max HP for 3 turns",
-		"hit dmg% distribution": [
-			4,
-			6,
-			5,
-			5,
-			9,
-			10,
-			11,
-			10,
-			11,
-			12,
-			11,
-			11
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					35,
+					40,
+					70,
+					75,
+					105,
+					111,
+					117,
+					123,
+					129,
+					135,
+					141,
+					147
+				],
+				"hit dmg% distribution": [
+					4,
+					6,
+					5,
+					5,
+					9,
+					10,
+					11,
+					10,
+					11,
+					12,
+					11,
+					11
+				],
+				"hit dmg% distribution (total)": 105,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			}
 		],
-		"hit dmg% distribution (total)": 105,
-		"hits": 12,
+		"desc": "12 combo massive Fire attack on all enemies, adds chance of greatly reducing enemies' Atk for 1 turn and boosts own Atk relative to one’s max HP for 3 turns",
+		"drop check count": 2,
 		"id": "1810527",
 		"levels": [
 			{
@@ -808,7 +915,6 @@
 				]
 			}
 		],
-		"max bc generated": 24,
 		"name": "Garuda Crash"
 	},
 	"sell caution": false,
@@ -827,29 +933,80 @@
 		}
 	},
 	"ubb": {
-		"desc": "18 combo massive Fire attack on all enemies, great chance of greatly reducing enemies' Atk for 2 turns & adds additional damage debuff to enemies at the end of each turn for 3 turns",
-		"hit dmg% distribution": [
-			3,
-			4,
-			5,
-			3,
-			6,
-			6,
-			7,
-			6,
-			7,
-			6,
-			6,
-			7,
-			6,
-			6,
-			7,
-			6,
-			6,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					45,
+					55,
+					65,
+					75,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114,
+					117,
+					120,
+					123,
+					126,
+					129
+				],
+				"hit dmg% distribution": [
+					3,
+					4,
+					5,
+					3,
+					6,
+					6,
+					7,
+					6,
+					7,
+					6,
+					6,
+					7,
+					6,
+					6,
+					7,
+					6,
+					6,
+					5
+				],
+				"hit dmg% distribution (total)": 102,
+				"hits": 18,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
+			}
 		],
-		"hit dmg% distribution (total)": 102,
-		"hits": 18,
+		"desc": "18 combo massive Fire attack on all enemies, great chance of greatly reducing enemies' Atk for 2 turns & adds additional damage debuff to enemies at the end of each turn for 3 turns",
+		"drop check count": 2,
 		"id": "2810527",
 		"levels": [
 			{
@@ -887,333 +1044,8 @@
 						"target type": "enemy"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 50
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 50
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 50
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 50
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 50
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 50
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 50
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 50
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -75,
-							"proc chance%": 50
-						},
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"dot atk%": 800,
-						"dot element affected": true,
-						"dot flat atk": 100,
-						"dot turns (71)": 3,
-						"dot unit index": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "44",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
 			}
 		],
-		"max bc generated": 36,
 		"name": "Grito del Fenix"
 	}
 }

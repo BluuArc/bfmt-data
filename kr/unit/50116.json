@@ -19,26 +19,84 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 117
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 44
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 광속성 14연속 데미지&아군 전체의 HP 대폭 회복&3턴간 BC와 HC 출현율 상승",
-		"hit dmg% distribution": [
-			18,
-			7,
-			6,
-			5,
-			4,
-			20,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					35,
+					40,
+					45,
+					50,
+					66,
+					70,
+					74,
+					78,
+					82,
+					86,
+					90,
+					94,
+					98
+				],
+				"hit dmg% distribution": [
+					18,
+					7,
+					6,
+					5,
+					4,
+					20,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 14,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					110
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 14,
+		"desc": "적 전체에게 강력한 광속성 14연속 데미지&아군 전체의 HP 대폭 회복&3턴간 BC와 HC 출현율 상승",
+		"drop check count": 1,
 		"id": "50116",
 		"levels": [
 			{
@@ -352,21 +410,53 @@
 				]
 			}
 		],
-		"max bc generated": 14,
 		"name": "이슈타르 캘리버"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T09:12:07.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 50110,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			30,
+			35,
+			40,
+			45,
+			66,
+			72,
+			76,
+			80,
+			84,
+			88,
+			92,
+			96
+		],
+		"hit dmg% distribution": [
+			20,
+			7,
+			6,
+			5,
+			23,
+			7,
+			6,
+			6,
+			5,
+			5,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
 	"dictionary": {
 		"description": "A knight who fought against the world's destruction until the very end. As he continued to fend off the invading God Army, a knight appeared before him. This knight had been a fellow villager who had sworn his allegiance to the gods. When the knight asked Will why he kept fighting if there was no one left for him to protect, Will answered that someone in need of his power may appear, and therefore he had to make sure to survive until the end. He then drew his sword anew as the last living human in Grand Gaia.",
 		"evolution": "The curse cast upon Grand Gaia<br>has turned into hope. This is<br>my reward for fighting faithfully!",
 		"fusion": "I have no one left to protect.<br>Nevertheless, I'll continue fighting.<br>That's what I've chosen.",
 		"summon": "There is nothing as cruel<br>as being left with a snip of hope.<br>I want to ease his suffering someday."
 	},
+	"drop check count": 4,
 	"element": "light",
 	"evolution": {
 		"prev": "50115"
@@ -392,11 +482,13 @@
 				"def% buff": 20,
 				"hp% buff": 20,
 				"passive id": "1",
+				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
 				"conditions": [],
 				"passive id": "66",
+				"passive target": "self",
 				"trigger on bb": true,
 				"trigger on sbb": true,
 				"triggered effect": [
@@ -420,22 +512,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 977,
-	"hit dmg% distribution": [
-		20,
-		7,
-		6,
-		5,
-		23,
-		7,
-		6,
-		6,
-		5,
-		5,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 50116,
 	"imp": {
 		"max atk": "300",
@@ -463,7 +539,18 @@
 		"name": "광성개신의 힘"
 	},
 	"lord damage range": "2158~2410",
-	"max bc generated": 48,
+	"movement": {
+		"attack": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "2"
+		}
+	},
 	"name": "성기사황제신 윌",
 	"overdrive stats": {
 		"atk%": 100,
@@ -472,46 +559,114 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "적 전체에게 강력한 광속성 35연속 데미지&3턴간 아군 전체의 HP 서서히 회복&공격BB의 공격력 상승 효과 부여",
-		"hit dmg% distribution": [
-			8,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			9,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2,
-			3,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					33,
+					36,
+					39,
+					42,
+					45,
+					48,
+					51,
+					54,
+					57,
+					60,
+					63,
+					66,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90,
+					93,
+					96,
+					99,
+					102,
+					105,
+					108,
+					111,
+					114,
+					117,
+					120,
+					123,
+					126,
+					129,
+					132
+				],
+				"hit dmg% distribution": [
+					8,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					9,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2,
+					3,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 35,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					10
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "3"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 35,
+		"desc": "적 전체에게 강력한 광속성 35연속 데미지&3턴간 아군 전체의 HP 서서히 회복&공격BB의 공격력 상승 효과 부여",
+		"drop check count": 1,
 		"id": "150116",
 		"levels": [
 			{
@@ -845,7 +1000,6 @@
 				]
 			}
 		],
-		"max bc generated": 35,
 		"name": "로엔그린"
 	},
 	"sell caution": false,
@@ -864,33 +1018,88 @@
 		}
 	},
 	"ubb": {
-		"desc": "적 전체에게 아주 강력한 광속성 22연속 데미지(남은 HP가 많을수록 위력 상승)&1턴간 공격력과 방어력 초대폭 저하&2턴간 암속성 유닛에게 받는 데미지 초대폭 감소",
-		"hit dmg% distribution": [
-			16,
-			4,
-			2,
-			4,
-			2,
-			4,
-			2,
-			4,
-			17,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3,
-			4,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					34,
+					38,
+					42,
+					46,
+					50,
+					54,
+					58,
+					66,
+					70,
+					74,
+					78,
+					82,
+					86,
+					90,
+					94,
+					98,
+					102,
+					106,
+					110,
+					114,
+					118
+				],
+				"hit dmg% distribution": [
+					16,
+					4,
+					2,
+					4,
+					2,
+					4,
+					2,
+					4,
+					17,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3,
+					4,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "16"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "9"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 22,
+		"desc": "적 전체에게 아주 강력한 광속성 22연속 데미지(남은 HP가 많을수록 위력 상승)&1턴간 공격력과 방어력 초대폭 저하&2턴간 암속성 유닛에게 받는 데미지 초대폭 감소",
+		"drop check count": 1,
 		"id": "250116",
 		"levels": [
 			{
@@ -931,360 +1140,8 @@
 						"target type": "enemy"
 					}
 				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate dark attacks (26)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff #2": {
-							"def% buff (4)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate dark attacks (26)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff #2": {
-							"def% buff (4)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate dark attacks (26)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff #2": {
-							"def% buff (4)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate dark attacks (26)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff #2": {
-							"def% buff (4)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate dark attacks (26)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff #2": {
-							"def% buff (4)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate dark attacks (26)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff #2": {
-							"def% buff (4)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate dark attacks (26)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff #2": {
-							"def% buff (4)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate dark attacks (26)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff #2": {
-							"def% buff (4)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
-			},
-			{
-				"bc cost": 30,
-				"effects": [
-					{
-						"bb added atk% based on hp": 1500,
-						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "47",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 2,
-						"effect delay time(ms)/frame": "0.0/0",
-						"mitigate dark attacks (26)": 100,
-						"proc id": "16",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"buff #1": {
-							"atk% buff (2)": -80,
-							"proc chance%": 100
-						},
-						"buff #2": {
-							"def% buff (4)": -80,
-							"proc chance%": 100
-						},
-						"buff turns": 1,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "9",
-						"target area": "aoe",
-						"target type": "enemy"
-					}
-				]
 			}
 		],
-		"max bc generated": 22,
 		"name": "앨비언"
 	}
 }

@@ -25,27 +25,74 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 115
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "15 combo powerful Earth attack on all enemies & boosts critical hit rate for 3 turns",
-		"hit dmg% distribution": [
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			6,
-			7,
-			7,
-			8,
-			8,
-			8,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					25,
+					28,
+					31,
+					34,
+					37,
+					40,
+					43,
+					46,
+					49,
+					60,
+					63,
+					66,
+					69,
+					72,
+					75
+				],
+				"hit dmg% distribution": [
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					6,
+					7,
+					7,
+					8,
+					8,
+					8,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 15,
+		"desc": "15 combo powerful Earth attack on all enemies & boosts critical hit rate for 3 turns",
+		"drop check count": 1,
 		"id": "30606",
 		"levels": [
 			{
@@ -269,21 +316,53 @@
 				]
 			}
 		],
-		"max bc generated": 15,
 		"name": "Gryps Tempest"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 30600,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			26,
+			29,
+			32,
+			35,
+			38,
+			41,
+			44,
+			47,
+			57,
+			60,
+			63,
+			66
+		],
+		"hit dmg% distribution": [
+			7,
+			7,
+			7,
+			7,
+			7,
+			7,
+			7,
+			7,
+			11,
+			11,
+			11,
+			11
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
 	"dictionary": {
 		"description": "A dual-wielding swordsman who once fought alongside the Oracle Knight. Drawing the enemies' attention with his tenacious attacks as he and his comrades faced off against the gods, he created opportunities for his friends to strike back. However, a counterattack from one of his opponents left him with a fatal wound. Even so, Dion still risked his life to save the Oracle Knight before he was dealt a devastating blow. Getting back on his feet, he suffered blow after blow until the Oracle Maiden sought to stop him. It is said that at this time he showed a smile that had never been seen on his face before as he got up to fight once again.",
 		"evolution": "It's because I learned to find<br>satisfaction outside of battle,<br>that I was able to become stronger.",
 		"fusion": "Keep moving forward, you say?<br>All right then. After all,<br>being with you is not such a bore.",
 		"summon": "To think I could reach this level...<br>I guess I should thank her<br>for the opportunity to grow."
 	},
+	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
 		"prev": "30605"
@@ -295,7 +374,8 @@
 			{
 				"conditions": [],
 				"crit multiplier%": 100,
-				"passive id": "34"
+				"passive id": "34",
+				"passive target": "self"
 			}
 		],
 		"id": "3300",
@@ -305,22 +385,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 959,
-	"hit dmg% distribution": [
-		7,
-		7,
-		7,
-		7,
-		7,
-		7,
-		7,
-		7,
-		11,
-		11,
-		11,
-		11
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 12,
 	"id": 30606,
 	"imp": {
 		"max atk": "300",
@@ -347,7 +411,18 @@
 		"name": "Flashing Divine Radiance"
 	},
 	"lord damage range": "2279~2545",
-	"max bc generated": 24,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Cyclonic Blades Dion",
 	"overdrive stats": {
 		"atk%": 100,
@@ -356,28 +431,66 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "17 combo powerful Earth attack on all enemies & boosts BB Atk for 3 turns",
-		"hit dmg% distribution": [
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			5,
-			4,
-			7,
-			8,
-			8,
-			8,
-			8,
-			8,
-			8
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					26,
+					29,
+					32,
+					35,
+					38,
+					41,
+					44,
+					47,
+					50,
+					53,
+					60,
+					63,
+					66,
+					69,
+					72,
+					75,
+					78
+				],
+				"hit dmg% distribution": [
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					5,
+					4,
+					7,
+					8,
+					8,
+					8,
+					8,
+					8,
+					8
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 17,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 17,
+		"desc": "17 combo powerful Earth attack on all enemies & boosts BB Atk for 3 turns",
+		"drop check count": 1,
 		"id": "130606",
 		"levels": [
 			{
@@ -611,7 +724,6 @@
 				]
 			}
 		],
-		"max bc generated": 17,
 		"name": "Pulsating Green Heaven"
 	},
 	"sell caution": false,
@@ -630,31 +742,72 @@
 		}
 	},
 	"ubb": {
-		"desc": "20 combo massive Earth attack on all enemies & boosts Spark damage for 3 turns",
-		"hit dmg% distribution": [
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5,
-			5
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					26,
+					29,
+					32,
+					35,
+					38,
+					41,
+					44,
+					47,
+					50,
+					53,
+					56,
+					59,
+					69,
+					72,
+					75,
+					78,
+					81,
+					84,
+					87,
+					90
+				],
+				"hit dmg% distribution": [
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5,
+					5
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 20,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 20,
+		"desc": "20 combo massive Earth attack on all enemies & boosts Spark damage for 3 turns",
+		"drop check count": 1,
 		"id": "230606",
 		"levels": [
 			{
@@ -677,198 +830,8 @@
 						"target type": "party"
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1200,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "16.7/1",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "23",
-						"spark dmg% buff (40)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
 			}
 		],
-		"max bc generated": 20,
 		"name": "Green Hurricane Blossom"
 	}
 }

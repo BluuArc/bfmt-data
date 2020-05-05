@@ -9,7 +9,7 @@
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "hp_min",
+			"target conditions": "atk_max",
 			"target type": "enemy"
 		},
 		{
@@ -25,37 +25,82 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 192
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 22
+		}
+	},
 	"bb": {
-		"desc": "25 combo massive Dark attack on all enemies",
-		"hit dmg% distribution": [
-			4,
-			5,
-			4,
-			3,
-			4,
-			5,
-			4,
-			3,
-			4,
-			5,
-			4,
-			3,
-			4,
-			5,
-			4,
-			3,
-			4,
-			5,
-			4,
-			3,
-			4,
-			5,
-			4,
-			3,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					80,
+					86,
+					92,
+					98,
+					104,
+					110,
+					116,
+					122,
+					128,
+					133,
+					138,
+					143,
+					148,
+					153,
+					158,
+					163,
+					168,
+					173,
+					178,
+					183,
+					188,
+					193,
+					198,
+					203,
+					208
+				],
+				"hit dmg% distribution": [
+					4,
+					5,
+					4,
+					3,
+					4,
+					5,
+					4,
+					3,
+					4,
+					5,
+					4,
+					3,
+					4,
+					5,
+					4,
+					3,
+					4,
+					5,
+					4,
+					3,
+					4,
+					5,
+					4,
+					3,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 25,
+				"proc id": "1"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 25,
+		"desc": "25 combo massive Dark attack on all enemies",
+		"drop check count": 1,
 		"id": "60095",
 		"levels": [
 			{
@@ -189,20 +234,54 @@
 				]
 			}
 		],
-		"max bc generated": 25,
 		"name": "Soul Prison"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2015-09-03T04:48:35.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"cost": 24,
+	"damage frames": {
+		"frame times": [
+			64,
+			67,
+			70,
+			73,
+			76,
+			79,
+			82,
+			85,
+			112,
+			116,
+			120,
+			124,
+			128
+		],
+		"hit dmg% distribution": [
+			13,
+			12,
+			11,
+			10,
+			9,
+			8,
+			7,
+			6,
+			4,
+			5,
+			5,
+			5,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
 	"dictionary": {
 		"description": "A sorcerer from the Bariura Empire who could command all magical spells. During the end of the great war with the gods, he disappeared along with his extensive research facility. Records left behind state that afterwards, when the Imperial Army had been surrounded by the God Army, a being that resembled Shida appeared on the battlefield and destroyed all the enemies present in an instant. However, testimony from a knight who witnessed it all says that Shida murmured \"I have found the materials I need for my new research. I shall be on my way.\" and then disappeared into the darkness.",
 		"evolution": "This form is the result<br>of my research.<br>You wouldn't understand.",
 		"fusion": "It still has an effect on me<br>in this form. Heh heh heh.<br>I never get tired of Fusion...",
 		"summon": "Since I had nothing to study, I left.<br>Did I need any other reason?<br>We could've shared the results."
 	},
+	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
 		"prev": "60094"
@@ -211,23 +290,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 714,
-	"hit dmg% distribution": [
-		13,
-		12,
-		11,
-		10,
-		9,
-		8,
-		7,
-		6,
-		4,
-		5,
-		5,
-		5,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 13,
 	"id": 60095,
 	"imp": {
 		"max atk": "300",
@@ -252,11 +314,49 @@
 		"name": "Authority of the Light God"
 	},
 	"lord damage range": "1769~1977",
-	"max bc generated": 26,
+	"movement": {
+		"attack": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 6,
+			"move speed type": "2",
+			"move type": "2"
+		}
+	},
 	"name": "Death God Shida",
 	"rarity": 6,
 	"sbb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			}
+		],
 		"desc": "Adds all elements to allies' attack for 3 turns & increases allies' BB gauge",
+		"drop check count": 1,
 		"id": "160095",
 		"levels": [
 			{

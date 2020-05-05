@@ -19,25 +19,94 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 150
+		},
+		"idle": {
+			"total number of frames": 60
+		},
+		"move": {
+			"total number of frames": 25
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 목속성 13연속 데미지&3턴간 아군 전체의 공격에 목뇌속성 부여&방어력과 회복력 상승&BC와 HC 출현율 상승",
-		"hit dmg% distribution": [
-			14,
-			8,
-			11,
-			7,
-			5,
-			3,
-			14,
-			8,
-			11,
-			7,
-			5,
-			4,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					20,
+					23,
+					26,
+					29,
+					32,
+					35,
+					64,
+					67,
+					70,
+					73,
+					76,
+					79,
+					82
+				],
+				"hit dmg% distribution": [
+					14,
+					8,
+					11,
+					7,
+					5,
+					3,
+					14,
+					8,
+					11,
+					7,
+					5,
+					4,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 13,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 13,
+		"desc": "적 전체에게 강력한 목속성 13연속 데미지&3턴간 아군 전체의 공격에 목뇌속성 부여&방어력과 회복력 상승&BC와 HC 출현율 상승",
+		"drop check count": 1,
 		"id": "30625",
 		"levels": [
 			{
@@ -471,21 +540,49 @@
 				]
 			}
 		],
-		"max bc generated": 13,
 		"name": "페어리 블로"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T09:12:07.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 30620,
 	"cost": 30,
+	"damage frames": {
+		"frame times": [
+			20,
+			23,
+			26,
+			29,
+			32,
+			64,
+			67,
+			70,
+			73,
+			76
+		],
+		"hit dmg% distribution": [
+			15,
+			8,
+			12,
+			10,
+			5,
+			15,
+			8,
+			12,
+			10,
+			5
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
 	"dictionary": {
 		"description": "The former commander of the now defunct 8th Squadron of the Demon Slayers. There are records which state that while Libera was surveying the Vriksha region, she left information behind regarding the territorial dispute among the Four Fallen Gods, and about demons. When considering the fact that the region she was surveying was under the control of Afla Dilith, one can truly appreciate the level of expertise Libera used to complete the task. It is safe to say that the Summoners of Old owe their knowledge of Grand Gaia's current state to her incredible efficiency.",
 		"evolution": "I have to change.<br>It wouldn't be fair to stay the same<br>after all I've sacrificed!",
 		"fusion": "Didn't you hear me?!<br>I said, I don't like it when people<br>watch me go through fusion!!",
 		"summon": "Surveying Grand Gaia was fun.<br>There were lots of scary enemies,<br>but we made some great finds too!"
 	},
+	"drop check count": 3,
 	"element": "earth",
 	"evolution": {
 		"cost": 1500000,
@@ -523,20 +620,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1012,
-	"hit dmg% distribution": [
-		15,
-		8,
-		12,
-		10,
-		5,
-		15,
-		8,
-		12,
-		10,
-		5
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 10,
 	"id": 30625,
 	"imp": {
 		"max atk": "300",
@@ -563,31 +646,103 @@
 		"name": "통신의 법력"
 	},
 	"lord damage range": "2090~2334",
-	"max bc generated": 30,
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		}
+	},
 	"name": "고운 청록주신 리베라",
 	"rarity": 6,
 	"sbb": {
-		"desc": "적 전체에게 강력한 목속성 16연속 데미지&3턴간 아군 전체의 공격에 목뇌속성 부여&회복력에 따라 공격력 상승 효과 부여&데미지를 입으면 BB게이지 크게 상승",
-		"hit dmg% distribution": [
-			13,
-			7,
-			10,
-			6,
-			5,
-			4,
-			3,
-			2,
-			13,
-			7,
-			10,
-			6,
-			5,
-			4,
-			3,
-			2
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					20,
+					23,
+					26,
+					29,
+					32,
+					35,
+					38,
+					41,
+					64,
+					67,
+					70,
+					73,
+					76,
+					79,
+					82,
+					85
+				],
+				"hit dmg% distribution": [
+					13,
+					7,
+					10,
+					6,
+					5,
+					4,
+					3,
+					2,
+					13,
+					7,
+					10,
+					6,
+					5,
+					4,
+					3,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 16,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "24"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 16,
+		"desc": "적 전체에게 강력한 목속성 16연속 데미지&3턴간 아군 전체의 공격에 목뇌속성 부여&회복력에 따라 공격력 상승 효과 부여&데미지를 입으면 BB게이지 크게 상승",
+		"drop check count": 1,
 		"id": "130625",
 		"levels": [
 			{
@@ -1021,7 +1176,6 @@
 				]
 			}
 		],
-		"max bc generated": 16,
 		"name": "그레이스 브라이트"
 	},
 	"sell caution": false,

@@ -19,22 +19,76 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 117
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 전체에게 강력한 화속성 10연속 데미지&3턴간 아군 전체의 공격에 화수속성 부여&크리티컬 시 부여하는 데미지 상승",
-		"hit dmg% distribution": [
-			20,
-			10,
-			5,
-			3,
-			3,
-			5,
-			8,
-			11,
-			15,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					21,
+					24,
+					27,
+					30,
+					64,
+					70,
+					75,
+					79,
+					82,
+					85
+				],
+				"hit dmg% distribution": [
+					20,
+					10,
+					5,
+					3,
+					3,
+					5,
+					8,
+					11,
+					15,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "54"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 10,
+		"desc": "적 전체에게 강력한 화속성 10연속 데미지&3턴간 아군 전체의 공격에 화수속성 부여&크리티컬 시 부여하는 데미지 상승",
+		"drop check count": 1,
 		"id": "10674",
 		"levels": [
 			{
@@ -358,20 +412,42 @@
 				]
 			}
 		],
-		"max bc generated": 10,
 		"name": "퍼벤트 에지"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-01-20T09:12:07.000Z",
-		"updatedAt": "2016-03-11T03:26:46.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 10670,
 	"cost": 20,
+	"damage frames": {
+		"frame times": [
+			21,
+			24,
+			29,
+			64,
+			70,
+			75,
+			79
+		],
+		"hit dmg% distribution": [
+			20,
+			8,
+			7,
+			5,
+			10,
+			20,
+			30
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
 	"dictionary": {
 		"description": "A Summoner who served the Akras Summoners' Hall since the dawn of time. Though initially a soldier of humble beginnings from the Randall Empire, he quickly rose through the ranks to become a general, earning the support of many young soldiers along the way. However, he was unsatisfied with the small skirmishes between the Empire and the Federation, instead hoping for the chance to fight in a real battle. That opportunity presented itself when the First Summoner returned from Grand Gaia and Griff challenged him to a fierce duel. A few days later he sent his letter of resignation to the Imperial Army, and joined Summoners' Hall.",
 		"fusion": "You think this training's enough?!<br>The enemy's not gonna take it<br>easy on you, you know!",
 		"summon": "Congratulations for summoning me.<br>But I dare you to show me a<br>petty fight. I'll send you flying."
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"cost": 500000,
@@ -408,17 +484,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1005,
-	"hit dmg% distribution": [
-		20,
-		8,
-		7,
-		5,
-		10,
-		20,
-		30
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 7,
 	"id": 10674,
 	"imp": {
 		"max atk": "140",
@@ -440,7 +505,18 @@
 		"name": "패왕의 영력"
 	},
 	"lord damage range": "1790~1999",
-	"max bc generated": 21,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "강염신 글리프",
 	"rarity": 5,
 	"sell caution": false,

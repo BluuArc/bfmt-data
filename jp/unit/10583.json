@@ -19,18 +19,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 147
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "敵全体に炎属性６連ダメージ＆味方全体に２ターン、防御貫通効果を付与",
-		"hit dmg% distribution": [
-			10,
-			5,
-			40,
-			15,
-			15,
-			15
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					30,
+					34,
+					92,
+					96,
+					100,
+					104
+				],
+				"hit dmg% distribution": [
+					10,
+					5,
+					40,
+					15,
+					15,
+					15
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "22"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "敵全体に炎属性６連ダメージ＆味方全体に２ターン、防御貫通効果を付与",
+		"drop check count": 1,
 		"id": "10583",
 		"levels": [
 			{
@@ -244,21 +282,35 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "ブレイジングスマッシュ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 10580,
 	"cost": 13,
+	"damage frames": {
+		"frame times": [
+			30,
+			92,
+			96
+		],
+		"hit dmg% distribution": [
+			20,
+			50,
+			30
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 3
+	},
 	"dictionary": {
 		"description": "A magic wielding soldier from the Agni Empire. His father was a well-renowned metalworker in the empire, which meant he had been exposed to such knowledge from an early age. However, his innate quick temper led him to pursue the path of a mercenary. He distinguished himself on the battlefield as a magic wielding soldier, but some find it questionable that he could have learned such high level martial arts and smithing techniques all by himself. Thus, many historians today still search for proof that he once had a master.",
 		"evolution": " ",
 		"fusion": "Hey! You! Listen!<br>Don't go putting your filthy hands<br>on my precious armor, all right?!",
 		"summon": "The name's Vanberk!<br>You impressed?<br>Consider our meeting an honor!"
 	},
+	"drop check count": 3,
 	"element": "fire",
 	"evolution": {
 		"cost": 200000,
@@ -295,13 +347,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 815,
-	"hit dmg% distribution": [
-		20,
-		50,
-		30
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 3,
 	"id": 10583,
 	"imp": {
 		"max atk": "120",
@@ -322,7 +367,18 @@
 		"name": "閃撃の刃"
 	},
 	"lord damage range": "1462~1633",
-	"max bc generated": 9,
+	"movement": {
+		"attack": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.005,
+			"move speed type": "1",
+			"move type": "1"
+		}
+	},
 	"name": "堅武帝ヴァンベルク",
 	"rarity": 4,
 	"sell caution": false,

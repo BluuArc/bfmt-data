@@ -19,38 +19,96 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 160
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 5
+		}
+	},
 	"bb": {
-		"desc": "26 combo powerful Light attack on all enemies & boosts BC and HC drop rate for 3 turns",
-		"hit dmg% distribution": [
-			7,
-			3,
-			3,
-			3,
-			10,
-			3,
-			3,
-			3,
-			3,
-			3,
-			10,
-			3,
-			3,
-			3,
-			3,
-			3,
-			4,
-			3,
-			3,
-			4,
-			3,
-			3,
-			4,
-			3,
-			3,
-			4
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					10,
+					13,
+					16,
+					19,
+					22,
+					25,
+					28,
+					32,
+					36,
+					40,
+					79,
+					82,
+					85,
+					88,
+					91,
+					94,
+					97,
+					100,
+					103,
+					106,
+					109,
+					112,
+					115,
+					118,
+					121,
+					124
+				],
+				"hit dmg% distribution": [
+					7,
+					3,
+					3,
+					3,
+					10,
+					3,
+					3,
+					3,
+					3,
+					3,
+					10,
+					3,
+					3,
+					3,
+					3,
+					3,
+					4,
+					3,
+					3,
+					4,
+					3,
+					3,
+					4,
+					3,
+					3,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 26,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "6"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 26,
+		"desc": "26 combo powerful Light attack on all enemies & boosts BC and HC drop rate for 3 turns",
+		"drop check count": 1,
 		"id": "50696",
 		"levels": [
 			{
@@ -274,21 +332,51 @@
 				]
 			}
 		],
-		"max bc generated": 26,
 		"name": "Champion's Flourish"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-11-06T15:19:47.000Z"
+		"updatedAt": "2016-04-08T16:05:21.000Z"
 	},
 	"category": 50690,
 	"cost": 40,
+	"damage frames": {
+		"frame times": [
+			10,
+			22,
+			25,
+			32,
+			36,
+			40,
+			79,
+			83,
+			87,
+			91,
+			95
+		],
+		"hit dmg% distribution": [
+			10,
+			10,
+			5,
+			5,
+			5,
+			5,
+			15,
+			15,
+			10,
+			10,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
 	"dictionary": {
 		"description": "A demon obsessed with battle referred to as the \"god of martial arts.\" Wandering around Ishgria seeking a strong opponent to fight, Raaga ran into a  black demon who sought to destroy a younger demon standing not too far away. Seeing Raaga, the black demon fled instantly, while the half-dead youngster continued to stare into Raaga's eyes. Raaga then took the youngster in and raised him in order to turn him into a worthy rival. However, he was ultimately defeated by his own pupil, and his feelings on the matter remain unknown to this day.",
 		"evolution": "Are those who protect others<br>weak or strong?<br>Seek the answer to that for yourself.",
 		"fusion": "The strong recognize their own power.<br>The power they lack, they borrow.<br>In short, you are strong.",
 		"summon": "I don't seek victory, but the<br>revelation of power through training.<br>Nothing more, nothing less."
 	},
+	"drop check count": 2,
 	"element": "light",
 	"evolution": {
 		"prev": "50695"
@@ -300,7 +388,8 @@
 			{
 				"conditions": [],
 				"hit increase/hit": 1,
-				"passive id": "37"
+				"passive id": "37",
+				"passive target": "self"
 			}
 		],
 		"id": "2800",
@@ -310,21 +399,6 @@
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 922,
-	"hit dmg% distribution": [
-		10,
-		10,
-		5,
-		5,
-		5,
-		5,
-		15,
-		15,
-		10,
-		10,
-		10
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 11,
 	"id": 50696,
 	"imp": {
 		"max atk": "440",
@@ -351,7 +425,18 @@
 		"name": "Raging Divine Deity"
 	},
 	"lord damage range": "2256~2520",
-	"max bc generated": 22,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "Demon Champion Raaga",
 	"overdrive stats": {
 		"atk%": 100,
@@ -360,32 +445,74 @@
 	},
 	"rarity": 7,
 	"sbb": {
-		"desc": "21 combo powerful Light attack on all enemies & largely boosts Spark damage for 3 turns",
-		"hit dmg% distribution": [
-			14,
-			3,
-			3,
-			3,
-			14,
-			3,
-			3,
-			3,
-			3,
-			3,
-			18,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					10,
+					13,
+					16,
+					19,
+					22,
+					25,
+					28,
+					32,
+					36,
+					40,
+					79,
+					82,
+					85,
+					88,
+					91,
+					94,
+					97,
+					100,
+					103,
+					106,
+					109
+				],
+				"hit dmg% distribution": [
+					14,
+					3,
+					3,
+					3,
+					14,
+					3,
+					3,
+					3,
+					3,
+					3,
+					18,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 21,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 21,
+		"desc": "21 combo powerful Light attack on all enemies & largely boosts Spark damage for 3 turns",
+		"drop check count": 1,
 		"id": "150696",
 		"levels": [
 			{
@@ -599,7 +726,6 @@
 				]
 			}
 		],
-		"max bc generated": 21,
 		"name": "Vermilion Incandescence"
 	},
 	"sell caution": false,
@@ -618,34 +744,90 @@
 		}
 	},
 	"ubb": {
-		"desc": "23 combo Light elemental attack on all enemies, largely boosts allies' Atk, Def and Rec for 3 turns & boosts BB Atk",
-		"hit dmg% distribution": [
-			13,
-			3,
-			3,
-			3,
-			13,
-			3,
-			3,
-			3,
-			3,
-			3,
-			14,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3,
-			3
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "33.3/2",
+				"frame times": [
+					10,
+					13,
+					16,
+					19,
+					22,
+					25,
+					28,
+					32,
+					36,
+					40,
+					79,
+					82,
+					85,
+					88,
+					91,
+					94,
+					97,
+					100,
+					103,
+					106,
+					109,
+					112,
+					115
+				],
+				"hit dmg% distribution": [
+					13,
+					3,
+					3,
+					3,
+					13,
+					3,
+					3,
+					3,
+					3,
+					3,
+					14,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 23,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "5"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					140
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 23,
+		"desc": "23 combo Light elemental attack on all enemies, largely boosts allies' Atk, Def and Rec for 3 turns & boosts BB Atk",
+		"drop check count": 1,
 		"id": "250696",
 		"levels": [
 			{
@@ -681,315 +863,8 @@
 						"ubb atk% buff": 400
 					}
 				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 400,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 400,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 400
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 400,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 400,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 400
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 400,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 400,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 400
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 400,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 400,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 400
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 400,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 400,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 400
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 400,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 400,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 400
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 400,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 400,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 400
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 400,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 400,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 400
-					}
-				]
-			},
-			{
-				"bc cost": 25,
-				"effects": [
-					{
-						"bb atk%": 1000,
-						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "33.3/2",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (1)": 150,
-						"buff turns": 3,
-						"def% buff (3)": 150,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "all",
-						"proc id": "5",
-						"rec% buff (5)": 150,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bb atk% buff": 400,
-						"buff turns (72)": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "45",
-						"sbb atk% buff": 400,
-						"target area": "aoe",
-						"target type": "party",
-						"ubb atk% buff": 400
-					}
-				]
 			}
 		],
-		"max bc generated": 23,
 		"name": "Divine Penance: 108 Kleshas"
 	}
 }

@@ -19,18 +19,56 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 101
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 13
+		}
+	},
 	"bb": {
-		"desc": "적 1명에게 강력한 수속성 6연속 데미지＆확률로 약화 효과",
-		"hit dmg% distribution": [
-			15,
-			10,
-			15,
-			20,
-			20,
-			20
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					9,
+					18,
+					27,
+					36,
+					45,
+					54
+				],
+				"hit dmg% distribution": [
+					15,
+					10,
+					15,
+					20,
+					20,
+					20
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 6,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 6,
+		"desc": "적 1명에게 강력한 수속성 6연속 데미지＆확률로 약화 효과",
+		"drop check count": 1,
 		"id": "20023",
 		"levels": [
 			{
@@ -234,21 +272,39 @@
 				]
 			}
 		],
-		"max bc generated": 6,
 		"name": "레이징 글로리"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-06-16T01:22:44.000Z",
-		"updatedAt": "2016-02-03T05:36:47.000Z"
+		"updatedAt": "2016-04-07T13:46:48.000Z"
 	},
 	"category": 20020,
 	"cost": 9,
+	"damage frames": {
+		"frame times": [
+			9,
+			18,
+			27,
+			36,
+			45
+		],
+		"hit dmg% distribution": [
+			25,
+			15,
+			25,
+			15,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 5
+	},
 	"dictionary": {
 		"description": "A dragon rider from the ruined Sama Kingdom. He had been under house arrest, but returned to the dragon rider corps when the gods invaded. He had a lust for killing as a way of venting his anger. He earned respect and the title of the Ice Dragon King. He was still loyal to the royal family, and when the gods attacked, he offered himself to protect them.",
 		"evolution": "I have returned to power!<br>Now I will slice open a path<br>to the future with my spear! ",
 		"fusion": "My spear and dragon are overjoyed!<br>Is this the true power <br>of a Summoner?! ",
 		"summon": "Show me your worth.<br>Prove to me you are necessary<br>and you will live."
 	},
+	"drop check count": 2,
 	"element": "water",
 	"evolution": {
 		"cost": 200000,
@@ -286,15 +342,6 @@
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 30,
-	"hit dmg% distribution": [
-		25,
-		15,
-		25,
-		15,
-		20
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 5,
 	"id": 20023,
 	"imp": {
 		"max atk": "180",
@@ -315,7 +362,18 @@
 		"name": "중격의 섬광"
 	},
 	"lord damage range": "1108~1238",
-	"max bc generated": 10,
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
 	"name": "빙룡왕 제퓨",
 	"rarity": 4,
 	"sell caution": false,

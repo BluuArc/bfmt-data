@@ -19,24 +19,68 @@
 			"target type": "enemy"
 		}
 	],
+	"animations": {
+		"attack": {
+			"total number of frames": 128
+		},
+		"idle": {
+			"total number of frames": 64
+		},
+		"move": {
+			"total number of frames": 6
+		}
+	},
 	"bb": {
-		"desc": "敵全体に水属性１２連ダメージ＆味方のＢＢゲージを大幅に増加",
-		"hit dmg% distribution": [
-			7,
-			7,
-			7,
-			7,
-			7,
-			11,
-			9,
-			9,
-			9,
-			9,
-			9,
-			9
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					8,
+					14,
+					20,
+					26,
+					32,
+					50,
+					54,
+					58,
+					62,
+					66,
+					70,
+					74
+				],
+				"hit dmg% distribution": [
+					7,
+					7,
+					7,
+					7,
+					7,
+					11,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "31"
+			}
 		],
-		"hit dmg% distribution (total)": 100,
-		"hits": 12,
+		"desc": "敵全体に水属性１２連ダメージ＆味方のＢＢゲージを大幅に増加",
+		"drop check count": 1,
 		"id": "20614",
 		"levels": [
 			{
@@ -240,21 +284,37 @@
 				]
 			}
 		],
-		"max bc generated": 12,
 		"name": "ブラーゼフロウ"
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-13T15:42:33.000Z",
-		"updatedAt": "2015-12-02T14:10:13.000Z"
+		"updatedAt": "2016-04-07T20:01:31.000Z"
 	},
 	"category": 20610,
 	"cost": 19,
+	"damage frames": {
+		"frame times": [
+			50,
+			54,
+			58,
+			62
+		],
+		"hit dmg% distribution": [
+			25,
+			25,
+			25,
+			25
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 4
+	},
 	"dictionary": {
 		"description": "A warrior who once fought against the gods alongside the Oracle Knight. Her ability to manipulate beautiful sea pearls with her sword dancing was so exceptional that it is said she was next in line to take over the role of Oracle Knight. However, the Oracle Maiden that she was so close to thought Medina too weak, and chose a different warrior from the Sama Kingdom to take the role of Oracle Knight. Prepared to have sacrificed anything in the name of the Oracle Maiden, Medina felt doubt and disappointment when she was refused by the same, though she remained to protect her dear friend regardless.",
 		"evolution": " ",
 		"fusion": "Have I gained new powers?<br>If I could just become stronger<br>to protect that child...",
 		"summon": "Were you the one to summon me here?<br>Can you fill the great hole<br>that lies deep within my heart?"
 	},
+	"drop check count": 3,
 	"element": "water",
 	"evolution": {
 		"cost": 500000,
@@ -291,14 +351,6 @@
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 954,
-	"hit dmg% distribution": [
-		25,
-		25,
-		25,
-		25
-	],
-	"hit dmg% distribution (total)": 100,
-	"hits": 4,
 	"id": 20614,
 	"imp": {
 		"max atk": "200",
@@ -319,7 +371,18 @@
 		"name": "戦神の威光"
 	},
 	"lord damage range": "1583~1768",
-	"max bc generated": 12,
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
 	"name": "水珠神メディナ",
 	"rarity": 5,
 	"sell caution": false,
