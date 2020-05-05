@@ -1,0 +1,46 @@
+{
+	"associated_units": [
+		"60527"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-07-30T06:45:05.000Z",
+		"updatedAt": "2016-07-30T06:45:05.000Z"
+	},
+	"desc": "ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加＆ＨＰを少し吸収＆ＨＰが半分以上の時、スパークダメージを８０％アップ",
+	"effects": [
+		{
+			"conditions": [],
+			"hp drain chance%": 100,
+			"hp drain% high": 10,
+			"hp drain% low": 5,
+			"passive id": "17",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"defense% ignore": 100,
+					"defense% ignore turns (39)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "22",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"conditions": [],
+			"damage% for spark": 80,
+			"hp above % buff requirement": 50,
+			"passive id": "104",
+			"passive target": "self"
+		}
+	],
+	"name": "姉妹を繋ぐ絆",
+	"target": "self"
+}

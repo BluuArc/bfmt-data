@@ -1,0 +1,50 @@
+{
+	"associated_units": [
+		"840177"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-07-30T06:45:05.000Z",
+		"updatedAt": "2016-07-30T06:45:05.000Z"
+	},
+	"desc": "Raises normal hit amount, adds Thunder element to BB/SBB for 3 turns & enormously boosts OD gauge fill rate for 2 turns when damage taken has exceeded a certain amount",
+	"effects": [
+		{
+			"conditions": [],
+			"hit increase/hit": 1,
+			"passive id": "37",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elements added": [
+						"thunder"
+					],
+					"elements added turns": 3,
+					"proc id": "30",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"buff": {
+				"buff turns (132)": "1",
+				"unknown buff id": "132",
+				"unknown buff params": "300&1&0"
+			},
+			"conditions": [],
+			"damage threshold buff activation": 5000,
+			"passive id": "78",
+			"passive target": "self"
+		}
+	],
+	"name": "Super-Speed",
+	"target": "self"
+}
