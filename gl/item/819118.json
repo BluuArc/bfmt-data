@@ -1,0 +1,71 @@
+{
+	"associated_units": [
+		"20816",
+		"20817",
+		"20916",
+		"51317",
+		"61016",
+		"61017",
+		"810547",
+		"810548",
+		"820397",
+		"820398",
+		"850367",
+		"850368"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2017-12-06T12:18:19.000Z",
+		"updatedAt": "2017-12-15T10:55:23.000Z"
+	},
+	"desc": "Raises Atk parameter limits to 150000, 100% boost to Atk and boosts critical hit rate of Light types, adds additional attack at turn's end for 3 turns effect to BB/SBB & negates Def ignoring effect",
+	"dictionary": {
+		"lore": "A wing of scintillating, barely-bound elemental power, it can blind those careless enough to handle it improperly. Attuning to it grants a great boost in magical energy...and a glimpse of something greater."
+	},
+	"effect": [
+		{
+			"increase atk cap": 150000,
+			"passive id": "143"
+		},
+		{
+			"atk% buff": 100,
+			"crit% buff": 20,
+			"elements buffed": [
+				"light"
+			],
+			"passive id": "2"
+		},
+		{
+			"passive id": "66",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"dot atk%": 600,
+					"dot element affected": true,
+					"dot flat atk": 100,
+					"dot turns (71)": 3,
+					"dot unit index": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "44",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"ignore def resist chance%": 100,
+			"passive id": "92"
+		}
+	],
+	"id": 819118,
+	"max_stack": 1,
+	"name": "Star Wing",
+	"raid": false,
+	"rarity": 6,
+	"sell_price": 30000,
+	"sphere type": 13,
+	"sphere type text": "Atk Boosting",
+	"thumbnail": "sphere_thum_828002.png",
+	"type": "sphere",
+	"usage": []
+}
