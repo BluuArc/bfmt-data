@@ -4,9 +4,9 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2016-06-08T09:46:56.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2018-05-16T12:15:15.000Z"
 	},
-	"desc": "Adds resistance against 1 KO attack when HP is below 20% & greatly boosts Atk, Def relative to remaining HP",
+	"desc": "40% boost to all parameters when Status Boosting Sphere is equipped, adds resistance against 1 KO attack when HP is below 20% & enormously boosts Atk, Def relative to how low remaining HP is",
 	"effects": [
 		{
 			"buff": {
@@ -21,13 +21,27 @@
 		},
 		{
 			"atk% base buff": 0,
-			"atk% extra buff based on hp": 100,
+			"atk% extra buff based on hp": 150,
 			"buff proportional to hp": "lost",
 			"conditions": [],
 			"def% base buff": 0,
-			"def% extra buff based on hp": 100,
+			"def% extra buff based on hp": 150,
 			"passive id": "46",
 			"passive target": "self"
+		},
+		{
+			"atk% buff": 40,
+			"conditions": [
+				{
+					"sphere category required": "Status Boost",
+					"sphere category required (raw)": "1"
+				}
+			],
+			"def% buff": 40,
+			"hp% buff": 40,
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 40
 		}
 	],
 	"id": "810338",

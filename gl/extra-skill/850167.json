@@ -4,9 +4,9 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2016-07-04T10:20:30.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2018-05-16T12:15:15.000Z"
 	},
-	"desc": "Adds Light barrier effect to BB/SBB for 3 turns & greatly boosts Rec relative to amount of depleted HP",
+	"desc": "Adds Light barrier effect to BB/SBB for 3 turns, greatly boosts Rec relative to amount of HP lost, boosts Atk, Def each turn (up to 3 turns) & damage taken slightly boosts BB gauge",
 	"effects": [
 		{
 			"buff proportional to hp": "lost",
@@ -28,12 +28,29 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "light",
-					"elemental barrier hp": 2500,
+					"elemental barrier hp": 3500,
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				}
 			]
+		},
+		{
+			"atk% max buff": 120,
+			"conditions": [],
+			"def% max buff": 120,
+			"increase from min to max": 1,
+			"passive id": "105",
+			"passive target": "self",
+			"turn count": 3
+		},
+		{
+			"bc fill when attacked high": 3,
+			"bc fill when attacked low": 2,
+			"bc fill when attacked%": 100,
+			"conditions": [],
+			"passive id": "25",
+			"passive target": "self"
 		}
 	],
 	"id": "850167",
