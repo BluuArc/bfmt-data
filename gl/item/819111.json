@@ -1,0 +1,106 @@
+{
+	"bfmtMetadata": {
+		"createdAt": "2017-10-11T11:13:17.000Z",
+		"updatedAt": "2017-10-11T11:13:17.000Z"
+	},
+	"desc": "20% boost to Def, max HP, 50-75% counter of damage taken, probable random status ailment counter, negates all status ailments & adds status ailment removal effect to BB/SBB",
+	"dictionary": {
+		"lore": "A device used to direct unthinking mechanical beasts to one's will. The mask inlaid in its center is a symbol of a long-forgotten warrior-king who drove his mechanized hordes across an unnamed wasteland. With it, one can almost see a future filled with smoke, fire, and conquest."
+	},
+	"effect": [
+		{
+			"curse resist%": 100,
+			"injury resist%": 100,
+			"paralysis resist%": 100,
+			"passive id": "4",
+			"poison resist%": 100,
+			"sick resist%": 100,
+			"weaken resist%": 100
+		},
+		{
+			"counter inflict curse%": 20,
+			"counter inflict injury%": 20,
+			"counter inflict paralysis%": 20,
+			"counter inflict poison%": 20,
+			"counter inflict sick%": 20,
+			"counter inflict weaken%": 20,
+			"passive id": "71"
+		},
+		{
+			"dmg% reflect chance%": 100,
+			"dmg% reflect high": 75,
+			"dmg% reflect low": 50,
+			"passive id": "26"
+		},
+		{
+			"def% buff": 20,
+			"hp% buff": 20,
+			"passive id": "1"
+		},
+		{
+			"passive id": "66",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"ailments cured": [
+						"poison",
+						"weaken",
+						"sick",
+						"injury",
+						"curse",
+						"paralysis",
+						"atk down",
+						"def down",
+						"rec down"
+					],
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "38",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"id": 819111,
+	"max_stack": 1,
+	"name": "Masked Steerwheel",
+	"raid": false,
+	"rarity": 6,
+	"recipe": {
+		"karma": "200000",
+		"materials": [
+			{
+				"count": 1,
+				"id": 819110,
+				"name": "Geared Steerwheel"
+			},
+			{
+				"count": 150,
+				"id": 801005,
+				"name": "Clockwork Device"
+			},
+			{
+				"count": 90,
+				"id": 801002,
+				"name": "Fuel Cell"
+			},
+			{
+				"count": 60,
+				"id": 801004,
+				"name": "Mechanical Lens"
+			},
+			{
+				"count": 60,
+				"id": 801003,
+				"name": "Mysterious Gadget"
+			}
+		]
+	},
+	"sell_price": 30000,
+	"sphere type": 5,
+	"sphere type text": "Status Ailments Resistant",
+	"thumbnail": "sphere_thum_819111.png",
+	"type": "sphere",
+	"usage": []
+}

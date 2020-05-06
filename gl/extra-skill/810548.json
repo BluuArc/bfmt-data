@@ -1,0 +1,56 @@
+{
+	"associated_units": [
+		"810548"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2017-10-11T11:13:17.000Z",
+		"updatedAt": "2017-10-11T11:13:17.000Z"
+	},
+	"desc": "25% damage reduction from Fire, Earth types, raises Atk parameter limits to 130000, 10% damage reduction & adds max HP boost effect for self to BB/SBB when Atk Boosting sphere is equipped",
+	"effects": [
+		{
+			"conditions": [
+				{
+					"sphere category required": "Atk Boosting",
+					"sphere category required (raw)": "13"
+				}
+			],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "single",
+					"target type": "self",
+					"unknown proc id": "92",
+					"unknown proc param": "0,15,0"
+				}
+			]
+		},
+		{
+			"conditions": [],
+			"dmg% mitigation for elemental attacks": 25,
+			"mitigate earth attacks": true,
+			"mitigate fire attacks": true,
+			"passive id": "62",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"passive target": "self",
+			"unknown passive id": "143",
+			"unknown passive params": "130000"
+		},
+		{
+			"conditions": [],
+			"dmg% mitigation": 10,
+			"passive id": "8",
+			"passive target": "self"
+		}
+	],
+	"id": "810548",
+	"name": "True Dragon Force",
+	"target": "self"
+}
