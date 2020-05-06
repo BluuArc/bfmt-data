@@ -26283,9 +26283,12 @@
 		"usage": []
 	},
 	"47207": {
+		"associated_units": [
+			"60667"
+		],
 		"bfmtMetadata": {
 			"createdAt": "2015-10-23T05:39:58.000Z",
-			"updatedAt": "2016-04-07T20:01:31.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "攻撃力・防御力・回復力を３０％アップ＆ＢＣ獲得時の増加量をアップ＆ＨＣ獲得時の回復量をかなりアップ＆ＯＤゲージの増加量を大幅にアップ",
 		"dictionary": {
@@ -26582,6 +26585,54 @@
 		"sell_price": 10000,
 		"sphere type": 1,
 		"sphere type text": "Status Boost",
+		"thumbnail": "sphere_thum_1_1.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"47213": {
+		"bfmtMetadata": {
+			"createdAt": "2017-01-24T22:00:15.000Z",
+			"updatedAt": "2017-02-13T15:27:55.000Z"
+		},
+		"desc": "ターン毎のＨＰ回復、ＢＢゲージ上昇効果をターンの始めに発動＆攻撃力・最大ＨＰを３０％アップ＆攻撃ＢＢの威力を大幅にアップ＆ＨＰ半分以上の時、攻撃ＢＢの威力をかなりアップ＆被ダメージ時、確率でＨＰを回復",
+		"effect": [
+			{
+				"unknown passive id": "72",
+				"unknown passive params": "1,1"
+			},
+			{
+				"atk% buff": 30,
+				"hp% buff": 30,
+				"passive id": "1"
+			},
+			{
+				"dmg% to hp% when attacked chance%": 40,
+				"dmg% to hp% when attacked high": 20,
+				"dmg% to hp% when attacked low": 20,
+				"passive id": "24"
+			},
+			{
+				"bb atk% buff": 150,
+				"passive id": "64",
+				"sbb atk% buff": 150,
+				"ubb atk% buff": 150
+			},
+			{
+				"unknown passive id": "103",
+				"unknown passive params": "100,100,100,50,1"
+			}
+		],
+		"first_clear_missions": [
+			"151402"
+		],
+		"id": 47213,
+		"max_stack": 1,
+		"name": "導聖帝剣エステリグ",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 10000,
+		"sphere type": 14,
+		"sphere type text": "Special",
 		"thumbnail": "sphere_thum_1_1.png",
 		"type": "sphere",
 		"usage": []
@@ -28753,6 +28804,51 @@
 		"sell_price": 10000,
 		"sphere type": 4,
 		"sphere type text": "Status Ailment",
+		"thumbnail": "sphere_thum_5_2.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"48224": {
+		"bfmtMetadata": {
+			"createdAt": "2017-01-24T22:00:15.000Z",
+			"updatedAt": "2017-02-13T15:27:55.000Z"
+		},
+		"desc": "ターン毎にＨＰを大回復＆被ダメージ時、確率でＨＰを回復＆攻撃力・防御力・最大ＨＰを２５％アップ＆確率で１回まで戦闘不能を耐える",
+		"effect": [
+			{
+				"passive id": "33",
+				"rec% added (turn heal)": 10,
+				"turn heal high": 2000,
+				"turn heal low": 1500
+			},
+			{
+				"dmg% to hp% when attacked chance%": 40,
+				"dmg% to hp% when attacked high": 20,
+				"dmg% to hp% when attacked low": 20,
+				"passive id": "24"
+			},
+			{
+				"angel idol chance% condition": 0,
+				"angel idol recover chance% high": 20,
+				"angel idol recover chance% low": 20,
+				"angel idol recover counts": 1,
+				"passive id": "69"
+			},
+			{
+				"atk% buff": 25,
+				"def% buff": 25,
+				"hp% buff": 25,
+				"passive id": "1"
+			}
+		],
+		"id": 48224,
+		"max_stack": 1,
+		"name": "幻導機・フィラシーダ",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 10000,
+		"sphere type": 7,
+		"sphere type text": "HP Recovery",
 		"thumbnail": "sphere_thum_5_2.png",
 		"type": "sphere",
 		"usage": []
@@ -33109,6 +33205,166 @@
 		"type": "sphere",
 		"usage": []
 	},
+	"62170": {
+		"bfmtMetadata": {
+			"createdAt": "2017-01-24T22:00:15.000Z",
+			"updatedAt": "2017-02-13T15:27:55.000Z"
+		},
+		"desc": "弱点属性ダメージ・防御貫通効果を無効＆被ダメージを１０％軽減＆残りＨＰが少ないほど、防御力を大幅にアップ",
+		"effect": [
+			{
+				"buff proportional to hp": "lost",
+				"def% base buff": 0,
+				"def% extra buff based on hp": 100,
+				"passive id": "46"
+			},
+			{
+				"passive id": "53",
+				"strong base element damage resist%": 100,
+				"strong buffed element damage resist%": 100
+			},
+			{
+				"ignore def resist chance%": 100,
+				"passive id": "92"
+			},
+			{
+				"dmg% mitigation": 10,
+				"passive id": "8"
+			}
+		],
+		"id": 62170,
+		"max_stack": 1,
+		"name": "不退盾パラドキシア",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 30000,
+		"sphere type": 10,
+		"sphere type text": "Damage Reducing",
+		"thumbnail": "sphere_thum_3_4.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"62180": {
+		"bfmtMetadata": {
+			"createdAt": "2017-01-24T22:00:15.000Z",
+			"updatedAt": "2017-02-13T15:27:55.000Z"
+		},
+		"desc": "攻撃力・防御力・回復力・最大ＨＰを５０％アップ＆ＢＢ発動に必要なＢＢゲージ量を少し軽減＆被ダメージ時、ＢＢゲージを増加＆ターン毎にＢＢゲージを増加",
+		"effect": [
+			{
+				"atk% buff": 50,
+				"def% buff": 50,
+				"hp% buff": 50,
+				"passive id": "1",
+				"rec% buff": 50
+			},
+			{
+				"bc fill when attacked high": 3,
+				"bc fill when attacked low": 2,
+				"bc fill when attacked%": 100,
+				"passive id": "25"
+			},
+			{
+				"bc fill per turn": 3,
+				"passive id": "9"
+			},
+			{
+				"passive id": "48",
+				"reduced bb bc cost%": 10
+			}
+		],
+		"id": 62180,
+		"max_stack": 1,
+		"name": "ヴァーガルナ異本",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 30000,
+		"sphere type": 1,
+		"sphere type text": "Status Boost",
+		"thumbnail": "sphere_thum_5_6.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"62190": {
+		"bfmtMetadata": {
+			"createdAt": "2017-01-24T22:00:15.000Z",
+			"updatedAt": "2017-02-13T15:27:55.000Z"
+		},
+		"desc": "ＢＢ及びＳＢＢの発動率をアップ＆攻撃力を１００％アップ＆攻撃ＢＢの威力をアップ＆被ダメージ時、ＢＢゲージを増加",
+		"effect": [
+			{
+				"atk% buff": 100,
+				"passive id": "1"
+			},
+			{
+				"unknown passive id": "111",
+				"unknown passive params": "10"
+			},
+			{
+				"bc fill when attacked high": 3,
+				"bc fill when attacked low": 2,
+				"bc fill when attacked%": 100,
+				"passive id": "25"
+			},
+			{
+				"bb atk% buff": 50,
+				"passive id": "64",
+				"sbb atk% buff": 50,
+				"ubb atk% buff": 50
+			}
+		],
+		"id": 62190,
+		"max_stack": 1,
+		"name": "真闢慧剣クフェリア",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 30000,
+		"sphere type": 14,
+		"sphere type text": "Special",
+		"thumbnail": "sphere_thum_2_1.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"62200": {
+		"bfmtMetadata": {
+			"createdAt": "2017-01-24T22:00:15.000Z",
+			"updatedAt": "2017-02-13T15:27:55.000Z"
+		},
+		"desc": "防御力・最大ＨＰを４０％アップ＆ＢＢゲージが半分以上の時、攻撃力・防御力・回復力をかなりアップ＆ターン毎のＢＢゲージ上昇効果をターンの始めに発動する＆ＢＢ発動に必要なＢＢゲージ量を軽減",
+		"effect": [
+			{
+				"def% buff": 40,
+				"hp% buff": 40,
+				"passive id": "1"
+			},
+			{
+				"unknown passive id": "72",
+				"unknown passive params": "0,1"
+			},
+			{
+				"passive id": "48",
+				"reduced bb bc cost%": 20
+			},
+			{
+				"atk% buff": 75,
+				"bb gauge above % buff requirement": 50,
+				"def% buff": 75,
+				"passive id": "30",
+				"rec% buff": 75
+			}
+		],
+		"id": 62200,
+		"max_stack": 1,
+		"name": "皇宝オドルワンス",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 10000,
+		"sphere type": 1,
+		"sphere type text": "Status Boost",
+		"thumbnail": "sphere_thum_3_6.png",
+		"type": "sphere",
+		"usage": []
+	},
 	"63000": {
 		"bfmtMetadata": {
 			"createdAt": "2016-09-29T21:55:26.000Z",
@@ -34003,6 +34259,7 @@
 			"50385",
 			"50405",
 			"50475",
+			"50656",
 			"50756",
 			"50916",
 			"60015",
@@ -34018,11 +34275,12 @@
 			"60475",
 			"60525",
 			"60526",
-			"60535"
+			"60535",
+			"60666"
 		],
 		"bfmtMetadata": {
 			"createdAt": "2015-08-13T15:42:33.000Z",
-			"updatedAt": "2016-12-15T23:17:20.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "神をも越える魂を創り出しユニットを進化させる不思議な石",
 		"id": 110100,
@@ -34134,7 +34392,7 @@
 	"230003": {
 		"bfmtMetadata": {
 			"createdAt": "2016-08-01T09:57:46.000Z",
-			"updatedAt": "2016-10-12T11:36:15.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "全てのユニットの回復力・最大ＨＰを２０％アップ",
 		"dictionary": {
@@ -34144,7 +34402,7 @@
 		"max_stack": 1,
 		"name": "光浄石ルピテクト",
 		"raid": false,
-		"rarity": 2,
+		"rarity": 1,
 		"recipe": {
 			"karma": "100000",
 			"materials": [
@@ -34185,7 +34443,7 @@
 	"230004": {
 		"bfmtMetadata": {
 			"createdAt": "2016-09-29T21:55:26.000Z",
-			"updatedAt": "2016-12-15T23:17:20.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "全てのユニットの回復力・最大ＨＰを２５％アップ＆確率でＨＰを少し吸収",
 		"dictionary": {
@@ -34195,7 +34453,7 @@
 		"max_stack": 1,
 		"name": "尊血玉ディメーテ",
 		"raid": false,
-		"rarity": 3,
+		"rarity": 2,
 		"recipe": {
 			"karma": "150000",
 			"materials": [
@@ -34284,7 +34542,7 @@
 	"230103": {
 		"bfmtMetadata": {
 			"createdAt": "2016-08-01T09:57:46.000Z",
-			"updatedAt": "2016-10-12T11:36:15.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "全てのユニットの攻撃力を２０％アップ＆ターン毎にＢＢゲージを増加",
 		"dictionary": {
@@ -34294,7 +34552,7 @@
 		"max_stack": 1,
 		"name": "聖光旗シェーステン",
 		"raid": false,
-		"rarity": 2,
+		"rarity": 1,
 		"recipe": {
 			"karma": "100000",
 			"materials": [
@@ -34335,7 +34593,7 @@
 	"230104": {
 		"bfmtMetadata": {
 			"createdAt": "2016-09-29T21:55:26.000Z",
-			"updatedAt": "2016-12-15T23:17:20.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "全てのユニットの攻撃力を２５％アップ＆ターン毎にＢＢゲージを増加＆スパークダメージを５０％アップ",
 		"dictionary": {
@@ -34345,7 +34603,7 @@
 		"max_stack": 1,
 		"name": "力王帯バルギルア",
 		"raid": false,
-		"rarity": 3,
+		"rarity": 2,
 		"recipe": {
 			"karma": "150000",
 			"materials": [
@@ -34434,7 +34692,7 @@
 	"230203": {
 		"bfmtMetadata": {
 			"createdAt": "2016-08-01T09:57:46.000Z",
-			"updatedAt": "2016-10-12T11:36:15.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "全てのユニットの防御力を２０％アップ＆全状態異常にかかりにくくなる",
 		"dictionary": {
@@ -34444,7 +34702,7 @@
 		"max_stack": 1,
 		"name": "護界灯ネス・タリア",
 		"raid": false,
-		"rarity": 2,
+		"rarity": 1,
 		"recipe": {
 			"karma": "100000",
 			"materials": [
@@ -34485,7 +34743,7 @@
 	"230204": {
 		"bfmtMetadata": {
 			"createdAt": "2016-09-29T21:55:26.000Z",
-			"updatedAt": "2016-12-15T23:17:20.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "全てのユニットの防御力を２５％アップ＆全状態異常にかかりにくくなる＆弱点属性ダメージを少し軽減",
 		"dictionary": {
@@ -34495,7 +34753,7 @@
 		"max_stack": 1,
 		"name": "白鬼甲マク・マウ",
 		"raid": false,
-		"rarity": 3,
+		"rarity": 2,
 		"recipe": {
 			"karma": "150000",
 			"materials": [
@@ -34584,7 +34842,7 @@
 	"230303": {
 		"bfmtMetadata": {
 			"createdAt": "2016-08-01T09:57:46.000Z",
-			"updatedAt": "2016-10-12T11:36:15.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "ターン毎にＨＰを回復＆被ダメージ時、確率でＨＰを回復",
 		"dictionary": {
@@ -34594,7 +34852,7 @@
 		"max_stack": 1,
 		"name": "義将宝ヴァドム",
 		"raid": false,
-		"rarity": 2,
+		"rarity": 1,
 		"recipe": {
 			"karma": "100000",
 			"materials": [
@@ -34635,7 +34893,7 @@
 	"230304": {
 		"bfmtMetadata": {
 			"createdAt": "2016-09-29T21:55:26.000Z",
-			"updatedAt": "2016-12-15T23:17:20.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "ターン毎にＨＰを回復＆被ダメージ時、確率でＨＰを少し回復＆ＢＣ・ＨＣ出現率をアップ",
 		"dictionary": {
@@ -34645,7 +34903,7 @@
 		"max_stack": 1,
 		"name": "栄慈符ポリアフ",
 		"raid": false,
-		"rarity": 3,
+		"rarity": 2,
 		"recipe": {
 			"karma": "150000",
 			"materials": [
@@ -34691,7 +34949,7 @@
 	"234000": {
 		"bfmtMetadata": {
 			"createdAt": "2016-09-29T21:55:26.000Z",
-			"updatedAt": "2016-11-11T03:51:38.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "全てのユニットの攻撃力を３０％アップ＆確率で全状態異常をランダムに発生",
 		"dictionary": {
@@ -34701,7 +34959,7 @@
 		"max_stack": 1,
 		"name": "聖凶典レネイエ",
 		"raid": false,
-		"rarity": 3,
+		"rarity": 2,
 		"recipe": {
 			"karma": "150000",
 			"materials": [
@@ -34742,7 +35000,7 @@
 	"235000": {
 		"bfmtMetadata": {
 			"createdAt": "2016-09-29T21:55:26.000Z",
-			"updatedAt": "2016-11-11T03:51:38.000Z"
+			"updatedAt": "2017-02-13T15:27:55.000Z"
 		},
 		"desc": "全てのユニットの攻撃力・防御力・回復力・最大ＨＰを２５％アップ＆被ダメージ時、確率でＢＢゲージを少し増加＆通常攻撃時、確率でＢＢゲージを増加",
 		"dictionary": {
@@ -34752,7 +35010,7 @@
 		"max_stack": 1,
 		"name": "天狼套ゼフィーロ",
 		"raid": false,
-		"rarity": 4,
+		"rarity": 3,
 		"recipe": {
 			"karma": "200000",
 			"materials": [
