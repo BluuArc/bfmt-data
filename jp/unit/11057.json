@@ -630,7 +630,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2017-03-15T21:38:55.000Z",
-		"updatedAt": "2017-04-07T01:07:32.000Z"
+		"updatedAt": "2017-05-11T21:17:09.000Z"
 	},
 	"category": 11050,
 	"cost": 50,
@@ -703,6 +703,254 @@
 		"name": "覇王たる資格",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "550101",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力・最大ＨＰを３０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 30,
+							"hp% buff": 30,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "550101",
+				"level": 2,
+				"name": "攻撃力・最大ＨＰ＋３０％",
+				"series": "500000"
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "1@550101",
+			"dependency comment": "「攻撃力・最大ＨＰ＋３０％」習得",
+			"id": "560100",
+			"skill": {
+				"bp": 15,
+				"desc": "攻撃力・最大ＨＰを３０％アップを５０％にグレードアップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 50,
+							"hp% buff": 50,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "560100",
+				"level": 3,
+				"name": "攻撃力・最大ＨＰ＋３０％→５０％",
+				"series": "500000"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1060001",
+			"skill": {
+				"bp": 15,
+				"desc": "スパークダメージを１２０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 120,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1060001",
+				"level": 5,
+				"name": "スパークダメージ１２０％アップ",
+				"series": "1000000"
+			}
+		},
+		{
+			"category": "3",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "2110001",
+			"skill": {
+				"bp": 10,
+				"desc": "クリティカルダメージをアップ",
+				"effects": [
+					{
+						"passive": {
+							"crit multiplier%": 50,
+							"passive id": "34"
+						}
+					}
+				],
+				"id": "2110001",
+				"level": 2,
+				"name": "クリティカルダメージアップ",
+				"series": "2100000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "10800000",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力の上限値（９９９９９）を１３００００まで解放する",
+				"effects": [
+					{
+						"passive": {
+							"unknown passive id": "143",
+							"unknown passive params": "130000"
+						}
+					}
+				],
+				"id": "10800000",
+				"level": 4,
+				"name": "攻撃力上限突破",
+				"series": "10800000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "50012101",
+			"skill": {
+				"bp": 25,
+				"desc": "ＢＢ及びＳＢＢの「炎属性ユニットの攻撃力・防御力をかなりアップ」効果量を増加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"atk% buff (13)": 130,
+									"buff turns": 3,
+									"def% buff (14)": 130,
+									"effect delay time(ms)/frame": "16.7/1",
+									"element buffed": "fire",
+									"proc id": "5",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50012101",
+				"level": 2,
+				"name": "ＢＢ・ＳＢＢの「炎属性ユニットの攻撃・防御力をアップ」効果を強化",
+				"series": "50012100"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "33002004",
+			"skill": {
+				"bp": 25,
+				"desc": "ＢＢ及びＳＢＢの「攻撃ＢＢの威力を大幅にアップ」効果量を増加",
+				"effects": [
+					{
+						"add to bb": {
+							"bb atk% buff": 100,
+							"buff turns (72)": 0,
+							"proc id": "45",
+							"sbb atk% buff": 100,
+							"ubb atk% buff": 100
+						}
+					},
+					{
+						"add to sbb": {
+							"bb atk% buff": 100,
+							"buff turns (72)": 0,
+							"proc id": "45",
+							"sbb atk% buff": 100,
+							"ubb atk% buff": 100
+						}
+					}
+				],
+				"id": "33002004",
+				"level": 4,
+				"name": "ＢＢ・ＳＢＢの「攻撃ＢＢの威力をアップ」効果を強化",
+				"series": "33002000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "51000007",
+			"skill": {
+				"bp": 40,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、スパークダメージを超絶アップ」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"buff turns": 3,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "23",
+									"spark dmg% buff (40)": 150,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "51000007",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「スパークダメージを超絶アップ」追加",
+				"series": "51000000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "54009001",
+			"skill": {
+				"bp": 50,
+				"desc": "ＢＢ及びＳＢＢに「自分のＢＢゲージを満タンにする」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"bb bc fill%": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "4",
+									"target area": "single",
+									"target type": "self"
+								}
+							]
+						}
+					}
+				],
+				"id": "54009001",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「自分のＢＢゲージを満タンにする」追加",
+				"series": "54009000"
+			}
+		}
+	],
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1610,
@@ -715,8 +963,32 @@
 	},
 	"kind": "normal",
 	"leader skill": {
-		"error": "data missing",
-		"id": "7510"
+		"desc": "全てのユニットの攻撃力・最大ＨＰを６０％アップ＆ＨＰが半分以上の時、攻撃力・防御力をかなりアップ＆クリティカルダメージを大幅にアップ＆攻撃ＢＢの威力を超絶アップ",
+		"effects": [
+			{
+				"atk% buff": 60,
+				"hp% buff": 60,
+				"passive id": "1"
+			},
+			{
+				"crit multiplier%": 175,
+				"passive id": "34"
+			},
+			{
+				"atk% buff": 80,
+				"def% buff": 80,
+				"hp above % buff requirement": 50,
+				"passive id": "11"
+			},
+			{
+				"bb atk% buff": 250,
+				"passive id": "64",
+				"sbb atk% buff": 250,
+				"ubb atk% buff": 250
+			}
+		],
+		"id": "7510",
+		"name": "燼絶帝神の戟煌"
 	},
 	"lord damage range": "3415~3814",
 	"movement": {

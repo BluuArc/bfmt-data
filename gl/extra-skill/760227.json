@@ -1,0 +1,65 @@
+{
+	"associated_units": [
+		"760227"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2017-05-11T06:43:13.000Z",
+		"updatedAt": "2017-05-11T06:43:13.000Z"
+	},
+	"desc": "30% boost to Def and max HP, adds status ailment removal effect to BB/SBB when Arondight is equipped & 100% boost to Spark damage",
+	"effects": [
+		{
+			"conditions": [],
+			"damage% for spark": 100,
+			"passive id": "31",
+			"passive target": "self"
+		},
+		{
+			"conditions": [
+				{
+					"item required": [
+						"88700004"
+					]
+				}
+			],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"ailments cured": [
+						"poison",
+						"weaken",
+						"sick",
+						"injury",
+						"curse",
+						"paralysis",
+						"atk down",
+						"def down",
+						"rec down"
+					],
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "38",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"conditions": [
+				{
+					"item required": [
+						"88700004"
+					]
+				}
+			],
+			"def% buff": 30,
+			"hp% buff": 30,
+			"passive id": "1",
+			"passive target": "self"
+		}
+	],
+	"name": "Selfishness",
+	"target": "self"
+}
