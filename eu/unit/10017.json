@@ -438,8 +438,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 45,
 	"damage frames": {
@@ -486,7 +485,54 @@
 	"element": "fire",
 	"exp_pattern": 10,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "30% boost to all parameters, hugely boosts elemental damage & boosts damage relative to remaining HP when Dandelga is equipped",
+		"effects": [
+			{
+				"atk% buff": 30,
+				"conditions": [
+					{
+						"item required": [
+							"37600"
+						]
+					}
+				],
+				"def% buff": 30,
+				"hp% buff": 30,
+				"passive id": "1",
+				"passive target": "self",
+				"rec% buff": 30
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"37600"
+						]
+					}
+				],
+				"elemental weakness multiplier%": 100,
+				"fire units do extra elemental weakness dmg": true,
+				"passive id": "50",
+				"passive target": "self"
+			},
+			{
+				"atk% base buff": 0,
+				"atk% extra buff based on hp": 50,
+				"buff proportional to hp": "remaining",
+				"conditions": [
+					{
+						"item required": [
+							"37600"
+						]
+					}
+				],
+				"passive id": "46",
+				"passive target": "self"
+			}
+		],
+		"id": "110",
+		"name": "Heartfelt Flame",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "farmable",

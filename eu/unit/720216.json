@@ -506,8 +506,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 43,
 	"damage frames": {
@@ -524,7 +523,95 @@
 	"element": "water",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "With Gilgamesh Crown or Noblesse Title, adds heal on BB/SBB. With Gilgamesh Crown, Adds Spark dmg. fills own BB gauge (10BC) 1 turn on SBB & Perform 1 extra action within the same turn when Sparks have exceeded certain number (3) & Boosts HP (30%)",
+		"effects": [
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701009"
+						]
+					},
+					{
+						"item required": [
+							"701012"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3000,
+						"proc id": "2",
+						"rec added% (from healer)": 11,
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701012"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"bc fill on spark buff turns (111)": 1,
+						"bc fill on spark high": 10,
+						"bc fill on spark low": 10,
+						"bc fill on spark%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "67",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"buff": {
+					"buff turns (123)": "1",
+					"unknown buff id": "123",
+					"unknown buff params": "1&100"
+				},
+				"conditions": [
+					{
+						"item required": [
+							"701012"
+						]
+					}
+				],
+				"passive id": "86",
+				"passive target": "self",
+				"spark count buff activation": 3
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701012"
+						]
+					}
+				],
+				"hp% buff": 30,
+				"passive id": "1",
+				"passive target": "self"
+			}
+		],
+		"id": "720216",
+		"name": "Vision of Fallen Spirits",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

@@ -518,8 +518,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 42,
 	"damage frames": {
@@ -564,7 +563,52 @@
 	"element": "light",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Negates all status ailments and Atk, Def, Rec reductions & adds status ailment removal effect to BB/SBB",
+		"effects": [
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"ailments cured": [
+							"poison",
+							"weaken",
+							"sick",
+							"injury",
+							"curse",
+							"paralysis",
+							"atk down",
+							"def down",
+							"rec down"
+						],
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "38",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"atk down resist%": 100,
+				"conditions": [],
+				"curse resist%": 100,
+				"def down resist%": 100,
+				"injury resist%": 100,
+				"paralysis resist%": 100,
+				"passive id": "73",
+				"passive target": "self",
+				"poison resist%": 100,
+				"rec down resist%": 100,
+				"sick resist%": 100,
+				"weaken resist%": 100
+			}
+		],
+		"id": "14100",
+		"name": "Memories with the Summoner",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "farmable",

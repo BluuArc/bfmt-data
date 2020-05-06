@@ -426,8 +426,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 40,
 	"damage frames": {
@@ -472,7 +471,53 @@
 	"element": "earth",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds removal of status ailments effect to BB and SBB & when Lafdranya is equipped, 20% boost to all parameters",
+		"effects": [
+			{
+				"atk% buff": 20,
+				"conditions": [
+					{
+						"item required": [
+							"37660"
+						]
+					}
+				],
+				"def% buff": 20,
+				"hp% buff": 20,
+				"passive id": "1",
+				"passive target": "self",
+				"rec% buff": 20
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"ailments cured": [
+							"poison",
+							"weaken",
+							"sick",
+							"injury",
+							"curse",
+							"paralysis",
+							"atk down",
+							"def down",
+							"rec down"
+						],
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "38",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "3000",
+		"name": "Armored Volition",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

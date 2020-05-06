@@ -1,17 +1,37 @@
 {
 	"bfmtMetadata": {
 		"createdAt": "2016-11-09T14:29:41.000Z",
-		"updatedAt": "2016-12-15T03:30:03.000Z"
+		"updatedAt": "2017-03-09T17:47:37.000Z"
 	},
-	"desc": "全てのユニットの防御力を２５％アップ＆全状態異常にかかりにくくなる＆弱点属性ダメージを少し軽減",
+	"desc": "25% boost to Def, increases resistance to all status ailments & slightly reduces elemental damage",
 	"dictionary": {
 		"lore": "Gauntlets used by the white ogres, a minority race in Estria. Made from precious ores and purified by shamans, they are later passed on to individuals by the tribal chieftain as part of a coming-of-age ceremony. As the white ogres hunt with light equipment, these gauntlets are ideal for defense without sacrificing agility, and for reducing weak points. They are also said to have increased the white ogres' success in hunting in hilly areas and forests."
 	},
+	"effect": [
+		{
+			"def% buff": 25,
+			"passive id": "1"
+		},
+		{
+			"curse resist%": 50,
+			"injury resist%": 50,
+			"paralysis resist%": 50,
+			"passive id": "4",
+			"poison resist%": 50,
+			"sick resist%": 50,
+			"weaken resist%": 50
+		},
+		{
+			"passive id": "53",
+			"strong base element damage resist%": 20,
+			"strong buffed element damage resist%": 20
+		}
+	],
 	"id": 230204,
 	"max_stack": 1,
-	"name": "白鬼甲マク・マウ",
+	"name": "Ogre Gauntlets",
 	"raid": false,
-	"rarity": 3,
+	"rarity": 2,
 	"recipe": {
 		"karma": "150000",
 		"materials": [
@@ -41,6 +61,11 @@
 	"sphere type": 1,
 	"sphere type text": "Status Boost",
 	"thumbnail": "ls_sphere_thum_6_5.png",
-	"type": null,
-	"usage": []
+	"type": "ls_sphere",
+	"usage": [
+		{
+			"id": 230205,
+			"name": "Myrmidon Helm"
+		}
+	]
 }

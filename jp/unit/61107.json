@@ -1,0 +1,516 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "atk_max",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 30,
+			"target conditions": "hp_min",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"error": "data missing"
+	},
+	"bb": {
+		"error": "data missing",
+		"id": "61107"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2017-03-08T10:56:26.000Z",
+		"updatedAt": "2017-03-09T01:46:15.000Z"
+	},
+	"category": 61100,
+	"cost": 54,
+	"damage frames": {
+		"frame times": [
+			58,
+			64,
+			70,
+			76,
+			82,
+			88,
+			92,
+			98,
+			104,
+			110,
+			116
+		],
+		"hit dmg% distribution": [
+			11,
+			9,
+			8,
+			9,
+			8,
+			9,
+			10,
+			9,
+			8,
+			9,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
+	"drop check count": 4,
+	"element": "dark",
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "ＢＢ及びＳＢＢに「味方全体に闇属性のバリアを付与」を追加＆確率で被ダメージを２０％軽減＆被ダメージ時、確率でＨＰを回復",
+		"effects": [
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental barrier absorb dmg%": 100,
+						"elemental barrier def": 0,
+						"elemental barrier element": "dark",
+						"elemental barrier hp": 3000,
+						"proc id": "62",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"conditions": [],
+				"dmg reduction chance%": 20,
+				"dmg reduction%": 20,
+				"passive id": "14",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"dmg% to hp% when attacked chance%": 25,
+				"dmg% to hp% when attacked high": 25,
+				"dmg% to hp% when attacked low": 20,
+				"passive id": "24",
+				"passive target": "self"
+			}
+		],
+		"id": "32500",
+		"name": "美しき世界の理",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "720001",
+			"skill": {
+				"bp": 20,
+				"desc": "攻撃力・防御力・回復力・最大ＨＰを３０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 30,
+							"def% buff": 30,
+							"hp% buff": 30,
+							"passive id": "1",
+							"rec% buff": 30
+						}
+					}
+				],
+				"id": "720001",
+				"level": 1,
+				"name": "全能力＋３０％",
+				"series": "700000"
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "270101",
+			"skill": {
+				"bp": 10,
+				"desc": "ＢＢゲージが半分以上の時、防御力をかなりアップ",
+				"effects": [
+					{
+						"passive": {
+							"bb gauge above % buff requirement": 50,
+							"def% buff": 80,
+							"passive id": "30"
+						}
+					}
+				],
+				"id": "270101",
+				"level": 4,
+				"name": "ＢＢゲージが半分以上の時、防御力をアップ",
+				"series": "270000"
+			}
+		},
+		{
+			"category": "5",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "4110001",
+			"skill": {
+				"bp": 10,
+				"desc": "被ダメージ時、ＢＢゲージを増加",
+				"effects": [
+					{
+						"passive": {
+							"bc fill when attacked high": 3,
+							"bc fill when attacked low": 2,
+							"bc fill when attacked%": 100,
+							"passive id": "25"
+						}
+					}
+				],
+				"id": "4110001",
+				"level": 2,
+				"name": "被ダメージ時、ＢＢゲージを増加",
+				"series": "4100000"
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9100003",
+			"skill": {
+				"bp": 20,
+				"desc": "防御貫通効果を無効",
+				"effects": [
+					{
+						"passive": {
+							"ignore def resist chance%": 100,
+							"passive id": "92"
+						}
+					}
+				],
+				"id": "9100003",
+				"level": 2,
+				"name": "防御貫通攻撃を無効",
+				"series": "9100000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "54001201",
+			"skill": {
+				"bp": 20,
+				"desc": "ＢＢに「味方全体に３ターン、被ダメージ時、ＢＢゲージをかなり増加」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"triggered effect": [
+								{
+									"bc fill when attacked high": 7,
+									"bc fill when attacked low": 4,
+									"bc fill when attacked turns (38)": 3,
+									"bc fill when attacked%": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "20",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "54001201",
+				"level": 5,
+				"name": "ＢＢに「被ダメージ時、ＢＢゲージをかなり増加」追加",
+				"series": "54001000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59002004",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に１ターン、弱点属性ダメージを無効」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"dmg resist turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "93",
+									"strong base element damage resist% (144)": 100,
+									"strong buffed element damage resist% (144)": 100,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59002004",
+				"level": 6,
+				"name": "ＢＢ・ＳＢＢに「弱点属性ダメージを無効」追加",
+				"series": "59002000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59001003",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に１ターン、クリティカルダメージを無効」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"crit dmg base damage resist% (143)": 100,
+									"crit dmg buffed damage resist% (143)": 100,
+									"dmg resist turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "93",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59001003",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「クリティカルダメージを無効」追加",
+				"series": "59001000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59004500",
+			"skill": {
+				"bp": 30,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に１ターン、光・闇属性ユニットからの被ダメージを少し軽減」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"buff turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"mitigate light attacks (25)": 10,
+									"proc id": "16",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					},
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"buff turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"mitigate dark attacks (26)": 10,
+									"proc id": "16",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59004500",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「光・闇属性ユニットからの被ダメージ少し軽減」追加",
+				"series": "59004500"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59005101",
+			"skill": {
+				"bp": 30,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に１ターン、スパークダメージを軽減」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"dmg resist turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "93",
+									"spark dmg base resist% (145)": 25,
+									"spark dmg buffed resist% (145)": 25,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59005101",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「スパークダメージを軽減」追加",
+				"series": "59005000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "50002001",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃力に応じて防御力を大幅にアップ」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"% converted turns": 3,
+									"converted attribute": "attack",
+									"def% buff (47)": 80,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "24",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50002001",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「攻撃力に応じて防御力を大幅にアップ」追加",
+				"series": "50002000"
+			}
+		}
+	],
+	"gender": "male",
+	"getting type": "farmable",
+	"guide_id": 1591,
+	"id": 61107,
+	"imp": {
+		"max atk": "600",
+		"max def": "600",
+		"max hp": "1500",
+		"max rec": "600"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "全てのユニットの防御力・最大ＨＰを６０％アップ＆ＢＢ発動時のＢＢゲージ消費量を大幅に軽減＆被ダメージ時、ＢＢゲージを大幅に増加・確率でＨＰを回復",
+		"effects": [
+			{
+				"def% buff": 60,
+				"hp% buff": 60,
+				"passive id": "1"
+			},
+			{
+				"passive id": "49",
+				"reduced bb bc use chance%": 100,
+				"reduced bb bc use% high": 30,
+				"reduced bb bc use% low": 25
+			},
+			{
+				"bc fill when attacked high": 7,
+				"bc fill when attacked low": 4,
+				"bc fill when attacked%": 100,
+				"passive id": "25"
+			},
+			{
+				"dmg% to hp% when attacked chance%": 25,
+				"dmg% to hp% when attacked high": 25,
+				"dmg% to hp% when attacked low": 25,
+				"passive id": "24"
+			}
+		],
+		"id": "4369",
+		"name": "冥覇神天の君臨"
+	},
+	"lord damage range": "2905~3244",
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "3"
+		}
+	},
+	"name": "冥魔統神カルデス",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"error": "data missing",
+		"id": "161107"
+	},
+	"sell caution": true,
+	"stats": {
+		"_base": {
+			"atk": 2510,
+			"def": 2880,
+			"hp": 6610,
+			"rec": 2390
+		},
+		"_lord": {
+			"atk": 3120,
+			"def": 3560,
+			"hp": 8550,
+			"rec": 2970
+		}
+	},
+	"ubb": {
+		"error": "data missing",
+		"id": "261107"
+	}
+}

@@ -1,0 +1,454 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "hp_50pr_over",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"error": "data missing"
+	},
+	"bb": {
+		"error": "data missing",
+		"id": "61097"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2017-03-08T10:56:26.000Z",
+		"updatedAt": "2017-03-09T01:46:15.000Z"
+	},
+	"category": 61090,
+	"cost": 50,
+	"damage frames": {
+		"frame times": [
+			19,
+			23,
+			43,
+			54,
+			58,
+			62,
+			66,
+			80,
+			84,
+			88,
+			106,
+			110,
+			114,
+			118,
+			137
+		],
+		"hit dmg% distribution": [
+			9,
+			3,
+			7,
+			6,
+			5,
+			5,
+			4,
+			6,
+			5,
+			4,
+			10,
+			7,
+			5,
+			4,
+			20
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 15
+	},
+	"drop check count": 3,
+	"element": "dark",
+	"evolution": {
+		"prev": "61096"
+	},
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "全てのユニットの攻撃力・防御力・回復力・最大ＨＰを１０％アップ＆残りＨＰが多いほど、攻撃力・防御力・回復力をアップ＆スパークダメージを５０％アップ",
+		"effects": [
+			{
+				"atk% buff": 10,
+				"conditions": [],
+				"def% buff": 10,
+				"hp% buff": 10,
+				"passive id": "1",
+				"passive target": "party",
+				"rec% buff": 10
+			},
+			{
+				"atk% base buff": 0,
+				"atk% extra buff based on hp": 50,
+				"buff proportional to hp": "remaining",
+				"conditions": [],
+				"def% base buff": 0,
+				"def% extra buff based on hp": 50,
+				"passive id": "46",
+				"passive target": "self",
+				"rec% base buff": 0,
+				"rec% extra buff based on hp": 50
+			},
+			{
+				"conditions": [],
+				"damage% for spark": 50,
+				"passive id": "31",
+				"passive target": "self"
+			}
+		],
+		"id": "32400",
+		"name": "悦楽の忌刃",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "710001",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力・防御力・回復力・最大ＨＰを２０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 20,
+							"def% buff": 20,
+							"hp% buff": 20,
+							"passive id": "1",
+							"rec% buff": 20
+						}
+					}
+				],
+				"id": "710001",
+				"level": 2,
+				"name": "全能力＋２０％",
+				"series": "700000"
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "1@710001",
+			"dependency comment": "「全能力＋２０％」習得",
+			"id": "730100",
+			"skill": {
+				"bp": 15,
+				"desc": "攻撃力・防御力・回復力・最大ＨＰを２０％アップを４０％にグレードアップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 40,
+							"def% buff": 40,
+							"hp% buff": 40,
+							"passive id": "1",
+							"rec% buff": 40
+						}
+					}
+				],
+				"id": "730100",
+				"level": 3,
+				"name": "全能力＋２０％→４０％",
+				"series": "700000"
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "1@730100",
+			"dependency comment": "「全能力＋２０％→４０％」習得",
+			"id": "750100",
+			"skill": {
+				"bp": 20,
+				"desc": "攻撃力・防御力・回復力・最大ＨＰを４０％アップを６０％にグレードアップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 60,
+							"def% buff": 60,
+							"hp% buff": 60,
+							"passive id": "1",
+							"rec% buff": 60
+						}
+					}
+				],
+				"id": "750100",
+				"level": 4,
+				"name": "全能力＋４０％→６０％",
+				"series": "700000"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1060000",
+			"skill": {
+				"bp": 20,
+				"desc": "スパークダメージを１２０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 120,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1060000",
+				"level": 5,
+				"name": "スパークダメージ１２０％アップ",
+				"series": "1000000"
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9300001",
+			"skill": {
+				"bp": 20,
+				"desc": "弱点属性ダメージを無効",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "53",
+							"strong base element damage resist%": 100,
+							"strong buffed element damage resist%": 100
+						}
+					}
+				],
+				"id": "9300001",
+				"level": 4,
+				"name": "弱点属性攻撃を無効",
+				"series": "9300000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "10800000",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力の上限値（９９９９９）を１３００００まで解放する",
+				"effects": [
+					{
+						"passive": {
+							"unknown passive id": "143",
+							"unknown passive params": "130000"
+						}
+					}
+				],
+				"id": "10800000",
+				"level": 4,
+				"name": "攻撃力上限突破",
+				"series": "10800000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "33007000",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢの「全体攻撃・単体攻撃」効果のダメージを増加",
+				"effects": [
+					{
+						"add to bb": {
+							"bb atk%": 200,
+							"proc id": "1"
+						}
+					},
+					{
+						"add to sbb": {
+							"bb atk%": 200,
+							"proc id": "1"
+						}
+					}
+				],
+				"id": "33007000",
+				"level": 4,
+				"name": "ＢＢ・ＳＢＢの「全体攻撃・単体攻撃」効果のダメージを増加",
+				"series": "33007000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "60013001",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃に光・闇属性を付与」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"elements added": [
+										"light",
+										"dark"
+									],
+									"elements added turns": 3,
+									"proc id": "30",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "60013001",
+				"level": 4,
+				"name": "ＢＢ・ＳＢＢに「攻撃に光・闇属性を付与」追加",
+				"series": "60013000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "54009000",
+			"skill": {
+				"bp": 60,
+				"desc": "ＢＢ及びＳＢＢに「自分のＢＢゲージを満タンにする」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"bb bc fill%": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "4",
+									"target area": "single",
+									"target type": "self"
+								}
+							]
+						}
+					}
+				],
+				"id": "54009000",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「自分のＢＢゲージを満タンにする」追加",
+				"series": "54009000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "21001001",
+			"skill": {
+				"bp": 10,
+				"desc": "リーダースキルの「獲得経験値をアップ」効果をグレードアップ",
+				"effects": [
+					{
+						"add to passive": {
+							"passive id": "97",
+							"xp gained increase%": 5
+						}
+					}
+				],
+				"id": "21001001",
+				"level": 10,
+				"name": "リーダースキル「獲得経験値をアップ」効果を強化",
+				"series": "21010000"
+			}
+		}
+	],
+	"gender": "male",
+	"getting type": "rare summon",
+	"guide_id": 1590,
+	"id": 61097,
+	"imp": {
+		"max atk": "600",
+		"max def": "600",
+		"max hp": "1500",
+		"max rec": "600"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "全てのユニットの攻撃力を１５０％アップ・最大ＨＰを８０％アップ＆獲得経験値をかなりアップ＆確率で防御貫通効果を付与＆ＯＤゲージの増加量をかなりアップ",
+		"effects": [
+			{
+				"atk% buff": 150,
+				"hp% buff": 80,
+				"passive id": "1"
+			},
+			{
+				"passive id": "97",
+				"xp gained increase%": 15
+			},
+			{
+				"ignore def%": 30,
+				"passive id": "29"
+			},
+			{
+				"od fill rate%": 20,
+				"passive id": "70"
+			}
+		],
+		"id": "7504",
+		"name": "黒魁の神戯"
+	},
+	"lord damage range": "3267~3649",
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
+	"name": "凶煉の十忌帝シオン",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"error": "data missing",
+		"id": "161097"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2801,
+			"def": 2398,
+			"hp": 6365,
+			"rec": 2131
+		},
+		"_lord": {
+			"atk": 3509,
+			"def": 3004,
+			"hp": 8302,
+			"rec": 2685
+		}
+	},
+	"ubb": {
+		"error": "data missing",
+		"id": "261097"
+	}
+}

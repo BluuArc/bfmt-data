@@ -294,8 +294,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 42,
 	"damage frames": {
@@ -330,7 +329,50 @@
 	"element": "water",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Boost to Max HP (40%) & Boosts BC and HC drop rate (15% BC, 15% HC, SELF) & If Temporal Cybernetic Skin is equipped, adds Boosts ATK and DEF relative to HP (20%) for 3 turns to BB/SBB",
+		"effects": [
+			{
+				"conditions": [],
+				"hp% buff": 40,
+				"passive id": "1",
+				"passive target": "self"
+			},
+			{
+				"bc drop rate% buff": 15,
+				"conditions": [],
+				"hc drop rate% buff": 15,
+				"passive id": "19",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701020"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"% converted turns": 3,
+						"atk% buff (46)": 20,
+						"converted attribute": "hp",
+						"def% buff (47)": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "720166",
+		"name": "Avalon's Essence",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

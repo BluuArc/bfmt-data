@@ -1,0 +1,464 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "hp_50pr_over",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"error": "data missing"
+	},
+	"bb": {
+		"error": "data missing",
+		"id": "51167"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2017-03-08T10:56:26.000Z",
+		"updatedAt": "2017-03-09T01:46:15.000Z"
+	},
+	"category": 51160,
+	"cost": 50,
+	"damage frames": {
+		"frame times": [
+			41,
+			44,
+			47,
+			50,
+			53,
+			56,
+			59,
+			62,
+			65,
+			68
+		],
+		"hit dmg% distribution": [
+			18,
+			15,
+			12,
+			10,
+			9,
+			8,
+			8,
+			7,
+			7,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 10
+	},
+	"drop check count": 5,
+	"element": "light",
+	"evolution": {
+		"prev": "51166"
+	},
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "ＢＢゲージが半分以上の時、攻撃力・防御力をアップ＆スパークダメージを５０％アップ",
+		"effects": [
+			{
+				"atk% buff": 50,
+				"bb gauge above % buff requirement": 50,
+				"conditions": [],
+				"def% buff": 50,
+				"passive id": "30",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"damage% for spark": 50,
+				"passive id": "31",
+				"passive target": "self"
+			}
+		],
+		"id": "33600",
+		"name": "理想を統べる遠謀",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "550101",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力・最大ＨＰを３０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 30,
+							"hp% buff": 30,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "550101",
+				"level": 2,
+				"name": "攻撃力・最大ＨＰ＋３０％",
+				"series": "500000"
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "270100",
+			"skill": {
+				"bp": 10,
+				"desc": "ＢＢゲージが半分以上の時、攻撃力・防御力をアップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 50,
+							"bb gauge above % buff requirement": 50,
+							"def% buff": 50,
+							"passive id": "30"
+						}
+					}
+				],
+				"id": "270100",
+				"level": 4,
+				"name": "ＢＢゲージが半分以上の時、攻撃力・防御力をアップ",
+				"series": "270000"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1040004",
+			"skill": {
+				"bp": 10,
+				"desc": "スパークダメージを１００％アップ",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 100,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1040004",
+				"level": 5,
+				"name": "スパークダメージ１００％アップ",
+				"series": "1000000"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "1@1040004",
+			"dependency comment": "「スパークダメージ１００％アップ」習得",
+			"id": "1000502",
+			"skill": {
+				"bp": 15,
+				"desc": "スパークダメージを１００％アップを１２０％にグレードアップ",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 120,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1000502",
+				"level": 6,
+				"name": "スパークダメージ１００％→１２０％",
+				"series": "1000000"
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9200002",
+			"skill": {
+				"bp": 20,
+				"desc": "クリティカルを無効",
+				"effects": [
+					{
+						"passive": {
+							"crit chance base resist%": 100,
+							"crit chance buffed resist%": 100,
+							"crit dmg base damage resist%": 100,
+							"crit dmg buffed damage resist%": 100,
+							"passive id": "53"
+						}
+					}
+				],
+				"id": "9200002",
+				"level": 4,
+				"name": "クリティカルダメージ無効",
+				"series": "9200000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "10800000",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力の上限値（９９９９９）を１３００００まで解放する",
+				"effects": [
+					{
+						"passive": {
+							"unknown passive id": "143",
+							"unknown passive params": "130000"
+						}
+					}
+				],
+				"id": "10800000",
+				"level": 4,
+				"name": "攻撃力上限突破",
+				"series": "10800000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "35000300",
+			"skill": {
+				"bp": 20,
+				"desc": "ＢＢの「ターン毎にＨＰを大回復」効果量を増加",
+				"effects": [
+					{
+						"add to bb": {
+							"gradual heal high": 1000,
+							"gradual heal low": 1000,
+							"gradual heal turns (8)": 0,
+							"proc id": "3",
+							"rec added% (from target)": 10
+						}
+					}
+				],
+				"id": "35000300",
+				"level": 4,
+				"name": "ＢＢの「ターン毎にＨＰを回復」効果を強化",
+				"series": "35000100"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "1@35000300",
+			"dependency comment": "「ＢＢの「ターン毎にＨＰを回復」効果を強化」習得",
+			"id": "34002101",
+			"skill": {
+				"bp": 20,
+				"desc": "ＢＢの「ターン毎にＢＢゲージを大幅に増加」効果量を増加",
+				"effects": [
+					{
+						"add to bb": {
+							"increase bb gauge gradual": 2,
+							"increase bb gauge gradual turns (37)": 0,
+							"proc id": "19"
+						}
+					}
+				],
+				"id": "34002101",
+				"level": 1,
+				"name": "ＢＢの「ターン毎にＢＢゲージを増加」効果を強化",
+				"series": "34002000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "31000103",
+			"skill": {
+				"bp": 20,
+				"desc": "ＢＢ及びＳＢＢの「スパークダメージを超絶アップ」効果量を増加",
+				"effects": [
+					{
+						"add to bb": {
+							"buff turns": 0,
+							"proc id": "23",
+							"spark dmg% buff (40)": 20
+						}
+					},
+					{
+						"add to sbb": {
+							"buff turns": 0,
+							"proc id": "23",
+							"spark dmg% buff (40)": 20
+						}
+					}
+				],
+				"id": "31000103",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢの「スパークダメージをアップ」効果を強化",
+				"series": "31000100"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57008002",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「敵全体に確率で攻撃力・防御力を１ターン大幅に低下」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"buff #1": {
+										"atk% buff (2)": -50,
+										"proc chance%": 30
+									},
+									"buff #2": {
+										"def% buff (4)": -50,
+										"proc chance%": 30
+									},
+									"buff turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"element buffed": "all",
+									"proc id": "9",
+									"target area": "aoe",
+									"target type": "enemy"
+								}
+							]
+						}
+					}
+				],
+				"id": "57008002",
+				"level": 4,
+				"name": "ＢＢ・ＳＢＢに「確率で攻撃力・防御力を大幅に低下」追加",
+				"series": "57008000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "51004005",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、確率でスパーククリティカルが発生」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "83",
+									"spark dmg inc buff turns (131)": 3,
+									"spark dmg inc chance%": 30,
+									"spark dmg inc% buff": 50,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "51004005",
+				"level": 4,
+				"name": "ＢＢ・ＳＢＢに「確率でスパーククリティカルが発生」追加",
+				"series": "51004000"
+			}
+		}
+	],
+	"gender": "female",
+	"getting type": "rare summon",
+	"guide_id": 1606,
+	"id": 51167,
+	"imp": {
+		"max atk": "600",
+		"max def": "600",
+		"max hp": "1500",
+		"max rec": "600"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "全てのユニットの攻撃力・最大ＨＰを６０％アップ＆スパーク時、ＢＢゲージを増加・ダメージを１３０％アップ＆確率でスパーククリティカルが発生",
+		"effects": [
+			{
+				"atk% buff": 60,
+				"hp% buff": 60,
+				"passive id": "1"
+			},
+			{
+				"damage% for spark": 130,
+				"passive id": "31"
+			},
+			{
+				"bc fill on spark high": 3,
+				"bc fill on spark low": 2,
+				"bc fill on spark%": 100,
+				"passive id": "47"
+			},
+			{
+				"unknown passive id": "100",
+				"unknown passive params": "10,50"
+			}
+		],
+		"id": "7507",
+		"name": "神艶聖妃の想願"
+	},
+	"lord damage range": "3080~3440",
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
+	"name": "焔洌の栄輝神モーラ",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"error": "data missing",
+		"id": "151167"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2641,
+			"def": 2431,
+			"hp": 6244,
+			"rec": 2378
+		},
+		"_lord": {
+			"atk": 3308,
+			"def": 3045,
+			"hp": 8151,
+			"rec": 2996
+		}
+	},
+	"ubb": {
+		"error": "data missing",
+		"id": "251167"
+	}
+}

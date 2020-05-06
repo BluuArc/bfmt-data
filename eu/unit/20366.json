@@ -546,8 +546,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 40,
 	"damage frames": {
@@ -596,7 +595,37 @@
 	"element": "water",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Considerably boosts Atk when HP is full & adds Def boost relative to max HP to BB/SBB for 3 turns",
+		"effects": [
+			{
+				"atk% buff": 80,
+				"conditions": [],
+				"hp above % buff requirement": 100,
+				"passive id": "11",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"% converted turns": 3,
+						"converted attribute": "hp",
+						"def% buff (47)": 15,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "12800",
+		"name": "Motherly Wave",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

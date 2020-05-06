@@ -1,0 +1,467 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "hp_50pr_over",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"error": "data missing"
+	},
+	"bb": {
+		"error": "data missing",
+		"id": "20987"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2017-03-08T10:56:26.000Z",
+		"updatedAt": "2017-03-09T01:46:15.000Z"
+	},
+	"category": 20980,
+	"cost": 50,
+	"damage frames": {
+		"frame times": [
+			79,
+			83,
+			87,
+			91,
+			95,
+			99,
+			103,
+			107,
+			111
+		],
+		"hit dmg% distribution": [
+			17,
+			15,
+			13,
+			11,
+			10,
+			11,
+			9,
+			8,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 9
+	},
+	"drop check count": 5,
+	"element": "water",
+	"evolution": {
+		"prev": "20986"
+	},
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "弱点属性ダメージをアップ＆ＢＢ発動に必要なＢＢゲージ量を軽減",
+		"effects": [
+			{
+				"conditions": [],
+				"elemental weakness multiplier%": 50,
+				"passive id": "50",
+				"passive target": "self",
+				"water units do extra elemental weakness dmg": true
+			},
+			{
+				"conditions": [],
+				"passive id": "48",
+				"passive target": "self",
+				"reduced bb bc cost%": 20
+			}
+		],
+		"id": "33200",
+		"name": "境界を越える力",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "720001",
+			"skill": {
+				"bp": 20,
+				"desc": "攻撃力・防御力・回復力・最大ＨＰを３０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 30,
+							"def% buff": 30,
+							"hp% buff": 30,
+							"passive id": "1",
+							"rec% buff": 30
+						}
+					}
+				],
+				"id": "720001",
+				"level": 1,
+				"name": "全能力＋３０％",
+				"series": "700000"
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "1@720001",
+			"dependency comment": "「全能力＋３０％」習得",
+			"id": "740102",
+			"skill": {
+				"bp": 15,
+				"desc": "攻撃力・防御力・回復力・最大ＨＰを３０％アップを５０％にグレードアップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 50,
+							"def% buff": 50,
+							"hp% buff": 50,
+							"passive id": "1",
+							"rec% buff": 50
+						}
+					}
+				],
+				"id": "740102",
+				"level": 4,
+				"name": "全能力＋３０％→５０％",
+				"series": "700000"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1040002",
+			"skill": {
+				"bp": 20,
+				"desc": "スパークダメージを１００％アップ",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 100,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1040002",
+				"level": 5,
+				"name": "スパークダメージ１００％アップ",
+				"series": "1000000"
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9300001",
+			"skill": {
+				"bp": 20,
+				"desc": "弱点属性ダメージを無効",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "53",
+							"strong base element damage resist%": 100,
+							"strong buffed element damage resist%": 100
+						}
+					}
+				],
+				"id": "9300001",
+				"level": 4,
+				"name": "弱点属性攻撃を無効",
+				"series": "9300000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "10800000",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力の上限値（９９９９９）を１３００００まで解放する",
+				"effects": [
+					{
+						"passive": {
+							"unknown passive id": "143",
+							"unknown passive params": "130000"
+						}
+					}
+				],
+				"id": "10800000",
+				"level": 4,
+				"name": "攻撃力上限突破",
+				"series": "10800000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "33001004",
+			"skill": {
+				"bp": 30,
+				"desc": "ＢＢ及びＳＢＢの「全属性の弱点属性ダメージを大幅にアップ」効果量を増加",
+				"effects": [
+					{
+						"add to bb": {
+							"elemental weakness buff turns": 0,
+							"elemental weakness multiplier%": 25,
+							"proc id": "55"
+						}
+					},
+					{
+						"add to sbb": {
+							"elemental weakness buff turns": 0,
+							"elemental weakness multiplier%": 25,
+							"proc id": "55"
+						}
+					}
+				],
+				"id": "33001004",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢの「全属性の弱点属性ダメージをアップ」効果を強化",
+				"series": "33001000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59001100",
+			"skill": {
+				"bp": 20,
+				"desc": "ＢＢに「味方全体に１ターン、クリティカルダメージを無効」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"triggered effect": [
+								{
+									"crit dmg base damage resist% (143)": 100,
+									"crit dmg buffed damage resist% (143)": 100,
+									"dmg resist turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "93",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59001100",
+				"level": 5,
+				"name": "ＢＢに「クリティカルダメージを無効」追加",
+				"series": "59001100"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59007000",
+			"skill": {
+				"bp": 20,
+				"desc": "ＢＢに「味方全体に１ターン、追加ダメージを少し軽減」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"target area": "aoe",
+									"target type": "party",
+									"unknown proc id": "126",
+									"unknown proc param": "10,1,0"
+								}
+							]
+						}
+					}
+				],
+				"id": "59007000",
+				"level": 4,
+				"name": "ＢＢに「追加ダメージを少し軽減」追加",
+				"series": "59007000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "54005001",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、被ダメージ時、ＢＢゲージをかなり増加」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"bc fill when attacked high": 7,
+									"bc fill when attacked low": 4,
+									"bc fill when attacked turns (38)": 3,
+									"bc fill when attacked%": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "20",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "54005001",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「被ダメージ時、ＢＢゲージをかなり増加」追加",
+				"series": "54005000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57000008",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「味方全体の全状態異常を回復」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"ailments cured": [
+										"poison",
+										"weaken",
+										"sick",
+										"injury",
+										"curse",
+										"paralysis",
+										"atk down",
+										"def down",
+										"rec down"
+									],
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "38",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "57000008",
+				"level": 6,
+				"name": "ＢＢ・ＳＢＢに「全状態異常を回復」追加",
+				"series": "57000000"
+			}
+		}
+	],
+	"gender": "female",
+	"getting type": "rare summon",
+	"guide_id": 1602,
+	"id": 20987,
+	"imp": {
+		"max atk": "600",
+		"max def": "600",
+		"max hp": "1500",
+		"max rec": "600"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "全てのユニットの全能力を５０％アップ＆全属性の弱点属性ダメージを大幅にアップ＆クリティカルを無効＆ＢＣ獲得時の増加量をかなりアップ",
+		"effects": [
+			{
+				"atk% buff": 50,
+				"def% buff": 50,
+				"hp% buff": 50,
+				"passive id": "1",
+				"rec% buff": 50
+			},
+			{
+				"dark units do extra elemental weakness dmg": true,
+				"earth units do extra elemental weakness dmg": true,
+				"elemental weakness multiplier%": 125,
+				"fire units do extra elemental weakness dmg": true,
+				"light units do extra elemental weakness dmg": true,
+				"passive id": "50",
+				"thunder units do extra elemental weakness dmg": true,
+				"water units do extra elemental weakness dmg": true
+			},
+			{
+				"crit chance base resist%": 100,
+				"crit chance buffed resist%": 100,
+				"crit dmg base damage resist%": 100,
+				"crit dmg buffed damage resist%": 100,
+				"passive id": "53"
+			},
+			{
+				"bb gauge fill rate%": 50,
+				"passive id": "32"
+			}
+		],
+		"id": "10140",
+		"name": "蒼劾神の深界"
+	},
+	"lord damage range": "2985~3334",
+	"movement": {
+		"attack": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0041,
+			"move speed type": "2",
+			"move type": "1"
+		}
+	},
+	"name": "星刻神アム＝ユノス",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"error": "data missing",
+		"id": "120987"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2588,
+			"def": 2482,
+			"hp": 6327,
+			"rec": 2390
+		},
+		"_lord": {
+			"atk": 3206,
+			"def": 3102,
+			"hp": 8218,
+			"rec": 2974
+		}
+	},
+	"ubb": {
+		"error": "data missing",
+		"id": "220987"
+	}
+}

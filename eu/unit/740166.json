@@ -274,8 +274,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 42,
 	"damage frames": {
@@ -308,7 +307,109 @@
 	"element": "thunder",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "(Requires Morgana in team or Photon Assault Spear equipped) Nullifies Crit damages & Elemental weakness & 100% Elemental weakness (self) & Boosts BB ATK (400%) and Spark damage (100%) & Adds double BB/SBB/UBB effect for 1 turn (self) to BB/SBB/UBB",
+		"effects": [
+			{
+				"conditions": [
+					{
+						"unit required": []
+					},
+					{
+						"item required": [
+							"701019"
+						]
+					}
+				],
+				"dark units do extra elemental weakness dmg": true,
+				"earth units do extra elemental weakness dmg": true,
+				"elemental weakness multiplier%": 100,
+				"fire units do extra elemental weakness dmg": true,
+				"light units do extra elemental weakness dmg": true,
+				"passive id": "50",
+				"passive target": "self",
+				"thunder units do extra elemental weakness dmg": true,
+				"water units do extra elemental weakness dmg": true
+			},
+			{
+				"conditions": [
+					{
+						"unit required": []
+					},
+					{
+						"item required": [
+							"701019"
+						]
+					}
+				],
+				"crit chance base resist%": 100,
+				"crit chance buffed resist%": 100,
+				"passive id": "53",
+				"passive target": "self",
+				"strong base element damage resist%": 100,
+				"strong buffed element damage resist%": 100
+			},
+			{
+				"bb atk% buff": 400,
+				"conditions": [
+					{
+						"unit required": []
+					},
+					{
+						"item required": [
+							"701019"
+						]
+					}
+				],
+				"passive id": "64",
+				"passive target": "self",
+				"sbb atk% buff": 400,
+				"ubb atk% buff": 400
+			},
+			{
+				"conditions": [
+					{
+						"unit required": []
+					},
+					{
+						"item required": [
+							"701019"
+						]
+					}
+				],
+				"damage% for spark": 100,
+				"passive id": "31",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"unit required": []
+					},
+					{
+						"item required": [
+							"701019"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"trigger on ubb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "50.0/3",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "1,3,0,0,0,0,0,0,0"
+					}
+				]
+			}
+		],
+		"id": "740166",
+		"name": "Complicated Legacy",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",

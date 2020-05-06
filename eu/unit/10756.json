@@ -320,8 +320,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 42,
 	"damage frames": {
@@ -361,7 +360,42 @@
 	"element": "fire",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Boosts Atk relative to remaining HP, boosts Atk when BB gauge is full & 20% boost to all parameters when Dandelga is equipped",
+		"effects": [
+			{
+				"atk% buff": 20,
+				"conditions": [
+					{
+						"item required": [
+							"37600"
+						]
+					}
+				],
+				"def% buff": 20,
+				"hp% buff": 20,
+				"passive id": "1",
+				"passive target": "self",
+				"rec% buff": 20
+			},
+			{
+				"atk% buff": 50,
+				"bb gauge above % buff requirement": 100,
+				"conditions": [],
+				"passive id": "30",
+				"passive target": "self"
+			},
+			{
+				"atk% base buff": 0,
+				"atk% extra buff based on hp": 50,
+				"buff proportional to hp": "remaining",
+				"conditions": [],
+				"passive id": "46",
+				"passive target": "self"
+			}
+		],
+		"id": "8600",
+		"name": "Flame of Atonement",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",

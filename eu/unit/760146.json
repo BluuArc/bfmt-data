@@ -508,8 +508,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 43,
 	"damage frames": {
@@ -550,7 +549,69 @@
 	"element": "dark",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "If Propaganda Codex or Noblesse Title equipped, Boosts dmg to ailed enemy (100%) & If Propaganda Codex equipped, Raises normal hit amount (+1), Adds Raises normal hit amount (+2) for 3 turns to BB/SBB",
+		"effects": [
+			{
+				"atk% buff when enemy has ailment": 100,
+				"atk% buff when enemy has curse": true,
+				"atk% buff when enemy has injury": true,
+				"atk% buff when enemy has paralysis": true,
+				"atk% buff when enemy has poison": true,
+				"atk% buff when enemy has sick": true,
+				"atk% buff when enemy has weaken": true,
+				"conditions": [
+					{
+						"item required": [
+							"701009"
+						]
+					},
+					{
+						"item required": [
+							"701015"
+						]
+					}
+				],
+				"passive id": "74",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701015"
+						]
+					}
+				],
+				"error occured during parsing": "<type 'exceptions.ValueError'>",
+				"passive id": "37",
+				"passive param": "",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701015"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on ubb": true,
+				"triggered effect": [
+					{
+						"bb atk%": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "1",
+						"target area": "0",
+						"target type": "0"
+					}
+				]
+			}
+		],
+		"id": "760146",
+		"name": "Wiles of the Matriarch",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

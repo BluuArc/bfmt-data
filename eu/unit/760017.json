@@ -32,7 +32,9 @@
 		"idle": {
 			"total number of frames": 48
 		},
-		"move": "missing data"
+		"move": {
+			"total number of frames": 10
+		}
 	},
 	"bb": {
 		"damage frames": [
@@ -490,8 +492,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 47,
 	"damage frames": {
@@ -534,7 +535,50 @@
 	"element": "dark",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "If Winter's Bells is equipped, boosts ATK (80%) when HP is full and adds Spark damage boosts BB gauge (2-3 BC) for 3 turns on BB/SBB",
+		"effects": [
+			{
+				"atk% buff": 80,
+				"conditions": [
+					{
+						"item required": [
+							"701025"
+						]
+					}
+				],
+				"hp above % buff requirement": 100,
+				"passive id": "11",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701025"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"bc fill on spark buff turns (111)": 3,
+						"bc fill on spark high": 3,
+						"bc fill on spark low": 2,
+						"bc fill on spark%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "67",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "760017",
+		"name": "My Own Tale",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

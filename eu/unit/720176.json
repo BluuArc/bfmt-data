@@ -740,8 +740,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 45,
 	"damage frames": {
@@ -780,7 +779,52 @@
 	"element": "water",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Provides immunity to all status ailments & Boosts damage dealt to foes with status ailments (100%) & Adds Boosts dmg dealt to foes with ailments for 3 turns (130%) to BB/SBB",
+		"effects": [
+			{
+				"conditions": [],
+				"curse resist%": 100,
+				"injury resist%": 100,
+				"paralysis resist%": 100,
+				"passive id": "4",
+				"passive target": "self",
+				"poison resist%": 100,
+				"sick resist%": 100,
+				"weaken resist%": 100
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"atk% buff turns (110)": 3,
+						"atk% buff when enemy has ailment": 130,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "65",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"atk% buff when enemy has ailment": 100,
+				"atk% buff when enemy has curse": true,
+				"atk% buff when enemy has injury": true,
+				"atk% buff when enemy has paralysis": true,
+				"atk% buff when enemy has poison": true,
+				"atk% buff when enemy has sick": true,
+				"atk% buff when enemy has weaken": true,
+				"conditions": [],
+				"passive id": "74",
+				"passive target": "self"
+			}
+		],
+		"id": "720176",
+		"name": "Cursed Cocoon",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

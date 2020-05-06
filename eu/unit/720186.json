@@ -366,8 +366,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 45,
 	"damage frames": {
@@ -416,7 +415,69 @@
 	"element": "water",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds dark element to attack, BB/SBB and crit rate (60%) to BB/SBB/UBB for 3 turns when Duel Fragment is equipped & Critical hits boost BB gauge (3BC)",
+		"effects": [
+			{
+				"conditions": [
+					{
+						"item required": [
+							"47201"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"47201"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"trigger on ubb": true,
+				"triggered effect": [
+					{
+						"buff turns": 3,
+						"crit% buff (7)": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "all",
+						"proc id": "5",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"conditions": [],
+				"error occured during parsing": "<type 'exceptions.ValueError'>",
+				"passive id": "65",
+				"passive param": "300,",
+				"passive target": "self"
+			}
+		],
+		"id": "720186",
+		"name": "Gazing at the Endless Sea",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

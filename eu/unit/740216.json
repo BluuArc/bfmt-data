@@ -574,8 +574,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 43,
 	"damage frames": {
@@ -624,7 +623,80 @@
 	"element": "thunder",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "When Hunting Guide or Noblesse Title is equipped boosts Spark damage (100%) for 3 turns when sparks have exceeded certain amount (15) & When Hunting Guide is equipped adds fill own BB gauge and negates ATK, DEF, REC reduction for 1 turn to BB/SBB",
+		"effects": [
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701008"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701008"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"atk down resist% (120)": 100,
+						"def down resist% (121)": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "73",
+						"rec down resist% (122)": 100,
+						"stat down immunity buff turns": 1,
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"buff": {
+					"buff turns (40)": "3",
+					"spark dmg% buff": 100
+				},
+				"conditions": [
+					{
+						"item required": [
+							"701006"
+						]
+					},
+					{
+						"item required": [
+							"701008"
+						]
+					}
+				],
+				"passive id": "86",
+				"passive target": "self",
+				"spark count buff activation": 15
+			}
+		],
+		"id": "740216",
+		"name": "Avenging Spirit",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",

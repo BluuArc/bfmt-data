@@ -414,8 +414,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 45,
 	"damage frames": {
@@ -466,7 +465,44 @@
 	"element": "fire",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "20% boost to Atk, Def, Rec, max HP when Medblare is equipped & adds huge damage boost against status afflicted foes to BB/SBB for 3 turns",
+		"effects": [
+			{
+				"atk% buff": 20,
+				"conditions": [
+					{
+						"item required": [
+							"49940"
+						]
+					}
+				],
+				"def% buff": 20,
+				"hp% buff": 20,
+				"passive id": "1",
+				"passive target": "self",
+				"rec% buff": 20
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"atk% buff turns (110)": 3,
+						"atk% buff when enemy has ailment": 160,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "65",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "12000",
+		"name": "Glorious Charge",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "farmable",

@@ -484,8 +484,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 47,
 	"damage frames": {
@@ -526,7 +525,49 @@
 	"element": "fire",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Negates all status ailments and elemental damage & adds Fire barrier effect to BB/SBB",
+		"effects": [
+			{
+				"conditions": [],
+				"curse resist%": 100,
+				"injury resist%": 100,
+				"paralysis resist%": 100,
+				"passive id": "4",
+				"passive target": "self",
+				"poison resist%": 100,
+				"sick resist%": 100,
+				"weaken resist%": 100
+			},
+			{
+				"conditions": [],
+				"passive id": "53",
+				"passive target": "self",
+				"strong base element damage resist%": 100,
+				"strong buffed element damage resist%": 100
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental barrier absorb dmg%": 100,
+						"elemental barrier def": 0,
+						"elemental barrier element": "fire",
+						"elemental barrier hp": 2000,
+						"proc id": "62",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "14301",
+		"name": "To the Open World",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",

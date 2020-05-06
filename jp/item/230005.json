@@ -1,9 +1,31 @@
 {
 	"bfmtMetadata": {
 		"createdAt": "2016-12-15T03:30:03.000Z",
-		"updatedAt": "2016-12-15T23:17:20.000Z"
+		"updatedAt": "2017-03-09T01:46:15.000Z"
 	},
 	"desc": "全てのユニットの回復力・最大ＨＰを３０％アップ＆ターン毎にＨＰを回復＆被ダメージ時、確率でＨＰを少し回復",
+	"dictionary": {
+		"lore": "Saint Tracion grieved. She grieved for the many lives lost to the unending, senseless wars within her nation. She went on a hunger strike to save her people, praying for them, and dying before her time. The gods that pitied Tracion bestowed a charm upon her adherents. Legends hold that the people's hearts became tranquil and they ceased their violence against one another when Tracion's adherents presented it as an offering at the temple."
+	},
+	"effect": [
+		{
+			"hp% buff": 30,
+			"passive id": "1",
+			"rec% buff": 30
+		},
+		{
+			"passive id": "33",
+			"rec% added (turn heal)": 10,
+			"turn heal high": 700,
+			"turn heal low": 700
+		},
+		{
+			"dmg% to hp% when attacked chance%": 25,
+			"dmg% to hp% when attacked high": 15,
+			"dmg% to hp% when attacked low": 15,
+			"passive id": "24"
+		}
+	],
 	"id": 230005,
 	"max_stack": 1,
 	"name": "讃崇符ドラシオン",
@@ -43,6 +65,11 @@
 	"sphere type": 1,
 	"sphere type text": "Status Boost",
 	"thumbnail": "ls_sphere_thum_7_8.png",
-	"type": null,
-	"usage": []
+	"type": "ls_sphere",
+	"usage": [
+		{
+			"id": 230006,
+			"name": "霊祀環セル・ナリア"
+		}
+	]
 }

@@ -546,8 +546,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 45,
 	"damage frames": {
@@ -588,7 +587,41 @@
 	"element": "dark",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Increases number of hits dealt by normal attack (+1) & If Photon Scepter of Summoning is equipped, adds damage reduction (50%) for 1 turn to BB/SBB",
+		"effects": [
+			{
+				"conditions": [],
+				"hit increase/hit": 1,
+				"passive id": "37",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701021"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"dmg% reduction": 50,
+						"dmg% reduction turns (36)": 1,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "760166",
+		"name": "Ancient Presence",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",

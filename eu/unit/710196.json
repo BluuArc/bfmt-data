@@ -566,8 +566,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 43,
 	"damage frames": {
@@ -606,7 +605,45 @@
 	"element": "fire",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Critical damage boost BB gauge (5 BC) & Chance (15%) of reducing damage taken to 1 & Adds Fire element to BB/SBB for 3 turns",
+		"effects": [
+			{
+				"bc fill on crit max": 5,
+				"bc fill on crit min": 5,
+				"bc fill on crit%": 100,
+				"conditions": [],
+				"passive id": "65",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"passive id": "43",
+				"passive target": "self",
+				"take 1 dmg%": 15
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "710196",
+		"name": "Fervent Ardor",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",
@@ -1358,11 +1395,13 @@
 						"target type": "enemy"
 					},
 					{
+						"chance% for extra action": 30,
 						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
 						"target area": "aoe",
-						"target type": "party",
-						"unknown proc id": "76",
-						"unknown proc param": "1,30,1,0"
+						"target type": "party"
 					}
 				]
 			}

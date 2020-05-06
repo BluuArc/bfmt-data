@@ -420,8 +420,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 41,
 	"damage frames": {
@@ -458,7 +457,57 @@
 	"element": "light",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "If Arthur's Will equipped or Arthur is in the squad, adds Boosts BB ATK (300%) for 3 turns to BB/SBB and Critical hit fill BB gauge (6 BC)",
+		"effects": [
+			{
+				"conditions": [
+					{
+						"unit required": []
+					},
+					{
+						"item required": [
+							"701022"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"bb atk% buff": 300,
+						"buff turns (72)": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "45",
+						"sbb atk% buff": 300,
+						"target area": "aoe",
+						"target type": "party",
+						"ubb atk% buff": 300
+					}
+				]
+			},
+			{
+				"bc fill on crit max": 6,
+				"bc fill on crit min": 6,
+				"bc fill on crit%": 100,
+				"conditions": [
+					{
+						"unit required": []
+					},
+					{
+						"item required": [
+							"701022"
+						]
+					}
+				],
+				"passive id": "65",
+				"passive target": "self"
+			}
+		],
+		"id": "750226",
+		"name": "Dedicated Companion",
+		"target": "self"
 	},
 	"gender": "other",
 	"getting type": "farmable",

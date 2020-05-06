@@ -1,0 +1,372 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "atk_max",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 30,
+			"target conditions": "hp_min",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"error": "data missing"
+	},
+	"bb": {
+		"error": "data missing",
+		"id": "61117"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2017-03-08T10:56:26.000Z",
+		"updatedAt": "2017-03-09T01:46:15.000Z"
+	},
+	"category": 61110,
+	"cost": 47,
+	"damage frames": {
+		"frame times": [
+			97,
+			101,
+			105,
+			109,
+			113,
+			127,
+			131,
+			135,
+			139,
+			143,
+			147,
+			151,
+			155,
+			159
+		],
+		"hit dmg% distribution": [
+			7,
+			7,
+			7,
+			7,
+			7,
+			7,
+			8,
+			8,
+			7,
+			7,
+			7,
+			7,
+			7,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 14
+	},
+	"drop check count": 4,
+	"element": "dark",
+	"evolution": {
+		"prev": "61116"
+	},
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "ＨＰが満タン時、攻撃力をかなりアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージを大幅にアップ」を追加",
+		"effects": [
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"atk% buff turns (110)": 3,
+						"atk% buff when enemy has ailment": 180,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "65",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"atk% buff": 80,
+				"conditions": [],
+				"hp above % buff requirement": 100,
+				"passive id": "11",
+				"passive target": "self"
+			}
+		],
+		"id": "32900",
+		"name": "鏡合わせのアンチテーゼ",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "800000",
+			"skill": {
+				"bp": 10,
+				"desc": "ＢＢゲージが満タン時、攻撃力・防御力・回復力をアップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 50,
+							"bb gauge above % buff requirement": 100,
+							"def% buff": 50,
+							"passive id": "30",
+							"rec% buff": 50
+						}
+					}
+				],
+				"id": "800000",
+				"level": 1,
+				"name": "ＢＢゲージが満タン時、攻撃力・防御力・回復力アップ",
+				"series": "800000"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1030000",
+			"skill": {
+				"bp": 40,
+				"desc": "スパークダメージを７０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 70,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1030000",
+				"level": 4,
+				"name": "スパークダメージ７０％アップ",
+				"series": "1000000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "20001100",
+			"skill": {
+				"bp": 20,
+				"desc": "リーダースキルの「最大ＨＰを５０％アップ」を６０％にグレードアップ",
+				"effects": [
+					{
+						"add to passive": {
+							"hp% buff": 10,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "20001100",
+				"level": 6,
+				"name": "リーダースキル「最大ＨＰを５０％アップ」効果を強化",
+				"series": "20001000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "20230100",
+			"skill": {
+				"bp": 20,
+				"desc": "リーダースキルの「スパークダメージを１００％アップ」を１２０％にグレードアップ",
+				"effects": [
+					{
+						"add to passive": {
+							"damage% for spark": 20,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "20230100",
+				"level": 4,
+				"name": "リーダースキル「スパークダメージを１００％アップ」効果を強化",
+				"series": "20200000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "31000200",
+			"skill": {
+				"bp": 40,
+				"desc": "ＳＢＢの「スパークダメージを超絶アップ」効果量を増加",
+				"effects": [
+					{
+						"add to sbb": {
+							"buff turns": 0,
+							"proc id": "23",
+							"spark dmg% buff (40)": 30
+						}
+					}
+				],
+				"id": "31000200",
+				"level": 5,
+				"name": "ＳＢＢの「スパークダメージをアップ」効果を強化",
+				"series": "31000100"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "33002100",
+			"skill": {
+				"bp": 40,
+				"desc": "ＳＢＢの「攻撃ＢＢの威力を大幅にアップ」効果量を増加",
+				"effects": [
+					{
+						"add to sbb": {
+							"bb atk% buff": 100,
+							"buff turns (72)": 0,
+							"proc id": "45",
+							"sbb atk% buff": 100,
+							"ubb atk% buff": 100
+						}
+					}
+				],
+				"id": "33002100",
+				"level": 4,
+				"name": "ＳＢＢの「攻撃ＢＢの威力をアップ」効果を強化",
+				"series": "33002000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "51001004",
+			"skill": {
+				"bp": 50,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、スパーク時、ＢＢゲージを増加」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"bc fill on spark buff turns (111)": 3,
+									"bc fill on spark high": 3,
+									"bc fill on spark low": 2,
+									"bc fill on spark%": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "67",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "51001004",
+				"level": 4,
+				"name": "ＢＢ・ＳＢＢに「スパーク時、ＢＢゲージを増加」追加",
+				"series": "51001000"
+			}
+		}
+	],
+	"gender": "female",
+	"getting type": "rare summon",
+	"guide_id": 1597,
+	"id": 61117,
+	"imp": {
+		"max atk": "800",
+		"max def": "500",
+		"max hp": "1250",
+		"max rec": "400"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "全てのユニットの最大ＨＰを５０％アップ＆残りＨＰが多いほど、攻撃力を大幅にアップ＆スパークダメージを１００％アップ＆攻撃ＢＢの威力を超絶アップ",
+		"effects": [
+			{
+				"hp% buff": 50,
+				"passive id": "1"
+			},
+			{
+				"atk% base buff": 0,
+				"atk% extra buff based on hp": 120,
+				"buff proportional to hp": "remaining",
+				"passive id": "46"
+			},
+			{
+				"damage% for spark": 100,
+				"passive id": "31"
+			},
+			{
+				"bb atk% buff": 200,
+				"passive id": "64",
+				"sbb atk% buff": 200,
+				"ubb atk% buff": 200
+			}
+		],
+		"id": "12511",
+		"name": "虚女神の魅惑"
+	},
+	"lord damage range": "3114~3478",
+	"movement": {
+		"attack": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "3"
+		},
+		"skill": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "3"
+		}
+	},
+	"name": "虚神影華エンサ＝タヤ",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"error": "data missing",
+		"id": "161117"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2667,
+			"def": 2224,
+			"hp": 6105,
+			"rec": 2033
+		},
+		"_lord": {
+			"atk": 3345,
+			"def": 2767,
+			"hp": 7950,
+			"rec": 2538
+		}
+	},
+	"ubb": {
+		"error": "data missing",
+		"id": "261117"
+	}
+}

@@ -1,0 +1,428 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "atk_max",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 30,
+			"target conditions": "hp_min",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"error": "data missing"
+	},
+	"bb": {
+		"error": "data missing",
+		"id": "51137"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2017-03-08T10:56:26.000Z",
+		"updatedAt": "2017-03-09T01:46:15.000Z"
+	},
+	"category": 51130,
+	"cost": 50,
+	"damage frames": {
+		"frame times": [
+			12,
+			15,
+			46,
+			80,
+			83,
+			86,
+			89,
+			92,
+			95,
+			98,
+			101,
+			104
+		],
+		"hit dmg% distribution": [
+			7,
+			3,
+			6,
+			10,
+			9,
+			10,
+			8,
+			10,
+			8,
+			10,
+			9,
+			10
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 12
+	},
+	"drop check count": 4,
+	"element": "light",
+	"evolution": {
+		"prev": "51136"
+	},
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "ＢＢゲージが半分以上の時、攻撃力・防御力をかなりアップ＆ＨＰが半分以上の時、スパークダメージを大幅にアップ",
+		"effects": [
+			{
+				"atk% buff": 80,
+				"bb gauge above % buff requirement": 50,
+				"conditions": [],
+				"def% buff": 80,
+				"passive id": "30",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"damage% for spark": 80,
+				"hp above % buff requirement": 50,
+				"passive id": "104",
+				"passive target": "self"
+			}
+		],
+		"id": "32200",
+		"name": "クレイジーサイエンス",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "550103",
+			"skill": {
+				"bp": 20,
+				"desc": "攻撃力・最大ＨＰを３０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 30,
+							"hp% buff": 30,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "550103",
+				"level": 2,
+				"name": "攻撃力・最大ＨＰ＋３０％",
+				"series": "500000"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1040003",
+			"skill": {
+				"bp": 15,
+				"desc": "スパークダメージを１００％アップ",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 100,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1040003",
+				"level": 5,
+				"name": "スパークダメージ１００％アップ",
+				"series": "1000000"
+			}
+		},
+		{
+			"category": "5",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "4110001",
+			"skill": {
+				"bp": 10,
+				"desc": "被ダメージ時、ＢＢゲージを増加",
+				"effects": [
+					{
+						"passive": {
+							"bc fill when attacked high": 3,
+							"bc fill when attacked low": 2,
+							"bc fill when attacked%": 100,
+							"passive id": "25"
+						}
+					}
+				],
+				"id": "4110001",
+				"level": 2,
+				"name": "被ダメージ時、ＢＢゲージを増加",
+				"series": "4100000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "10800000",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力の上限値（９９９９９）を１３００００まで解放する",
+				"effects": [
+					{
+						"passive": {
+							"unknown passive id": "143",
+							"unknown passive params": "130000"
+						}
+					}
+				],
+				"id": "10800000",
+				"level": 4,
+				"name": "攻撃力上限突破",
+				"series": "10800000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "38003100",
+			"skill": {
+				"bp": 25,
+				"desc": "ＳＢＢの「確率で攻撃力・防御力を大幅に低下」効果量を増加",
+				"effects": [
+					{
+						"add to sbb": {
+							"buff turns": 0,
+							"element buffed": "all",
+							"proc id": "9"
+						}
+					}
+				],
+				"id": "38003100",
+				"level": 5,
+				"name": "ＳＢＢの「確率で攻撃力・防御力を低下」効果を強化",
+				"series": "38003000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "38005001",
+			"skill": {
+				"bp": 25,
+				"desc": "ＳＢＢの「確率で攻撃力・防御力を１ターン大幅に低下」の効果継続ターン数が２ターンになる",
+				"effects": [
+					{
+						"add to sbb": {
+							"buff turns": 1,
+							"element buffed": "all",
+							"proc id": "9"
+						}
+					}
+				],
+				"id": "38005001",
+				"level": 4,
+				"name": "ＳＢＢの「確率で攻撃力・防御力を低下」継続ターンが２ターンになる",
+				"series": "38005000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "54002002",
+			"skill": {
+				"bp": 30,
+				"desc": "ＢＢ及びＳＢＢに「味方のＢＢゲージを大幅に増加」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"increase bb gauge": 8,
+									"proc id": "31",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "54002002",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「ＢＢゲージを大幅に増加」追加",
+				"series": "54002000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "52001004",
+			"skill": {
+				"bp": 30,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"buff turns": 3,
+									"crit% buff (7)": 60,
+									"effect delay time(ms)/frame": "0.0/0",
+									"element buffed": "all",
+									"proc id": "5",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "52001004",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「クリティカル率を超絶アップ」追加",
+				"series": "52001000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "51000005",
+			"skill": {
+				"bp": 30,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、スパークダメージを超絶アップ」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"buff turns": 3,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "23",
+									"spark dmg% buff (40)": 130,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "51000005",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「スパークダメージを超絶アップ」追加",
+				"series": "51000000"
+			}
+		}
+	],
+	"gender": "female",
+	"getting type": "rare summon",
+	"guide_id": 1588,
+	"id": 51137,
+	"imp": {
+		"max atk": "800",
+		"max def": "400",
+		"max hp": "1250",
+		"max rec": "500"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "全てのユニットの攻撃力・最大ＨＰを６０％アップ＆ＨＰが半分以上の時、攻撃力・防御力・回復力をアップ＆スパーク時、ＢＢゲージを増加＆ダメージを与える度に２ターン、確率で攻撃力を１ターン低下する効果を付与",
+		"effects": [
+			{
+				"atk% buff": 60,
+				"hp% buff": 60,
+				"passive id": "1"
+			},
+			{
+				"atk% buff": 50,
+				"def% buff": 50,
+				"hp above % buff requirement": 50,
+				"passive id": "11",
+				"rec% buff": 50
+			},
+			{
+				"bc fill on spark high": 3,
+				"bc fill on spark low": 2,
+				"bc fill on spark%": 100,
+				"passive id": "47"
+			},
+			{
+				"buff": {
+					"buff turns (74)": "2",
+					"unknown buff id": "74",
+					"unknown buff params": "-20&30&1"
+				},
+				"damage dealt threshold buff activation": 1,
+				"passive id": "80"
+			}
+		],
+		"id": "7498",
+		"name": "虹機玲神の歪輝"
+	},
+	"lord damage range": "3152~3521",
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
+	"name": "究華の狂鋼機イオニア",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"error": "data missing",
+		"id": "151137"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2700,
+			"def": 2335,
+			"hp": 6338,
+			"rec": 2377
+		},
+		"_lord": {
+			"atk": 3386,
+			"def": 2905,
+			"hp": 8241,
+			"rec": 2968
+		}
+	},
+	"ubb": {
+		"error": "data missing",
+		"id": "251137"
+	}
+}

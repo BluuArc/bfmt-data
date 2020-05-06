@@ -646,8 +646,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 43,
 	"damage frames": {
@@ -682,7 +681,39 @@
 	"element": "light",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds gradual HP recovery for 3 turns to BB/SBB & Reflect DMG taken to other random enemy (50%)",
+		"effects": [
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"gradual heal high": 3000,
+						"gradual heal low": 2500,
+						"gradual heal turns (8)": 3,
+						"proc id": "3",
+						"rec added% (from target)": 15,
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"conditions": [],
+				"dmg% reflect chance%": 100,
+				"dmg% reflect high": 50,
+				"dmg% reflect low": 50,
+				"passive id": "26",
+				"passive target": "self"
+			}
+		],
+		"id": "750196",
+		"name": "Psychic Resonance",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

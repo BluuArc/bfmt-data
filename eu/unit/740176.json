@@ -442,8 +442,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 48,
 	"damage frames": {
@@ -480,7 +479,37 @@
 	"element": "thunder",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds Removes status ailments to BB/SBB/UBB & Boosts BB gauge when attacked (3-5 BC)",
+		"effects": [
+			{
+				"bc fill when attacked high": 5,
+				"bc fill when attacked low": 3,
+				"bc fill when attacked%": 100,
+				"conditions": [],
+				"passive id": "25",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"trigger on ubb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10",
+						"remove all status ailments": true,
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "740176",
+		"name": "Profane Voltage",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

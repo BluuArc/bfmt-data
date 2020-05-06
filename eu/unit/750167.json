@@ -344,8 +344,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 48,
 	"damage frames": {
@@ -392,7 +391,98 @@
 	"element": "light",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "If Caliburn is equipped, 20% to ATK, DEF (all) and adds OD gauge fill rate (20%) 3 turns to BB/SBB & If Grail is equipped, boosts ATK (50%), critical damage (100%), Spark damage (100%) and BB ATK (100%)",
+		"effects": [
+			{
+				"atk% buff": 20,
+				"conditions": [
+					{
+						"item required": [
+							"701023"
+						]
+					}
+				],
+				"def% buff": 20,
+				"passive id": "1",
+				"passive target": "party"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701023"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill rate buff turns (132)": 3,
+						"od fill rate% buff": 20,
+						"proc id": "84",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"atk% buff": 50,
+				"conditions": [
+					{
+						"item required": [
+							"700008"
+						]
+					}
+				],
+				"passive id": "1",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"700008"
+						]
+					}
+				],
+				"crit multiplier%": 100,
+				"passive id": "34",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"700008"
+						]
+					}
+				],
+				"damage% for spark": 100,
+				"passive id": "31",
+				"passive target": "self"
+			},
+			{
+				"bb atk% buff": 100,
+				"conditions": [
+					{
+						"item required": [
+							"700008"
+						]
+					}
+				],
+				"passive id": "64",
+				"passive target": "self",
+				"sbb atk% buff": 100,
+				"ubb atk% buff": 100
+			}
+		],
+		"id": "750167",
+		"name": "Unwavering Will",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",

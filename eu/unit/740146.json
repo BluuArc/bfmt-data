@@ -323,8 +323,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 43,
 	"damage frames": {
@@ -347,7 +346,70 @@
 	"element": "thunder",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "If Aries' Hammers or Noblesse Title equipped, Boosts critical damage (150%) for 2 turns on critical & If Aries' Hammers equipped, Adds Boosts Spark dmg (100%) for 3 turns to BB/SBB and boosts DEF (120%) for 2 turns when HP are below 50%",
+		"effects": [
+			{
+				"buff": {
+					"buff turns (84)": "2",
+					"unknown buff id": "84",
+					"unknown buff params": "1.5"
+				},
+				"conditions": [
+					{
+						"item required": [
+							"701009"
+						]
+					},
+					{
+						"item required": [
+							"701013"
+						]
+					}
+				],
+				"on crit activation chance%": 100,
+				"passive id": "89",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701013"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "23",
+						"spark dmg% buff (40)": 100,
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701013"
+						]
+					}
+				],
+				"def% buff": 120,
+				"hp below % buff requirement": 50,
+				"passive id": "11",
+				"passive target": "self"
+			}
+		],
+		"id": "740146",
+		"name": "Shiver of Combat",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",

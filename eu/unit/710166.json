@@ -430,8 +430,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 42,
 	"damage frames": {
@@ -470,7 +469,75 @@
 	"element": "fire",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds chance of inflicting Curse and Paralysis when attacking (10%) & absorbs HP when attacking (5-10%, SELF) & If Cursed Photon Rod is equipped, adds Boosts damage dealt to ailed enemies (160%) 3 turns to BB/SBB, and adds Heal on Spark effect 3 turns to B",
+		"effects": [
+			{
+				"conditions": [],
+				"curse%": 10,
+				"paralysis%": 10,
+				"passive id": "20",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"hp drain chance%": 100,
+				"hp drain% high": 10,
+				"hp drain% low": 5,
+				"passive id": "17",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701018"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"atk% buff turns (110)": 3,
+						"atk% buff when enemy has ailment": 160,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "65",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701018"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "87",
+						"spark recover hp buff turns (135)": 3,
+						"spark recover hp chance%": 100,
+						"spark recover hp high": 500,
+						"spark recover hp low": 400,
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "710166",
+		"name": "Burning Siphon",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

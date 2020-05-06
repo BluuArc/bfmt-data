@@ -522,8 +522,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 40,
 	"damage frames": {
@@ -576,7 +575,53 @@
 	"element": "light",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds status ailment recovery effect to BB/SBB & when White Armor is equipped, 20% boost to all parameters",
+		"effects": [
+			{
+				"atk% buff": 20,
+				"conditions": [
+					{
+						"item required": [
+							"47200"
+						]
+					}
+				],
+				"def% buff": 20,
+				"hp% buff": 20,
+				"passive id": "1",
+				"passive target": "self",
+				"rec% buff": 20
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"ailments cured": [
+							"poison",
+							"weaken",
+							"sick",
+							"injury",
+							"curse",
+							"paralysis",
+							"atk down",
+							"def down",
+							"rec down"
+						],
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "38",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "4900",
+		"name": "Soul Blessed by the Gods",
+		"target": "self"
 	},
 	"gender": "other",
 	"getting type": "rare summon",

@@ -1,17 +1,38 @@
 {
 	"bfmtMetadata": {
 		"createdAt": "2016-11-09T14:29:41.000Z",
-		"updatedAt": "2016-12-15T03:30:03.000Z"
+		"updatedAt": "2017-03-09T17:47:37.000Z"
 	},
-	"desc": "全てのユニットの攻撃力・防御力・回復力・最大ＨＰを２５％アップ＆被ダメージ時、確率でＢＢゲージを少し増加＆通常攻撃時、確率でＢＢゲージを増加",
+	"desc": "25% boost to all parameters, damage taken may slightly boost BB gauge & probable boost to BB gauge when attacking normally",
 	"dictionary": {
 		"lore": "The mantle that sealed the Mystical Wolf's proud, royal soul, it's said to hold part of the Wolf's immense power. It heightens all the senses in those who wear it. Also, in addition to imbuing its wearer with an unyielding will to fight, it imparts the ability to respond calmly and rationally in any situation. An individual wearing this cape is able to continue fighting undaunted no matter the circumstances."
 	},
+	"effect": [
+		{
+			"atk% buff": 25,
+			"def% buff": 25,
+			"hp% buff": 25,
+			"passive id": "1",
+			"rec% buff": 25
+		},
+		{
+			"bc fill when attacked high": 2,
+			"bc fill when attacked low": 1,
+			"bc fill when attacked%": 50,
+			"passive id": "25"
+		},
+		{
+			"bc fill when attacking high": 3,
+			"bc fill when attacking low": 2,
+			"bc fill when attacking%": 50,
+			"passive id": "35"
+		}
+	],
 	"id": 235000,
 	"max_stack": 1,
-	"name": "天狼套ゼフィーロ",
+	"name": "Lupine Mantle",
 	"raid": false,
-	"rarity": 4,
+	"rarity": 3,
 	"recipe": {
 		"karma": "200000",
 		"materials": [
@@ -46,6 +67,6 @@
 	"sphere type": 1,
 	"sphere type text": "Status Boost",
 	"thumbnail": "ls_sphere_thum_8_4.png",
-	"type": null,
+	"type": "ls_sphere",
 	"usage": []
 }

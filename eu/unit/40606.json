@@ -442,8 +442,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 42,
 	"damage frames": {
@@ -490,7 +489,37 @@
 	"element": "thunder",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds Def ignoring effect to BB/SBB for 2 turns & Spark damage slightly boosts BB gauge",
+		"effects": [
+			{
+				"bc fill on spark high": 1,
+				"bc fill on spark low": 1,
+				"bc fill on spark%": 100,
+				"conditions": [],
+				"passive id": "47",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"defense% ignore": 100,
+						"defense% ignore turns (39)": 2,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "22",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "5300",
+		"name": "Bequeathed Techniques",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",

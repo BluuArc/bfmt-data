@@ -582,8 +582,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 42,
 	"damage frames": {
@@ -624,7 +623,41 @@
 	"element": "earth",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds BC, HC drop rate boost to BB/SBB for 3 turns & negates critical, elemental damage",
+		"effects": [
+			{
+				"conditions": [],
+				"crit chance base resist%": 100,
+				"crit chance buffed resist%": 100,
+				"crit dmg base damage resist%": 100,
+				"crit dmg buffed damage resist%": 100,
+				"passive id": "53",
+				"passive target": "self",
+				"strong base element damage resist%": 100,
+				"strong buffed element damage resist%": 100
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"bc drop rate% buff (10)": 30,
+						"drop rate buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hc drop rate% buff (9)": 30,
+						"proc id": "6",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "8800",
+		"name": "Dolk's Fencing Doctrine",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",

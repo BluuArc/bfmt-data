@@ -414,8 +414,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 42,
 	"damage frames": {
@@ -460,7 +459,57 @@
 	"element": "fire",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "When Surt's Blade or Valhalla Insignia is equipped boosts damages dealt to foes with status ailments (100%) & Renders self able to withstand one KO attack when HP is below 20%",
+		"effects": [
+			{
+				"atk% buff when enemy has ailment": 100,
+				"atk% buff when enemy has curse": true,
+				"atk% buff when enemy has injury": true,
+				"atk% buff when enemy has paralysis": true,
+				"atk% buff when enemy has poison": true,
+				"atk% buff when enemy has sick": true,
+				"atk% buff when enemy has weaken": true,
+				"conditions": [
+					{
+						"item required": [
+							"701001"
+						]
+					},
+					{
+						"item required": [
+							"701003"
+						]
+					}
+				],
+				"passive id": "74",
+				"passive target": "self"
+			},
+			{
+				"buff": {
+					"angel idol buff (12)": true,
+					"angel idol recover hp%": 100,
+					"buff turns (12)": "-1"
+				},
+				"conditions": [
+					{
+						"item required": [
+							"701001"
+						]
+					},
+					{
+						"item required": [
+							"701003"
+						]
+					}
+				],
+				"hp below % buff activation": 20,
+				"passive id": "55",
+				"passive target": "self"
+			}
+		],
+		"id": "710116",
+		"name": "Flame of Betrayal",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "farmable",

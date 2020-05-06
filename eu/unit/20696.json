@@ -418,8 +418,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 42,
 	"damage frames": {
@@ -466,7 +465,36 @@
 	"element": "water",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds BB gauge fill rate boost to BB/SBB for 3 turns & greatly boosts elemental damage",
+		"effects": [
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"bb gauge fill rate% buff": 30,
+						"buff turns (77)": 3,
+						"effect delay time(ms)/frame": "66.7/4",
+						"proc id": "52",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"conditions": [],
+				"elemental weakness multiplier%": 50,
+				"passive id": "50",
+				"passive target": "self",
+				"water units do extra elemental weakness dmg": true
+			}
+		],
+		"id": "8700",
+		"name": "Unsealed Power and Will",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

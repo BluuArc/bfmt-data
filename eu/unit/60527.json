@@ -20,9 +20,15 @@
 		}
 	],
 	"animations": {
-		"attack": "missing data",
-		"idle": "missing data",
-		"move": "missing data"
+		"attack": {
+			"total number of frames": 165
+		},
+		"idle": {
+			"total number of frames": 52
+		},
+		"move": {
+			"total number of frames": 12
+		}
 	},
 	"bb": {
 		"damage frames": [
@@ -528,8 +534,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 47,
 	"damage frames": {
@@ -576,7 +581,44 @@
 	"element": "dark",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds Def ignoring effect for 2 turns to BB/SBB, slight HP absorption & 80% boost to Spark damage when HP is over 50%",
+		"effects": [
+			{
+				"conditions": [],
+				"hp drain chance%": 100,
+				"hp drain% high": 10,
+				"hp drain% low": 5,
+				"passive id": "17",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"defense% ignore": 100,
+						"defense% ignore turns (39)": 2,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "22",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"conditions": [],
+				"damage% for spark": 80,
+				"hp above % buff requirement": 50,
+				"passive id": "104",
+				"passive target": "self"
+			}
+		],
+		"id": "18700",
+		"name": "Sisterly Bond",
+		"target": "self"
 	},
 	"gender": "female",
 	"getting type": "rare summon",

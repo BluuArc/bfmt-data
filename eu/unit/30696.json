@@ -604,8 +604,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 42,
 	"damage frames": {
@@ -645,7 +644,49 @@
 	"element": "earth",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Negates all status ailments & adds status ailment removal effect to BB/SBB",
+		"effects": [
+			{
+				"conditions": [],
+				"curse resist%": 100,
+				"injury resist%": 100,
+				"paralysis resist%": 100,
+				"passive id": "4",
+				"passive target": "self",
+				"poison resist%": 100,
+				"sick resist%": 100,
+				"weaken resist%": 100
+			},
+			{
+				"conditions": [],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"ailments cured": [
+							"poison",
+							"weaken",
+							"sick",
+							"injury",
+							"curse",
+							"paralysis",
+							"atk down",
+							"def down",
+							"rec down"
+						],
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "38",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"id": "9900",
+		"name": "Until We Meet Someday",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",

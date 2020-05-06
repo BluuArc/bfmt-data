@@ -1,0 +1,491 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "hp_50pr_under",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 30,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 70,
+			"target conditions": "hp_max",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 50,
+			"target conditions": "hp_min",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"error": "data missing"
+	},
+	"bb": {
+		"error": "data missing",
+		"id": "40907"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2017-03-08T10:56:26.000Z",
+		"updatedAt": "2017-03-09T01:46:15.000Z"
+	},
+	"category": 40900,
+	"cost": 50,
+	"damage frames": {
+		"frame times": [
+			84,
+			87,
+			90,
+			93,
+			96,
+			99,
+			102,
+			105
+		],
+		"hit dmg% distribution": [
+			24,
+			16,
+			14,
+			12,
+			10,
+			9,
+			8,
+			7
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 8
+	},
+	"drop check count": 6,
+	"element": "thunder",
+	"evolution": {
+		"prev": "40906"
+	},
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "ターン毎に攻撃力・防御力・回復力をアップ（５ターン目まで上昇量が増加する）＆確率で２回まで戦闘不能を耐える",
+		"effects": [
+			{
+				"atk% max buff": 50,
+				"conditions": [],
+				"def% max buff": 50,
+				"increase from min to max": 1,
+				"passive id": "105",
+				"passive target": "self",
+				"rec% max buff": 50,
+				"turn count": 5
+			},
+			{
+				"angel idol chance% condition": 0,
+				"angel idol recover chance% high": 40,
+				"angel idol recover chance% low": 40,
+				"angel idol recover counts": 2,
+				"conditions": [],
+				"passive id": "69",
+				"passive target": "self"
+			}
+		],
+		"id": "33400",
+		"name": "超進化モード",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "730002",
+			"skill": {
+				"bp": 25,
+				"desc": "攻撃力・防御力・回復力・最大ＨＰを４０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 40,
+							"def% buff": 40,
+							"hp% buff": 40,
+							"passive id": "1",
+							"rec% buff": 40
+						}
+					}
+				],
+				"id": "730002",
+				"level": 1,
+				"name": "全能力＋４０％",
+				"series": "700000"
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "802001",
+			"skill": {
+				"bp": 10,
+				"desc": "ターン毎に攻撃力・防御力・回復力をアップ（５ターン目まで上昇量が増加する）",
+				"effects": [
+					{
+						"passive": {
+							"atk% max buff": 50,
+							"def% max buff": 50,
+							"increase from min to max": 1,
+							"passive id": "105",
+							"rec% max buff": 50,
+							"turn count": 5
+						}
+					}
+				],
+				"id": "802001",
+				"level": 2,
+				"name": "ターン毎に攻撃力・防御力・回復力をアップ",
+				"series": "802000"
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9100003",
+			"skill": {
+				"bp": 20,
+				"desc": "防御貫通効果を無効",
+				"effects": [
+					{
+						"passive": {
+							"ignore def resist chance%": 100,
+							"passive id": "92"
+						}
+					}
+				],
+				"id": "9100003",
+				"level": 2,
+				"name": "防御貫通攻撃を無効",
+				"series": "9100000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "10800000",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力の上限値（９９９９９）を１３００００まで解放する",
+				"effects": [
+					{
+						"passive": {
+							"unknown passive id": "143",
+							"unknown passive params": "130000"
+						}
+					}
+				],
+				"id": "10800000",
+				"level": 4,
+				"name": "攻撃力上限突破",
+				"series": "10800000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "50002100",
+			"skill": {
+				"bp": 30,
+				"desc": "ＳＢＢに「味方全体に３ターン、攻撃力に応じて防御力を大幅にアップ」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"% converted turns": 3,
+									"converted attribute": "attack",
+									"def% buff (47)": 70,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "24",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50002100",
+				"level": 3,
+				"name": "ＳＢＢに「攻撃力に応じて防御力を大幅にアップ」追加",
+				"series": "50002100"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "1@50002100",
+			"dependency comment": "「ＳＢＢに「攻撃力に応じて防御力を大幅にアップ」追加」習得",
+			"id": "50002200",
+			"skill": {
+				"bp": 20,
+				"desc": "ＢＢ及びＳＢＢの「味方全体に３ターン、攻撃力に応じて防御力を大幅にアップ」を強化",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"% converted turns": 3,
+									"converted attribute": "attack",
+									"def% buff (47)": 80,
+									"effect delay time(ms)/frame": "16.7/1",
+									"proc id": "24",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50002200",
+				"level": 3,
+				"name": "ＢＢ・ＳＢＢの「攻撃力に応じて防御力を大幅にアップ」効果を強化",
+				"series": "50002200"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "30014000",
+			"skill": {
+				"bp": 20,
+				"desc": "ＢＢ及びＳＢＢの「攻撃力・防御力を大幅にアップ」効果量を増加",
+				"effects": [
+					{
+						"add to bb": {
+							"atk% buff (1)": 10,
+							"buff turns": 0,
+							"def% buff (3)": 10,
+							"element buffed": "all",
+							"proc id": "5"
+						}
+					},
+					{
+						"add to sbb": {
+							"atk% buff (1)": 10,
+							"buff turns": 0,
+							"def% buff (3)": 10,
+							"element buffed": "all",
+							"proc id": "5"
+						}
+					}
+				],
+				"id": "30014000",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢの「攻撃力・防御力をアップ」効果を強化",
+				"series": "30014000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "35002100",
+			"skill": {
+				"bp": 30,
+				"desc": "ＢＢ及びＳＢＢの「被ダメージ時、確率でＨＰを少し回復」効果量・発動率を増加",
+				"effects": [
+					{
+						"add to bb": {
+							"hp recover from dmg buff turns (133)": 0,
+							"hp recover from dmg chance": 10,
+							"hp recover from dmg% high": 5,
+							"hp recover from dmg% low": 5,
+							"proc id": "85"
+						}
+					},
+					{
+						"add to sbb": {
+							"hp recover from dmg buff turns (133)": 0,
+							"hp recover from dmg chance": 10,
+							"hp recover from dmg% high": 5,
+							"hp recover from dmg% low": 5,
+							"proc id": "85"
+						}
+					}
+				],
+				"id": "35002100",
+				"level": 4,
+				"name": "ＢＢ・ＳＢＢの「被ダメージ時、確率ＨＰ回復」の効果量・発動率強化",
+				"series": "35002100"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "60050000",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に確率で一度だけ戦闘不能を耐える効果を付与」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"angel idol buff turns (91)": 999,
+									"angel idol recover chance%": 10,
+									"angel idol recover hp%": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "56",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "60050000",
+				"level": 6,
+				"name": "ＢＢ・ＳＢＢに「確率で一度だけ戦闘不能を耐える効果を付与」追加",
+				"series": "60050000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59005100",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に１ターン、スパークダメージを軽減」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"dmg resist turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "93",
+									"spark dmg base resist% (145)": 25,
+									"spark dmg buffed resist% (145)": 25,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59005100",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「スパークダメージを軽減」追加",
+				"series": "59005000"
+			}
+		}
+	],
+	"gender": "other",
+	"getting type": "rare summon",
+	"guide_id": 1604,
+	"id": 40907,
+	"imp": {
+		"max atk": "400",
+		"max def": "800",
+		"max hp": "1250",
+		"max rec": "500"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "全てのユニットの全能力を５０％アップ＆スパークダメージを軽減＆被ダメージ時、確率でＨＰを回復＆与ダメージが一定数を超える度に１ターン、被ダメージを少し軽減",
+		"effects": [
+			{
+				"atk% buff": 50,
+				"def% buff": 50,
+				"hp% buff": 50,
+				"passive id": "1",
+				"rec% buff": 50
+			},
+			{
+				"dmg% to hp% when attacked chance%": 25,
+				"dmg% to hp% when attacked high": 25,
+				"dmg% to hp% when attacked low": 25,
+				"passive id": "24"
+			},
+			{
+				"base spark dmg% resist": 25,
+				"buff spark dmg% resist": 25,
+				"passive id": "77"
+			},
+			{
+				"buff": {
+					"buff turns (36)": "1",
+					"dmg reduction% buff": 20
+				},
+				"damage dealt threshold buff activation": 10000,
+				"passive id": "80"
+			}
+		],
+		"id": "10142",
+		"name": "轟鐡機神の殲圏"
+	},
+	"lord damage range": "2725~3044",
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
+	"name": "天極業鎧ベイオルグ",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"error": "data missing",
+		"id": "140907"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2334,
+			"def": 2609,
+			"hp": 6533,
+			"rec": 2278
+		},
+		"_lord": {
+			"atk": 2927,
+			"def": 3246,
+			"hp": 8483,
+			"rec": 2844
+		}
+	},
+	"ubb": {
+		"error": "data missing",
+		"id": "240907"
+	}
+}

@@ -1,0 +1,1627 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "atk_max",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 30,
+			"target conditions": "hp_min",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"attack": {
+			"total number of frames": 106
+		},
+		"idle": {
+			"total number of frames": 96
+		},
+		"move": {
+			"total number of frames": 8
+		}
+	},
+	"bb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					17,
+					19,
+					21,
+					23,
+					25,
+					27,
+					30,
+					32,
+					34,
+					35,
+					40,
+					56,
+					58,
+					59,
+					62,
+					64,
+					65,
+					67,
+					68,
+					71,
+					73,
+					74
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					8,
+					4,
+					7,
+					4,
+					4,
+					2,
+					2,
+					3,
+					4,
+					13,
+					2,
+					9,
+					8,
+					2,
+					5,
+					2,
+					6,
+					3,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 22,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					50
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "2"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					70
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "19"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "30"
+			}
+		],
+		"desc": "22 combo Water attack on one foe & chance to inflict Weakness & restores HP & boosts BB gauge (7 BC) for 3 turns & adds all elements to attack (self) for 3 turns",
+		"drop check count": 1,
+		"id": "720107",
+		"levels": [
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 270,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3500,
+						"proc id": "2",
+						"rec added% (from healer)": 12.100000000000001,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"increase bb gauge gradual": 7,
+						"increase bb gauge gradual turns (37)": 3,
+						"proc id": "19",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire",
+							"water",
+							"earth",
+							"thunder",
+							"light",
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 280,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3500,
+						"proc id": "2",
+						"rec added% (from healer)": 12.100000000000001,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"increase bb gauge gradual": 7,
+						"increase bb gauge gradual turns (37)": 3,
+						"proc id": "19",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire",
+							"water",
+							"earth",
+							"thunder",
+							"light",
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 290,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3500,
+						"proc id": "2",
+						"rec added% (from healer)": 12.100000000000001,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"increase bb gauge gradual": 7,
+						"increase bb gauge gradual turns (37)": 3,
+						"proc id": "19",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire",
+							"water",
+							"earth",
+							"thunder",
+							"light",
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 300,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3500,
+						"proc id": "2",
+						"rec added% (from healer)": 12.100000000000001,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"increase bb gauge gradual": 7,
+						"increase bb gauge gradual turns (37)": 3,
+						"proc id": "19",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire",
+							"water",
+							"earth",
+							"thunder",
+							"light",
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 310,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3500,
+						"proc id": "2",
+						"rec added% (from healer)": 12.100000000000001,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"increase bb gauge gradual": 7,
+						"increase bb gauge gradual turns (37)": 3,
+						"proc id": "19",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire",
+							"water",
+							"earth",
+							"thunder",
+							"light",
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 320,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3500,
+						"proc id": "2",
+						"rec added% (from healer)": 12.100000000000001,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"increase bb gauge gradual": 7,
+						"increase bb gauge gradual turns (37)": 3,
+						"proc id": "19",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire",
+							"water",
+							"earth",
+							"thunder",
+							"light",
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 330,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3500,
+						"proc id": "2",
+						"rec added% (from healer)": 12.100000000000001,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"increase bb gauge gradual": 7,
+						"increase bb gauge gradual turns (37)": 3,
+						"proc id": "19",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire",
+							"water",
+							"earth",
+							"thunder",
+							"light",
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 340,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3500,
+						"proc id": "2",
+						"rec added% (from healer)": 12.100000000000001,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"increase bb gauge gradual": 7,
+						"increase bb gauge gradual turns (37)": 3,
+						"proc id": "19",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire",
+							"water",
+							"earth",
+							"thunder",
+							"light",
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 350,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3500,
+						"proc id": "2",
+						"rec added% (from healer)": 12.100000000000001,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"increase bb gauge gradual": 7,
+						"increase bb gauge gradual turns (37)": 3,
+						"proc id": "19",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire",
+							"water",
+							"earth",
+							"thunder",
+							"light",
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 25,
+				"effects": [
+					{
+						"bb atk%": 370,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"heal high": 4000,
+						"heal low": 3500,
+						"proc id": "2",
+						"rec added% (from healer)": 12.100000000000001,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"increase bb gauge gradual": 7,
+						"increase bb gauge gradual turns (37)": 3,
+						"proc id": "19",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elements added": [
+							"fire",
+							"water",
+							"earth",
+							"thunder",
+							"light",
+							"dark"
+						],
+						"elements added turns": 3,
+						"proc id": "30",
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			}
+		],
+		"name": "Lover's Kiss"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2016-07-06T06:18:42.000Z",
+		"updatedAt": "2017-03-08T10:56:26.000Z"
+	},
+	"cost": 48,
+	"damage frames": {
+		"frame times": [
+			17,
+			21,
+			26,
+			32,
+			39,
+			53,
+			55,
+			57,
+			60,
+			65,
+			68,
+			70,
+			72
+		],
+		"hit dmg% distribution": [
+			18,
+			10,
+			9,
+			8,
+			7,
+			17,
+			5,
+			5,
+			8,
+			7,
+			2,
+			2,
+			2
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
+	"drop check count": 4,
+	"element": "water",
+	"exp_pattern": 10,
+	"extra skill": {
+		"desc": "If Julia is in the same squad, 10% boost to all parameters of Female units (all) & If Sergio's Wedding Ring is equipped, boosts Spark damage (80%) and adds Spark vulnerability infliction for 2 turns effect to BB/SBB",
+		"effects": [
+			{
+				"atk% buff": 10,
+				"conditions": [
+					{
+						"unit required": []
+					}
+				],
+				"def% buff": 10,
+				"gender required": "female",
+				"hp% buff": 10,
+				"passive id": "42",
+				"passive target": "party",
+				"rec% buff": 10
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"700043"
+						]
+					}
+				],
+				"damage% for spark": 80,
+				"passive id": "31",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"700043"
+						]
+					}
+				],
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "58",
+						"spark dmg received apply%": 25,
+						"spark dmg received debuff turns (94)": 2,
+						"spark dmg% received": 25,
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			}
+		],
+		"id": "720107",
+		"name": "Lover's Harmony",
+		"target": "self"
+	},
+	"gender": "male",
+	"getting type": "farmable",
+	"guide_id": 7186,
+	"id": 720107,
+	"imp": {
+		"max atk": "600",
+		"max def": "600",
+		"max hp": "1500",
+		"max rec": "600"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "80% boost to ATK, 40% boost to max HP & 15% reduction in damage from Fire types & Boosts BB gauge each turn (7 BC) & Boosts BB ATK (200%)",
+		"effects": [
+			{
+				"atk% buff": 80,
+				"hp% buff": 40,
+				"passive id": "1"
+			},
+			{
+				"bc fill per turn": 7,
+				"passive id": "9"
+			},
+			{
+				"fire resist%": 15,
+				"passive id": "5"
+			},
+			{
+				"bb atk% buff": 200,
+				"passive id": "64",
+				"sbb atk% buff": 200,
+				"ubb atk% buff": 200
+			}
+		],
+		"id": "720107",
+		"name": "Lover's Will"
+	},
+	"lord damage range": "2936~3280",
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
+	"name": "Saint of Love Sergio",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					17,
+					19,
+					20,
+					21,
+					23,
+					25,
+					27,
+					29,
+					30,
+					31,
+					32,
+					34,
+					40,
+					58,
+					58,
+					59,
+					62,
+					62,
+					65,
+					67,
+					67,
+					70,
+					70,
+					73,
+					73
+				],
+				"hit dmg% distribution": [
+					4,
+					2,
+					2,
+					8,
+					4,
+					7,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					4,
+					13,
+					2,
+					9,
+					8,
+					2,
+					5,
+					2,
+					6,
+					3,
+					3,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 25,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					18,
+					22,
+					26,
+					33,
+					39,
+					55,
+					60,
+					63,
+					66,
+					68,
+					69,
+					71
+				],
+				"hit dmg% distribution": [
+					18,
+					10,
+					9,
+					8,
+					7,
+					17,
+					10,
+					8,
+					5,
+					4,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 12,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "11"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					70
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "4"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "70002"
+			}
+		],
+		"desc": "25 combo Water attack on single foe (including sparking combo) , 12 combo Water attack on single foe & chance to inflict Weakness & fills own BB gauge to max & adds chance to cast double BB (self) for 1 turn (25% + 75% if Julia is in the same squad)",
+		"drop check count": 1,
+		"id": "1720107",
+		"levels": [
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb atk%": 360,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 430,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "0.25,1,0.75,740220,0,0,0,0,0"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb atk%": 370,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 440,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "0.25,1,0.75,740220,0,0,0,0,0"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb atk%": 380,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 450,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "0.25,1,0.75,740220,0,0,0,0,0"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb atk%": 390,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 460,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "0.25,1,0.75,740220,0,0,0,0,0"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb atk%": 400,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 470,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "0.25,1,0.75,740220,0,0,0,0,0"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb atk%": 410,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 480,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "0.25,1,0.75,740220,0,0,0,0,0"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb atk%": 420,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 490,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "0.25,1,0.75,740220,0,0,0,0,0"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb atk%": 430,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 500,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "0.25,1,0.75,740220,0,0,0,0,0"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb atk%": 440,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 510,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "0.25,1,0.75,740220,0,0,0,0,0"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb atk%": 460,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 530,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "11",
+						"target area": "aoe",
+						"target type": "enemy",
+						"weaken%": 80
+					},
+					{
+						"bb bc fill%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "4",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "single",
+						"target type": "self",
+						"unknown proc id": "70002",
+						"unknown proc param": "0.25,1,0.75,740220,0,0,0,0,0"
+					}
+				]
+			}
+		],
+		"name": "Lover's Might"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2585,
+			"def": 2107,
+			"hp": 6485,
+			"rec": 2052
+		},
+		"_lord": {
+			"atk": 3154,
+			"def": 2571,
+			"hp": 7912,
+			"rec": 2504
+		}
+	},
+	"ubb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					18,
+					20,
+					22,
+					24,
+					26,
+					28,
+					31,
+					33,
+					36,
+					38,
+					41,
+					57,
+					60,
+					61,
+					63,
+					66,
+					69,
+					70,
+					72,
+					75,
+					77
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					8,
+					4,
+					7,
+					4,
+					4,
+					2,
+					2,
+					3,
+					4,
+					13,
+					2,
+					9,
+					8,
+					2,
+					5,
+					2,
+					6,
+					3,
+					4
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 21,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "50.0/3",
+				"frame times": [
+					17,
+					19,
+					21,
+					23,
+					25,
+					27,
+					30,
+					32,
+					34,
+					35,
+					40,
+					56,
+					58,
+					59,
+					62,
+					64,
+					65,
+					67,
+					68,
+					71,
+					73,
+					74,
+					76,
+					78
+				],
+				"hit dmg% distribution": [
+					4,
+					4,
+					8,
+					4,
+					7,
+					4,
+					4,
+					2,
+					2,
+					3,
+					4,
+					13,
+					2,
+					9,
+					8,
+					2,
+					5,
+					2,
+					2,
+					3,
+					2,
+					2,
+					2,
+					2
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 24,
+				"proc id": "1"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "23"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "45"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "58"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "18"
+			}
+		],
+		"desc": "21 combo Water attack on single foe, 24 combo Water attack on single foe & boost to Spark damage and BB ATK (250%) for 3 turns & inflicts Spark vulnerabilty (150%) for 3 turns & reduces damage taken by 75% for 2 turns",
+		"drop check count": 1,
+		"id": "2720107",
+		"levels": [
+			{
+				"bc cost": 30,
+				"effects": [
+					{
+						"bb atk%": 1600,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1600,
+						"bb flat atk": 100,
+						"effect delay time(ms)/frame": "50.0/3",
+						"proc id": "1",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "23",
+						"spark dmg% buff (40)": 250,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"bb atk% buff": 250,
+						"buff turns (72)": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "45",
+						"sbb atk% buff": 250,
+						"target area": "aoe",
+						"target type": "party",
+						"ubb atk% buff": 250
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "58",
+						"spark dmg received apply%": 100,
+						"spark dmg received debuff turns (94)": 3,
+						"spark dmg% received": 150,
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"dmg% reduction": 75,
+						"dmg% reduction turns (36)": 2,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "18",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"name": "Lover's Ending"
+	}
+}

@@ -342,8 +342,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"removed": true,
-		"updatedAt": "2017-02-13T15:27:55.000Z"
+		"updatedAt": "2017-03-08T10:56:26.000Z"
 	},
 	"cost": 44,
 	"damage frames": {
@@ -378,7 +377,51 @@
 	"element": "fire",
 	"exp_pattern": 20,
 	"extra skill": {
-		"error": "data missing"
+		"desc": "Adds chance of recovering HP when attacked (25% odds, 20% of DMG healed) & Boosts ATK relative to how high remaining HP is (150% ATK) & boosts DEF relative to how low remaining HP is (150% DEF) & Negates critical damage if Tracker's Crossbow is equipped",
+		"effects": [
+			{
+				"conditions": [],
+				"dmg% to hp% when attacked chance%": 25,
+				"dmg% to hp% when attacked high": 20,
+				"dmg% to hp% when attacked low": 20,
+				"passive id": "24",
+				"passive target": "self"
+			},
+			{
+				"buff proportional to hp": "lost",
+				"conditions": [],
+				"def% base buff": 0,
+				"def% extra buff based on hp": 150,
+				"passive id": "46",
+				"passive target": "self"
+			},
+			{
+				"atk% base buff": 0,
+				"atk% extra buff based on hp": 150,
+				"buff proportional to hp": "remaining",
+				"conditions": [],
+				"passive id": "46",
+				"passive target": "self"
+			},
+			{
+				"conditions": [
+					{
+						"item required": [
+							"701011"
+						]
+					}
+				],
+				"crit chance base resist%": 100,
+				"crit chance buffed resist%": 100,
+				"crit dmg base damage resist%": 100,
+				"crit dmg buffed damage resist%": 100,
+				"passive id": "53",
+				"passive target": "self"
+			}
+		],
+		"id": "710146",
+		"name": "Primal Instinct",
+		"target": "self"
 	},
 	"gender": "male",
 	"getting type": "rare summon",
