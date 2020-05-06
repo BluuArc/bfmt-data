@@ -1,0 +1,460 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "hp_50pr_over",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"error": "data missing"
+	},
+	"bb": {
+		"error": "data missing",
+		"id": "11037"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2016-12-26T07:31:41.000Z",
+		"updatedAt": "2017-01-12T05:01:30.000Z"
+	},
+	"category": 11030,
+	"cost": 50,
+	"damage frames": {
+		"frame times": [
+			22,
+			28,
+			51,
+			78,
+			94,
+			149,
+			155,
+			161,
+			167
+		],
+		"hit dmg% distribution": [
+			8,
+			8,
+			10,
+			10,
+			10,
+			14,
+			14,
+			13,
+			13
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 9
+	},
+	"drop check count": 5,
+	"element": "fire",
+	"evolution": {
+		"prev": "11036"
+	},
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "ＨＰが満タン時、防御力をかなりアップ＆被ダメージが一定数を超える度に２ターン、被ダメージを少し軽減",
+		"effects": [
+			{
+				"conditions": [],
+				"def% buff": 80,
+				"hp above % buff requirement": 100,
+				"passive id": "11",
+				"passive target": "self"
+			},
+			{
+				"buff": {
+					"buff turns (36)": "1",
+					"dmg reduction% buff": 20
+				},
+				"conditions": [],
+				"damage threshold buff activation": 5000,
+				"passive id": "78",
+				"passive target": "self"
+			}
+		],
+		"id": "29600",
+		"name": "護国の炎撃",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "240001",
+			"skill": {
+				"bp": 20,
+				"desc": "防御力を５０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"def% buff": 50,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "240001",
+				"level": 1,
+				"name": "防御力＋５０％",
+				"series": "200000"
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "550000",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力・最大ＨＰを２０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 20,
+							"hp% buff": 20,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "550000",
+				"level": 1,
+				"name": "攻撃力・最大ＨＰ＋２０％",
+				"series": "500000"
+			}
+		},
+		{
+			"category": "5",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "4110002",
+			"skill": {
+				"bp": 20,
+				"desc": "被ダメージ時、ＢＢゲージを増加",
+				"effects": [
+					{
+						"passive": {
+							"bc fill when attacked high": 3,
+							"bc fill when attacked low": 2,
+							"bc fill when attacked%": 100,
+							"passive id": "25"
+						}
+					}
+				],
+				"id": "4110002",
+				"level": 2,
+				"name": "被ダメージ時、ＢＢゲージを増加",
+				"series": "4100000"
+			}
+		},
+		{
+			"category": "5",
+			"dependency": "1@4110002",
+			"dependency comment": "「被ダメージ時、ＢＢゲージを増加」習得",
+			"id": "4110200",
+			"skill": {
+				"bp": 10,
+				"desc": "被ダメージ時、ＢＢゲージを増加効果をグレードアップ",
+				"effects": [
+					{
+						"passive": {
+							"bc fill when attacked high": 4,
+							"bc fill when attacked low": 3,
+							"bc fill when attacked%": 100,
+							"passive id": "25"
+						}
+					}
+				],
+				"id": "4110200",
+				"level": 5,
+				"name": "被ダメージ時、ＢＢゲージをかなり増加",
+				"series": "4100000"
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9100003",
+			"skill": {
+				"bp": 20,
+				"desc": "防御貫通効果を無効",
+				"effects": [
+					{
+						"passive": {
+							"ignore def resist chance%": 100,
+							"passive id": "92"
+						}
+					}
+				],
+				"id": "9100003",
+				"level": 2,
+				"name": "防御貫通攻撃を無効",
+				"series": "9100000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "39001001",
+			"skill": {
+				"bp": 20,
+				"desc": "ＢＢ及びＳＢＢの「味方全体に１ターン、被ダメージを半分に軽減」の効果継続ターン数が２ターンになる",
+				"effects": [
+					{
+						"add to bb": {
+							"dmg% reduction": 0,
+							"dmg% reduction turns (36)": 1,
+							"proc id": "18"
+						}
+					},
+					{
+						"add to sbb": {
+							"dmg% reduction": 0,
+							"dmg% reduction turns (36)": 1,
+							"proc id": "18"
+						}
+					}
+				],
+				"id": "39001001",
+				"level": 6,
+				"name": "ＢＢ・ＳＢＢの「被ダメージを半減」効果継続ターンが２ターンになる",
+				"series": "39001000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "34001001",
+			"skill": {
+				"bp": 30,
+				"desc": "ＢＢ及びＳＢＢの「ＢＢゲージを大幅に増加」効果量を増加",
+				"effects": [
+					{
+						"add to bb": {
+							"increase bb gauge": 2,
+							"proc id": "31"
+						}
+					},
+					{
+						"add to sbb": {
+							"increase bb gauge": 2,
+							"proc id": "31"
+						}
+					}
+				],
+				"id": "34001001",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢの「ＢＢゲージを増加」効果を強化",
+				"series": "34001000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "54001102",
+			"skill": {
+				"bp": 40,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、被ダメージ時、ＢＢゲージをかなり増加」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"bc fill when attacked high": 7,
+									"bc fill when attacked low": 4,
+									"bc fill when attacked turns (38)": 3,
+									"bc fill when attacked%": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "20",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "54001102",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「被ダメージ時、ＢＢゲージをかなり増加」追加",
+				"series": "54001000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "50000001",
+			"skill": {
+				"bp": 40,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、防御力に応じて攻撃力を大幅にアップ」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"% converted turns": 3,
+									"atk% buff (46)": 70,
+									"converted attribute": "defense",
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "24",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50000001",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「防御力に応じて攻撃力を大幅にアップ」追加",
+				"series": "50000000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57000005",
+			"skill": {
+				"bp": 20,
+				"desc": "ＢＢ及びＳＢＢに「味方全体の全状態異常を回復」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"ailments cured": [
+										"poison",
+										"weaken",
+										"sick",
+										"injury",
+										"curse",
+										"paralysis",
+										"atk down",
+										"def down",
+										"rec down"
+									],
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "38",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "57000005",
+				"level": 6,
+				"name": "ＢＢ・ＳＢＢに「全状態異常を回復」追加",
+				"series": "57000000"
+			}
+		}
+	],
+	"gender": "male",
+	"getting type": "rare summon",
+	"guide_id": 1556,
+	"id": 11037,
+	"imp": {
+		"max atk": "400",
+		"max def": "800",
+		"max hp": "1250",
+		"max rec": "500"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "全てのユニットの防御力・最大ＨＰを６０％アップ＆ガード時のダメージ軽減率をアップ＆ターン毎にＨＰをかなり回復＆被ダメージ時、ＢＢゲージを大幅に増加",
+		"effects": [
+			{
+				"def% buff": 60,
+				"hp% buff": 60,
+				"passive id": "1"
+			},
+			{
+				"guard increase mitigation%": 10,
+				"passive id": "58"
+			},
+			{
+				"bc fill when attacked high": 7,
+				"bc fill when attacked low": 4,
+				"bc fill when attacked%": 100,
+				"passive id": "25"
+			},
+			{
+				"passive id": "33",
+				"rec% added (turn heal)": 10,
+				"turn heal high": 1200,
+				"turn heal low": 1000
+			}
+		],
+		"id": "4365",
+		"name": "烈護神義の偉信"
+	},
+	"lord damage range": "2852~3186",
+	"movement": {
+		"attack": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0033,
+			"move speed type": "3",
+			"move type": "1"
+		}
+	},
+	"name": "熾征の鎧傑将ヴァレン",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"error": "data missing",
+		"id": "111037"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2474,
+			"def": 2694,
+			"hp": 6339,
+			"rec": 2279
+		},
+		"_lord": {
+			"atk": 3064,
+			"def": 3367,
+			"hp": 8233,
+			"rec": 2836
+		}
+	},
+	"ubb": {
+		"error": "data missing",
+		"id": "211037"
+	}
+}

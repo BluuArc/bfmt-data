@@ -1,0 +1,477 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "hp_50pr_over",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"error": "data missing"
+	},
+	"bb": {
+		"error": "data missing",
+		"id": "51127"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2016-12-26T07:31:41.000Z",
+		"updatedAt": "2017-01-12T05:01:30.000Z"
+	},
+	"category": 51120,
+	"cost": 50,
+	"damage frames": {
+		"frame times": [
+			11,
+			14,
+			38,
+			42,
+			46,
+			50,
+			54,
+			86,
+			90,
+			94,
+			98,
+			102,
+			106
+		],
+		"hit dmg% distribution": [
+			8,
+			4,
+			10,
+			8,
+			6,
+			5,
+			4,
+			13,
+			11,
+			10,
+			8,
+			7,
+			6
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 13
+	},
+	"drop check count": 4,
+	"element": "light",
+	"evolution": {
+		"prev": "51126"
+	},
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "ＨＰが半分以上の時、攻撃力・防御力をアップ＆低確率で被ダメージを超絶軽減",
+		"effects": [
+			{
+				"atk% buff": 50,
+				"conditions": [],
+				"def% buff": 50,
+				"hp above % buff requirement": 50,
+				"passive id": "11",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"passive id": "43",
+				"passive target": "self",
+				"take 1 dmg%": 10
+			}
+		],
+		"id": "29800",
+		"name": "次代を担う光輝",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "740001",
+			"skill": {
+				"bp": 25,
+				"desc": "攻撃力・防御力・回復力・最大ＨＰを５０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 50,
+							"def% buff": 50,
+							"hp% buff": 50,
+							"passive id": "1",
+							"rec% buff": 50
+						}
+					}
+				],
+				"id": "740001",
+				"level": 1,
+				"name": "全能力＋５０％",
+				"series": "700000"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1040002",
+			"skill": {
+				"bp": 20,
+				"desc": "スパークダメージを１００％アップ",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 100,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1040002",
+				"level": 5,
+				"name": "スパークダメージ１００％アップ",
+				"series": "1000000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "10800000",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力の上限値（９９９９９）を１３００００まで解放する",
+				"effects": [
+					{
+						"passive": {
+							"unknown passive id": "143",
+							"unknown passive params": "130000"
+						}
+					}
+				],
+				"id": "10800000",
+				"level": 4,
+				"name": "攻撃力上限突破",
+				"series": "10800000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "20002100",
+			"skill": {
+				"bp": 10,
+				"desc": "リーダースキルの「全能力を５０％アップ」を６０％にグレードアップ",
+				"effects": [
+					{
+						"add to passive": {
+							"atk% buff": 10,
+							"def% buff": 10,
+							"hp% buff": 10,
+							"passive id": "1",
+							"rec% buff": 10
+						}
+					}
+				],
+				"id": "20002100",
+				"level": 1,
+				"name": "リーダースキル「全能力を５０％アップ」効果を強化",
+				"series": "20200000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "20902000",
+			"skill": {
+				"bp": 30,
+				"desc": "リーダースキルの「全属性ユニットからの被ダメージを軽減」効果量をグレードアップ",
+				"effects": [
+					{
+						"add to passive": {
+							"dmg% mitigation for elemental attacks": 5,
+							"passive id": "62"
+						}
+					}
+				],
+				"id": "20902000",
+				"level": 6,
+				"name": "リーダースキル「全属性からのダメージ軽減」効果を強化",
+				"series": "20902000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57004001",
+			"skill": {
+				"bp": 30,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、全状態異常を無効」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "17",
+									"resist curse% (34)": 100,
+									"resist injury% (33)": 100,
+									"resist paralysis% (35)": 100,
+									"resist poison% (30)": 100,
+									"resist sick% (32)": 100,
+									"resist status ails turns": 3,
+									"resist weaken% (31)": 100,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "57004001",
+				"level": 4,
+				"name": "ＢＢ・ＳＢＢに「全状態異常を無効」追加",
+				"series": "57004000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59002003",
+			"skill": {
+				"bp": 45,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に１ターン、弱点属性ダメージを無効」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"target area": "aoe",
+									"target type": "party",
+									"unknown proc id": "93",
+									"unknown proc param": "0,0,100,100,0,0,1,0"
+								}
+							]
+						}
+					}
+				],
+				"id": "59002003",
+				"level": 6,
+				"name": "ＢＢ・ＳＢＢに「弱点属性ダメージを無効」追加",
+				"series": "59002000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "55000004",
+			"skill": {
+				"bp": 30,
+				"desc": "ＢＢ及びＳＢＢに「味方全体のＨＰを大回復」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"heal high": 3500,
+									"heal low": 2500,
+									"proc id": "2",
+									"rec added% (from healer)": 11,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "55000004",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「ＨＰを大回復」追加",
+				"series": "55000000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "50020000",
+			"skill": {
+				"bp": 35,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、光属性ユニットの攻撃力・防御力をかなりアップ」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"atk% buff (13)": 100,
+									"buff turns": 3,
+									"def% buff (14)": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"element buffed": "light",
+									"proc id": "5",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50020000",
+				"level": 4,
+				"name": "ＢＢ・ＳＢＢに「光属性ユニットの攻撃・防御力をかなりアップ」追加",
+				"series": "50020000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "1@50020000",
+			"dependency comment": "「ＢＢ・ＳＢＢに「光属性ユニットの攻撃・防御力をかなりアップ」追加」習得",
+			"id": "50010001",
+			"skill": {
+				"bp": 10,
+				"desc": "ＢＢ及びＳＢＢの「光属性ユニットの攻撃力・防御力をかなりアップ」効果量を増加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"atk% buff (13)": 120,
+									"buff turns": 3,
+									"def% buff (14)": 120,
+									"effect delay time(ms)/frame": "16.7/1",
+									"element buffed": "light",
+									"proc id": "5",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50010001",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢの「光属性ユニットの攻撃・防御力をアップ」効果を強化",
+				"series": "50010000"
+			}
+		}
+	],
+	"gender": "male",
+	"getting type": "rare summon",
+	"guide_id": 1558,
+	"id": 51127,
+	"imp": {
+		"max atk": "600",
+		"max def": "600",
+		"max hp": "1500",
+		"max rec": "600"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "全てのユニットの全能力を５０％アップ＆攻撃ＢＢの威力を超絶アップ＆全属性ユニットからの被ダメージを１０％軽減＆ＢＣ獲得時の増加量をかなりアップ",
+		"effects": [
+			{
+				"atk% buff": 50,
+				"def% buff": 50,
+				"hp% buff": 50,
+				"passive id": "1",
+				"rec% buff": 50
+			},
+			{
+				"bb atk% buff": 200,
+				"passive id": "64",
+				"sbb atk% buff": 200,
+				"ubb atk% buff": 200
+			},
+			{
+				"dmg% mitigation for elemental attacks": 10,
+				"mitigate dark attacks": true,
+				"mitigate earth attacks": true,
+				"mitigate fire attacks": true,
+				"mitigate light attacks": true,
+				"mitigate thunder attacks": true,
+				"mitigate water attacks": true,
+				"passive id": "62"
+			},
+			{
+				"bb gauge fill rate%": 50,
+				"passive id": "32"
+			}
+		],
+		"id": "10135",
+		"name": "皇衛の神義"
+	},
+	"lord damage range": "2992~3342",
+	"movement": {
+		"attack": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		},
+		"skill": {
+			"move speed": 0.0024,
+			"move speed type": "4",
+			"move type": "1"
+		}
+	},
+	"name": "聖煌の真揮将レギル",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"error": "data missing",
+		"id": "151127"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2563,
+			"def": 2518,
+			"hp": 6444,
+			"rec": 2228
+		},
+		"_lord": {
+			"atk": 3214,
+			"def": 3133,
+			"hp": 8372,
+			"rec": 2781
+		}
+	},
+	"ubb": {
+		"error": "data missing",
+		"id": "251127"
+	}
+}

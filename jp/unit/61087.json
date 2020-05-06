@@ -1,0 +1,404 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "hp_50pr_over",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"error": "data missing"
+	},
+	"bb": {
+		"error": "data missing",
+		"id": "61087"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2016-12-26T07:31:41.000Z",
+		"updatedAt": "2017-01-12T05:01:30.000Z"
+	},
+	"category": 61080,
+	"cost": 50,
+	"damage frames": {
+		"frame times": [
+			3,
+			7,
+			11,
+			63,
+			67,
+			71,
+			75
+		],
+		"hit dmg% distribution": [
+			15,
+			13,
+			12,
+			20,
+			15,
+			13,
+			12
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 7
+	},
+	"drop check count": 7,
+	"element": "dark",
+	"evolution": {
+		"prev": "61086"
+	},
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "確率で２回まで戦闘不能を耐える＆被ダメージ時、確率でＨＰを回復",
+		"effects": [
+			{
+				"conditions": [],
+				"dmg% to hp% when attacked chance%": 25,
+				"dmg% to hp% when attacked high": 25,
+				"dmg% to hp% when attacked low": 20,
+				"passive id": "24",
+				"passive target": "self"
+			},
+			{
+				"angel idol chance% condition": 0,
+				"angel idol recover chance% high": 40,
+				"angel idol recover chance% low": 40,
+				"angel idol recover counts": 2,
+				"conditions": [],
+				"passive id": "69",
+				"passive target": "self"
+			}
+		],
+		"id": "30000",
+		"name": "すべてを滅する力",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "140000",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力を５０％アップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 50,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "140000",
+				"level": 1,
+				"name": "攻撃力＋５０％",
+				"series": "100000"
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "161000",
+			"skill": {
+				"bp": 10,
+				"desc": "残りＨＰが多いほど、攻撃力をかなりアップ",
+				"effects": [
+					{
+						"passive": {
+							"atk% base buff": 0,
+							"atk% extra buff based on hp": 80,
+							"buff proportional to hp": "remaining",
+							"passive id": "46"
+						}
+					}
+				],
+				"id": "161000",
+				"level": 4,
+				"name": "残りＨＰが多いほど、攻撃力をかなりアップ",
+				"series": "160000"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1040003",
+			"skill": {
+				"bp": 15,
+				"desc": "スパークダメージを１００％アップ",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 100,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1040003",
+				"level": 5,
+				"name": "スパークダメージ１００％アップ",
+				"series": "1000000"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "1@1040003",
+			"dependency comment": "「スパークダメージ１００％アップ」習得",
+			"id": "1000500",
+			"skill": {
+				"bp": 10,
+				"desc": "スパークダメージを１００％アップを１２０％にグレードアップ",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 120,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1000500",
+				"level": 6,
+				"name": "スパークダメージ１００％→１２０％",
+				"series": "1000000"
+			}
+		},
+		{
+			"category": "3",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "2120001",
+			"skill": {
+				"bp": 20,
+				"desc": "クリティカルダメージをアップ",
+				"effects": [
+					{
+						"passive": {
+							"crit multiplier%": 75,
+							"passive id": "34"
+						}
+					}
+				],
+				"id": "2120001",
+				"level": 3,
+				"name": "クリティカルダメージアップ",
+				"series": "2100000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "10800000",
+			"skill": {
+				"bp": 10,
+				"desc": "攻撃力の上限値（９９９９９）を１３００００まで解放する",
+				"effects": [
+					{
+						"passive": {
+							"unknown passive id": "143",
+							"unknown passive params": "130000"
+						}
+					}
+				],
+				"id": "10800000",
+				"level": 4,
+				"name": "攻撃力上限突破",
+				"series": "10800000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "21005001",
+			"skill": {
+				"bp": 55,
+				"desc": "リーダースキルの「確率で１回まで戦闘不能を耐える」効果の発動率をグレードアップ",
+				"effects": [
+					{
+						"add to passive": {
+							"angel idol chance% condition": 0,
+							"angel idol recover chance% high": 5,
+							"angel idol recover chance% low": 5,
+							"passive id": "69"
+						}
+					}
+				],
+				"id": "21005001",
+				"level": 5,
+				"name": "リーダースキル「確率で戦闘不能を耐える」効果の発動率を強化",
+				"series": "21005000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "53012000",
+			"skill": {
+				"bp": 50,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、闇属性の弱点属性ダメージを大幅にアップ」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"dark units do extra elemental weakness dmg": true,
+									"effect delay time(ms)/frame": "0.0/0",
+									"elemental weakness buff turns": 3,
+									"elemental weakness multiplier%": 150,
+									"proc id": "55",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "53012000",
+				"level": 5,
+				"name": "ＢＢ・ＳＢＢに「闇属性の弱点属性ダメージを大幅にアップ」追加",
+				"series": "53012000"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57010000",
+			"skill": {
+				"bp": 40,
+				"desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、確率で攻撃力・防御力を１ターン低下する効果を付与」を追加",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"buff turns": 3,
+									"effect delay time(ms)/frame": "0.0/0",
+									"inflict atk% debuff (2)": -20,
+									"inflict atk% debuff chance% (74)": 20,
+									"inflict def% debuff (4)": -20,
+									"inflict def% debuff chance% (75)": 20,
+									"proc id": "51",
+									"stat% debuff turns": 1,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "57010000",
+				"level": 4,
+				"name": "ＢＢ・ＳＢＢに「確率で攻撃力・防御力を低下する効果を付与」追加",
+				"series": "57010000"
+			}
+		}
+	],
+	"gender": "other",
+	"getting type": "rare summon",
+	"guide_id": 1560,
+	"id": 61087,
+	"imp": {
+		"max atk": "800",
+		"max def": "400",
+		"max hp": "1250",
+		"max rec": "500"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "全てのユニットの攻撃力・最大ＨＰを６０％アップ＆ＨＰを少し吸収＆確率で１回まで戦闘不能を耐える＆被ダメージ時、ＢＢゲージを大幅に増加",
+		"effects": [
+			{
+				"atk% buff": 60,
+				"hp% buff": 60,
+				"passive id": "1"
+			},
+			{
+				"bc fill when attacked high": 7,
+				"bc fill when attacked low": 4,
+				"bc fill when attacked%": 100,
+				"passive id": "25"
+			},
+			{
+				"hp drain chance%": 100,
+				"hp drain% high": 10,
+				"hp drain% low": 5,
+				"passive id": "17"
+			},
+			{
+				"angel idol chance% condition": 0,
+				"angel idol recover chance% high": 20,
+				"angel idol recover chance% low": 20,
+				"angel idol recover counts": 1,
+				"passive id": "69"
+			}
+		],
+		"id": "7491",
+		"name": "神無万滅の絶刈"
+	},
+	"lord damage range": "3434~3835",
+	"movement": {
+		"attack": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 0,
+			"move speed type": "5",
+			"move type": "2"
+		}
+	},
+	"name": "絶魂神魔ザルヴァード",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"error": "data missing",
+		"id": "161087"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2944,
+			"def": 2157,
+			"hp": 6280,
+			"rec": 2313
+		},
+		"_lord": {
+			"atk": 3688,
+			"def": 2702,
+			"hp": 8196,
+			"rec": 2914
+		}
+	},
+	"ubb": {
+		"error": "data missing",
+		"id": "261087"
+	}
+}

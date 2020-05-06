@@ -25170,9 +25170,9 @@
 	"48210": {
 		"bfmtMetadata": {
 			"createdAt": "2016-07-06T06:18:42.000Z",
-			"updatedAt": "2016-12-15T14:14:30.000Z"
+			"updatedAt": "2017-01-11T12:28:08.000Z"
 		},
-		"desc": "Increases damage dealt during Spark by 50%",
+		"desc": "Slightly probable status inflicting counterattack when attacked, boosts BB gauge & boosts BC efficacy",
 		"dictionary": {
 			"lore": "A sphere made by applying technologies used in the development of the Frontier Gate. Possesses the ability to reflect malice and ill-will directed at its wielder by heightening their spiritual power. The technique used in its creation involved the Summoner projecting uncertainty and fear through training. However, due to fears that the training could not be completed owing to the intense burden it placed on the Summoner, these plans were suspended."
 		},
@@ -29715,6 +29715,121 @@
 		"sphere type": 1,
 		"sphere type text": "Status Boost",
 		"thumbnail": "sphere_thum_5_5.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"701023": {
+		"bfmtMetadata": {
+			"createdAt": "2016-07-06T06:18:42.000Z",
+			"updatedAt": "2017-01-11T12:28:08.000Z"
+		},
+		"desc": "Boosts ATK, HP (30%) & Boosts BB Atk (100%) when Sparks have exceeded certain amount (20) & Boosts Spark damage (50%) when HP are full",
+		"effect": [
+			{
+				"atk% buff": 30,
+				"hp% buff": 30,
+				"passive id": "1"
+			},
+			{
+				"buff": {
+					"bb atk% buff": 100,
+					"buff turns (72)": "3",
+					"sbb atk% buff": 100,
+					"ubb atk% buff": 100
+				},
+				"passive id": "86",
+				"spark count buff activation": 20
+			},
+			{
+				"damage% for spark": 50,
+				"hp above % buff requirement": 100,
+				"passive id": "104"
+			}
+		],
+		"id": 701023,
+		"max_stack": 1,
+		"name": "Caliburn",
+		"raid": true,
+		"rarity": 5,
+		"sell_price": 100000,
+		"sphere type": 1,
+		"sphere type text": "Status Boost",
+		"thumbnail": "sphere_thum_2_5.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"701024": {
+		"bfmtMetadata": {
+			"createdAt": "2016-07-06T06:18:42.000Z",
+			"updatedAt": "2017-01-11T12:28:08.000Z"
+		},
+		"desc": "Boosts HP (30%) & Boosts Atk relative to how high HP is (0-100%) & Boosts BB gauge each turn (6 BC) and when attacked (3-4 BC)",
+		"effect": [
+			{
+				"hp% buff": 30,
+				"passive id": "1"
+			},
+			{
+				"atk% base buff": 0,
+				"atk% extra buff based on hp": 100,
+				"buff proportional to hp": "remaining",
+				"passive id": "46"
+			},
+			{
+				"bc fill per turn": 6,
+				"passive id": "9"
+			},
+			{
+				"bc fill when attacked high": 4,
+				"bc fill when attacked low": 3,
+				"bc fill when attacked%": 100,
+				"passive id": "25"
+			}
+		],
+		"id": 701024,
+		"max_stack": 1,
+		"name": "Arondight",
+		"raid": true,
+		"rarity": 5,
+		"sell_price": 100000,
+		"sphere type": 1,
+		"sphere type text": "Status Boost",
+		"thumbnail": "sphere_thum_4_6.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"701025": {
+		"bfmtMetadata": {
+			"createdAt": "2016-07-06T06:18:42.000Z",
+			"updatedAt": "2017-01-11T12:28:08.000Z"
+		},
+		"desc": "Boosts HP (30%) & Boosts ATK, DEF, REC (60%) when BB gauge is full & Negates DEF ignoring damage",
+		"effect": [
+			{
+				"hp% buff": 30,
+				"passive id": "1"
+			},
+			{
+				"atk% buff": 60,
+				"bb gauge above % buff requirement": 100,
+				"def% buff": 60,
+				"passive id": "30",
+				"rec% buff": 60
+			},
+			{
+				"ignore def resist chance%": 100,
+				"passive id": "92"
+			}
+		],
+		"id": 701025,
+		"max_stack": 1,
+		"name": "Winter's Bells",
+		"raid": true,
+		"rarity": 5,
+		"sell_price": 100000,
+		"sphere type": 1,
+		"sphere type text": "Status Boost",
+		"thumbnail": "sphere_thum_5_6.png",
 		"type": "sphere",
 		"usage": []
 	},
