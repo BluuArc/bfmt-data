@@ -1,33 +1,55 @@
 {
 	"attackInfo": [
 		{
-			"hits": 4,
-			"id": "1",
+			"hits": 3,
+			"id": "29",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2017-10-11T11:13:17.000Z"
+		"updatedAt": "2017-11-15T11:13:03.000Z"
 	},
 	"damage frames": [
 		{
-			"effect delay time(ms)/frame": "0.0/0",
+			"effect delay time(ms)/frame": "16.7/1",
 			"frame times": [
-				12,
-				17,
-				22,
-				27
+				60,
+				80,
+				100
 			],
 			"hit dmg% distribution": [
-				25,
-				25,
-				25,
+				40,
+				35,
 				25
 			],
 			"hit dmg% distribution (total)": 100,
-			"hits": 4,
-			"proc id": "1"
+			"hits": 3,
+			"proc id": "29"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "9"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "32"
 		}
 	],
 	"desc": "",
@@ -35,18 +57,40 @@
 	"id": "6003120",
 	"levels": [
 		{
-			"bc cost": 27,
+			"bc cost": 25,
 			"effects": [
 				{
-					"bb atk%": 50,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "1",
+					"bb atk%": 40,
+					"bb dmg%": 3,
+					"bb elements": [
+						"water"
+					],
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
+				},
+				{
+					"buff #1": {
+						"proc chance%": 100,
+						"rec% buff (6)": -80
+					},
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "9",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "32",
+					"set attack element attribute": "water",
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		}
 	],
-	"name": "滅葬斬"
+	"name": "Execution"
 }

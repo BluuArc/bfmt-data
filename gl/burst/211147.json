@@ -1,56 +1,63 @@
 {
+	"associated_units": [
+		"11147"
+	],
 	"attackInfo": [
 		{
-			"hits": 16,
+			"hits": 18,
 			"id": "1",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2017-06-14T11:43:33.000Z"
+		"updatedAt": "2017-11-15T11:13:03.000Z"
 	},
 	"damage frames": [
 		{
-			"effect delay time(ms)/frame": "0.0/0",
+			"effect delay time(ms)/frame": "16.7/1",
 			"frame times": [
-				25,
-				29,
-				51,
-				55,
-				75,
-				84,
-				90,
-				99,
-				108,
-				114,
-				123,
-				132,
-				141,
-				162,
-				166,
-				170
+				18,
+				21,
+				24,
+				27,
+				30,
+				33,
+				36,
+				74,
+				77,
+				80,
+				83,
+				86,
+				89,
+				92,
+				95,
+				98,
+				101,
+				104
 			],
 			"hit dmg% distribution": [
-				6,
+				12,
+				10,
+				7,
 				5,
-				6,
-				5,
+				4,
+				2,
+				1,
+				16,
+				14,
+				10,
 				6,
 				4,
-				6,
-				3,
 				2,
-				3,
-				10,
-				9,
-				9,
-				9,
-				9,
-				8
+				1,
+				2,
+				1,
+				2,
+				1
 			],
 			"hit dmg% distribution (total)": 100,
-			"hits": 16,
+			"hits": 18,
 			"proc id": "1"
 		},
 		{
@@ -63,35 +70,661 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "11"
+			"proc id": "5"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "58"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "45"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "3"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "19"
 		}
 	],
-	"desc": "MST_SKILLS_211147_DESCRIPTION",
+	"desc": "18 combo massive Fire attack on all foes, enormous Spark vulnerability infliction for 3 turns, enormously boosts Atk, Def and BB Atk for 3 turns, fully restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
 	"drop check count": 1,
 	"id": "211147",
 	"levels": [
 		{
-			"bc cost": 25,
+			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 100,
-					"effect delay time(ms)/frame": "0.0/0",
+					"bb atk%": 1800,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"curse%": 15,
+					"atk% buff (1)": 350,
+					"buff turns": 3,
+					"def% buff (3)": 350,
 					"effect delay time(ms)/frame": "0.0/0",
-					"injury%": 30,
-					"paralysis%": 20,
-					"proc id": "11",
+					"element buffed": "all",
+					"proc id": "5",
 					"target area": "aoe",
-					"target type": "enemy",
-					"weaken%": 35
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "58",
+					"spark dmg received apply%": 100,
+					"spark dmg received debuff turns (94)": 2,
+					"spark dmg% received": 100,
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"gradual heal high": 99999,
+					"gradual heal low": 98999,
+					"gradual heal turns (8)": 3,
+					"proc id": "3",
+					"rec added% (from target)": 10,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 50,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 1800,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 350,
+					"buff turns": 3,
+					"def% buff (3)": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "58",
+					"spark dmg received apply%": 100,
+					"spark dmg received debuff turns (94)": 2,
+					"spark dmg% received": 100,
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"gradual heal high": 99999,
+					"gradual heal low": 98999,
+					"gradual heal turns (8)": 3,
+					"proc id": "3",
+					"rec added% (from target)": 10,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 50,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 1800,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 350,
+					"buff turns": 3,
+					"def% buff (3)": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "58",
+					"spark dmg received apply%": 100,
+					"spark dmg received debuff turns (94)": 2,
+					"spark dmg% received": 100,
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"gradual heal high": 99999,
+					"gradual heal low": 98999,
+					"gradual heal turns (8)": 3,
+					"proc id": "3",
+					"rec added% (from target)": 10,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 50,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 1800,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 350,
+					"buff turns": 3,
+					"def% buff (3)": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "58",
+					"spark dmg received apply%": 100,
+					"spark dmg received debuff turns (94)": 2,
+					"spark dmg% received": 100,
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"gradual heal high": 99999,
+					"gradual heal low": 98999,
+					"gradual heal turns (8)": 3,
+					"proc id": "3",
+					"rec added% (from target)": 10,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 50,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 1800,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 350,
+					"buff turns": 3,
+					"def% buff (3)": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "58",
+					"spark dmg received apply%": 100,
+					"spark dmg received debuff turns (94)": 2,
+					"spark dmg% received": 100,
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"gradual heal high": 99999,
+					"gradual heal low": 98999,
+					"gradual heal turns (8)": 3,
+					"proc id": "3",
+					"rec added% (from target)": 10,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 50,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 1800,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 350,
+					"buff turns": 3,
+					"def% buff (3)": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "58",
+					"spark dmg received apply%": 100,
+					"spark dmg received debuff turns (94)": 2,
+					"spark dmg% received": 100,
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"gradual heal high": 99999,
+					"gradual heal low": 98999,
+					"gradual heal turns (8)": 3,
+					"proc id": "3",
+					"rec added% (from target)": 10,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 50,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 1800,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 350,
+					"buff turns": 3,
+					"def% buff (3)": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "58",
+					"spark dmg received apply%": 100,
+					"spark dmg received debuff turns (94)": 2,
+					"spark dmg% received": 100,
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"gradual heal high": 99999,
+					"gradual heal low": 98999,
+					"gradual heal turns (8)": 3,
+					"proc id": "3",
+					"rec added% (from target)": 10,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 50,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 1800,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 350,
+					"buff turns": 3,
+					"def% buff (3)": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "58",
+					"spark dmg received apply%": 100,
+					"spark dmg received debuff turns (94)": 2,
+					"spark dmg% received": 100,
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"gradual heal high": 99999,
+					"gradual heal low": 98999,
+					"gradual heal turns (8)": 3,
+					"proc id": "3",
+					"rec added% (from target)": 10,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 50,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 1800,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 350,
+					"buff turns": 3,
+					"def% buff (3)": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "58",
+					"spark dmg received apply%": 100,
+					"spark dmg received debuff turns (94)": 2,
+					"spark dmg% received": 100,
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"gradual heal high": 99999,
+					"gradual heal low": 98999,
+					"gradual heal turns (8)": 3,
+					"proc id": "3",
+					"rec added% (from target)": 10,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 50,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 1800,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 350,
+					"buff turns": 3,
+					"def% buff (3)": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "58",
+					"spark dmg received apply%": 100,
+					"spark dmg received debuff turns (94)": 2,
+					"spark dmg% received": 100,
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"gradual heal high": 99999,
+					"gradual heal low": 98999,
+					"gradual heal turns (8)": 3,
+					"proc id": "3",
+					"rec added% (from target)": 10,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 50,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		}
 	],
-	"name": "MST_SKILLS_211147_NAME"
+	"name": "Inferno Giltonyla"
 }
