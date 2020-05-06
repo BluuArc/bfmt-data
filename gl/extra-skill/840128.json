@@ -4,9 +4,9 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-01-06T11:06:15.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2018-06-13T12:09:02.000Z"
 	},
-	"desc": "50% boost to Spark damage & adds resistance against 1 KO attack when HP is below 20%",
+	"desc": "80% boost to Spark damage, boost Spark damage for all allies, adds resistance against 1 KO attack when HP is below 20% & raises Atk parameter limits to 150000",
 	"effects": [
 		{
 			"buff": {
@@ -21,8 +21,20 @@
 		},
 		{
 			"conditions": [],
-			"damage% for spark": 50,
+			"damage% for spark": 80,
 			"passive id": "31",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"damage% for spark": 20,
+			"passive id": "31",
+			"passive target": "party"
+		},
+		{
+			"conditions": [],
+			"increase atk cap": 150000,
+			"passive id": "143",
 			"passive target": "self"
 		}
 	],
