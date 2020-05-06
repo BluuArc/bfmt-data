@@ -21048,9 +21048,9 @@
 	"40600": {
 		"bfmtMetadata": {
 			"createdAt": "2016-07-06T06:18:42.000Z",
-			"updatedAt": "2017-02-13T15:27:55.000Z"
+			"updatedAt": "2017-08-10T12:54:34.000Z"
 		},
-		"desc": "Boosts HP, Atk, Def, Rec, and Critical Rate by 25%",
+		"desc": "Boosts HP, Atk, Def, Rec by 30% and Critical Rate by 20%\"",
 		"dictionary": {
 			"lore": "I ask you.<br>\"If war gives birth to hatred, why does it continue without end?\"<br>I challenge you.<br>\"If love gives birth to hatred, why do we hope for an eternity of it?\""
 		},
@@ -27052,6 +27052,155 @@
 		"type": "sphere",
 		"usage": []
 	},
+	"48222": {
+		"associated_units": [
+			"820397",
+			"820398"
+		],
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-08-10T12:54:34.000Z"
+		},
+		"desc": "Raises normal hit amount, 25% boost to Atk, Def, max HP, boosts BC efficacy & reduces BB gauge required for BB",
+		"dictionary": {
+			"lore": "A Sphere that utilizes a phenomenon Noel discovered while developing the Frontier Gate. Bearers are said to enter into a state in which they feel like they could fight forever. They gain inexhaustible reserves of fighting spirit, and never feel fatigue regardless of how long they have been in combat. However, it is also said that Noel restricted usage of this Sphere to research purposes only, due to concerns that protracted use could cripple its bearers."
+		},
+		"effect": [
+			{
+				"passive id": "48",
+				"reduced bb bc cost%": 15
+			},
+			{
+				"bb gauge fill rate%": 40,
+				"passive id": "32"
+			},
+			{
+				"hit increase/hit": 1,
+				"passive id": "37"
+			},
+			{
+				"atk% buff": 25,
+				"def% buff": 25,
+				"hp% buff": 25,
+				"passive id": "1"
+			}
+		],
+		"id": 48222,
+		"max_stack": 1,
+		"name": "Invigorating Device",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 10000,
+		"sphere type": 13,
+		"sphere type text": "Atk Boosting",
+		"thumbnail": "sphere_thum_5_2.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"48223": {
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-08-10T12:54:34.000Z"
+		},
+		"desc": "Probable random status ailment infliction, 25% boost to Atk, Def, max HP, considerably boosts damage against status afflicted foes & normal attacks may hit all foes",
+		"dictionary": {
+			"lore": "A device Noel discovered and converted into a Sphere when developing the Frontier Gate. Originally manufactured amidst a war between two nations, its power to critically incapacitate its wearer's enemies ultimately brought both countries to their ruin. Some claim that although Noel condemned such power as the creation of heinous people, he conducted his research on the sphere quite happily."
+		},
+		"effect": [
+			{
+				"aoe atk inc%": 0,
+				"chance to aoe": 20,
+				"passive id": "96"
+			},
+			{
+				"curse%": 7,
+				"passive id": "20",
+				"poison%": 7,
+				"sick%": 10
+			},
+			{
+				"injury%": 10,
+				"paralysis%": 7,
+				"passive id": "20",
+				"weaken%": 10
+			},
+			{
+				"atk% buff when enemy has ailment": 75,
+				"atk% buff when enemy has curse": true,
+				"atk% buff when enemy has injury": true,
+				"atk% buff when enemy has paralysis": true,
+				"atk% buff when enemy has poison": true,
+				"atk% buff when enemy has sick": true,
+				"atk% buff when enemy has weaken": true,
+				"passive id": "74"
+			},
+			{
+				"atk% buff": 25,
+				"def% buff": 25,
+				"hp% buff": 25,
+				"passive id": "1"
+			}
+		],
+		"id": 48223,
+		"max_stack": 1,
+		"name": "Virulent Device",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 10000,
+		"sphere type": 4,
+		"sphere type text": "Status Ailment",
+		"thumbnail": "sphere_thum_5_2.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"48224": {
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-08-10T12:54:34.000Z"
+		},
+		"desc": "Greatly restores HP each turn, damage taken may restore HP, 25% boost to Atk, Def, max HP & probable resistance against 1 KO attack",
+		"dictionary": {
+			"lore": "A sphere made from a seed Noel discovered during the Frontier Gate's development. The plants that grow from this variety of seed grow at more quickly when damaged, and their essence grants the sphere heightened regenerative powers. Noel remains dissatisfied with its abilities, however, saying, \"Someday I'd like it to grow fast enough to cover an entire island.\" He is rumored to be at work on improvements."
+		},
+		"effect": [
+			{
+				"passive id": "33",
+				"rec% added (turn heal)": 10,
+				"turn heal high": 2000,
+				"turn heal low": 1500
+			},
+			{
+				"dmg% to hp% when attacked chance%": 40,
+				"dmg% to hp% when attacked high": 20,
+				"dmg% to hp% when attacked low": 20,
+				"passive id": "24"
+			},
+			{
+				"angel idol chance% condition": 0,
+				"angel idol recover chance% high": 20,
+				"angel idol recover chance% low": 20,
+				"angel idol recover counts": 1,
+				"passive id": "69"
+			},
+			{
+				"atk% buff": 25,
+				"def% buff": 25,
+				"hp% buff": 25,
+				"passive id": "1"
+			}
+		],
+		"id": 48224,
+		"max_stack": 1,
+		"name": "Blossom Device",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 10000,
+		"sphere type": 7,
+		"sphere type text": "HP Recovery",
+		"thumbnail": "sphere_thum_5_2.png",
+		"type": "sphere",
+		"usage": []
+	},
 	"48300": {
 		"bfmtMetadata": {
 			"createdAt": "2016-04-06T04:15:26.000Z",
@@ -30071,6 +30220,7 @@
 			"10465",
 			"10555",
 			"10556",
+			"10676",
 			"10736",
 			"10756",
 			"20015",
@@ -30085,6 +30235,7 @@
 			"20365",
 			"20535",
 			"20566",
+			"20636",
 			"20676",
 			"30015",
 			"30016",
@@ -30099,6 +30250,7 @@
 			"30516",
 			"30545",
 			"30566",
+			"30626",
 			"40015",
 			"40016",
 			"40165",
@@ -30111,6 +30263,7 @@
 			"40506",
 			"40536",
 			"40576",
+			"40606",
 			"50015",
 			"50016",
 			"50105",
@@ -30140,14 +30293,17 @@
 			"60526",
 			"60535",
 			"60666",
+			"60766",
 			"710115",
 			"710255",
 			"720105",
 			"720155",
 			"730145",
 			"730196",
+			"730216",
 			"740145",
 			"740155",
+			"740216",
 			"750155",
 			"750156",
 			"750166",
@@ -30156,6 +30312,7 @@
 			"760196",
 			"760216",
 			"810337",
+			"810356",
 			"810397",
 			"820397",
 			"830187",
@@ -30169,11 +30326,12 @@
 			"850397",
 			"860165",
 			"860166",
+			"860356",
 			"860377"
 		],
 		"bfmtMetadata": {
 			"createdAt": "2015-11-19T05:49:01.000Z",
-			"updatedAt": "2017-07-18T04:19:03.000Z"
+			"updatedAt": "2017-08-10T12:54:34.000Z"
 		},
 		"desc": "A mysterious relic used to evolve the Unit Grandt",
 		"id": 110100,
@@ -31938,7 +32096,7 @@
 		],
 		"bfmtMetadata": {
 			"createdAt": "2017-04-06T13:00:28.000Z",
-			"updatedAt": "2017-07-18T04:19:03.000Z"
+			"updatedAt": "2017-08-10T12:54:34.000Z"
 		},
 		"desc": "Old legends tell that this jewel holds the power of seas and oceans.",
 		"id": 700046,
@@ -31946,16 +32104,6 @@
 		"name": "Jewel of the Waves",
 		"raid": false,
 		"rarity": 3,
-		"recipe": {
-			"karma": "150000",
-			"materials": [
-				{
-					"count": 40,
-					"id": 700047,
-					"name": "Feather of the Phoenix"
-				}
-			]
-		},
 		"sell_price": 10000,
 		"thumbnail": "item_thum_20961.png",
 		"type": "evomat",
@@ -31964,7 +32112,7 @@
 	"700047": {
 		"bfmtMetadata": {
 			"createdAt": "2017-06-10T11:48:20.000Z",
-			"updatedAt": "2017-07-18T04:19:03.000Z"
+			"updatedAt": "2017-08-10T12:54:34.000Z"
 		},
 		"desc": "Collect 40 feathers to craft the item required to evolve Migina.",
 		"id": 700047,
@@ -31975,12 +32123,7 @@
 		"sell_price": 100,
 		"thumbnail": "item_thum_700047.png",
 		"type": "material",
-		"usage": [
-			{
-				"id": 700046,
-				"name": "Jewel of the Waves"
-			}
-		]
+		"usage": []
 	},
 	"701000": {
 		"bfmtMetadata": {
@@ -32449,7 +32592,7 @@
 		],
 		"bfmtMetadata": {
 			"createdAt": "2016-07-06T06:18:42.000Z",
-			"updatedAt": "2017-03-08T11:04:58.000Z"
+			"updatedAt": "2017-08-10T12:54:34.000Z"
 		},
 		"desc": "Boosts all stats (10%)",
 		"effect": [
@@ -32509,6 +32652,14 @@
 			{
 				"id": 701015,
 				"name": "Propaganda Codex"
+			},
+			{
+				"id": 701045,
+				"name": "Hunter Title"
+			},
+			{
+				"id": 701047,
+				"name": "Pure Noblesse Title"
 			}
 		]
 	},
@@ -34495,7 +34646,7 @@
 		],
 		"bfmtMetadata": {
 			"createdAt": "2017-06-10T11:48:20.000Z",
-			"updatedAt": "2017-07-18T04:19:03.000Z"
+			"updatedAt": "2017-08-10T12:54:34.000Z"
 		},
 		"desc": "Boosts all parameters (20%) & boosts ATK (50%) when BB gauge is full & boosts BB ATK (150%) & boosts Spark damage (80%)",
 		"effect": [
@@ -34527,6 +34678,21 @@
 		"name": "Hunter Title",
 		"raid": false,
 		"rarity": 5,
+		"recipe": {
+			"karma": "150000",
+			"materials": [
+				{
+					"count": 1,
+					"id": 701009,
+					"name": "Noblesse Title"
+				},
+				{
+					"count": 1,
+					"id": 701046,
+					"name": "Hunter Trophy"
+				}
+			]
+		},
 		"sell_price": 100000,
 		"sphere type": 13,
 		"sphere type text": "Atk Boosting",
@@ -34537,11 +34703,12 @@
 	"701046": {
 		"bfmtMetadata": {
 			"createdAt": "2017-06-10T11:48:20.000Z",
-			"updatedAt": "2017-07-18T04:19:03.000Z"
+			"updatedAt": "2017-08-10T12:54:34.000Z"
 		},
 		"desc": "Use this material to craft the Hunter Title.",
 		"first_clear_missions": [
-			"706903"
+			"706903",
+			"707303"
 		],
 		"id": 701046,
 		"max_stack": 99,
@@ -34550,6 +34717,127 @@
 		"rarity": 3,
 		"sell_price": 100,
 		"thumbnail": "item_thum_701046.png",
+		"type": "material",
+		"usage": [
+			{
+				"id": 701045,
+				"name": "Hunter Title"
+			}
+		]
+	},
+	"701047": {
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-08-10T12:54:34.000Z"
+		},
+		"desc": "Boosts all parameters (20%) & reduces BB cost (15%) & damage taken fills BB gauge (1-2 BC) & boosts Spark damage (80%)",
+		"effect": [
+			{
+				"atk% buff": 20,
+				"def% buff": 20,
+				"hp% buff": 20,
+				"passive id": "1",
+				"rec% buff": 20
+			},
+			{
+				"passive id": "48",
+				"reduced bb bc cost%": 15
+			},
+			{
+				"bc fill when attacked high": 2,
+				"bc fill when attacked low": 1,
+				"bc fill when attacked%": 100,
+				"passive id": "25"
+			},
+			{
+				"damage% for spark": 80,
+				"passive id": "31"
+			}
+		],
+		"id": 701047,
+		"max_stack": 1,
+		"name": "Pure Noblesse Title",
+		"raid": false,
+		"rarity": 5,
+		"recipe": {
+			"karma": "150000",
+			"materials": [
+				{
+					"count": 1,
+					"id": 701009,
+					"name": "Noblesse Title"
+				},
+				{
+					"count": 1,
+					"id": 701048,
+					"name": "Shapeshifter Insignia"
+				}
+			]
+		},
+		"sell_price": 100000,
+		"sphere type": 6,
+		"sphere type text": "BB Gauge",
+		"thumbnail": "item_thum_701045.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"701048": {
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-08-10T12:54:34.000Z"
+		},
+		"desc": "Use this material to craft the Pure Noblesse Title.",
+		"first_clear_missions": [
+			"707103",
+			"707203"
+		],
+		"id": 701048,
+		"max_stack": 99,
+		"name": "Shapeshifter Insignia",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 500,
+		"thumbnail": "item_thum_701046.png",
+		"type": "material",
+		"usage": [
+			{
+				"id": 701047,
+				"name": "Pure Noblesse Title"
+			}
+		]
+	},
+	"701049": {
+		"associated_units": [
+			"730216"
+		],
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-08-10T12:54:34.000Z"
+		},
+		"desc": "Use this material to evolve Enki to Dream Evolution.",
+		"id": 701049,
+		"max_stack": 99,
+		"name": "Primordial Stone",
+		"raid": false,
+		"rarity": 5,
+		"sell_price": 10000,
+		"thumbnail": "item_thum_20820.png",
+		"type": "evomat",
+		"usage": []
+	},
+	"701050": {
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-08-10T12:54:34.000Z"
+		},
+		"desc": "A gigantic skeleton found within an ancient desert.",
+		"id": 701050,
+		"max_stack": 99,
+		"name": "Bones of a Fallen",
+		"raid": false,
+		"rarity": 4,
+		"sell_price": 100,
+		"thumbnail": "item_thum_902.png",
 		"type": "material",
 		"usage": []
 	},
