@@ -452,7 +452,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-07-06T06:18:42.000Z",
-		"updatedAt": "2017-04-07T12:18:31.000Z"
+		"updatedAt": "2018-03-16T13:02:26.000Z"
 	},
 	"cost": 48,
 	"damage frames": {
@@ -552,40 +552,44 @@
 			"id": "70041",
 			"skill": {
 				"bp": 10,
-				"desc": "30% boost to max HP",
+				"desc": "Boosts all parameters (30%)",
 				"effects": [
 					{
 						"passive": {
+							"atk% buff": 30,
+							"def% buff": 30,
 							"hp% buff": 30,
-							"passive id": "1"
+							"passive id": "1",
+							"rec% buff": 30
 						}
 					}
 				],
 				"id": "70041",
 				"level": 1,
-				"name": "30% boost to max HP",
+				"name": "Boosts all parameters (30%)",
 				"series": ""
 			}
 		},
 		{
 			"category": "1",
-			"dependency": "1@70041",
-			"dependency comment": "Unlock \"30% boost to max HP\"",
+			"dependency": "",
+			"dependency comment": "",
 			"id": "70042",
 			"skill": {
 				"bp": 10,
-				"desc": "Enhances max HP effect (+20%)",
+				"desc": "Boosts ATK and max HP (30%)",
 				"effects": [
 					{
 						"passive": {
-							"hp% buff": 20,
+							"atk% buff": 30,
+							"hp% buff": 30,
 							"passive id": "1"
 						}
 					}
 				],
 				"id": "70042",
 				"level": 1,
-				"name": "Enhances max HP effect (+20%)",
+				"name": "Boosts ATK and max HP (30%)",
 				"series": ""
 			}
 		},
@@ -596,7 +600,7 @@
 			"id": "70043",
 			"skill": {
 				"bp": 10,
-				"desc": "50% boost to Atk when HP is over 50%",
+				"desc": "Boosts ATK (50%) when HP is over 50%",
 				"effects": [
 					{
 						"passive": {
@@ -608,7 +612,7 @@
 				],
 				"id": "70043",
 				"level": 1,
-				"name": "50% boost to Atk when HP is over 50%",
+				"name": "Boosts ATK (50%) when HP is over 50%",
 				"series": ""
 			}
 		},
@@ -618,7 +622,7 @@
 			"dependency comment": "",
 			"id": "70044",
 			"skill": {
-				"bp": 20,
+				"bp": 15,
 				"desc": "Adds fill own BB gauge to max effect to BB",
 				"effects": [
 					{
@@ -649,24 +653,15 @@
 			"dependency comment": "",
 			"id": "70045",
 			"skill": {
-				"bp": 20,
+				"bp": 15,
 				"desc": "Enhances SBB's boost ATK of Water, Thunder types effect (+20%)",
 				"effects": [
 					{
-						"passive": {
-							"passive id": "66",
-							"trigger on sbb": true,
-							"triggered effect": [
-								{
-									"atk% buff (13)": 100,
-									"buff turns": 3,
-									"effect delay time(ms)/frame": "83.3/5",
-									"element buffed": "water",
-									"proc id": "5",
-									"target area": "aoe",
-									"target type": "party"
-								}
-							]
+						"add to sbb": {
+							"atk% buff (1)": 20,
+							"buff turns": 0,
+							"element buffed": "all",
+							"proc id": "5"
 						}
 					}
 				],
@@ -680,10 +675,34 @@
 			"category": "11",
 			"dependency": "",
 			"dependency comment": "",
+			"id": "70537",
+			"skill": {
+				"bp": 15,
+				"desc": "Enhances BB's DEF boost of Water, Thunder types units effect (+20%, 140% total)",
+				"effects": [
+					{
+						"add to bb": {
+							"buff turns": 0,
+							"def% buff (3)": 20,
+							"element buffed": "all",
+							"proc id": "5"
+						}
+					}
+				],
+				"id": "70537",
+				"level": 1,
+				"name": "Enhances BB's DEF boost of Water, Thunder types units effect (+20%, 140% total)",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
 			"id": "70046",
 			"skill": {
-				"bp": 30,
-				"desc": "Replace BB's own chance to resist against 1 KO attack effect to affect whole squad instead (10%)",
+				"bp": 20,
+				"desc": "Replace BB's chance to resist against 1 KO attack effect to affect whole squad (15%)",
 				"effects": [
 					{
 						"passive": {
@@ -705,7 +724,7 @@
 				],
 				"id": "70046",
 				"level": 1,
-				"name": "Replace BB's own chance to resist against 1 KO attack effect to affect whole squad instead (10%)",
+				"name": "Replace BB's chance to resist against 1 KO attack effect to affect whole squad (15%)",
 				"series": ""
 			}
 		},
@@ -715,7 +734,7 @@
 			"dependency comment": "",
 			"id": "70047",
 			"skill": {
-				"bp": 40,
+				"bp": 20,
 				"desc": "Enhances SBB's raising from KO effect chance (+5%)",
 				"effects": [
 					{
@@ -738,8 +757,8 @@
 			"dependency comment": "",
 			"id": "70048",
 			"skill": {
-				"bp": 40,
-				"desc": "Adds boost to ATK (160%) for 3 turns effect to BB/SBB",
+				"bp": 15,
+				"desc": "Adds boost to ATK (180%) for 3 turns effect to BB/SBB",
 				"effects": [
 					{
 						"passive": {
@@ -748,7 +767,7 @@
 							"trigger on sbb": true,
 							"triggered effect": [
 								{
-									"atk% buff (1)": 160,
+									"atk% buff (1)": 180,
 									"buff turns": 3,
 									"effect delay time(ms)/frame": "0.0/0",
 									"element buffed": "all",
@@ -762,7 +781,7 @@
 				],
 				"id": "70048",
 				"level": 1,
-				"name": "Adds boost to ATK (160%) for 3 turns effect to BB/SBB",
+				"name": "Adds boost to ATK (180%) for 3 turns effect to BB/SBB",
 				"series": ""
 			}
 		},
@@ -772,8 +791,8 @@
 			"dependency comment": "",
 			"id": "70049",
 			"skill": {
-				"bp": 40,
-				"desc": "Adds Spark damage boost (100%) for 3 turns effect to BB/SBB",
+				"bp": 25,
+				"desc": "Adds Spark damage boost (150%) for 3 turns effect to BB/SBB",
 				"effects": [
 					{
 						"passive": {
@@ -785,7 +804,7 @@
 									"buff turns": 3,
 									"effect delay time(ms)/frame": "0.0/0",
 									"proc id": "23",
-									"spark dmg% buff (40)": 100,
+									"spark dmg% buff (40)": 150,
 									"target area": "aoe",
 									"target type": "party"
 								}
@@ -795,29 +814,29 @@
 				],
 				"id": "70049",
 				"level": 1,
-				"name": "Adds Spark damage boost (100%) for 3 turns effect to BB/SBB",
+				"name": "Adds Spark damage boost (150%) for 3 turns effect to BB/SBB",
 				"series": ""
 			}
 		},
 		{
 			"category": "11",
-			"dependency": "1@70049",
-			"dependency comment": "Unlock \"Adds Spark damage boost (100%) for 3 turns effect to BB/SBB\"",
-			"id": "70050",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "70538",
 			"skill": {
-				"bp": 20,
-				"desc": "Enhances SBB's Spark damage boost effect (+40%)",
+				"bp": 15,
+				"desc": "Adds status ailment removal effect to BB/SBB",
 				"effects": [
 					{
 						"passive": {
 							"passive id": "66",
+							"trigger on bb": true,
 							"trigger on sbb": true,
 							"triggered effect": [
 								{
-									"buff turns": 3,
-									"effect delay time(ms)/frame": "83.3/5",
-									"proc id": "23",
-									"spark dmg% buff (40)": 140,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "10",
+									"remove all status ailments": true,
 									"target area": "aoe",
 									"target type": "party"
 								}
@@ -825,9 +844,47 @@
 						}
 					}
 				],
-				"id": "70050",
+				"id": "70538",
 				"level": 1,
-				"name": "Enhances SBB's Spark damage boost effect (+40%)",
+				"name": "Adds status ailment removal effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "70539",
+			"skill": {
+				"bp": 15,
+				"desc": "Adds status ailment negation for 3 turns effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "17",
+									"resist curse% (34)": 100,
+									"resist injury% (33)": 100,
+									"resist paralysis% (35)": 100,
+									"resist poison% (30)": 100,
+									"resist sick% (32)": 100,
+									"resist status ails turns": 3,
+									"resist weaken% (31)": 100,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "70539",
+				"level": 1,
+				"name": "Adds status ailment negation for 3 turns effect to BB/SBB",
 				"series": ""
 			}
 		}
