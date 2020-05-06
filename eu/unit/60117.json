@@ -454,7 +454,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 47,
 	"damage frames": {
@@ -497,6 +497,9 @@
 	},
 	"drop check count": 4,
 	"element": "dark",
+	"evolution": {
+		"prev": "60116"
+	},
 	"exp_pattern": 20,
 	"extra skill": {
 		"desc": "Slight HP absorption, damage dealt boosts BB gauge & damage taken may slightly restore HP",
@@ -529,6 +532,213 @@
 		"name": "Unleashed Soul",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "510000",
+			"skill": {
+				"bp": 10,
+				"desc": "20% boost to Atk, Rec",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 20,
+							"passive id": "1",
+							"rec% buff": 20
+						}
+					}
+				],
+				"id": "510000",
+				"level": 1,
+				"name": "20% boost to Atk, Rec",
+				"series": ""
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "Unlock 20% boost to Atk, max HP",
+			"id": "610000",
+			"skill": {
+				"bp": 10,
+				"desc": "20% boost to Def, max HP",
+				"effects": [
+					{
+						"passive": {
+							"def% buff": 20,
+							"hp% buff": 20,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "610000",
+				"level": 1,
+				"name": "20% boost to Def, max HP",
+				"series": ""
+			}
+		},
+		{
+			"category": "6",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "5011000",
+			"skill": {
+				"bp": 10,
+				"desc": "Restores HP each turn",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "33",
+							"rec% added (turn heal)": 10,
+							"turn heal high": 800,
+							"turn heal low": 600
+						}
+					}
+				],
+				"id": "5011000",
+				"level": 1,
+				"name": "Restores HP each turn",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "30000200",
+			"skill": {
+				"bp": 20,
+				"desc": "Enhances BB's Def, Rec boost effects",
+				"effects": [
+					{
+						"add to bb": {
+							"buff turns": 0,
+							"def% buff (3)": 10,
+							"element buffed": "all",
+							"proc id": "5",
+							"rec% buff (5)": 10
+						}
+					}
+				],
+				"id": "30000200",
+				"level": 2,
+				"name": "Enhances BB's Def, Rec boost effects",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "55002100",
+			"skill": {
+				"bp": 50,
+				"desc": "Adds probable HP restoration when attacked for 3 effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"hp recover from dmg buff turns (133)": 3,
+									"hp recover from dmg chance": 20,
+									"hp recover from dmg% high": 30,
+									"hp recover from dmg% low": 25,
+									"proc id": "85",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "55002100",
+				"level": 5,
+				"name": "Adds probable HP restoration when attacked effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "50005000",
+			"skill": {
+				"bp": 30,
+				"desc": "Adds huge Def boost relative to Rec for 3 turns effect to SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"% converted turns": 3,
+									"converted attribute": "recovery",
+									"def% buff (47)": 80,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "24",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50005000",
+				"level": 6,
+				"name": "Adds huge Def boost relative to Rec effect to SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57000003",
+			"skill": {
+				"bp": 20,
+				"desc": "Adds status ailment removal effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"ailments cured": [
+										"poison",
+										"weaken",
+										"sick",
+										"injury",
+										"curse",
+										"paralysis",
+										"atk down",
+										"def down",
+										"rec down"
+									],
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "38",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "57000003",
+				"level": 6,
+				"name": "Adds status ailment removal effect to BB/SBB",
+				"series": ""
+			}
+		}
+	],
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1399,

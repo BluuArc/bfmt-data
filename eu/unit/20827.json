@@ -642,7 +642,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 47,
 	"damage frames": {
@@ -681,6 +681,9 @@
 	},
 	"drop check count": 5,
 	"element": "water",
+	"evolution": {
+		"prev": "20826"
+	},
 	"exp_pattern": 20,
 	"extra skill": {
 		"desc": "Probable slight HP absorption & probable random status ailment infliction",
@@ -714,6 +717,253 @@
 		"name": "Evil-Purging Gift",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "710000",
+			"skill": {
+				"bp": 20,
+				"desc": "20% boost to all parameters",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 20,
+							"def% buff": 20,
+							"hp% buff": 20,
+							"passive id": "1",
+							"rec% buff": 20
+						}
+					}
+				],
+				"id": "710000",
+				"level": 2,
+				"name": "20% boost to all parameters",
+				"series": ""
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "150000",
+			"skill": {
+				"bp": 10,
+				"desc": "Hugely boosts Atk relative to how high remaining HP is",
+				"effects": [
+					{
+						"passive": {
+							"atk% base buff": 0,
+							"atk% extra buff based on hp": 100,
+							"buff proportional to hp": "remaining",
+							"passive id": "46"
+						}
+					}
+				],
+				"id": "150000",
+				"level": 4,
+				"name": "Hugely boosts Atk relative to how high remaining HP is",
+				"series": ""
+			}
+		},
+		{
+			"category": "4",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "3100001",
+			"skill": {
+				"bp": 20,
+				"desc": "Raises normal hit amount",
+				"effects": [
+					{
+						"passive": {
+							"hit increase/hit": 1,
+							"passive id": "37"
+						}
+					}
+				],
+				"id": "3100001",
+				"level": 2,
+				"name": "Raises normal hit amount",
+				"series": ""
+			}
+		},
+		{
+			"category": "4",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "3310001",
+			"skill": {
+				"bp": 30,
+				"desc": "Boosts elemental damage",
+				"effects": [
+					{
+						"passive": {
+							"dark units do extra elemental weakness dmg": true,
+							"earth units do extra elemental weakness dmg": true,
+							"elemental weakness multiplier%": 50,
+							"fire units do extra elemental weakness dmg": true,
+							"light units do extra elemental weakness dmg": true,
+							"passive id": "50",
+							"thunder units do extra elemental weakness dmg": true,
+							"water units do extra elemental weakness dmg": true
+						}
+					}
+				],
+				"id": "3310001",
+				"level": 4,
+				"name": "Boosts elemental damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "43001000",
+			"skill": {
+				"bp": 30,
+				"desc": "Enhances damage boost against status afflicted foes effect added to BB/SBB/UBB",
+				"effects": [
+					{
+						"add to bb": {
+							"atk% buff turns (110)": 0,
+							"atk% buff when enemy has ailment": 30,
+							"proc id": "65"
+						}
+					},
+					{
+						"add to sbb": {
+							"atk% buff turns (110)": 0,
+							"atk% buff when enemy has ailment": 30,
+							"proc id": "65"
+						}
+					},
+					{
+						"add to ubb": {
+							"atk% buff turns (110)": 0,
+							"atk% buff when enemy has ailment": 30,
+							"proc id": "65"
+						}
+					}
+				],
+				"id": "43001000",
+				"level": 5,
+				"name": "Enhances damage boost against status afflicted foes effect added to BB/SBB/UBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "58001000",
+			"skill": {
+				"bp": 60,
+				"desc": "Adds status ailment counter effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"counter inflict ailment turns": 3,
+									"counter inflict curse% (82)": 10,
+									"counter inflict injury% (81)": 15,
+									"counter inflict paralysis% (83)": 10,
+									"counter inflict poison% (78)": 10,
+									"counter inflict sick% (80)": 15,
+									"counter inflict weaken% (79)": 15,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "53",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "58001000",
+				"level": 6,
+				"name": "Adds status ailment counter effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "35001000",
+			"skill": {
+				"bp": 20,
+				"desc": "Enhances success rate of HP absorption effect added to BB/SBB",
+				"effects": [
+					{
+						"add to bb": {
+							"hp drain buff turns (134)": 0,
+							"hp drain chance%": 10,
+							"hp drain% high": 0,
+							"hp drain% low": 0,
+							"proc id": "86"
+						}
+					},
+					{
+						"add to sbb": {
+							"hp drain buff turns (134)": 0,
+							"hp drain chance%": 10,
+							"hp drain% high": 0,
+							"hp drain% low": 0,
+							"proc id": "86"
+						}
+					}
+				],
+				"id": "35001000",
+				"level": 2,
+				"name": "Enhances success rate of HP absorption effect added to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "40000800",
+			"skill": {
+				"bp": 40,
+				"desc": "Allows UBB effects to last for 4 turns",
+				"effects": [
+					{
+						"add to ubb": {
+							"buff turns": 1,
+							"element buffed": "all",
+							"proc id": "5"
+						}
+					},
+					{
+						"add to ubb": {
+							"atk% buff turns (110)": 1,
+							"atk% buff when enemy has ailment": 0,
+							"proc id": "65"
+						}
+					},
+					{
+						"add to ubb": {
+							"elemental weakness buff turns": 1,
+							"elemental weakness multiplier%": 0,
+							"proc id": "55"
+						}
+					}
+				],
+				"id": "40000800",
+				"level": 6,
+				"name": "Allows UBB effects to last for 4 turns",
+				"series": ""
+			}
+		}
+	],
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1392,

@@ -596,7 +596,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-07-06T06:18:42.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 47,
 	"damage frames": {
@@ -637,6 +637,9 @@
 	},
 	"drop check count": 4,
 	"element": "thunder",
+	"evolution": {
+		"prev": "40786"
+	},
 	"exp_pattern": 20,
 	"extra skill": {
 		"desc": "Boosts Atk, Def when BB gauge is over 50%",
@@ -654,6 +657,231 @@
 		"name": "Talent-backing Ideals",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "140001",
+			"skill": {
+				"bp": 20,
+				"desc": "50% boost to Atk",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 50,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "140001",
+				"level": 1,
+				"name": "50% boost to Atk",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1040001",
+			"skill": {
+				"bp": 30,
+				"desc": "100% boost to Spark damage",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 100,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1040001",
+				"level": 6,
+				"name": "100% boost to Spark damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "3",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "2110001",
+			"skill": {
+				"bp": 10,
+				"desc": "Boosts critical hit damage",
+				"effects": [
+					{
+						"passive": {
+							"crit multiplier%": 50,
+							"passive id": "34"
+						}
+					}
+				],
+				"id": "2110001",
+				"level": 2,
+				"name": "Boosts critical hit damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "10100100",
+			"skill": {
+				"bp": 10,
+				"desc": "Activates at turn's end effects during turn's start instead (effects will only activate once in Arena)",
+				"effects": [
+					{
+						"passive": {
+							"unknown passive id": "72",
+							"unknown passive params": "0,1"
+						}
+					}
+				],
+				"id": "10100100",
+				"level": 1,
+				"name": "Activates at turn's end effects during turn's start instead",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "53007100",
+			"skill": {
+				"bp": 50,
+				"desc": "Adds huge BB Atk boost for 3 turns effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"bb atk% buff": 300,
+									"buff turns (72)": 3,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "45",
+									"sbb atk% buff": 300,
+									"target area": "aoe",
+									"target type": "party",
+									"ubb atk% buff": 300
+								}
+							]
+						}
+					}
+				],
+				"id": "53007100",
+				"level": 4,
+				"name": "Adds huge BB Atk boost effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "54000000",
+			"skill": {
+				"bp": 40,
+				"desc": "Adds BB gauge boost each turn for 3 turns effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"increase bb gauge gradual": 6,
+									"increase bb gauge gradual turns (37)": 3,
+									"proc id": "19",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "54000000",
+				"level": 5,
+				"name": "Adds BB gauge boost each turn effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57003000",
+			"skill": {
+				"bp": 20,
+				"desc": "Adds Atk, Def, Rec reducing effects negation for 1 turn to SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"atk down resist% (120)": 100,
+									"def down resist% (121)": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "73",
+									"rec down resist% (122)": 100,
+									"stat down immunity buff turns": 1,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "57003000",
+				"level": 5,
+				"name": "Adds Atk, Def, Rec reducing effects negation to SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "60005000",
+			"skill": {
+				"bp": 50,
+				"desc": "Adds considerable OD gauge boost for 3 turns effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"od fill rate buff turns (132)": 3,
+									"od fill rate% buff": 20,
+									"proc id": "84",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "60005000",
+				"level": 6,
+				"name": "Adds considerable OD gauge boost effect to BB/SBB",
+				"series": ""
+			}
+		}
+	],
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1404,

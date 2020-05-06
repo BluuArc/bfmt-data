@@ -384,7 +384,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-07-06T06:18:42.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 45,
 	"damage frames": {
@@ -405,6 +405,9 @@
 	},
 	"drop check count": 40,
 	"element": "dark",
+	"evolution": {
+		"prev": "60025"
+	},
 	"exp_pattern": 20,
 	"extra skill": {
 		"desc": "Adds Def ignoring effect for 2 turns to BB/SBB & 50% boost to Spark damage",
@@ -437,6 +440,224 @@
 		"name": "Boundless Bushido",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "140001",
+			"skill": {
+				"bp": 20,
+				"desc": "50% boost to Atk",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 50,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "140001",
+				"level": 1,
+				"name": "50% boost to Atk",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1040001",
+			"skill": {
+				"bp": 30,
+				"desc": "100% boost to Spark damage",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 100,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1040001",
+				"level": 6,
+				"name": "100% boost to Spark damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1220000",
+			"skill": {
+				"bp": 20,
+				"desc": "Spark damage enormously boosts BB gauge",
+				"effects": [
+					{
+						"passive": {
+							"bc fill on spark high": 10,
+							"bc fill on spark low": 10,
+							"bc fill on spark%": 100,
+							"passive id": "47"
+						}
+					}
+				],
+				"id": "1220000",
+				"level": 3,
+				"name": "Spark damage enormously boosts BB gauge",
+				"series": ""
+			}
+		},
+		{
+			"category": "4",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "3030000",
+			"skill": {
+				"bp": 40,
+				"desc": "Slightly boosts BB/SBB Atk",
+				"effects": [
+					{
+						"passive": {
+							"bb atk% buff": 30,
+							"passive id": "64",
+							"sbb atk% buff": 30
+						}
+					}
+				],
+				"id": "3030000",
+				"level": 5,
+				"name": "Slightly boosts BB/SBB Atk",
+				"series": ""
+			}
+		},
+		{
+			"category": "4",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "3040000",
+			"skill": {
+				"bp": 10,
+				"desc": "Boosts BB Atk when HP is over 50%",
+				"effects": [
+					{
+						"passive": {
+							"unknown passive id": "103",
+							"unknown passive params": "50,50,50,50,1"
+						}
+					}
+				],
+				"id": "3040000",
+				"level": 1,
+				"name": "Boosts BB Atk when HP is over 50%",
+				"series": ""
+			}
+		},
+		{
+			"category": "4",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "3500000",
+			"skill": {
+				"bp": 30,
+				"desc": "Normal attack may hit all foes",
+				"effects": [
+					{
+						"passive": {
+							"aoe atk inc%": -50,
+							"chance to aoe": 20,
+							"passive id": "96"
+						}
+					}
+				],
+				"id": "3500000",
+				"level": 3,
+				"name": "Normal attacks may hit all foes",
+				"series": ""
+			}
+		},
+		{
+			"category": "5",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "4030000",
+			"skill": {
+				"bp": 30,
+				"desc": "Considerably boosts BB gauge each turn",
+				"effects": [
+					{
+						"passive": {
+							"bc fill per turn": 4,
+							"passive id": "9"
+						}
+					}
+				],
+				"id": "4030000",
+				"level": 5,
+				"name": "Considerably boosts BB gauge each turn",
+				"series": ""
+			}
+		},
+		{
+			"category": "6",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "5110001",
+			"skill": {
+				"bp": 40,
+				"desc": "Damage taken may slightly restore HP",
+				"effects": [
+					{
+						"passive": {
+							"dmg% to hp% when attacked chance%": 25,
+							"dmg% to hp% when attacked high": 10,
+							"dmg% to hp% when attacked low": 10,
+							"passive id": "24"
+						}
+					}
+				],
+				"id": "5110001",
+				"level": 5,
+				"name": "Damage taken may slightly restore HP",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "50003000",
+			"skill": {
+				"bp": 50,
+				"desc": "Adds huge boost to Atk for 3 turns effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"atk% buff (1)": 150,
+									"buff turns": 3,
+									"effect delay time(ms)/frame": "0.0/0",
+									"element buffed": "all",
+									"proc id": "5",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50003000",
+				"level": 5,
+				"name": "Adds huge boost to Atk effect to BB/SBB",
+				"series": ""
+			}
+		}
+	],
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1368,

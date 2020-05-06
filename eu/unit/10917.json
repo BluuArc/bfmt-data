@@ -480,7 +480,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-07-06T06:18:42.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 48,
 	"damage frames": {
@@ -517,6 +517,9 @@
 	},
 	"drop check count": 5,
 	"element": "fire",
+	"evolution": {
+		"prev": "10916"
+	},
 	"exp_pattern": 20,
 	"extra skill": {
 		"desc": "Boosts Atk when BB gauge is over 50% & 50% boost to Spark damage",
@@ -539,6 +542,233 @@
 		"name": "Path of the War God",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "410000",
+			"skill": {
+				"bp": 10,
+				"desc": "20% boost to max HP",
+				"effects": [
+					{
+						"passive": {
+							"hp% buff": 20,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "410000",
+				"level": 1,
+				"name": "20% boost to max HP",
+				"series": ""
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "140001",
+			"skill": {
+				"bp": 20,
+				"desc": "50% boost to Atk",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 50,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "140001",
+				"level": 1,
+				"name": "50% boost to Atk",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1020000",
+			"skill": {
+				"bp": 10,
+				"desc": "50% boost to Spark damage",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 50,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1020000",
+				"level": 3,
+				"name": "50% boost to Spark damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "1@1020000",
+			"dependency comment": "Unlock 50% boost to Spark damage",
+			"id": "1000300",
+			"skill": {
+				"bp": 10,
+				"desc": "Raises Spark damage boost from 50% to 70%",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 70,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1000300",
+				"level": 4,
+				"name": "Boosts 50% Spark damage to 70% Spark damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "1@1000300",
+			"dependency comment": "Unlock Boosts 50% Spark damage to 70% Spark damage",
+			"id": "1000400",
+			"skill": {
+				"bp": 10,
+				"desc": "Raises Spark damage boost from 70% to 100%",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 100,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1000400",
+				"level": 5,
+				"name": "Boosts 70% Spark damage to 100% Spark damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "3",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "2100001",
+			"skill": {
+				"bp": 10,
+				"desc": "Slightly boosts critical hit damage",
+				"effects": [
+					{
+						"passive": {
+							"crit multiplier%": 40,
+							"passive id": "34"
+						}
+					}
+				],
+				"id": "2100001",
+				"level": 1,
+				"name": "Slightly boosts critical hit damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "3",
+			"dependency": "1@2100001",
+			"dependency comment": "Unlock Slightly boosts critical hit damage",
+			"id": "2100200",
+			"skill": {
+				"bp": 10,
+				"desc": "Boosts critical hit damage",
+				"effects": [
+					{
+						"passive": {
+							"crit multiplier%": 70,
+							"passive id": "34"
+						}
+					}
+				],
+				"id": "2100200",
+				"level": 3,
+				"name": "Boosts critical hit damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "41000001",
+			"skill": {
+				"bp": 40,
+				"desc": "Enhances BB/SBB/UBB's Spark damage boost effect",
+				"effects": [
+					{
+						"add to bb": {
+							"buff turns": 0,
+							"proc id": "23",
+							"spark dmg% buff (40)": 30
+						}
+					},
+					{
+						"add to sbb": {
+							"buff turns": 0,
+							"proc id": "23",
+							"spark dmg% buff (40)": 30
+						}
+					},
+					{
+						"add to ubb": {
+							"buff turns": 0,
+							"proc id": "23",
+							"spark dmg% buff (40)": 30
+						}
+					}
+				],
+				"id": "41000001",
+				"level": 5,
+				"name": "Enhances BB/SBB/UBB's Spark damage boost effect",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "51005000",
+			"skill": {
+				"bp": 20,
+				"desc": "Adds probable Spark vulnerability infliction for 2 turns effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "58",
+									"spark dmg received apply%": 25,
+									"spark dmg received debuff turns (94)": 1,
+									"spark dmg% received": 25,
+									"target area": "aoe",
+									"target type": "enemy"
+								}
+							]
+						}
+					}
+				],
+				"id": "51005000",
+				"level": 5,
+				"name": "Adds probable Spark vulnerability infliction effect to BB/SBB",
+				"series": ""
+			}
+		}
+	],
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1418,

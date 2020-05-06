@@ -418,7 +418,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 45,
 	"damage frames": {
@@ -457,6 +457,9 @@
 	},
 	"drop check count": 4,
 	"element": "water",
+	"evolution": {
+		"prev": "20016"
+	},
 	"exp_pattern": 10,
 	"extra skill": {
 		"desc": "30% boost to all parameters & adds resistance against 1 KO attack when HP is below 20% when Lexida is equipped",
@@ -498,6 +501,257 @@
 		"name": "Wings of Reason",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "5",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "4110000",
+			"skill": {
+				"bp": 20,
+				"desc": "Damage taken slightly boosts BB gauge",
+				"effects": [
+					{
+						"passive": {
+							"bc fill when attacked high": 3,
+							"bc fill when attacked low": 2,
+							"bc fill when attacked%": 100,
+							"passive id": "25"
+						}
+					}
+				],
+				"id": "4110000",
+				"level": 2,
+				"name": "Damage taken slightly boosts BB gauge",
+				"series": ""
+			}
+		},
+		{
+			"category": "6",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "5110000",
+			"skill": {
+				"bp": 20,
+				"desc": "Damage taken may restore HP",
+				"effects": [
+					{
+						"passive": {
+							"dmg% to hp% when attacked chance%": 25,
+							"dmg% to hp% when attacked high": 10,
+							"dmg% to hp% when attacked low": 10,
+							"passive id": "24"
+						}
+					}
+				],
+				"id": "5110000",
+				"level": 2,
+				"name": "Damage taken may restore HP",
+				"series": ""
+			}
+		},
+		{
+			"category": "7",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "6000000",
+			"skill": {
+				"bp": 10,
+				"desc": "Damage dealt may slightly boost BC, HC drop rate",
+				"effects": [
+					{
+						"passive": {
+							"bc drop rate% buff": 5,
+							"hc drop rate% buff": 5,
+							"passive id": "19"
+						}
+					}
+				],
+				"id": "6000000",
+				"level": 1,
+				"name": "Damage dealt may slightly boost BC, HC drop rate",
+				"series": ""
+			}
+		},
+		{
+			"category": "8",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "7020000",
+			"skill": {
+				"bp": 50,
+				"desc": "Negates all status ailments",
+				"effects": [
+					{
+						"passive": {
+							"curse resist%": 100,
+							"injury resist%": 100,
+							"paralysis resist%": 100,
+							"passive id": "4",
+							"poison resist%": 100,
+							"sick resist%": 100,
+							"weaken resist%": 100
+						}
+					}
+				],
+				"id": "7020000",
+				"level": 5,
+				"name": "Negates all status ailments",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "35000000",
+			"skill": {
+				"bp": 40,
+				"desc": "Enhances BB/SBB's HP restoration each turn effect",
+				"effects": [
+					{
+						"add to bb": {
+							"gradual heal high": 1000,
+							"gradual heal low": 1000,
+							"gradual heal turns (8)": 0,
+							"proc id": "3",
+							"rec added% (from target)": 10
+						}
+					},
+					{
+						"add to sbb": {
+							"gradual heal high": 1000,
+							"gradual heal low": 1000,
+							"gradual heal turns (8)": 0,
+							"proc id": "3",
+							"rec added% (from target)": 10
+						}
+					}
+				],
+				"id": "35000000",
+				"level": 4,
+				"name": "Enhances BB/SBB's HP restoration each turn effect",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "53001000",
+			"skill": {
+				"bp": 40,
+				"desc": "Adds Water elemental damage boost for 3 turns effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "66.7/4",
+									"elemental weakness buff turns": 3,
+									"elemental weakness multiplier%": 50,
+									"proc id": "55",
+									"target area": "aoe",
+									"target type": "party",
+									"water units do extra elemental weakness dmg": true
+								}
+							]
+						}
+					}
+				],
+				"id": "53001000",
+				"level": 4,
+				"name": "Adds Water elemental damage boost effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57000001",
+			"skill": {
+				"bp": 60,
+				"desc": "Adds status ailment removal effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"ailments cured": [
+										"poison",
+										"weaken",
+										"sick",
+										"injury",
+										"curse",
+										"paralysis",
+										"atk down",
+										"def down",
+										"rec down"
+									],
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "38",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "57000001",
+				"level": 6,
+				"name": "Adds status ailment removal effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "40000100",
+			"skill": {
+				"bp": 60,
+				"desc": "Allows HP restoration each turn, huge normal hit amount raise & enormous HP restoration when attacked effects to last for 4 turns",
+				"effects": [
+					{
+						"add to ubb": {
+							"gradual heal high": 0,
+							"gradual heal low": 0,
+							"gradual heal turns (8)": 1,
+							"proc id": "3",
+							"rec added% (from target)": 10
+						}
+					},
+					{
+						"add to ubb": {
+							"hit increase buff turns (50)": 1,
+							"hit increase/hit": 0,
+							"proc id": "26"
+						}
+					},
+					{
+						"add to ubb": {
+							"hp recover from dmg buff turns (133)": 1,
+							"hp recover from dmg chance": 0,
+							"hp recover from dmg% high": 0,
+							"hp recover from dmg% low": 0,
+							"proc id": "85"
+						}
+					}
+				],
+				"id": "40000100",
+				"level": 6,
+				"name": "Allows UBB buff effects to last for 4 turns",
+				"series": ""
+			}
+		}
+	],
 	"gender": "female",
 	"getting type": "farmable",
 	"guide_id": 1303,

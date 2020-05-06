@@ -716,7 +716,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-07-06T06:18:42.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 47,
 	"damage frames": {
@@ -775,6 +775,9 @@
 	},
 	"drop check count": 2,
 	"element": "light",
+	"evolution": {
+		"prev": "50286"
+	},
 	"exp_pattern": 20,
 	"extra skill": {
 		"desc": "30% boost to all parameters when Oracle Bangles is equipped, negates all status ailments & damage taken boosts BB gauge and may restore HP",
@@ -826,6 +829,259 @@
 		"name": "A Future Together",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "150000",
+			"skill": {
+				"bp": 10,
+				"desc": "Hugely boosts Atk relative to how high remaining HP is",
+				"effects": [
+					{
+						"passive": {
+							"atk% base buff": 0,
+							"atk% extra buff based on hp": 100,
+							"buff proportional to hp": "remaining",
+							"passive id": "46"
+						}
+					}
+				],
+				"id": "150000",
+				"level": 4,
+				"name": "Hugely boosts Atk relative to how high remaining HP is",
+				"series": ""
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "250000",
+			"skill": {
+				"bp": 10,
+				"desc": "Hugely boosts Def relative to how low remaining HP is",
+				"effects": [
+					{
+						"passive": {
+							"buff proportional to hp": "lost",
+							"def% base buff": 0,
+							"def% extra buff based on hp": 100,
+							"passive id": "46"
+						}
+					}
+				],
+				"id": "250000",
+				"level": 4,
+				"name": "Hugely boosts Def relative to how low remaining HP is",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "21000000",
+			"skill": {
+				"bp": 20,
+				"desc": "Enhances Leader Skill Spark damage boost from 100% to 120%",
+				"effects": [
+					{
+						"add to passive": {
+							"damage% for spark": 20,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "21000000",
+				"level": 2,
+				"name": "Enhances 100% boost to Spark damage Leader Skill effect",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57002000",
+			"skill": {
+				"bp": 10,
+				"desc": "Adds status ailment removal effect to SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"ailments cured": [
+										"poison",
+										"weaken",
+										"sick",
+										"injury",
+										"curse",
+										"paralysis",
+										"atk down",
+										"def down",
+										"rec down"
+									],
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "38",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "57002000",
+				"level": 4,
+				"name": "Adds status ailment removal effect to SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "51003000",
+			"skill": {
+				"bp": 40,
+				"desc": "Adds huge Spark boost damage for 3 turns effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"buff turns": 3,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "23",
+									"spark dmg% buff (40)": 90,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "51003000",
+				"level": 5,
+				"name": "Adds huge Spark boost damage effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59001000",
+			"skill": {
+				"bp": 40,
+				"desc": "Adds critical damage negation for 1 turn effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"crit dmg base damage resist% (143)": 100,
+									"crit dmg buffed damage resist% (143)": 100,
+									"dmg resist turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "93",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59001000",
+				"level": 5,
+				"name": "Adds critical damage negation to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59002000",
+			"skill": {
+				"bp": 40,
+				"desc": "Adds elemental damage negation for 1 turn effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"dmg resist turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "93",
+									"strong base element damage resist% (144)": 100,
+									"strong buffed element damage resist% (144)": 100,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59002000",
+				"level": 6,
+				"name": "Adds elemental damage negation to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "60003000",
+			"skill": {
+				"bp": 60,
+				"desc": "Adds all elements to attack for 2 turns effect to SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"elements added": [
+										"fire",
+										"water",
+										"earth",
+										"thunder",
+										"light",
+										"dark"
+									],
+									"elements added turns": 2,
+									"proc id": "30",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "60003000",
+				"level": 7,
+				"name": "Adds all elements effect to SBB",
+				"series": ""
+			}
+		}
+	],
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1386,

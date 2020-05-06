@@ -660,7 +660,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-07-06T06:18:42.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 48,
 	"damage frames": {
@@ -695,6 +695,9 @@
 	},
 	"drop check count": 6,
 	"element": "earth",
+	"evolution": {
+		"prev": "30816"
+	},
 	"exp_pattern": 20,
 	"extra skill": {
 		"desc": "Negates all status ailments and elemental damage & adds resistance to 1 KO attack after activating OD",
@@ -728,6 +731,295 @@
 		"name": "True Spirit and Technique",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "240002",
+			"skill": {
+				"bp": 10,
+				"desc": "50% boost to Def",
+				"effects": [
+					{
+						"passive": {
+							"def% buff": 50,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "240002",
+				"level": 1,
+				"name": "50% boost to Def",
+				"series": ""
+			}
+		},
+		{
+			"category": "6",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "5110002",
+			"skill": {
+				"bp": 10,
+				"desc": "Damage taken may slightly restore HP",
+				"effects": [
+					{
+						"passive": {
+							"dmg% to hp% when attacked chance%": 25,
+							"dmg% to hp% when attacked high": 10,
+							"dmg% to hp% when attacked low": 10,
+							"passive id": "24"
+						}
+					}
+				],
+				"id": "5110002",
+				"level": 2,
+				"name": "Damage taken may restore HP",
+				"series": ""
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9100003",
+			"skill": {
+				"bp": 20,
+				"desc": "Negates Def ignoring damage",
+				"effects": [
+					{
+						"passive": {
+							"ignore def resist chance%": 100,
+							"passive id": "92"
+						}
+					}
+				],
+				"id": "9100003",
+				"level": 2,
+				"name": "Negates Def ignoring damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9400001",
+			"skill": {
+				"bp": 20,
+				"desc": "50% Spark damage reduction",
+				"effects": [
+					{
+						"passive": {
+							"base spark dmg% resist": 50,
+							"buff spark dmg% resist": 50,
+							"passive id": "77"
+						}
+					}
+				],
+				"id": "9400001",
+				"level": 3,
+				"name": "50% Spark damage reduction",
+				"series": ""
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9200002",
+			"skill": {
+				"bp": 20,
+				"desc": "Negates critical hit damage",
+				"effects": [
+					{
+						"passive": {
+							"crit chance base resist%": 100,
+							"crit chance buffed resist%": 100,
+							"crit dmg base damage resist%": 100,
+							"crit dmg buffed damage resist%": 100,
+							"passive id": "53"
+						}
+					}
+				],
+				"id": "9200002",
+				"level": 4,
+				"name": "Negates critical hit damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59000002",
+			"skill": {
+				"bp": 30,
+				"desc": "Adds 50% damage reduction for 1 turn effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"dmg% reduction": 50,
+									"dmg% reduction turns (36)": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "18",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59000002",
+				"level": 6,
+				"name": "Adds 50% damage reduction effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "1@59000002",
+			"dependency comment": "Unlock Adds 50% damage reduction effect to BB/SBB",
+			"id": "59000101",
+			"skill": {
+				"bp": 30,
+				"desc": "Allows 50% damage reduction for 1 turn effects to last for 2 turns",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"dmg% reduction": 50,
+									"dmg% reduction turns (36)": 2,
+									"effect delay time(ms)/frame": "66.7/4",
+									"proc id": "18",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59000101",
+				"level": 6,
+				"name": "Allows 50% damage reduction effects to last for 2 turns",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57000003",
+			"skill": {
+				"bp": 20,
+				"desc": "Adds status ailment removal effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"ailments cured": [
+										"poison",
+										"weaken",
+										"sick",
+										"injury",
+										"curse",
+										"paralysis",
+										"atk down",
+										"def down",
+										"rec down"
+									],
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "38",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "57000003",
+				"level": 6,
+				"name": "Adds status ailment removal effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "54004000",
+			"skill": {
+				"bp": 20,
+				"desc": "Adds huge BB gauge boost when guarding for 3 turns effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"bb bc fill on guard": 8,
+									"bb bc fill on guard buff turns (114)": 3,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "69",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "54004000",
+				"level": 5,
+				"name": "Adds huge BB gauge boost when guarding effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "39002000",
+			"skill": {
+				"bp": 10,
+				"desc": "Enhances BB/SBB's damage reduction when guarding effect",
+				"effects": [
+					{
+						"add to bb": {
+							"guard increase mitigation buff turns (113)": 0,
+							"guard increase mitigation%": 5,
+							"proc id": "68"
+						}
+					},
+					{
+						"add to sbb": {
+							"guard increase mitigation buff turns (113)": 0,
+							"guard increase mitigation%": 5,
+							"proc id": "68"
+						}
+					}
+				],
+				"id": "39002000",
+				"level": 5,
+				"name": "Enhances BB/SBB's damage reduction when guarding effect",
+				"series": ""
+			}
+		}
+	],
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1420,

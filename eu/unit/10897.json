@@ -590,7 +590,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 47,
 	"damage frames": {
@@ -631,6 +631,9 @@
 	},
 	"drop check count": 4,
 	"element": "fire",
+	"evolution": {
+		"prev": "10896"
+	},
 	"exp_pattern": 20,
 	"extra skill": {
 		"desc": "50% boost to Spark damage & damage taken boosts BB gauge",
@@ -654,6 +657,203 @@
 		"name": "Fireflower's Grandstand",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "140001",
+			"skill": {
+				"bp": 20,
+				"desc": "50% boost to Atk",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 50,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "140001",
+				"level": 1,
+				"name": "50% boost to Atk",
+				"series": ""
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "240001",
+			"skill": {
+				"bp": 20,
+				"desc": "50% boost to Def",
+				"effects": [
+					{
+						"passive": {
+							"def% buff": 50,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "240001",
+				"level": 1,
+				"name": "50% boost to Def",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1030001",
+			"skill": {
+				"bp": 30,
+				"desc": "70% boost to Spark damage",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 70,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1030001",
+				"level": 4,
+				"name": "70% boost to Spark damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "1@1030001",
+			"dependency comment": "Unlock Boosts 50% Spark damage to 70% Spark damage",
+			"id": "1000400",
+			"skill": {
+				"bp": 10,
+				"desc": "Raises Spark damage boost from 70% to 100%",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 100,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1000400",
+				"level": 5,
+				"name": "Boosts 70% Spark damage to 100% Spark damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "3",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "2110001",
+			"skill": {
+				"bp": 10,
+				"desc": "Boosts critical hit damage",
+				"effects": [
+					{
+						"passive": {
+							"crit multiplier%": 50,
+							"passive id": "34"
+						}
+					}
+				],
+				"id": "2110001",
+				"level": 2,
+				"name": "Boosts critical hit damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "20200000",
+			"skill": {
+				"bp": 10,
+				"desc": "Enhances Leader Skill all parameters boost from 40% to 50%",
+				"effects": [
+					{
+						"add to passive": {
+							"atk% buff": 10,
+							"def% buff": 10,
+							"hp% buff": 10,
+							"passive id": "1",
+							"rec% buff": 10
+						}
+					}
+				],
+				"id": "20200000",
+				"level": 1,
+				"name": "Enhances 40% boost to all parameters Leader Skill effect",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "34001000",
+			"skill": {
+				"bp": 40,
+				"desc": "Enhances BB gauge boost effect added to BB/SBB",
+				"effects": [
+					{
+						"add to bb": {
+							"increase bb gauge": 2,
+							"proc id": "31"
+						}
+					},
+					{
+						"add to sbb": {
+							"increase bb gauge": 2,
+							"proc id": "31"
+						}
+					}
+				],
+				"id": "34001000",
+				"level": 5,
+				"name": "Enhances BB gauge boost effect added to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "60004000",
+			"skill": {
+				"bp": 60,
+				"desc": "Adds slight OD gauge boost effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"increase od gauge%": 8,
+									"proc id": "43",
+									"target area": "single",
+									"target type": "self"
+								}
+							]
+						}
+					}
+				],
+				"id": "60004000",
+				"level": 6,
+				"name": "Adds slight OD gauge boost effect to BB/SBB",
+				"series": ""
+			}
+		}
+	],
 	"gender": "male",
 	"getting type": "rare summon",
 	"guide_id": 1390,

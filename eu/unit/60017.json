@@ -402,7 +402,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 45,
 	"damage frames": {
@@ -445,6 +445,9 @@
 	},
 	"drop check count": 4,
 	"element": "dark",
+	"evolution": {
+		"prev": "60016"
+	},
 	"exp_pattern": 10,
 	"extra skill": {
 		"desc": "30% boost to all parameters, adds probable Def ignoring effect & negates critical damage when Leomurg is equipped",
@@ -496,6 +499,213 @@
 		"name": "Lurking Madness",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "6",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "5100000",
+			"skill": {
+				"bp": 10,
+				"desc": "Damage taken may slightly restore HP",
+				"effects": [
+					{
+						"passive": {
+							"dmg% to hp% when attacked chance%": 25,
+							"dmg% to hp% when attacked high": 5,
+							"dmg% to hp% when attacked low": 5,
+							"passive id": "24"
+						}
+					}
+				],
+				"id": "5100000",
+				"level": 1,
+				"name": "Damage taken may slightly restore HP",
+				"series": ""
+			}
+		},
+		{
+			"category": "6",
+			"dependency": "1@5100000",
+			"dependency comment": "Unlock \"Damage taken may slightly restore HP\"",
+			"id": "5100100",
+			"skill": {
+				"bp": 10,
+				"desc": "Damage taken may restore HP",
+				"effects": [
+					{
+						"passive": {
+							"dmg% to hp% when attacked chance%": 25,
+							"dmg% to hp% when attacked high": 10,
+							"dmg% to hp% when attacked low": 10,
+							"passive id": "24"
+						}
+					}
+				],
+				"id": "5100100",
+				"level": 2,
+				"name": "Damage taken may restore HP",
+				"series": ""
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9040000",
+			"skill": {
+				"bp": 10,
+				"desc": "5% damage reduction from Light types",
+				"effects": [
+					{
+						"passive": {
+							"light resist%": 5,
+							"passive id": "5"
+						}
+					}
+				],
+				"id": "9040000",
+				"level": 1,
+				"name": "5% damage reduction from Light types",
+				"series": ""
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9300000",
+			"skill": {
+				"bp": 30,
+				"desc": "Negates elemental damage",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "53",
+							"strong base element damage resist%": 100,
+							"strong buffed element damage resist%": 100
+						}
+					}
+				],
+				"id": "9300000",
+				"level": 3,
+				"name": "Negates elemental damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9400000",
+			"skill": {
+				"bp": 30,
+				"desc": "50% Spark damage reduction",
+				"effects": [
+					{
+						"passive": {
+							"base spark dmg% resist": 50,
+							"buff spark dmg% resist": 50,
+							"passive id": "77"
+						}
+					}
+				],
+				"id": "9400000",
+				"level": 3,
+				"name": "50% Spark damage reduction",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59000000",
+			"skill": {
+				"bp": 60,
+				"desc": "Adds 50% damage reduction for 1 turn effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"dmg% reduction": 50,
+									"dmg% reduction turns (36)": 1,
+									"effect delay time(ms)/frame": "66.7/4",
+									"proc id": "18",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59000000",
+				"level": 6,
+				"name": "Adds 50% damage reduction effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "1@59000000",
+			"dependency comment": "Unlock Adds 50% damage reduction effect to BB/SBB",
+			"id": "59000100",
+			"skill": {
+				"bp": 20,
+				"desc": "Allows 50% damage reduction for 1 turn effects to last for 2 turns",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"dmg% reduction": 50,
+									"dmg% reduction turns (36)": 2,
+									"effect delay time(ms)/frame": "66.7/4",
+									"proc id": "18",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59000100",
+				"level": 6,
+				"name": "Allows 50% damage reduction effects to last for 2 turns",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "40000300",
+			"skill": {
+				"bp": 80,
+				"desc": "Allows UBB enormous damage reduction effects to last for 2 turns",
+				"effects": [
+					{
+						"add to ubb": {
+							"dmg% reduction": 0,
+							"dmg% reduction turns (36)": 1,
+							"proc id": "18"
+						}
+					}
+				],
+				"id": "40000300",
+				"level": 8,
+				"name": "Allows UBB enormous damage reduction effects to last for 2 turns",
+				"series": ""
+			}
+		}
+	],
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1307,

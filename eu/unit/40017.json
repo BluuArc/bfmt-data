@@ -392,7 +392,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 45,
 	"damage frames": {
@@ -415,6 +415,9 @@
 	},
 	"drop check count": 22,
 	"element": "thunder",
+	"evolution": {
+		"prev": "40016"
+	},
 	"exp_pattern": 10,
 	"extra skill": {
 		"desc": "30% boost to all parameters, boosts critical damage & 50% boost to Spark damage when Batootha is equipped",
@@ -463,6 +466,204 @@
 		"name": "Natural Leader",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "710000",
+			"skill": {
+				"bp": 20,
+				"desc": "20% boost to all parameters",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 20,
+							"def% buff": 20,
+							"hp% buff": 20,
+							"passive id": "1",
+							"rec% buff": 20
+						}
+					}
+				],
+				"id": "710000",
+				"level": 2,
+				"name": "20% boost to all parameters",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1020000",
+			"skill": {
+				"bp": 10,
+				"desc": "50% boost to Spark damage",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 50,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1020000",
+				"level": 3,
+				"name": "50% boost to Spark damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "1@1020000",
+			"dependency comment": "Unlock 50% boost to Spark damage",
+			"id": "1000300",
+			"skill": {
+				"bp": 10,
+				"desc": "Raises Spark damage boost from 50% to 70%",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 70,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1000300",
+				"level": 4,
+				"name": "Boosts 50% Spark damage to 70% Spark damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "1@1000300",
+			"dependency comment": "Unlock Boosts 50% Spark damage to 70% Spark damage",
+			"id": "1000400",
+			"skill": {
+				"bp": 10,
+				"desc": "Raises Spark damage boost from 70% to 100%",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 100,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1000400",
+				"level": 5,
+				"name": "Boosts 70% Spark damage to 100% Spark damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "3",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "2100000",
+			"skill": {
+				"bp": 10,
+				"desc": "Slightly boosts critical hit damage",
+				"effects": [
+					{
+						"passive": {
+							"crit multiplier%": 30,
+							"passive id": "34"
+						}
+					}
+				],
+				"id": "2100000",
+				"level": 1,
+				"name": "Slightly boosts critical hit damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "3",
+			"dependency": "1@2100000",
+			"dependency comment": "Unlock Slightly boosts critical hit damage",
+			"id": "2100100",
+			"skill": {
+				"bp": 10,
+				"desc": "Boosts critical hit damage",
+				"effects": [
+					{
+						"passive": {
+							"crit multiplier%": 50,
+							"passive id": "34"
+						}
+					}
+				],
+				"id": "2100100",
+				"level": 2,
+				"name": "Boosts critical hit damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "31000000",
+			"skill": {
+				"bp": 50,
+				"desc": "Enhances BB/SBB's Spark damage boost effect",
+				"effects": [
+					{
+						"add to bb": {
+							"buff turns": 0,
+							"proc id": "23",
+							"spark dmg% buff (40)": 30
+						}
+					},
+					{
+						"add to sbb": {
+							"buff turns": 0,
+							"proc id": "23",
+							"spark dmg% buff (40)": 30
+						}
+					}
+				],
+				"id": "31000000",
+				"level": 5,
+				"name": "Enhances BB/SBB's Spark damage boost effect",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "40000200",
+			"skill": {
+				"bp": 60,
+				"desc": "Allows enormous Spark damage boost & probable Spark critical effects to last for 4 turns",
+				"effects": [
+					{
+						"add to ubb": {
+							"buff turns": 1,
+							"proc id": "23",
+							"spark dmg% buff (40)": 0
+						}
+					},
+					{
+						"add to ubb": {
+							"proc id": "83",
+							"spark dmg inc buff turns (131)": 1,
+							"spark dmg inc chance%": 0,
+							"spark dmg inc% buff": 0
+						}
+					}
+				],
+				"id": "40000200",
+				"level": 6,
+				"name": "Allows UBB buff effects to last for 4 turns",
+				"series": ""
+			}
+		}
+	],
 	"gender": "male",
 	"getting type": "farmable",
 	"guide_id": 1305,

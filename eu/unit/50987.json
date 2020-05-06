@@ -638,7 +638,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 47,
 	"damage frames": {
@@ -679,6 +679,9 @@
 	},
 	"drop check count": 4,
 	"element": "light",
+	"evolution": {
+		"prev": "50986"
+	},
 	"exp_pattern": 20,
 	"extra skill": {
 		"desc": "Reduces damage taken for 2 turns when HP is below 50% & adds considerable boost to BC, HC drop rate for 3 turns effect to BB/SBB",
@@ -716,6 +719,261 @@
 		"name": "Dragon God's Lumiere",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "510000",
+			"skill": {
+				"bp": 10,
+				"desc": "20% boost to Atk, Rec",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 20,
+							"passive id": "1",
+							"rec% buff": 20
+						}
+					}
+				],
+				"id": "510000",
+				"level": 1,
+				"name": "20% boost to Atk, Rec",
+				"series": ""
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "Unlock 20% boost to Atk, max HP",
+			"id": "610000",
+			"skill": {
+				"bp": 10,
+				"desc": "20% boost to Def, max HP",
+				"effects": [
+					{
+						"passive": {
+							"def% buff": 20,
+							"hp% buff": 20,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "610000",
+				"level": 1,
+				"name": "20% boost to Def, max HP",
+				"series": ""
+			}
+		},
+		{
+			"category": "5",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "4110000",
+			"skill": {
+				"bp": 20,
+				"desc": "Damage taken slightly boosts BB gauge",
+				"effects": [
+					{
+						"passive": {
+							"bc fill when attacked high": 3,
+							"bc fill when attacked low": 2,
+							"bc fill when attacked%": 100,
+							"passive id": "25"
+						}
+					}
+				],
+				"id": "4110000",
+				"level": 2,
+				"name": "Damage taken slightly boosts BB gauge",
+				"series": ""
+			}
+		},
+		{
+			"category": "5",
+			"dependency": "1@4110000",
+			"dependency comment": "Unlock Damage taken boosts BB gauge",
+			"id": "4110200",
+			"skill": {
+				"bp": 10,
+				"desc": "Enhances BB gauge boost when attacked",
+				"effects": [
+					{
+						"passive": {
+							"bc fill when attacked high": 4,
+							"bc fill when attacked low": 3,
+							"bc fill when attacked%": 100,
+							"passive id": "25"
+						}
+					}
+				],
+				"id": "4110200",
+				"level": 5,
+				"name": "Damage taken considerably boosts BB gauge",
+				"series": ""
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9300001",
+			"skill": {
+				"bp": 20,
+				"desc": "Negates elemental damage",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "53",
+							"strong base element damage resist%": 100,
+							"strong buffed element damage resist%": 100
+						}
+					}
+				],
+				"id": "9300001",
+				"level": 4,
+				"name": "Negates elemental damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "50003001",
+			"skill": {
+				"bp": 20,
+				"desc": "Adds considerable Atk boost for 3 turns effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"atk% buff (1)": 140,
+									"buff turns": 3,
+									"effect delay time(ms)/frame": "0.0/0",
+									"element buffed": "all",
+									"proc id": "5",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50003001",
+				"level": 5,
+				"name": "Adds considerable Atk boost effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "1@50003001",
+			"dependency comment": "Unlock \"Adds considerable Atk boost effect to BB/SBB\"",
+			"id": "50003100",
+			"skill": {
+				"bp": 20,
+				"desc": "Enhances considerable Atk boost for 3 turns effect added to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"atk% buff (1)": 160,
+									"buff turns": 3,
+									"effect delay time(ms)/frame": "0.0/0",
+									"element buffed": "all",
+									"proc id": "5",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "50003100",
+				"level": 6,
+				"name": "Enhances considerable Atk boost effect added to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "57001000",
+			"skill": {
+				"bp": 30,
+				"desc": "Adds Atk, Def, Rec reducing effects negation for 1 turn to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"atk down resist% (120)": 100,
+									"def down resist% (121)": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "73",
+									"rec down resist% (122)": 100,
+									"stat down immunity buff turns": 1,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "57001000",
+				"level": 5,
+				"name": "Adds Atk, Def, Rec reducing effects negation to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "59000001",
+			"skill": {
+				"bp": 50,
+				"desc": "Adds 50% damage reduction for 1 turn effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"dmg% reduction": 50,
+									"dmg% reduction turns (36)": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "18",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "59000001",
+				"level": 6,
+				"name": "Adds 50% damage reduction effect to BB/SBB",
+				"series": ""
+			}
+		}
+	],
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 1381,

@@ -492,7 +492,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2016-07-06T06:18:42.000Z",
-		"updatedAt": "2017-03-08T10:56:26.000Z"
+		"updatedAt": "2017-04-07T12:18:31.000Z"
 	},
 	"cost": 47,
 	"damage frames": {
@@ -543,6 +543,9 @@
 	},
 	"drop check count": 3,
 	"element": "light",
+	"evolution": {
+		"prev": "850197"
+	},
 	"exp_pattern": 20,
 	"extra skill": {
 		"desc": "Adds critical hit rate boost effect to BB/SBB for 3 turns & damage taken may considerably boost BB gauge",
@@ -578,6 +581,249 @@
 		"name": "Euphoria in Fuchsia",
 		"target": "self"
 	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "510000",
+			"skill": {
+				"bp": 10,
+				"desc": "20% boost to Atk, Rec",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 20,
+							"passive id": "1",
+							"rec% buff": 20
+						}
+					}
+				],
+				"id": "510000",
+				"level": 1,
+				"name": "20% boost to Atk, Rec",
+				"series": ""
+			}
+		},
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "Unlock 20% boost to Atk, max HP",
+			"id": "610000",
+			"skill": {
+				"bp": 10,
+				"desc": "20% boost to Def, max HP",
+				"effects": [
+					{
+						"passive": {
+							"def% buff": 20,
+							"hp% buff": 20,
+							"passive id": "1"
+						}
+					}
+				],
+				"id": "610000",
+				"level": 1,
+				"name": "20% boost to Def, max HP",
+				"series": ""
+			}
+		},
+		{
+			"category": "4",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "3500000",
+			"skill": {
+				"bp": 30,
+				"desc": "Normal attack may hit all foes",
+				"effects": [
+					{
+						"passive": {
+							"aoe atk inc%": -50,
+							"chance to aoe": 20,
+							"passive id": "96"
+						}
+					}
+				],
+				"id": "3500000",
+				"level": 3,
+				"name": "Normal attacks may hit all foes",
+				"series": ""
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "9300000",
+			"skill": {
+				"bp": 30,
+				"desc": "Negates elemental damage",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "53",
+							"strong base element damage resist%": 100,
+							"strong buffed element damage resist%": 100
+						}
+					}
+				],
+				"id": "9300000",
+				"level": 3,
+				"name": "Negates elemental damage",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "55000000",
+			"skill": {
+				"bp": 50,
+				"desc": "Adds HP restoration when damage dealt effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"heal high": 3000,
+									"heal low": 2000,
+									"proc id": "2",
+									"rec added% (from healer)": 11,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "55000000",
+				"level": 5,
+				"name": "Adds HP restoration when damage dealt effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1000000001",
+			"skill": {
+				"bp": 40,
+				"desc": "Enhances LS's critical damage boost effect",
+				"effects": [
+					{
+						"add to passive": {
+							"crit multiplier%": 100,
+							"passive id": "34"
+						}
+					}
+				],
+				"id": "1000000001",
+				"level": 4,
+				"name": "Enhances LS's critical damage boost effect",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1000000002",
+			"skill": {
+				"bp": 20,
+				"desc": "Adds probable huge 1 turn Def reduction effect to BB/SBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"buff #1": {
+										"def% buff (4)": -50,
+										"proc chance%": 30
+									},
+									"buff turns": 1,
+									"effect delay time(ms)/frame": "0.0/0",
+									"element buffed": "all",
+									"proc id": "9",
+									"target area": "aoe",
+									"target type": "enemy"
+								}
+							]
+						}
+					}
+				],
+				"id": "1000000002",
+				"level": 2,
+				"name": "Adds probable huge 1 turn Def reduction effect to BB/SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1000000003",
+			"skill": {
+				"bp": 60,
+				"desc": "Allows probable 1 turn Atk reduction effects from SBB to last for 2 turns",
+				"effects": [
+					{
+						"add to sbb": {
+							"buff turns": 1,
+							"element buffed": "all",
+							"proc id": "9"
+						}
+					}
+				],
+				"id": "1000000003",
+				"level": 6,
+				"name": "Allows probable 1 turn Atk reduction effects from SBB to last for 2 turns",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1000000004",
+			"skill": {
+				"bp": 60,
+				"desc": "Adds huge raise to normal hit amount effect to UBB",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on ubb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"extra hits dmg%": 100,
+									"hit increase buff turns (50)": 3,
+									"hit increase/hit": 3,
+									"proc id": "26",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "1000000004",
+				"level": 6,
+				"name": "Adds huge raise to normal hit amount effect to UBB",
+				"series": ""
+			}
+		}
+	],
 	"gender": "female",
 	"getting type": "rare summon",
 	"guide_id": 8199,
