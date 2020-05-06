@@ -344,7 +344,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2015-08-14T00:39:50.000Z",
-		"updatedAt": "2017-05-10T02:51:29.000Z"
+		"updatedAt": "2018-02-08T08:26:13.000Z"
 	},
 	"cost": 48,
 	"damage frames": {
@@ -501,18 +501,19 @@
 			"id": "70011",
 			"skill": {
 				"bp": 10,
-				"desc": "Boosts ATK (30%)",
+				"desc": "Boosts ATK, HP (30%)",
 				"effects": [
 					{
 						"passive": {
 							"atk% buff": 30,
+							"hp% buff": 30,
 							"passive id": "1"
 						}
 					}
 				],
 				"id": "70011",
 				"level": 1,
-				"name": "Boosts ATK (30%)",
+				"name": "Boosts ATK, HP (30%)",
 				"series": ""
 			}
 		},
@@ -523,10 +524,11 @@
 			"id": "70012",
 			"skill": {
 				"bp": 10,
-				"desc": "Boosts DEF (50%) when BB gauge is full",
+				"desc": "Boosts ATK, DEF (50%) when BB gauge is full",
 				"effects": [
 					{
 						"passive": {
+							"atk% buff": 50,
 							"bb gauge above % buff requirement": 100,
 							"def% buff": 50,
 							"passive id": "30"
@@ -535,7 +537,7 @@
 				],
 				"id": "70012",
 				"level": 1,
-				"name": "Boosts DEF (50%) when BB gauge is full",
+				"name": "Boosts ATK, DEF (50%) when BB gauge is full",
 				"series": ""
 			}
 		},
@@ -545,19 +547,19 @@
 			"dependency comment": "",
 			"id": "70013",
 			"skill": {
-				"bp": 30,
-				"desc": "60% boost to Spark damage",
+				"bp": 15,
+				"desc": "Boosts Spark damage (100%)",
 				"effects": [
 					{
 						"passive": {
-							"damage% for spark": 60,
+							"damage% for spark": 100,
 							"passive id": "31"
 						}
 					}
 				],
 				"id": "70013",
 				"level": 1,
-				"name": "60% boost to Spark damage",
+				"name": "Boosts Spark damage (100%)",
 				"series": ""
 			}
 		},
@@ -567,14 +569,14 @@
 			"dependency comment": "",
 			"id": "70014",
 			"skill": {
-				"bp": 20,
-				"desc": "Boosts elemental damage (60%)",
+				"bp": 15,
+				"desc": "Boosts elemental damage (100%)",
 				"effects": [
 					{
 						"passive": {
 							"dark units do extra elemental weakness dmg": true,
 							"earth units do extra elemental weakness dmg": true,
-							"elemental weakness multiplier%": 60,
+							"elemental weakness multiplier%": 100,
 							"fire units do extra elemental weakness dmg": true,
 							"light units do extra elemental weakness dmg": true,
 							"passive id": "50",
@@ -585,7 +587,7 @@
 				],
 				"id": "70014",
 				"level": 1,
-				"name": "Boosts elemental damage (60%)",
+				"name": "Boosts elemental damage (100%)",
 				"series": ""
 			}
 		},
@@ -596,11 +598,11 @@
 			"id": "70015",
 			"skill": {
 				"bp": 20,
-				"desc": "Enhances SBB's ATK boost effect (+30%)",
+				"desc": "Enhances SBB's ATK boost effect (+40%)",
 				"effects": [
 					{
 						"add to sbb": {
-							"atk% buff (1)": 30,
+							"atk% buff (1)": 40,
 							"buff turns": 0,
 							"element buffed": "all",
 							"proc id": "5"
@@ -609,7 +611,7 @@
 				],
 				"id": "70015",
 				"level": 1,
-				"name": "Enhances SBB's ATK boost effect (+30%)",
+				"name": "Enhances SBB's ATK boost effect (+40%)",
 				"series": ""
 			}
 		},
@@ -619,8 +621,8 @@
 			"dependency comment": "",
 			"id": "70016",
 			"skill": {
-				"bp": 30,
-				"desc": "Adds BB ATK boost for 3 turns effect to BB/SBB (320%)",
+				"bp": 25,
+				"desc": "Adds BB ATK boost for 3 turns effect to BB/SBB (400%)",
 				"effects": [
 					{
 						"passive": {
@@ -629,14 +631,14 @@
 							"trigger on sbb": true,
 							"triggered effect": [
 								{
-									"bb atk% buff": 320,
+									"bb atk% buff": 400,
 									"buff turns (72)": 3,
 									"effect delay time(ms)/frame": "0.0/0",
 									"proc id": "45",
-									"sbb atk% buff": 320,
+									"sbb atk% buff": 400,
 									"target area": "aoe",
 									"target type": "party",
-									"ubb atk% buff": 320
+									"ubb atk% buff": 400
 								}
 							]
 						}
@@ -644,7 +646,7 @@
 				],
 				"id": "70016",
 				"level": 1,
-				"name": "Adds BB ATK boost for 3 turns effect to BB/SBB (320%)",
+				"name": "Adds BB ATK boost for 3 turns effect to BB/SBB (400%)",
 				"series": ""
 			}
 		},
@@ -664,14 +666,14 @@
 							"trigger on sbb": true,
 							"triggered effect": [
 								{
-									"bb atk% buff": 420,
+									"bb atk% buff": 500,
 									"buff turns (72)": 3,
 									"effect delay time(ms)/frame": "0.0/0",
 									"proc id": "45",
-									"sbb atk% buff": 420,
+									"sbb atk% buff": 500,
 									"target area": "aoe",
 									"target type": "party",
-									"ubb atk% buff": 420
+									"ubb atk% buff": 500
 								}
 							]
 						}
@@ -689,19 +691,25 @@
 			"dependency comment": "",
 			"id": "70018",
 			"skill": {
-				"bp": 40,
-				"desc": "Enhances Leader Skill Spark damage boost (+40%)",
+				"bp": 20,
+				"desc": "Enhances Leader Skill Spark damage boost (+40%) and critical damage boost (+25%) effects",
 				"effects": [
 					{
 						"add to passive": {
 							"damage% for spark": 40,
 							"passive id": "31"
 						}
+					},
+					{
+						"add to passive": {
+							"crit multiplier%": 25,
+							"passive id": "34"
+						}
 					}
 				],
 				"id": "70018",
 				"level": 1,
-				"name": "Enhances Leader Skill Spark damage boost (+40%)",
+				"name": "Enhances Leader Skill Spark damage boost and critical damage boost effects",
 				"series": ""
 			}
 		},
@@ -711,7 +719,7 @@
 			"dependency comment": "",
 			"id": "70019",
 			"skill": {
-				"bp": 50,
+				"bp": 30,
 				"desc": "Enhances SBB's chance to cast double BB/SBB/UBB (+5%)",
 				"effects": [
 					{
@@ -733,7 +741,7 @@
 			"dependency comment": "",
 			"id": "70020",
 			"skill": {
-				"bp": 60,
+				"bp": 30,
 				"desc": "Adds all elements to attack for 3 turns effect to SBB",
 				"effects": [
 					{
@@ -763,6 +771,28 @@
 				"id": "70020",
 				"level": 1,
 				"name": "Adds all elements to attack for 3 turns effect to SBB",
+				"series": ""
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "70494",
+			"skill": {
+				"bp": 15,
+				"desc": "Raises ATK parameter limits to 150000",
+				"effects": [
+					{
+						"passive": {
+							"increase atk cap": 150000,
+							"passive id": "143"
+						}
+					}
+				],
+				"id": "70494",
+				"level": 1,
+				"name": "Raises ATK parameter limits to 150000",
 				"series": ""
 			}
 		}
