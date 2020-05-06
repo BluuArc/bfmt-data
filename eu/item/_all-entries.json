@@ -30298,12 +30298,14 @@
 			"710255",
 			"720105",
 			"720155",
+			"720216",
 			"730145",
 			"730196",
 			"730216",
 			"740145",
 			"740155",
 			"740216",
+			"750146",
 			"750155",
 			"750156",
 			"750166",
@@ -30331,7 +30333,7 @@
 		],
 		"bfmtMetadata": {
 			"createdAt": "2015-11-19T05:49:01.000Z",
-			"updatedAt": "2017-08-10T12:54:34.000Z"
+			"updatedAt": "2017-09-13T03:48:28.000Z"
 		},
 		"desc": "A mysterious relic used to evolve the Unit Grandt",
 		"id": 110100,
@@ -32112,7 +32114,7 @@
 	"700047": {
 		"bfmtMetadata": {
 			"createdAt": "2017-06-10T11:48:20.000Z",
-			"updatedAt": "2017-08-10T12:54:34.000Z"
+			"updatedAt": "2017-09-13T03:48:28.000Z"
 		},
 		"desc": "Collect 40 feathers to craft the item required to evolve Migina.",
 		"id": 700047,
@@ -32123,6 +32125,40 @@
 		"sell_price": 100,
 		"thumbnail": "item_thum_700047.png",
 		"type": "material",
+		"usage": [
+			{
+				"id": 700048,
+				"name": "Phoenix Gem"
+			}
+		]
+	},
+	"700048": {
+		"associated_units": [
+			"710234"
+		],
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-09-13T03:48:28.000Z"
+		},
+		"desc": "Allows Migina to evolve.",
+		"id": 700048,
+		"max_stack": 99,
+		"name": "Phoenix Gem",
+		"raid": false,
+		"rarity": 5,
+		"recipe": {
+			"karma": "100000",
+			"materials": [
+				{
+					"count": 40,
+					"id": 700047,
+					"name": "Feather of the Phoenix"
+				}
+			]
+		},
+		"sell_price": 10000,
+		"thumbnail": "item_thum_110000.png",
+		"type": "evomat",
 		"usage": []
 	},
 	"701000": {
@@ -34703,12 +34739,13 @@
 	"701046": {
 		"bfmtMetadata": {
 			"createdAt": "2017-06-10T11:48:20.000Z",
-			"updatedAt": "2017-08-10T12:54:34.000Z"
+			"updatedAt": "2017-09-13T03:48:28.000Z"
 		},
 		"desc": "Use this material to craft the Hunter Title.",
 		"first_clear_missions": [
 			"706903",
-			"707303"
+			"707303",
+			"707503"
 		],
 		"id": 701046,
 		"max_stack": 99,
@@ -34784,12 +34821,13 @@
 	"701048": {
 		"bfmtMetadata": {
 			"createdAt": "2017-06-10T11:48:20.000Z",
-			"updatedAt": "2017-08-10T12:54:34.000Z"
+			"updatedAt": "2017-09-13T03:48:28.000Z"
 		},
 		"desc": "Use this material to craft the Pure Noblesse Title.",
 		"first_clear_missions": [
 			"707103",
-			"707203"
+			"707203",
+			"707403"
 		],
 		"id": 701048,
 		"max_stack": 99,
@@ -34812,7 +34850,7 @@
 		],
 		"bfmtMetadata": {
 			"createdAt": "2017-06-10T11:48:20.000Z",
-			"updatedAt": "2017-08-10T12:54:34.000Z"
+			"updatedAt": "2017-09-13T03:48:28.000Z"
 		},
 		"desc": "Use this material to evolve Enki to Dream Evolution.",
 		"id": 701049,
@@ -34820,6 +34858,16 @@
 		"name": "Primordial Stone",
 		"raid": false,
 		"rarity": 5,
+		"recipe": {
+			"karma": "100000",
+			"materials": [
+				{
+					"count": 10,
+					"id": 701050,
+					"name": "Bones of a Fallen"
+				}
+			]
+		},
 		"sell_price": 10000,
 		"thumbnail": "item_thum_20820.png",
 		"type": "evomat",
@@ -34828,7 +34876,7 @@
 	"701050": {
 		"bfmtMetadata": {
 			"createdAt": "2017-06-10T11:48:20.000Z",
-			"updatedAt": "2017-08-10T12:54:34.000Z"
+			"updatedAt": "2017-09-13T03:48:28.000Z"
 		},
 		"desc": "A gigantic skeleton found within an ancient desert.",
 		"id": 701050,
@@ -34839,6 +34887,115 @@
 		"sell_price": 100,
 		"thumbnail": "item_thum_902.png",
 		"type": "material",
+		"usage": [
+			{
+				"id": 701049,
+				"name": "Primordial Stone"
+			}
+		]
+	},
+	"701051": {
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-09-13T03:48:28.000Z"
+		},
+		"desc": "Boosts all parameters (50%) & boosts Spark damage (100%) & boosts BB ATK (150%) & adds probability of resistance against 1 KO attack (70%) & negates elemental damage",
+		"effect": [
+			{
+				"atk% buff": 50,
+				"def% buff": 50,
+				"hp% buff": 50,
+				"passive id": "1",
+				"rec% buff": 50
+			},
+			{
+				"damage% for spark": 100,
+				"passive id": "31"
+			},
+			{
+				"bb atk% buff": 150,
+				"passive id": "64",
+				"sbb atk% buff": 150,
+				"ubb atk% buff": 150
+			},
+			{
+				"angel idol chance% condition": 0,
+				"angel idol recover chance% high": 70,
+				"angel idol recover chance% low": 70,
+				"angel idol recover counts": 1,
+				"passive id": "69"
+			},
+			{
+				"passive id": "53",
+				"strong base element damage resist%": 100,
+				"strong buffed element damage resist%": 100
+			}
+		],
+		"first_clear_missions": [
+			"7100100"
+		],
+		"id": 701051,
+		"max_stack": 1,
+		"name": "Armor of Superiority",
+		"raid": false,
+		"rarity": 5,
+		"sell_price": 100000,
+		"sphere type": 1,
+		"sphere type text": "Status Boost",
+		"thumbnail": "sphere_thum_1_3.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"701053": {
+		"associated_units": [
+			"820397",
+			"820398"
+		],
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-09-13T03:48:28.000Z"
+		},
+		"desc": "Boosts ATK and REC (40%) & boosts elemental damage (50%) & boosts Spark damage (100%) & chance to add Spark vulnerability (25% chance) for 1 turn",
+		"effect": [
+			{
+				"atk% buff": 40,
+				"passive id": "1",
+				"rec% buff": 40
+			},
+			{
+				"damage% for spark": 100,
+				"passive id": "31"
+			},
+			{
+				"passive id": "75",
+				"spark debuff chance%": 25,
+				"spark debuff turns": 1,
+				"spark debuff%": 20
+			},
+			{
+				"dark units do extra elemental weakness dmg": true,
+				"earth units do extra elemental weakness dmg": true,
+				"elemental weakness multiplier%": 50,
+				"fire units do extra elemental weakness dmg": true,
+				"light units do extra elemental weakness dmg": true,
+				"passive id": "50",
+				"thunder units do extra elemental weakness dmg": true,
+				"water units do extra elemental weakness dmg": true
+			}
+		],
+		"first_clear_missions": [
+			"707601"
+		],
+		"id": 701053,
+		"max_stack": 1,
+		"name": "Old Crown Fragment",
+		"raid": false,
+		"rarity": 5,
+		"sell_price": 100000,
+		"sphere type": 13,
+		"sphere type text": "Atk Boosting",
+		"thumbnail": "sphere_thum_4_6.png",
+		"type": "sphere",
 		"usage": []
 	},
 	"800011": {
@@ -37180,6 +37337,99 @@
 		"sphere type": 13,
 		"sphere type text": "Atk Boosting",
 		"thumbnail": "sphere_thum_819097.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"819101": {
+		"associated_units": [
+			"820397",
+			"820398"
+		],
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-09-13T03:48:28.000Z"
+		},
+		"desc": "50% boost to Atk, 75% boost to Spark damage, critical damage boosts BB gauge & hugely boosts critical damage for 2 turns when damage dealt exceeds certain amount",
+		"dictionary": {
+			"lore": "An ornate greatsword that is rumored to be the harbinger of massive destruction. It is covered in jewels and ancient runes of power."
+		},
+		"effect": [
+			{
+				"atk% buff": 50,
+				"passive id": "1"
+			},
+			{
+				"damage% for spark": 75,
+				"passive id": "31"
+			},
+			{
+				"bc fill on crit max": 6,
+				"bc fill on crit min": 4,
+				"bc fill on crit%": 100,
+				"passive id": "65"
+			},
+			{
+				"buff": {
+					"buff turns (84)": "2",
+					"unknown buff id": "84",
+					"unknown buff params": "1.5"
+				},
+				"damage dealt threshold buff activation": 100000,
+				"passive id": "80"
+			}
+		],
+		"id": 819101,
+		"max_stack": 1,
+		"name": "Platinum Sword",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 30000,
+		"sphere type": 13,
+		"sphere type text": "Atk Boosting",
+		"thumbnail": "sphere_thum_819101.png",
+		"type": "sphere",
+		"usage": []
+	},
+	"819102": {
+		"bfmtMetadata": {
+			"createdAt": "2017-06-10T11:48:20.000Z",
+			"updatedAt": "2017-09-13T03:48:28.000Z"
+		},
+		"desc": "15% boost to all parameters, boosts OD gauge fill rate, reduces BB gauge required for BB & considerably boosts drop rate of BC, HC when attacking",
+		"dictionary": {
+			"lore": "A metal bangle from another world covered in runes of mystic power. It is said to bring bravery, luck, and skill to its bearer."
+		},
+		"effect": [
+			{
+				"atk% buff": 15,
+				"def% buff": 15,
+				"hp% buff": 15,
+				"passive id": "1",
+				"rec% buff": 15
+			},
+			{
+				"od fill rate%": 25,
+				"passive id": "70"
+			},
+			{
+				"passive id": "48",
+				"reduced bb bc cost%": 15
+			},
+			{
+				"bc drop rate% buff": 15,
+				"hc drop rate% buff": 15,
+				"passive id": "19"
+			}
+		],
+		"id": 819102,
+		"max_stack": 1,
+		"name": "Platinum Bangle",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 30000,
+		"sphere type": 6,
+		"sphere type text": "BB Gauge",
+		"thumbnail": "sphere_thum_819102.png",
 		"type": "sphere",
 		"usage": []
 	},
