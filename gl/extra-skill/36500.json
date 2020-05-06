@@ -1,0 +1,53 @@
+{
+	"associated_units": [
+		"11087"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2017-06-14T11:43:33.000Z",
+		"updatedAt": "2017-06-14T11:43:33.000Z"
+	},
+	"desc": "40% boost to all parameters when Medblare is equipped, adds huge boost to damage against status afflicted foes for 3 turns effect to BB/SBB & raises max Atk value from 99999 to 150000",
+	"effects": [
+		{
+			"atk% buff": 40,
+			"conditions": [
+				{
+					"item required": [
+						"49940"
+					]
+				}
+			],
+			"def% buff": 40,
+			"hp% buff": 40,
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 40
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"atk% buff turns (110)": 3,
+					"atk% buff when enemy has ailment": 180,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "65",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"conditions": [],
+			"passive target": "self",
+			"unknown passive id": "143",
+			"unknown passive params": "150000"
+		}
+	],
+	"id": "36500",
+	"name": "Unbroken Win Streak",
+	"target": "self"
+}
