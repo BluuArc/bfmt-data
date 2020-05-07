@@ -1,0 +1,77 @@
+{
+	"associated_units": [
+		"840118"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2019-04-17T17:10:03.000Z",
+		"updatedAt": "2019-04-17T17:10:03.000Z"
+	},
+	"desc": "100% boost to Atk when BB gauge is above 50%, adds Def ignoring effect to BB/SBB for 3 turns, adds all elements to attack for 3 turns to BB/SBB/UBB & boosts damage against status afflicted foes for all allies",
+	"effects": [
+		{
+			"atk% buff when enemy has ailment": 50,
+			"atk% buff when enemy has curse": true,
+			"atk% buff when enemy has injury": true,
+			"atk% buff when enemy has paralysis": true,
+			"atk% buff when enemy has poison": true,
+			"atk% buff when enemy has sick": true,
+			"atk% buff when enemy has weaken": true,
+			"conditions": [],
+			"passive id": "74",
+			"passive target": "party"
+		},
+		{
+			"atk% buff": 100,
+			"bb gauge above % buff requirement": 50,
+			"conditions": [],
+			"passive id": "30",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"defense% ignore": 100,
+					"defense% ignore turns (39)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "22",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"trigger on ubb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elements added": [
+						"fire",
+						"water",
+						"earth",
+						"thunder",
+						"light",
+						"dark"
+					],
+					"elements added turns": 3,
+					"proc id": "30",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"id": "840118",
+	"name": "Bonnie Warrior Dignity",
+	"rarity": "7",
+	"target": "self"
+}
