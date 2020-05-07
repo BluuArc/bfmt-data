@@ -2,14 +2,32 @@
 	"ai": [
 		{
 			"action": "skill",
-			"chance%": 60,
+			"chance%": 40,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 50,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 25,
 			"target conditions": "random",
 			"target type": "enemy"
 		},
 		{
 			"action": "skill",
 			"chance%": 20,
-			"target conditions": "atk_max",
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 25,
+			"target conditions": "random",
 			"target type": "enemy"
 		},
 		{
@@ -39,9 +57,9 @@
 	"bb": {
 		"damage frames": [
 			{
-				"effect delay time(ms)/frame": "50.0/3",
+				"effect delay time(ms)/frame": "16.7/1",
 				"frame times": [
-					40
+					66
 				],
 				"hit dmg% distribution": [
 					100
@@ -51,7 +69,15 @@
 				"proc id": "1"
 			},
 			{
-				"effect delay time(ms)/frame": "16.7/1",
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [],
+				"hit dmg% distribution": [],
+				"hit dmg% distribution (total)": 0,
+				"hits": 1,
+				"proc id": "10000"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
 				"frame times": [
 					0
 				],
@@ -73,21 +99,9 @@
 				"hit dmg% distribution (total)": 100,
 				"hits": 1,
 				"proc id": "44"
-			},
-			{
-				"effect delay time(ms)/frame": "0.0/0",
-				"frame times": [
-					0
-				],
-				"hit dmg% distribution": [
-					100
-				],
-				"hit dmg% distribution (total)": 100,
-				"hits": 1,
-				"proc id": "78"
 			}
 		],
-		"desc": "1 hit Earth attack on all foes & boosts own DEF (100%) & boosts DEF relative to ATK (60%) & additional attack at turn's end for 1 turn",
+		"desc": "Powerful Earth attack on all foes, casts Taunt and boosts own Def for 1 turn, greatly boosts Def relative to Atk for 3 turns & adds additional powerful attack at turn's end for 3 turns",
 		"drop check count": 20,
 		"id": "730237",
 		"levels": [
@@ -97,16 +111,24 @@
 					{
 						"bb atk%": 370,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
+						"def% buff": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10000",
+						"target area": "single",
+						"target type": "self",
+						"taunt turns (10000)": 1
+					},
+					{
 						"% converted turns": 3,
 						"converted attribute": "attack",
-						"def% buff (47)": 60,
-						"effect delay time(ms)/frame": "16.7/1",
+						"def% buff (47)": 40,
+						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
 						"target area": "aoe",
 						"target type": "party"
@@ -115,20 +137,12 @@
 						"dot atk%": 500,
 						"dot element affected": true,
 						"dot flat atk": 100,
-						"dot turns (71)": 1,
-						"dot unit index": 0,
+						"dot turns (71)": 3,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
 						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": 100,
-						"self stat buff turns": 3,
-						"target area": "single",
-						"target type": "self"
 					}
 				]
 			},
@@ -138,16 +152,24 @@
 					{
 						"bb atk%": 380,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
+						"def% buff": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10000",
+						"target area": "single",
+						"target type": "self",
+						"taunt turns (10000)": 1
+					},
+					{
 						"% converted turns": 3,
 						"converted attribute": "attack",
-						"def% buff (47)": 60,
-						"effect delay time(ms)/frame": "16.7/1",
+						"def% buff (47)": 42,
+						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
 						"target area": "aoe",
 						"target type": "party"
@@ -156,20 +178,12 @@
 						"dot atk%": 500,
 						"dot element affected": true,
 						"dot flat atk": 100,
-						"dot turns (71)": 1,
-						"dot unit index": 0,
+						"dot turns (71)": 3,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
 						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": 100,
-						"self stat buff turns": 3,
-						"target area": "single",
-						"target type": "self"
 					}
 				]
 			},
@@ -179,16 +193,24 @@
 					{
 						"bb atk%": 390,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
+						"def% buff": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10000",
+						"target area": "single",
+						"target type": "self",
+						"taunt turns (10000)": 1
+					},
+					{
 						"% converted turns": 3,
 						"converted attribute": "attack",
-						"def% buff (47)": 60,
-						"effect delay time(ms)/frame": "16.7/1",
+						"def% buff (47)": 44,
+						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
 						"target area": "aoe",
 						"target type": "party"
@@ -197,20 +219,12 @@
 						"dot atk%": 500,
 						"dot element affected": true,
 						"dot flat atk": 100,
-						"dot turns (71)": 1,
-						"dot unit index": 0,
+						"dot turns (71)": 3,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
 						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": 100,
-						"self stat buff turns": 3,
-						"target area": "single",
-						"target type": "self"
 					}
 				]
 			},
@@ -220,16 +234,24 @@
 					{
 						"bb atk%": 400,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
+						"def% buff": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10000",
+						"target area": "single",
+						"target type": "self",
+						"taunt turns (10000)": 1
+					},
+					{
 						"% converted turns": 3,
 						"converted attribute": "attack",
-						"def% buff (47)": 60,
-						"effect delay time(ms)/frame": "16.7/1",
+						"def% buff (47)": 46,
+						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
 						"target area": "aoe",
 						"target type": "party"
@@ -238,20 +260,12 @@
 						"dot atk%": 500,
 						"dot element affected": true,
 						"dot flat atk": 100,
-						"dot turns (71)": 1,
-						"dot unit index": 0,
+						"dot turns (71)": 3,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
 						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": 100,
-						"self stat buff turns": 3,
-						"target area": "single",
-						"target type": "self"
 					}
 				]
 			},
@@ -261,16 +275,24 @@
 					{
 						"bb atk%": 410,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
+						"def% buff": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10000",
+						"target area": "single",
+						"target type": "self",
+						"taunt turns (10000)": 1
+					},
+					{
 						"% converted turns": 3,
 						"converted attribute": "attack",
-						"def% buff (47)": 60,
-						"effect delay time(ms)/frame": "16.7/1",
+						"def% buff (47)": 48,
+						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
 						"target area": "aoe",
 						"target type": "party"
@@ -279,20 +301,12 @@
 						"dot atk%": 500,
 						"dot element affected": true,
 						"dot flat atk": 100,
-						"dot turns (71)": 1,
-						"dot unit index": 0,
+						"dot turns (71)": 3,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
 						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": 100,
-						"self stat buff turns": 3,
-						"target area": "single",
-						"target type": "self"
 					}
 				]
 			},
@@ -302,16 +316,24 @@
 					{
 						"bb atk%": 420,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
+						"def% buff": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10000",
+						"target area": "single",
+						"target type": "self",
+						"taunt turns (10000)": 1
+					},
+					{
 						"% converted turns": 3,
 						"converted attribute": "attack",
-						"def% buff (47)": 60,
-						"effect delay time(ms)/frame": "16.7/1",
+						"def% buff (47)": 50,
+						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
 						"target area": "aoe",
 						"target type": "party"
@@ -320,20 +342,12 @@
 						"dot atk%": 500,
 						"dot element affected": true,
 						"dot flat atk": 100,
-						"dot turns (71)": 1,
-						"dot unit index": 0,
+						"dot turns (71)": 3,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
 						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": 100,
-						"self stat buff turns": 3,
-						"target area": "single",
-						"target type": "self"
 					}
 				]
 			},
@@ -343,16 +357,24 @@
 					{
 						"bb atk%": 430,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
+						"def% buff": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10000",
+						"target area": "single",
+						"target type": "self",
+						"taunt turns (10000)": 1
+					},
+					{
 						"% converted turns": 3,
 						"converted attribute": "attack",
-						"def% buff (47)": 60,
-						"effect delay time(ms)/frame": "16.7/1",
+						"def% buff (47)": 52,
+						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
 						"target area": "aoe",
 						"target type": "party"
@@ -361,20 +383,12 @@
 						"dot atk%": 500,
 						"dot element affected": true,
 						"dot flat atk": 100,
-						"dot turns (71)": 1,
-						"dot unit index": 0,
+						"dot turns (71)": 3,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
 						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": 100,
-						"self stat buff turns": 3,
-						"target area": "single",
-						"target type": "self"
 					}
 				]
 			},
@@ -384,16 +398,24 @@
 					{
 						"bb atk%": 440,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
+						"def% buff": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10000",
+						"target area": "single",
+						"target type": "self",
+						"taunt turns (10000)": 1
+					},
+					{
 						"% converted turns": 3,
 						"converted attribute": "attack",
-						"def% buff (47)": 60,
-						"effect delay time(ms)/frame": "16.7/1",
+						"def% buff (47)": 54,
+						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
 						"target area": "aoe",
 						"target type": "party"
@@ -402,20 +424,12 @@
 						"dot atk%": 500,
 						"dot element affected": true,
 						"dot flat atk": 100,
-						"dot turns (71)": 1,
-						"dot unit index": 0,
+						"dot turns (71)": 3,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
 						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": 100,
-						"self stat buff turns": 3,
-						"target area": "single",
-						"target type": "self"
 					}
 				]
 			},
@@ -425,16 +439,24 @@
 					{
 						"bb atk%": 450,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
+						"def% buff": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10000",
+						"target area": "single",
+						"target type": "self",
+						"taunt turns (10000)": 1
+					},
+					{
 						"% converted turns": 3,
 						"converted attribute": "attack",
-						"def% buff (47)": 60,
-						"effect delay time(ms)/frame": "16.7/1",
+						"def% buff (47)": 56,
+						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
 						"target area": "aoe",
 						"target type": "party"
@@ -443,20 +465,12 @@
 						"dot atk%": 500,
 						"dot element affected": true,
 						"dot flat atk": 100,
-						"dot turns (71)": 1,
-						"dot unit index": 0,
+						"dot turns (71)": 3,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
 						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": 100,
-						"self stat buff turns": 3,
-						"target area": "single",
-						"target type": "self"
 					}
 				]
 			},
@@ -466,16 +480,24 @@
 					{
 						"bb atk%": 470,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
+						"def% buff": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10000",
+						"target area": "single",
+						"target type": "self",
+						"taunt turns (10000)": 1
+					},
+					{
 						"% converted turns": 3,
 						"converted attribute": "attack",
 						"def% buff (47)": 60,
-						"effect delay time(ms)/frame": "16.7/1",
+						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
 						"target area": "aoe",
 						"target type": "party"
@@ -484,20 +506,12 @@
 						"dot atk%": 500,
 						"dot element affected": true,
 						"dot flat atk": 100,
-						"dot turns (71)": 1,
-						"dot unit index": 0,
+						"dot turns (71)": 3,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
 						"target type": "enemy"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"proc id": "78",
-						"self def% buff": 100,
-						"self stat buff turns": 3,
-						"target area": "single",
-						"target type": "self"
 					}
 				]
 			}
@@ -506,12 +520,12 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2017-04-06T13:00:28.000Z",
-		"updatedAt": "2018-06-13T12:09:02.000Z"
+		"updatedAt": "2018-07-08T16:06:16.000Z"
 	},
 	"cost": 50,
 	"damage frames": {
 		"frame times": [
-			40
+			66
 		],
 		"hit dmg% distribution": [
 			100
@@ -526,7 +540,7 @@
 	},
 	"exp_pattern": 20,
 	"extra skill": {
-		"desc": "Boosts ATK, DEF, REC based on HP lost (0-150%) & Spark damage boosts BB gauge (10 BC)",
+		"desc": "Hugely boosts Atk, Def, Rec relative to how low HP is, Spark damage enormously boosts BB gauge & negates elemental damage",
 		"effects": [
 			{
 				"atk% base buff": 0,
@@ -547,10 +561,18 @@
 				"conditions": [],
 				"passive id": "47",
 				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"passive id": "53",
+				"passive target": "self",
+				"strong base element damage resist%": 100,
+				"strong buffed element damage resist%": 100
 			}
 		],
 		"id": "730237",
 		"name": "Hardened Focus",
+		"rarity": "1",
 		"target": "self"
 	},
 	"feskills": [
@@ -823,7 +845,7 @@
 	],
 	"gender": "female",
 	"getting type": "rare summon",
-	"guide_id": 7194,
+	"guide_id": 8272,
 	"id": 730237,
 	"imp": {
 		"max atk": "600",
@@ -833,24 +855,27 @@
 	},
 	"kind": "normal",
 	"leader skill": {
-		"desc": "50% boost to HP, ATK, DEF & adds chance of normal attacks hitting all foes (30%, 50% penalty) & boost ATK, DEF for 2 turns (70%)",
+		"desc": "100% boost to Atk, Def, 60% boost to max HP, probable normal attack on all foes, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain",
 		"effects": [
 			{
-				"atk% buff": 50,
-				"def% buff": 50,
-				"hp% buff": 50,
+				"atk% buff": 100,
+				"def% buff": 100,
+				"hp% buff": 60,
 				"passive id": "1"
 			},
 			{
 				"aoe atk inc%": -50,
-				"chance to aoe": 30,
+				"chance to aoe": 35,
 				"passive id": "96"
 			},
 			{
-				"first x turns": 2,
-				"first x turns atk% (1)": 70,
-				"first x turns def% (3)": 70,
-				"passive id": "21"
+				"increase skill activation in arena%": 25,
+				"passive id": "111"
+			},
+			{
+				"abp gain%": 60,
+				"cbp gain%": 35,
+				"passive id": "112"
 			}
 		],
 		"id": "730237",
@@ -859,24 +884,29 @@
 	"lord damage range": "3459~3863",
 	"movement": {
 		"attack": {
-			"move speed": 0.0024,
-			"move speed type": "4",
+			"move speed": 0.0015,
+			"move speed type": "5",
 			"move type": "1"
 		},
 		"skill": {
-			"move speed": 0.0024,
-			"move speed type": "4",
+			"move speed": 0.0015,
+			"move speed type": "5",
 			"move type": "1"
 		}
 	},
 	"name": "Leona",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
 	"rarity": 8,
 	"sbb": {
 		"damage frames": [
 			{
-				"effect delay time(ms)/frame": "50.0/3",
+				"effect delay time(ms)/frame": "16.7/1",
 				"frame times": [
-					40
+					66
 				],
 				"hit dmg% distribution": [
 					100
@@ -886,9 +916,9 @@
 				"proc id": "47"
 			},
 			{
-				"effect delay time(ms)/frame": "50.0/3",
+				"effect delay time(ms)/frame": "16.7/1",
 				"frame times": [
-					42
+					63
 				],
 				"hit dmg% distribution": [
 					100
@@ -946,7 +976,7 @@
 				"proc id": "88"
 			}
 		],
-		"desc": "1 hit Earth attack on all foes (damage relative to HP left) & 1 hit Earth attack on one foe & boosts ATK relative to DEF (80%) for 3 turns & attack at turn's end for 1 turn & boosts own ATK (300%) and Spark damage (50%) & reduce own DEF, REC (30%)",
+		"desc": "Powerful Earth attack on all foes (damage relative to remaining HP), powerful Earth attack on single foe, hugely boosts Atk relative to Def for 3 turns, adds additional powerful attack at turn's end for 3 turns, enormously boosts own Atk and slightly redu",
 		"drop check count": 12,
 		"id": "1730237",
 		"levels": [
@@ -954,11 +984,11 @@
 				"bc cost": 29,
 				"effects": [
 					{
-						"bb added atk% based on hp": 600,
+						"bb added atk% based on hp": 700,
 						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 200,
+						"bb base atk%": 100,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -966,26 +996,27 @@
 					{
 						"bb atk%": 500,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 80,
+						"atk% buff (46)": 60,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
+						"rec% buff (48)": 60,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
-						"dot atk%": 500,
+						"dot atk%": 600,
 						"dot element affected": true,
 						"dot flat atk": 100,
 						"dot turns (71)": 3,
-						"dot unit index": 0,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
@@ -1004,7 +1035,7 @@
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "88",
-						"spark dmg inc%": 50,
+						"spark dmg inc%": 30,
 						"spark dmg inc% turns (136)": 3,
 						"target area": "single",
 						"target type": "self"
@@ -1015,11 +1046,11 @@
 				"bc cost": 29,
 				"effects": [
 					{
-						"bb added atk% based on hp": 610,
+						"bb added atk% based on hp": 700,
 						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 200,
+						"bb base atk%": 110,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -1027,26 +1058,27 @@
 					{
 						"bb atk%": 510,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 80,
+						"atk% buff (46)": 62,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
+						"rec% buff (48)": 62,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
-						"dot atk%": 500,
+						"dot atk%": 600,
 						"dot element affected": true,
 						"dot flat atk": 100,
 						"dot turns (71)": 3,
-						"dot unit index": 0,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
@@ -1065,7 +1097,7 @@
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "88",
-						"spark dmg inc%": 50,
+						"spark dmg inc%": 32,
 						"spark dmg inc% turns (136)": 3,
 						"target area": "single",
 						"target type": "self"
@@ -1076,11 +1108,11 @@
 				"bc cost": 29,
 				"effects": [
 					{
-						"bb added atk% based on hp": 620,
+						"bb added atk% based on hp": 700,
 						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 200,
+						"bb base atk%": 120,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -1088,26 +1120,27 @@
 					{
 						"bb atk%": 520,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 80,
+						"atk% buff (46)": 64,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
+						"rec% buff (48)": 64,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
-						"dot atk%": 500,
+						"dot atk%": 600,
 						"dot element affected": true,
 						"dot flat atk": 100,
 						"dot turns (71)": 3,
-						"dot unit index": 0,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
@@ -1126,7 +1159,7 @@
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "88",
-						"spark dmg inc%": 50,
+						"spark dmg inc%": 34,
 						"spark dmg inc% turns (136)": 3,
 						"target area": "single",
 						"target type": "self"
@@ -1137,11 +1170,11 @@
 				"bc cost": 29,
 				"effects": [
 					{
-						"bb added atk% based on hp": 630,
+						"bb added atk% based on hp": 700,
 						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 200,
+						"bb base atk%": 130,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -1149,26 +1182,27 @@
 					{
 						"bb atk%": 530,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 80,
+						"atk% buff (46)": 66,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
+						"rec% buff (48)": 66,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
-						"dot atk%": 500,
+						"dot atk%": 600,
 						"dot element affected": true,
 						"dot flat atk": 100,
 						"dot turns (71)": 3,
-						"dot unit index": 0,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
@@ -1187,7 +1221,7 @@
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "88",
-						"spark dmg inc%": 50,
+						"spark dmg inc%": 36,
 						"spark dmg inc% turns (136)": 3,
 						"target area": "single",
 						"target type": "self"
@@ -1198,11 +1232,11 @@
 				"bc cost": 29,
 				"effects": [
 					{
-						"bb added atk% based on hp": 640,
+						"bb added atk% based on hp": 700,
 						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 200,
+						"bb base atk%": 140,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -1210,26 +1244,27 @@
 					{
 						"bb atk%": 540,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 80,
+						"atk% buff (46)": 68,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
+						"rec% buff (48)": 68,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
-						"dot atk%": 500,
+						"dot atk%": 600,
 						"dot element affected": true,
 						"dot flat atk": 100,
 						"dot turns (71)": 3,
-						"dot unit index": 0,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
@@ -1248,7 +1283,7 @@
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "88",
-						"spark dmg inc%": 50,
+						"spark dmg inc%": 38,
 						"spark dmg inc% turns (136)": 3,
 						"target area": "single",
 						"target type": "self"
@@ -1259,11 +1294,11 @@
 				"bc cost": 29,
 				"effects": [
 					{
-						"bb added atk% based on hp": 650,
+						"bb added atk% based on hp": 700,
 						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 200,
+						"bb base atk%": 150,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -1271,26 +1306,27 @@
 					{
 						"bb atk%": 550,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 80,
+						"atk% buff (46)": 70,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
+						"rec% buff (48)": 70,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
-						"dot atk%": 500,
+						"dot atk%": 600,
 						"dot element affected": true,
 						"dot flat atk": 100,
 						"dot turns (71)": 3,
-						"dot unit index": 0,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
@@ -1309,7 +1345,7 @@
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "88",
-						"spark dmg inc%": 50,
+						"spark dmg inc%": 40,
 						"spark dmg inc% turns (136)": 3,
 						"target area": "single",
 						"target type": "self"
@@ -1320,11 +1356,11 @@
 				"bc cost": 29,
 				"effects": [
 					{
-						"bb added atk% based on hp": 660,
+						"bb added atk% based on hp": 700,
 						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 200,
+						"bb base atk%": 160,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -1332,26 +1368,27 @@
 					{
 						"bb atk%": 560,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 80,
+						"atk% buff (46)": 72,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
+						"rec% buff (48)": 72,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
-						"dot atk%": 500,
+						"dot atk%": 600,
 						"dot element affected": true,
 						"dot flat atk": 100,
 						"dot turns (71)": 3,
-						"dot unit index": 0,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
@@ -1370,7 +1407,7 @@
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "88",
-						"spark dmg inc%": 50,
+						"spark dmg inc%": 42,
 						"spark dmg inc% turns (136)": 3,
 						"target area": "single",
 						"target type": "self"
@@ -1381,11 +1418,11 @@
 				"bc cost": 29,
 				"effects": [
 					{
-						"bb added atk% based on hp": 670,
+						"bb added atk% based on hp": 700,
 						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 200,
+						"bb base atk%": 170,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -1393,26 +1430,27 @@
 					{
 						"bb atk%": 570,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 80,
+						"atk% buff (46)": 74,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
+						"rec% buff (48)": 74,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
-						"dot atk%": 500,
+						"dot atk%": 600,
 						"dot element affected": true,
 						"dot flat atk": 100,
 						"dot turns (71)": 3,
-						"dot unit index": 0,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
@@ -1431,7 +1469,7 @@
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "88",
-						"spark dmg inc%": 50,
+						"spark dmg inc%": 44,
 						"spark dmg inc% turns (136)": 3,
 						"target area": "single",
 						"target type": "self"
@@ -1442,11 +1480,11 @@
 				"bc cost": 29,
 				"effects": [
 					{
-						"bb added atk% based on hp": 680,
+						"bb added atk% based on hp": 700,
 						"bb added atk% proportional to hp": "remaining",
-						"bb base atk%": 200,
+						"bb base atk%": 180,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -1454,26 +1492,27 @@
 					{
 						"bb atk%": 580,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 80,
+						"atk% buff (46)": 76,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
+						"rec% buff (48)": 76,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
-						"dot atk%": 500,
+						"dot atk%": 600,
 						"dot element affected": true,
 						"dot flat atk": 100,
 						"dot turns (71)": 3,
-						"dot unit index": 0,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
@@ -1492,7 +1531,7 @@
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "88",
-						"spark dmg inc%": 50,
+						"spark dmg inc%": 46,
 						"spark dmg inc% turns (136)": 3,
 						"target area": "single",
 						"target type": "self"
@@ -1507,7 +1546,7 @@
 						"bb added atk% proportional to hp": "remaining",
 						"bb base atk%": 200,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -1515,7 +1554,7 @@
 					{
 						"bb atk%": 600,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -1526,15 +1565,16 @@
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "24",
+						"rec% buff (48)": 80,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
-						"dot atk%": 500,
+						"dot atk%": 600,
 						"dot element affected": true,
 						"dot flat atk": 100,
 						"dot turns (71)": 3,
-						"dot unit index": 0,
+						"dot unit index": 1,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "44",
 						"target area": "aoe",
@@ -1581,9 +1621,9 @@
 	"ubb": {
 		"damage frames": [
 			{
-				"effect delay time(ms)/frame": "50.0/3",
+				"effect delay time(ms)/frame": "16.7/1",
 				"frame times": [
-					40
+					66
 				],
 				"hit dmg% distribution": [
 					100
@@ -1593,9 +1633,9 @@
 				"proc id": "47"
 			},
 			{
-				"effect delay time(ms)/frame": "50.0/3",
+				"effect delay time(ms)/frame": "16.7/1",
 				"frame times": [
-					42
+					63
 				],
 				"hit dmg% distribution": [
 					100
@@ -1658,14 +1698,14 @@
 		"id": "2730237",
 		"levels": [
 			{
-				"bc cost": 33,
+				"bc cost": 32,
 				"effects": [
 					{
 						"bb added atk% based on hp": 1300,
 						"bb added atk% proportional to hp": "remaining",
 						"bb base atk%": 1500,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -1673,25 +1713,25 @@
 					{
 						"bb atk%": 1200,
 						"bb flat atk": 100,
-						"effect delay time(ms)/frame": "50.0/3",
+						"effect delay time(ms)/frame": "16.7/1",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (1)": 300,
+						"atk% buff (1)": 350,
 						"buff turns": 3,
-						"def% buff (3)": 300,
+						"def% buff (3)": 350,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
 						"proc id": "5",
-						"rec% buff (5)": 300,
+						"rec% buff (5)": 350,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"buff turns (84)": 3,
-						"crit multiplier%": 300,
+						"crit multiplier%": 350,
 						"effect delay time(ms)/frame": "0.0/0",
 						"proc id": "54",
 						"target area": "aoe",
@@ -1706,7 +1746,7 @@
 							"def% buff (4)": -90,
 							"proc chance%": 100
 						},
-						"buff turns": 1,
+						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
 						"proc id": "9",
