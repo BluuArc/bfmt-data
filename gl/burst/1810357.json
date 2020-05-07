@@ -7,34 +7,39 @@
 			"hits": 18,
 			"id": "1",
 			"target": "AOE"
+		},
+		{
+			"hits": 5,
+			"id": "47",
+			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-01-11T12:28:08.000Z",
-		"updatedAt": "2017-06-14T11:43:33.000Z"
+		"updatedAt": "2019-11-06T12:31:24.000Z"
 	},
 	"damage frames": [
 		{
 			"effect delay time(ms)/frame": "16.7/1",
 			"frame times": [
 				32,
+				35,
+				38,
+				41,
 				44,
-				48,
-				52,
+				47,
+				50,
+				53,
 				56,
-				60,
-				64,
+				59,
+				62,
+				65,
 				68,
-				72,
-				76,
+				71,
+				74,
+				77,
 				80,
-				84,
-				88,
-				92,
-				96,
-				114,
-				117,
-				120
+				83
 			],
 			"hit dmg% distribution": [
 				9,
@@ -59,6 +64,26 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 18,
 			"proc id": "1"
+		},
+		{
+			"effect delay time(ms)/frame": "16.7/1",
+			"frame times": [
+				32,
+				35,
+				38,
+				41,
+				44
+			],
+			"hit dmg% distribution": [
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 5,
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -109,7 +134,7 @@
 			"proc id": "76"
 		}
 	],
-	"desc": "18 combo powerful Fire attack on all foes, boosts critical hit rate of Fire types for 3 turns, probable resistance against 1 KO attack, damage taken greatly boosts BB gauge for 3 turns, considerably boosts Atk, Def of Fire types for 3 turns & adds probability to perform 1 extra action within the same turn",
+	"desc": "18 combo Fire attack on all foes, 5 combo Fire attack on all foes (damage relative to remaining HP), damage taken fills BB gauge for 3 turns, boosts Atk, Def (Fire) for 3 turns, probable KO resistance & probable 1 extra action for 1 turn",
 	"drop check count": 1,
 	"id": "1810357",
 	"levels": [
@@ -118,9 +143,19 @@
 			"effects": [
 				{
 					"bb atk%": 700,
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 100,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -135,10 +170,9 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 90,
+					"atk% buff (13)": 130,
 					"buff turns": 3,
-					"crit% buff (16)": 60,
-					"def% buff (14)": 90,
+					"def% buff (14)": 130,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "fire",
 					"proc id": "5",
@@ -147,7 +181,7 @@
 				},
 				{
 					"angel idol buff turns (91)": 999,
-					"angel idol recover chance%": 12,
+					"angel idol recover chance%": 8,
 					"angel idol recover hp%": 1,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "56",
@@ -155,215 +189,7 @@
 					"target type": "party"
 				},
 				{
-					"chance% for extra action": 7,
-					"effect delay time(ms)/frame": "0.0/0",
-					"extra action buff turns (123)": 1,
-					"max number of extra actions": 1,
-					"proc id": "76",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 710,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"bc fill when attacked high": 8,
-					"bc fill when attacked low": 5,
-					"bc fill when attacked turns (38)": 3,
-					"bc fill when attacked%": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "20",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk% buff (13)": 91,
-					"buff turns": 3,
-					"crit% buff (16)": 60,
-					"def% buff (14)": 91,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "fire",
-					"proc id": "5",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"angel idol buff turns (91)": 999,
-					"angel idol recover chance%": 12,
-					"angel idol recover hp%": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "56",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"chance% for extra action": 7,
-					"effect delay time(ms)/frame": "0.0/0",
-					"extra action buff turns (123)": 1,
-					"max number of extra actions": 1,
-					"proc id": "76",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 720,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"bc fill when attacked high": 8,
-					"bc fill when attacked low": 5,
-					"bc fill when attacked turns (38)": 3,
-					"bc fill when attacked%": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "20",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk% buff (13)": 92,
-					"buff turns": 3,
-					"crit% buff (16)": 60,
-					"def% buff (14)": 92,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "fire",
-					"proc id": "5",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"angel idol buff turns (91)": 999,
-					"angel idol recover chance%": 12,
-					"angel idol recover hp%": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "56",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"chance% for extra action": 7,
-					"effect delay time(ms)/frame": "0.0/0",
-					"extra action buff turns (123)": 1,
-					"max number of extra actions": 1,
-					"proc id": "76",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 730,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"bc fill when attacked high": 8,
-					"bc fill when attacked low": 5,
-					"bc fill when attacked turns (38)": 3,
-					"bc fill when attacked%": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "20",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk% buff (13)": 93,
-					"buff turns": 3,
-					"crit% buff (16)": 60,
-					"def% buff (14)": 93,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "fire",
-					"proc id": "5",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"angel idol buff turns (91)": 999,
-					"angel idol recover chance%": 12,
-					"angel idol recover hp%": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "56",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"chance% for extra action": 7,
-					"effect delay time(ms)/frame": "0.0/0",
-					"extra action buff turns (123)": 1,
-					"max number of extra actions": 1,
-					"proc id": "76",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 740,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"bc fill when attacked high": 8,
-					"bc fill when attacked low": 5,
-					"bc fill when attacked turns (38)": 3,
-					"bc fill when attacked%": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "20",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk% buff (13)": 94,
-					"buff turns": 3,
-					"crit% buff (16)": 60,
-					"def% buff (14)": 94,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "fire",
-					"proc id": "5",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"angel idol buff turns (91)": 999,
-					"angel idol recover chance%": 12,
-					"angel idol recover hp%": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "56",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"chance% for extra action": 7,
+					"chance% for extra action": 20,
 					"effect delay time(ms)/frame": "0.0/0",
 					"extra action buff turns (123)": 1,
 					"max number of extra actions": 1,
@@ -378,9 +204,19 @@
 			"effects": [
 				{
 					"bb atk%": 750,
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 110,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -395,10 +231,9 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 95,
+					"atk% buff (13)": 132,
 					"buff turns": 3,
-					"crit% buff (16)": 60,
-					"def% buff (14)": 95,
+					"def% buff (14)": 132,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "fire",
 					"proc id": "5",
@@ -407,7 +242,7 @@
 				},
 				{
 					"angel idol buff turns (91)": 999,
-					"angel idol recover chance%": 12,
+					"angel idol recover chance%": 8,
 					"angel idol recover hp%": 1,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "56",
@@ -415,7 +250,7 @@
 					"target type": "party"
 				},
 				{
-					"chance% for extra action": 7,
+					"chance% for extra action": 20,
 					"effect delay time(ms)/frame": "0.0/0",
 					"extra action buff turns (123)": 1,
 					"max number of extra actions": 1,
@@ -430,9 +265,19 @@
 			"effects": [
 				{
 					"bb atk%": 760,
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 120,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -447,10 +292,9 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 96,
+					"atk% buff (13)": 134,
 					"buff turns": 3,
-					"crit% buff (16)": 60,
-					"def% buff (14)": 96,
+					"def% buff (14)": 134,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "fire",
 					"proc id": "5",
@@ -459,7 +303,7 @@
 				},
 				{
 					"angel idol buff turns (91)": 999,
-					"angel idol recover chance%": 12,
+					"angel idol recover chance%": 9,
 					"angel idol recover hp%": 1,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "56",
@@ -467,7 +311,7 @@
 					"target type": "party"
 				},
 				{
-					"chance% for extra action": 7,
+					"chance% for extra action": 20,
 					"effect delay time(ms)/frame": "0.0/0",
 					"extra action buff turns (123)": 1,
 					"max number of extra actions": 1,
@@ -482,9 +326,19 @@
 			"effects": [
 				{
 					"bb atk%": 770,
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 130,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -499,10 +353,9 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 97,
+					"atk% buff (13)": 136,
 					"buff turns": 3,
-					"crit% buff (16)": 60,
-					"def% buff (14)": 97,
+					"def% buff (14)": 136,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "fire",
 					"proc id": "5",
@@ -511,7 +364,7 @@
 				},
 				{
 					"angel idol buff turns (91)": 999,
-					"angel idol recover chance%": 12,
+					"angel idol recover chance%": 9,
 					"angel idol recover hp%": 1,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "56",
@@ -519,7 +372,7 @@
 					"target type": "party"
 				},
 				{
-					"chance% for extra action": 7,
+					"chance% for extra action": 20,
 					"effect delay time(ms)/frame": "0.0/0",
 					"extra action buff turns (123)": 1,
 					"max number of extra actions": 1,
@@ -534,9 +387,19 @@
 			"effects": [
 				{
 					"bb atk%": 780,
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 140,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -551,10 +414,9 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 98,
+					"atk% buff (13)": 138,
 					"buff turns": 3,
-					"crit% buff (16)": 60,
-					"def% buff (14)": 98,
+					"def% buff (14)": 138,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "fire",
 					"proc id": "5",
@@ -563,7 +425,7 @@
 				},
 				{
 					"angel idol buff turns (91)": 999,
-					"angel idol recover chance%": 12,
+					"angel idol recover chance%": 10,
 					"angel idol recover hp%": 1,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "56",
@@ -571,7 +433,68 @@
 					"target type": "party"
 				},
 				{
-					"chance% for extra action": 7,
+					"chance% for extra action": 20,
+					"effect delay time(ms)/frame": "0.0/0",
+					"extra action buff turns (123)": 1,
+					"max number of extra actions": 1,
+					"proc id": "76",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 790,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 150,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (13)": 140,
+					"buff turns": 3,
+					"def% buff (14)": 140,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "fire",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"chance% for extra action": 20,
 					"effect delay time(ms)/frame": "0.0/0",
 					"extra action buff turns (123)": 1,
 					"max number of extra actions": 1,
@@ -586,9 +509,19 @@
 			"effects": [
 				{
 					"bb atk%": 800,
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 160,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -603,10 +536,131 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 100,
+					"atk% buff (13)": 142,
 					"buff turns": 3,
-					"crit% buff (16)": 60,
-					"def% buff (14)": 100,
+					"def% buff (14)": 142,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "fire",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 11,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"chance% for extra action": 20,
+					"effect delay time(ms)/frame": "0.0/0",
+					"extra action buff turns (123)": 1,
+					"max number of extra actions": 1,
+					"proc id": "76",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 810,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 170,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (13)": 144,
+					"buff turns": 3,
+					"def% buff (14)": 144,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "fire",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 11,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"chance% for extra action": 20,
+					"effect delay time(ms)/frame": "0.0/0",
+					"extra action buff turns (123)": 1,
+					"max number of extra actions": 1,
+					"proc id": "76",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 820,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 180,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (13)": 146,
+					"buff turns": 3,
+					"def% buff (14)": 146,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "fire",
 					"proc id": "5",
@@ -623,7 +677,68 @@
 					"target type": "party"
 				},
 				{
-					"chance% for extra action": 7,
+					"chance% for extra action": 20,
+					"effect delay time(ms)/frame": "0.0/0",
+					"extra action buff turns (123)": 1,
+					"max number of extra actions": 1,
+					"proc id": "76",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 32,
+			"effects": [
+				{
+					"bb atk%": 850,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (13)": 150,
+					"buff turns": 3,
+					"def% buff (14)": 150,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "fire",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 12,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"chance% for extra action": 20,
 					"effect delay time(ms)/frame": "0.0/0",
 					"extra action buff turns (123)": 1,
 					"max number of extra actions": 1,

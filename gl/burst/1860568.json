@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 22,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2018-11-15T15:03:40.000Z"
+		"updatedAt": "2019-11-06T12:31:24.000Z"
 	},
 	"damage frames": [
 		{
@@ -66,7 +66,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 22,
-			"proc id": "1"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -115,9 +115,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "54"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "2"
 		}
 	],
-	"desc": "22 combo powerful Dark attack on all foes, Spark damage considerably restores HP for 3 turns, hugely boosts Def relative to Rec for 3 turns, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns & considerably boosts critical damage for 3 turns",
+	"desc": "22 combo Dark attack on all foes (damage relative to remaining HP), spark damage restores HP for 3 turns, boosts Atk, Def relative to Rec for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns, boosts critical damage for 3 turns & restores HP",
 	"drop check count": 1,
 	"id": "1860568",
 	"levels": [
@@ -125,10 +137,12 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 850,
+					"bb added atk% based on hp": 650,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -137,273 +151,14 @@
 					"proc id": "87",
 					"spark recover hp buff turns (135)": 3,
 					"spark recover hp chance%": 100,
-					"spark recover hp high": 400,
-					"spark recover hp low": 300,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"converted attribute": "recovery",
-					"def% buff (47)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk% buff (1)": 160,
-					"buff turns": 3,
-					"crit% buff (7)": 60,
-					"def% buff (3)": 160,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "all",
-					"proc id": "5",
-					"rec% buff (5)": 160,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 75,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 26,
-			"effects": [
-				{
-					"bb atk%": 860,
-					"bb flat atk": 200,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "87",
-					"spark recover hp buff turns (135)": 3,
-					"spark recover hp chance%": 100,
-					"spark recover hp high": 400,
-					"spark recover hp low": 300,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"% converted turns": 3,
-					"converted attribute": "recovery",
-					"def% buff (47)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk% buff (1)": 162,
-					"buff turns": 3,
-					"crit% buff (7)": 60,
-					"def% buff (3)": 162,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "all",
-					"proc id": "5",
-					"rec% buff (5)": 162,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 75,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 26,
-			"effects": [
-				{
-					"bb atk%": 870,
-					"bb flat atk": 200,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "87",
-					"spark recover hp buff turns (135)": 3,
-					"spark recover hp chance%": 100,
-					"spark recover hp high": 400,
-					"spark recover hp low": 300,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"% converted turns": 3,
-					"converted attribute": "recovery",
-					"def% buff (47)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk% buff (1)": 164,
-					"buff turns": 3,
-					"crit% buff (7)": 60,
-					"def% buff (3)": 164,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "all",
-					"proc id": "5",
-					"rec% buff (5)": 164,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 75,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 26,
-			"effects": [
-				{
-					"bb atk%": 880,
-					"bb flat atk": 200,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "87",
-					"spark recover hp buff turns (135)": 3,
-					"spark recover hp chance%": 100,
-					"spark recover hp high": 400,
-					"spark recover hp low": 300,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"% converted turns": 3,
-					"converted attribute": "recovery",
-					"def% buff (47)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk% buff (1)": 166,
-					"buff turns": 3,
-					"crit% buff (7)": 60,
-					"def% buff (3)": 166,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "all",
-					"proc id": "5",
-					"rec% buff (5)": 166,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 75,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 26,
-			"effects": [
-				{
-					"bb atk%": 890,
-					"bb flat atk": 200,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "87",
-					"spark recover hp buff turns (135)": 3,
-					"spark recover hp chance%": 100,
-					"spark recover hp high": 400,
-					"spark recover hp low": 300,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"% converted turns": 3,
-					"converted attribute": "recovery",
-					"def% buff (47)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk% buff (1)": 168,
-					"buff turns": 3,
-					"crit% buff (7)": 60,
-					"def% buff (3)": 168,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "all",
-					"proc id": "5",
-					"rec% buff (5)": 168,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 75,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 26,
-			"effects": [
-				{
-					"bb atk%": 900,
-					"bb flat atk": 200,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "87",
-					"spark recover hp buff turns (135)": 3,
-					"spark recover hp chance%": 100,
-					"spark recover hp high": 400,
-					"spark recover hp low": 300,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"% converted turns": 3,
+					"atk% buff (46)": 100,
 					"converted attribute": "recovery",
 					"def% buff (47)": 100,
 					"effect delay time(ms)/frame": "0.0/0",
@@ -425,9 +180,18 @@
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 75,
+					"crit multiplier%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"heal high": 4000,
+					"heal low": 3500,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -437,10 +201,12 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 910,
+					"bb added atk% based on hp": 660,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -449,13 +215,14 @@
 					"proc id": "87",
 					"spark recover hp buff turns (135)": 3,
 					"spark recover hp chance%": 100,
-					"spark recover hp high": 400,
-					"spark recover hp low": 300,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
+					"atk% buff (46)": 100,
 					"converted attribute": "recovery",
 					"def% buff (47)": 100,
 					"effect delay time(ms)/frame": "0.0/0",
@@ -477,9 +244,18 @@
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 75,
+					"crit multiplier%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"heal high": 4050,
+					"heal low": 3550,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -489,10 +265,12 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 920,
+					"bb added atk% based on hp": 670,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -501,13 +279,14 @@
 					"proc id": "87",
 					"spark recover hp buff turns (135)": 3,
 					"spark recover hp chance%": 100,
-					"spark recover hp high": 400,
-					"spark recover hp low": 300,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
+					"atk% buff (46)": 100,
 					"converted attribute": "recovery",
 					"def% buff (47)": 100,
 					"effect delay time(ms)/frame": "0.0/0",
@@ -529,9 +308,18 @@
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 75,
+					"crit multiplier%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"heal high": 4100,
+					"heal low": 3600,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -541,10 +329,12 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 930,
+					"bb added atk% based on hp": 680,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -553,13 +343,14 @@
 					"proc id": "87",
 					"spark recover hp buff turns (135)": 3,
 					"spark recover hp chance%": 100,
-					"spark recover hp high": 400,
-					"spark recover hp low": 300,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
+					"atk% buff (46)": 100,
 					"converted attribute": "recovery",
 					"def% buff (47)": 100,
 					"effect delay time(ms)/frame": "0.0/0",
@@ -581,9 +372,18 @@
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 75,
+					"crit multiplier%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"heal high": 4150,
+					"heal low": 3650,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -593,10 +393,12 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 950,
+					"bb added atk% based on hp": 690,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -605,13 +407,78 @@
 					"proc id": "87",
 					"spark recover hp buff turns (135)": 3,
 					"spark recover hp chance%": 100,
-					"spark recover hp high": 400,
-					"spark recover hp low": 300,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
+					"atk% buff (46)": 100,
+					"converted attribute": "recovery",
+					"def% buff (47)": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 178,
+					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 178,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"rec% buff (5)": 178,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"heal high": 4200,
+					"heal low": 3700,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 26,
+			"effects": [
+				{
+					"bb added atk% based on hp": 700,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 100,
 					"converted attribute": "recovery",
 					"def% buff (47)": 100,
 					"effect delay time(ms)/frame": "0.0/0",
@@ -633,9 +500,274 @@
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 75,
+					"crit multiplier%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"heal high": 4250,
+					"heal low": 3750,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 26,
+			"effects": [
+				{
+					"bb added atk% based on hp": 710,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 100,
+					"converted attribute": "recovery",
+					"def% buff (47)": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 182,
+					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 182,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"rec% buff (5)": 182,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"heal high": 4300,
+					"heal low": 3800,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 26,
+			"effects": [
+				{
+					"bb added atk% based on hp": 720,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 100,
+					"converted attribute": "recovery",
+					"def% buff (47)": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 184,
+					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 184,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"rec% buff (5)": 184,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"heal high": 4350,
+					"heal low": 3850,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 26,
+			"effects": [
+				{
+					"bb added atk% based on hp": 730,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 100,
+					"converted attribute": "recovery",
+					"def% buff (47)": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 186,
+					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 186,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"rec% buff (5)": 186,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"heal high": 4400,
+					"heal low": 3900,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 26,
+			"effects": [
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 100,
+					"converted attribute": "recovery",
+					"def% buff (47)": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 190,
+					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 190,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"rec% buff (5)": 190,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"heal high": 4500,
+					"heal low": 4000,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
 					"target area": "aoe",
 					"target type": "party"
 				}

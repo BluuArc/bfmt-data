@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 22,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-04-06T15:27:42.000Z",
-		"updatedAt": "2017-06-14T11:43:33.000Z"
+		"updatedAt": "2019-11-06T12:31:24.000Z"
 	},
 	"damage frames": [
 		{
@@ -34,11 +34,11 @@
 				56,
 				59,
 				62,
-				66,
-				69,
-				122,
-				125,
-				128
+				65,
+				68,
+				71,
+				74,
+				77
 			],
 			"hit dmg% distribution": [
 				4,
@@ -66,7 +66,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 22,
-			"proc id": "1"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "16.7/1",
@@ -126,595 +126,30 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "73"
+			"proc id": "18"
 		}
 	],
-	"desc": "22 combo powerful Dark attack on all foes, greatly restores HP, hugely boosts BB Atk for 3 turns, hugely boosts Atk, Def relative to Rec for 3 turns, negates critical and elemental damage for 2 turns & negates Atk, Def, Rec reductions for 2 turns",
+	"desc": "22 combo Dark attack on all foes (damage relative to remaining HP), restores HP, boosts BB Atk for 3 turns, boosts Atk, Def relative to Rec for 3 turns, 100% critical and elemental damage reduction for 3 turns & 50% damage reduction for 2 turns",
 	"drop check count": 1,
 	"id": "1860357",
 	"levels": [
 		{
-			"bc cost": 32,
+			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 520,
-					"bb flat atk": 100,
+					"bb added atk% based on hp": 650,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "16.7/1",
-					"heal high": 4000,
-					"heal low": 3500,
-					"proc id": "2",
-					"rec added% (from healer)": 40,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"bb atk% buff": 350,
-					"buff turns (72)": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "45",
-					"sbb atk% buff": 350,
-					"target area": "aoe",
-					"target type": "party",
-					"ubb atk% buff": 350
-				},
-				{
-					"% converted turns": 3,
-					"atk% buff (46)": 70,
-					"converted attribute": "recovery",
-					"def% buff (47)": 70,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"crit dmg base damage resist% (143)": 100,
-					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "93",
-					"strong base element damage resist% (144)": 100,
-					"strong buffed element damage resist% (144)": 100,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk down resist% (120)": 100,
-					"def down resist% (121)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "73",
-					"rec down resist% (122)": 100,
-					"stat down immunity buff turns": 2,
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 530,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "16.7/1",
-					"heal high": 4050,
-					"heal low": 3550,
-					"proc id": "2",
-					"rec added% (from healer)": 40,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"bb atk% buff": 360,
-					"buff turns (72)": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "45",
-					"sbb atk% buff": 360,
-					"target area": "aoe",
-					"target type": "party",
-					"ubb atk% buff": 360
-				},
-				{
-					"% converted turns": 3,
-					"atk% buff (46)": 71,
-					"converted attribute": "recovery",
-					"def% buff (47)": 71,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"crit dmg base damage resist% (143)": 100,
-					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "93",
-					"strong base element damage resist% (144)": 100,
-					"strong buffed element damage resist% (144)": 100,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk down resist% (120)": 100,
-					"def down resist% (121)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "73",
-					"rec down resist% (122)": 100,
-					"stat down immunity buff turns": 2,
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 540,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "16.7/1",
-					"heal high": 4100,
-					"heal low": 3600,
-					"proc id": "2",
-					"rec added% (from healer)": 40,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"bb atk% buff": 370,
-					"buff turns (72)": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "45",
-					"sbb atk% buff": 370,
-					"target area": "aoe",
-					"target type": "party",
-					"ubb atk% buff": 370
-				},
-				{
-					"% converted turns": 3,
-					"atk% buff (46)": 72,
-					"converted attribute": "recovery",
-					"def% buff (47)": 72,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"crit dmg base damage resist% (143)": 100,
-					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "93",
-					"strong base element damage resist% (144)": 100,
-					"strong buffed element damage resist% (144)": 100,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk down resist% (120)": 100,
-					"def down resist% (121)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "73",
-					"rec down resist% (122)": 100,
-					"stat down immunity buff turns": 2,
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 550,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "16.7/1",
-					"heal high": 4150,
-					"heal low": 3650,
-					"proc id": "2",
-					"rec added% (from healer)": 40,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"bb atk% buff": 380,
-					"buff turns (72)": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "45",
-					"sbb atk% buff": 380,
-					"target area": "aoe",
-					"target type": "party",
-					"ubb atk% buff": 380
-				},
-				{
-					"% converted turns": 3,
-					"atk% buff (46)": 73,
-					"converted attribute": "recovery",
-					"def% buff (47)": 73,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"crit dmg base damage resist% (143)": 100,
-					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "93",
-					"strong base element damage resist% (144)": 100,
-					"strong buffed element damage resist% (144)": 100,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk down resist% (120)": 100,
-					"def down resist% (121)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "73",
-					"rec down resist% (122)": 100,
-					"stat down immunity buff turns": 2,
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 560,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "16.7/1",
-					"heal high": 4200,
-					"heal low": 3700,
-					"proc id": "2",
-					"rec added% (from healer)": 40,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"bb atk% buff": 390,
-					"buff turns (72)": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "45",
-					"sbb atk% buff": 390,
-					"target area": "aoe",
-					"target type": "party",
-					"ubb atk% buff": 390
-				},
-				{
-					"% converted turns": 3,
-					"atk% buff (46)": 74,
-					"converted attribute": "recovery",
-					"def% buff (47)": 74,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"crit dmg base damage resist% (143)": 100,
-					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "93",
-					"strong base element damage resist% (144)": 100,
-					"strong buffed element damage resist% (144)": 100,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk down resist% (120)": 100,
-					"def down resist% (121)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "73",
-					"rec down resist% (122)": 100,
-					"stat down immunity buff turns": 2,
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 570,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "16.7/1",
-					"heal high": 4250,
-					"heal low": 3750,
-					"proc id": "2",
-					"rec added% (from healer)": 40,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"bb atk% buff": 400,
-					"buff turns (72)": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "45",
-					"sbb atk% buff": 400,
-					"target area": "aoe",
-					"target type": "party",
-					"ubb atk% buff": 400
-				},
-				{
-					"% converted turns": 3,
-					"atk% buff (46)": 75,
-					"converted attribute": "recovery",
-					"def% buff (47)": 75,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"crit dmg base damage resist% (143)": 100,
-					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "93",
-					"strong base element damage resist% (144)": 100,
-					"strong buffed element damage resist% (144)": 100,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk down resist% (120)": 100,
-					"def down resist% (121)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "73",
-					"rec down resist% (122)": 100,
-					"stat down immunity buff turns": 2,
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 580,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "16.7/1",
-					"heal high": 4300,
-					"heal low": 3800,
-					"proc id": "2",
-					"rec added% (from healer)": 40,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"bb atk% buff": 410,
-					"buff turns (72)": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "45",
-					"sbb atk% buff": 410,
-					"target area": "aoe",
-					"target type": "party",
-					"ubb atk% buff": 410
-				},
-				{
-					"% converted turns": 3,
-					"atk% buff (46)": 76,
-					"converted attribute": "recovery",
-					"def% buff (47)": 76,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"crit dmg base damage resist% (143)": 100,
-					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "93",
-					"strong base element damage resist% (144)": 100,
-					"strong buffed element damage resist% (144)": 100,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk down resist% (120)": 100,
-					"def down resist% (121)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "73",
-					"rec down resist% (122)": 100,
-					"stat down immunity buff turns": 2,
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 590,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "16.7/1",
-					"heal high": 4350,
-					"heal low": 3850,
-					"proc id": "2",
-					"rec added% (from healer)": 40,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"bb atk% buff": 420,
-					"buff turns (72)": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "45",
-					"sbb atk% buff": 420,
-					"target area": "aoe",
-					"target type": "party",
-					"ubb atk% buff": 420
-				},
-				{
-					"% converted turns": 3,
-					"atk% buff (46)": 77,
-					"converted attribute": "recovery",
-					"def% buff (47)": 77,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"crit dmg base damage resist% (143)": 100,
-					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "93",
-					"strong base element damage resist% (144)": 100,
-					"strong buffed element damage resist% (144)": 100,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk down resist% (120)": 100,
-					"def down resist% (121)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "73",
-					"rec down resist% (122)": 100,
-					"stat down immunity buff turns": 2,
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 600,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "16.7/1",
-					"heal high": 4400,
-					"heal low": 3900,
-					"proc id": "2",
-					"rec added% (from healer)": 40,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"bb atk% buff": 430,
-					"buff turns (72)": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "45",
-					"sbb atk% buff": 430,
-					"target area": "aoe",
-					"target type": "party",
-					"ubb atk% buff": 430
-				},
-				{
-					"% converted turns": 3,
-					"atk% buff (46)": 78,
-					"converted attribute": "recovery",
-					"def% buff (47)": 78,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"crit dmg base damage resist% (143)": 100,
-					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "93",
-					"strong base element damage resist% (144)": 100,
-					"strong buffed element damage resist% (144)": 100,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"atk down resist% (120)": 100,
-					"def down resist% (121)": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "73",
-					"rec down resist% (122)": 100,
-					"stat down immunity buff turns": 2,
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 32,
-			"effects": [
-				{
-					"bb atk%": 620,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"effect delay time(ms)/frame": "16.7/1",
-					"heal high": 4500,
-					"heal low": 4000,
+					"heal high": 5000,
+					"heal low": 4500,
 					"proc id": "2",
 					"rec added% (from healer)": 40,
 					"target area": "aoe",
@@ -732,9 +167,9 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 90,
 					"converted attribute": "recovery",
-					"def% buff (47)": 80,
+					"def% buff (47)": 90,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -743,7 +178,7 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "93",
 					"strong base element damage resist% (144)": 100,
@@ -752,12 +187,577 @@
 					"target type": "party"
 				},
 				{
-					"atk down resist% (120)": 100,
-					"def down resist% (121)": 100,
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "73",
-					"rec down resist% (122)": 100,
-					"stat down immunity buff turns": 2,
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 30,
+			"effects": [
+				{
+					"bb added atk% based on hp": 660,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"heal high": 5050,
+					"heal low": 4550,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bb atk% buff": 460,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 460,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 460
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 91,
+					"converted attribute": "recovery",
+					"def% buff (47)": 91,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"crit dmg base damage resist% (143)": 100,
+					"crit dmg buffed damage resist% (143)": 100,
+					"dmg resist turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 30,
+			"effects": [
+				{
+					"bb added atk% based on hp": 670,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"heal high": 5100,
+					"heal low": 4600,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bb atk% buff": 470,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 470,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 470
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 92,
+					"converted attribute": "recovery",
+					"def% buff (47)": 92,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"crit dmg base damage resist% (143)": 100,
+					"crit dmg buffed damage resist% (143)": 100,
+					"dmg resist turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 30,
+			"effects": [
+				{
+					"bb added atk% based on hp": 680,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"heal high": 5150,
+					"heal low": 4650,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bb atk% buff": 480,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 480,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 480
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 93,
+					"converted attribute": "recovery",
+					"def% buff (47)": 93,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"crit dmg base damage resist% (143)": 100,
+					"crit dmg buffed damage resist% (143)": 100,
+					"dmg resist turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 30,
+			"effects": [
+				{
+					"bb added atk% based on hp": 690,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"heal high": 5200,
+					"heal low": 4700,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bb atk% buff": 490,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 490,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 490
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 94,
+					"converted attribute": "recovery",
+					"def% buff (47)": 94,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"crit dmg base damage resist% (143)": 100,
+					"crit dmg buffed damage resist% (143)": 100,
+					"dmg resist turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 30,
+			"effects": [
+				{
+					"bb added atk% based on hp": 700,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"heal high": 5250,
+					"heal low": 4750,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bb atk% buff": 500,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 500,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 500
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 95,
+					"converted attribute": "recovery",
+					"def% buff (47)": 95,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"crit dmg base damage resist% (143)": 100,
+					"crit dmg buffed damage resist% (143)": 100,
+					"dmg resist turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 30,
+			"effects": [
+				{
+					"bb added atk% based on hp": 710,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"heal high": 5300,
+					"heal low": 4800,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bb atk% buff": 510,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 510,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 510
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 96,
+					"converted attribute": "recovery",
+					"def% buff (47)": 96,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"crit dmg base damage resist% (143)": 100,
+					"crit dmg buffed damage resist% (143)": 100,
+					"dmg resist turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 30,
+			"effects": [
+				{
+					"bb added atk% based on hp": 720,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"heal high": 5350,
+					"heal low": 4850,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bb atk% buff": 520,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 520,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 520
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 97,
+					"converted attribute": "recovery",
+					"def% buff (47)": 97,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"crit dmg base damage resist% (143)": 100,
+					"crit dmg buffed damage resist% (143)": 100,
+					"dmg resist turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 30,
+			"effects": [
+				{
+					"bb added atk% based on hp": 730,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"heal high": 5400,
+					"heal low": 4900,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bb atk% buff": 530,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 530,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 530
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 98,
+					"converted attribute": "recovery",
+					"def% buff (47)": 98,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"crit dmg base damage resist% (143)": 100,
+					"crit dmg buffed damage resist% (143)": 100,
+					"dmg resist turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 30,
+			"effects": [
+				{
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"heal high": 5500,
+					"heal low": 5000,
+					"proc id": "2",
+					"rec added% (from healer)": 40,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bb atk% buff": 550,
+					"buff turns (72)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "45",
+					"sbb atk% buff": 550,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 550
+				},
+				{
+					"% converted turns": 3,
+					"atk% buff (46)": 100,
+					"converted attribute": "recovery",
+					"def% buff (47)": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"crit dmg base damage resist% (143)": 100,
+					"crit dmg buffed damage resist% (143)": 100,
+					"dmg resist turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
