@@ -1,0 +1,71 @@
+{
+	"associated_units": [
+		"51367"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2020-01-08T08:39:51.000Z",
+		"updatedAt": "2020-01-08T08:39:51.000Z"
+	},
+	"desc": "Negates ignore Def for all allies, probable 2 KO resistance, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (removes all status ailments and Atk, Def, Rec reduction)",
+	"effects": [
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"ailments cured": [
+						"poison",
+						"weaken",
+						"sick",
+						"injury",
+						"curse",
+						"paralysis",
+						"atk down",
+						"def down",
+						"rec down"
+					],
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "38",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"atk down resist%": 100,
+			"conditions": [],
+			"curse resist%": 100,
+			"def down resist%": 100,
+			"injury resist%": 100,
+			"paralysis resist%": 100,
+			"passive id": "73",
+			"passive target": "self",
+			"poison resist%": 100,
+			"rec down resist%": 100,
+			"sick resist%": 100,
+			"weaken resist%": 100
+		},
+		{
+			"conditions": [],
+			"ignore def resist chance%": 100,
+			"passive id": "92",
+			"passive target": "party"
+		},
+		{
+			"angel idol chance% condition": 0,
+			"angel idol recover chance% high": 40,
+			"angel idol recover chance% low": 40,
+			"angel idol recover counts": 2,
+			"conditions": [],
+			"passive id": "69",
+			"passive target": "self"
+		}
+	],
+	"id": "51367",
+	"name": "Power to Protect Others",
+	"rarity": "7",
+	"target": "self"
+}
