@@ -41200,9 +41200,11 @@
 			"810427",
 			"810437",
 			"810507",
+			"810517",
 			"810547",
 			"810557",
 			"810587",
+			"810617",
 			"810627",
 			"810657",
 			"811016",
@@ -41234,6 +41236,7 @@
 			"830277",
 			"830287",
 			"830297",
+			"830317",
 			"830327",
 			"830357",
 			"830377",
@@ -41312,7 +41315,7 @@
 		],
 		"bfmtMetadata": {
 			"createdAt": "2015-08-13T15:42:33.000Z",
-			"updatedAt": "2018-12-12T12:18:57.000Z"
+			"updatedAt": "2019-01-11T16:05:56.000Z"
 		},
 		"desc": "A mysterious stone that allows Units to surpass the gods' power",
 		"id": 110100,
@@ -48523,6 +48526,53 @@
 			}
 		]
 	},
+	"802004": {
+		"bfmtMetadata": {
+			"createdAt": "2019-01-11T16:05:56.000Z",
+			"updatedAt": "2019-01-11T16:05:56.000Z"
+		},
+		"desc": "A variety of notes, each contained within a small orb.",
+		"dictionary": {
+			"lore": "A variety of notes, each contained within a small orb. These orbs exude an aura of coldness, a fact that many people find puzzling, considering their appearance."
+		},
+		"first_clear_missions": [
+			"83013400",
+			"83013401",
+			"83013402",
+			"83013403",
+			"83013404",
+			"83013405",
+			"83013406",
+			"83013407",
+			"83013408",
+			"83013409",
+			"83013410",
+			"83013411",
+			"83013412",
+			"83013413",
+			"83013414",
+			"83013415",
+			"83013416",
+			"83013417",
+			"83013418",
+			"83013419",
+			"83013420"
+		],
+		"id": 802004,
+		"max_stack": 99,
+		"name": "Kindling Notes",
+		"raid": false,
+		"rarity": 3,
+		"sell_price": 20,
+		"thumbnail": "item_thum_802004.png",
+		"type": "material",
+		"usage": [
+			{
+				"id": 819192,
+				"name": "Kindling Melody"
+			}
+		]
+	},
 	"818881": {
 		"associated_units": [
 			"51336",
@@ -51035,61 +51085,58 @@
 	},
 	"818933": {
 		"associated_units": [
-			"11166",
-			"11167",
-			"20816",
-			"20817",
-			"20916",
-			"51317",
-			"61016",
-			"61017",
-			"810547",
-			"810548",
-			"820397",
-			"820398",
+			"30546",
+			"810108",
 			"830317",
-			"830408",
-			"840437",
+			"830318",
 			"840438",
-			"850367",
-			"850368",
-			"860338"
+			"860167"
 		],
 		"bfmtMetadata": {
 			"createdAt": "2016-01-28T11:20:22.000Z",
-			"updatedAt": "2018-08-13T02:16:06.000Z"
+			"updatedAt": "2019-01-11T16:05:56.000Z"
 		},
-		"desc": "50% boost to Atk, 50% boost to Spark damage & probable infliction of random status ailment",
+		"desc": "Adds probable random status ailment infliction to attack, 100% boost to Atk, hugely boosts Spark damage & greatly boosts damage against status afflicted foes",
 		"dictionary": {
 			"lore": "At a glance, Avani's chainblades seems like a bad joke designed to shred its wielder before he or she can use them. In truth, the blades were designed by Avani herself to subdue the beasts that roam the Baldemar badlands. Forged from orihalcum and treated with a venom concoction extracted from the most venomous beasts of Baldemar, a single wound from the blade or barb from the chains could quickly cripple even the most ferocious of beasts. As if the venom wasn't enough, the oddly serrated edges of the blade could inflict wounds so terrible they never heal. "
 		},
 		"effect": [
 			{
-				"atk% buff": 50,
+				"atk% buff": 100,
 				"passive id": "1"
 			},
 			{
-				"damage% for spark": 50,
+				"damage% for spark": 150,
 				"passive id": "31"
 			},
 			{
-				"curse%": 10,
-				"paralysis%": 10,
-				"passive id": "20",
-				"poison%": 10
+				"atk% buff when enemy has ailment": 150,
+				"atk% buff when enemy has curse": true,
+				"atk% buff when enemy has injury": true,
+				"atk% buff when enemy has paralysis": true,
+				"atk% buff when enemy has poison": true,
+				"atk% buff when enemy has sick": true,
+				"atk% buff when enemy has weaken": true,
+				"passive id": "74"
 			},
 			{
-				"injury%": 15,
+				"curse%": 25,
+				"paralysis%": 25,
 				"passive id": "20",
-				"sick%": 15,
-				"weaken%": 15
+				"poison%": 25
+			},
+			{
+				"injury%": 30,
+				"passive id": "20",
+				"sick%": 30,
+				"weaken%": 30
 			}
 		],
 		"id": 818933,
 		"max_stack": 1,
 		"name": "Vorpal Chainblades",
-		"raid": true,
-		"rarity": 6,
+		"raid": false,
+		"rarity": 3,
 		"recipe": {
 			"karma": "100000",
 			"materials": [
@@ -51106,8 +51153,8 @@
 			]
 		},
 		"sell_price": 10000,
-		"sphere type": 13,
-		"sphere type text": "Atk Boosting",
+		"sphere type": 11,
+		"sphere type text": "Spark",
 		"thumbnail": "sphere_thum_4_3.png",
 		"type": "sphere",
 		"usage": []
@@ -64467,6 +64514,204 @@
 				"name": "Blaze Blossom EX"
 			}
 		]
+	},
+	"819191": {
+		"associated_units": [
+			"21056",
+			"21057",
+			"21106",
+			"21107",
+			"31006",
+			"31007",
+			"810408",
+			"830647",
+			"830648",
+			"840547",
+			"840548",
+			"850507",
+			"850508",
+			"860017",
+			"860018",
+			"860338"
+		],
+		"bfmtMetadata": {
+			"createdAt": "2019-01-11T16:05:56.000Z",
+			"updatedAt": "2019-01-11T16:05:56.000Z"
+		},
+		"desc": "30% to Def, max HP, 5% damage reduction & 35% additional damage reduction",
+		"dictionary": {
+			"lore": "With such a cold name, this trinket puts most people off from procuring it for fear of contracting frostbite or worse. However, those brave enough to handle the item hear faint strains of old melodies emanating from it, as well as a nostalgic warmth.<br><br>A closer inspection of the trinket reveals an inset, indicating that something else is needed to complete this trinket."
+		},
+		"effect": [
+			{
+				"def% buff": 30,
+				"hp% buff": 30,
+				"passive id": "1"
+			},
+			{
+				"dmg% mitigation": 5,
+				"passive id": "8"
+			},
+			{
+				"unknown passive id": "127",
+				"unknown passive params": "100,35"
+			}
+		],
+		"id": 819191,
+		"max_stack": 1,
+		"name": "Frigid Melody",
+		"raid": false,
+		"rarity": 6,
+		"sell_price": 30000,
+		"sphere type": 10,
+		"sphere type text": "Damage Reducing",
+		"thumbnail": "sphere_thum_819191.png",
+		"type": "sphere",
+		"usage": [
+			{
+				"id": 819193,
+				"name": "Melodious Harmony"
+			}
+		]
+	},
+	"819192": {
+		"associated_units": [
+			"51336",
+			"51337",
+			"61286",
+			"61287",
+			"810338",
+			"840438"
+		],
+		"bfmtMetadata": {
+			"createdAt": "2019-01-11T16:05:56.000Z",
+			"updatedAt": "2019-01-11T16:05:56.000Z"
+		},
+		"desc": "100% boost to Atk, 25% reduction to Def, boosts Spark damage & boosts Atk relative to remaining HP",
+		"dictionary": {
+			"lore": "An odd trinket with several musical notes hovering inside. It exudes a small aura of coldness that seems to be at odds with its appearance. Shaking it will produce a variety of festive melodies, invigorating the user.<br><br>Upon closer inspection, this item appears to be part of a larger trinket..."
+		},
+		"effect": [
+			{
+				"atk% buff": 100,
+				"def% buff": -25,
+				"passive id": "1"
+			},
+			{
+				"atk% base buff": 0,
+				"atk% extra buff based on hp": 80,
+				"buff proportional to hp": "remaining",
+				"passive id": "46"
+			},
+			{
+				"damage% for spark": 75,
+				"passive id": "31"
+			}
+		],
+		"id": 819192,
+		"max_stack": 1,
+		"name": "Kindling Melody",
+		"raid": false,
+		"rarity": 6,
+		"recipe": {
+			"karma": "50000",
+			"materials": [
+				{
+					"count": 12,
+					"id": 802004,
+					"name": "Kindling Notes"
+				}
+			]
+		},
+		"sell_price": 30000,
+		"sphere type": 1,
+		"sphere type text": "Status Boost",
+		"thumbnail": "sphere_thum_819192.png",
+		"type": "sphere",
+		"usage": [
+			{
+				"id": 819193,
+				"name": "Melodious Harmony"
+			}
+		]
+	},
+	"819193": {
+		"bfmtMetadata": {
+			"createdAt": "2019-01-11T16:05:56.000Z",
+			"updatedAt": "2019-01-11T16:05:56.000Z"
+		},
+		"desc": "100% boost to Atk, 40% boost to Rec, max HP, boosts Atk relative to remaining HP, greatly boosts Spark damage, 50% additional damage reduction, 5% damage reduction & adds Spark vulnerability infliction for 2 turns effect to BB/SBB",
+		"dictionary": {
+			"lore": "A completed trinket formed from both Kindling and Frigid Melodies. It exudes a warm and invigorating aura comparable to a blazing fireplace. The trinket grants its wielder an increase in strength, and allows them to withstand punishment that would have otherwise crippled an average person.<br><br>When held, twin sensations of warm and cold dance across the fingertips. This trinket seems to be the manifestation of a will to protect those who brave many hardships."
+		},
+		"effect": [
+			{
+				"atk% buff": 100,
+				"hp% buff": 40,
+				"passive id": "1",
+				"rec% buff": 40
+			},
+			{
+				"atk% base buff": 40,
+				"atk% extra buff based on hp": 80,
+				"buff proportional to hp": "remaining",
+				"passive id": "46"
+			},
+			{
+				"damage% for spark": 100,
+				"passive id": "31"
+			},
+			{
+				"unknown passive id": "127",
+				"unknown passive params": "100,50"
+			},
+			{
+				"dmg% mitigation": 5,
+				"passive id": "8"
+			},
+			{
+				"passive id": "66",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "58",
+						"spark dmg received apply%": 100,
+						"spark dmg received debuff turns (94)": 2,
+						"spark dmg% received": 20,
+						"target area": "aoe",
+						"target type": "enemy"
+					}
+				]
+			}
+		],
+		"id": 819193,
+		"max_stack": 1,
+		"name": "Melodious Harmony",
+		"raid": false,
+		"rarity": 7,
+		"recipe": {
+			"karma": "300000",
+			"materials": [
+				{
+					"count": 1,
+					"id": 819192,
+					"name": "Kindling Melody"
+				},
+				{
+					"count": 1,
+					"id": 819191,
+					"name": "Frigid Melody"
+				}
+			]
+		},
+		"sell_price": 30000,
+		"sphere type": 14,
+		"sphere type text": "Special",
+		"thumbnail": "sphere_thum_819193.png",
+		"type": "sphere",
+		"usage": []
 	},
 	"819194": {
 		"associated_units": [
