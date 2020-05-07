@@ -4,9 +4,9 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-08-11T02:51:16.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2019-09-04T11:36:35.000Z"
 	},
-	"desc": "20% boost to all parameters of Thunder types, adds resistance against 1 KO attack when HP is below 20% & negates all status ailments",
+	"desc": "25% boost to all parameters of Thunder types, 20% boost to all parameters, adds resistance against 1 KO attack when HP is below 35%, negates all status ailments & probable damage reduction to 1",
 	"effects": [
 		{
 			"buff": {
@@ -15,7 +15,7 @@
 				"buff turns (12)": "-1"
 			},
 			"conditions": [],
-			"hp below % buff activation": 20,
+			"hp below % buff activation": 35,
 			"passive id": "55",
 			"passive target": "self"
 		},
@@ -31,15 +31,30 @@
 			"weaken resist%": 100
 		},
 		{
-			"atk% buff": 20,
+			"atk% buff": 25,
 			"conditions": [],
-			"def% buff": 20,
+			"def% buff": 25,
 			"elements buffed": [
 				"thunder"
 			],
-			"hp% buff": 20,
+			"hp% buff": 25,
 			"passive id": "2",
 			"passive target": "party",
+			"rec% buff": 25
+		},
+		{
+			"conditions": [],
+			"passive id": "43",
+			"passive target": "self",
+			"take 1 dmg%": 15
+		},
+		{
+			"atk% buff": 20,
+			"conditions": [],
+			"def% buff": 20,
+			"hp% buff": 20,
+			"passive id": "1",
+			"passive target": "self",
 			"rec% buff": 20
 		}
 	],
