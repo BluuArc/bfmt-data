@@ -1,0 +1,65 @@
+{
+	"associated_units": [
+		"840627"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2019-02-08T04:00:05.000Z",
+		"updatedAt": "2019-02-08T04:00:05.000Z"
+	},
+	"desc": "15% boost to all parameters for all allies, negates all status ailments and Atk, Def, Rec reduction effects & adds all status ailment removal effect to BB/SBB",
+	"effects": [
+		{
+			"atk% buff": 15,
+			"conditions": [],
+			"def% buff": 15,
+			"hp% buff": 15,
+			"passive id": "1",
+			"passive target": "party",
+			"rec% buff": 15
+		},
+		{
+			"atk down resist%": 100,
+			"conditions": [],
+			"curse resist%": 100,
+			"def down resist%": 100,
+			"injury resist%": 100,
+			"paralysis resist%": 100,
+			"passive id": "73",
+			"passive target": "self",
+			"poison resist%": 100,
+			"rec down resist%": 100,
+			"sick resist%": 100,
+			"weaken resist%": 100
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"ailments cured": [
+						"poison",
+						"weaken",
+						"sick",
+						"injury",
+						"curse",
+						"paralysis",
+						"atk down",
+						"def down",
+						"rec down"
+					],
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "38",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"id": "840627",
+	"name": "Spark of Divinity",
+	"rarity": "7",
+	"target": "self"
+}
