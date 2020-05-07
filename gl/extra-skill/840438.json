@@ -4,23 +4,23 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2018-03-16T13:02:26.000Z",
-		"updatedAt": "2018-05-16T12:15:15.000Z"
+		"updatedAt": "2020-04-09T08:27:18.000Z"
 	},
-	"desc": "20% boost to all parameters for all allies when Status Boost Sphere is equipped, raises normal hit amount when Atk Boosting Sphere is equipped, 40% boost to all parameters when BB Gauge Sphere is equipped & greatly boosts Spark damage when HP is over 50% when Spark Sphere is equipped",
+	"desc": "30% all parameters for all allies when Status Boosting Sphere is equipped, raises normal hit amount when Atk Boosting Sphere is equipped, 40% all parameters when BB Gauge Sphere is equipped & 100% spark damage when HP is above 50% when Spark Sphere is equipped, damage taken fills BB gauge & probable damage reduction to 1",
 	"effects": [
 		{
-			"atk% buff": 20,
+			"atk% buff": 30,
 			"conditions": [
 				{
 					"sphere category required": "Status Boost",
 					"sphere category required (raw)": "1"
 				}
 			],
-			"def% buff": 20,
-			"hp% buff": 20,
+			"def% buff": 30,
+			"hp% buff": 30,
 			"passive id": "1",
 			"passive target": "party",
-			"rec% buff": 20
+			"rec% buff": 30
 		},
 		{
 			"conditions": [
@@ -29,7 +29,7 @@
 					"sphere category required (raw)": "11"
 				}
 			],
-			"damage% for spark": 80,
+			"damage% for spark": 100,
 			"hp above % buff requirement": 50,
 			"passive id": "104",
 			"passive target": "self"
@@ -58,6 +58,20 @@
 			"hit increase/hit": 2,
 			"passive id": "37",
 			"passive target": "self"
+		},
+		{
+			"bc fill when attacked high": 4,
+			"bc fill when attacked low": 3,
+			"bc fill when attacked%": 100,
+			"conditions": [],
+			"passive id": "25",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"passive id": "43",
+			"passive target": "self",
+			"take 1 dmg%": 15
 		}
 	],
 	"id": "840438",

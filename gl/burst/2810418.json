@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 40,
-			"id": "29",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2016-09-07T11:09:38.000Z",
-		"updatedAt": "2017-06-14T11:43:33.000Z"
+		"updatedAt": "2020-04-08T17:36:06.000Z"
 	},
 	"damage frames": [
 		{
@@ -27,6 +27,8 @@
 				73,
 				76,
 				79,
+				82,
+				85,
 				88,
 				91,
 				94,
@@ -49,14 +51,12 @@
 				145,
 				148,
 				151,
+				154,
 				157,
 				160,
 				163,
 				166,
-				169,
-				172,
-				175,
-				178
+				169
 			],
 			"hit dmg% distribution": [
 				3,
@@ -102,7 +102,19 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 40,
-			"proc id": "29"
+			"proc id": "47"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "62"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -138,7 +150,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "39"
+			"proc id": "18"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -150,10 +162,10 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "62"
+			"proc id": "67"
 		}
 	],
-	"desc": "40 combo massive Fire and Thunder attack on all foes, enormously boosts Atk and Def for 3 turns, enormous Atk and Def reduction for 3 turns, 50% elemental damage reduction for 3 turns & activates Thunder barrier",
+	"desc": "40 combo Fire attack on all foes (damage relative to remaining HP), adds Thunder barrier, boosts Atk, Def for 3 turns, 3 turns Atk, Def reduction infliction, 100% damage reduction for 3 turns & spark damage fills BB gauge for 3 turns",
 	"drop check count": 1,
 	"id": "2810418",
 	"levels": [
@@ -161,20 +173,29 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 1500,
-					"bb elements": [
-						"thunder"
-					],
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "29",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 300,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 30000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 450,
 					"buff turns": 3,
-					"def% buff (3)": 300,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
@@ -198,26 +219,20 @@
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 50,
-					"dmg% mitigation for elemental attacks buff turns": 3,
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"proc id": "39",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 8,
+					"bc fill on spark low": 5,
+					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "thunder",
-					"elemental barrier hp": 25000,
-					"proc id": "62",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -227,20 +242,29 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 1500,
-					"bb elements": [
-						"thunder"
-					],
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "29",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 300,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 30000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 450,
 					"buff turns": 3,
-					"def% buff (3)": 300,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
@@ -264,26 +288,20 @@
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 50,
-					"dmg% mitigation for elemental attacks buff turns": 3,
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"proc id": "39",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 8,
+					"bc fill on spark low": 5,
+					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "thunder",
-					"elemental barrier hp": 25000,
-					"proc id": "62",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -293,20 +311,29 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 1500,
-					"bb elements": [
-						"thunder"
-					],
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "29",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 300,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 30000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 450,
 					"buff turns": 3,
-					"def% buff (3)": 300,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
@@ -330,26 +357,20 @@
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 50,
-					"dmg% mitigation for elemental attacks buff turns": 3,
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"proc id": "39",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 8,
+					"bc fill on spark low": 5,
+					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "thunder",
-					"elemental barrier hp": 25000,
-					"proc id": "62",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -359,20 +380,29 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 1500,
-					"bb elements": [
-						"thunder"
-					],
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "29",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 300,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 30000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 450,
 					"buff turns": 3,
-					"def% buff (3)": 300,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
@@ -396,26 +426,20 @@
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 50,
-					"dmg% mitigation for elemental attacks buff turns": 3,
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"proc id": "39",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 8,
+					"bc fill on spark low": 5,
+					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "thunder",
-					"elemental barrier hp": 25000,
-					"proc id": "62",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -425,20 +449,29 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 1500,
-					"bb elements": [
-						"thunder"
-					],
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "29",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 300,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 30000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 450,
 					"buff turns": 3,
-					"def% buff (3)": 300,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
@@ -462,26 +495,20 @@
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 50,
-					"dmg% mitigation for elemental attacks buff turns": 3,
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"proc id": "39",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 8,
+					"bc fill on spark low": 5,
+					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "thunder",
-					"elemental barrier hp": 25000,
-					"proc id": "62",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -491,20 +518,29 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 1500,
-					"bb elements": [
-						"thunder"
-					],
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "29",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 300,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 30000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 450,
 					"buff turns": 3,
-					"def% buff (3)": 300,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
@@ -528,26 +564,20 @@
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 50,
-					"dmg% mitigation for elemental attacks buff turns": 3,
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"proc id": "39",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 8,
+					"bc fill on spark low": 5,
+					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "thunder",
-					"elemental barrier hp": 25000,
-					"proc id": "62",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -557,20 +587,29 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 1500,
-					"bb elements": [
-						"thunder"
-					],
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "29",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 300,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 30000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 450,
 					"buff turns": 3,
-					"def% buff (3)": 300,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
@@ -594,26 +633,20 @@
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 50,
-					"dmg% mitigation for elemental attacks buff turns": 3,
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"proc id": "39",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 8,
+					"bc fill on spark low": 5,
+					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "thunder",
-					"elemental barrier hp": 25000,
-					"proc id": "62",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -623,20 +656,29 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 1500,
-					"bb elements": [
-						"thunder"
-					],
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "29",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 300,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 30000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 450,
 					"buff turns": 3,
-					"def% buff (3)": 300,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
@@ -660,26 +702,20 @@
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 50,
-					"dmg% mitigation for elemental attacks buff turns": 3,
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"proc id": "39",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 8,
+					"bc fill on spark low": 5,
+					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "thunder",
-					"elemental barrier hp": 25000,
-					"proc id": "62",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -689,20 +725,29 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 1500,
-					"bb elements": [
-						"thunder"
-					],
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "29",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 300,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 30000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 450,
 					"buff turns": 3,
-					"def% buff (3)": 300,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
@@ -726,26 +771,20 @@
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 50,
-					"dmg% mitigation for elemental attacks buff turns": 3,
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"proc id": "39",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 8,
+					"bc fill on spark low": 5,
+					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "thunder",
-					"elemental barrier hp": 25000,
-					"proc id": "62",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -755,20 +794,29 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 1500,
-					"bb elements": [
-						"thunder"
-					],
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "29",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 300,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 30000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 450,
 					"buff turns": 3,
-					"def% buff (3)": 300,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
@@ -792,26 +840,20 @@
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 50,
-					"dmg% mitigation for elemental attacks buff turns": 3,
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"proc id": "39",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 8,
+					"bc fill on spark low": 5,
+					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "thunder",
-					"elemental barrier hp": 25000,
-					"proc id": "62",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}

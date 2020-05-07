@@ -1,0 +1,3562 @@
+{
+	"ai": [
+		{
+			"action": "skill",
+			"chance%": 60,
+			"target conditions": "hp_50pr_over",
+			"target type": "enemy"
+		},
+		{
+			"action": "skill",
+			"chance%": 20,
+			"target conditions": "random",
+			"target type": "enemy"
+		},
+		{
+			"action": "attack",
+			"chance%": 100,
+			"target conditions": "random",
+			"target type": "enemy"
+		}
+	],
+	"animations": {
+		"attack": {
+			"total number of frames": 142
+		},
+		"idle": {
+			"total number of frames": 46
+		},
+		"move": {
+			"total number of frames": 28
+		}
+	},
+	"bb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					34,
+					37,
+					40,
+					43,
+					46,
+					49,
+					52,
+					61,
+					64,
+					67,
+					70,
+					73,
+					76,
+					79,
+					82
+				],
+				"hit dmg% distribution": [
+					7,
+					6,
+					7,
+					6,
+					7,
+					6,
+					6,
+					8,
+					6,
+					8,
+					7,
+					6,
+					8,
+					6,
+					6
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 15,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "76"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "55"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "10007"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "56"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "113"
+			}
+		],
+		"desc": "15 combo Water attack on all foes(damage relative to remaining HP), 1 extra action for self for 1 turn, boosts Water elemental damage for 3 turns, probable evasion for 2 turns, probable KO resistance & fills OD gauge at turn's end for 3 turns",
+		"drop check count": 1,
+		"id": "820798",
+		"levels": [
+			{
+				"bc cost": 31,
+				"effects": [
+					{
+						"bb added atk% based on hp": 250,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"chance% for extra action": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 200,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "aoe",
+						"target type": "party",
+						"unknown proc id": "10007",
+						"unknown proc param": "100,2,0,20"
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 1000,
+						"od fill turns (148)": 3,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 31,
+				"effects": [
+					{
+						"bb added atk% based on hp": 260,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"chance% for extra action": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 204.99999999999997,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "aoe",
+						"target type": "party",
+						"unknown proc id": "10007",
+						"unknown proc param": "100,2,0,20"
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 1000,
+						"od fill turns (148)": 3,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 31,
+				"effects": [
+					{
+						"bb added atk% based on hp": 270,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"chance% for extra action": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 210,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "aoe",
+						"target type": "party",
+						"unknown proc id": "10007",
+						"unknown proc param": "100,2,0,20"
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 1000,
+						"od fill turns (148)": 3,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 31,
+				"effects": [
+					{
+						"bb added atk% based on hp": 280,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"chance% for extra action": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 215,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "aoe",
+						"target type": "party",
+						"unknown proc id": "10007",
+						"unknown proc param": "100,2,0,20"
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 1000,
+						"od fill turns (148)": 3,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 31,
+				"effects": [
+					{
+						"bb added atk% based on hp": 290,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"chance% for extra action": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 220.00000000000003,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "aoe",
+						"target type": "party",
+						"unknown proc id": "10007",
+						"unknown proc param": "100,2,0,20"
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 1000,
+						"od fill turns (148)": 3,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 31,
+				"effects": [
+					{
+						"bb added atk% based on hp": 300,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"chance% for extra action": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 225,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "aoe",
+						"target type": "party",
+						"unknown proc id": "10007",
+						"unknown proc param": "100,2,0,20"
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 1000,
+						"od fill turns (148)": 3,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 31,
+				"effects": [
+					{
+						"bb added atk% based on hp": 310,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"chance% for extra action": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 229.99999999999997,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "aoe",
+						"target type": "party",
+						"unknown proc id": "10007",
+						"unknown proc param": "100,2,0,20"
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 1000,
+						"od fill turns (148)": 3,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 31,
+				"effects": [
+					{
+						"bb added atk% based on hp": 320,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"chance% for extra action": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 235,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "aoe",
+						"target type": "party",
+						"unknown proc id": "10007",
+						"unknown proc param": "100,2,0,20"
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 1000,
+						"od fill turns (148)": 3,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 31,
+				"effects": [
+					{
+						"bb added atk% based on hp": 330,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"chance% for extra action": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 240,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "aoe",
+						"target type": "party",
+						"unknown proc id": "10007",
+						"unknown proc param": "100,2,0,20"
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 1000,
+						"od fill turns (148)": 3,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 31,
+				"effects": [
+					{
+						"bb added atk% based on hp": 350,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"chance% for extra action": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra action buff turns (123)": 1,
+						"max number of extra actions": 1,
+						"proc id": "76",
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"target area": "aoe",
+						"target type": "party",
+						"unknown proc id": "10007",
+						"unknown proc param": "100,2,0,20"
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 20,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 1000,
+						"od fill turns (148)": 3,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"name": "One Spared to the Sea"
+	},
+	"bfmtMetadata": {
+		"createdAt": "2017-09-15T11:31:46.000Z",
+		"updatedAt": "2020-04-09T08:27:18.000Z"
+	},
+	"bonds": {
+		"3820568": {
+			"dbb": {
+				"damage frames": [
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"frame times": [
+							34,
+							37,
+							40,
+							43,
+							46,
+							49,
+							52,
+							55,
+							58,
+							61,
+							64,
+							67,
+							70,
+							73,
+							76,
+							79,
+							82,
+							85,
+							88,
+							91
+						],
+						"hit dmg% distribution": [
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 20,
+						"proc id": "47"
+					},
+					{
+						"effect delay time(ms)/frame": "16.7/1",
+						"frame times": [
+							34,
+							37,
+							40,
+							43,
+							46,
+							49,
+							52,
+							55,
+							58,
+							61,
+							64,
+							67,
+							70,
+							73,
+							76,
+							79,
+							82,
+							85,
+							88,
+							91
+						],
+						"hit dmg% distribution": [
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 20,
+						"proc id": "47"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"frame times": [
+							0
+						],
+						"hit dmg% distribution": [
+							100
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 1,
+						"proc id": "5"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"frame times": [
+							0
+						],
+						"hit dmg% distribution": [
+							100
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 1,
+						"proc id": "23"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"frame times": [
+							0
+						],
+						"hit dmg% distribution": [
+							100
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 1,
+						"proc id": "54"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"frame times": [
+							0
+						],
+						"hit dmg% distribution": [
+							100
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 1,
+						"proc id": "55"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"frame times": [
+							0
+						],
+						"hit dmg% distribution": [
+							100
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 1,
+						"proc id": "85"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"frame times": [
+							0
+						],
+						"hit dmg% distribution": [
+							100
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 1,
+						"proc id": "20"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"frame times": [
+							0
+						],
+						"hit dmg% distribution": [
+							100
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 1,
+						"proc id": "70002"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"frame times": [
+							0
+						],
+						"hit dmg% distribution": [
+							100
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 1,
+						"proc id": "56"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"frame times": [
+							0
+						],
+						"hit dmg% distribution": [
+							100
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 1,
+						"proc id": "113"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"frame times": [
+							150
+						],
+						"hit dmg% distribution": [
+							100
+						],
+						"hit dmg% distribution (total)": 100,
+						"hits": 1,
+						"proc id": "11001"
+					}
+				],
+				"desc": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, Water elemental damage, critical damage, fills OD gauge at turn's end, damage taken boosts BB gauge and restores HP, 80% KO resistance & activates BB/SBB/UBB twice",
+				"drop check count": 1,
+				"id": "3820568",
+				"levels": [
+					{
+						"bc cost": 7,
+						"effects": [
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb dmg%": 250,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"atk% buff (1)": 400,
+								"buff turns": 4,
+								"crit% buff (7)": 60,
+								"def% buff (3)": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"element buffed": "all",
+								"proc id": "5",
+								"rec% buff (5)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns": 4,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "23",
+								"spark dmg% buff (40)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns (84)": 4,
+								"crit multiplier%": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "54",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"elemental weakness buff turns": 4,
+								"elemental weakness multiplier%": 500,
+								"proc id": "55",
+								"target area": "aoe",
+								"target type": "party",
+								"water units do extra elemental weakness dmg": true
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"hp recover from dmg buff turns (133)": 4,
+								"hp recover from dmg chance": 100,
+								"hp recover from dmg% high": 100,
+								"hp recover from dmg% low": 100,
+								"proc id": "85",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"bc fill when attacked high": 50,
+								"bc fill when attacked low": 50,
+								"bc fill when attacked turns (38)": 4,
+								"bc fill when attacked%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "20",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "aoe",
+								"target type": "party",
+								"unknown proc id": "70002",
+								"unknown proc param": "1,2,0,0,0,0,0,0,0"
+							},
+							{
+								"angel idol buff turns (91)": 999,
+								"angel idol recover chance%": 80,
+								"angel idol recover hp%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "56",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"od fill": 7500,
+								"od fill turns (148)": 4,
+								"proc id": "113",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "single",
+								"target type": "enemy",
+								"unknown proc id": "11001",
+								"unknown proc param": "0.01,0.015,1,0,0,0,0,0,2,0"
+							}
+						]
+					},
+					{
+						"bc cost": 7,
+						"effects": [
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb dmg%": 300,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"atk% buff (1)": 400,
+								"buff turns": 4,
+								"crit% buff (7)": 60,
+								"def% buff (3)": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"element buffed": "all",
+								"proc id": "5",
+								"rec% buff (5)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns": 4,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "23",
+								"spark dmg% buff (40)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns (84)": 4,
+								"crit multiplier%": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "54",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"elemental weakness buff turns": 4,
+								"elemental weakness multiplier%": 500,
+								"proc id": "55",
+								"target area": "aoe",
+								"target type": "party",
+								"water units do extra elemental weakness dmg": true
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"hp recover from dmg buff turns (133)": 4,
+								"hp recover from dmg chance": 100,
+								"hp recover from dmg% high": 100,
+								"hp recover from dmg% low": 100,
+								"proc id": "85",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"bc fill when attacked high": 50,
+								"bc fill when attacked low": 50,
+								"bc fill when attacked turns (38)": 4,
+								"bc fill when attacked%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "20",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "aoe",
+								"target type": "party",
+								"unknown proc id": "70002",
+								"unknown proc param": "1,2,0,0,0,0,0,0,0"
+							},
+							{
+								"angel idol buff turns (91)": 999,
+								"angel idol recover chance%": 80,
+								"angel idol recover hp%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "56",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"od fill": 7500,
+								"od fill turns (148)": 4,
+								"proc id": "113",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "single",
+								"target type": "enemy",
+								"unknown proc id": "11001",
+								"unknown proc param": "0.012,0.017,1,0,0,0,0,0,2,0"
+							}
+						]
+					},
+					{
+						"bc cost": 7,
+						"effects": [
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb dmg%": 350,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"atk% buff (1)": 400,
+								"buff turns": 5,
+								"crit% buff (7)": 60,
+								"def% buff (3)": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"element buffed": "all",
+								"proc id": "5",
+								"rec% buff (5)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns": 5,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "23",
+								"spark dmg% buff (40)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns (84)": 5,
+								"crit multiplier%": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "54",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"elemental weakness buff turns": 5,
+								"elemental weakness multiplier%": 500,
+								"proc id": "55",
+								"target area": "aoe",
+								"target type": "party",
+								"water units do extra elemental weakness dmg": true
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"hp recover from dmg buff turns (133)": 5,
+								"hp recover from dmg chance": 100,
+								"hp recover from dmg% high": 100,
+								"hp recover from dmg% low": 100,
+								"proc id": "85",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"bc fill when attacked high": 50,
+								"bc fill when attacked low": 50,
+								"bc fill when attacked turns (38)": 5,
+								"bc fill when attacked%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "20",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "aoe",
+								"target type": "party",
+								"unknown proc id": "70002",
+								"unknown proc param": "1,3,0,0,0,0,0,0,0"
+							},
+							{
+								"angel idol buff turns (91)": 999,
+								"angel idol recover chance%": 80,
+								"angel idol recover hp%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "56",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"od fill": 7500,
+								"od fill turns (148)": 5,
+								"proc id": "113",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "single",
+								"target type": "enemy",
+								"unknown proc id": "11001",
+								"unknown proc param": "0.015,0.02,1,0,0,0,0,0,2,0"
+							}
+						]
+					},
+					{
+						"bc cost": 6,
+						"effects": [
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb dmg%": 400,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"atk% buff (1)": 400,
+								"buff turns": 5,
+								"crit% buff (7)": 60,
+								"def% buff (3)": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"element buffed": "all",
+								"proc id": "5",
+								"rec% buff (5)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns": 5,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "23",
+								"spark dmg% buff (40)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns (84)": 5,
+								"crit multiplier%": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "54",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"elemental weakness buff turns": 5,
+								"elemental weakness multiplier%": 500,
+								"proc id": "55",
+								"target area": "aoe",
+								"target type": "party",
+								"water units do extra elemental weakness dmg": true
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"hp recover from dmg buff turns (133)": 5,
+								"hp recover from dmg chance": 100,
+								"hp recover from dmg% high": 100,
+								"hp recover from dmg% low": 100,
+								"proc id": "85",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"bc fill when attacked high": 50,
+								"bc fill when attacked low": 50,
+								"bc fill when attacked turns (38)": 5,
+								"bc fill when attacked%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "20",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "aoe",
+								"target type": "party",
+								"unknown proc id": "70002",
+								"unknown proc param": "1,3,0,0,0,0,0,0,0"
+							},
+							{
+								"angel idol buff turns (91)": 999,
+								"angel idol recover chance%": 80,
+								"angel idol recover hp%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "56",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"od fill": 7500,
+								"od fill turns (148)": 5,
+								"proc id": "113",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "single",
+								"target type": "enemy",
+								"unknown proc id": "11001",
+								"unknown proc param": "0.015,0.02,1,0,0,0,0,0,2,0"
+							}
+						]
+					},
+					{
+						"bc cost": 6,
+						"effects": [
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb dmg%": 450,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"atk% buff (1)": 400,
+								"buff turns": 5,
+								"crit% buff (7)": 60,
+								"def% buff (3)": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"element buffed": "all",
+								"proc id": "5",
+								"rec% buff (5)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns": 5,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "23",
+								"spark dmg% buff (40)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns (84)": 5,
+								"crit multiplier%": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "54",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"elemental weakness buff turns": 5,
+								"elemental weakness multiplier%": 500,
+								"proc id": "55",
+								"target area": "aoe",
+								"target type": "party",
+								"water units do extra elemental weakness dmg": true
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"hp recover from dmg buff turns (133)": 5,
+								"hp recover from dmg chance": 100,
+								"hp recover from dmg% high": 100,
+								"hp recover from dmg% low": 100,
+								"proc id": "85",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"bc fill when attacked high": 50,
+								"bc fill when attacked low": 50,
+								"bc fill when attacked turns (38)": 5,
+								"bc fill when attacked%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "20",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "aoe",
+								"target type": "party",
+								"unknown proc id": "70002",
+								"unknown proc param": "1,3,0,0,0,0,0,0,0"
+							},
+							{
+								"angel idol buff turns (91)": 999,
+								"angel idol recover chance%": 80,
+								"angel idol recover hp%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "56",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"od fill": 7500,
+								"od fill turns (148)": 5,
+								"proc id": "113",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "single",
+								"target type": "enemy",
+								"unknown proc id": "11001",
+								"unknown proc param": "0.018,0.025,1,0,0,0,0,0,2,0"
+							}
+						]
+					},
+					{
+						"bc cost": 5,
+						"effects": [
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb dmg%": 500,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"atk% buff (1)": 400,
+								"buff turns": 5,
+								"crit% buff (7)": 60,
+								"def% buff (3)": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"element buffed": "all",
+								"proc id": "5",
+								"rec% buff (5)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns": 5,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "23",
+								"spark dmg% buff (40)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns (84)": 5,
+								"crit multiplier%": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "54",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"elemental weakness buff turns": 5,
+								"elemental weakness multiplier%": 500,
+								"proc id": "55",
+								"target area": "aoe",
+								"target type": "party",
+								"water units do extra elemental weakness dmg": true
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"hp recover from dmg buff turns (133)": 5,
+								"hp recover from dmg chance": 100,
+								"hp recover from dmg% high": 100,
+								"hp recover from dmg% low": 100,
+								"proc id": "85",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"bc fill when attacked high": 50,
+								"bc fill when attacked low": 50,
+								"bc fill when attacked turns (38)": 5,
+								"bc fill when attacked%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "20",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "aoe",
+								"target type": "party",
+								"unknown proc id": "70002",
+								"unknown proc param": "1,3,0,0,0,0,0,0,0"
+							},
+							{
+								"angel idol buff turns (91)": 999,
+								"angel idol recover chance%": 80,
+								"angel idol recover hp%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "56",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"od fill": 7500,
+								"od fill turns (148)": 5,
+								"proc id": "113",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "single",
+								"target type": "enemy",
+								"unknown proc id": "11001",
+								"unknown proc param": "0.018,0.025,1,0,0,0,0,0,3,0"
+							}
+						]
+					},
+					{
+						"bc cost": 5,
+						"effects": [
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb dmg%": 500,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"atk% buff (1)": 400,
+								"buff turns": 5,
+								"crit% buff (7)": 60,
+								"def% buff (3)": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"element buffed": "all",
+								"proc id": "5",
+								"rec% buff (5)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns": 5,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "23",
+								"spark dmg% buff (40)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns (84)": 5,
+								"crit multiplier%": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "54",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"elemental weakness buff turns": 5,
+								"elemental weakness multiplier%": 500,
+								"proc id": "55",
+								"target area": "aoe",
+								"target type": "party",
+								"water units do extra elemental weakness dmg": true
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"hp recover from dmg buff turns (133)": 5,
+								"hp recover from dmg chance": 100,
+								"hp recover from dmg% high": 100,
+								"hp recover from dmg% low": 100,
+								"proc id": "85",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"bc fill when attacked high": 50,
+								"bc fill when attacked low": 50,
+								"bc fill when attacked turns (38)": 5,
+								"bc fill when attacked%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "20",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "aoe",
+								"target type": "party",
+								"unknown proc id": "70002",
+								"unknown proc param": "1,3,0,0,0,0,0,0,0"
+							},
+							{
+								"angel idol buff turns (91)": 999,
+								"angel idol recover chance%": 80,
+								"angel idol recover hp%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "56",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"od fill": 7500,
+								"od fill turns (148)": 5,
+								"proc id": "113",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "single",
+								"target type": "enemy",
+								"unknown proc id": "11001",
+								"unknown proc param": "0.025,0.03,1,0,0,0,0,0,3,0"
+							}
+						]
+					},
+					{
+						"bc cost": 4,
+						"effects": [
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb dmg%": 500,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"atk% buff (1)": 400,
+								"buff turns": 5,
+								"crit% buff (7)": 60,
+								"def% buff (3)": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"element buffed": "all",
+								"proc id": "5",
+								"rec% buff (5)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns": 5,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "23",
+								"spark dmg% buff (40)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns (84)": 5,
+								"crit multiplier%": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "54",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"elemental weakness buff turns": 5,
+								"elemental weakness multiplier%": 500,
+								"proc id": "55",
+								"target area": "aoe",
+								"target type": "party",
+								"water units do extra elemental weakness dmg": true
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"hp recover from dmg buff turns (133)": 5,
+								"hp recover from dmg chance": 100,
+								"hp recover from dmg% high": 100,
+								"hp recover from dmg% low": 100,
+								"proc id": "85",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"bc fill when attacked high": 50,
+								"bc fill when attacked low": 50,
+								"bc fill when attacked turns (38)": 5,
+								"bc fill when attacked%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "20",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "aoe",
+								"target type": "party",
+								"unknown proc id": "70002",
+								"unknown proc param": "1,3,0,0,0,0,0,0,0"
+							},
+							{
+								"angel idol buff turns (91)": 999,
+								"angel idol recover chance%": 80,
+								"angel idol recover hp%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "56",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"od fill": 7500,
+								"od fill turns (148)": 5,
+								"proc id": "113",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "single",
+								"target type": "enemy",
+								"unknown proc id": "11001",
+								"unknown proc param": "0.025,0.03,1,0,0,0,0,0,4,0"
+							}
+						]
+					},
+					{
+						"bc cost": 4,
+						"effects": [
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb dmg%": 500,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"atk% buff (1)": 400,
+								"buff turns": 5,
+								"crit% buff (7)": 60,
+								"def% buff (3)": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"element buffed": "all",
+								"proc id": "5",
+								"rec% buff (5)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns": 5,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "23",
+								"spark dmg% buff (40)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns (84)": 5,
+								"crit multiplier%": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "54",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"elemental weakness buff turns": 5,
+								"elemental weakness multiplier%": 500,
+								"proc id": "55",
+								"target area": "aoe",
+								"target type": "party",
+								"water units do extra elemental weakness dmg": true
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"hp recover from dmg buff turns (133)": 5,
+								"hp recover from dmg chance": 100,
+								"hp recover from dmg% high": 100,
+								"hp recover from dmg% low": 100,
+								"proc id": "85",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"bc fill when attacked high": 50,
+								"bc fill when attacked low": 50,
+								"bc fill when attacked turns (38)": 5,
+								"bc fill when attacked%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "20",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "aoe",
+								"target type": "party",
+								"unknown proc id": "70002",
+								"unknown proc param": "1,3,0,0,0,0,0,0,0"
+							},
+							{
+								"angel idol buff turns (91)": 999,
+								"angel idol recover chance%": 80,
+								"angel idol recover hp%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "56",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"od fill": 7500,
+								"od fill turns (148)": 5,
+								"proc id": "113",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "single",
+								"target type": "enemy",
+								"unknown proc id": "11001",
+								"unknown proc param": "0.025,0.03,1,0,0,0,0,0,4,0"
+							}
+						]
+					},
+					{
+						"bc cost": 3,
+						"effects": [
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb dmg%": 500,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"bb added atk% based on hp": 2000,
+								"bb added atk% proportional to hp": "remaining",
+								"bb base atk%": 2000,
+								"bb crit%": 60,
+								"bb flat atk": 200,
+								"effect delay time(ms)/frame": "16.7/1",
+								"proc id": "47",
+								"target area": "aoe",
+								"target type": "enemy"
+							},
+							{
+								"atk% buff (1)": 400,
+								"buff turns": 5,
+								"crit% buff (7)": 60,
+								"def% buff (3)": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"element buffed": "all",
+								"proc id": "5",
+								"rec% buff (5)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns": 5,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "23",
+								"spark dmg% buff (40)": 400,
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"buff turns (84)": 5,
+								"crit multiplier%": 400,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "54",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"elemental weakness buff turns": 5,
+								"elemental weakness multiplier%": 500,
+								"proc id": "55",
+								"target area": "aoe",
+								"target type": "party",
+								"water units do extra elemental weakness dmg": true
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"hp recover from dmg buff turns (133)": 5,
+								"hp recover from dmg chance": 100,
+								"hp recover from dmg% high": 100,
+								"hp recover from dmg% low": 100,
+								"proc id": "85",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"bc fill when attacked high": 50,
+								"bc fill when attacked low": 50,
+								"bc fill when attacked turns (38)": 5,
+								"bc fill when attacked%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "20",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "aoe",
+								"target type": "party",
+								"unknown proc id": "70002",
+								"unknown proc param": "1,3,0,0,0,0,0,0,0"
+							},
+							{
+								"angel idol buff turns (91)": 999,
+								"angel idol recover chance%": 80,
+								"angel idol recover hp%": 100,
+								"effect delay time(ms)/frame": "0.0/0",
+								"proc id": "56",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"od fill": 7500,
+								"od fill turns (148)": 5,
+								"proc id": "113",
+								"target area": "aoe",
+								"target type": "party"
+							},
+							{
+								"effect delay time(ms)/frame": "0.0/0",
+								"target area": "single",
+								"target type": "enemy",
+								"unknown proc id": "11001",
+								"unknown proc param": "0.025,0.03,1,0,0,0,0,0,4,0"
+							}
+						]
+					}
+				],
+				"name": "Even Lovers Drown"
+			},
+			"partner": 820568
+		}
+	},
+	"category": 820790,
+	"cost": 60,
+	"damage frames": {
+		"frame times": [
+			34,
+			37,
+			40,
+			43,
+			46,
+			61,
+			64,
+			67,
+			70,
+			73,
+			76
+		],
+		"hit dmg% distribution": [
+			9,
+			9,
+			9,
+			9,
+			9,
+			10,
+			9,
+			9,
+			9,
+			9,
+			9
+		],
+		"hit dmg% distribution (total)": 100,
+		"hits": 11
+	},
+	"dictionary": {
+		"description": "In the strange, cold North of an era long past, it was said that on lonely nights along the shores, a comely maiden dressed in sealskin would be seated upon a jutting rock, her sonorous melody carried upon the ocean-breeze. So heartfelt were her songs that many waded into the freezing waters, compelled by overwhelming desire.<br><br>Known as the Maiden of Eyinhel, Aoife thrived on the souls of lovesick humans—the more enraptured they were, the more delectable they became. Though aspects of her bewitching appearance hinted at her true demonic nature, so deeply infatuated were some that they persisted until they failed to return.<br><br>Thus she passed her days sated but monotonous, until the day a desperate human had sought a premature end to a life of woe. Out of sheer amusement, Aoife entertained their delusions with dulcet promises of false everafters, and soon an unwitting pact was formed. Surely this deluded soul would be a splendid delicacy given enough time...<br><br>As the months passed, however, Aoife failed to realize she'd fallen for her own trap—fallen for the Pactbound's renewed love of life.<br><br>Desperate to protect this illusion of normalcy, Aoife concealed the truth of her sustenance. But demons cannot survive on the farce known as love; Aoife found her spirit wasting by the day, and a hunger frenzy drove her to her limits. Scant memories remain... save for the day Aoife found her Pactbound lifeless, torn asunder by demonic claws.<br><br>Little more is known of the lost island of Eyinhel and its illusory shores. Cast into the mists of the Void, the Queen in Cobalt watches silently as the seal-maiden gazes out over her sea of lost souls, singing for ghosts long gone.",
+		"evolution": "Now there shall be vengeance;<br>as many dead as can link hands<br>around my shores!",
+		"fusion": "You remind me of...<br>...<br>I apologize. Pay me no mind.",
+		"summon": "Another comes...<br>I sing only for the ghosts, now.<br>Yet, you listen..."
+	},
+	"drop check count": 5,
+	"element": "water",
+	"exp_pattern": 20,
+	"extra skill": {
+		"desc": "30% reduction to BB activation cost when Seabound Vow is equipped, 25% critical damage and 20% Water elemental damage for all allies, 50% Atk, max HP & probable damage reduction to 1",
+		"effects": [
+			{
+				"conditions": [
+					{
+						"item required": [
+							"819298"
+						]
+					}
+				],
+				"passive id": "48",
+				"passive target": "self",
+				"reduced bb bc cost%": 30
+			},
+			{
+				"conditions": [],
+				"crit multiplier%": 25,
+				"passive id": "34",
+				"passive target": "party"
+			},
+			{
+				"conditions": [],
+				"elemental weakness multiplier%": 20,
+				"passive id": "50",
+				"passive target": "party",
+				"water units do extra elemental weakness dmg": true
+			},
+			{
+				"atk% buff": 50,
+				"conditions": [],
+				"hp% buff": 50,
+				"passive id": "1",
+				"passive target": "self"
+			},
+			{
+				"conditions": [],
+				"passive id": "43",
+				"passive target": "self",
+				"take 1 dmg%": 20
+			}
+		],
+		"id": "820798",
+		"name": "Finnar Sorcery",
+		"rarity": "7",
+		"target": "self"
+	},
+	"feskills": [
+		{
+			"category": "1",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010100169",
+			"skill": {
+				"bp": 10,
+				"desc": "100% all parameters",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff": 100,
+							"def% buff": 100,
+							"hp% buff": 100,
+							"passive id": "1",
+							"rec% buff": 100
+						}
+					}
+				],
+				"id": "1010100169",
+				"level": 2,
+				"name": "100% all parameters",
+				"series": "1010100169"
+			}
+		},
+		{
+			"category": "2",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010500052",
+			"skill": {
+				"bp": 10,
+				"desc": "150% spark damage",
+				"effects": [
+					{
+						"passive": {
+							"damage% for spark": 150,
+							"passive id": "31"
+						}
+					}
+				],
+				"id": "1010500052",
+				"level": 2,
+				"name": "150% spark damage",
+				"series": "1010500052"
+			}
+		},
+		{
+			"category": "4",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010500088",
+			"skill": {
+				"bp": 10,
+				"desc": "200% elemental damage",
+				"effects": [
+					{
+						"passive": {
+							"dark units do extra elemental weakness dmg": true,
+							"earth units do extra elemental weakness dmg": true,
+							"elemental weakness multiplier%": 200,
+							"fire units do extra elemental weakness dmg": true,
+							"light units do extra elemental weakness dmg": true,
+							"passive id": "50",
+							"thunder units do extra elemental weakness dmg": true,
+							"water units do extra elemental weakness dmg": true
+						}
+					}
+				],
+				"id": "1010500088",
+				"level": 2,
+				"name": "200% elemental damage",
+				"series": "1010500088"
+			}
+		},
+		{
+			"category": "4",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1100000464",
+			"skill": {
+				"bp": 15,
+				"desc": "150% damage against status afflicted foes",
+				"effects": [
+					{
+						"passive": {
+							"atk% buff when enemy has ailment": 150,
+							"atk% buff when enemy has curse": true,
+							"atk% buff when enemy has injury": true,
+							"atk% buff when enemy has paralysis": true,
+							"atk% buff when enemy has poison": true,
+							"atk% buff when enemy has sick": true,
+							"atk% buff when enemy has weaken": true,
+							"passive id": "74"
+						}
+					}
+				],
+				"id": "1100000464",
+				"level": 3,
+				"name": "150% damage against status afflicted foes",
+				"series": "1100000464"
+			}
+		},
+		{
+			"category": "10",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010500037",
+			"skill": {
+				"bp": 15,
+				"desc": "Probable 2 KO resistance",
+				"effects": [
+					{
+						"passive": {
+							"angel idol chance% condition": 0,
+							"angel idol recover chance% high": 50,
+							"angel idol recover chance% low": 50,
+							"angel idol recover counts": 2,
+							"angel idol recover hp%": 20,
+							"passive id": "69"
+						}
+					}
+				],
+				"id": "1010500037",
+				"level": 3,
+				"name": "Probable 2 KO resistance",
+				"series": "1010500037"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1100000330",
+			"skill": {
+				"bp": 10,
+				"desc": "Raises Atk parameter limits to 200000",
+				"effects": [
+					{
+						"passive": {
+							"increase atk cap": 200000,
+							"passive id": "143"
+						}
+					}
+				],
+				"id": "1100000330",
+				"level": 5,
+				"name": "Raises Atk parameter limits to 200000",
+				"series": "1100000330"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010700023",
+			"skill": {
+				"bp": 15,
+				"desc": "Add to BB (boosts own max HP)",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"target area": "single",
+									"target type": "self",
+									"unknown proc id": "92",
+									"unknown proc param": "0,35,0"
+								}
+							]
+						}
+					}
+				],
+				"id": "1010700023",
+				"level": 3,
+				"name": "Add to BB (Boosts own max HP)",
+				"series": "1010700023"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010700059",
+			"skill": {
+				"bp": 10,
+				"desc": "Add to BB/SBB (Probable all status ailments infliction)",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"poison%": 85,
+									"proc id": "11",
+									"sick%": 85,
+									"target area": "aoe",
+									"target type": "enemy",
+									"weaken%": 85
+								}
+							]
+						}
+					},
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"curse%": 85,
+									"effect delay time(ms)/frame": "0.0/0",
+									"injury%": 85,
+									"paralysis%": 85,
+									"proc id": "11",
+									"target area": "aoe",
+									"target type": "enemy"
+								}
+							]
+						}
+					}
+				],
+				"id": "1010700059",
+				"level": 5,
+				"name": "Add to BB/SBB (Probable all status ailments infliction)",
+				"series": "1010700059"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010700021",
+			"skill": {
+				"bp": 25,
+				"desc": "Add to BB/SBB (fills own BB gauge to max)",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on bb": true,
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"bb bc fill%": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "4",
+									"target area": "single",
+									"target type": "self"
+								}
+							]
+						}
+					}
+				],
+				"id": "1010700021",
+				"level": 5,
+				"name": "Add to BB/SBB (fills own BB gauge to max)",
+				"series": "1010700021"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1100000499",
+			"skill": {
+				"bp": 15,
+				"desc": "Add to SBB (boosts critical damage (Water) for 3 turns)",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"effect delay time(ms)/frame": "0.0/0",
+									"target area": "aoe",
+									"target type": "party",
+									"unknown proc id": "10016",
+									"unknown proc param": "0.75,3,0,2"
+								}
+							]
+						}
+					}
+				],
+				"id": "1100000499",
+				"level": 2,
+				"name": "Add to SBB (boosts critical damage (Water) for 3 turns)",
+				"series": "1100000499"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1100000468",
+			"skill": {
+				"bp": 20,
+				"desc": "Add to SBB (boosts damage against status afflicted foes for 3 turns)",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"atk% buff turns (110)": 3,
+									"atk% buff when enemy has ailment": 250,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "65",
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					}
+				],
+				"id": "1100000468",
+				"level": 4,
+				"name": "Add to SBB (boosts damage against status afflicted foes for 3 turns)",
+				"series": "1100000468"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1100000500",
+			"skill": {
+				"bp": 25,
+				"desc": "Add to SBB (17 combo Water attack on all foes (damage relative to remaining HP))",
+				"effects": [
+					{
+						"passive": {
+							"passive id": "66",
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"bb added atk% based on hp": 300,
+									"bb added atk% proportional to hp": "remaining",
+									"bb base atk%": 200,
+									"bb flat atk": 200,
+									"effect delay time(ms)/frame": "16.7/1",
+									"proc id": "47",
+									"target area": "aoe",
+									"target type": "enemy"
+								}
+							]
+						}
+					}
+				],
+				"id": "1100000500",
+				"level": 4,
+				"name": "Add to SBB (17 combo Water attack on all foes (damage relative to remaining HP))",
+				"series": "1100000500"
+			}
+		}
+	],
+	"gender": "female",
+	"getting type": "rare summon",
+	"guide_id": 8607,
+	"id": 820798,
+	"imp": {
+		"max atk": "800",
+		"max def": "400",
+		"max hp": "1250",
+		"max rec": "500"
+	},
+	"kind": "normal",
+	"leader skill": {
+		"desc": "200% Atk, 140% Def, max HP and 30% critical rate (Water), 250% critical damage, 250% Water elemental damage, 30% reduction to BB activation cost & probable 1 KO resistance",
+		"effects": [
+			{
+				"atk% buff": 200,
+				"crit% buff": 30,
+				"def% buff": 140,
+				"elements buffed": [
+					"water"
+				],
+				"hp% buff": 140,
+				"passive id": "2"
+			},
+			{
+				"crit multiplier%": 250,
+				"passive id": "34"
+			},
+			{
+				"elemental weakness multiplier%": 250,
+				"passive id": "50",
+				"water units do extra elemental weakness dmg": true
+			},
+			{
+				"passive id": "48",
+				"reduced bb bc cost%": 30
+			},
+			{
+				"angel idol chance% condition": 0,
+				"angel idol recover chance% high": 25,
+				"angel idol recover chance% low": 25,
+				"angel idol recover counts": 1,
+				"passive id": "69"
+			}
+		],
+		"id": "820798",
+		"name": "Seal-Fiend's Song"
+	},
+	"lord damage range": "3453~3857",
+	"movement": {
+		"attack": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		},
+		"skill": {
+			"move speed": 4,
+			"move speed type": "3",
+			"move type": "2"
+		}
+	},
+	"name": "Seiðkona Aoife",
+	"overdrive stats": {
+		"atk%": 100,
+		"def%": 100,
+		"rec%": 100
+	},
+	"rarity": 8,
+	"sbb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					34,
+					37,
+					40,
+					43,
+					46,
+					49,
+					52,
+					55
+				],
+				"hit dmg% distribution": [
+					13,
+					12,
+					13,
+					12,
+					13,
+					12,
+					13,
+					12
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 8,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					61,
+					64,
+					67,
+					70,
+					73,
+					76,
+					79,
+					82,
+					85,
+					88
+				],
+				"hit dmg% distribution": [
+					11,
+					10,
+					9,
+					10,
+					11,
+					9,
+					11,
+					10,
+					9,
+					10
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 10,
+				"proc id": "27"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "55"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "132"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "88"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "10001"
+			}
+		],
+		"desc": "8 combo Water attack on all foes(damage relative to remaining HP), 10 combo Water attack on single foe (or probable 5% damage of foes' max HP), boosts Water elemental damage for 3 turns, probable 3 turns critical and elemental vulnerability infliction, boosts own spark damage for 3 turns & activates Stealth and boosts own Atk and critical rate for 2 turns",
+		"drop check count": 1,
+		"id": "1820798",
+		"levels": [
+			{
+				"bc cost": 27,
+				"effects": [
+					{
+						"bb added atk% based on hp": 650,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1000,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"hp% damage chance%": 10,
+						"hp% damage high": 5,
+						"hp% damage low": 5,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"crit vuln chance%": 75,
+						"crit vuln dmg% (157)": 30,
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental vuln chance%": 75,
+						"elemental vuln dmg% (158)": 30,
+						"proc id": "132",
+						"target area": "aoe",
+						"target type": "enemy",
+						"vuln turns": 3
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "88",
+						"spark dmg inc%": 120,
+						"spark dmg inc% turns (136)": 3,
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"atk% buff": 300,
+						"crit% buff": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10001",
+						"stealth turns (10001)": 2,
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 27,
+				"effects": [
+					{
+						"bb added atk% based on hp": 660,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1020,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"hp% damage chance%": 10,
+						"hp% damage high": 5,
+						"hp% damage low": 5,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"crit vuln chance%": 75,
+						"crit vuln dmg% (157)": 30,
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental vuln chance%": 75,
+						"elemental vuln dmg% (158)": 30,
+						"proc id": "132",
+						"target area": "aoe",
+						"target type": "enemy",
+						"vuln turns": 3
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "88",
+						"spark dmg inc%": 120,
+						"spark dmg inc% turns (136)": 3,
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"atk% buff": 300,
+						"crit% buff": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10001",
+						"stealth turns (10001)": 2,
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 27,
+				"effects": [
+					{
+						"bb added atk% based on hp": 670,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1040,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"hp% damage chance%": 10,
+						"hp% damage high": 5,
+						"hp% damage low": 5,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"crit vuln chance%": 75,
+						"crit vuln dmg% (157)": 30,
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental vuln chance%": 75,
+						"elemental vuln dmg% (158)": 30,
+						"proc id": "132",
+						"target area": "aoe",
+						"target type": "enemy",
+						"vuln turns": 3
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "88",
+						"spark dmg inc%": 120,
+						"spark dmg inc% turns (136)": 3,
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"atk% buff": 300,
+						"crit% buff": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10001",
+						"stealth turns (10001)": 2,
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 27,
+				"effects": [
+					{
+						"bb added atk% based on hp": 680,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1060,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"hp% damage chance%": 10,
+						"hp% damage high": 5,
+						"hp% damage low": 5,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"crit vuln chance%": 75,
+						"crit vuln dmg% (157)": 30,
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental vuln chance%": 75,
+						"elemental vuln dmg% (158)": 30,
+						"proc id": "132",
+						"target area": "aoe",
+						"target type": "enemy",
+						"vuln turns": 3
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "88",
+						"spark dmg inc%": 120,
+						"spark dmg inc% turns (136)": 3,
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"atk% buff": 300,
+						"crit% buff": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10001",
+						"stealth turns (10001)": 2,
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 27,
+				"effects": [
+					{
+						"bb added atk% based on hp": 690,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1080,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"hp% damage chance%": 10,
+						"hp% damage high": 5,
+						"hp% damage low": 5,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"crit vuln chance%": 75,
+						"crit vuln dmg% (157)": 30,
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental vuln chance%": 75,
+						"elemental vuln dmg% (158)": 30,
+						"proc id": "132",
+						"target area": "aoe",
+						"target type": "enemy",
+						"vuln turns": 3
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "88",
+						"spark dmg inc%": 120,
+						"spark dmg inc% turns (136)": 3,
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"atk% buff": 300,
+						"crit% buff": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10001",
+						"stealth turns (10001)": 2,
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 27,
+				"effects": [
+					{
+						"bb added atk% based on hp": 700,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1100,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"hp% damage chance%": 10,
+						"hp% damage high": 5,
+						"hp% damage low": 5,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"crit vuln chance%": 75,
+						"crit vuln dmg% (157)": 30,
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental vuln chance%": 75,
+						"elemental vuln dmg% (158)": 30,
+						"proc id": "132",
+						"target area": "aoe",
+						"target type": "enemy",
+						"vuln turns": 3
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "88",
+						"spark dmg inc%": 120,
+						"spark dmg inc% turns (136)": 3,
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"atk% buff": 300,
+						"crit% buff": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10001",
+						"stealth turns (10001)": 2,
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 27,
+				"effects": [
+					{
+						"bb added atk% based on hp": 710,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1120,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"hp% damage chance%": 10,
+						"hp% damage high": 5,
+						"hp% damage low": 5,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"crit vuln chance%": 75,
+						"crit vuln dmg% (157)": 30,
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental vuln chance%": 75,
+						"elemental vuln dmg% (158)": 30,
+						"proc id": "132",
+						"target area": "aoe",
+						"target type": "enemy",
+						"vuln turns": 3
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "88",
+						"spark dmg inc%": 120,
+						"spark dmg inc% turns (136)": 3,
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"atk% buff": 300,
+						"crit% buff": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10001",
+						"stealth turns (10001)": 2,
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 27,
+				"effects": [
+					{
+						"bb added atk% based on hp": 720,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1140,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"hp% damage chance%": 10,
+						"hp% damage high": 5,
+						"hp% damage low": 5,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"crit vuln chance%": 75,
+						"crit vuln dmg% (157)": 30,
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental vuln chance%": 75,
+						"elemental vuln dmg% (158)": 30,
+						"proc id": "132",
+						"target area": "aoe",
+						"target type": "enemy",
+						"vuln turns": 3
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "88",
+						"spark dmg inc%": 120,
+						"spark dmg inc% turns (136)": 3,
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"atk% buff": 300,
+						"crit% buff": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10001",
+						"stealth turns (10001)": 2,
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 27,
+				"effects": [
+					{
+						"bb added atk% based on hp": 730,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1160,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"hp% damage chance%": 10,
+						"hp% damage high": 5,
+						"hp% damage low": 5,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"crit vuln chance%": 75,
+						"crit vuln dmg% (157)": 30,
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental vuln chance%": 75,
+						"elemental vuln dmg% (158)": 30,
+						"proc id": "132",
+						"target area": "aoe",
+						"target type": "enemy",
+						"vuln turns": 3
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "88",
+						"spark dmg inc%": 120,
+						"spark dmg inc% turns (136)": 3,
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"atk% buff": 300,
+						"crit% buff": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10001",
+						"stealth turns (10001)": 2,
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			},
+			{
+				"bc cost": 27,
+				"effects": [
+					{
+						"bb added atk% based on hp": 750,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 1200,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"hp% damage chance%": 10,
+						"hp% damage high": 5,
+						"hp% damage low": 5,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 3,
+						"elemental weakness multiplier%": 250,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"crit vuln chance%": 75,
+						"crit vuln dmg% (157)": 30,
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental vuln chance%": 75,
+						"elemental vuln dmg% (158)": 30,
+						"proc id": "132",
+						"target area": "aoe",
+						"target type": "enemy",
+						"vuln turns": 3
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "88",
+						"spark dmg inc%": 120,
+						"spark dmg inc% turns (136)": 3,
+						"target area": "single",
+						"target type": "self"
+					},
+					{
+						"atk% buff": 300,
+						"crit% buff": 60,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "10001",
+						"stealth turns (10001)": 2,
+						"target area": "single",
+						"target type": "self"
+					}
+				]
+			}
+		],
+		"name": "Vengeance Leagues-Deep"
+	},
+	"sell caution": false,
+	"stats": {
+		"_base": {
+			"atk": 2596,
+			"def": 2363,
+			"hp": 7078,
+			"rec": 2371
+		},
+		"_lord": {
+			"atk": 3709,
+			"def": 3375,
+			"hp": 10112,
+			"rec": 3387
+		}
+	},
+	"ubb": {
+		"damage frames": [
+			{
+				"effect delay time(ms)/frame": "16.7/1",
+				"frame times": [
+					34,
+					37,
+					40,
+					43,
+					46,
+					49,
+					52,
+					55,
+					58
+				],
+				"hit dmg% distribution": [
+					12,
+					11,
+					11,
+					11,
+					11,
+					11,
+					11,
+					11,
+					11
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 9,
+				"proc id": "47"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					61,
+					64,
+					67,
+					70,
+					73,
+					76,
+					79,
+					82,
+					85,
+					88,
+					91
+				],
+				"hit dmg% distribution": [
+					10,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9,
+					9
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 11,
+				"proc id": "27"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "20"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "55"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "56"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "113"
+			}
+		],
+		"desc": "9 combo Water attack on all foes (damage relative to remaining HP), 11 combo Water attack on single foe (or probable 7% damage of foes' max HP), damage taken fills BB gauge for 4 turns, boosts Water elemental damage for 4 turns, probable KO resistance & fills OD gauge at turn's end for 4 turns",
+		"drop check count": 1,
+		"id": "2820798",
+		"levels": [
+			{
+				"bc cost": 35,
+				"effects": [
+					{
+						"bb added atk% based on hp": 1500,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 1500,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"bb atk%": 2500,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hp% damage chance%": 50,
+						"hp% damage high": 7,
+						"hp% damage low": 7,
+						"proc id": "27",
+						"target area": "single",
+						"target type": "enemy"
+					},
+					{
+						"bc fill when attacked high": 50,
+						"bc fill when attacked low": 50,
+						"bc fill when attacked turns (38)": 4,
+						"bc fill when attacked%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "20",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental weakness buff turns": 4,
+						"elemental weakness multiplier%": 500,
+						"proc id": "55",
+						"target area": "aoe",
+						"target type": "party",
+						"water units do extra elemental weakness dmg": true
+					},
+					{
+						"angel idol buff turns (91)": 999,
+						"angel idol recover chance%": 80,
+						"angel idol recover hp%": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"proc id": "56",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 7500,
+						"od fill turns (148)": 4,
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			}
+		],
+		"name": "Unfathomable Skræling"
+	}
+}
