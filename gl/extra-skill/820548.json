@@ -4,31 +4,66 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-10-11T11:13:17.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2018-11-15T15:03:40.000Z"
 	},
-	"desc": "10% boost to all parameters for all allies, 25% damage reduction from Water types & raises Atk parameter limits to 130000",
+	"desc": "15% boost to all parameters for all allies, 25% damage reduction from Fire, Water types, raises Atk parameter limits to 150000 & adds 25 combo (BB) / 33 combo (SBB) powerful Water attack on Fire types to BB/SBB",
 	"effects": [
 		{
-			"atk% buff": 10,
+			"atk% buff": 15,
 			"conditions": [],
-			"def% buff": 10,
-			"hp% buff": 10,
+			"def% buff": 15,
+			"hp% buff": 15,
 			"passive id": "1",
 			"passive target": "party",
-			"rec% buff": 10
+			"rec% buff": 15
 		},
 		{
 			"conditions": [],
 			"dmg% mitigation for elemental attacks": 25,
+			"mitigate fire attacks": true,
 			"mitigate water attacks": true,
 			"passive id": "62",
 			"passive target": "self"
 		},
 		{
 			"conditions": [],
-			"increase atk cap": 130000,
+			"increase atk cap": 150000,
 			"passive id": "143",
 			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"triggered effect": [
+				{
+					"additional element used for attack check": "self only",
+					"bb atk%": 470,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "97",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"additional element used for attack check": "self only",
+					"bb atk%": 670,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "97",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
 		}
 	],
 	"id": "820548",
