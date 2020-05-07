@@ -2,23 +2,83 @@
 	"associated_units": [
 		"810508"
 	],
-	"attackInfo": [],
+	"attackInfo": [
+		{
+			"hits": 28,
+			"id": "47",
+			"target": "AOE"
+		}
+	],
 	"bfmtMetadata": {
 		"createdAt": "2017-03-05T12:05:52.000Z",
-		"updatedAt": "2017-06-14T11:43:33.000Z"
+		"updatedAt": "2019-03-13T12:13:34.000Z"
 	},
 	"damage frames": [
 		{
-			"effect delay time(ms)/frame": "0.0/0",
+			"effect delay time(ms)/frame": "16.7/1",
 			"frame times": [
-				0
+				21,
+				24,
+				27,
+				30,
+				33,
+				36,
+				39,
+				42,
+				45,
+				48,
+				54,
+				60,
+				69,
+				72,
+				75,
+				78,
+				81,
+				84,
+				87,
+				90,
+				93,
+				96,
+				99,
+				102,
+				105,
+				111,
+				117,
+				123
 			],
 			"hit dmg% distribution": [
-				100
+				4,
+				3,
+				2,
+				2,
+				4,
+				3,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				13,
+				7,
+				5,
+				3,
+				5,
+				3,
+				4,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4
 			],
 			"hit dmg% distribution (total)": 100,
-			"hits": 1,
-			"proc id": "18"
+			"hits": 28,
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -67,34 +127,49 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "66"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "18"
 		}
 	],
-	"desc": "Enormously reduces damage taken for 2 turns, hugely boosts max HP, hugely boosts Atk relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+	"desc": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
 	"drop check count": 1,
 	"id": "2810508",
 	"levels": [
 		{
-			"bc cost": 32,
+			"bc cost": 45,
 			"effects": [
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"bb added atk% based on hp": 1000,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
+					"max hp% increase": 45,
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 60,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -114,34 +189,45 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "66",
 					"revive unit chance%": 100,
-					"revive unit hp%": 20,
+					"revive unit hp%": 50,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
 			]
 		},
 		{
-			"bc cost": 32,
+			"bc cost": 45,
 			"effects": [
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"bb added atk% based on hp": 1000,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
+					"max hp% increase": 45,
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 60,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -161,34 +247,45 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "66",
 					"revive unit chance%": 100,
-					"revive unit hp%": 20,
+					"revive unit hp%": 50,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
 			]
 		},
 		{
-			"bc cost": 32,
+			"bc cost": 45,
 			"effects": [
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"bb added atk% based on hp": 1000,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
+					"max hp% increase": 45,
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 60,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -208,34 +305,45 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "66",
 					"revive unit chance%": 100,
-					"revive unit hp%": 20,
+					"revive unit hp%": 50,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
 			]
 		},
 		{
-			"bc cost": 32,
+			"bc cost": 45,
 			"effects": [
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"bb added atk% based on hp": 1000,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
+					"max hp% increase": 45,
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 60,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -255,34 +363,45 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "66",
 					"revive unit chance%": 100,
-					"revive unit hp%": 20,
+					"revive unit hp%": 50,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
 			]
 		},
 		{
-			"bc cost": 32,
+			"bc cost": 45,
 			"effects": [
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"bb added atk% based on hp": 1000,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
+					"max hp% increase": 45,
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 60,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -302,34 +421,45 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "66",
 					"revive unit chance%": 100,
-					"revive unit hp%": 20,
+					"revive unit hp%": 50,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
 			]
 		},
 		{
-			"bc cost": 32,
+			"bc cost": 45,
 			"effects": [
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"bb added atk% based on hp": 1000,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
+					"max hp% increase": 45,
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 60,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -349,34 +479,45 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "66",
 					"revive unit chance%": 100,
-					"revive unit hp%": 20,
+					"revive unit hp%": 50,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
 			]
 		},
 		{
-			"bc cost": 32,
+			"bc cost": 45,
 			"effects": [
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"bb added atk% based on hp": 1000,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
+					"max hp% increase": 45,
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 60,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -396,34 +537,45 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "66",
 					"revive unit chance%": 100,
-					"revive unit hp%": 20,
+					"revive unit hp%": 50,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
 			]
 		},
 		{
-			"bc cost": 32,
+			"bc cost": 45,
 			"effects": [
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"bb added atk% based on hp": 1000,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
+					"max hp% increase": 45,
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 60,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -443,34 +595,45 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "66",
 					"revive unit chance%": 100,
-					"revive unit hp%": 20,
+					"revive unit hp%": 50,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
 			]
 		},
 		{
-			"bc cost": 32,
+			"bc cost": 45,
 			"effects": [
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"bb added atk% based on hp": 1000,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
+					"max hp% increase": 45,
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 60,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -490,34 +653,45 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "66",
 					"revive unit chance%": 100,
-					"revive unit hp%": 20,
+					"revive unit hp%": 50,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
 			]
 		},
 		{
-			"bc cost": 32,
+			"bc cost": 45,
 			"effects": [
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"bb added atk% based on hp": 1000,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
 					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
+					"max hp% increase": 45,
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 60,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
 					"target area": "aoe",
@@ -537,7 +711,15 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "66",
 					"revive unit chance%": 100,
-					"revive unit hp%": 20,
+					"revive unit hp%": 50,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}

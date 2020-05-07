@@ -1,0 +1,111 @@
+{
+	"bfmtMetadata": {
+		"createdAt": "2019-03-09T17:12:06.000Z",
+		"updatedAt": "2019-03-14T07:41:31.000Z"
+	},
+	"desc": "45% boost to all parameters of Oracle types, negates all status ailments, enormously boosts BB gauge each turn, adds all status ailment and Atk, Def, Rec reduction removal effects to BB/SBB, adds probability of purging curse, weakness negation effects from all foes to BB/SBB and activates Non-elemental shield for 1 turn when BC collected has exceeded certain amount.",
+	"dictionary": {
+		"lore": "The ultimate soothsayer. In addition to magical vision, its user is endowed with multiple visions of possible events in the near future. Only entities with great mental strength are capable of wearing this device and using it effectively instead of going insane. Noel says it is theoretically possible for a user to focus the mask's power into one single chain of events to see far into its future, but he has yet to find anyone who can."
+	},
+	"effect": [
+		{
+			"curse resist%": 100,
+			"injury resist%": 100,
+			"paralysis resist%": 100,
+			"passive id": "4",
+			"poison resist%": 100,
+			"sick resist%": 100,
+			"weaken resist%": 100
+		},
+		{
+			"bc fill per turn": 25,
+			"passive id": "9"
+		},
+		{
+			"passive id": "66",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"ailments cured": [
+						"poison",
+						"weaken",
+						"sick",
+						"injury",
+						"curse",
+						"paralysis",
+						"atk down",
+						"def down",
+						"rec down"
+					],
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "38",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"atk% buff": 45,
+			"def% buff": 45,
+			"hp% buff": 45,
+			"passive id": "3",
+			"rec% buff": 45,
+			"unit type buffed": "oracle"
+		},
+		{
+			"passive id": "66",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "enemy",
+					"unknown proc id": "10019",
+					"unknown proc param": "31,34,0,0,0,0,0,0,0,15"
+				}
+			]
+		},
+		{
+			"bc receive count buff activation": 15,
+			"buff": {
+				"buff turns (10500)": "1",
+				"unknown buff id": "10500",
+				"unknown buff params": "0&7000&7000&7000&"
+			},
+			"passive id": "82"
+		}
+	],
+	"id": 819215,
+	"max_stack": 1,
+	"name": "Providence",
+	"raid": false,
+	"rarity": 7,
+	"recipe": {
+		"karma": "1000000",
+		"materials": [
+			{
+				"count": 1,
+				"id": 819214,
+				"name": "Vision"
+			},
+			{
+				"count": 1,
+				"id": 819225,
+				"name": "Giselle's Kiss"
+			},
+			{
+				"count": 350,
+				"id": 890008,
+				"name": "Blizzard Omphalos"
+			}
+		]
+	},
+	"sell_price": 999999,
+	"sphere type": 5,
+	"sphere type text": "Status Ailments Resistant",
+	"thumbnail": "sphere_thum_2_2.png",
+	"type": "sphere",
+	"usage": []
+}
