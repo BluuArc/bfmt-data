@@ -7,11 +7,16 @@
 			"hits": 24,
 			"id": "29",
 			"target": "AOE"
+		},
+		{
+			"hits": 6,
+			"id": "47",
+			"target": "ST"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2016-07-30T11:56:42.000Z",
-		"updatedAt": "2017-06-14T11:43:33.000Z"
+		"updatedAt": "2019-05-08T23:27:22.000Z"
 	},
 	"damage frames": [
 		{
@@ -48,15 +53,15 @@
 				5,
 				5,
 				5,
-				12,
 				11,
 				10,
 				9,
 				8,
 				7,
 				6,
-				6,
-				6,
+				5,
+				5,
+				4,
 				1,
 				1,
 				1,
@@ -68,9 +73,31 @@
 				1,
 				1
 			],
-			"hit dmg% distribution (total)": 110,
+			"hit dmg% distribution (total)": 100,
 			"hits": 24,
 			"proc id": "29"
+		},
+		{
+			"effect delay time(ms)/frame": "16.7/1",
+			"frame times": [
+				91,
+				95,
+				99,
+				101,
+				103,
+				105
+			],
+			"hit dmg% distribution": [
+				20,
+				18,
+				16,
+				16,
+				15,
+				15
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 6,
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -83,18 +110,6 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "45"
-		},
-		{
-			"effect delay time(ms)/frame": "0.0/0",
-			"frame times": [
-				0
-			],
-			"hit dmg% distribution": [
-				100
-			],
-			"hit dmg% distribution (total)": 100,
-			"hits": 1,
-			"proc id": "78"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -119,9 +134,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "19"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "78"
 		}
 	],
-	"desc": "24 combo massive Fire, Dark attack on all foes, enormously boosts to BB Atk for 3 turns, reduces own Def by 50% but enormously boosts own Atk for 3 turns, enormously boosts Dark and Fire elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+	"desc": "24 combo massive Fire, Dark attack on all foes, 6 combo massive Dark attack on single foe (damage relative to lost HP), enormously boosts to BB Atk for 3 turns, enormously boosts own Atk and and reduces own Def for 3 turns, enormously boosts Fire, Dark elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
 	"drop check count": 1,
 	"id": "2860178",
 	"levels": [
@@ -140,14 +167,42 @@
 					"target type": "enemy"
 				},
 				{
-					"bb atk% buff": 600,
+					"bb added atk% based on hp": 2000,
+					"bb added atk% proportional to hp": "lost",
+					"bb base atk%": 2000,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 1000,
 					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "45",
-					"sbb atk% buff": 600,
+					"sbb atk% buff": 1000,
 					"target area": "aoe",
 					"target type": "party",
-					"ubb atk% buff": 600
+					"ubb atk% buff": 1000
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -157,24 +212,6 @@
 					"self stat buff turns": 3,
 					"target area": "single",
 					"target type": "self"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 400,
-					"fire units do extra elemental weakness dmg": true,
-					"proc id": "55",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"increase bb gauge gradual": 50,
-					"increase bb gauge gradual turns (37)": 3,
-					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
 				}
 			]
 		},
@@ -193,14 +230,42 @@
 					"target type": "enemy"
 				},
 				{
-					"bb atk% buff": 600,
+					"bb added atk% based on hp": 2000,
+					"bb added atk% proportional to hp": "lost",
+					"bb base atk%": 2000,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 1000,
 					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "45",
-					"sbb atk% buff": 600,
+					"sbb atk% buff": 1000,
 					"target area": "aoe",
 					"target type": "party",
-					"ubb atk% buff": 600
+					"ubb atk% buff": 1000
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -210,24 +275,6 @@
 					"self stat buff turns": 3,
 					"target area": "single",
 					"target type": "self"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 400,
-					"fire units do extra elemental weakness dmg": true,
-					"proc id": "55",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"increase bb gauge gradual": 50,
-					"increase bb gauge gradual turns (37)": 3,
-					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
 				}
 			]
 		},
@@ -246,14 +293,42 @@
 					"target type": "enemy"
 				},
 				{
-					"bb atk% buff": 600,
+					"bb added atk% based on hp": 2000,
+					"bb added atk% proportional to hp": "lost",
+					"bb base atk%": 2000,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 1000,
 					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "45",
-					"sbb atk% buff": 600,
+					"sbb atk% buff": 1000,
 					"target area": "aoe",
 					"target type": "party",
-					"ubb atk% buff": 600
+					"ubb atk% buff": 1000
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -263,24 +338,6 @@
 					"self stat buff turns": 3,
 					"target area": "single",
 					"target type": "self"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 400,
-					"fire units do extra elemental weakness dmg": true,
-					"proc id": "55",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"increase bb gauge gradual": 50,
-					"increase bb gauge gradual turns (37)": 3,
-					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
 				}
 			]
 		},
@@ -299,14 +356,42 @@
 					"target type": "enemy"
 				},
 				{
-					"bb atk% buff": 600,
+					"bb added atk% based on hp": 2000,
+					"bb added atk% proportional to hp": "lost",
+					"bb base atk%": 2000,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 1000,
 					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "45",
-					"sbb atk% buff": 600,
+					"sbb atk% buff": 1000,
 					"target area": "aoe",
 					"target type": "party",
-					"ubb atk% buff": 600
+					"ubb atk% buff": 1000
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -316,24 +401,6 @@
 					"self stat buff turns": 3,
 					"target area": "single",
 					"target type": "self"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 400,
-					"fire units do extra elemental weakness dmg": true,
-					"proc id": "55",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"increase bb gauge gradual": 50,
-					"increase bb gauge gradual turns (37)": 3,
-					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
 				}
 			]
 		},
@@ -352,14 +419,42 @@
 					"target type": "enemy"
 				},
 				{
-					"bb atk% buff": 600,
+					"bb added atk% based on hp": 2000,
+					"bb added atk% proportional to hp": "lost",
+					"bb base atk%": 2000,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 1000,
 					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "45",
-					"sbb atk% buff": 600,
+					"sbb atk% buff": 1000,
 					"target area": "aoe",
 					"target type": "party",
-					"ubb atk% buff": 600
+					"ubb atk% buff": 1000
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -369,24 +464,6 @@
 					"self stat buff turns": 3,
 					"target area": "single",
 					"target type": "self"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 400,
-					"fire units do extra elemental weakness dmg": true,
-					"proc id": "55",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"increase bb gauge gradual": 50,
-					"increase bb gauge gradual turns (37)": 3,
-					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
 				}
 			]
 		},
@@ -405,14 +482,42 @@
 					"target type": "enemy"
 				},
 				{
-					"bb atk% buff": 600,
+					"bb added atk% based on hp": 2000,
+					"bb added atk% proportional to hp": "lost",
+					"bb base atk%": 2000,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 1000,
 					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "45",
-					"sbb atk% buff": 600,
+					"sbb atk% buff": 1000,
 					"target area": "aoe",
 					"target type": "party",
-					"ubb atk% buff": 600
+					"ubb atk% buff": 1000
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -422,24 +527,6 @@
 					"self stat buff turns": 3,
 					"target area": "single",
 					"target type": "self"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 400,
-					"fire units do extra elemental weakness dmg": true,
-					"proc id": "55",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"increase bb gauge gradual": 50,
-					"increase bb gauge gradual turns (37)": 3,
-					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
 				}
 			]
 		},
@@ -458,14 +545,42 @@
 					"target type": "enemy"
 				},
 				{
-					"bb atk% buff": 600,
+					"bb added atk% based on hp": 2000,
+					"bb added atk% proportional to hp": "lost",
+					"bb base atk%": 2000,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 1000,
 					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "45",
-					"sbb atk% buff": 600,
+					"sbb atk% buff": 1000,
 					"target area": "aoe",
 					"target type": "party",
-					"ubb atk% buff": 600
+					"ubb atk% buff": 1000
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -475,24 +590,6 @@
 					"self stat buff turns": 3,
 					"target area": "single",
 					"target type": "self"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 400,
-					"fire units do extra elemental weakness dmg": true,
-					"proc id": "55",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"increase bb gauge gradual": 50,
-					"increase bb gauge gradual turns (37)": 3,
-					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
 				}
 			]
 		},
@@ -511,14 +608,42 @@
 					"target type": "enemy"
 				},
 				{
-					"bb atk% buff": 600,
+					"bb added atk% based on hp": 2000,
+					"bb added atk% proportional to hp": "lost",
+					"bb base atk%": 2000,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 1000,
 					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "45",
-					"sbb atk% buff": 600,
+					"sbb atk% buff": 1000,
 					"target area": "aoe",
 					"target type": "party",
-					"ubb atk% buff": 600
+					"ubb atk% buff": 1000
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -528,24 +653,6 @@
 					"self stat buff turns": 3,
 					"target area": "single",
 					"target type": "self"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 400,
-					"fire units do extra elemental weakness dmg": true,
-					"proc id": "55",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"increase bb gauge gradual": 50,
-					"increase bb gauge gradual turns (37)": 3,
-					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
 				}
 			]
 		},
@@ -564,14 +671,42 @@
 					"target type": "enemy"
 				},
 				{
-					"bb atk% buff": 600,
+					"bb added atk% based on hp": 2000,
+					"bb added atk% proportional to hp": "lost",
+					"bb base atk%": 2000,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 1000,
 					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "45",
-					"sbb atk% buff": 600,
+					"sbb atk% buff": 1000,
 					"target area": "aoe",
 					"target type": "party",
-					"ubb atk% buff": 600
+					"ubb atk% buff": 1000
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -581,24 +716,6 @@
 					"self stat buff turns": 3,
 					"target area": "single",
 					"target type": "self"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 400,
-					"fire units do extra elemental weakness dmg": true,
-					"proc id": "55",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"increase bb gauge gradual": 50,
-					"increase bb gauge gradual turns (37)": 3,
-					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
 				}
 			]
 		},
@@ -617,14 +734,42 @@
 					"target type": "enemy"
 				},
 				{
-					"bb atk% buff": 600,
+					"bb added atk% based on hp": 2000,
+					"bb added atk% proportional to hp": "lost",
+					"bb base atk%": 2000,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "47",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"bb atk% buff": 1000,
 					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "45",
-					"sbb atk% buff": 600,
+					"sbb atk% buff": 1000,
 					"target area": "aoe",
 					"target type": "party",
-					"ubb atk% buff": 600
+					"ubb atk% buff": 1000
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -634,24 +779,6 @@
 					"self stat buff turns": 3,
 					"target area": "single",
 					"target type": "self"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 400,
-					"fire units do extra elemental weakness dmg": true,
-					"proc id": "55",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"increase bb gauge gradual": 50,
-					"increase bb gauge gradual turns (37)": 3,
-					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
 				}
 			]
 		}

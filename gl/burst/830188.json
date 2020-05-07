@@ -11,7 +11,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-03-05T12:05:52.000Z",
-		"updatedAt": "2017-06-14T11:43:33.000Z"
+		"updatedAt": "2019-05-08T23:27:22.000Z"
 	},
 	"damage frames": [
 		{
@@ -28,9 +28,13 @@
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
-			"frame times": [],
-			"hit dmg% distribution": [],
-			"hit dmg% distribution (total)": 0,
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "10000"
 		},
@@ -57,9 +61,33 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "44"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "10022"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "10023"
 		}
 	],
-	"desc": "Powerful Earth attack on all foes, casts Taunt and boosts own Def for 1 turn, greatly boosts Def relative to Atk for 3 turns & adds additional powerful attack at turn's end for 3 turns",
+	"desc": "Powerful Earth attack on all foes, casts Taunt and hugely boosts own Def for 2 turns, greatly boosts Def relative to Atk for 3 turns, adds additional powerful attack at turn's end for 3 turns & reduces passive healing effectiveness for 1 turn (PvP modes only)",
 	"drop check count": 20,
 	"id": "830188",
 	"levels": [
@@ -68,224 +96,19 @@
 			"effects": [
 				{
 					"bb atk%": 370,
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"def% buff": 100,
+					"def% buff": 200,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "10000",
 					"target area": "single",
 					"target type": "self",
-					"taunt turns (10000)": 1
-				},
-				{
-					"% converted turns": 3,
-					"converted attribute": "attack",
-					"def% buff (47)": 40,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dot atk%": 500,
-					"dot element affected": true,
-					"dot flat atk": 100,
-					"dot turns (71)": 3,
-					"dot unit index": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "44",
-					"target area": "aoe",
-					"target type": "enemy"
-				}
-			]
-		},
-		{
-			"bc cost": 27,
-			"effects": [
-				{
-					"bb atk%": 380,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"def% buff": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "10000",
-					"target area": "single",
-					"target type": "self",
-					"taunt turns (10000)": 1
-				},
-				{
-					"% converted turns": 3,
-					"converted attribute": "attack",
-					"def% buff (47)": 42,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dot atk%": 500,
-					"dot element affected": true,
-					"dot flat atk": 100,
-					"dot turns (71)": 3,
-					"dot unit index": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "44",
-					"target area": "aoe",
-					"target type": "enemy"
-				}
-			]
-		},
-		{
-			"bc cost": 27,
-			"effects": [
-				{
-					"bb atk%": 390,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"def% buff": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "10000",
-					"target area": "single",
-					"target type": "self",
-					"taunt turns (10000)": 1
-				},
-				{
-					"% converted turns": 3,
-					"converted attribute": "attack",
-					"def% buff (47)": 44,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dot atk%": 500,
-					"dot element affected": true,
-					"dot flat atk": 100,
-					"dot turns (71)": 3,
-					"dot unit index": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "44",
-					"target area": "aoe",
-					"target type": "enemy"
-				}
-			]
-		},
-		{
-			"bc cost": 27,
-			"effects": [
-				{
-					"bb atk%": 400,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"def% buff": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "10000",
-					"target area": "single",
-					"target type": "self",
-					"taunt turns (10000)": 1
-				},
-				{
-					"% converted turns": 3,
-					"converted attribute": "attack",
-					"def% buff (47)": 46,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dot atk%": 500,
-					"dot element affected": true,
-					"dot flat atk": 100,
-					"dot turns (71)": 3,
-					"dot unit index": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "44",
-					"target area": "aoe",
-					"target type": "enemy"
-				}
-			]
-		},
-		{
-			"bc cost": 27,
-			"effects": [
-				{
-					"bb atk%": 410,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"def% buff": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "10000",
-					"target area": "single",
-					"target type": "self",
-					"taunt turns (10000)": 1
-				},
-				{
-					"% converted turns": 3,
-					"converted attribute": "attack",
-					"def% buff (47)": 48,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dot atk%": 500,
-					"dot element affected": true,
-					"dot flat atk": 100,
-					"dot turns (71)": 3,
-					"dot unit index": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "44",
-					"target area": "aoe",
-					"target type": "enemy"
-				}
-			]
-		},
-		{
-			"bc cost": 27,
-			"effects": [
-				{
-					"bb atk%": 420,
-					"bb flat atk": 100,
-					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"def% buff": 100,
-					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "10000",
-					"target area": "single",
-					"target type": "self",
-					"taunt turns (10000)": 1
+					"taunt turns (10000)": 2
 				},
 				{
 					"% converted turns": 3,
@@ -297,7 +120,7 @@
 					"target type": "party"
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 600,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -306,6 +129,20 @@
 					"proc id": "44",
 					"target area": "aoe",
 					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10022",
+					"unknown proc param": "30,1,0"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10023",
+					"unknown proc param": "30,1,0"
 				}
 			]
 		},
@@ -313,20 +150,20 @@
 			"bc cost": 27,
 			"effects": [
 				{
-					"bb atk%": 430,
-					"bb flat atk": 100,
+					"bb atk%": 380,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"def% buff": 100,
+					"def% buff": 200,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "10000",
 					"target area": "single",
 					"target type": "self",
-					"taunt turns (10000)": 1
+					"taunt turns (10000)": 2
 				},
 				{
 					"% converted turns": 3,
@@ -338,7 +175,7 @@
 					"target type": "party"
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 600,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -347,6 +184,20 @@
 					"proc id": "44",
 					"target area": "aoe",
 					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10022",
+					"unknown proc param": "30,1,0"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10023",
+					"unknown proc param": "30,1,0"
 				}
 			]
 		},
@@ -354,20 +205,20 @@
 			"bc cost": 27,
 			"effects": [
 				{
-					"bb atk%": 440,
-					"bb flat atk": 100,
+					"bb atk%": 390,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"def% buff": 100,
+					"def% buff": 200,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "10000",
 					"target area": "single",
 					"target type": "self",
-					"taunt turns (10000)": 1
+					"taunt turns (10000)": 2
 				},
 				{
 					"% converted turns": 3,
@@ -379,7 +230,7 @@
 					"target type": "party"
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 600,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -388,6 +239,20 @@
 					"proc id": "44",
 					"target area": "aoe",
 					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10022",
+					"unknown proc param": "30,1,0"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10023",
+					"unknown proc param": "30,1,0"
 				}
 			]
 		},
@@ -395,20 +260,20 @@
 			"bc cost": 27,
 			"effects": [
 				{
-					"bb atk%": 450,
-					"bb flat atk": 100,
+					"bb atk%": 400,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"def% buff": 100,
+					"def% buff": 200,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "10000",
 					"target area": "single",
 					"target type": "self",
-					"taunt turns (10000)": 1
+					"taunt turns (10000)": 2
 				},
 				{
 					"% converted turns": 3,
@@ -420,7 +285,7 @@
 					"target type": "party"
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 600,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -429,6 +294,20 @@
 					"proc id": "44",
 					"target area": "aoe",
 					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10022",
+					"unknown proc param": "30,1,0"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10023",
+					"unknown proc param": "30,1,0"
 				}
 			]
 		},
@@ -436,20 +315,75 @@
 			"bc cost": 27,
 			"effects": [
 				{
-					"bb atk%": 470,
-					"bb flat atk": 100,
+					"bb atk%": 410,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"proc id": "1",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"def% buff": 100,
+					"def% buff": 200,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "10000",
 					"target area": "single",
 					"target type": "self",
-					"taunt turns (10000)": 1
+					"taunt turns (10000)": 2
+				},
+				{
+					"% converted turns": 3,
+					"converted attribute": "attack",
+					"def% buff (47)": 58,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dot atk%": 600,
+					"dot element affected": true,
+					"dot flat atk": 100,
+					"dot turns (71)": 3,
+					"dot unit index": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "44",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10022",
+					"unknown proc param": "30,1,0"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10023",
+					"unknown proc param": "30,1,0"
+				}
+			]
+		},
+		{
+			"bc cost": 27,
+			"effects": [
+				{
+					"bb atk%": 420,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"def% buff": 200,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "10000",
+					"target area": "single",
+					"target type": "self",
+					"taunt turns (10000)": 2
 				},
 				{
 					"% converted turns": 3,
@@ -461,7 +395,7 @@
 					"target type": "party"
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 600,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -470,6 +404,240 @@
 					"proc id": "44",
 					"target area": "aoe",
 					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10022",
+					"unknown proc param": "30,1,0"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10023",
+					"unknown proc param": "30,1,0"
+				}
+			]
+		},
+		{
+			"bc cost": 27,
+			"effects": [
+				{
+					"bb atk%": 430,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"def% buff": 200,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "10000",
+					"target area": "single",
+					"target type": "self",
+					"taunt turns (10000)": 2
+				},
+				{
+					"% converted turns": 3,
+					"converted attribute": "attack",
+					"def% buff (47)": 62,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dot atk%": 600,
+					"dot element affected": true,
+					"dot flat atk": 100,
+					"dot turns (71)": 3,
+					"dot unit index": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "44",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10022",
+					"unknown proc param": "30,1,0"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10023",
+					"unknown proc param": "30,1,0"
+				}
+			]
+		},
+		{
+			"bc cost": 27,
+			"effects": [
+				{
+					"bb atk%": 440,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"def% buff": 200,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "10000",
+					"target area": "single",
+					"target type": "self",
+					"taunt turns (10000)": 2
+				},
+				{
+					"% converted turns": 3,
+					"converted attribute": "attack",
+					"def% buff (47)": 64,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dot atk%": 600,
+					"dot element affected": true,
+					"dot flat atk": 100,
+					"dot turns (71)": 3,
+					"dot unit index": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "44",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10022",
+					"unknown proc param": "30,1,0"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10023",
+					"unknown proc param": "30,1,0"
+				}
+			]
+		},
+		{
+			"bc cost": 27,
+			"effects": [
+				{
+					"bb atk%": 450,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"def% buff": 200,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "10000",
+					"target area": "single",
+					"target type": "self",
+					"taunt turns (10000)": 2
+				},
+				{
+					"% converted turns": 3,
+					"converted attribute": "attack",
+					"def% buff (47)": 66,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dot atk%": 600,
+					"dot element affected": true,
+					"dot flat atk": 100,
+					"dot turns (71)": 3,
+					"dot unit index": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "44",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10022",
+					"unknown proc param": "30,1,0"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10023",
+					"unknown proc param": "30,1,0"
+				}
+			]
+		},
+		{
+			"bc cost": 27,
+			"effects": [
+				{
+					"bb atk%": 470,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"def% buff": 200,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "10000",
+					"target area": "single",
+					"target type": "self",
+					"taunt turns (10000)": 2
+				},
+				{
+					"% converted turns": 3,
+					"converted attribute": "attack",
+					"def% buff (47)": 70,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dot atk%": 600,
+					"dot element affected": true,
+					"dot flat atk": 100,
+					"dot turns (71)": 3,
+					"dot unit index": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "44",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10022",
+					"unknown proc param": "30,1,0"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"target area": "aoe",
+					"target type": "100",
+					"unknown proc id": "10023",
+					"unknown proc param": "30,1,0"
 				}
 			]
 		}
