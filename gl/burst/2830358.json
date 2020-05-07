@@ -11,7 +11,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-07-14T12:22:34.000Z",
-		"updatedAt": "2017-07-14T12:22:34.000Z"
+		"updatedAt": "2019-10-02T15:26:11.000Z"
 	},
 	"damage frames": [
 		{
@@ -102,7 +102,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "18"
+			"proc id": "87"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -115,9 +115,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "62"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "18"
 		}
 	],
-	"desc": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier",
+	"desc": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, Spark damage hugely restores HP for 3 turns & activates Earth barrier",
 	"drop check count": 1,
 	"id": "2830358",
 	"levels": [
@@ -125,7 +137,7 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb added atk% based on hp": 1300,
+					"bb added atk% based on hp": 1500,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 1500,
 					"bb flat atk": 200,
@@ -138,26 +150,28 @@
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 350,
+					"spark dmg% buff (40)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (1)": 350,
+					"atk% buff (1)": 400,
 					"buff turns": 3,
-					"def% buff (3)": 350,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 350,
+					"rec% buff (5)": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 2000,
+					"spark recover hp low": 1500,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -166,8 +180,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "earth",
-					"elemental barrier hp": 30000,
+					"elemental barrier hp": 50000,
 					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -177,7 +199,7 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb added atk% based on hp": 1300,
+					"bb added atk% based on hp": 1500,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 1500,
 					"bb flat atk": 200,
@@ -190,26 +212,28 @@
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 350,
+					"spark dmg% buff (40)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (1)": 350,
+					"atk% buff (1)": 400,
 					"buff turns": 3,
-					"def% buff (3)": 350,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 350,
+					"rec% buff (5)": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 2000,
+					"spark recover hp low": 1500,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -218,8 +242,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "earth",
-					"elemental barrier hp": 30000,
+					"elemental barrier hp": 50000,
 					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -229,7 +261,7 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb added atk% based on hp": 1300,
+					"bb added atk% based on hp": 1500,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 1500,
 					"bb flat atk": 200,
@@ -242,26 +274,28 @@
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 350,
+					"spark dmg% buff (40)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (1)": 350,
+					"atk% buff (1)": 400,
 					"buff turns": 3,
-					"def% buff (3)": 350,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 350,
+					"rec% buff (5)": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 2000,
+					"spark recover hp low": 1500,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -270,8 +304,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "earth",
-					"elemental barrier hp": 30000,
+					"elemental barrier hp": 50000,
 					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -281,7 +323,7 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb added atk% based on hp": 1300,
+					"bb added atk% based on hp": 1500,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 1500,
 					"bb flat atk": 200,
@@ -294,26 +336,28 @@
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 350,
+					"spark dmg% buff (40)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (1)": 350,
+					"atk% buff (1)": 400,
 					"buff turns": 3,
-					"def% buff (3)": 350,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 350,
+					"rec% buff (5)": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 2000,
+					"spark recover hp low": 1500,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -322,8 +366,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "earth",
-					"elemental barrier hp": 30000,
+					"elemental barrier hp": 50000,
 					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -333,7 +385,7 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb added atk% based on hp": 1300,
+					"bb added atk% based on hp": 1500,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 1500,
 					"bb flat atk": 200,
@@ -346,26 +398,28 @@
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 350,
+					"spark dmg% buff (40)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (1)": 350,
+					"atk% buff (1)": 400,
 					"buff turns": 3,
-					"def% buff (3)": 350,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 350,
+					"rec% buff (5)": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 2000,
+					"spark recover hp low": 1500,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -374,8 +428,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "earth",
-					"elemental barrier hp": 30000,
+					"elemental barrier hp": 50000,
 					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -385,7 +447,7 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb added atk% based on hp": 1300,
+					"bb added atk% based on hp": 1500,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 1500,
 					"bb flat atk": 200,
@@ -398,26 +460,28 @@
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 350,
+					"spark dmg% buff (40)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (1)": 350,
+					"atk% buff (1)": 400,
 					"buff turns": 3,
-					"def% buff (3)": 350,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 350,
+					"rec% buff (5)": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 2000,
+					"spark recover hp low": 1500,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -426,8 +490,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "earth",
-					"elemental barrier hp": 30000,
+					"elemental barrier hp": 50000,
 					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -437,7 +509,7 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb added atk% based on hp": 1300,
+					"bb added atk% based on hp": 1500,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 1500,
 					"bb flat atk": 200,
@@ -450,26 +522,28 @@
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 350,
+					"spark dmg% buff (40)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (1)": 350,
+					"atk% buff (1)": 400,
 					"buff turns": 3,
-					"def% buff (3)": 350,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 350,
+					"rec% buff (5)": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 2000,
+					"spark recover hp low": 1500,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -478,8 +552,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "earth",
-					"elemental barrier hp": 30000,
+					"elemental barrier hp": 50000,
 					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -489,7 +571,7 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb added atk% based on hp": 1300,
+					"bb added atk% based on hp": 1500,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 1500,
 					"bb flat atk": 200,
@@ -502,26 +584,28 @@
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 350,
+					"spark dmg% buff (40)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (1)": 350,
+					"atk% buff (1)": 400,
 					"buff turns": 3,
-					"def% buff (3)": 350,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 350,
+					"rec% buff (5)": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 2000,
+					"spark recover hp low": 1500,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -530,8 +614,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "earth",
-					"elemental barrier hp": 30000,
+					"elemental barrier hp": 50000,
 					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -541,7 +633,7 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb added atk% based on hp": 1300,
+					"bb added atk% based on hp": 1500,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 1500,
 					"bb flat atk": 200,
@@ -554,26 +646,28 @@
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 350,
+					"spark dmg% buff (40)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (1)": 350,
+					"atk% buff (1)": 400,
 					"buff turns": 3,
-					"def% buff (3)": 350,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 350,
+					"rec% buff (5)": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 2000,
+					"spark recover hp low": 1500,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -582,8 +676,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "earth",
-					"elemental barrier hp": 30000,
+					"elemental barrier hp": 50000,
 					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -593,7 +695,7 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb added atk% based on hp": 1300,
+					"bb added atk% based on hp": 1500,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 1500,
 					"bb flat atk": 200,
@@ -606,26 +708,28 @@
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 350,
+					"spark dmg% buff (40)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (1)": 350,
+					"atk% buff (1)": 400,
 					"buff turns": 3,
-					"def% buff (3)": 350,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 350,
+					"rec% buff (5)": 400,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"dmg% reduction": 100,
-					"dmg% reduction turns (36)": 2,
 					"effect delay time(ms)/frame": "0.0/0",
-					"proc id": "18",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 2000,
+					"spark recover hp low": 1500,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -634,8 +738,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "earth",
-					"elemental barrier hp": 30000,
+					"elemental barrier hp": 50000,
 					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
