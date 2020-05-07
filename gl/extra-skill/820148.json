@@ -4,51 +4,57 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2018-01-10T11:38:12.000Z",
-		"updatedAt": "2018-01-10T11:38:12.000Z"
+		"updatedAt": "2019-06-27T21:03:21.000Z"
 	},
-	"desc": "50% boost to Rec, max HP & boosts BC, HC drop rates for all allies when Tridon's Trident is equipped, 100% boost to Def for 2 turns when HP is below 50% & negates Def ignoring effect ",
+	"desc": "50% boost to all parameters and boosts BC, HC drop rates for all allies when Prosklystios is equipped, 30% boost to max HP for all allies, 100% boost to Def, Rec for 2 turns when HP is below 50% & negates Def ignoring effect",
 	"effects": [
 		{
+			"atk% buff": 50,
 			"conditions": [
 				{
 					"item required": [
-						"818916"
+						"819204"
 					]
 				}
 			],
+			"def% buff": 50,
 			"hp% buff": 50,
 			"passive id": "1",
 			"passive target": "self",
 			"rec% buff": 50
 		},
 		{
-			"bc drop rate% buff": 20,
+			"bc drop rate% buff": 30,
 			"conditions": [
 				{
 					"item required": [
-						"818916"
+						"819204"
 					]
 				}
 			],
-			"hc drop rate% buff": 20,
+			"hc drop rate% buff": 30,
 			"passive id": "19",
 			"passive target": "party"
 		},
 		{
-			"buff": {
-				"buff turns (3)": "2",
-				"def% buff (3)": 100
-			},
 			"conditions": [],
-			"hp below % buff activation": 50,
-			"passive id": "55",
-			"passive target": "self"
+			"def% buff": 100,
+			"hp below % buff requirement": 50,
+			"passive id": "11",
+			"passive target": "self",
+			"rec% buff": 100
 		},
 		{
 			"conditions": [],
 			"ignore def resist chance%": 100,
 			"passive id": "92",
 			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"hp% buff": 30,
+			"passive id": "1",
+			"passive target": "party"
 		}
 	],
 	"id": "820148",

@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 34,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2018-03-16T13:02:26.000Z"
+		"updatedAt": "2019-06-27T21:03:21.000Z"
 	},
 	"damage frames": [
 		{
@@ -90,7 +90,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 34,
-			"proc id": "1"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -139,9 +139,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "24"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "20"
 		}
 	],
-	"desc": "34 combo powerful Water attack on all foes, activates Non-elemental shield for 2 turns, greatly boosts BC, HC drop rate for 3 turns, hugely boosts Def, Rec for 3 turns & hugely boosts Atk, Def relative to Rec for 3 turns",
+	"desc": "34 combo powerful Water attack on all foes (damage relative to remaining HP), activates Non-elemental shield for 3 turns, greatly boosts BC, HC drop rate for 3 turns, hugely boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to Rec for 3 turns & damage taken hugely boosts BB gauge for 3 turns",
 	"drop check count": 1,
 	"id": "1820148",
 	"levels": [
@@ -149,12 +161,12 @@
 			"bc cost": 35,
 			"effects": [
 				{
-					"bb atk%": 600,
-					"bb bc%": 10,
+					"bb added atk% based on hp": 500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
-					"bb hc%": 10,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -163,7 +175,7 @@
 					"target area": "aoe",
 					"target type": "party",
 					"unknown proc id": "10017",
-					"unknown proc param": "0,4000,4000,2,60"
+					"unknown proc param": "0,6000,6000,3,60"
 				},
 				{
 					"bc drop rate% buff (10)": 30,
@@ -175,12 +187,13 @@
 					"target type": "party"
 				},
 				{
+					"atk% buff (1)": 150,
 					"buff turns": 3,
-					"def% buff (3)": 190,
+					"def% buff (3)": 150,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 190,
+					"rec% buff (5)": 150,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -193,6 +206,16 @@
 					"proc id": "24",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -200,12 +223,12 @@
 			"bc cost": 35,
 			"effects": [
 				{
-					"bb atk%": 610,
-					"bb bc%": 10,
+					"bb added atk% based on hp": 510,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
-					"bb hc%": 10,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -214,7 +237,7 @@
 					"target area": "aoe",
 					"target type": "party",
 					"unknown proc id": "10017",
-					"unknown proc param": "0,4000,4000,2,60"
+					"unknown proc param": "0,6000,6000,3,60"
 				},
 				{
 					"bc drop rate% buff (10)": 31,
@@ -226,12 +249,13 @@
 					"target type": "party"
 				},
 				{
+					"atk% buff (1)": 155,
 					"buff turns": 3,
-					"def% buff (3)": 190,
+					"def% buff (3)": 155,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 190,
+					"rec% buff (5)": 155,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -244,6 +268,16 @@
 					"proc id": "24",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -251,12 +285,12 @@
 			"bc cost": 35,
 			"effects": [
 				{
-					"bb atk%": 620,
-					"bb bc%": 10,
+					"bb added atk% based on hp": 520,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
-					"bb hc%": 10,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -265,7 +299,7 @@
 					"target area": "aoe",
 					"target type": "party",
 					"unknown proc id": "10017",
-					"unknown proc param": "0,4000,4000,2,60"
+					"unknown proc param": "0,6000,6000,3,60"
 				},
 				{
 					"bc drop rate% buff (10)": 32,
@@ -277,12 +311,13 @@
 					"target type": "party"
 				},
 				{
+					"atk% buff (1)": 160,
 					"buff turns": 3,
-					"def% buff (3)": 190,
+					"def% buff (3)": 160,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 190,
+					"rec% buff (5)": 160,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -295,6 +330,16 @@
 					"proc id": "24",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -302,12 +347,12 @@
 			"bc cost": 35,
 			"effects": [
 				{
-					"bb atk%": 630,
-					"bb bc%": 10,
+					"bb added atk% based on hp": 530,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
-					"bb hc%": 10,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -316,7 +361,7 @@
 					"target area": "aoe",
 					"target type": "party",
 					"unknown proc id": "10017",
-					"unknown proc param": "0,4000,4000,2,60"
+					"unknown proc param": "0,6000,6000,3,60"
 				},
 				{
 					"bc drop rate% buff (10)": 33,
@@ -328,12 +373,13 @@
 					"target type": "party"
 				},
 				{
+					"atk% buff (1)": 165,
 					"buff turns": 3,
-					"def% buff (3)": 190,
+					"def% buff (3)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 190,
+					"rec% buff (5)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -346,6 +392,16 @@
 					"proc id": "24",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -353,12 +409,12 @@
 			"bc cost": 35,
 			"effects": [
 				{
-					"bb atk%": 640,
-					"bb bc%": 10,
+					"bb added atk% based on hp": 540,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
-					"bb hc%": 10,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -367,7 +423,7 @@
 					"target area": "aoe",
 					"target type": "party",
 					"unknown proc id": "10017",
-					"unknown proc param": "0,4000,4000,2,60"
+					"unknown proc param": "0,6000,6000,3,60"
 				},
 				{
 					"bc drop rate% buff (10)": 34,
@@ -379,12 +435,13 @@
 					"target type": "party"
 				},
 				{
+					"atk% buff (1)": 170,
 					"buff turns": 3,
-					"def% buff (3)": 190,
+					"def% buff (3)": 170,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 190,
+					"rec% buff (5)": 170,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -397,6 +454,16 @@
 					"proc id": "24",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -404,12 +471,12 @@
 			"bc cost": 35,
 			"effects": [
 				{
-					"bb atk%": 650,
-					"bb bc%": 10,
+					"bb added atk% based on hp": 550,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
-					"bb hc%": 10,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -418,7 +485,7 @@
 					"target area": "aoe",
 					"target type": "party",
 					"unknown proc id": "10017",
-					"unknown proc param": "0,4000,4000,2,60"
+					"unknown proc param": "0,6000,6000,3,60"
 				},
 				{
 					"bc drop rate% buff (10)": 35,
@@ -430,12 +497,13 @@
 					"target type": "party"
 				},
 				{
+					"atk% buff (1)": 175,
 					"buff turns": 3,
-					"def% buff (3)": 190,
+					"def% buff (3)": 175,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 190,
+					"rec% buff (5)": 175,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -448,6 +516,16 @@
 					"proc id": "24",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -455,12 +533,12 @@
 			"bc cost": 35,
 			"effects": [
 				{
-					"bb atk%": 660,
-					"bb bc%": 10,
+					"bb added atk% based on hp": 560,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
-					"bb hc%": 10,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -469,7 +547,7 @@
 					"target area": "aoe",
 					"target type": "party",
 					"unknown proc id": "10017",
-					"unknown proc param": "0,4000,4000,2,60"
+					"unknown proc param": "0,6000,6000,3,60"
 				},
 				{
 					"bc drop rate% buff (10)": 36,
@@ -481,12 +559,13 @@
 					"target type": "party"
 				},
 				{
+					"atk% buff (1)": 180,
 					"buff turns": 3,
-					"def% buff (3)": 190,
+					"def% buff (3)": 180,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 190,
+					"rec% buff (5)": 180,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -499,6 +578,16 @@
 					"proc id": "24",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -506,12 +595,12 @@
 			"bc cost": 35,
 			"effects": [
 				{
-					"bb atk%": 670,
-					"bb bc%": 10,
+					"bb added atk% based on hp": 570,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
-					"bb hc%": 10,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -520,7 +609,7 @@
 					"target area": "aoe",
 					"target type": "party",
 					"unknown proc id": "10017",
-					"unknown proc param": "0,4000,4000,2,60"
+					"unknown proc param": "0,6000,6000,3,60"
 				},
 				{
 					"bc drop rate% buff (10)": 37,
@@ -532,12 +621,13 @@
 					"target type": "party"
 				},
 				{
+					"atk% buff (1)": 185,
 					"buff turns": 3,
-					"def% buff (3)": 190,
+					"def% buff (3)": 185,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 190,
+					"rec% buff (5)": 185,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -550,6 +640,16 @@
 					"proc id": "24",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -557,12 +657,12 @@
 			"bc cost": 35,
 			"effects": [
 				{
-					"bb atk%": 680,
-					"bb bc%": 10,
+					"bb added atk% based on hp": 580,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
-					"bb hc%": 10,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -571,7 +671,7 @@
 					"target area": "aoe",
 					"target type": "party",
 					"unknown proc id": "10017",
-					"unknown proc param": "0,4000,4000,2,60"
+					"unknown proc param": "0,6000,6000,3,60"
 				},
 				{
 					"bc drop rate% buff (10)": 38,
@@ -583,6 +683,7 @@
 					"target type": "party"
 				},
 				{
+					"atk% buff (1)": 190,
 					"buff turns": 3,
 					"def% buff (3)": 190,
 					"effect delay time(ms)/frame": "0.0/0",
@@ -601,6 +702,16 @@
 					"proc id": "24",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -608,12 +719,12 @@
 			"bc cost": 35,
 			"effects": [
 				{
-					"bb atk%": 700,
-					"bb bc%": 10,
+					"bb added atk% based on hp": 600,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
-					"bb hc%": 10,
 					"effect delay time(ms)/frame": "16.7/1",
-					"proc id": "1",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -622,7 +733,7 @@
 					"target area": "aoe",
 					"target type": "party",
 					"unknown proc id": "10017",
-					"unknown proc param": "0,4000,4000,2,60"
+					"unknown proc param": "0,6000,6000,3,60"
 				},
 				{
 					"bc drop rate% buff (10)": 45,
@@ -634,12 +745,13 @@
 					"target type": "party"
 				},
 				{
+					"atk% buff (1)": 200,
 					"buff turns": 3,
-					"def% buff (3)": 190,
+					"def% buff (3)": 200,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
 					"proc id": "5",
-					"rec% buff (5)": 190,
+					"rec% buff (5)": 200,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -650,6 +762,16 @@
 					"def% buff (47)": 110,
 					"effect delay time(ms)/frame": "0.0/0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill when attacked high": 9,
+					"bc fill when attacked low": 6,
+					"bc fill when attacked turns (38)": 3,
+					"bc fill when attacked%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				}
