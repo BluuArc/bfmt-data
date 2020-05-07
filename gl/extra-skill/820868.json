@@ -1,0 +1,77 @@
+{
+	"associated_units": [
+		"820868"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2020-04-15T12:18:01.000Z",
+		"updatedAt": "2020-04-15T12:18:01.000Z"
+	},
+	"desc": "25% critical damage for all allies, 100% spark damage, 30% all parameters, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Removes all status ailments and Atk, Def, Rec reduction)",
+	"effects": [
+		{
+			"conditions": [],
+			"crit multiplier%": 25,
+			"passive id": "34",
+			"passive target": "party"
+		},
+		{
+			"conditions": [],
+			"damage% for spark": 100,
+			"passive id": "31",
+			"passive target": "self"
+		},
+		{
+			"atk% buff": 30,
+			"conditions": [],
+			"def% buff": 30,
+			"hp% buff": 30,
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 30
+		},
+		{
+			"atk down resist%": 100,
+			"conditions": [],
+			"curse resist%": 100,
+			"def down resist%": 100,
+			"injury resist%": 100,
+			"paralysis resist%": 100,
+			"passive id": "73",
+			"passive target": "self",
+			"poison resist%": 100,
+			"rec down resist%": 100,
+			"sick resist%": 100,
+			"weaken resist%": 100
+		},
+		{
+			"conditions": [],
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"ailments cured": [
+						"poison",
+						"weaken",
+						"sick",
+						"injury",
+						"curse",
+						"paralysis",
+						"atk down",
+						"def down",
+						"rec down"
+					],
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "38",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"id": "820868",
+	"name": "...And a Lot of Heart",
+	"rarity": "8",
+	"target": "self"
+}
