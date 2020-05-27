@@ -1,6 +1,6 @@
 {
 	"associated_units": [
-		"820578"
+		"820578:es"
 	],
 	"bfmtMetadata": {
 		"createdAt": "2018-10-12T06:45:40.000Z",
@@ -9,9 +9,15 @@
 	"desc": "Greatly boosts critical damage when Plaguewarden Theodor is in squad or when Vellum of Curses, Salvation or Brilliance is equipped, boosts Atk, Def each turn (up to 4 turns) for all allies, greatly boosts Atk relative to lost HP, probable resistance against 2 KO attacks & 19 combo powerful Water attack on single foe to SBB",
 	"effects": [
 		{
+			"conditionParams": "2#4,860560%3,819178%3,819179%3,819180",
 			"conditions": [
 				{
-					"unit required": "860560"
+					"unit required": [
+						{
+							"id": 860568,
+							"name": "Plaguewarden Theodor"
+						}
+					]
 				},
 				{
 					"item required": [
@@ -30,6 +36,7 @@
 				}
 			],
 			"crit multiplier%": 100,
+			"params": "1",
 			"passive id": "34",
 			"passive target": "self"
 		},
@@ -38,6 +45,7 @@
 			"atk% extra buff based on hp": 150,
 			"buff proportional to hp": "lost",
 			"conditions": [],
+			"params": "50,200,0,0,0,0,1",
 			"passive id": "46",
 			"passive target": "self"
 		},
@@ -46,6 +54,7 @@
 			"conditions": [],
 			"def% max buff": 60,
 			"increase from min to max": 1,
+			"params": "0,60,0,60,0,0,1,4",
 			"passive id": "105",
 			"passive target": "party",
 			"turn count": 4
@@ -56,11 +65,13 @@
 			"angel idol recover chance% low": 40,
 			"angel idol recover counts": 2,
 			"conditions": [],
+			"params": "0,2,40,40,0",
 			"passive id": "69",
 			"passive target": "self"
 		},
 		{
 			"conditions": [],
+			"params": "1,620&200&0&0&0&0,2,1,0,0,1,0",
 			"passive id": "66",
 			"passive target": "self",
 			"trigger on sbb": true,

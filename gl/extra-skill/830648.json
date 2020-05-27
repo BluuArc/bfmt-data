@@ -1,6 +1,6 @@
 {
 	"associated_units": [
-		"830648"
+		"830648:es"
 	],
 	"bfmtMetadata": {
 		"createdAt": "2018-11-15T15:03:40.000Z",
@@ -9,6 +9,7 @@
 	"desc": "25% damage reduction from Earth, Thunder types when Damage Reducing Sphere is equipped, greatly restores HP for 3 turns when guarding for all allies, 15% additional damage reduction for all allies, adds Earth Shield for 3 turns effect to BB/SBB & negates Spark damage",
 	"effects": [
 		{
+			"conditionParams": "1#5,10%0,0%0,0%0,0",
 			"conditions": [
 				{
 					"sphere category required": "Damage Reducing",
@@ -18,6 +19,7 @@
 			"dmg% mitigation for elemental attacks": 25,
 			"mitigate earth attacks": true,
 			"mitigate thunder attacks": true,
+			"params": "3,4,0,0,0,0,25",
 			"passive id": "62",
 			"passive target": "self"
 		},
@@ -25,14 +27,15 @@
 			"base spark dmg% resist": 100,
 			"buff spark dmg% resist": 100,
 			"conditions": [],
+			"params": "100,100",
 			"passive id": "77",
 			"passive target": "self"
 		},
 		{
 			"conditions": [],
-			"passive target": "party",
-			"unknown passive id": "127",
-			"unknown passive params": "100,15"
+			"params": "100,15",
+			"passive id": "127",
+			"passive target": "party"
 		},
 		{
 			"buff": {
@@ -42,11 +45,13 @@
 			},
 			"conditions": [],
 			"on guard activation chance%": 100,
+			"params": "8,4000&5000&0,-1,100,3",
 			"passive id": "88",
 			"passive target": "party"
 		},
 		{
 			"conditions": [],
+			"params": "10017,3&6000&6000&3&0,1,2,0,1,1,0",
 			"passive id": "66",
 			"passive target": "self",
 			"trigger on bb": true,

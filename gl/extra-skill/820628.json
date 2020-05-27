@@ -1,6 +1,6 @@
 {
 	"associated_units": [
-		"820628"
+		"820628:es"
 	],
 	"bfmtMetadata": {
 		"createdAt": "2019-02-08T04:00:05.000Z",
@@ -9,6 +9,7 @@
 	"desc": "30% boost to max HP for all allies when Uln'gha is equipped, negates Def ignoring effects for all allies, 50% additional damage reduction & adds slight HP absorption to attack",
 	"effects": [
 		{
+			"conditionParams": "1#1,819210%0,0%0,0%0,0",
 			"conditions": [
 				{
 					"item required": [
@@ -17,26 +18,29 @@
 				}
 			],
 			"hp% buff": 30,
+			"params": "0,0,0,0,30",
 			"passive id": "1",
 			"passive target": "party"
 		},
 		{
 			"conditions": [],
 			"ignore def resist chance%": 100,
+			"params": "100",
 			"passive id": "92",
 			"passive target": "party"
 		},
 		{
 			"conditions": [],
-			"passive target": "self",
-			"unknown passive id": "127",
-			"unknown passive params": "100,50"
+			"params": "100,50",
+			"passive id": "127",
+			"passive target": "self"
 		},
 		{
 			"conditions": [],
 			"hp drain chance%": 100,
 			"hp drain% high": 15,
 			"hp drain% low": 10,
+			"params": "10,15,100",
 			"passive id": "17",
 			"passive target": "self"
 		}

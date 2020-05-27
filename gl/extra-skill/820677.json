@@ -1,6 +1,6 @@
 {
 	"associated_units": [
-		"820677"
+		"820677:es"
 	],
 	"bfmtMetadata": {
 		"createdAt": "2019-03-13T12:13:34.000Z",
@@ -9,9 +9,15 @@
 	"desc": "Adds probable Spark critical when Scraptech Vektor is in the same squad or when Excelsior Chip MK-1, MK-2 or MK-3 is equipped, slightly boosts Spark damage for all allies & 80% boost to Atk and 20% boost to critical hit rate",
 	"effects": [
 		{
+			"conditionParams": "2#4,830678%3,819206%3,819207%3,819208",
 			"conditions": [
 				{
-					"unit required": "830678"
+					"unit required": [
+						{
+							"id": 830678,
+							"name": "Scraptech Vektor"
+						}
+					]
 				},
 				{
 					"item required": [
@@ -29,6 +35,7 @@
 					]
 				}
 			],
+			"params": "50,50",
 			"passive id": "100",
 			"passive target": "self",
 			"spark crit chance%": 50,
@@ -38,12 +45,14 @@
 			"atk% buff": 80,
 			"conditions": [],
 			"crit% buff": 20,
+			"params": "80,0,0,20,0",
 			"passive id": "1",
 			"passive target": "self"
 		},
 		{
 			"conditions": [],
 			"damage% for spark": 15,
+			"params": "15,0,0,0,0,0",
 			"passive id": "31",
 			"passive target": "party"
 		}

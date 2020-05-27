@@ -1,6 +1,6 @@
 {
 	"associated_units": [
-		"820678"
+		"820678:es"
 	],
 	"bfmtMetadata": {
 		"createdAt": "2019-03-13T12:13:34.000Z",
@@ -9,9 +9,15 @@
 	"desc": "20% boost to Spark damage for all allies, probable Spark critical when Scraptech Vektor is in squad or when Excelsior Chip MK-1, MK-2, or MK-3 is equipped, 100% boost to Atk, 30% boost to critical hit rate, resistance against 1 KO attack when HP is below 40% & raises Atk parameter limits to 180000",
 	"effects": [
 		{
+			"conditionParams": "2#4,830678%3,819206%3,819207%3,819208",
 			"conditions": [
 				{
-					"unit required": "830678"
+					"unit required": [
+						{
+							"id": 830678,
+							"name": "Scraptech Vektor"
+						}
+					]
 				},
 				{
 					"item required": [
@@ -29,6 +35,7 @@
 					]
 				}
 			],
+			"params": "50,100",
 			"passive id": "100",
 			"passive target": "self",
 			"spark crit chance%": 50,
@@ -38,12 +45,14 @@
 			"atk% buff": 100,
 			"conditions": [],
 			"crit% buff": 30,
+			"params": "100,0,0,30,0",
 			"passive id": "1",
 			"passive target": "self"
 		},
 		{
 			"conditions": [],
 			"damage% for spark": 20,
+			"params": "20,0,0,0,0,0",
 			"passive id": "31",
 			"passive target": "party"
 		},
@@ -55,12 +64,14 @@
 			},
 			"conditions": [],
 			"hp below % buff activation": 40,
+			"params": "12,100,1,40,2,-1",
 			"passive id": "55",
 			"passive target": "self"
 		},
 		{
 			"conditions": [],
 			"increase atk cap": 180000,
+			"params": "180000",
 			"passive id": "143",
 			"passive target": "self"
 		}
