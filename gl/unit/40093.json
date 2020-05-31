@@ -19,6 +19,7 @@
 			"target type": "enemy"
 		}
 	],
+	"ai_id": "100",
 	"animations": {
 		"attack": {
 			"total number of frames": 135
@@ -31,6 +32,9 @@
 		}
 	},
 	"bb": {
+		"associated_units": [
+			"40093:bb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -56,6 +60,7 @@
 						"bb atk%": 200,
 						"effect delay time(ms)/frame": "0.0/0",
 						"hits": 5,
+						"params": "200,0,0,0,0,5,42,10",
 						"proc id": "13",
 						"random attack": true,
 						"target area": "single",
@@ -70,6 +75,7 @@
 						"bb atk%": 210,
 						"effect delay time(ms)/frame": "0.0/0",
 						"hits": 5,
+						"params": "210,0,0,0,0,5,42,10",
 						"proc id": "13",
 						"random attack": true,
 						"target area": "single",
@@ -84,6 +90,7 @@
 						"bb atk%": 220,
 						"effect delay time(ms)/frame": "0.0/0",
 						"hits": 5,
+						"params": "220,0,0,0,0,5,42,10",
 						"proc id": "13",
 						"random attack": true,
 						"target area": "single",
@@ -98,6 +105,7 @@
 						"bb atk%": 230,
 						"effect delay time(ms)/frame": "0.0/0",
 						"hits": 5,
+						"params": "230,0,0,0,0,5,42,10",
 						"proc id": "13",
 						"random attack": true,
 						"target area": "single",
@@ -112,6 +120,7 @@
 						"bb atk%": 240,
 						"effect delay time(ms)/frame": "0.0/0",
 						"hits": 5,
+						"params": "240,0,0,0,0,5,42,10",
 						"proc id": "13",
 						"random attack": true,
 						"target area": "single",
@@ -126,6 +135,7 @@
 						"bb atk%": 250,
 						"effect delay time(ms)/frame": "0.0/0",
 						"hits": 5,
+						"params": "250,0,0,0,0,5,42,10",
 						"proc id": "13",
 						"random attack": true,
 						"target area": "single",
@@ -140,6 +150,7 @@
 						"bb atk%": 260,
 						"effect delay time(ms)/frame": "0.0/0",
 						"hits": 5,
+						"params": "260,0,0,0,0,5,42,10",
 						"proc id": "13",
 						"random attack": true,
 						"target area": "single",
@@ -154,6 +165,7 @@
 						"bb atk%": 270,
 						"effect delay time(ms)/frame": "0.0/0",
 						"hits": 5,
+						"params": "270,0,0,0,0,5,42,10",
 						"proc id": "13",
 						"random attack": true,
 						"target area": "single",
@@ -168,6 +180,7 @@
 						"bb atk%": 280,
 						"effect delay time(ms)/frame": "0.0/0",
 						"hits": 5,
+						"params": "280,0,0,0,0,5,42,10",
 						"proc id": "13",
 						"random attack": true,
 						"target area": "single",
@@ -182,6 +195,7 @@
 						"bb atk%": 300,
 						"effect delay time(ms)/frame": "0.0/0",
 						"hits": 5,
+						"params": "300,0,0,0,0,5,42,10",
 						"proc id": "13",
 						"random attack": true,
 						"target area": "single",
@@ -225,7 +239,7 @@
 	"drop check count": 2,
 	"element": "thunder",
 	"evolution": {
-		"cost": 200000,
+		"karma": 0,
 		"mats": [
 			{
 				"id": "40133",
@@ -254,7 +268,10 @@
 			}
 		],
 		"next": "40094",
-		"prev": "40092"
+		"prev": [
+			"40092"
+		],
+		"zel": 200000
 	},
 	"exp_pattern": 15,
 	"gender": "other",
@@ -269,9 +286,19 @@
 	},
 	"kind": "normal",
 	"leader skill": {
+		"associated_units": [
+			"30313:ls",
+			"40031:ls",
+			"40040:ls",
+			"40041:ls",
+			"40042:ls",
+			"40092:ls",
+			"40093:ls"
+		],
 		"desc": "10% reduction in damage from Thunder Types",
 		"effects": [
 			{
+				"params": "4,10",
 				"passive id": "5",
 				"thunder resist%": 10
 			}
@@ -295,6 +322,7 @@
 	"name": "Great Falcon Ziz",
 	"rarity": 4,
 	"sell caution": false,
+	"sell_price": 2500,
 	"stats": {
 		"_base": {
 			"atk": 644,

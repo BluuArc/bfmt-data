@@ -19,6 +19,7 @@
 			"target type": "enemy"
 		}
 	],
+	"ai_id": "100",
 	"animations": {
 		"attack": {
 			"total number of frames": 136
@@ -31,6 +32,9 @@
 		}
 	},
 	"bb": {
+		"associated_units": [
+			"60285:bb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -82,6 +86,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 40,
 						"hp drain% low": 30,
+						"params": "340,100,0,0,0,0,30,40",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -97,6 +102,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 42,
 						"hp drain% low": 32,
+						"params": "360,100,0,0,0,0,32,42",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -112,6 +118,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 44,
 						"hp drain% low": 34,
+						"params": "380,100,0,0,0,0,34,44",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -127,6 +134,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 46,
 						"hp drain% low": 36,
+						"params": "400,100,0,0,0,0,36,46",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -142,6 +150,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 48,
 						"hp drain% low": 38,
+						"params": "420,100,0,0,0,0,38,48",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -157,6 +166,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 50,
 						"hp drain% low": 40,
+						"params": "440,100,0,0,0,0,40,50",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -172,6 +182,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 52,
 						"hp drain% low": 42,
+						"params": "460,100,0,0,0,0,42,52",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -187,6 +198,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 54,
 						"hp drain% low": 44,
+						"params": "480,100,0,0,0,0,44,54",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -202,6 +214,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 56,
 						"hp drain% low": 46,
+						"params": "500,100,0,0,0,0,46,56",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -217,6 +230,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 60,
 						"hp drain% low": 50,
+						"params": "520,100,0,0,0,0,50,60",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -267,7 +281,7 @@
 	"drop check count": 3,
 	"element": "dark",
 	"evolution": {
-		"cost": 1500000,
+		"karma": 0,
 		"mats": [
 			{
 				"id": "60344",
@@ -296,7 +310,10 @@
 			}
 		],
 		"next": "60286",
-		"prev": "60284"
+		"prev": [
+			"60284"
+		],
+		"zel": 1500000
 	},
 	"exp_pattern": 20,
 	"gender": "male",
@@ -311,10 +328,15 @@
 	},
 	"kind": "normal",
 	"leader skill": {
+		"associated_units": [
+			"50315:ls",
+			"60285:ls"
+		],
 		"desc": "65% boost to Atk power of all Units when 5 elements or more are present",
 		"effects": [
 			{
 				"atk% buff": 65,
+				"params": "5,65,0,0,0,0",
 				"passive id": "41",
 				"unique elements required": 5
 			}
@@ -338,6 +360,9 @@
 	"name": "Inferno Swords Logan",
 	"rarity": 6,
 	"sbb": {
+		"associated_units": [
+			"60285:sbb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "16.7/1",
@@ -405,12 +430,14 @@
 						"bb atk%": 300,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "300,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,-50,0,0,3,45",
 						"proc id": "78",
 						"self atk% buff": 200,
 						"self def% buff": -50,
@@ -427,12 +454,14 @@
 						"bb atk%": 310,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "310,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,-50,0,0,3,45",
 						"proc id": "78",
 						"self atk% buff": 200,
 						"self def% buff": -50,
@@ -449,12 +478,14 @@
 						"bb atk%": 320,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "320,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,-50,0,0,3,45",
 						"proc id": "78",
 						"self atk% buff": 200,
 						"self def% buff": -50,
@@ -471,12 +502,14 @@
 						"bb atk%": 330,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "330,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,-50,0,0,3,45",
 						"proc id": "78",
 						"self atk% buff": 200,
 						"self def% buff": -50,
@@ -493,12 +526,14 @@
 						"bb atk%": 340,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "340,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,-50,0,0,3,45",
 						"proc id": "78",
 						"self atk% buff": 200,
 						"self def% buff": -50,
@@ -515,12 +550,14 @@
 						"bb atk%": 350,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "350,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,-50,0,0,3,45",
 						"proc id": "78",
 						"self atk% buff": 200,
 						"self def% buff": -50,
@@ -537,12 +574,14 @@
 						"bb atk%": 360,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "360,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,-50,0,0,3,45",
 						"proc id": "78",
 						"self atk% buff": 200,
 						"self def% buff": -50,
@@ -559,12 +598,14 @@
 						"bb atk%": 370,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "370,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,-50,0,0,3,45",
 						"proc id": "78",
 						"self atk% buff": 200,
 						"self def% buff": -50,
@@ -581,12 +622,14 @@
 						"bb atk%": 380,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "380,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,-50,0,0,3,45",
 						"proc id": "78",
 						"self atk% buff": 200,
 						"self def% buff": -50,
@@ -603,12 +646,14 @@
 						"bb atk%": 400,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "400,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,-50,0,0,3,45",
 						"proc id": "78",
 						"self atk% buff": 200,
 						"self def% buff": -50,
@@ -622,6 +667,7 @@
 		"name": "Magical Coffin"
 	},
 	"sell caution": false,
+	"sell_price": 8000,
 	"stats": {
 		"_base": {
 			"atk": 1591,

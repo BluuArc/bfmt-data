@@ -31,6 +31,7 @@
 			"target type": "enemy"
 		}
 	],
+	"ai_id": "110",
 	"animations": {
 		"attack": {
 			"total number of frames": 77
@@ -43,6 +44,9 @@
 		}
 	},
 	"bb": {
+		"associated_units": [
+			"40016:bb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -90,6 +94,7 @@
 						"bb atk%": 150,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "150,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -103,6 +108,7 @@
 						"bb atk%": 160,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "160,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -116,6 +122,7 @@
 						"bb atk%": 170,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "170,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -129,6 +136,7 @@
 						"bb atk%": 180,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "180,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -142,6 +150,7 @@
 						"bb atk%": 190,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "190,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -155,6 +164,7 @@
 						"bb atk%": 200,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -168,6 +178,7 @@
 						"bb atk%": 210,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "210,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -181,6 +192,7 @@
 						"bb atk%": 220,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "220,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -194,6 +206,7 @@
 						"bb atk%": 230,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "230,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -207,6 +220,7 @@
 						"bb atk%": 250,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "250,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -241,7 +255,7 @@
 	"drop check count": 30,
 	"element": "thunder",
 	"evolution": {
-		"cost": 3000000,
+		"karma": 1000000,
 		"mats": [
 			{
 				"id": "40334",
@@ -285,14 +299,21 @@
 			}
 		],
 		"next": "40017",
-		"prev": "40015"
+		"prev": [
+			"40015"
+		],
+		"zel": 3000000
 	},
 	"exp_pattern": 10,
 	"extra skill": {
+		"associated_units": [
+			"40016:es"
+		],
 		"desc": "20% boost to all parameters in battle & boost to critical hit damage when Batootha is equipped. ",
 		"effects": [
 			{
 				"atk% buff": 20,
+				"conditionParams": "1#1,37620%0,0%0,0",
 				"conditions": [
 					{
 						"item required": [
@@ -302,11 +323,13 @@
 				],
 				"def% buff": 20,
 				"hp% buff": 20,
+				"params": "20,20,20,0,20",
 				"passive id": "1",
 				"passive target": "self",
 				"rec% buff": 20
 			},
 			{
+				"conditionParams": "1#1,37620%0,0%0,0",
 				"conditions": [
 					{
 						"item required": [
@@ -315,6 +338,7 @@
 					}
 				],
 				"crit multiplier%": 50,
+				"params": "0.5",
 				"passive id": "34",
 				"passive target": "self"
 			}
@@ -336,6 +360,9 @@
 	},
 	"kind": "normal",
 	"leader skill": {
+		"associated_units": [
+			"40016:ls"
+		],
 		"desc": "100% boost to Atk power and 30% increase in HP of Thunder types",
 		"effects": [
 			{
@@ -344,6 +371,7 @@
 					"thunder"
 				],
 				"hp% buff": 30,
+				"params": "4,0,100,0,0,0,30",
 				"passive id": "2"
 			}
 		],
@@ -371,6 +399,9 @@
 	},
 	"rarity": 7,
 	"sbb": {
+		"associated_units": [
+			"40016:sbb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "16.7/1",
@@ -436,6 +467,7 @@
 						"bb atk%": 400,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "400,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -445,6 +477,7 @@
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
+						"params": "0,60,0,0,0,3,150",
 						"proc id": "5",
 						"target area": "aoe",
 						"target type": "party"
@@ -458,6 +491,7 @@
 						"bb atk%": 410,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "410,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -467,6 +501,7 @@
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
+						"params": "0,65,0,0,0,3,150",
 						"proc id": "5",
 						"target area": "aoe",
 						"target type": "party"
@@ -480,6 +515,7 @@
 						"bb atk%": 420,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "420,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -489,6 +525,7 @@
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
+						"params": "0,70,0,0,0,3,150",
 						"proc id": "5",
 						"target area": "aoe",
 						"target type": "party"
@@ -502,6 +539,7 @@
 						"bb atk%": 430,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "430,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -511,6 +549,7 @@
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
+						"params": "0,75,0,0,0,3,150",
 						"proc id": "5",
 						"target area": "aoe",
 						"target type": "party"
@@ -524,6 +563,7 @@
 						"bb atk%": 440,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "440,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -533,6 +573,7 @@
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
+						"params": "0,80,0,0,0,3,150",
 						"proc id": "5",
 						"target area": "aoe",
 						"target type": "party"
@@ -546,6 +587,7 @@
 						"bb atk%": 450,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "450,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -555,6 +597,7 @@
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
+						"params": "0,85,0,0,0,3,150",
 						"proc id": "5",
 						"target area": "aoe",
 						"target type": "party"
@@ -568,6 +611,7 @@
 						"bb atk%": 460,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "460,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -577,6 +621,7 @@
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
+						"params": "0,90,0,0,0,3,150",
 						"proc id": "5",
 						"target area": "aoe",
 						"target type": "party"
@@ -590,6 +635,7 @@
 						"bb atk%": 470,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "470,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -599,6 +645,7 @@
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
+						"params": "0,95,0,0,0,3,150",
 						"proc id": "5",
 						"target area": "aoe",
 						"target type": "party"
@@ -612,6 +659,7 @@
 						"bb atk%": 480,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "480,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -621,6 +669,7 @@
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
+						"params": "0,100,0,0,0,3,150",
 						"proc id": "5",
 						"target area": "aoe",
 						"target type": "party"
@@ -634,6 +683,7 @@
 						"bb atk%": 500,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "500,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -643,6 +693,7 @@
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "all",
+						"params": "0,110,0,0,0,3,150",
 						"proc id": "5",
 						"target area": "aoe",
 						"target type": "party"
@@ -653,6 +704,7 @@
 		"name": "Thunder Comet Flash"
 	},
 	"sell caution": false,
+	"sell_price": 15000,
 	"stats": {
 		"_base": {
 			"atk": 1330,
@@ -668,6 +720,9 @@
 		}
 	},
 	"ubb": {
+		"associated_units": [
+			"40016:ubb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "16.7/1",
@@ -709,6 +764,7 @@
 						"bb atk%": 1000,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "16.7/1",
+						"params": "1000,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -716,6 +772,7 @@
 					{
 						"buff turns": 3,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "150,0,0,0,0,0,3,120",
 						"proc id": "23",
 						"spark dmg% buff (40)": 150,
 						"target area": "aoe",

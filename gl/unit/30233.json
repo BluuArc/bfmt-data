@@ -19,6 +19,7 @@
 			"target type": "enemy"
 		}
 	],
+	"ai_id": "100",
 	"animations": {
 		"attack": {
 			"total number of frames": 113
@@ -31,6 +32,9 @@
 		}
 	},
 	"bb": {
+		"associated_units": [
+			"30233:bb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -70,6 +74,7 @@
 						"bb atk%": 60,
 						"bb flat atk": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "60,50,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -83,6 +88,7 @@
 						"bb atk%": 65,
 						"bb flat atk": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "65,50,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -96,6 +102,7 @@
 						"bb atk%": 70,
 						"bb flat atk": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "70,50,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -109,6 +116,7 @@
 						"bb atk%": 75,
 						"bb flat atk": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "75,50,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -122,6 +130,7 @@
 						"bb atk%": 80,
 						"bb flat atk": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "80,50,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -135,6 +144,7 @@
 						"bb atk%": 85,
 						"bb flat atk": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "85,50,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -148,6 +158,7 @@
 						"bb atk%": 90,
 						"bb flat atk": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "90,50,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -161,6 +172,7 @@
 						"bb atk%": 95,
 						"bb flat atk": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "95,50,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -174,6 +186,7 @@
 						"bb atk%": 100,
 						"bb flat atk": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "100,50,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -187,6 +200,7 @@
 						"bb atk%": 105,
 						"bb flat atk": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "105,50,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -229,7 +243,7 @@
 	"drop check count": 2,
 	"element": "earth",
 	"evolution": {
-		"cost": 200000,
+		"karma": 0,
 		"mats": [
 			{
 				"id": "30133",
@@ -257,7 +271,8 @@
 				"type": "unit"
 			}
 		],
-		"next": "30234"
+		"next": "30234",
+		"zel": 200000
 	},
 	"exp_pattern": 20,
 	"gender": "male",
@@ -272,12 +287,16 @@
 	},
 	"kind": "normal",
 	"leader skill": {
+		"associated_units": [
+			"30233:ls"
+		],
 		"desc": "25% boost to Atk and Def for first 2 turns",
 		"effects": [
 			{
 				"first x turns": 2,
 				"first x turns atk% (1)": 25,
 				"first x turns def% (3)": 25,
+				"params": "25,25,0,0,2",
 				"passive id": "21"
 			}
 		],
@@ -300,6 +319,7 @@
 	"name": "Lugina",
 	"rarity": 4,
 	"sell caution": true,
+	"sell_price": 2500,
 	"stats": {
 		"_base": {
 			"atk": 1100,

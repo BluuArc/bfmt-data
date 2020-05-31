@@ -19,6 +19,7 @@
 			"target type": "enemy"
 		}
 	],
+	"ai_id": "100",
 	"animations": {
 		"attack": {
 			"total number of frames": 112
@@ -31,6 +32,9 @@
 		}
 	},
 	"bb": {
+		"associated_units": [
+			"20181:bb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -64,6 +68,7 @@
 						"bb atk%": 65,
 						"bb bc%": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "65,0,0,50,0,0",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -77,6 +82,7 @@
 						"bb atk%": 70,
 						"bb bc%": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "70,0,0,50,0,0",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -90,6 +96,7 @@
 						"bb atk%": 75,
 						"bb bc%": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "75,0,0,50,0,0",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -103,6 +110,7 @@
 						"bb atk%": 80,
 						"bb bc%": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "80,0,0,50,0,0",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -116,6 +124,7 @@
 						"bb atk%": 85,
 						"bb bc%": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "85,0,0,50,0,0",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -129,6 +138,7 @@
 						"bb atk%": 90,
 						"bb bc%": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "90,0,0,50,0,0",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -142,6 +152,7 @@
 						"bb atk%": 95,
 						"bb bc%": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "95,0,0,50,0,0",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -155,6 +166,7 @@
 						"bb atk%": 100,
 						"bb bc%": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "100,0,0,50,0,0",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -168,6 +180,7 @@
 						"bb atk%": 105,
 						"bb bc%": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "105,0,0,50,0,0",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -181,6 +194,7 @@
 						"bb atk%": 115,
 						"bb bc%": 50,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "115,0,0,50,0,0",
 						"proc id": "1",
 						"target area": "single",
 						"target type": "enemy"
@@ -221,7 +235,7 @@
 	"drop check count": 2,
 	"element": "water",
 	"evolution": {
-		"cost": 50000,
+		"karma": 0,
 		"mats": [
 			{
 				"id": "20131",
@@ -234,7 +248,8 @@
 				"type": "unit"
 			}
 		],
-		"next": "20182"
+		"next": "20182",
+		"zel": 50000
 	},
 	"exp_pattern": 15,
 	"gender": "female",
@@ -249,11 +264,18 @@
 	},
 	"kind": "normal",
 	"leader skill": {
+		"associated_units": [
+			"20181:ls",
+			"20182:ls",
+			"50181:ls",
+			"50182:ls"
+		],
 		"desc": "25% boost to Atk power of female Units",
 		"effects": [
 			{
 				"atk% buff": 25,
 				"gender required": "female",
+				"params": "2,25,0,0,0,0",
 				"passive id": "42"
 			}
 		],
@@ -276,6 +298,7 @@
 	"name": "Black Rose Elize",
 	"rarity": 2,
 	"sell caution": false,
+	"sell_price": 300,
 	"stats": {
 		"_base": {
 			"atk": 610,

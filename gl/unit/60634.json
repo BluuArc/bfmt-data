@@ -25,6 +25,7 @@
 			"target type": "enemy"
 		}
 	],
+	"ai_id": "120",
 	"animations": {
 		"attack": {
 			"total number of frames": 233
@@ -37,6 +38,9 @@
 		}
 	},
 	"bb": {
+		"associated_units": [
+			"60634:bb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -120,6 +124,7 @@
 						"bb atk%": 90,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "90,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -133,6 +138,7 @@
 						"bb atk%": 100,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "100,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -146,6 +152,7 @@
 						"bb atk%": 110,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "110,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -159,6 +166,7 @@
 						"bb atk%": 120,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "120,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -172,6 +180,7 @@
 						"bb atk%": 130,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "130,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -185,6 +194,7 @@
 						"bb atk%": 140,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "140,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -198,6 +208,7 @@
 						"bb atk%": 150,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "150,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -211,6 +222,7 @@
 						"bb atk%": 160,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "160,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -224,6 +236,7 @@
 						"bb atk%": 170,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "170,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -237,6 +250,7 @@
 						"bb atk%": 190,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "190,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -291,7 +305,7 @@
 	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
-		"cost": 500000,
+		"karma": 0,
 		"mats": [
 			{
 				"id": "50354",
@@ -320,7 +334,10 @@
 			}
 		],
 		"next": "60635",
-		"prev": "60633"
+		"prev": [
+			"60633"
+		],
+		"zel": 500000
 	},
 	"exp_pattern": 20,
 	"gender": "male",
@@ -335,18 +352,24 @@
 	},
 	"kind": "normal",
 	"leader skill": {
+		"associated_units": [
+			"60633:ls",
+			"60634:ls"
+		],
 		"desc": "Hugely boosts Atk relative to how low remaining HP is & Spark damage slightly boosts BB gauge",
 		"effects": [
 			{
 				"atk% base buff": 20,
 				"atk% extra buff based on hp": 80,
 				"buff proportional to hp": "lost",
+				"params": "20,100,0,0,0,0,1",
 				"passive id": "46"
 			},
 			{
 				"bc fill on spark high": 2,
 				"bc fill on spark low": 1,
 				"bc fill on spark%": 100,
+				"params": "100,200,100",
 				"passive id": "47"
 			}
 		],
@@ -369,6 +392,7 @@
 	"name": "Yuri",
 	"rarity": 5,
 	"sell caution": false,
+	"sell_price": 5000,
 	"stats": {
 		"_base": {
 			"atk": 1320,

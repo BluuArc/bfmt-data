@@ -19,6 +19,7 @@
 			"target type": "enemy"
 		}
 	],
+	"ai_id": "150",
 	"animations": {
 		"attack": {
 			"total number of frames": 88
@@ -31,6 +32,9 @@
 		}
 	},
 	"bb": {
+		"associated_units": [
+			"20041:bb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -56,6 +60,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"heal high": 800,
 						"heal low": 600,
+						"params": "600,800,50,50",
 						"proc id": "2",
 						"rec added% (from healer)": 22.5,
 						"target area": "aoe",
@@ -70,6 +75,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"heal high": 830,
 						"heal low": 630,
+						"params": "630,830,50,50",
 						"proc id": "2",
 						"rec added% (from healer)": 22.5,
 						"target area": "aoe",
@@ -84,6 +90,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"heal high": 860,
 						"heal low": 660,
+						"params": "660,860,50,50",
 						"proc id": "2",
 						"rec added% (from healer)": 22.5,
 						"target area": "aoe",
@@ -98,6 +105,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"heal high": 890,
 						"heal low": 690,
+						"params": "690,890,50,50",
 						"proc id": "2",
 						"rec added% (from healer)": 22.5,
 						"target area": "aoe",
@@ -112,6 +120,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"heal high": 920,
 						"heal low": 720,
+						"params": "720,920,50,50",
 						"proc id": "2",
 						"rec added% (from healer)": 22.5,
 						"target area": "aoe",
@@ -126,6 +135,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"heal high": 950,
 						"heal low": 750,
+						"params": "750,950,50,50",
 						"proc id": "2",
 						"rec added% (from healer)": 22.5,
 						"target area": "aoe",
@@ -140,6 +150,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"heal high": 980,
 						"heal low": 780,
+						"params": "780,980,50,50",
 						"proc id": "2",
 						"rec added% (from healer)": 22.5,
 						"target area": "aoe",
@@ -154,6 +165,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"heal high": 1010,
 						"heal low": 810,
+						"params": "810,1010,50,50",
 						"proc id": "2",
 						"rec added% (from healer)": 22.5,
 						"target area": "aoe",
@@ -168,6 +180,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"heal high": 1040,
 						"heal low": 840,
+						"params": "840,1040,50,50",
 						"proc id": "2",
 						"rec added% (from healer)": 22.5,
 						"target area": "aoe",
@@ -182,6 +195,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"heal high": 1070,
 						"heal low": 870,
+						"params": "870,1070,50,50",
 						"proc id": "2",
 						"rec added% (from healer)": 22.5,
 						"target area": "aoe",
@@ -225,7 +239,7 @@
 	"drop check count": 2,
 	"element": "water",
 	"evolution": {
-		"cost": 50000,
+		"karma": 0,
 		"mats": [
 			{
 				"id": "20131",
@@ -239,7 +253,10 @@
 			}
 		],
 		"next": "20042",
-		"prev": "20040"
+		"prev": [
+			"20040"
+		],
+		"zel": 50000
 	},
 	"exp_pattern": 10,
 	"gender": "female",
@@ -254,9 +271,19 @@
 	},
 	"kind": "normal",
 	"leader skill": {
+		"associated_units": [
+			"20031:ls",
+			"20040:ls",
+			"20041:ls",
+			"20042:ls",
+			"20092:ls",
+			"20093:ls",
+			"40343:ls"
+		],
 		"desc": "10% reduction in damage from Water Types",
 		"effects": [
 			{
+				"params": "2,10",
 				"passive id": "5",
 				"water resist%": 10
 			}
@@ -280,6 +307,7 @@
 	"name": "Healer Merith",
 	"rarity": 2,
 	"sell caution": false,
+	"sell_price": 300,
 	"stats": {
 		"_base": {
 			"atk": 292,

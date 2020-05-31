@@ -25,6 +25,7 @@
 			"target type": "enemy"
 		}
 	],
+	"ai_id": "120",
 	"animations": {
 		"attack": {
 			"total number of frames": 99
@@ -37,6 +38,9 @@
 		}
 	},
 	"bb": {
+		"associated_units": [
+			"20016:bb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -84,6 +88,7 @@
 						"bb atk%": 150,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "150,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -97,6 +102,7 @@
 						"bb atk%": 160,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "160,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -110,6 +116,7 @@
 						"bb atk%": 170,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "170,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -123,6 +130,7 @@
 						"bb atk%": 180,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "180,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -136,6 +144,7 @@
 						"bb atk%": 190,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "190,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -149,6 +158,7 @@
 						"bb atk%": 200,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "200,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -162,6 +172,7 @@
 						"bb atk%": 210,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "210,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -175,6 +186,7 @@
 						"bb atk%": 220,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "220,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -188,6 +200,7 @@
 						"bb atk%": 230,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "230,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -201,6 +214,7 @@
 						"bb atk%": 250,
 						"bb flat atk": 80,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "250,80,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -251,7 +265,7 @@
 	"drop check count": 4,
 	"element": "water",
 	"evolution": {
-		"cost": 3000000,
+		"karma": 1000000,
 		"mats": [
 			{
 				"id": "20344",
@@ -295,14 +309,21 @@
 			}
 		],
 		"next": "20017",
-		"prev": "20015"
+		"prev": [
+			"20015"
+		],
+		"zel": 3000000
 	},
 	"exp_pattern": 10,
 	"extra skill": {
+		"associated_units": [
+			"20016:es"
+		],
 		"desc": "20% boost to all parameters in battle & renders self able to withstand a devastating attack when Lexida is equipped. ",
 		"effects": [
 			{
 				"atk% buff": 20,
+				"conditionParams": "1#1,37630%0,0%0,0",
 				"conditions": [
 					{
 						"item required": [
@@ -312,6 +333,7 @@
 				],
 				"def% buff": 20,
 				"hp% buff": 20,
+				"params": "20,20,20,0,20",
 				"passive id": "1",
 				"passive target": "self",
 				"rec% buff": 20
@@ -322,6 +344,7 @@
 					"angel idol recover hp%": 100,
 					"buff turns (12)": "-1"
 				},
+				"conditionParams": "1#1,37630%0,0%0,0",
 				"conditions": [
 					{
 						"item required": [
@@ -330,6 +353,7 @@
 					}
 				],
 				"hp below % buff activation": 20,
+				"params": "12,100,1,20,2,-1",
 				"passive id": "55",
 				"passive target": "self"
 			}
@@ -351,6 +375,9 @@
 	},
 	"kind": "normal",
 	"leader skill": {
+		"associated_units": [
+			"20016:ls"
+		],
 		"desc": "100% boost to Atk power and 30% increase in HP of Water types",
 		"effects": [
 			{
@@ -359,6 +386,7 @@
 					"water"
 				],
 				"hp% buff": 30,
+				"params": "2,0,100,0,0,0,30",
 				"passive id": "2"
 			}
 		],
@@ -386,6 +414,9 @@
 	},
 	"rarity": 7,
 	"sbb": {
+		"associated_units": [
+			"20016:sbb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -453,6 +484,7 @@
 						"bb atk%": 400,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "400,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -462,6 +494,7 @@
 						"gradual heal high": 2500,
 						"gradual heal low": 2000,
 						"gradual heal turns (8)": 3,
+						"params": "2000,2500,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -476,6 +509,7 @@
 						"bb atk%": 410,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "410,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -485,6 +519,7 @@
 						"gradual heal high": 2600,
 						"gradual heal low": 2100,
 						"gradual heal turns (8)": 3,
+						"params": "2100,2600,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -499,6 +534,7 @@
 						"bb atk%": 420,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "420,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -508,6 +544,7 @@
 						"gradual heal high": 2700,
 						"gradual heal low": 2200,
 						"gradual heal turns (8)": 3,
+						"params": "2200,2700,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -522,6 +559,7 @@
 						"bb atk%": 430,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "430,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -531,6 +569,7 @@
 						"gradual heal high": 2800,
 						"gradual heal low": 2300,
 						"gradual heal turns (8)": 3,
+						"params": "2300,2800,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -545,6 +584,7 @@
 						"bb atk%": 440,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "440,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -554,6 +594,7 @@
 						"gradual heal high": 2900,
 						"gradual heal low": 2400,
 						"gradual heal turns (8)": 3,
+						"params": "2400,2900,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -568,6 +609,7 @@
 						"bb atk%": 450,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "450,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -577,6 +619,7 @@
 						"gradual heal high": 3000,
 						"gradual heal low": 2500,
 						"gradual heal turns (8)": 3,
+						"params": "2500,3000,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -591,6 +634,7 @@
 						"bb atk%": 460,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "460,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -600,6 +644,7 @@
 						"gradual heal high": 3100,
 						"gradual heal low": 2600,
 						"gradual heal turns (8)": 3,
+						"params": "2600,3100,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -614,6 +659,7 @@
 						"bb atk%": 470,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "470,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -623,6 +669,7 @@
 						"gradual heal high": 3200,
 						"gradual heal low": 2700,
 						"gradual heal turns (8)": 3,
+						"params": "2700,3200,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -637,6 +684,7 @@
 						"bb atk%": 480,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "480,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -646,6 +694,7 @@
 						"gradual heal high": 3300,
 						"gradual heal low": 2800,
 						"gradual heal turns (8)": 3,
+						"params": "2800,3300,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -660,6 +709,7 @@
 						"bb atk%": 500,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "500,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -669,6 +719,7 @@
 						"gradual heal high": 3500,
 						"gradual heal low": 3000,
 						"gradual heal turns (8)": 3,
+						"params": "3000,3500,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -680,6 +731,7 @@
 		"name": "Luther Entios"
 	},
 	"sell caution": false,
+	"sell_price": 15000,
 	"stats": {
 		"_base": {
 			"atk": 1320,
@@ -695,6 +747,9 @@
 		}
 	},
 	"ubb": {
+		"associated_units": [
+			"20016:ubb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -792,6 +847,7 @@
 						"bb atk%": 1000,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -801,6 +857,7 @@
 						"gradual heal high": 99999,
 						"gradual heal low": 98999,
 						"gradual heal turns (8)": 3,
+						"params": "98999,99999,0,3,110",
 						"proc id": "3",
 						"rec added% (from target)": 10,
 						"target area": "aoe",
@@ -811,6 +868,7 @@
 						"extra hits dmg%": 100,
 						"hit increase buff turns (50)": 3,
 						"hit increase/hit": 2,
+						"params": "2,2,100,0,10,0,0,3,120",
 						"proc id": "26",
 						"target area": "aoe",
 						"target type": "party"

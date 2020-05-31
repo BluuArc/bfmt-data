@@ -19,6 +19,7 @@
 			"target type": "enemy"
 		}
 	],
+	"ai_id": "100",
 	"animations": {
 		"attack": {
 			"total number of frames": 120
@@ -31,6 +32,9 @@
 		}
 	},
 	"bb": {
+		"associated_units": [
+			"60283:bb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -67,6 +71,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 30,
 						"hp drain% low": 20,
+						"params": "280,0,0,0,0,0,20,30",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -81,6 +86,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 32,
 						"hp drain% low": 22,
+						"params": "290,0,0,0,0,0,22,32",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -95,6 +101,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 34,
 						"hp drain% low": 24,
+						"params": "300,0,0,0,0,0,24,34",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -109,6 +116,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 36,
 						"hp drain% low": 26,
+						"params": "310,0,0,0,0,0,26,36",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -123,6 +131,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 38,
 						"hp drain% low": 28,
+						"params": "320,0,0,0,0,0,28,38",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -137,6 +146,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 40,
 						"hp drain% low": 30,
+						"params": "330,0,0,0,0,0,30,40",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -151,6 +161,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 42,
 						"hp drain% low": 32,
+						"params": "340,0,0,0,0,0,32,42",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -165,6 +176,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 44,
 						"hp drain% low": 34,
+						"params": "350,0,0,0,0,0,34,44",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -179,6 +191,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 46,
 						"hp drain% low": 36,
+						"params": "360,0,0,0,0,0,36,46",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -193,6 +206,7 @@
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp drain% high": 48,
 						"hp drain% low": 38,
+						"params": "380,0,0,0,0,0,38,48",
 						"proc id": "14",
 						"target area": "single",
 						"target type": "enemy"
@@ -235,7 +249,7 @@
 	"drop check count": 2,
 	"element": "dark",
 	"evolution": {
-		"cost": 200000,
+		"karma": 0,
 		"mats": [
 			{
 				"id": "60123",
@@ -263,7 +277,8 @@
 				"type": "unit"
 			}
 		],
-		"next": "60284"
+		"next": "60284",
+		"zel": 200000
 	},
 	"exp_pattern": 20,
 	"gender": "male",
@@ -278,10 +293,27 @@
 	},
 	"kind": "normal",
 	"leader skill": {
+		"associated_units": [
+			"10253:ls",
+			"10373:ls",
+			"20253:ls",
+			"20363:ls",
+			"30253:ls",
+			"30353:ls",
+			"40253:ls",
+			"40353:ls",
+			"50313:ls",
+			"50413:ls",
+			"50583:ls",
+			"60283:ls",
+			"60363:ls",
+			"60593:ls"
+		],
 		"desc": "25% boost to Atk power of all Units when 5 elements or more are present",
 		"effects": [
 			{
 				"atk% buff": 25,
+				"params": "5,25,0,0,0,0",
 				"passive id": "41",
 				"unique elements required": 5
 			}
@@ -305,6 +337,7 @@
 	"name": "Dark Swords Logan",
 	"rarity": 4,
 	"sell caution": false,
+	"sell_price": 2500,
 	"stats": {
 		"_base": {
 			"atk": 988,

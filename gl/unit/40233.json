@@ -19,6 +19,7 @@
 			"target type": "enemy"
 		}
 	],
+	"ai_id": "100",
 	"animations": {
 		"attack": {
 			"total number of frames": 103
@@ -31,6 +32,9 @@
 		}
 	},
 	"bb": {
+		"associated_units": [
+			"40233:bb"
+		],
 		"damage frames": [
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -64,6 +68,7 @@
 						"bb atk%": 70,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "70,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -77,6 +82,7 @@
 						"bb atk%": 80,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "80,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -90,6 +96,7 @@
 						"bb atk%": 90,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "90,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -103,6 +110,7 @@
 						"bb atk%": 100,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "100,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -116,6 +124,7 @@
 						"bb atk%": 110,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "110,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -129,6 +138,7 @@
 						"bb atk%": 120,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "120,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -142,6 +152,7 @@
 						"bb atk%": 130,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "130,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -155,6 +166,7 @@
 						"bb atk%": 140,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "140,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -168,6 +180,7 @@
 						"bb atk%": 150,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "150,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -181,6 +194,7 @@
 						"bb atk%": 160,
 						"bb flat atk": 100,
 						"effect delay time(ms)/frame": "0.0/0",
+						"params": "160,100,0,0,0,0",
 						"proc id": "1",
 						"target area": "aoe",
 						"target type": "enemy"
@@ -219,7 +233,7 @@
 	"drop check count": 5,
 	"element": "thunder",
 	"evolution": {
-		"cost": 200000,
+		"karma": 0,
 		"mats": [
 			{
 				"id": "40133",
@@ -247,7 +261,8 @@
 				"type": "unit"
 			}
 		],
-		"next": "40234"
+		"next": "40234",
+		"zel": 200000
 	},
 	"exp_pattern": 20,
 	"gender": "female",
@@ -262,15 +277,20 @@
 	},
 	"kind": "normal",
 	"leader skill": {
+		"associated_units": [
+			"40233:ls"
+		],
 		"desc": "BB gauge fills and very low chance of taking only 1 damage when attacked",
 		"effects": [
 			{
 				"bc fill when attacked high": 1,
 				"bc fill when attacked low": 1,
 				"bc fill when attacked%": 100,
+				"params": "100,100,100",
 				"passive id": "25"
 			},
 			{
+				"params": "5",
 				"passive id": "43",
 				"take 1 dmg%": 5
 			}
@@ -294,6 +314,7 @@
 	"name": "Paladin Paris",
 	"rarity": 4,
 	"sell caution": true,
+	"sell_price": 2500,
 	"stats": {
 		"_base": {
 			"atk": 990,
