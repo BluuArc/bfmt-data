@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 26,
-			"id": "29",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-13T03:48:28.000Z",
-		"updatedAt": "2017-09-13T03:48:28.000Z"
+		"updatedAt": "2020-05-27T11:17:30.000Z"
 	},
 	"damage frames": [
 		{
@@ -74,7 +74,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 26,
-			"proc id": "29"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -123,9 +123,33 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "66"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "11"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "11"
 		}
 	],
-	"desc": "26 combo powerful Earth, Fire, Dark attack on all foes, Spark damage boosts BB gauge for 3 turns, hugely boosts elemental damage for 3 turns, powerful additional damage at turn's end for 3 turns & probability of raising allies from KO",
+	"desc": "26 combo Earth attack on all foes (damage relative to remaining HP), spark damage fills BB gauge for 3 turns, boosts all elemental damage for 3 turns, 3 turns DoT infliction, may raise allies from KO & probable all status ailments infliction",
 	"drop check count": 1,
 	"id": "1830438",
 	"levels": [
@@ -133,11 +157,9 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 520,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 750,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"params": "1,6,0,520,200,0,0,0,0",
@@ -147,8 +169,8 @@
 				},
 				{
 					"bc fill on spark buff turns (111)": 3,
-					"bc fill on spark high": 3,
-					"bc fill on spark low": 2,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
 					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "200,300,100,3,0",
@@ -161,7 +183,7 @@
 					"earth units do extra elemental weakness dmg": true,
 					"effect delay time(ms)/frame": "0.0/0",
 					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 150,
+					"elemental weakness multiplier%": 200,
 					"fire units do extra elemental weakness dmg": true,
 					"light units do extra elemental weakness dmg": true,
 					"params": "1,2,3,4,5,6,1.5,3,0",
@@ -172,7 +194,7 @@
 					"water units do extra elemental weakness dmg": true
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 800,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -187,8 +209,8 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "20,10",
 					"proc id": "66",
-					"revive unit chance%": 10,
-					"revive unit hp%": 20,
+					"revive unit chance%": 15,
+					"revive unit hp%": 35,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -198,11 +220,9 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 530,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 760,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"params": "1,6,0,530,200,0,0,0,0",
@@ -212,8 +232,8 @@
 				},
 				{
 					"bc fill on spark buff turns (111)": 3,
-					"bc fill on spark high": 3,
-					"bc fill on spark low": 2,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
 					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "200,300,100,3,0",
@@ -226,7 +246,7 @@
 					"earth units do extra elemental weakness dmg": true,
 					"effect delay time(ms)/frame": "0.0/0",
 					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 150,
+					"elemental weakness multiplier%": 200,
 					"fire units do extra elemental weakness dmg": true,
 					"light units do extra elemental weakness dmg": true,
 					"params": "1,2,3,4,5,6,1.5,3,0",
@@ -237,7 +257,7 @@
 					"water units do extra elemental weakness dmg": true
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 820,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -252,8 +272,8 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "20,10",
 					"proc id": "66",
-					"revive unit chance%": 10,
-					"revive unit hp%": 20,
+					"revive unit chance%": 15,
+					"revive unit hp%": 35,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -263,11 +283,9 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 540,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 770,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"params": "1,6,0,540,200,0,0,0,0",
@@ -277,8 +295,8 @@
 				},
 				{
 					"bc fill on spark buff turns (111)": 3,
-					"bc fill on spark high": 3,
-					"bc fill on spark low": 2,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
 					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "200,300,100,3,0",
@@ -291,7 +309,7 @@
 					"earth units do extra elemental weakness dmg": true,
 					"effect delay time(ms)/frame": "0.0/0",
 					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 150,
+					"elemental weakness multiplier%": 200,
 					"fire units do extra elemental weakness dmg": true,
 					"light units do extra elemental weakness dmg": true,
 					"params": "1,2,3,4,5,6,1.5,3,0",
@@ -302,7 +320,7 @@
 					"water units do extra elemental weakness dmg": true
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 840,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -317,8 +335,8 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "20,10",
 					"proc id": "66",
-					"revive unit chance%": 10,
-					"revive unit hp%": 20,
+					"revive unit chance%": 15,
+					"revive unit hp%": 35,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -328,11 +346,9 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 550,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 780,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"params": "1,6,0,550,200,0,0,0,0",
@@ -342,8 +358,8 @@
 				},
 				{
 					"bc fill on spark buff turns (111)": 3,
-					"bc fill on spark high": 3,
-					"bc fill on spark low": 2,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
 					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "200,300,100,3,0",
@@ -356,7 +372,7 @@
 					"earth units do extra elemental weakness dmg": true,
 					"effect delay time(ms)/frame": "0.0/0",
 					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 150,
+					"elemental weakness multiplier%": 200,
 					"fire units do extra elemental weakness dmg": true,
 					"light units do extra elemental weakness dmg": true,
 					"params": "1,2,3,4,5,6,1.5,3,0",
@@ -367,7 +383,7 @@
 					"water units do extra elemental weakness dmg": true
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 860,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -382,8 +398,8 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "20,10",
 					"proc id": "66",
-					"revive unit chance%": 10,
-					"revive unit hp%": 20,
+					"revive unit chance%": 15,
+					"revive unit hp%": 35,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -393,11 +409,9 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 560,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 790,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"params": "1,6,0,560,200,0,0,0,0",
@@ -407,8 +421,8 @@
 				},
 				{
 					"bc fill on spark buff turns (111)": 3,
-					"bc fill on spark high": 3,
-					"bc fill on spark low": 2,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
 					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "200,300,100,3,0",
@@ -421,7 +435,7 @@
 					"earth units do extra elemental weakness dmg": true,
 					"effect delay time(ms)/frame": "0.0/0",
 					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 150,
+					"elemental weakness multiplier%": 200,
 					"fire units do extra elemental weakness dmg": true,
 					"light units do extra elemental weakness dmg": true,
 					"params": "1,2,3,4,5,6,1.5,3,0",
@@ -432,7 +446,7 @@
 					"water units do extra elemental weakness dmg": true
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 880,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -447,8 +461,8 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "20,10",
 					"proc id": "66",
-					"revive unit chance%": 10,
-					"revive unit hp%": 20,
+					"revive unit chance%": 15,
+					"revive unit hp%": 35,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -458,11 +472,9 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 570,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 800,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"params": "1,6,0,570,200,0,0,0,0",
@@ -472,8 +484,8 @@
 				},
 				{
 					"bc fill on spark buff turns (111)": 3,
-					"bc fill on spark high": 3,
-					"bc fill on spark low": 2,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
 					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "200,300,100,3,0",
@@ -486,7 +498,7 @@
 					"earth units do extra elemental weakness dmg": true,
 					"effect delay time(ms)/frame": "0.0/0",
 					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 150,
+					"elemental weakness multiplier%": 200,
 					"fire units do extra elemental weakness dmg": true,
 					"light units do extra elemental weakness dmg": true,
 					"params": "1,2,3,4,5,6,1.5,3,0",
@@ -497,7 +509,7 @@
 					"water units do extra elemental weakness dmg": true
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 900,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -512,8 +524,8 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "20,10",
 					"proc id": "66",
-					"revive unit chance%": 10,
-					"revive unit hp%": 20,
+					"revive unit chance%": 15,
+					"revive unit hp%": 35,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -523,11 +535,9 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 580,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 810,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"params": "1,6,0,580,200,0,0,0,0",
@@ -537,8 +547,8 @@
 				},
 				{
 					"bc fill on spark buff turns (111)": 3,
-					"bc fill on spark high": 3,
-					"bc fill on spark low": 2,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
 					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "200,300,100,3,0",
@@ -551,7 +561,7 @@
 					"earth units do extra elemental weakness dmg": true,
 					"effect delay time(ms)/frame": "0.0/0",
 					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 150,
+					"elemental weakness multiplier%": 200,
 					"fire units do extra elemental weakness dmg": true,
 					"light units do extra elemental weakness dmg": true,
 					"params": "1,2,3,4,5,6,1.5,3,0",
@@ -562,7 +572,7 @@
 					"water units do extra elemental weakness dmg": true
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 920,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -577,8 +587,8 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "20,10",
 					"proc id": "66",
-					"revive unit chance%": 10,
-					"revive unit hp%": 20,
+					"revive unit chance%": 15,
+					"revive unit hp%": 35,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -588,11 +598,9 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 590,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 820,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"params": "1,6,0,590,200,0,0,0,0",
@@ -602,8 +610,8 @@
 				},
 				{
 					"bc fill on spark buff turns (111)": 3,
-					"bc fill on spark high": 3,
-					"bc fill on spark low": 2,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
 					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "200,300,100,3,0",
@@ -616,7 +624,7 @@
 					"earth units do extra elemental weakness dmg": true,
 					"effect delay time(ms)/frame": "0.0/0",
 					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 150,
+					"elemental weakness multiplier%": 200,
 					"fire units do extra elemental weakness dmg": true,
 					"light units do extra elemental weakness dmg": true,
 					"params": "1,2,3,4,5,6,1.5,3,0",
@@ -627,7 +635,7 @@
 					"water units do extra elemental weakness dmg": true
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 940,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -642,8 +650,8 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "20,10",
 					"proc id": "66",
-					"revive unit chance%": 10,
-					"revive unit hp%": 20,
+					"revive unit chance%": 15,
+					"revive unit hp%": 35,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -653,11 +661,9 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 600,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 830,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"params": "1,6,0,600,200,0,0,0,0",
@@ -667,8 +673,8 @@
 				},
 				{
 					"bc fill on spark buff turns (111)": 3,
-					"bc fill on spark high": 3,
-					"bc fill on spark low": 2,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
 					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "200,300,100,3,0",
@@ -681,7 +687,7 @@
 					"earth units do extra elemental weakness dmg": true,
 					"effect delay time(ms)/frame": "0.0/0",
 					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 150,
+					"elemental weakness multiplier%": 200,
 					"fire units do extra elemental weakness dmg": true,
 					"light units do extra elemental weakness dmg": true,
 					"params": "1,2,3,4,5,6,1.5,3,0",
@@ -692,7 +698,7 @@
 					"water units do extra elemental weakness dmg": true
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 960,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -707,8 +713,8 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "20,10",
 					"proc id": "66",
-					"revive unit chance%": 10,
-					"revive unit hp%": 20,
+					"revive unit chance%": 15,
+					"revive unit hp%": 35,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -718,11 +724,9 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 620,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 850,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"params": "1,6,0,620,200,0,0,0,0",
@@ -732,8 +736,8 @@
 				},
 				{
 					"bc fill on spark buff turns (111)": 3,
-					"bc fill on spark high": 3,
-					"bc fill on spark low": 2,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
 					"bc fill on spark%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "200,300,100,3,0",
@@ -746,7 +750,7 @@
 					"earth units do extra elemental weakness dmg": true,
 					"effect delay time(ms)/frame": "0.0/0",
 					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 150,
+					"elemental weakness multiplier%": 200,
 					"fire units do extra elemental weakness dmg": true,
 					"light units do extra elemental weakness dmg": true,
 					"params": "1,2,3,4,5,6,1.5,3,0",
@@ -757,7 +761,7 @@
 					"water units do extra elemental weakness dmg": true
 				},
 				{
-					"dot atk%": 500,
+					"dot atk%": 1000,
 					"dot element affected": true,
 					"dot flat atk": 100,
 					"dot turns (71)": 3,
@@ -772,8 +776,8 @@
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "20,10",
 					"proc id": "66",
-					"revive unit chance%": 10,
-					"revive unit hp%": 20,
+					"revive unit chance%": 15,
+					"revive unit hp%": 35,
 					"target area": "aoe",
 					"target type": "party"
 				}

@@ -4,9 +4,9 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-08T11:18:08.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2020-05-27T11:17:30.000Z"
 	},
-	"desc": "Raises Atk parameter limits to 130000, damage taken boosts BB gauge, negates all status ailments for all allies, adds critical hit rate boost effect to BB/SBB for 3 turns & adds 23 combo powerful Water attack against Fire, Water types effect to SBB",
+	"desc": "Damage taken fills BB gauge, raises Atk limit to 180k, add to BB/SBB (Boosts critical rate for 3 turns), add to SBB (23 combo Water attack on Fire/Water foes) & negates all status ailments for all allies",
 	"effects": [
 		{
 			"bc fill when attacked high": 4,
@@ -19,22 +19,29 @@
 		},
 		{
 			"conditions": [],
-			"curse resist%": 100,
-			"injury resist%": 100,
-			"paralysis resist%": 100,
+			"increase atk cap": 180000,
 			"params": "100,100,100,100,100,100,0,0,0",
 			"passive id": "73",
-			"passive target": "party",
-			"poison resist%": 100,
-			"sick resist%": 100,
-			"weaken resist%": 100
+			"passive target": "party"
 		},
 		{
 			"conditions": [],
-			"increase atk cap": 130000,
 			"params": "130000",
 			"passive id": "143",
-			"passive target": "self"
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"proc id": "5",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
 		},
 		{
 			"conditions": [],
@@ -56,22 +63,15 @@
 		},
 		{
 			"conditions": [],
+			"curse resist%": 100,
+			"injury resist%": 100,
+			"paralysis resist%": 100,
 			"params": "5,0&0&0&0&60&3&0,1,2,0,1,1,0",
 			"passive id": "66",
 			"passive target": "self",
-			"trigger on bb": true,
-			"trigger on sbb": true,
-			"triggered effect": [
-				{
-					"buff turns": 3,
-					"crit% buff (7)": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "all",
-					"proc id": "5",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
+			"poison resist%": 100,
+			"sick resist%": 100,
+			"weaken resist%": 100
 		}
 	],
 	"id": "820048",

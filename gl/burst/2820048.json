@@ -11,7 +11,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-13T03:48:28.000Z",
-		"updatedAt": "2017-09-13T03:48:28.000Z"
+		"updatedAt": "2020-05-27T11:17:30.000Z"
 	},
 	"damage frames": [
 		{
@@ -76,18 +76,6 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "40"
-		},
-		{
-			"effect delay time(ms)/frame": "0.0/0",
-			"frame times": [
-				0
-			],
-			"hit dmg% distribution": [
-				100
-			],
-			"hit dmg% distribution (total)": 100,
-			"hits": 1,
 			"proc id": "65"
 		},
 		{
@@ -125,9 +113,33 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "40"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "40"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "9"
 		}
 	],
-	"desc": "21 combo massive Water attack on all foes, adds random status ailment infliction to attack for 3 turns, enormously boosts damage dealt against status afflicted foes for 3 turns, enormously boosts critical damage for 3 turns & raises allies from KO",
+	"desc": "21 combo Water attack on all foes, boosts damage against status afflicted foes for 3 turns, boosts critical damage for 3 turns, raises allies from KO, 1 turn Atk, Def reduction infliction & adds random status ailments infliction to attack for 3 turns",
 	"drop check count": 1,
 	"id": "2820048",
 	"levels": [
@@ -144,20 +156,17 @@
 					"target type": "enemy"
 				},
 				{
-					"buff turns": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"injury% buff": 100,
-					"params": "1,100,2,100,3,100,4,100,3,0",
-					"poison% buff": 100,
-					"proc id": "40",
-					"sick% buff": 100,
-					"target area": "aoe",
-					"target type": "party",
-					"weaken% buff": 100
-				},
-				{
 					"atk% buff turns (110)": 3,
 					"atk% buff when enemy has ailment": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,100,2,100,3,100,4,100,3,0",
+					"proc id": "40",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "350,3,0",
 					"proc id": "65",
@@ -165,22 +174,25 @@
 					"target type": "party"
 				},
 				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "3.5,3,0",
 					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100",
-					"proc id": "66",
 					"revive unit chance%": 100,
 					"revive unit hp%": 100,
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"injury% buff": 100,
+					"params": "100,100",
+					"poison% buff": 100,
+					"proc id": "66",
+					"sick% buff": 100,
+					"target area": "aoe",
+					"target type": "party",
+					"weaken% buff": 100
 				},
 				{
 					"buff turns": 3,
@@ -207,20 +219,17 @@
 					"target type": "enemy"
 				},
 				{
-					"buff turns": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"injury% buff": 100,
-					"params": "1,100,2,100,3,100,4,100,3,0",
-					"poison% buff": 100,
-					"proc id": "40",
-					"sick% buff": 100,
-					"target area": "aoe",
-					"target type": "party",
-					"weaken% buff": 100
-				},
-				{
 					"atk% buff turns (110)": 3,
 					"atk% buff when enemy has ailment": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,100,2,100,3,100,4,100,3,0",
+					"proc id": "40",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "350,3,0",
 					"proc id": "65",
@@ -228,22 +237,25 @@
 					"target type": "party"
 				},
 				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "3.5,3,0",
 					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100",
-					"proc id": "66",
 					"revive unit chance%": 100,
 					"revive unit hp%": 100,
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"injury% buff": 100,
+					"params": "100,100",
+					"poison% buff": 100,
+					"proc id": "66",
+					"sick% buff": 100,
+					"target area": "aoe",
+					"target type": "party",
+					"weaken% buff": 100
 				},
 				{
 					"buff turns": 3,
@@ -270,20 +282,17 @@
 					"target type": "enemy"
 				},
 				{
-					"buff turns": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"injury% buff": 100,
-					"params": "1,100,2,100,3,100,4,100,3,0",
-					"poison% buff": 100,
-					"proc id": "40",
-					"sick% buff": 100,
-					"target area": "aoe",
-					"target type": "party",
-					"weaken% buff": 100
-				},
-				{
 					"atk% buff turns (110)": 3,
 					"atk% buff when enemy has ailment": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,100,2,100,3,100,4,100,3,0",
+					"proc id": "40",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "350,3,0",
 					"proc id": "65",
@@ -291,22 +300,25 @@
 					"target type": "party"
 				},
 				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "3.5,3,0",
 					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100",
-					"proc id": "66",
 					"revive unit chance%": 100,
 					"revive unit hp%": 100,
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"injury% buff": 100,
+					"params": "100,100",
+					"poison% buff": 100,
+					"proc id": "66",
+					"sick% buff": 100,
+					"target area": "aoe",
+					"target type": "party",
+					"weaken% buff": 100
 				},
 				{
 					"buff turns": 3,
@@ -333,20 +345,17 @@
 					"target type": "enemy"
 				},
 				{
-					"buff turns": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"injury% buff": 100,
-					"params": "1,100,2,100,3,100,4,100,3,0",
-					"poison% buff": 100,
-					"proc id": "40",
-					"sick% buff": 100,
-					"target area": "aoe",
-					"target type": "party",
-					"weaken% buff": 100
-				},
-				{
 					"atk% buff turns (110)": 3,
 					"atk% buff when enemy has ailment": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,100,2,100,3,100,4,100,3,0",
+					"proc id": "40",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "350,3,0",
 					"proc id": "65",
@@ -354,22 +363,25 @@
 					"target type": "party"
 				},
 				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "3.5,3,0",
 					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100",
-					"proc id": "66",
 					"revive unit chance%": 100,
 					"revive unit hp%": 100,
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"injury% buff": 100,
+					"params": "100,100",
+					"poison% buff": 100,
+					"proc id": "66",
+					"sick% buff": 100,
+					"target area": "aoe",
+					"target type": "party",
+					"weaken% buff": 100
 				},
 				{
 					"buff turns": 3,
@@ -396,20 +408,17 @@
 					"target type": "enemy"
 				},
 				{
-					"buff turns": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"injury% buff": 100,
-					"params": "1,100,2,100,3,100,4,100,3,0",
-					"poison% buff": 100,
-					"proc id": "40",
-					"sick% buff": 100,
-					"target area": "aoe",
-					"target type": "party",
-					"weaken% buff": 100
-				},
-				{
 					"atk% buff turns (110)": 3,
 					"atk% buff when enemy has ailment": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,100,2,100,3,100,4,100,3,0",
+					"proc id": "40",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "350,3,0",
 					"proc id": "65",
@@ -417,22 +426,25 @@
 					"target type": "party"
 				},
 				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "3.5,3,0",
 					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100",
-					"proc id": "66",
 					"revive unit chance%": 100,
 					"revive unit hp%": 100,
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"injury% buff": 100,
+					"params": "100,100",
+					"poison% buff": 100,
+					"proc id": "66",
+					"sick% buff": 100,
+					"target area": "aoe",
+					"target type": "party",
+					"weaken% buff": 100
 				},
 				{
 					"buff turns": 3,
@@ -459,20 +471,17 @@
 					"target type": "enemy"
 				},
 				{
-					"buff turns": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"injury% buff": 100,
-					"params": "1,100,2,100,3,100,4,100,3,0",
-					"poison% buff": 100,
-					"proc id": "40",
-					"sick% buff": 100,
-					"target area": "aoe",
-					"target type": "party",
-					"weaken% buff": 100
-				},
-				{
 					"atk% buff turns (110)": 3,
 					"atk% buff when enemy has ailment": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,100,2,100,3,100,4,100,3,0",
+					"proc id": "40",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "350,3,0",
 					"proc id": "65",
@@ -480,22 +489,25 @@
 					"target type": "party"
 				},
 				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "3.5,3,0",
 					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100",
-					"proc id": "66",
 					"revive unit chance%": 100,
 					"revive unit hp%": 100,
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"injury% buff": 100,
+					"params": "100,100",
+					"poison% buff": 100,
+					"proc id": "66",
+					"sick% buff": 100,
+					"target area": "aoe",
+					"target type": "party",
+					"weaken% buff": 100
 				},
 				{
 					"buff turns": 3,
@@ -522,20 +534,17 @@
 					"target type": "enemy"
 				},
 				{
-					"buff turns": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"injury% buff": 100,
-					"params": "1,100,2,100,3,100,4,100,3,0",
-					"poison% buff": 100,
-					"proc id": "40",
-					"sick% buff": 100,
-					"target area": "aoe",
-					"target type": "party",
-					"weaken% buff": 100
-				},
-				{
 					"atk% buff turns (110)": 3,
 					"atk% buff when enemy has ailment": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,100,2,100,3,100,4,100,3,0",
+					"proc id": "40",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "350,3,0",
 					"proc id": "65",
@@ -543,22 +552,25 @@
 					"target type": "party"
 				},
 				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "3.5,3,0",
 					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100",
-					"proc id": "66",
 					"revive unit chance%": 100,
 					"revive unit hp%": 100,
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"injury% buff": 100,
+					"params": "100,100",
+					"poison% buff": 100,
+					"proc id": "66",
+					"sick% buff": 100,
+					"target area": "aoe",
+					"target type": "party",
+					"weaken% buff": 100
 				},
 				{
 					"buff turns": 3,
@@ -585,20 +597,17 @@
 					"target type": "enemy"
 				},
 				{
-					"buff turns": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"injury% buff": 100,
-					"params": "1,100,2,100,3,100,4,100,3,0",
-					"poison% buff": 100,
-					"proc id": "40",
-					"sick% buff": 100,
-					"target area": "aoe",
-					"target type": "party",
-					"weaken% buff": 100
-				},
-				{
 					"atk% buff turns (110)": 3,
 					"atk% buff when enemy has ailment": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,100,2,100,3,100,4,100,3,0",
+					"proc id": "40",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "350,3,0",
 					"proc id": "65",
@@ -606,22 +615,25 @@
 					"target type": "party"
 				},
 				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "3.5,3,0",
 					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100",
-					"proc id": "66",
 					"revive unit chance%": 100,
 					"revive unit hp%": 100,
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"injury% buff": 100,
+					"params": "100,100",
+					"poison% buff": 100,
+					"proc id": "66",
+					"sick% buff": 100,
+					"target area": "aoe",
+					"target type": "party",
+					"weaken% buff": 100
 				},
 				{
 					"buff turns": 3,
@@ -648,20 +660,17 @@
 					"target type": "enemy"
 				},
 				{
-					"buff turns": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"injury% buff": 100,
-					"params": "1,100,2,100,3,100,4,100,3,0",
-					"poison% buff": 100,
-					"proc id": "40",
-					"sick% buff": 100,
-					"target area": "aoe",
-					"target type": "party",
-					"weaken% buff": 100
-				},
-				{
 					"atk% buff turns (110)": 3,
 					"atk% buff when enemy has ailment": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,100,2,100,3,100,4,100,3,0",
+					"proc id": "40",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "350,3,0",
 					"proc id": "65",
@@ -669,22 +678,25 @@
 					"target type": "party"
 				},
 				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "3.5,3,0",
 					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100",
-					"proc id": "66",
 					"revive unit chance%": 100,
 					"revive unit hp%": 100,
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"injury% buff": 100,
+					"params": "100,100",
+					"poison% buff": 100,
+					"proc id": "66",
+					"sick% buff": 100,
+					"target area": "aoe",
+					"target type": "party",
+					"weaken% buff": 100
 				},
 				{
 					"buff turns": 3,
@@ -711,20 +723,17 @@
 					"target type": "enemy"
 				},
 				{
-					"buff turns": 3,
-					"effect delay time(ms)/frame": "0.0/0",
-					"injury% buff": 100,
-					"params": "1,100,2,100,3,100,4,100,3,0",
-					"poison% buff": 100,
-					"proc id": "40",
-					"sick% buff": 100,
-					"target area": "aoe",
-					"target type": "party",
-					"weaken% buff": 100
-				},
-				{
 					"atk% buff turns (110)": 3,
 					"atk% buff when enemy has ailment": 350,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,100,2,100,3,100,4,100,3,0",
+					"proc id": "40",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "350,3,0",
 					"proc id": "65",
@@ -732,22 +741,25 @@
 					"target type": "party"
 				},
 				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
 					"effect delay time(ms)/frame": "0.0/0",
 					"params": "3.5,3,0",
 					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100",
-					"proc id": "66",
 					"revive unit chance%": 100,
 					"revive unit hp%": 100,
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"buff turns": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"injury% buff": 100,
+					"params": "100,100",
+					"poison% buff": 100,
+					"proc id": "66",
+					"sick% buff": 100,
+					"target area": "aoe",
+					"target type": "party",
+					"weaken% buff": 100
 				},
 				{
 					"buff turns": 3,
