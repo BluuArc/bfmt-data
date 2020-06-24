@@ -4,15 +4,22 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-08-11T02:51:16.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2020-06-24T09:59:54.000Z"
 	},
-	"desc": "Raises Atk parameter limits to 130000, adds resistance against 1 KO attack when HP is below 25%, considerably raises normal hit amount & adds 23 combo powerful Fire attack against Fire, Earth types to SBB",
+	"desc": "Raises Atk limit to 180k, raises normal hit amount, resistance against 1 KO attack when HP is below 35% & add to SBB (23 combo Fire attack on Fire, Earth foes)",
 	"effects": [
 		{
 			"conditions": [],
-			"increase atk cap": 130000,
-			"params": "130000",
+			"increase atk cap": 180000,
+			"params": "180000",
 			"passive id": "143",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"hit increase/hit": 2,
+			"params": "2,3,0,0,0,0,0,100",
+			"passive id": "37",
 			"passive target": "self"
 		},
 		{
@@ -22,16 +29,9 @@
 				"buff turns (12)": "-1"
 			},
 			"conditions": [],
-			"hp below % buff activation": 25,
-			"params": "12,100,1,25,2,-1",
+			"hp below % buff activation": 35,
+			"params": "12,100,1,35,2,-1",
 			"passive id": "55",
-			"passive target": "self"
-		},
-		{
-			"conditions": [],
-			"hit increase/hit": 2,
-			"params": "2,3,0,0,0,0,0,100",
-			"passive id": "37",
 			"passive target": "self"
 		},
 		{

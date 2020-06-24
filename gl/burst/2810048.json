@@ -11,7 +11,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-08-10T11:14:55.000Z",
-		"updatedAt": "2017-08-10T11:14:55.000Z"
+		"updatedAt": "2020-06-24T09:59:54.000Z"
 	},
 	"damage frames": [
 		{
@@ -76,19 +76,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "5"
-		},
-		{
-			"effect delay time(ms)/frame": "0.0/0",
-			"frame times": [
-				0
-			],
-			"hit dmg% distribution": [
-				100
-			],
-			"hit dmg% distribution (total)": 100,
-			"hits": 1,
-			"proc id": "54"
+			"proc id": "9"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -112,10 +100,34 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "9"
+			"proc id": "54"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "5"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "94"
 		}
 	],
-	"desc": "21 combo massive Fire attack on all foes, considerably raises normal hit amount for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & enormous 3 turn Atk, Def reduction",
+	"desc": "21 combo Fire attack on all foes, 3 turns Atk, Def reduction infliction, raises normal hit amount for 3 turns, boosts critical damage for 3 turns, boosts Atk, Def, Rec for 3 turns & normal attacks hits all foes for 3 turns",
 	"drop check count": 1,
 	"id": "2810048",
 	"levels": [
@@ -132,25 +144,21 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 400,
+					"buff #1": {
+						"atk% buff (2)": -90,
+						"proc chance%": 100
+					},
+					"buff #2": {
+						"def% buff (4)": -90,
+						"proc chance%": 100
+					},
 					"buff turns": 3,
-					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
-					"proc id": "5",
-					"rec% buff (5)": 400,
+					"params": "0,1,-90,100,2,-90,100,3,0",
+					"proc id": "9",
 					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -163,21 +171,34 @@
 					"target type": "party"
 				},
 				{
-					"buff #1": {
-						"atk% buff (2)": -90,
-						"proc chance%": 100
-					},
-					"buff #2": {
-						"def% buff (4)": -90,
-						"proc chance%": 100
-					},
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "4.5,3,0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 400,
 					"buff turns": 3,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,1,-90,100,2,-90,100,3,100",
-					"proc id": "9",
+					"params": "0,400,400,400,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 400,
 					"target area": "aoe",
-					"target type": "enemy"
+					"target type": "party"
+				},
+				{
+					"aoe atk inc%": 25,
+					"chance to aoe": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "25,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -194,25 +215,21 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 400,
+					"buff #1": {
+						"atk% buff (2)": -90,
+						"proc chance%": 100
+					},
+					"buff #2": {
+						"def% buff (4)": -90,
+						"proc chance%": 100
+					},
 					"buff turns": 3,
-					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
-					"proc id": "5",
-					"rec% buff (5)": 400,
+					"params": "0,1,-90,100,2,-90,100,3,0",
+					"proc id": "9",
 					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -225,21 +242,34 @@
 					"target type": "party"
 				},
 				{
-					"buff #1": {
-						"atk% buff (2)": -90,
-						"proc chance%": 100
-					},
-					"buff #2": {
-						"def% buff (4)": -90,
-						"proc chance%": 100
-					},
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "4.5,3,0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 400,
 					"buff turns": 3,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,1,-90,100,2,-90,100,3,100",
-					"proc id": "9",
+					"params": "0,400,400,400,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 400,
 					"target area": "aoe",
-					"target type": "enemy"
+					"target type": "party"
+				},
+				{
+					"aoe atk inc%": 25,
+					"chance to aoe": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "25,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -256,25 +286,21 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 400,
+					"buff #1": {
+						"atk% buff (2)": -90,
+						"proc chance%": 100
+					},
+					"buff #2": {
+						"def% buff (4)": -90,
+						"proc chance%": 100
+					},
 					"buff turns": 3,
-					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
-					"proc id": "5",
-					"rec% buff (5)": 400,
+					"params": "0,1,-90,100,2,-90,100,3,0",
+					"proc id": "9",
 					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -287,21 +313,34 @@
 					"target type": "party"
 				},
 				{
-					"buff #1": {
-						"atk% buff (2)": -90,
-						"proc chance%": 100
-					},
-					"buff #2": {
-						"def% buff (4)": -90,
-						"proc chance%": 100
-					},
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "4.5,3,0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 400,
 					"buff turns": 3,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,1,-90,100,2,-90,100,3,100",
-					"proc id": "9",
+					"params": "0,400,400,400,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 400,
 					"target area": "aoe",
-					"target type": "enemy"
+					"target type": "party"
+				},
+				{
+					"aoe atk inc%": 25,
+					"chance to aoe": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "25,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -318,25 +357,21 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 400,
+					"buff #1": {
+						"atk% buff (2)": -90,
+						"proc chance%": 100
+					},
+					"buff #2": {
+						"def% buff (4)": -90,
+						"proc chance%": 100
+					},
 					"buff turns": 3,
-					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
-					"proc id": "5",
-					"rec% buff (5)": 400,
+					"params": "0,1,-90,100,2,-90,100,3,0",
+					"proc id": "9",
 					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -349,21 +384,34 @@
 					"target type": "party"
 				},
 				{
-					"buff #1": {
-						"atk% buff (2)": -90,
-						"proc chance%": 100
-					},
-					"buff #2": {
-						"def% buff (4)": -90,
-						"proc chance%": 100
-					},
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "4.5,3,0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 400,
 					"buff turns": 3,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,1,-90,100,2,-90,100,3,100",
-					"proc id": "9",
+					"params": "0,400,400,400,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 400,
 					"target area": "aoe",
-					"target type": "enemy"
+					"target type": "party"
+				},
+				{
+					"aoe atk inc%": 25,
+					"chance to aoe": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "25,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -380,25 +428,21 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 400,
+					"buff #1": {
+						"atk% buff (2)": -90,
+						"proc chance%": 100
+					},
+					"buff #2": {
+						"def% buff (4)": -90,
+						"proc chance%": 100
+					},
 					"buff turns": 3,
-					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
-					"proc id": "5",
-					"rec% buff (5)": 400,
+					"params": "0,1,-90,100,2,-90,100,3,0",
+					"proc id": "9",
 					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -411,21 +455,34 @@
 					"target type": "party"
 				},
 				{
-					"buff #1": {
-						"atk% buff (2)": -90,
-						"proc chance%": 100
-					},
-					"buff #2": {
-						"def% buff (4)": -90,
-						"proc chance%": 100
-					},
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "4.5,3,0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 400,
 					"buff turns": 3,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,1,-90,100,2,-90,100,3,100",
-					"proc id": "9",
+					"params": "0,400,400,400,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 400,
 					"target area": "aoe",
-					"target type": "enemy"
+					"target type": "party"
+				},
+				{
+					"aoe atk inc%": 25,
+					"chance to aoe": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "25,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -442,25 +499,21 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 400,
+					"buff #1": {
+						"atk% buff (2)": -90,
+						"proc chance%": 100
+					},
+					"buff #2": {
+						"def% buff (4)": -90,
+						"proc chance%": 100
+					},
 					"buff turns": 3,
-					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
-					"proc id": "5",
-					"rec% buff (5)": 400,
+					"params": "0,1,-90,100,2,-90,100,3,0",
+					"proc id": "9",
 					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -473,21 +526,34 @@
 					"target type": "party"
 				},
 				{
-					"buff #1": {
-						"atk% buff (2)": -90,
-						"proc chance%": 100
-					},
-					"buff #2": {
-						"def% buff (4)": -90,
-						"proc chance%": 100
-					},
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "4.5,3,0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 400,
 					"buff turns": 3,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,1,-90,100,2,-90,100,3,100",
-					"proc id": "9",
+					"params": "0,400,400,400,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 400,
 					"target area": "aoe",
-					"target type": "enemy"
+					"target type": "party"
+				},
+				{
+					"aoe atk inc%": 25,
+					"chance to aoe": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "25,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -504,25 +570,21 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 400,
+					"buff #1": {
+						"atk% buff (2)": -90,
+						"proc chance%": 100
+					},
+					"buff #2": {
+						"def% buff (4)": -90,
+						"proc chance%": 100
+					},
 					"buff turns": 3,
-					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
-					"proc id": "5",
-					"rec% buff (5)": 400,
+					"params": "0,1,-90,100,2,-90,100,3,0",
+					"proc id": "9",
 					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -535,21 +597,34 @@
 					"target type": "party"
 				},
 				{
-					"buff #1": {
-						"atk% buff (2)": -90,
-						"proc chance%": 100
-					},
-					"buff #2": {
-						"def% buff (4)": -90,
-						"proc chance%": 100
-					},
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "4.5,3,0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 400,
 					"buff turns": 3,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,1,-90,100,2,-90,100,3,100",
-					"proc id": "9",
+					"params": "0,400,400,400,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 400,
 					"target area": "aoe",
-					"target type": "enemy"
+					"target type": "party"
+				},
+				{
+					"aoe atk inc%": 25,
+					"chance to aoe": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "25,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -566,25 +641,21 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 400,
+					"buff #1": {
+						"atk% buff (2)": -90,
+						"proc chance%": 100
+					},
+					"buff #2": {
+						"def% buff (4)": -90,
+						"proc chance%": 100
+					},
 					"buff turns": 3,
-					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
-					"proc id": "5",
-					"rec% buff (5)": 400,
+					"params": "0,1,-90,100,2,-90,100,3,0",
+					"proc id": "9",
 					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -597,21 +668,34 @@
 					"target type": "party"
 				},
 				{
-					"buff #1": {
-						"atk% buff (2)": -90,
-						"proc chance%": 100
-					},
-					"buff #2": {
-						"def% buff (4)": -90,
-						"proc chance%": 100
-					},
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "4.5,3,0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 400,
 					"buff turns": 3,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,1,-90,100,2,-90,100,3,100",
-					"proc id": "9",
+					"params": "0,400,400,400,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 400,
 					"target area": "aoe",
-					"target type": "enemy"
+					"target type": "party"
+				},
+				{
+					"aoe atk inc%": 25,
+					"chance to aoe": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "25,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -628,25 +712,21 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 400,
+					"buff #1": {
+						"atk% buff (2)": -90,
+						"proc chance%": 100
+					},
+					"buff #2": {
+						"def% buff (4)": -90,
+						"proc chance%": 100
+					},
 					"buff turns": 3,
-					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
-					"proc id": "5",
-					"rec% buff (5)": 400,
+					"params": "0,1,-90,100,2,-90,100,3,0",
+					"proc id": "9",
 					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -659,21 +739,34 @@
 					"target type": "party"
 				},
 				{
-					"buff #1": {
-						"atk% buff (2)": -90,
-						"proc chance%": 100
-					},
-					"buff #2": {
-						"def% buff (4)": -90,
-						"proc chance%": 100
-					},
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "4.5,3,0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 400,
 					"buff turns": 3,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,1,-90,100,2,-90,100,3,100",
-					"proc id": "9",
+					"params": "0,400,400,400,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 400,
 					"target area": "aoe",
-					"target type": "enemy"
+					"target type": "party"
+				},
+				{
+					"aoe atk inc%": 25,
+					"chance to aoe": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "25,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -690,25 +783,21 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 400,
+					"buff #1": {
+						"atk% buff (2)": -90,
+						"proc chance%": 100
+					},
+					"buff #2": {
+						"def% buff (4)": -90,
+						"proc chance%": 100
+					},
 					"buff turns": 3,
-					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
-					"proc id": "5",
-					"rec% buff (5)": 400,
+					"params": "0,1,-90,100,2,-90,100,3,0",
+					"proc id": "9",
 					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"buff turns (84)": 3,
-					"crit multiplier%": 350,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
-					"proc id": "54",
-					"target area": "aoe",
-					"target type": "party"
+					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
@@ -721,21 +810,34 @@
 					"target type": "party"
 				},
 				{
-					"buff #1": {
-						"atk% buff (2)": -90,
-						"proc chance%": 100
-					},
-					"buff #2": {
-						"def% buff (4)": -90,
-						"proc chance%": 100
-					},
+					"buff turns (84)": 3,
+					"crit multiplier%": 450,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "4.5,3,0",
+					"proc id": "54",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"atk% buff (1)": 400,
 					"buff turns": 3,
+					"def% buff (3)": 400,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,1,-90,100,2,-90,100,3,100",
-					"proc id": "9",
+					"params": "0,400,400,400,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 400,
 					"target area": "aoe",
-					"target type": "enemy"
+					"target type": "party"
+				},
+				{
+					"aoe atk inc%": 25,
+					"chance to aoe": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "25,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		}

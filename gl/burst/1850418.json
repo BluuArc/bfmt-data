@@ -16,7 +16,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2016-10-12T11:36:15.000Z",
-		"updatedAt": "2017-06-14T11:43:33.000Z"
+		"updatedAt": "2020-06-24T09:59:54.000Z"
 	},
 	"damage frames": [
 		{
@@ -139,10 +139,22 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "78"
+			"proc id": "45"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "10007"
 		}
 	],
-	"desc": "26 combo powerful Light attack on all foes (damage relative to remaining HP), 7 combo powerful Light attack on single foe (partial HP drain), boosts Atk relative to max HP for 3 turns, damage taken considerably boosts BB gauge for 3 turns & largely boosts own Atk, Def, Rec for 3 turns",
+	"desc": "26 combo Light attack on all foes (damage relative to remaining HP), 7 combo Light attack on single foe (partial HP drain), damage taken fills BB gauge for 3 turns, boosts BB Atk for 3 turns, probable evasion for 2 turns & boosts own Atk, Def relative to max HP for 3 turns",
 	"drop check count": 1,
 	"id": "1850418",
 	"levels": [
@@ -150,58 +162,66 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb added atk% based on hp": 500,
+					"bb added atk% based on hp": 750,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,700,0,200,0,0,0,0",
+					"params": "200,950,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb atk%": 500,
+					"bb atk%": 950,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"hp drain% high": 45,
 					"hp drain% low": 25,
-					"params": "500,200,0,0,0,0,25,45",
+					"params": "950,200,0,0,0,0,25,45",
 					"proc id": "14",
 					"target area": "single",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 25,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,25,0,0,3,70",
+					"params": "4,80,80,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
+					"target area": "single",
+					"target type": "self"
 				},
 				{
-					"bc fill when attacked high": 6,
-					"bc fill when attacked low": 3,
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "300,600,100,3,110",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,100,0,3,48",
-					"proc id": "78",
-					"self atk% buff": 100,
-					"self def% buff": 100,
-					"self rec% buff": 100,
-					"self stat buff turns": 3,
-					"target area": "single",
-					"target type": "self"
+					"params": "600,600,600,3,0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -209,58 +229,66 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb added atk% based on hp": 520,
+					"bb added atk% based on hp": 760,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,720,0,200,0,0,0,0",
+					"params": "200,960,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb atk%": 510,
+					"bb atk%": 950,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"hp drain% high": 47,
 					"hp drain% low": 27,
-					"params": "510,200,0,0,0,0,27,47",
+					"params": "950,200,0,0,0,0,27,47",
 					"proc id": "14",
 					"target area": "single",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 25,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,25,0,0,3,70",
+					"params": "4,80,80,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
+					"target area": "single",
+					"target type": "self"
 				},
 				{
-					"bc fill when attacked high": 6,
-					"bc fill when attacked low": 3,
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "310,610,100,3,110",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "105,105,105,0,3,48",
-					"proc id": "78",
-					"self atk% buff": 105,
-					"self def% buff": 105,
-					"self rec% buff": 105,
-					"self stat buff turns": 3,
-					"target area": "single",
-					"target type": "self"
+					"params": "600,600,600,3,0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -268,58 +296,66 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb added atk% based on hp": 540,
+					"bb added atk% based on hp": 770,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,740,0,200,0,0,0,0",
+					"params": "200,970,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb atk%": 520,
+					"bb atk%": 950,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"hp drain% high": 49,
 					"hp drain% low": 29,
-					"params": "520,200,0,0,0,0,29,49",
+					"params": "950,200,0,0,0,0,29,49",
 					"proc id": "14",
 					"target area": "single",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 25,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,25,0,0,3,70",
+					"params": "4,80,80,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
+					"target area": "single",
+					"target type": "self"
 				},
 				{
-					"bc fill when attacked high": 6,
-					"bc fill when attacked low": 3,
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "320,620,100,3,110",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "110,110,110,0,3,48",
-					"proc id": "78",
-					"self atk% buff": 110,
-					"self def% buff": 110,
-					"self rec% buff": 110,
-					"self stat buff turns": 3,
-					"target area": "single",
-					"target type": "self"
+					"params": "600,600,600,3,0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -327,58 +363,66 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb added atk% based on hp": 560,
+					"bb added atk% based on hp": 780,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,760,0,200,0,0,0,0",
+					"params": "200,980,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb atk%": 530,
+					"bb atk%": 950,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"hp drain% high": 51,
 					"hp drain% low": 31,
-					"params": "530,200,0,0,0,0,31,51",
+					"params": "950,200,0,0,0,0,31,51",
 					"proc id": "14",
 					"target area": "single",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 25,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,25,0,0,3,70",
+					"params": "4,80,80,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
+					"target area": "single",
+					"target type": "self"
 				},
 				{
-					"bc fill when attacked high": 6,
-					"bc fill when attacked low": 3,
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "330,630,100,3,110",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "115,115,115,0,3,48",
-					"proc id": "78",
-					"self atk% buff": 115,
-					"self def% buff": 115,
-					"self rec% buff": 115,
-					"self stat buff turns": 3,
-					"target area": "single",
-					"target type": "self"
+					"params": "600,600,600,3,0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -386,58 +430,66 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb added atk% based on hp": 580,
+					"bb added atk% based on hp": 790,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,780,0,200,0,0,0,0",
+					"params": "200,990,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb atk%": 540,
+					"bb atk%": 950,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"hp drain% high": 53,
 					"hp drain% low": 33,
-					"params": "540,200,0,0,0,0,33,53",
+					"params": "950,200,0,0,0,0,33,53",
 					"proc id": "14",
 					"target area": "single",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 25,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,25,0,0,3,70",
+					"params": "4,80,80,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
+					"target area": "single",
+					"target type": "self"
 				},
 				{
-					"bc fill when attacked high": 6,
-					"bc fill when attacked low": 3,
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "340,640,100,3,110",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,120,120,0,3,48",
-					"proc id": "78",
-					"self atk% buff": 120,
-					"self def% buff": 120,
-					"self rec% buff": 120,
-					"self stat buff turns": 3,
-					"target area": "single",
-					"target type": "self"
+					"params": "600,600,600,3,0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -445,58 +497,66 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb added atk% based on hp": 600,
+					"bb added atk% based on hp": 800,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,800,0,200,0,0,0,0",
+					"params": "200,1000,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb atk%": 550,
+					"bb atk%": 950,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"hp drain% high": 55,
 					"hp drain% low": 35,
-					"params": "550,200,0,0,0,0,35,55",
+					"params": "950,200,0,0,0,0,35,55",
 					"proc id": "14",
 					"target area": "single",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 25,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,25,0,0,3,70",
+					"params": "4,80,80,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
+					"target area": "single",
+					"target type": "self"
 				},
 				{
-					"bc fill when attacked high": 6,
-					"bc fill when attacked low": 3,
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "350,650,100,3,110",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "125,125,125,0,3,48",
-					"proc id": "78",
-					"self atk% buff": 125,
-					"self def% buff": 125,
-					"self rec% buff": 125,
-					"self stat buff turns": 3,
-					"target area": "single",
-					"target type": "self"
+					"params": "600,600,600,3,0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -504,58 +564,66 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb added atk% based on hp": 620,
+					"bb added atk% based on hp": 810,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,820,0,200,0,0,0,0",
+					"params": "200,1010,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb atk%": 560,
+					"bb atk%": 950,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"hp drain% high": 57,
 					"hp drain% low": 37,
-					"params": "560,200,0,0,0,0,37,57",
+					"params": "950,200,0,0,0,0,37,57",
 					"proc id": "14",
 					"target area": "single",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 25,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,25,0,0,3,70",
+					"params": "4,80,80,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
+					"target area": "single",
+					"target type": "self"
 				},
 				{
-					"bc fill when attacked high": 6,
-					"bc fill when attacked low": 3,
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "360,660,100,3,110",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "130,130,130,0,3,48",
-					"proc id": "78",
-					"self atk% buff": 130,
-					"self def% buff": 130,
-					"self rec% buff": 130,
-					"self stat buff turns": 3,
-					"target area": "single",
-					"target type": "self"
+					"params": "600,600,600,3,0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -563,58 +631,66 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb added atk% based on hp": 640,
+					"bb added atk% based on hp": 820,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,840,0,200,0,0,0,0",
+					"params": "200,1020,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb atk%": 570,
+					"bb atk%": 950,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"hp drain% high": 59,
 					"hp drain% low": 39,
-					"params": "570,200,0,0,0,0,39,59",
+					"params": "950,200,0,0,0,0,39,59",
 					"proc id": "14",
 					"target area": "single",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 25,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,25,0,0,3,70",
+					"params": "4,80,80,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
+					"target area": "single",
+					"target type": "self"
 				},
 				{
-					"bc fill when attacked high": 6,
-					"bc fill when attacked low": 3,
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "370,670,100,3,110",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "135,135,135,0,3,48",
-					"proc id": "78",
-					"self atk% buff": 135,
-					"self def% buff": 135,
-					"self rec% buff": 135,
-					"self stat buff turns": 3,
-					"target area": "single",
-					"target type": "self"
+					"params": "600,600,600,3,0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -622,58 +698,66 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb added atk% based on hp": 660,
+					"bb added atk% based on hp": 830,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,860,0,200,0,0,0,0",
+					"params": "200,1030,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb atk%": 580,
+					"bb atk%": 950,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"hp drain% high": 61,
 					"hp drain% low": 41,
-					"params": "580,200,0,0,0,0,41,61",
+					"params": "950,200,0,0,0,0,41,61",
 					"proc id": "14",
 					"target area": "single",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 25,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,25,0,0,3,70",
+					"params": "4,80,80,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
+					"target area": "single",
+					"target type": "self"
 				},
 				{
-					"bc fill when attacked high": 6,
-					"bc fill when attacked low": 3,
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "380,680,100,3,110",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "140,140,140,0,3,48",
-					"proc id": "78",
-					"self atk% buff": 140,
-					"self def% buff": 140,
-					"self rec% buff": 140,
-					"self stat buff turns": 3,
-					"target area": "single",
-					"target type": "self"
+					"params": "600,600,600,3,0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -681,58 +765,66 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,900,0,200,0,0,0,0",
+					"params": "200,1050,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb atk%": 600,
+					"bb atk%": 1050,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
 					"hp drain% high": 65,
 					"hp drain% low": 45,
-					"params": "600,200,0,0,0,0,45,65",
+					"params": "1050,200,0,0,0,0,45,65",
 					"proc id": "14",
 					"target area": "single",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 25,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,25,0,0,3,70",
+					"params": "4,80,80,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
+					"target area": "single",
+					"target type": "self"
 				},
 				{
-					"bc fill when attacked high": 7,
-					"bc fill when attacked low": 4,
+					"bc fill when attacked high": 8,
+					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,700,100,3,110",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
+					"bb atk% buff": 600,
+					"buff turns (72)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "150,150,150,0,3,48",
-					"proc id": "78",
-					"self atk% buff": 150,
-					"self def% buff": 150,
-					"self rec% buff": 150,
-					"self stat buff turns": 3,
-					"target area": "single",
-					"target type": "self"
+					"params": "600,600,600,3,0",
+					"proc id": "45",
+					"sbb atk% buff": 600,
+					"target area": "aoe",
+					"target type": "party",
+					"ubb atk% buff": 600
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		}
