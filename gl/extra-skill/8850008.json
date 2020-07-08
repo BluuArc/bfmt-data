@@ -1,0 +1,96 @@
+{
+	"bfmtMetadata": {
+		"createdAt": "2020-07-08T09:54:56.000Z",
+		"updatedAt": "2020-07-08T09:54:56.000Z"
+	},
+	"desc": "60% max HP, 25% critical damage for all allies, add to BB/SBB fill BB gauge of 1 random ally to full effect, negates spark damage, 10% reduction to BB activation cost & probable 1 KO resistance if Miriam, Evie and Gortius are in the squad",
+	"effects": [
+		{
+			"conditions": [],
+			"hp% buff": 60,
+			"params": "0,0,0,0,60",
+			"passive id": "1",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"crit multiplier%": 25,
+			"params": "0.25",
+			"passive id": "34",
+			"passive target": "party"
+		},
+		{
+			"conditions": [],
+			"params": "4,0&100,1,1,0,1,1,0",
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"bb bc fill%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "4",
+					"target area": "single",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"base spark dmg% resist": 100,
+			"buff spark dmg% resist": 100,
+			"conditions": [],
+			"params": "100,100",
+			"passive id": "77",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"params": "10",
+			"passive id": "48",
+			"passive target": "self",
+			"reduced bb bc cost%": 10
+		},
+		{
+			"angel idol chance% condition": 1,
+			"angel idol recover chance% high": 50,
+			"angel idol recover chance% low": 50,
+			"angel idol recover counts": 1,
+			"angel idol recover hp%": 100,
+			"conditionParams": "1#2,840798%2,860798%2,810908",
+			"conditions": [
+				{
+					"unit required": [
+						{
+							"id": 840798,
+							"name": "Miriam, Elysia's Steel"
+						}
+					]
+				},
+				{
+					"unit required": [
+						{
+							"id": 860798,
+							"name": "Evie, Twilight Heir"
+						}
+					]
+				},
+				{
+					"unit required": [
+						{
+							"id": 810908,
+							"name": "Gortius, Elysia's Crown"
+						}
+					]
+				}
+			],
+			"params": "100,1,50,50,1",
+			"passive id": "69",
+			"passive target": "self"
+		}
+	],
+	"id": "8850008",
+	"name": "Sundered Legacy",
+	"rarity": "8",
+	"target": "self"
+}
