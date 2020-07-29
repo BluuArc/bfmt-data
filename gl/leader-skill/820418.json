@@ -4,40 +4,47 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-01-11T12:28:08.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2020-07-29T10:21:52.000Z"
 	},
-	"desc": "50% boost to Def, max HP, boosts Atk, Def relative to remaining HP, damage taken may restore HP & enormously boosts BB Atk when HP is over 50%",
+	"desc": "120% Def, 150% max HP, 0-100% Atk, Def, Rec relative to remaining HP, 350% BB Atk, damage taken may restore HP & 15% damage reduction from Water, Thunder types",
 	"effects": [
 		{
-			"def% buff": 50,
-			"hp% buff": 50,
-			"params": "0,50,0,0,50",
+			"def% buff": 120,
+			"hp% buff": 150,
+			"params": "0,120,0,0,150",
 			"passive id": "1"
 		},
 		{
 			"atk% base buff": 0,
-			"atk% extra buff based on hp": 50,
+			"atk% extra buff based on hp": 100,
 			"buff proportional to hp": "remaining",
 			"def% base buff": 0,
-			"def% extra buff based on hp": 50,
-			"params": "0,50,0,50,0,0,0",
-			"passive id": "46"
+			"def% extra buff based on hp": 100,
+			"params": "0,100,0,100,0,100,0",
+			"passive id": "46",
+			"rec% base buff": 0,
+			"rec% extra buff based on hp": 100
 		},
 		{
-			"dmg% to hp% when attacked chance%": 30,
-			"dmg% to hp% when attacked high": 25,
+			"dmg% to hp% when attacked chance%": 50,
+			"dmg% to hp% when attacked high": 30,
 			"dmg% to hp% when attacked low": 25,
-			"params": "25,25,30",
+			"params": "25,30,50",
 			"passive id": "24"
 		},
 		{
-			"bb atk% add": 300,
-			"hp threshold": 50,
-			"params": "300,300,300,50,1",
-			"passive id": "103",
-			"sbb atk% add": 300,
-			"triggered when hp": "higher",
-			"ubb atk% add": 300
+			"bb atk% buff": 350,
+			"params": "350,350,350",
+			"passive id": "64",
+			"sbb atk% buff": 350,
+			"ubb atk% buff": 350
+		},
+		{
+			"dmg% mitigation for elemental attacks": 15,
+			"mitigate thunder attacks": true,
+			"mitigate water attacks": true,
+			"params": "2,4,0,0,0,0,15",
+			"passive id": "62"
 		}
 	],
 	"id": "820418",

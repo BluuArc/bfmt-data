@@ -11,7 +11,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-01-11T12:28:08.000Z",
-		"updatedAt": "2017-06-14T11:43:33.000Z"
+		"updatedAt": "2020-07-29T10:21:52.000Z"
 	},
 	"damage frames": [
 		{
@@ -86,7 +86,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "86"
+			"proc id": "62"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -99,9 +99,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "20"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "85"
 		}
 	],
-	"desc": "20 combo powerful Water, Dark attack on all foes, 50% damage reduction for 2 turns, probable slight HP absorption when attacking for 3 turns & damage taken boosts BB gauge for 3 turns",
+	"desc": "20 combo Water, Dark attack on all foes, damage taken fills BB gauge and may restore HP for 3 turns, 50% damage reduction for 3 turns & adds Water barrier",
 	"drop check count": 1,
 	"id": "820418",
 	"levels": [
@@ -109,45 +121,56 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 270,
+					"bb atk%": 400,
 					"bb elements": [
 						"dark"
 					],
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "6,0,0,270,100,0,0,0,0",
+					"params": "6,0,0,400,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"dmg% reduction": 50,
-					"dmg% reduction turns (36)": 2,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,2,0",
+					"params": "50,3,0",
 					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp drain buff turns (134)": 3,
-					"hp drain chance%": 50,
-					"hp drain% high": 7,
-					"hp drain% low": 5,
-					"params": "5,7,50,3,0",
-					"proc id": "86",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "water",
+					"elemental barrier hp": 5000,
+					"params": "2,5000,0,100,0",
+					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"bc fill when attacked high": 7,
+					"bc fill when attacked high": 8,
 					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "500,700,100,3,0",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 3,
+					"hp recover from dmg chance": 50,
+					"hp recover from dmg% high": 30,
+					"hp recover from dmg% low": 25,
+					"params": "25,30,50,3,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -157,45 +180,56 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 280,
+					"bb atk%": 410,
 					"bb elements": [
 						"dark"
 					],
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "6,0,0,280,100,0,0,0,0",
+					"params": "6,0,0,410,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"dmg% reduction": 50,
-					"dmg% reduction turns (36)": 2,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,2,0",
+					"params": "50,3,0",
 					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp drain buff turns (134)": 3,
-					"hp drain chance%": 50,
-					"hp drain% high": 7,
-					"hp drain% low": 5,
-					"params": "5,7,50,3,0",
-					"proc id": "86",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "water",
+					"elemental barrier hp": 5000,
+					"params": "2,5000,0,100,0",
+					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"bc fill when attacked high": 7,
+					"bc fill when attacked high": 8,
 					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "500,700,100,3,0",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 3,
+					"hp recover from dmg chance": 50,
+					"hp recover from dmg% high": 30,
+					"hp recover from dmg% low": 25,
+					"params": "25,30,50,3,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -205,45 +239,56 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 290,
+					"bb atk%": 420,
 					"bb elements": [
 						"dark"
 					],
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "6,0,0,290,100,0,0,0,0",
+					"params": "6,0,0,420,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"dmg% reduction": 50,
-					"dmg% reduction turns (36)": 2,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,2,0",
+					"params": "50,3,0",
 					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp drain buff turns (134)": 3,
-					"hp drain chance%": 50,
-					"hp drain% high": 7,
-					"hp drain% low": 5,
-					"params": "5,7,50,3,0",
-					"proc id": "86",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "water",
+					"elemental barrier hp": 5000,
+					"params": "2,5000,0,100,0",
+					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"bc fill when attacked high": 7,
+					"bc fill when attacked high": 8,
 					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "500,700,100,3,0",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 3,
+					"hp recover from dmg chance": 50,
+					"hp recover from dmg% high": 30,
+					"hp recover from dmg% low": 25,
+					"params": "25,30,50,3,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -253,45 +298,56 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 300,
+					"bb atk%": 430,
 					"bb elements": [
 						"dark"
 					],
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "6,0,0,300,100,0,0,0,0",
+					"params": "6,0,0,430,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"dmg% reduction": 50,
-					"dmg% reduction turns (36)": 2,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,2,0",
+					"params": "50,3,0",
 					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp drain buff turns (134)": 3,
-					"hp drain chance%": 50,
-					"hp drain% high": 7,
-					"hp drain% low": 5,
-					"params": "5,7,50,3,0",
-					"proc id": "86",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "water",
+					"elemental barrier hp": 5000,
+					"params": "2,5000,0,100,0",
+					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"bc fill when attacked high": 7,
+					"bc fill when attacked high": 8,
 					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "500,700,100,3,0",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 3,
+					"hp recover from dmg chance": 50,
+					"hp recover from dmg% high": 30,
+					"hp recover from dmg% low": 25,
+					"params": "25,30,50,3,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -301,45 +357,56 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 310,
+					"bb atk%": 440,
 					"bb elements": [
 						"dark"
 					],
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "6,0,0,310,100,0,0,0,0",
+					"params": "6,0,0,440,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"dmg% reduction": 50,
-					"dmg% reduction turns (36)": 2,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,2,0",
+					"params": "50,3,0",
 					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp drain buff turns (134)": 3,
-					"hp drain chance%": 50,
-					"hp drain% high": 7,
-					"hp drain% low": 5,
-					"params": "5,7,50,3,0",
-					"proc id": "86",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "water",
+					"elemental barrier hp": 5000,
+					"params": "2,5000,0,100,0",
+					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"bc fill when attacked high": 7,
+					"bc fill when attacked high": 8,
 					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "500,700,100,3,0",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 3,
+					"hp recover from dmg chance": 50,
+					"hp recover from dmg% high": 30,
+					"hp recover from dmg% low": 25,
+					"params": "25,30,50,3,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -349,45 +416,56 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 320,
+					"bb atk%": 450,
 					"bb elements": [
 						"dark"
 					],
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "6,0,0,320,100,0,0,0,0",
+					"params": "6,0,0,450,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"dmg% reduction": 50,
-					"dmg% reduction turns (36)": 2,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,2,0",
+					"params": "50,3,0",
 					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp drain buff turns (134)": 3,
-					"hp drain chance%": 50,
-					"hp drain% high": 7,
-					"hp drain% low": 5,
-					"params": "5,7,50,3,0",
-					"proc id": "86",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "water",
+					"elemental barrier hp": 5000,
+					"params": "2,5000,0,100,0",
+					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"bc fill when attacked high": 7,
+					"bc fill when attacked high": 8,
 					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "500,700,100,3,0",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 3,
+					"hp recover from dmg chance": 50,
+					"hp recover from dmg% high": 30,
+					"hp recover from dmg% low": 25,
+					"params": "25,30,50,3,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -397,45 +475,56 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 330,
+					"bb atk%": 460,
 					"bb elements": [
 						"dark"
 					],
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "6,0,0,330,100,0,0,0,0",
+					"params": "6,0,0,460,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"dmg% reduction": 50,
-					"dmg% reduction turns (36)": 2,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,2,0",
+					"params": "50,3,0",
 					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp drain buff turns (134)": 3,
-					"hp drain chance%": 50,
-					"hp drain% high": 7,
-					"hp drain% low": 5,
-					"params": "5,7,50,3,0",
-					"proc id": "86",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "water",
+					"elemental barrier hp": 5000,
+					"params": "2,5000,0,100,0",
+					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"bc fill when attacked high": 7,
+					"bc fill when attacked high": 8,
 					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "500,700,100,3,0",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 3,
+					"hp recover from dmg chance": 50,
+					"hp recover from dmg% high": 30,
+					"hp recover from dmg% low": 25,
+					"params": "25,30,50,3,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -445,45 +534,56 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 340,
+					"bb atk%": 470,
 					"bb elements": [
 						"dark"
 					],
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "6,0,0,340,100,0,0,0,0",
+					"params": "6,0,0,470,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"dmg% reduction": 50,
-					"dmg% reduction turns (36)": 2,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,2,0",
+					"params": "50,3,0",
 					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp drain buff turns (134)": 3,
-					"hp drain chance%": 50,
-					"hp drain% high": 7,
-					"hp drain% low": 5,
-					"params": "5,7,50,3,0",
-					"proc id": "86",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "water",
+					"elemental barrier hp": 5000,
+					"params": "2,5000,0,100,0",
+					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"bc fill when attacked high": 7,
+					"bc fill when attacked high": 8,
 					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "500,700,100,3,0",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 3,
+					"hp recover from dmg chance": 50,
+					"hp recover from dmg% high": 30,
+					"hp recover from dmg% low": 25,
+					"params": "25,30,50,3,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -493,45 +593,56 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 350,
+					"bb atk%": 480,
 					"bb elements": [
 						"dark"
 					],
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "6,0,0,350,100,0,0,0,0",
+					"params": "6,0,0,480,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"dmg% reduction": 50,
-					"dmg% reduction turns (36)": 2,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,2,0",
+					"params": "50,3,0",
 					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp drain buff turns (134)": 3,
-					"hp drain chance%": 50,
-					"hp drain% high": 7,
-					"hp drain% low": 5,
-					"params": "5,7,50,3,0",
-					"proc id": "86",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "water",
+					"elemental barrier hp": 5000,
+					"params": "2,5000,0,100,0",
+					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"bc fill when attacked high": 7,
+					"bc fill when attacked high": 8,
 					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "500,700,100,3,0",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 3,
+					"hp recover from dmg chance": 50,
+					"hp recover from dmg% high": 30,
+					"hp recover from dmg% low": 25,
+					"params": "25,30,50,3,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -541,45 +652,56 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 370,
+					"bb atk%": 500,
 					"bb elements": [
 						"dark"
 					],
-					"bb flat atk": 100,
+					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "6,0,0,370,100,0,0,0,0",
+					"params": "6,0,0,500,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"dmg% reduction": 50,
-					"dmg% reduction turns (36)": 2,
+					"dmg% reduction turns (36)": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,2,0",
+					"params": "50,3,0",
 					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp drain buff turns (134)": 3,
-					"hp drain chance%": 50,
-					"hp drain% high": 7,
-					"hp drain% low": 5,
-					"params": "5,7,50,3,0",
-					"proc id": "86",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "water",
+					"elemental barrier hp": 5000,
+					"params": "2,5000,0,100,0",
+					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"bc fill when attacked high": 7,
+					"bc fill when attacked high": 8,
 					"bc fill when attacked low": 5,
 					"bc fill when attacked turns (38)": 3,
 					"bc fill when attacked%": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "500,700,100,3,0",
+					"params": "500,800,100,3,0",
 					"proc id": "20",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 3,
+					"hp recover from dmg chance": 50,
+					"hp recover from dmg% high": 30,
+					"hp recover from dmg% low": 25,
+					"params": "25,30,50,3,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}

@@ -4,24 +4,27 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2016-12-14T12:06:01.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2020-07-29T10:21:52.000Z"
 	},
-	"desc": "Negates all status ailments & hugely boosts damage against status afflicted foes",
+	"desc": "10% DoT reduction for all allies, 40% all parameters, 100% spark damage, 150% damage against status afflicted foes & negates all status ailments and Atk, Def, Rec reduction",
 	"effects": [
 		{
+			"atk down resist%": 100,
 			"conditions": [],
 			"curse resist%": 100,
+			"def down resist%": 100,
 			"injury resist%": 100,
 			"paralysis resist%": 100,
-			"params": "100,100,100,100,100,100,0,0,0",
+			"params": "100,100,100,100,100,100,100,100,100",
 			"passive id": "73",
 			"passive target": "self",
 			"poison resist%": 100,
+			"rec down resist%": 100,
 			"sick resist%": 100,
 			"weaken resist%": 100
 		},
 		{
-			"atk% buff when enemy has ailment": 100,
+			"atk% buff when enemy has ailment": 150,
 			"atk% buff when enemy has curse": true,
 			"atk% buff when enemy has injury": true,
 			"atk% buff when enemy has paralysis": true,
@@ -29,8 +32,31 @@
 			"atk% buff when enemy has sick": true,
 			"atk% buff when enemy has weaken": true,
 			"conditions": [],
-			"params": "1&2&3&4&5&6,100",
+			"params": "1&2&3&4&5&6,150",
 			"passive id": "74",
+			"passive target": "self"
+		},
+		{
+			"atk% buff": 40,
+			"conditions": [],
+			"def% buff": 40,
+			"hp% buff": 40,
+			"params": "40,40,40,0,40",
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 40
+		},
+		{
+			"conditions": [],
+			"params": "100,10",
+			"passive id": "127",
+			"passive target": "party"
+		},
+		{
+			"conditions": [],
+			"damage% for spark": 100,
+			"params": "100,0,0,0,0,0",
+			"passive id": "31",
 			"passive target": "self"
 		}
 	],

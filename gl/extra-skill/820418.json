@@ -4,18 +4,18 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-01-06T11:06:15.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2020-07-29T10:21:52.000Z"
 	},
-	"desc": "Reduces damage taken for 2 turns when HP is below 50% & greatly boosts own Atk, Def relative to how low remaining HP is",
+	"desc": "Probable 50% damage counter for all allies, 40% all parameters, 0-100% Atk, Def, Rec relative to HP lost & 25% damage reduction for 2 turns when HP is below 50%",
 	"effects": [
 		{
 			"buff": {
-				"buff turns (36)": "1",
+				"buff turns (36)": "2",
 				"dmg reduction% buff": 25
 			},
 			"conditions": [],
 			"hp below % buff activation": 50,
-			"params": "36,25,-1,50,2,1",
+			"params": "36,25,-1,50,2,2",
 			"passive id": "55",
 			"passive target": "self"
 		},
@@ -26,9 +26,30 @@
 			"conditions": [],
 			"def% base buff": 0,
 			"def% extra buff based on hp": 100,
-			"params": "0,100,0,100,0,0,1",
+			"params": "0,100,0,100,0,100,1",
 			"passive id": "46",
-			"passive target": "self"
+			"passive target": "self",
+			"rec% base buff": 0,
+			"rec% extra buff based on hp": 100
+		},
+		{
+			"atk% buff": 40,
+			"conditions": [],
+			"def% buff": 40,
+			"hp% buff": 40,
+			"params": "40,40,40,0,40",
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 40
+		},
+		{
+			"conditions": [],
+			"dmg% reflect chance%": 70,
+			"dmg% reflect high": 50,
+			"dmg% reflect low": 50,
+			"params": "50,50,70",
+			"passive id": "26",
+			"passive target": "party"
 		}
 	],
 	"id": "820418",

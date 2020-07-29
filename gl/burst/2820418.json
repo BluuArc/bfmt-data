@@ -11,7 +11,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-01-11T12:28:08.000Z",
-		"updatedAt": "2017-06-14T11:43:33.000Z"
+		"updatedAt": "2020-07-29T10:21:52.000Z"
 	},
 	"damage frames": [
 		{
@@ -123,9 +123,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "24"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "18"
 		}
 	],
-	"desc": "26 combo massive Water attack on all foes (damage relative to remaining HP), activates Water barrier, fully restores HP for 3 turns, hugely boosts max HP & greatly boosts Atk, Def relative to max HP for 3 turns",
+	"desc": "26 combo Water attack on all foes (damage relative to remaining HP), boosts Atk, Def relative to max HP for 3 turns, boosts max HP, fully restores HP for 3 turns, 100% damage reduction for 3 turns & adds Water barrier",
 	"drop check count": 1,
 	"id": "2820418",
 	"levels": [
@@ -148,16 +160,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "water",
-					"elemental barrier hp": 25000,
-					"params": "2,25000,0,100,350",
+					"elemental barrier hp": 55000,
+					"params": "2,55000,0,100,0",
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
-					"params": "0,35,0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
@@ -167,7 +179,7 @@
 					"gradual heal high": 99999,
 					"gradual heal low": 99999,
 					"gradual heal turns (8)": 3,
-					"params": "99999,99999,0,3,150",
+					"params": "99999,99999,0,3,0",
 					"proc id": "3",
 					"rec added% (from target)": 10,
 					"target area": "aoe",
@@ -175,12 +187,21 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 50,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
-					"def% buff (47)": 50,
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,50,50,0,3,0",
+					"params": "4,120,120,0,3,0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,3,0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -205,16 +226,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "water",
-					"elemental barrier hp": 25000,
-					"params": "2,25000,0,100,350",
+					"elemental barrier hp": 55000,
+					"params": "2,55000,0,100,0",
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
-					"params": "0,35,0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
@@ -224,7 +245,7 @@
 					"gradual heal high": 99999,
 					"gradual heal low": 99999,
 					"gradual heal turns (8)": 3,
-					"params": "99999,99999,0,3,150",
+					"params": "99999,99999,0,3,0",
 					"proc id": "3",
 					"rec added% (from target)": 10,
 					"target area": "aoe",
@@ -232,12 +253,21 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 50,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
-					"def% buff (47)": 50,
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,50,50,0,3,0",
+					"params": "4,120,120,0,3,0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,3,0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -262,16 +292,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "water",
-					"elemental barrier hp": 25000,
-					"params": "2,25000,0,100,350",
+					"elemental barrier hp": 55000,
+					"params": "2,55000,0,100,0",
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
-					"params": "0,35,0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
@@ -281,7 +311,7 @@
 					"gradual heal high": 99999,
 					"gradual heal low": 99999,
 					"gradual heal turns (8)": 3,
-					"params": "99999,99999,0,3,150",
+					"params": "99999,99999,0,3,0",
 					"proc id": "3",
 					"rec added% (from target)": 10,
 					"target area": "aoe",
@@ -289,12 +319,21 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 50,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
-					"def% buff (47)": 50,
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,50,50,0,3,0",
+					"params": "4,120,120,0,3,0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,3,0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -319,16 +358,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "water",
-					"elemental barrier hp": 25000,
-					"params": "2,25000,0,100,350",
+					"elemental barrier hp": 55000,
+					"params": "2,55000,0,100,0",
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
-					"params": "0,35,0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
@@ -338,7 +377,7 @@
 					"gradual heal high": 99999,
 					"gradual heal low": 99999,
 					"gradual heal turns (8)": 3,
-					"params": "99999,99999,0,3,150",
+					"params": "99999,99999,0,3,0",
 					"proc id": "3",
 					"rec added% (from target)": 10,
 					"target area": "aoe",
@@ -346,12 +385,21 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 50,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
-					"def% buff (47)": 50,
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,50,50,0,3,0",
+					"params": "4,120,120,0,3,0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,3,0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -376,16 +424,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "water",
-					"elemental barrier hp": 25000,
-					"params": "2,25000,0,100,350",
+					"elemental barrier hp": 55000,
+					"params": "2,55000,0,100,0",
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
-					"params": "0,35,0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
@@ -395,7 +443,7 @@
 					"gradual heal high": 99999,
 					"gradual heal low": 99999,
 					"gradual heal turns (8)": 3,
-					"params": "99999,99999,0,3,150",
+					"params": "99999,99999,0,3,0",
 					"proc id": "3",
 					"rec added% (from target)": 10,
 					"target area": "aoe",
@@ -403,12 +451,21 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 50,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
-					"def% buff (47)": 50,
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,50,50,0,3,0",
+					"params": "4,120,120,0,3,0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,3,0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -433,16 +490,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "water",
-					"elemental barrier hp": 25000,
-					"params": "2,25000,0,100,350",
+					"elemental barrier hp": 55000,
+					"params": "2,55000,0,100,0",
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
-					"params": "0,35,0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
@@ -452,7 +509,7 @@
 					"gradual heal high": 99999,
 					"gradual heal low": 99999,
 					"gradual heal turns (8)": 3,
-					"params": "99999,99999,0,3,150",
+					"params": "99999,99999,0,3,0",
 					"proc id": "3",
 					"rec added% (from target)": 10,
 					"target area": "aoe",
@@ -460,12 +517,21 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 50,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
-					"def% buff (47)": 50,
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,50,50,0,3,0",
+					"params": "4,120,120,0,3,0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,3,0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -490,16 +556,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "water",
-					"elemental barrier hp": 25000,
-					"params": "2,25000,0,100,350",
+					"elemental barrier hp": 55000,
+					"params": "2,55000,0,100,0",
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
-					"params": "0,35,0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
@@ -509,7 +575,7 @@
 					"gradual heal high": 99999,
 					"gradual heal low": 99999,
 					"gradual heal turns (8)": 3,
-					"params": "99999,99999,0,3,150",
+					"params": "99999,99999,0,3,0",
 					"proc id": "3",
 					"rec added% (from target)": 10,
 					"target area": "aoe",
@@ -517,12 +583,21 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 50,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
-					"def% buff (47)": 50,
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,50,50,0,3,0",
+					"params": "4,120,120,0,3,0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,3,0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -547,16 +622,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "water",
-					"elemental barrier hp": 25000,
-					"params": "2,25000,0,100,350",
+					"elemental barrier hp": 55000,
+					"params": "2,55000,0,100,0",
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
-					"params": "0,35,0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
@@ -566,7 +641,7 @@
 					"gradual heal high": 99999,
 					"gradual heal low": 99999,
 					"gradual heal turns (8)": 3,
-					"params": "99999,99999,0,3,150",
+					"params": "99999,99999,0,3,0",
 					"proc id": "3",
 					"rec added% (from target)": 10,
 					"target area": "aoe",
@@ -574,12 +649,21 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 50,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
-					"def% buff (47)": 50,
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,50,50,0,3,0",
+					"params": "4,120,120,0,3,0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,3,0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -604,16 +688,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "water",
-					"elemental barrier hp": 25000,
-					"params": "2,25000,0,100,350",
+					"elemental barrier hp": 55000,
+					"params": "2,55000,0,100,0",
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
-					"params": "0,35,0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
@@ -623,7 +707,7 @@
 					"gradual heal high": 99999,
 					"gradual heal low": 99999,
 					"gradual heal turns (8)": 3,
-					"params": "99999,99999,0,3,150",
+					"params": "99999,99999,0,3,0",
 					"proc id": "3",
 					"rec added% (from target)": 10,
 					"target area": "aoe",
@@ -631,12 +715,21 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 50,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
-					"def% buff (47)": 50,
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,50,50,0,3,0",
+					"params": "4,120,120,0,3,0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,3,0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -661,16 +754,16 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "water",
-					"elemental barrier hp": 25000,
-					"params": "2,25000,0,100,350",
+					"elemental barrier hp": 55000,
+					"params": "2,55000,0,100,0",
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 35,
-					"params": "0,35,0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
@@ -680,7 +773,7 @@
 					"gradual heal high": 99999,
 					"gradual heal low": 99999,
 					"gradual heal turns (8)": 3,
-					"params": "99999,99999,0,3,150",
+					"params": "99999,99999,0,3,0",
 					"proc id": "3",
 					"rec added% (from target)": 10,
 					"target area": "aoe",
@@ -688,12 +781,21 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 50,
+					"atk% buff (46)": 120,
 					"converted attribute": "hp",
-					"def% buff (47)": 50,
+					"def% buff (47)": 120,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,50,50,0,3,0",
+					"params": "4,120,120,0,3,0",
 					"proc id": "24",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,3,0",
+					"proc id": "18",
 					"target area": "aoe",
 					"target type": "party"
 				}
