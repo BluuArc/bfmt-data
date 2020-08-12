@@ -1,0 +1,51 @@
+{
+	"associated_units": [
+		"830918:es"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2020-08-12T10:26:40.000Z",
+		"updatedAt": "2020-08-12T10:26:40.000Z"
+	},
+	"desc": "0-100% Atk relative to remaining HP, probable damage reduction to 1, angel idol when HP is below 35% & raises normal hit amount",
+	"effects": [
+		{
+			"atk% base buff": 0,
+			"atk% extra buff based on hp": 100,
+			"buff proportional to hp": "remaining",
+			"conditions": [],
+			"params": "0,100,0,0,0,0,0",
+			"passive id": "46",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"params": "10",
+			"passive id": "43",
+			"passive target": "self",
+			"take 1 dmg%": 10
+		},
+		{
+			"buff": {
+				"angel idol buff (12)": true,
+				"angel idol recover hp%": 100,
+				"buff turns (12)": "-1"
+			},
+			"conditions": [],
+			"hp below % buff activation": 35,
+			"params": "12,100,1,35,2,-1",
+			"passive id": "55",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"hit increase/hit": 2,
+			"params": "2,3,0,0,0,0,0,100",
+			"passive id": "37",
+			"passive target": "self"
+		}
+	],
+	"id": "830918",
+	"name": "Champion of the People",
+	"rarity": "7",
+	"target": "self"
+}
