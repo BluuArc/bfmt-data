@@ -16,7 +16,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2020-08-26T10:28:23.000Z"
 	},
 	"damage frames": [
 		{
@@ -112,9 +112,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "24"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "67"
 		}
 	],
-	"desc": "12 combo powerful Fire, Dark attack on all foes, 7 combo powerful Fire attack on all foes (damage relative to remaining HP), slight damage reduction from all elemental types for 1 turn, slight additional damage reduction for 3 turns & greatly boosts Atk, Def relative to max HP for 3 turns",
+	"desc": "12 combo Fire, Dark attack on all foes, 7 combo Fire attack on all foes (damage relative to remaining HP), 15% damage reduction from all element types for 2 turns, 25% DoT reduction for 3 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & spark damage fills BB gauge for 3 turns",
 	"drop check count": 1,
 	"id": "1810438",
 	"levels": [
@@ -122,32 +134,32 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 520,
+					"bb atk%": 950,
 					"bb elements": [
 						"fire",
 						"dark"
 					],
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,520,200,0,0,0,0",
+					"params": "1,6,0,950,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 100,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "100,800,0,200,0,0,0,0",
+					"params": "100,950,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks": 15,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -155,26 +167,38 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,15,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "15,3,0",
+					"params": "25,3,0",
 					"proc id": "126",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 30,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
-					"def% buff (47)": 30,
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,30,30,0,3,0",
+					"params": "4,80,80,80,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 80,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
+					"bc fill on spark%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,400,100,3,0",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -184,32 +208,32 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 530,
+					"bb atk%": 960,
 					"bb elements": [
 						"fire",
 						"dark"
 					],
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,530,200,0,0,0,0",
+					"params": "1,6,0,960,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 110,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "110,810,0,200,0,0,0,0",
+					"params": "110,960,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks": 15,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -217,26 +241,38 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,15,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "15,3,0",
+					"params": "25,3,0",
 					"proc id": "126",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 30,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
-					"def% buff (47)": 30,
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,30,30,0,3,0",
+					"params": "4,80,80,80,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 80,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
+					"bc fill on spark%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,400,100,3,0",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -246,32 +282,32 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 540,
+					"bb atk%": 970,
 					"bb elements": [
 						"fire",
 						"dark"
 					],
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,540,200,0,0,0,0",
+					"params": "1,6,0,970,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 120,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "120,820,0,200,0,0,0,0",
+					"params": "120,970,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks": 15,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -279,26 +315,38 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,15,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "15,3,0",
+					"params": "25,3,0",
 					"proc id": "126",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 30,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
-					"def% buff (47)": 30,
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,30,30,0,3,0",
+					"params": "4,80,80,80,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 80,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
+					"bc fill on spark%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,400,100,3,0",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -308,32 +356,32 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 550,
+					"bb atk%": 980,
 					"bb elements": [
 						"fire",
 						"dark"
 					],
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,550,200,0,0,0,0",
+					"params": "1,6,0,980,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 130,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "130,830,0,200,0,0,0,0",
+					"params": "130,980,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks": 15,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -341,26 +389,38 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,15,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "15,3,0",
+					"params": "25,3,0",
 					"proc id": "126",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 30,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
-					"def% buff (47)": 30,
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,30,30,0,3,0",
+					"params": "4,80,80,80,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 80,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
+					"bc fill on spark%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,400,100,3,0",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -370,32 +430,32 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 560,
+					"bb atk%": 990,
 					"bb elements": [
 						"fire",
 						"dark"
 					],
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,560,200,0,0,0,0",
+					"params": "1,6,0,990,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 140,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "140,840,0,200,0,0,0,0",
+					"params": "140,990,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks": 15,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -403,26 +463,38 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,15,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "15,3,0",
+					"params": "25,3,0",
 					"proc id": "126",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 30,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
-					"def% buff (47)": 30,
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,30,30,0,3,0",
+					"params": "4,80,80,80,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 80,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
+					"bc fill on spark%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,400,100,3,0",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -432,32 +504,32 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 570,
+					"bb atk%": 1000,
 					"bb elements": [
 						"fire",
 						"dark"
 					],
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,570,200,0,0,0,0",
+					"params": "1,6,0,1000,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 150,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "150,850,0,200,0,0,0,0",
+					"params": "150,1000,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks": 15,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -465,26 +537,38 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,15,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "15,3,0",
+					"params": "25,3,0",
 					"proc id": "126",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 30,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
-					"def% buff (47)": 30,
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,30,30,0,3,0",
+					"params": "4,80,80,80,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 80,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
+					"bc fill on spark%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,400,100,3,0",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -494,32 +578,32 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 580,
+					"bb atk%": 1010,
 					"bb elements": [
 						"fire",
 						"dark"
 					],
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,580,200,0,0,0,0",
+					"params": "1,6,0,1010,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 160,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "160,860,0,200,0,0,0,0",
+					"params": "160,1010,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks": 15,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -527,26 +611,38 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,15,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "15,3,0",
+					"params": "25,3,0",
 					"proc id": "126",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 30,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
-					"def% buff (47)": 30,
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,30,30,0,3,0",
+					"params": "4,80,80,80,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 80,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
+					"bc fill on spark%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,400,100,3,0",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -556,32 +652,32 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 590,
+					"bb atk%": 1020,
 					"bb elements": [
 						"fire",
 						"dark"
 					],
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,590,200,0,0,0,0",
+					"params": "1,6,0,1020,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 170,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "170,870,0,200,0,0,0,0",
+					"params": "170,1020,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks": 15,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -589,26 +685,38 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,15,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "15,3,0",
+					"params": "25,3,0",
 					"proc id": "126",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 30,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
-					"def% buff (47)": 30,
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,30,30,0,3,0",
+					"params": "4,80,80,80,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 80,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
+					"bc fill on spark%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,400,100,3,0",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -618,32 +726,32 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 600,
+					"bb atk%": 1030,
 					"bb elements": [
 						"fire",
 						"dark"
 					],
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,600,200,0,0,0,0",
+					"params": "1,6,0,1030,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 180,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "180,880,0,200,0,0,0,0",
+					"params": "180,1030,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks": 15,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -651,26 +759,38 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,15,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "15,3,0",
+					"params": "25,3,0",
 					"proc id": "126",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 30,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
-					"def% buff (47)": 30,
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,30,30,0,3,0",
+					"params": "4,80,80,80,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 80,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
+					"bc fill on spark%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,400,100,3,0",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -680,32 +800,32 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 620,
+					"bb atk%": 1050,
 					"bb elements": [
 						"fire",
 						"dark"
 					],
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,620,200,0,0,0,0",
+					"params": "1,6,0,1050,200,0,0,0,0",
 					"proc id": "29",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"bb added atk% based on hp": 700,
+					"bb added atk% based on hp": 850,
 					"bb added atk% proportional to hp": "remaining",
 					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "200,900,0,200,0,0,0,0",
+					"params": "200,1050,0,200,0,0,0,0",
 					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks": 15,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -713,26 +833,38 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,15,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "15,3,0",
+					"params": "25,3,0",
 					"proc id": "126",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 30,
+					"atk% buff (46)": 80,
 					"converted attribute": "hp",
-					"def% buff (47)": 30,
+					"def% buff (47)": 80,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "4,30,30,0,3,0",
+					"params": "4,80,80,80,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 80,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"bc fill on spark buff turns (111)": 3,
+					"bc fill on spark high": 4,
+					"bc fill on spark low": 3,
+					"bc fill on spark%": 100,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,400,100,3,0",
+					"proc id": "67",
 					"target area": "aoe",
 					"target type": "party"
 				}

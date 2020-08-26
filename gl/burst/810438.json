@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 16,
-			"id": "29",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2020-08-26T10:28:23.000Z"
 	},
 	"damage frames": [
 		{
@@ -54,7 +54,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 16,
-			"proc id": "29"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -103,9 +103,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "8"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "56"
 		}
 	],
-	"desc": "16 combo powerful Fire, Dark attack on all foes, hugely boosts Atk, Def, Rec for 3 turns, slight damage reduction from all elemental types for 1 turn, Spark damage considerably restores HP for 3 turns & greatly boosts max HP",
+	"desc": "16 combo Fire attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 3 turns, 10% damage reduction from all element types for 2 turns, spark damage restores HP for 3 turns, boosts max HP & probable KO resistance",
 	"drop check count": 1,
 	"id": "810438",
 	"levels": [
@@ -113,271 +125,13 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 370,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 200,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,370,200,0,0,0,0",
-					"proc id": "29",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"atk% buff (1)": 120,
-					"buff turns": 3,
-					"def% buff (3)": 120,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "all",
-					"params": "0,120,120,120,0,3,100",
-					"proc id": "5",
-					"rec% buff (5)": 120,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
-					"proc id": "39",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,500,100,3,0",
-					"proc id": "87",
-					"spark recover hp buff turns (135)": 3,
-					"spark recover hp chance%": 100,
-					"spark recover hp high": 500,
-					"spark recover hp low": 400,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 30,
-					"params": "0,30,0",
-					"proc id": "8",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 28,
-			"effects": [
-				{
-					"bb atk%": 380,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
-					"bb flat atk": 200,
-					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,380,200,0,0,0,0",
-					"proc id": "29",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"atk% buff (1)": 125,
-					"buff turns": 3,
-					"def% buff (3)": 125,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "all",
-					"params": "0,125,125,125,0,3,100",
-					"proc id": "5",
-					"rec% buff (5)": 125,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
-					"proc id": "39",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,500,100,3,0",
-					"proc id": "87",
-					"spark recover hp buff turns (135)": 3,
-					"spark recover hp chance%": 100,
-					"spark recover hp high": 500,
-					"spark recover hp low": 400,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 30,
-					"params": "0,30,0",
-					"proc id": "8",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 28,
-			"effects": [
-				{
-					"bb atk%": 390,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
-					"bb flat atk": 200,
-					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,390,200,0,0,0,0",
-					"proc id": "29",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"atk% buff (1)": 130,
-					"buff turns": 3,
-					"def% buff (3)": 130,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "all",
-					"params": "0,130,130,130,0,3,100",
-					"proc id": "5",
-					"rec% buff (5)": 130,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
-					"proc id": "39",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,500,100,3,0",
-					"proc id": "87",
-					"spark recover hp buff turns (135)": 3,
-					"spark recover hp chance%": 100,
-					"spark recover hp high": 500,
-					"spark recover hp low": 400,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 30,
-					"params": "0,30,0",
-					"proc id": "8",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 28,
-			"effects": [
-				{
-					"bb atk%": 400,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
-					"bb flat atk": 200,
-					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,400,200,0,0,0,0",
-					"proc id": "29",
-					"target area": "aoe",
-					"target type": "enemy"
-				},
-				{
-					"atk% buff (1)": 135,
-					"buff turns": 3,
-					"def% buff (3)": 135,
-					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "all",
-					"params": "0,135,135,135,0,3,100",
-					"proc id": "5",
-					"rec% buff (5)": 135,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
-					"effect delay time(ms)/frame": "0.0/0",
-					"mitigate dark attacks": true,
-					"mitigate earth attacks": true,
-					"mitigate fire attacks": true,
-					"mitigate light attacks": true,
-					"mitigate thunder attacks": true,
-					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
-					"proc id": "39",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,500,100,3,0",
-					"proc id": "87",
-					"spark recover hp buff turns (135)": 3,
-					"spark recover hp chance%": 100,
-					"spark recover hp high": 500,
-					"spark recover hp low": 400,
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 30,
-					"params": "0,30,0",
-					"proc id": "8",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
-		{
-			"bc cost": 28,
-			"effects": [
-				{
-					"bb atk%": 410,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
-					"bb flat atk": 200,
-					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,410,200,0,0,0,0",
-					"proc id": "29",
+					"params": "200,400,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -387,7 +141,7 @@
 					"def% buff (3)": 140,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,140,140,140,0,3,100",
+					"params": "0,140,140,140,0,3,0",
 					"proc id": "5",
 					"rec% buff (5)": 140,
 					"target area": "aoe",
@@ -395,7 +149,7 @@
 				},
 				{
 					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -403,7 +157,7 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,10,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
@@ -426,6 +180,16 @@
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "10,1,999",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -433,15 +197,13 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 420,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 210,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,420,200,0,0,0,0",
-					"proc id": "29",
+					"params": "200,410,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -451,7 +213,7 @@
 					"def% buff (3)": 145,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,145,145,145,0,3,100",
+					"params": "0,145,145,145,0,3,0",
 					"proc id": "5",
 					"rec% buff (5)": 145,
 					"target area": "aoe",
@@ -459,7 +221,7 @@
 				},
 				{
 					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -467,7 +229,7 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,10,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
@@ -490,6 +252,16 @@
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "10,1,999",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -497,15 +269,13 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 430,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 220,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,430,200,0,0,0,0",
-					"proc id": "29",
+					"params": "200,420,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -515,7 +285,7 @@
 					"def% buff (3)": 150,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,150,150,150,0,3,100",
+					"params": "0,150,150,150,0,3,0",
 					"proc id": "5",
 					"rec% buff (5)": 150,
 					"target area": "aoe",
@@ -523,7 +293,7 @@
 				},
 				{
 					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -531,7 +301,7 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,10,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
@@ -554,6 +324,16 @@
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "10,1,999",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -561,15 +341,13 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 440,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 230,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,440,200,0,0,0,0",
-					"proc id": "29",
+					"params": "200,430,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -579,7 +357,7 @@
 					"def% buff (3)": 155,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,155,155,155,0,3,100",
+					"params": "0,155,155,155,0,3,0",
 					"proc id": "5",
 					"rec% buff (5)": 155,
 					"target area": "aoe",
@@ -587,7 +365,7 @@
 				},
 				{
 					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -595,7 +373,7 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,10,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
@@ -618,6 +396,16 @@
 					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "10,1,999",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
 				}
 			]
 		},
@@ -625,15 +413,13 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 450,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 240,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,450,200,0,0,0,0",
-					"proc id": "29",
+					"params": "200,440,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -643,7 +429,7 @@
 					"def% buff (3)": 160,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,160,160,160,0,3,100",
+					"params": "0,160,160,160,0,3,0",
 					"proc id": "5",
 					"rec% buff (5)": 160,
 					"target area": "aoe",
@@ -651,7 +437,7 @@
 				},
 				{
 					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -659,7 +445,7 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,10,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
@@ -680,6 +466,16 @@
 					"max hp% increase": 30,
 					"params": "0,30,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "10,1,999",
+					"proc id": "56",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -689,33 +485,31 @@
 			"bc cost": 28,
 			"effects": [
 				{
-					"bb atk%": 470,
-					"bb elements": [
-						"fire",
-						"dark"
-					],
+					"bb added atk% based on hp": 250,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "1,6,0,470,200,0,0,0,0",
-					"proc id": "29",
+					"params": "200,450,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (1)": 170,
+					"atk% buff (1)": 165,
 					"buff turns": 3,
-					"def% buff (3)": 170,
+					"def% buff (3)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,170,170,170,0,3,100",
+					"params": "0,165,165,165,0,3,0",
 					"proc id": "5",
-					"rec% buff (5)": 170,
+					"rec% buff (5)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"dmg% mitigation for elemental attacks": 10,
-					"dmg% mitigation for elemental attacks buff turns": 1,
+					"dmg% mitigation for elemental attacks buff turns": 2,
 					"effect delay time(ms)/frame": "0.0/0",
 					"mitigate dark attacks": true,
 					"mitigate earth attacks": true,
@@ -723,7 +517,7 @@
 					"mitigate light attacks": true,
 					"mitigate thunder attacks": true,
 					"mitigate water attacks": true,
-					"params": "1,2,3,4,5,6,10,1,0",
+					"params": "1,2,3,4,5,6,10,2,0",
 					"proc id": "39",
 					"target area": "aoe",
 					"target type": "party"
@@ -744,6 +538,304 @@
 					"max hp% increase": 30,
 					"params": "0,30,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "10,1,999",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 260,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "200,460,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 170,
+					"buff turns": 3,
+					"def% buff (3)": 170,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"params": "0,170,170,170,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 170,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% mitigation for elemental attacks": 10,
+					"dmg% mitigation for elemental attacks buff turns": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"mitigate dark attacks": true,
+					"mitigate earth attacks": true,
+					"mitigate fire attacks": true,
+					"mitigate light attacks": true,
+					"mitigate thunder attacks": true,
+					"mitigate water attacks": true,
+					"params": "1,2,3,4,5,6,10,2,0",
+					"proc id": "39",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "400,500,100,3,0",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 30,
+					"params": "0,30,0",
+					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "10,1,999",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 270,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "200,470,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 175,
+					"buff turns": 3,
+					"def% buff (3)": 175,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"params": "0,175,175,175,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 175,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% mitigation for elemental attacks": 10,
+					"dmg% mitigation for elemental attacks buff turns": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"mitigate dark attacks": true,
+					"mitigate earth attacks": true,
+					"mitigate fire attacks": true,
+					"mitigate light attacks": true,
+					"mitigate thunder attacks": true,
+					"mitigate water attacks": true,
+					"params": "1,2,3,4,5,6,10,2,0",
+					"proc id": "39",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "400,500,100,3,0",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 30,
+					"params": "0,30,0",
+					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "10,1,999",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 280,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "200,480,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 180,
+					"buff turns": 3,
+					"def% buff (3)": 180,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"params": "0,180,180,180,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 180,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% mitigation for elemental attacks": 10,
+					"dmg% mitigation for elemental attacks buff turns": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"mitigate dark attacks": true,
+					"mitigate earth attacks": true,
+					"mitigate fire attacks": true,
+					"mitigate light attacks": true,
+					"mitigate thunder attacks": true,
+					"mitigate water attacks": true,
+					"params": "1,2,3,4,5,6,10,2,0",
+					"proc id": "39",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "400,500,100,3,0",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 30,
+					"params": "0,30,0",
+					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "10,1,999",
+					"proc id": "56",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 300,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "200,500,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"atk% buff (1)": 190,
+					"buff turns": 3,
+					"def% buff (3)": 190,
+					"effect delay time(ms)/frame": "0.0/0",
+					"element buffed": "all",
+					"params": "0,190,190,190,0,3,0",
+					"proc id": "5",
+					"rec% buff (5)": 190,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% mitigation for elemental attacks": 10,
+					"dmg% mitigation for elemental attacks buff turns": 2,
+					"effect delay time(ms)/frame": "0.0/0",
+					"mitigate dark attacks": true,
+					"mitigate earth attacks": true,
+					"mitigate fire attacks": true,
+					"mitigate light attacks": true,
+					"mitigate thunder attacks": true,
+					"mitigate water attacks": true,
+					"params": "1,2,3,4,5,6,10,2,0",
+					"proc id": "39",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "400,500,100,3,0",
+					"proc id": "87",
+					"spark recover hp buff turns (135)": 3,
+					"spark recover hp chance%": 100,
+					"spark recover hp high": 500,
+					"spark recover hp low": 400,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 30,
+					"params": "0,30,0",
+					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"angel idol buff turns (91)": 999,
+					"angel idol recover chance%": 10,
+					"angel idol recover hp%": 1,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "10,1,999",
+					"proc id": "56",
 					"target area": "aoe",
 					"target type": "party"
 				}

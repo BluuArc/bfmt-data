@@ -4,41 +4,50 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-11-15T11:13:03.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2020-08-26T10:28:23.000Z"
 	},
-	"desc": "60% boost to Atk, max HP, considerably boosts Atk, Def relative to remaining HP, 10% damage reduction from Fire, Earth, Dark elemental types & enormously boosts BB Atk when HP is over 50%",
+	"desc": "120% Atk, 150% max HP, 0-80% Atk, Def, Rec relative to remaining HP, 15% damage reduction from Fire, Earth, Dark types, 550% BB Atk when HP is above 50% & damage taken may restore HP",
 	"effects": [
 		{
-			"atk% buff": 60,
-			"hp% buff": 60,
-			"params": "60,0,0,0,60",
+			"atk% buff": 120,
+			"hp% buff": 150,
+			"params": "120,0,0,0,150",
 			"passive id": "1"
 		},
 		{
 			"atk% base buff": 0,
-			"atk% extra buff based on hp": 60,
+			"atk% extra buff based on hp": 80,
 			"buff proportional to hp": "remaining",
 			"def% base buff": 0,
-			"def% extra buff based on hp": 60,
-			"params": "0,60,0,60,0,0,0",
-			"passive id": "46"
+			"def% extra buff based on hp": 80,
+			"params": "0,80,0,80,0,80,0",
+			"passive id": "46",
+			"rec% base buff": 0,
+			"rec% extra buff based on hp": 80
 		},
 		{
-			"dmg% mitigation for elemental attacks": 10,
+			"dmg% mitigation for elemental attacks": 15,
 			"mitigate dark attacks": true,
 			"mitigate earth attacks": true,
 			"mitigate fire attacks": true,
-			"params": "1,3,6,0,0,0,10",
+			"params": "1,3,6,0,0,0,15",
 			"passive id": "62"
 		},
 		{
-			"bb atk% add": 300,
+			"bb atk% add": 550,
 			"hp threshold": 50,
-			"params": "300,300,300,50,1",
+			"params": "550,550,550,50,1",
 			"passive id": "103",
-			"sbb atk% add": 300,
+			"sbb atk% add": 550,
 			"triggered when hp": "higher",
-			"ubb atk% add": 300
+			"ubb atk% add": 550
+		},
+		{
+			"dmg% to hp% when attacked chance%": 50,
+			"dmg% to hp% when attacked high": 30,
+			"dmg% to hp% when attacked low": 25,
+			"params": "25,30,50",
+			"passive id": "24"
 		}
 	],
 	"id": "810438",

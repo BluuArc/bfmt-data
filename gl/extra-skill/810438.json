@@ -4,18 +4,18 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-11-15T11:13:03.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2020-08-26T10:28:23.000Z"
 	},
-	"desc": "Considerably reduces damage taken for 2 turns when HP is below 50% & damage taken boosts BB gauge",
+	"desc": "Negates ignore Def for all allies, 40% all parameters, 25% damage reduction for 2 turns when HP is below 50% & damage taken fills BB gauge",
 	"effects": [
 		{
 			"buff": {
-				"buff turns (36)": "1",
+				"buff turns (36)": "2",
 				"dmg reduction% buff": 25
 			},
 			"conditions": [],
 			"hp below % buff activation": 50,
-			"params": "36,25,-1,50,2,1",
+			"params": "36,25,-1,50,2,2",
 			"passive id": "55",
 			"passive target": "self"
 		},
@@ -27,6 +27,23 @@
 			"params": "300,400,100",
 			"passive id": "25",
 			"passive target": "self"
+		},
+		{
+			"atk% buff": 40,
+			"conditions": [],
+			"def% buff": 40,
+			"hp% buff": 40,
+			"params": "40,40,40,0,40",
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 40
+		},
+		{
+			"conditions": [],
+			"ignore def resist chance%": 100,
+			"params": "100",
+			"passive id": "92",
+			"passive target": "party"
 		}
 	],
 	"id": "810438",
