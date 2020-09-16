@@ -5,7 +5,7 @@
 	"attackInfo": [
 		{
 			"hits": 23,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		},
 		{
@@ -16,7 +16,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2018-05-16T12:15:15.000Z"
+		"updatedAt": "2020-09-16T09:43:52.000Z"
 	},
 	"damage frames": [
 		{
@@ -73,7 +73,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 23,
-			"proc id": "1"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "16.7/1",
@@ -140,7 +140,7 @@
 			"proc id": "10017"
 		}
 	],
-	"desc": "23 combo powerful Earth attack on all foes, 3 combo powerful Earth attack on single foe, adds low probability of resistance against 1 KO attack, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns, hugely restores HP & activates Fire shield for 2 turns",
+	"desc": "23 combo Earth attack on all foes (damage relative to remaining HP), 3 combo Earth attack on single foe, probable KO resistance, boosts Atk, Def, Rec and critical rate (Earth) for 3 turns, restores HP & adds Fire shield for 3 turns",
 	"drop check count": 1,
 	"id": "1830558",
 	"levels": [
@@ -148,11 +148,13 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 570,
+					"bb added atk% based on hp": 800,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "570,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -176,31 +178,31 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 120,
+					"atk% buff (13)": 145,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 120,
+					"def% buff (14)": 145,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "earth",
-					"params": "3,120,120,120,60,3,0",
+					"params": "3,145,145,145,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 120,
+					"rec% buff (15)": 145,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"heal high": 3500,
-					"heal low": 3000,
-					"params": "3000,3500,100,100",
+					"heal high": 5500,
+					"heal low": 5000,
+					"params": "5000,5500,150,100",
 					"proc id": "2",
-					"rec added% (from healer)": 40,
+					"rec added% (from healer)": 50,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,2500,2500,2,0",
+					"params": "1,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
@@ -211,11 +213,13 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 580,
+					"bb added atk% based on hp": 810,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "580,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1010,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -239,31 +243,31 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 122,
+					"atk% buff (13)": 147,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 122,
+					"def% buff (14)": 147,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "earth",
-					"params": "3,122,122,122,60,3,0",
+					"params": "3,147,147,147,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 122,
+					"rec% buff (15)": 147,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"heal high": 3600,
-					"heal low": 3100,
-					"params": "3100,3600,100,100",
+					"heal high": 5500,
+					"heal low": 5000,
+					"params": "5000,5500,150,100",
 					"proc id": "2",
-					"rec added% (from healer)": 40,
+					"rec added% (from healer)": 50,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,2600,2600,2,0",
+					"params": "1,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
@@ -274,11 +278,13 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 590,
+					"bb added atk% based on hp": 820,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "590,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1020,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -302,31 +308,31 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 124,
+					"atk% buff (13)": 149,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 124,
+					"def% buff (14)": 149,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "earth",
-					"params": "3,124,124,124,60,3,0",
+					"params": "3,149,149,149,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 124,
+					"rec% buff (15)": 149,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"heal high": 3700,
-					"heal low": 3200,
-					"params": "3200,3700,100,100",
+					"heal high": 5500,
+					"heal low": 5000,
+					"params": "5000,5500,150,100",
 					"proc id": "2",
-					"rec added% (from healer)": 40,
+					"rec added% (from healer)": 50,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,2700,2700,2,0",
+					"params": "1,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
@@ -337,11 +343,13 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 600,
+					"bb added atk% based on hp": 830,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "600,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1030,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -365,31 +373,31 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 126,
+					"atk% buff (13)": 151,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 126,
+					"def% buff (14)": 151,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "earth",
-					"params": "3,126,126,126,60,3,0",
+					"params": "3,151,151,151,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 126,
+					"rec% buff (15)": 151,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"heal high": 3800,
-					"heal low": 3300,
-					"params": "3300,3800,100,100",
+					"heal high": 5500,
+					"heal low": 5000,
+					"params": "5000,5500,150,100",
 					"proc id": "2",
-					"rec added% (from healer)": 40,
+					"rec added% (from healer)": 50,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,2800,2800,2,0",
+					"params": "1,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
@@ -400,11 +408,13 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 610,
+					"bb added atk% based on hp": 840,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "610,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1040,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -428,31 +438,31 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 128,
+					"atk% buff (13)": 153,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 128,
+					"def% buff (14)": 153,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "earth",
-					"params": "3,128,128,128,60,3,0",
+					"params": "3,153,153,153,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 128,
+					"rec% buff (15)": 153,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"heal high": 3900,
-					"heal low": 3400,
-					"params": "3400,3900,100,100",
+					"heal high": 5500,
+					"heal low": 5000,
+					"params": "5000,5500,150,100",
 					"proc id": "2",
-					"rec added% (from healer)": 40,
+					"rec added% (from healer)": 50,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,2900,2900,2,0",
+					"params": "1,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
@@ -463,11 +473,13 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 620,
+					"bb added atk% based on hp": 850,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "620,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1050,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -491,31 +503,31 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 155,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 155,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "earth",
-					"params": "3,130,130,130,60,3,0",
+					"params": "3,155,155,155,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 155,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"heal high": 4000,
-					"heal low": 3500,
-					"params": "3500,4000,100,100",
+					"heal high": 5500,
+					"heal low": 5000,
+					"params": "5000,5500,150,100",
 					"proc id": "2",
-					"rec added% (from healer)": 40,
+					"rec added% (from healer)": 50,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,3000,3000,2,0",
+					"params": "1,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
@@ -526,11 +538,13 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 630,
+					"bb added atk% based on hp": 860,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "630,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1060,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -554,31 +568,31 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 132,
+					"atk% buff (13)": 157,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 132,
+					"def% buff (14)": 157,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "earth",
-					"params": "3,132,132,132,60,3,0",
+					"params": "3,157,157,157,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 132,
+					"rec% buff (15)": 157,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"heal high": 4100,
-					"heal low": 3600,
-					"params": "3600,4100,100,100",
+					"heal high": 5500,
+					"heal low": 5000,
+					"params": "5000,5500,150,100",
 					"proc id": "2",
-					"rec added% (from healer)": 40,
+					"rec added% (from healer)": 50,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,3100,3100,2,0",
+					"params": "1,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
@@ -589,11 +603,13 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 640,
+					"bb added atk% based on hp": 870,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "640,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1070,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -617,31 +633,31 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 134,
+					"atk% buff (13)": 159,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 134,
+					"def% buff (14)": 159,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "earth",
-					"params": "3,134,134,134,60,3,0",
+					"params": "3,159,159,159,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 134,
+					"rec% buff (15)": 159,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"heal high": 4200,
-					"heal low": 3700,
-					"params": "3700,4200,100,100",
+					"heal high": 5500,
+					"heal low": 5000,
+					"params": "5000,5500,150,100",
 					"proc id": "2",
-					"rec added% (from healer)": 40,
+					"rec added% (from healer)": 50,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,3200,3200,2,0",
+					"params": "1,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
@@ -652,11 +668,13 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 650,
+					"bb added atk% based on hp": 880,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "650,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1080,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -680,31 +698,31 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 136,
+					"atk% buff (13)": 161,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 136,
+					"def% buff (14)": 161,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "earth",
-					"params": "3,136,136,136,60,3,0",
+					"params": "3,161,161,161,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 136,
+					"rec% buff (15)": 161,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"heal high": 4300,
-					"heal low": 3800,
-					"params": "3800,4300,100,100",
+					"heal high": 5500,
+					"heal low": 5000,
+					"params": "5000,5500,150,100",
 					"proc id": "2",
-					"rec added% (from healer)": 40,
+					"rec added% (from healer)": 50,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,3300,3300,2,0",
+					"params": "1,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
@@ -715,11 +733,13 @@
 			"bc cost": 24,
 			"effects": [
 				{
-					"bb atk%": 670,
+					"bb added atk% based on hp": 900,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "670,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1100,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -743,31 +763,31 @@
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 140,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 140,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "earth",
-					"params": "3,140,140,140,60,3,0",
+					"params": "3,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 140,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"heal high": 4500,
-					"heal low": 4000,
-					"params": "4000,4500,100,100",
+					"heal high": 5500,
+					"heal low": 5000,
+					"params": "5000,5500,150,100",
 					"proc id": "2",
-					"rec added% (from healer)": 40,
+					"rec added% (from healer)": 50,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,3500,3500,2,0",
+					"params": "1,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
