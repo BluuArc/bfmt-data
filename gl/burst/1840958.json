@@ -1,0 +1,823 @@
+{
+	"associated_units": [
+		"840958:sbb"
+	],
+	"attackInfo": [
+		{
+			"hits": 17,
+			"id": "47",
+			"target": "AOE"
+		},
+		{
+			"hits": 11,
+			"id": "1",
+			"target": "ST"
+		}
+	],
+	"bfmtMetadata": {
+		"createdAt": "2017-09-15T11:31:46.000Z",
+		"updatedAt": "2020-09-30T09:42:07.000Z"
+	},
+	"damage frames": [
+		{
+			"effect delay time(ms)/frame": "16.7/1",
+			"frame times": [
+				32,
+				35,
+				38,
+				41,
+				44,
+				47,
+				50,
+				53,
+				56,
+				59,
+				62,
+				65,
+				68,
+				71,
+				74,
+				77,
+				80
+			],
+			"hit dmg% distribution": [
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				6,
+				6,
+				6,
+				6,
+				8,
+				8,
+				8,
+				8,
+				8,
+				8
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 17,
+			"proc id": "47"
+		},
+		{
+			"effect delay time(ms)/frame": "16.7/1",
+			"frame times": [
+				78,
+				81,
+				84,
+				87,
+				90,
+				93,
+				96,
+				99,
+				102,
+				105,
+				108
+			],
+			"hit dmg% distribution": [
+				8,
+				8,
+				8,
+				8,
+				8,
+				10,
+				10,
+				10,
+				10,
+				10,
+				10
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 11,
+			"proc id": "1"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "18"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "55"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "132"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "62"
+		}
+	],
+	"desc": "17 combo Thunder attack on all foes (damage relative to remaining HP), 11 combo Thunder attack on single foe, 50% damage reduction for 3 turns, boosts Thunder elemental damage for 3 turns, probable 3 turns critical and elemental vulnerability infliction & adds Thunder barrier",
+	"drop check count": 1,
+	"id": "1840958",
+	"levels": [
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 800,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "300,1100,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk%": 1100,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1100,200,0,0,0,0",
+					"proc id": "1",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "50,3,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 250,
+					"params": "4,0,0,0,0,0,2.5,3,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party",
+					"thunder units do extra elemental weakness dmg": true
+				},
+				{
+					"crit vuln chance%": 75,
+					"crit vuln dmg% (157)": 45,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental vuln chance%": 75,
+					"elemental vuln dmg% (158)": 45,
+					"params": "45,45,75,75,3,0",
+					"proc id": "132",
+					"target area": "aoe",
+					"target type": "enemy",
+					"vuln turns": 3
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 7000,
+					"params": "4,7000,0,100,0",
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 810,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "300,1110,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk%": 1110,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1110,200,0,0,0,0",
+					"proc id": "1",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "50,3,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 250,
+					"params": "4,0,0,0,0,0,2.5,3,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party",
+					"thunder units do extra elemental weakness dmg": true
+				},
+				{
+					"crit vuln chance%": 75,
+					"crit vuln dmg% (157)": 45,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental vuln chance%": 75,
+					"elemental vuln dmg% (158)": 45,
+					"params": "45,45,75,75,3,0",
+					"proc id": "132",
+					"target area": "aoe",
+					"target type": "enemy",
+					"vuln turns": 3
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 7000,
+					"params": "4,7000,0,100,0",
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 820,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "300,1120,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk%": 1120,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1120,200,0,0,0,0",
+					"proc id": "1",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "50,3,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 250,
+					"params": "4,0,0,0,0,0,2.5,3,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party",
+					"thunder units do extra elemental weakness dmg": true
+				},
+				{
+					"crit vuln chance%": 75,
+					"crit vuln dmg% (157)": 45,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental vuln chance%": 75,
+					"elemental vuln dmg% (158)": 45,
+					"params": "45,45,75,75,3,0",
+					"proc id": "132",
+					"target area": "aoe",
+					"target type": "enemy",
+					"vuln turns": 3
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 7000,
+					"params": "4,7000,0,100,0",
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 830,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "300,1130,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk%": 1130,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1130,200,0,0,0,0",
+					"proc id": "1",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "50,3,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 250,
+					"params": "4,0,0,0,0,0,2.5,3,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party",
+					"thunder units do extra elemental weakness dmg": true
+				},
+				{
+					"crit vuln chance%": 75,
+					"crit vuln dmg% (157)": 45,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental vuln chance%": 75,
+					"elemental vuln dmg% (158)": 45,
+					"params": "45,45,75,75,3,0",
+					"proc id": "132",
+					"target area": "aoe",
+					"target type": "enemy",
+					"vuln turns": 3
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 7000,
+					"params": "4,7000,0,100,0",
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 840,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "300,1140,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk%": 1140,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1140,200,0,0,0,0",
+					"proc id": "1",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "50,3,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 250,
+					"params": "4,0,0,0,0,0,2.5,3,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party",
+					"thunder units do extra elemental weakness dmg": true
+				},
+				{
+					"crit vuln chance%": 75,
+					"crit vuln dmg% (157)": 45,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental vuln chance%": 75,
+					"elemental vuln dmg% (158)": 45,
+					"params": "45,45,75,75,3,0",
+					"proc id": "132",
+					"target area": "aoe",
+					"target type": "enemy",
+					"vuln turns": 3
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 7000,
+					"params": "4,7000,0,100,0",
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 850,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "300,1150,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk%": 1150,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1150,200,0,0,0,0",
+					"proc id": "1",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "50,3,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 250,
+					"params": "4,0,0,0,0,0,2.5,3,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party",
+					"thunder units do extra elemental weakness dmg": true
+				},
+				{
+					"crit vuln chance%": 75,
+					"crit vuln dmg% (157)": 45,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental vuln chance%": 75,
+					"elemental vuln dmg% (158)": 45,
+					"params": "45,45,75,75,3,0",
+					"proc id": "132",
+					"target area": "aoe",
+					"target type": "enemy",
+					"vuln turns": 3
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 7000,
+					"params": "4,7000,0,100,0",
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 860,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "300,1160,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk%": 1160,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1160,200,0,0,0,0",
+					"proc id": "1",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "50,3,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 250,
+					"params": "4,0,0,0,0,0,2.5,3,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party",
+					"thunder units do extra elemental weakness dmg": true
+				},
+				{
+					"crit vuln chance%": 75,
+					"crit vuln dmg% (157)": 45,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental vuln chance%": 75,
+					"elemental vuln dmg% (158)": 45,
+					"params": "45,45,75,75,3,0",
+					"proc id": "132",
+					"target area": "aoe",
+					"target type": "enemy",
+					"vuln turns": 3
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 7000,
+					"params": "4,7000,0,100,0",
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 870,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "300,1170,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk%": 1170,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1170,200,0,0,0,0",
+					"proc id": "1",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "50,3,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 250,
+					"params": "4,0,0,0,0,0,2.5,3,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party",
+					"thunder units do extra elemental weakness dmg": true
+				},
+				{
+					"crit vuln chance%": 75,
+					"crit vuln dmg% (157)": 45,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental vuln chance%": 75,
+					"elemental vuln dmg% (158)": 45,
+					"params": "45,45,75,75,3,0",
+					"proc id": "132",
+					"target area": "aoe",
+					"target type": "enemy",
+					"vuln turns": 3
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 7000,
+					"params": "4,7000,0,100,0",
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 880,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "300,1180,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk%": 1180,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1180,200,0,0,0,0",
+					"proc id": "1",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "50,3,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 250,
+					"params": "4,0,0,0,0,0,2.5,3,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party",
+					"thunder units do extra elemental weakness dmg": true
+				},
+				{
+					"crit vuln chance%": 75,
+					"crit vuln dmg% (157)": 45,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental vuln chance%": 75,
+					"elemental vuln dmg% (158)": 45,
+					"params": "45,45,75,75,3,0",
+					"proc id": "132",
+					"target area": "aoe",
+					"target type": "enemy",
+					"vuln turns": 3
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 7000,
+					"params": "4,7000,0,100,0",
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 28,
+			"effects": [
+				{
+					"bb added atk% based on hp": 900,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "300,1200,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"bb atk%": 1200,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1200,200,0,0,0,0",
+					"proc id": "1",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"dmg% reduction": 50,
+					"dmg% reduction turns (36)": 3,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "50,3,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 250,
+					"params": "4,0,0,0,0,0,2.5,3,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party",
+					"thunder units do extra elemental weakness dmg": true
+				},
+				{
+					"crit vuln chance%": 75,
+					"crit vuln dmg% (157)": 45,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental vuln chance%": 75,
+					"elemental vuln dmg% (158)": 45,
+					"params": "45,45,75,75,3,0",
+					"proc id": "132",
+					"target area": "aoe",
+					"target type": "enemy",
+					"vuln turns": 3
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "thunder",
+					"elemental barrier hp": 7000,
+					"params": "4,7000,0,100,0",
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "No Respite"
+}
