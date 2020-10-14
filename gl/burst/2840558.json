@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 22,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2018-06-13T12:09:02.000Z"
+		"updatedAt": "2020-10-14T10:23:17.000Z"
 	},
 	"damage frames": [
 		{
@@ -66,19 +66,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 22,
-			"proc id": "1"
-		},
-		{
-			"effect delay time(ms)/frame": "0.0/0",
-			"frame times": [
-				0
-			],
-			"hit dmg% distribution": [
-				100
-			],
-			"hit dmg% distribution (total)": 100,
-			"hits": 1,
-			"proc id": "85"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -127,9 +115,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "126"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "85"
 		}
 	],
-	"desc": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+	"desc": "22 combo Thunder attack on all foes (damage relative to remaining HP), evasion for 3 turns, boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, 100% DoT reduction for 4 turns & damage taken restores HP for 4 turns",
 	"drop check count": 1,
 	"id": "2840558",
 	"levels": [
@@ -137,57 +137,60 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp recover from dmg buff turns (133)": 3,
-					"hp recover from dmg chance": 100,
-					"hp recover from dmg% high": 100,
-					"hp recover from dmg% low": 100,
-					"params": "100,100,100,3,0",
-					"proc id": "85",
+					"params": "100,3,0,100",
+					"proc id": "10007",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,1,0,100",
-					"proc id": "10007",
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (1)": 400,
-					"buff turns": 3,
-					"def% buff (3)": 400,
+					"atk% buff (1)": 450,
+					"buff turns": 4,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
+					"params": "0,450,450,450,60,4,0",
 					"proc id": "5",
-					"rec% buff (5)": 400,
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,5,0",
+					"params": "100,4,0",
 					"proc id": "126",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 4,
+					"hp recover from dmg chance": 100,
+					"hp recover from dmg% high": 100,
+					"hp recover from dmg% low": 100,
+					"params": "100,100,100,4,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -197,57 +200,60 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp recover from dmg buff turns (133)": 3,
-					"hp recover from dmg chance": 100,
-					"hp recover from dmg% high": 100,
-					"hp recover from dmg% low": 100,
-					"params": "100,100,100,3,0",
-					"proc id": "85",
+					"params": "100,3,0,100",
+					"proc id": "10007",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,1,0,100",
-					"proc id": "10007",
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (1)": 400,
-					"buff turns": 3,
-					"def% buff (3)": 400,
+					"atk% buff (1)": 450,
+					"buff turns": 4,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
+					"params": "0,450,450,450,60,4,0",
 					"proc id": "5",
-					"rec% buff (5)": 400,
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,5,0",
+					"params": "100,4,0",
 					"proc id": "126",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 4,
+					"hp recover from dmg chance": 100,
+					"hp recover from dmg% high": 100,
+					"hp recover from dmg% low": 100,
+					"params": "100,100,100,4,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -257,57 +263,60 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp recover from dmg buff turns (133)": 3,
-					"hp recover from dmg chance": 100,
-					"hp recover from dmg% high": 100,
-					"hp recover from dmg% low": 100,
-					"params": "100,100,100,3,0",
-					"proc id": "85",
+					"params": "100,3,0,100",
+					"proc id": "10007",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,1,0,100",
-					"proc id": "10007",
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (1)": 400,
-					"buff turns": 3,
-					"def% buff (3)": 400,
+					"atk% buff (1)": 450,
+					"buff turns": 4,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
+					"params": "0,450,450,450,60,4,0",
 					"proc id": "5",
-					"rec% buff (5)": 400,
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,5,0",
+					"params": "100,4,0",
 					"proc id": "126",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 4,
+					"hp recover from dmg chance": 100,
+					"hp recover from dmg% high": 100,
+					"hp recover from dmg% low": 100,
+					"params": "100,100,100,4,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -317,57 +326,60 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp recover from dmg buff turns (133)": 3,
-					"hp recover from dmg chance": 100,
-					"hp recover from dmg% high": 100,
-					"hp recover from dmg% low": 100,
-					"params": "100,100,100,3,0",
-					"proc id": "85",
+					"params": "100,3,0,100",
+					"proc id": "10007",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,1,0,100",
-					"proc id": "10007",
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (1)": 400,
-					"buff turns": 3,
-					"def% buff (3)": 400,
+					"atk% buff (1)": 450,
+					"buff turns": 4,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
+					"params": "0,450,450,450,60,4,0",
 					"proc id": "5",
-					"rec% buff (5)": 400,
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,5,0",
+					"params": "100,4,0",
 					"proc id": "126",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 4,
+					"hp recover from dmg chance": 100,
+					"hp recover from dmg% high": 100,
+					"hp recover from dmg% low": 100,
+					"params": "100,100,100,4,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -377,57 +389,60 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp recover from dmg buff turns (133)": 3,
-					"hp recover from dmg chance": 100,
-					"hp recover from dmg% high": 100,
-					"hp recover from dmg% low": 100,
-					"params": "100,100,100,3,0",
-					"proc id": "85",
+					"params": "100,3,0,100",
+					"proc id": "10007",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,1,0,100",
-					"proc id": "10007",
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (1)": 400,
-					"buff turns": 3,
-					"def% buff (3)": 400,
+					"atk% buff (1)": 450,
+					"buff turns": 4,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
+					"params": "0,450,450,450,60,4,0",
 					"proc id": "5",
-					"rec% buff (5)": 400,
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,5,0",
+					"params": "100,4,0",
 					"proc id": "126",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 4,
+					"hp recover from dmg chance": 100,
+					"hp recover from dmg% high": 100,
+					"hp recover from dmg% low": 100,
+					"params": "100,100,100,4,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -437,57 +452,60 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp recover from dmg buff turns (133)": 3,
-					"hp recover from dmg chance": 100,
-					"hp recover from dmg% high": 100,
-					"hp recover from dmg% low": 100,
-					"params": "100,100,100,3,0",
-					"proc id": "85",
+					"params": "100,3,0,100",
+					"proc id": "10007",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,1,0,100",
-					"proc id": "10007",
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (1)": 400,
-					"buff turns": 3,
-					"def% buff (3)": 400,
+					"atk% buff (1)": 450,
+					"buff turns": 4,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
+					"params": "0,450,450,450,60,4,0",
 					"proc id": "5",
-					"rec% buff (5)": 400,
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,5,0",
+					"params": "100,4,0",
 					"proc id": "126",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 4,
+					"hp recover from dmg chance": 100,
+					"hp recover from dmg% high": 100,
+					"hp recover from dmg% low": 100,
+					"params": "100,100,100,4,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -497,57 +515,60 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp recover from dmg buff turns (133)": 3,
-					"hp recover from dmg chance": 100,
-					"hp recover from dmg% high": 100,
-					"hp recover from dmg% low": 100,
-					"params": "100,100,100,3,0",
-					"proc id": "85",
+					"params": "100,3,0,100",
+					"proc id": "10007",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,1,0,100",
-					"proc id": "10007",
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (1)": 400,
-					"buff turns": 3,
-					"def% buff (3)": 400,
+					"atk% buff (1)": 450,
+					"buff turns": 4,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
+					"params": "0,450,450,450,60,4,0",
 					"proc id": "5",
-					"rec% buff (5)": 400,
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,5,0",
+					"params": "100,4,0",
 					"proc id": "126",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 4,
+					"hp recover from dmg chance": 100,
+					"hp recover from dmg% high": 100,
+					"hp recover from dmg% low": 100,
+					"params": "100,100,100,4,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -557,57 +578,60 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp recover from dmg buff turns (133)": 3,
-					"hp recover from dmg chance": 100,
-					"hp recover from dmg% high": 100,
-					"hp recover from dmg% low": 100,
-					"params": "100,100,100,3,0",
-					"proc id": "85",
+					"params": "100,3,0,100",
+					"proc id": "10007",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,1,0,100",
-					"proc id": "10007",
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (1)": 400,
-					"buff turns": 3,
-					"def% buff (3)": 400,
+					"atk% buff (1)": 450,
+					"buff turns": 4,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
+					"params": "0,450,450,450,60,4,0",
 					"proc id": "5",
-					"rec% buff (5)": 400,
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,5,0",
+					"params": "100,4,0",
 					"proc id": "126",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 4,
+					"hp recover from dmg chance": 100,
+					"hp recover from dmg% high": 100,
+					"hp recover from dmg% low": 100,
+					"params": "100,100,100,4,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -617,57 +641,60 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp recover from dmg buff turns (133)": 3,
-					"hp recover from dmg chance": 100,
-					"hp recover from dmg% high": 100,
-					"hp recover from dmg% low": 100,
-					"params": "100,100,100,3,0",
-					"proc id": "85",
+					"params": "100,3,0,100",
+					"proc id": "10007",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,1,0,100",
-					"proc id": "10007",
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (1)": 400,
-					"buff turns": 3,
-					"def% buff (3)": 400,
+					"atk% buff (1)": 450,
+					"buff turns": 4,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
+					"params": "0,450,450,450,60,4,0",
 					"proc id": "5",
-					"rec% buff (5)": 400,
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,5,0",
+					"params": "100,4,0",
 					"proc id": "126",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 4,
+					"hp recover from dmg chance": 100,
+					"hp recover from dmg% high": 100,
+					"hp recover from dmg% low": 100,
+					"params": "100,100,100,4,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -677,57 +704,60 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"hp recover from dmg buff turns (133)": 3,
-					"hp recover from dmg chance": 100,
-					"hp recover from dmg% high": 100,
-					"hp recover from dmg% low": 100,
-					"params": "100,100,100,3,0",
-					"proc id": "85",
+					"params": "100,3,0,100",
+					"proc id": "10007",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,1,0,100",
-					"proc id": "10007",
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (1)": 400,
-					"buff turns": 3,
-					"def% buff (3)": 400,
+					"atk% buff (1)": 450,
+					"buff turns": 4,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "all",
-					"params": "0,400,400,400,0,3,0",
+					"params": "0,450,450,450,60,4,0",
 					"proc id": "5",
-					"rec% buff (5)": 400,
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "50,5,0",
+					"params": "100,4,0",
 					"proc id": "126",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"hp recover from dmg buff turns (133)": 4,
+					"hp recover from dmg chance": 100,
+					"hp recover from dmg% high": 100,
+					"hp recover from dmg% low": 100,
+					"params": "100,100,100,4,0",
+					"proc id": "85",
 					"target area": "aoe",
 					"target type": "party"
 				}

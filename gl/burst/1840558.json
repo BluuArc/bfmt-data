@@ -5,7 +5,7 @@
 	"attackInfo": [
 		{
 			"hits": 18,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		},
 		{
@@ -16,7 +16,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2018-06-13T12:09:02.000Z"
+		"updatedAt": "2020-10-14T10:23:17.000Z"
 	},
 	"damage frames": [
 		{
@@ -63,7 +63,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 18,
-			"proc id": "1"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "16.7/1",
@@ -101,18 +101,6 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "10001"
-		},
-		{
-			"effect delay time(ms)/frame": "0.0/0",
-			"frame times": [
-				0
-			],
-			"hit dmg% distribution": [
-				100
-			],
-			"hit dmg% distribution (total)": 100,
-			"hits": 1,
 			"proc id": "5"
 		},
 		{
@@ -138,9 +126,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "10017"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "10001"
 		}
 	],
-	"desc": "18 combo powerful Thunder attack on all foes, 8 combo powerful Thunder attack on single foe, casts stealth on self boosting own Atk and critical hit rate for 2 turns, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Thunder types for 3 turns, enormously boost BB gauge for 3 turns & activates Earth shield for 2 turns",
+	"desc": "18 combo Thunder attack on all foes (damage relative to remaining HP), 8 combo Thunder attack on single foe, boosts Atk, Def, Rec and critical rate (Thunder) for 3 turns, fills BB gauge for 3 turns, adds Earth shield for 3 turns & activates Stealth and boosts own Atk and critical rate for 2 turns",
 	"drop check count": 1,
 	"id": "1840558",
 	"levels": [
@@ -148,11 +148,13 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 570,
+					"bb added atk% based on hp": 800,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "570,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -166,25 +168,15 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff": 200,
-					"crit% buff": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,60,0,2,0",
-					"proc id": "10001",
-					"stealth turns (10001)": 2,
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (13)": 120,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 120,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,120,120,120,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 120,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -199,10 +191,20 @@
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3,2500,2500,2,0",
+					"params": "3,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"atk% buff": 300,
+					"crit% buff": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,0,60,0,2,0",
+					"proc id": "10001",
+					"stealth turns (10001)": 2,
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		},
@@ -210,11 +212,13 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 580,
+					"bb added atk% based on hp": 810,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "580,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1010,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -228,25 +232,15 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff": 210,
-					"crit% buff": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "210,0,60,0,2,0",
-					"proc id": "10001",
-					"stealth turns (10001)": 2,
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (13)": 122,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 122,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,122,122,122,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 122,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -261,10 +255,20 @@
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3,2600,2600,2,0",
+					"params": "3,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"atk% buff": 300,
+					"crit% buff": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,0,60,0,2,0",
+					"proc id": "10001",
+					"stealth turns (10001)": 2,
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		},
@@ -272,11 +276,13 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 590,
+					"bb added atk% based on hp": 820,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "590,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1020,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -290,25 +296,15 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff": 220,
-					"crit% buff": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "220,0,60,0,2,0",
-					"proc id": "10001",
-					"stealth turns (10001)": 2,
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (13)": 124,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 124,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,124,124,124,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 124,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -323,10 +319,20 @@
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3,2700,2700,2,0",
+					"params": "3,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"atk% buff": 300,
+					"crit% buff": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,0,60,0,2,0",
+					"proc id": "10001",
+					"stealth turns (10001)": 2,
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		},
@@ -334,11 +340,13 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 600,
+					"bb added atk% based on hp": 830,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "600,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1030,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -352,25 +360,15 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff": 230,
-					"crit% buff": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "230,0,60,0,2,0",
-					"proc id": "10001",
-					"stealth turns (10001)": 2,
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (13)": 126,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 126,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,126,126,126,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 126,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -385,10 +383,20 @@
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3,2800,2800,2,0",
+					"params": "3,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"atk% buff": 300,
+					"crit% buff": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,0,60,0,2,0",
+					"proc id": "10001",
+					"stealth turns (10001)": 2,
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		},
@@ -396,11 +404,13 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 610,
+					"bb added atk% based on hp": 840,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "610,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1040,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -414,25 +424,15 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff": 240,
-					"crit% buff": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "240,0,60,0,2,0",
-					"proc id": "10001",
-					"stealth turns (10001)": 2,
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (13)": 128,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 128,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,128,128,128,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 128,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -447,10 +447,20 @@
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3,2900,2900,2,0",
+					"params": "3,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"atk% buff": 300,
+					"crit% buff": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,0,60,0,2,0",
+					"proc id": "10001",
+					"stealth turns (10001)": 2,
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		},
@@ -458,11 +468,13 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 620,
+					"bb added atk% based on hp": 850,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "620,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1050,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -476,25 +488,15 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff": 250,
-					"crit% buff": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "250,0,60,0,2,0",
-					"proc id": "10001",
-					"stealth turns (10001)": 2,
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -509,10 +511,20 @@
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3,3000,3000,2,0",
+					"params": "3,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"atk% buff": 300,
+					"crit% buff": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,0,60,0,2,0",
+					"proc id": "10001",
+					"stealth turns (10001)": 2,
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		},
@@ -520,11 +532,13 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 630,
+					"bb added atk% based on hp": 860,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "630,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1060,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -538,25 +552,15 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff": 260,
-					"crit% buff": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "260,0,60,0,2,0",
-					"proc id": "10001",
-					"stealth turns (10001)": 2,
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (13)": 132,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 132,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,132,132,132,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 132,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -571,10 +575,20 @@
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3,3100,3100,2,0",
+					"params": "3,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"atk% buff": 300,
+					"crit% buff": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,0,60,0,2,0",
+					"proc id": "10001",
+					"stealth turns (10001)": 2,
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		},
@@ -582,11 +596,13 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 640,
+					"bb added atk% based on hp": 870,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "640,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1070,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -600,25 +616,15 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff": 270,
-					"crit% buff": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "270,0,60,0,2,0",
-					"proc id": "10001",
-					"stealth turns (10001)": 2,
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (13)": 134,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 134,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,134,134,134,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 134,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -633,10 +639,20 @@
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3,3200,3200,2,0",
+					"params": "3,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"atk% buff": 300,
+					"crit% buff": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,0,60,0,2,0",
+					"proc id": "10001",
+					"stealth turns (10001)": 2,
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		},
@@ -644,11 +660,13 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 650,
+					"bb added atk% based on hp": 880,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "650,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1080,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -662,25 +680,15 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff": 280,
-					"crit% buff": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "280,0,60,0,2,0",
-					"proc id": "10001",
-					"stealth turns (10001)": 2,
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (13)": 136,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 136,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,136,136,136,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 136,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -695,10 +703,20 @@
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3,3300,3300,2,0",
+					"params": "3,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"atk% buff": 300,
+					"crit% buff": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,0,60,0,2,0",
+					"proc id": "10001",
+					"stealth turns (10001)": 2,
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		},
@@ -706,11 +724,13 @@
 			"bc cost": 26,
 			"effects": [
 				{
-					"bb atk%": 670,
+					"bb added atk% based on hp": 900,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "670,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,1100,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
@@ -724,25 +744,15 @@
 					"target type": "enemy"
 				},
 				{
-					"atk% buff": 300,
-					"crit% buff": 60,
-					"effect delay time(ms)/frame": "0.0/0",
-					"params": "300,0,60,0,2,0",
-					"proc id": "10001",
-					"stealth turns (10001)": 2,
-					"target area": "single",
-					"target type": "self"
-				},
-				{
-					"atk% buff (13)": 140,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 140,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,140,140,140,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 140,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -757,10 +767,20 @@
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3,3500,3500,2,0",
+					"params": "3,6000,6000,3,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
+				},
+				{
+					"atk% buff": 300,
+					"crit% buff": 60,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "300,0,60,0,2,0",
+					"proc id": "10001",
+					"stealth turns (10001)": 2,
+					"target area": "single",
+					"target type": "self"
 				}
 			]
 		}
