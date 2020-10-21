@@ -1,0 +1,757 @@
+{
+	"associated_units": [
+		"810888:ubb"
+	],
+	"attackInfo": [
+		{
+			"hits": 28,
+			"id": "47",
+			"target": "AOE"
+		},
+		{
+			"hits": 12,
+			"id": "10020",
+			"target": "ST"
+		}
+	],
+	"bfmtMetadata": {
+		"createdAt": "2017-09-15T11:31:46.000Z",
+		"updatedAt": "2020-10-21T11:08:55.000Z"
+	},
+	"damage frames": [
+		{
+			"effect delay time(ms)/frame": "16.7/1",
+			"frame times": [
+				44,
+				47,
+				50,
+				53,
+				56,
+				59,
+				62,
+				65,
+				68,
+				71,
+				74,
+				77,
+				80,
+				83,
+				86,
+				89,
+				92,
+				95,
+				98,
+				101,
+				104,
+				107,
+				110,
+				113,
+				116,
+				119,
+				122,
+				125
+			],
+			"hit dmg% distribution": [
+				7,
+				7,
+				6,
+				5,
+				5,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				2,
+				2,
+				2,
+				1,
+				1,
+				1,
+				2,
+				2,
+				2,
+				2,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				7
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 28,
+			"proc id": "47"
+		},
+		{
+			"effect delay time(ms)/frame": "16.7/1",
+			"frame times": [
+				75,
+				78,
+				81,
+				84,
+				87,
+				90,
+				93,
+				96,
+				99,
+				102,
+				105,
+				108
+			],
+			"hit dmg% distribution": [
+				10,
+				9,
+				8,
+				8,
+				7,
+				8,
+				8,
+				8,
+				8,
+				7,
+				9,
+				10
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 12,
+			"proc id": "10020"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "19"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "55"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "18"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "70002"
+		}
+	],
+	"desc": "28 combo Fire attack on all foes (damage relative to remaining HP), 12 combo Fire attack on single foe (25% active Pierce on Fire, Earth foes), fills BB gauge for 4 turns, boosts Fire elemental damage for 4 turns, 100% damage reduction for 4 turns & activates BB/SBB/UBB twice for 3 turns",
+	"drop check count": 1,
+	"id": "2810888",
+	"levels": [
+		{
+			"bc cost": 35,
+			"effects": [
+				{
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,200,25,1,0,1,0,0,0,200",
+					"proc id": "10020",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 4,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"params": "1,0,0,0,0,0,5,4,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 4,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,4,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,3,0,0,0,0,0,0,0",
+					"proc id": "70002",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 35,
+			"effects": [
+				{
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,200,25,1,0,1,0,0,0,200",
+					"proc id": "10020",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 4,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"params": "1,0,0,0,0,0,5,4,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 4,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,4,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,3,0,0,0,0,0,0,0",
+					"proc id": "70002",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 35,
+			"effects": [
+				{
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,200,25,1,0,1,0,0,0,200",
+					"proc id": "10020",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 4,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"params": "1,0,0,0,0,0,5,4,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 4,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,4,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,3,0,0,0,0,0,0,0",
+					"proc id": "70002",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 35,
+			"effects": [
+				{
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,200,25,1,0,1,0,0,0,200",
+					"proc id": "10020",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 4,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"params": "1,0,0,0,0,0,5,4,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 4,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,4,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,3,0,0,0,0,0,0,0",
+					"proc id": "70002",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 35,
+			"effects": [
+				{
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,200,25,1,0,1,0,0,0,200",
+					"proc id": "10020",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 4,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"params": "1,0,0,0,0,0,5,4,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 4,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,4,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,3,0,0,0,0,0,0,0",
+					"proc id": "70002",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 35,
+			"effects": [
+				{
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,200,25,1,0,1,0,0,0,200",
+					"proc id": "10020",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 4,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"params": "1,0,0,0,0,0,5,4,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 4,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,4,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,3,0,0,0,0,0,0,0",
+					"proc id": "70002",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 35,
+			"effects": [
+				{
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,200,25,1,0,1,0,0,0,200",
+					"proc id": "10020",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 4,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"params": "1,0,0,0,0,0,5,4,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 4,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,4,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,3,0,0,0,0,0,0,0",
+					"proc id": "70002",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 35,
+			"effects": [
+				{
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,200,25,1,0,1,0,0,0,200",
+					"proc id": "10020",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 4,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"params": "1,0,0,0,0,0,5,4,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 4,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,4,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,3,0,0,0,0,0,0,0",
+					"proc id": "70002",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 35,
+			"effects": [
+				{
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,200,25,1,0,1,0,0,0,200",
+					"proc id": "10020",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 4,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"params": "1,0,0,0,0,0,5,4,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 4,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,4,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,3,0,0,0,0,0,0,0",
+					"proc id": "70002",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"bc cost": 35,
+			"effects": [
+				{
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
+					"target area": "aoe",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "1500,200,25,1,0,1,0,0,0,200",
+					"proc id": "10020",
+					"target area": "single",
+					"target type": "enemy"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 100,
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 4,
+					"elemental weakness multiplier%": 500,
+					"fire units do extra elemental weakness dmg": true,
+					"params": "1,0,0,0,0,0,5,4,0",
+					"proc id": "55",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dmg% reduction": 100,
+					"dmg% reduction turns (36)": 4,
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,4,0",
+					"proc id": "18",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "1,3,0,0,0,0,0,0,0",
+					"proc id": "70002",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"name": "Exsequiae"
+}
