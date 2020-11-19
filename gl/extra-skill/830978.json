@@ -1,0 +1,111 @@
+{
+	"associated_units": [
+		"830978:es"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2020-11-18T10:17:55.000Z",
+		"updatedAt": "2020-11-18T10:17:55.000Z"
+	},
+	"desc": "40% all parameters when Omni Star or Status Boosting sphere is equipped & add to BB (Fills BB gauge for 3 turns) when Omni Star or Status Boosting sphere is equipped, 20% all elemental damage for all allies, negates all status ailments and Atk, Def, Rec reduction, 150% spark damage & probable 2 KO resistance",
+	"effects": [
+		{
+			"atk% buff": 40,
+			"conditionParams": "2#3,819350%6,1%0,0%0,0",
+			"conditions": [
+				{
+					"item required": [
+						"819350"
+					]
+				},
+				{
+					"sphere category required": "Status Enhancing",
+					"sphere category required (raw)": "1"
+				}
+			],
+			"def% buff": 40,
+			"hp% buff": 40,
+			"params": "40,40,40,0,40",
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 40
+		},
+		{
+			"conditionParams": "2#3,819350%6,1%0,0%0,0",
+			"conditions": [
+				{
+					"item required": [
+						"819350"
+					]
+				},
+				{
+					"sphere category required": "Status Enhancing",
+					"sphere category required (raw)": "1"
+				}
+			],
+			"params": "19,1400&3&0,1,2,0,1,0,0",
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 14,
+					"increase bb gauge gradual turns (37)": 3,
+					"proc id": "19",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"conditions": [],
+			"dark units do extra elemental weakness dmg": true,
+			"earth units do extra elemental weakness dmg": true,
+			"elemental weakness multiplier%": 20,
+			"fire units do extra elemental weakness dmg": true,
+			"light units do extra elemental weakness dmg": true,
+			"params": "1,2,3,4,5,6,0.2",
+			"passive id": "50",
+			"passive target": "party",
+			"thunder units do extra elemental weakness dmg": true,
+			"water units do extra elemental weakness dmg": true
+		},
+		{
+			"atk down resist%": 100,
+			"conditions": [],
+			"curse resist%": 100,
+			"def down resist%": 100,
+			"injury resist%": 100,
+			"paralysis resist%": 100,
+			"params": "100,100,100,100,100,100,100,100,100",
+			"passive id": "73",
+			"passive target": "self",
+			"poison resist%": 100,
+			"rec down resist%": 100,
+			"sick resist%": 100,
+			"weaken resist%": 100
+		},
+		{
+			"conditions": [],
+			"damage% for spark": 150,
+			"params": "150,0,0,0,0,0",
+			"passive id": "31",
+			"passive target": "self"
+		},
+		{
+			"angel idol chance% condition": 0,
+			"angel idol recover chance% high": 50,
+			"angel idol recover chance% low": 50,
+			"angel idol recover counts": 2,
+			"angel idol recover hp%": 1,
+			"conditions": [],
+			"params": "1,2,50,50,0",
+			"passive id": "69",
+			"passive target": "self"
+		}
+	],
+	"id": "830978",
+	"name": "Precious Memories",
+	"rarity": "8",
+	"target": "self"
+}
