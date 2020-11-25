@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 26,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2018-07-09T04:15:10.000Z"
+		"updatedAt": "2020-11-25T10:18:44.000Z"
 	},
 	"damage frames": [
 		{
@@ -74,7 +74,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 26,
-			"proc id": "1"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -137,7 +137,7 @@
 			"proc id": "88"
 		}
 	],
-	"desc": "26 combo massive Light attack on all foes, activates Light shield for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, enormously boosts BB gauge for 3 turns, hugely boosts own Atk for 3 turns & greatly boosts own Spark damage for 3 turns",
+	"desc": "26 combo Light attack on all foes (damage relative to remaining HP), adds Light shield for 4 turns, boosts Def, Rec relative to Atk for 4 turns, fills BB gauge for 4 turns, boosts own Atk for 4 turns & boosts own spark damage for 4 turns",
 	"drop check count": 1,
 	"id": "2850558",
 	"levels": [
@@ -145,27 +145,29 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2500,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2500,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "5,30000,10000,3,0",
+					"params": "5,50000,10000,4,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"% converted turns": 3,
+					"% converted turns": 4,
 					"converted attribute": "attack",
 					"def% buff (47)": 300,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,0,300,300,3,0",
+					"params": "1,0,300,300,4,0",
 					"proc id": "24",
 					"rec% buff (48)": 300,
 					"target area": "aoe",
@@ -174,27 +176,27 @@
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,0,0,3,0",
+					"params": "300,0,0,0,4,0",
 					"proc id": "78",
-					"self atk% buff": 200,
-					"self stat buff turns": 3,
+					"self atk% buff": 300,
+					"self stat buff turns": 4,
 					"target area": "single",
 					"target type": "self"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,0,0,0,0,0,3,0",
+					"params": "300,0,0,0,0,0,4,0",
 					"proc id": "88",
-					"spark dmg inc%": 120,
-					"spark dmg inc% turns (136)": 3,
+					"spark dmg inc%": 300,
+					"spark dmg inc% turns (136)": 4,
 					"target area": "single",
 					"target type": "self"
 				}
@@ -204,27 +206,29 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2500,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2500,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "5,30000,10000,3,0",
+					"params": "5,50000,10000,4,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"% converted turns": 3,
+					"% converted turns": 4,
 					"converted attribute": "attack",
 					"def% buff (47)": 300,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,0,300,300,3,0",
+					"params": "1,0,300,300,4,0",
 					"proc id": "24",
 					"rec% buff (48)": 300,
 					"target area": "aoe",
@@ -233,27 +237,27 @@
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,0,0,3,0",
+					"params": "300,0,0,0,4,0",
 					"proc id": "78",
-					"self atk% buff": 200,
-					"self stat buff turns": 3,
+					"self atk% buff": 300,
+					"self stat buff turns": 4,
 					"target area": "single",
 					"target type": "self"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,0,0,0,0,0,3,0",
+					"params": "300,0,0,0,0,0,4,0",
 					"proc id": "88",
-					"spark dmg inc%": 120,
-					"spark dmg inc% turns (136)": 3,
+					"spark dmg inc%": 300,
+					"spark dmg inc% turns (136)": 4,
 					"target area": "single",
 					"target type": "self"
 				}
@@ -263,27 +267,29 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2500,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2500,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "5,30000,10000,3,0",
+					"params": "5,50000,10000,4,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"% converted turns": 3,
+					"% converted turns": 4,
 					"converted attribute": "attack",
 					"def% buff (47)": 300,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,0,300,300,3,0",
+					"params": "1,0,300,300,4,0",
 					"proc id": "24",
 					"rec% buff (48)": 300,
 					"target area": "aoe",
@@ -292,27 +298,27 @@
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,0,0,3,0",
+					"params": "300,0,0,0,4,0",
 					"proc id": "78",
-					"self atk% buff": 200,
-					"self stat buff turns": 3,
+					"self atk% buff": 300,
+					"self stat buff turns": 4,
 					"target area": "single",
 					"target type": "self"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,0,0,0,0,0,3,0",
+					"params": "300,0,0,0,0,0,4,0",
 					"proc id": "88",
-					"spark dmg inc%": 120,
-					"spark dmg inc% turns (136)": 3,
+					"spark dmg inc%": 300,
+					"spark dmg inc% turns (136)": 4,
 					"target area": "single",
 					"target type": "self"
 				}
@@ -322,27 +328,29 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2500,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2500,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "5,30000,10000,3,0",
+					"params": "5,50000,10000,4,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"% converted turns": 3,
+					"% converted turns": 4,
 					"converted attribute": "attack",
 					"def% buff (47)": 300,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,0,300,300,3,0",
+					"params": "1,0,300,300,4,0",
 					"proc id": "24",
 					"rec% buff (48)": 300,
 					"target area": "aoe",
@@ -351,27 +359,27 @@
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,0,0,3,0",
+					"params": "300,0,0,0,4,0",
 					"proc id": "78",
-					"self atk% buff": 200,
-					"self stat buff turns": 3,
+					"self atk% buff": 300,
+					"self stat buff turns": 4,
 					"target area": "single",
 					"target type": "self"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,0,0,0,0,0,3,0",
+					"params": "300,0,0,0,0,0,4,0",
 					"proc id": "88",
-					"spark dmg inc%": 120,
-					"spark dmg inc% turns (136)": 3,
+					"spark dmg inc%": 300,
+					"spark dmg inc% turns (136)": 4,
 					"target area": "single",
 					"target type": "self"
 				}
@@ -381,27 +389,29 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2500,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2500,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "5,30000,10000,3,0",
+					"params": "5,50000,10000,4,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"% converted turns": 3,
+					"% converted turns": 4,
 					"converted attribute": "attack",
 					"def% buff (47)": 300,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,0,300,300,3,0",
+					"params": "1,0,300,300,4,0",
 					"proc id": "24",
 					"rec% buff (48)": 300,
 					"target area": "aoe",
@@ -410,27 +420,27 @@
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,0,0,3,0",
+					"params": "300,0,0,0,4,0",
 					"proc id": "78",
-					"self atk% buff": 200,
-					"self stat buff turns": 3,
+					"self atk% buff": 300,
+					"self stat buff turns": 4,
 					"target area": "single",
 					"target type": "self"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,0,0,0,0,0,3,0",
+					"params": "300,0,0,0,0,0,4,0",
 					"proc id": "88",
-					"spark dmg inc%": 120,
-					"spark dmg inc% turns (136)": 3,
+					"spark dmg inc%": 300,
+					"spark dmg inc% turns (136)": 4,
 					"target area": "single",
 					"target type": "self"
 				}
@@ -440,27 +450,29 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2500,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2500,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "5,30000,10000,3,0",
+					"params": "5,50000,10000,4,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"% converted turns": 3,
+					"% converted turns": 4,
 					"converted attribute": "attack",
 					"def% buff (47)": 300,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,0,300,300,3,0",
+					"params": "1,0,300,300,4,0",
 					"proc id": "24",
 					"rec% buff (48)": 300,
 					"target area": "aoe",
@@ -469,27 +481,27 @@
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,0,0,3,0",
+					"params": "300,0,0,0,4,0",
 					"proc id": "78",
-					"self atk% buff": 200,
-					"self stat buff turns": 3,
+					"self atk% buff": 300,
+					"self stat buff turns": 4,
 					"target area": "single",
 					"target type": "self"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,0,0,0,0,0,3,0",
+					"params": "300,0,0,0,0,0,4,0",
 					"proc id": "88",
-					"spark dmg inc%": 120,
-					"spark dmg inc% turns (136)": 3,
+					"spark dmg inc%": 300,
+					"spark dmg inc% turns (136)": 4,
 					"target area": "single",
 					"target type": "self"
 				}
@@ -499,27 +511,29 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2500,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2500,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "5,30000,10000,3,0",
+					"params": "5,50000,10000,4,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"% converted turns": 3,
+					"% converted turns": 4,
 					"converted attribute": "attack",
 					"def% buff (47)": 300,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,0,300,300,3,0",
+					"params": "1,0,300,300,4,0",
 					"proc id": "24",
 					"rec% buff (48)": 300,
 					"target area": "aoe",
@@ -528,27 +542,27 @@
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,0,0,3,0",
+					"params": "300,0,0,0,4,0",
 					"proc id": "78",
-					"self atk% buff": 200,
-					"self stat buff turns": 3,
+					"self atk% buff": 300,
+					"self stat buff turns": 4,
 					"target area": "single",
 					"target type": "self"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,0,0,0,0,0,3,0",
+					"params": "300,0,0,0,0,0,4,0",
 					"proc id": "88",
-					"spark dmg inc%": 120,
-					"spark dmg inc% turns (136)": 3,
+					"spark dmg inc%": 300,
+					"spark dmg inc% turns (136)": 4,
 					"target area": "single",
 					"target type": "self"
 				}
@@ -558,27 +572,29 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2500,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2500,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "5,30000,10000,3,0",
+					"params": "5,50000,10000,4,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"% converted turns": 3,
+					"% converted turns": 4,
 					"converted attribute": "attack",
 					"def% buff (47)": 300,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,0,300,300,3,0",
+					"params": "1,0,300,300,4,0",
 					"proc id": "24",
 					"rec% buff (48)": 300,
 					"target area": "aoe",
@@ -587,27 +603,27 @@
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,0,0,3,0",
+					"params": "300,0,0,0,4,0",
 					"proc id": "78",
-					"self atk% buff": 200,
-					"self stat buff turns": 3,
+					"self atk% buff": 300,
+					"self stat buff turns": 4,
 					"target area": "single",
 					"target type": "self"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,0,0,0,0,0,3,0",
+					"params": "300,0,0,0,0,0,4,0",
 					"proc id": "88",
-					"spark dmg inc%": 120,
-					"spark dmg inc% turns (136)": 3,
+					"spark dmg inc%": 300,
+					"spark dmg inc% turns (136)": 4,
 					"target area": "single",
 					"target type": "self"
 				}
@@ -617,27 +633,29 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2500,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2500,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "5,30000,10000,3,0",
+					"params": "5,50000,10000,4,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"% converted turns": 3,
+					"% converted turns": 4,
 					"converted attribute": "attack",
 					"def% buff (47)": 300,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,0,300,300,3,0",
+					"params": "1,0,300,300,4,0",
 					"proc id": "24",
 					"rec% buff (48)": 300,
 					"target area": "aoe",
@@ -646,27 +664,27 @@
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,0,0,3,0",
+					"params": "300,0,0,0,4,0",
 					"proc id": "78",
-					"self atk% buff": 200,
-					"self stat buff turns": 3,
+					"self atk% buff": 300,
+					"self stat buff turns": 4,
 					"target area": "single",
 					"target type": "self"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,0,0,0,0,0,3,0",
+					"params": "300,0,0,0,0,0,4,0",
 					"proc id": "88",
-					"spark dmg inc%": 120,
-					"spark dmg inc% turns (136)": 3,
+					"spark dmg inc%": 300,
+					"spark dmg inc% turns (136)": 4,
 					"target area": "single",
 					"target type": "self"
 				}
@@ -676,27 +694,29 @@
 			"bc cost": 33,
 			"effects": [
 				{
-					"bb atk%": 2500,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2500,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "5,30000,10000,3,0",
+					"params": "5,50000,10000,4,0",
 					"proc id": "10017",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"% converted turns": 3,
+					"% converted turns": 4,
 					"converted attribute": "attack",
 					"def% buff (47)": 300,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "1,0,300,300,3,0",
+					"params": "1,0,300,300,4,0",
 					"proc id": "24",
 					"rec% buff (48)": 300,
 					"target area": "aoe",
@@ -705,27 +725,27 @@
 				{
 					"effect delay time(ms)/frame": "0.0/0",
 					"increase bb gauge gradual": 100,
-					"increase bb gauge gradual turns (37)": 3,
-					"params": "10000,3,0",
+					"increase bb gauge gradual turns (37)": 4,
+					"params": "10000,4,0",
 					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "200,0,0,0,3,0",
+					"params": "300,0,0,0,4,0",
 					"proc id": "78",
-					"self atk% buff": 200,
-					"self stat buff turns": 3,
+					"self atk% buff": 300,
+					"self stat buff turns": 4,
 					"target area": "single",
 					"target type": "self"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "120,0,0,0,0,0,3,0",
+					"params": "300,0,0,0,0,0,4,0",
 					"proc id": "88",
-					"spark dmg inc%": 120,
-					"spark dmg inc% turns (136)": 3,
+					"spark dmg inc%": 300,
+					"spark dmg inc% turns (136)": 4,
 					"target area": "single",
 					"target type": "self"
 				}
