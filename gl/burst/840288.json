@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 19,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2017-10-11T11:13:17.000Z"
+		"updatedAt": "2020-12-02T09:36:13.000Z"
 	},
 	"damage frames": [
 		{
@@ -60,7 +60,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 19,
-			"proc id": "1"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -97,9 +97,33 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "6"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "10007"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "19"
 		}
 	],
-	"desc": "19 combo powerful Thunder attack on all foes, greatly boosts Atk, Def, Rec of Thunder types for 3 turns, enormously boosts critical hit rate of Thunder types for 3 turns, highly probable Injury, Weak, Sick infliction & considerably boosts BC, HC drop rate for 3 turns",
+	"desc": "19 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), boosts Atk, Def, Rec and critical rate (Thunder) for 3 turns, probable Injury, Weakness, Sickness infliction, boosts BC, HC drop rate for 3 turns, fills BB gauge for 3 turns & probable evasion for 2 turns",
 	"drop check count": 1,
 	"id": "840288",
 	"levels": [
@@ -107,24 +131,27 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 370,
+					"bb added atk% based on hp": 200,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb crit%": 60,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "370,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,400,0,200,60,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -139,12 +166,28 @@
 					"weaken%": 85
 				},
 				{
-					"bc drop rate% buff (10)": 35,
+					"bc drop rate% buff (10)": 40,
 					"drop rate buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"hc drop rate% buff (9)": 35,
-					"params": "35,35,0,3,0",
+					"hc drop rate% buff (9)": 40,
+					"params": "40,40,0,3,0",
 					"proc id": "6",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 12,
+					"increase bb gauge gradual turns (37)": 3,
+					"params": "1200,3,0",
+					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -154,24 +197,27 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 380,
+					"bb added atk% based on hp": 210,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb crit%": 60,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "380,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,410,0,200,60,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -186,12 +232,28 @@
 					"weaken%": 85
 				},
 				{
-					"bc drop rate% buff (10)": 35,
+					"bc drop rate% buff (10)": 40,
 					"drop rate buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"hc drop rate% buff (9)": 35,
-					"params": "35,35,0,3,0",
+					"hc drop rate% buff (9)": 40,
+					"params": "40,40,0,3,0",
 					"proc id": "6",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 12,
+					"increase bb gauge gradual turns (37)": 3,
+					"params": "1200,3,0",
+					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -201,24 +263,27 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 390,
+					"bb added atk% based on hp": 220,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb crit%": 60,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "390,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,420,0,200,60,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -233,12 +298,28 @@
 					"weaken%": 85
 				},
 				{
-					"bc drop rate% buff (10)": 35,
+					"bc drop rate% buff (10)": 40,
 					"drop rate buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"hc drop rate% buff (9)": 35,
-					"params": "35,35,0,3,0",
+					"hc drop rate% buff (9)": 40,
+					"params": "40,40,0,3,0",
 					"proc id": "6",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 12,
+					"increase bb gauge gradual turns (37)": 3,
+					"params": "1200,3,0",
+					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -248,24 +329,27 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 400,
+					"bb added atk% based on hp": 230,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb crit%": 60,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "400,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,430,0,200,60,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -280,12 +364,28 @@
 					"weaken%": 85
 				},
 				{
-					"bc drop rate% buff (10)": 35,
+					"bc drop rate% buff (10)": 40,
 					"drop rate buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"hc drop rate% buff (9)": 35,
-					"params": "35,35,0,3,0",
+					"hc drop rate% buff (9)": 40,
+					"params": "40,40,0,3,0",
 					"proc id": "6",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 12,
+					"increase bb gauge gradual turns (37)": 3,
+					"params": "1200,3,0",
+					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -295,24 +395,27 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 410,
+					"bb added atk% based on hp": 240,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb crit%": 60,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "410,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,440,0,200,60,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -327,12 +430,28 @@
 					"weaken%": 85
 				},
 				{
-					"bc drop rate% buff (10)": 35,
+					"bc drop rate% buff (10)": 40,
 					"drop rate buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"hc drop rate% buff (9)": 35,
-					"params": "35,35,0,3,0",
+					"hc drop rate% buff (9)": 40,
+					"params": "40,40,0,3,0",
 					"proc id": "6",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 12,
+					"increase bb gauge gradual turns (37)": 3,
+					"params": "1200,3,0",
+					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -342,24 +461,27 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 420,
+					"bb added atk% based on hp": 250,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb crit%": 60,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "420,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,450,0,200,60,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -374,12 +496,28 @@
 					"weaken%": 85
 				},
 				{
-					"bc drop rate% buff (10)": 35,
+					"bc drop rate% buff (10)": 40,
 					"drop rate buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"hc drop rate% buff (9)": 35,
-					"params": "35,35,0,3,0",
+					"hc drop rate% buff (9)": 40,
+					"params": "40,40,0,3,0",
 					"proc id": "6",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 12,
+					"increase bb gauge gradual turns (37)": 3,
+					"params": "1200,3,0",
+					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -389,24 +527,27 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 430,
+					"bb added atk% based on hp": 260,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb crit%": 60,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "430,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,460,0,200,60,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -421,12 +562,28 @@
 					"weaken%": 85
 				},
 				{
-					"bc drop rate% buff (10)": 35,
+					"bc drop rate% buff (10)": 40,
 					"drop rate buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"hc drop rate% buff (9)": 35,
-					"params": "35,35,0,3,0",
+					"hc drop rate% buff (9)": 40,
+					"params": "40,40,0,3,0",
 					"proc id": "6",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 12,
+					"increase bb gauge gradual turns (37)": 3,
+					"params": "1200,3,0",
+					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -436,24 +593,27 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 440,
+					"bb added atk% based on hp": 270,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb crit%": 60,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "440,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,470,0,200,60,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -468,12 +628,28 @@
 					"weaken%": 85
 				},
 				{
-					"bc drop rate% buff (10)": 35,
+					"bc drop rate% buff (10)": 40,
 					"drop rate buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"hc drop rate% buff (9)": 35,
-					"params": "35,35,0,3,0",
+					"hc drop rate% buff (9)": 40,
+					"params": "40,40,0,3,0",
 					"proc id": "6",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 12,
+					"increase bb gauge gradual turns (37)": 3,
+					"params": "1200,3,0",
+					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -483,24 +659,27 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 450,
+					"bb added atk% based on hp": 280,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb crit%": 60,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "450,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,480,0,200,60,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -515,12 +694,28 @@
 					"weaken%": 85
 				},
 				{
-					"bc drop rate% buff (10)": 35,
+					"bc drop rate% buff (10)": 40,
 					"drop rate buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"hc drop rate% buff (9)": 35,
-					"params": "35,35,0,3,0",
+					"hc drop rate% buff (9)": 40,
+					"params": "40,40,0,3,0",
 					"proc id": "6",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 12,
+					"increase bb gauge gradual turns (37)": 3,
+					"params": "1200,3,0",
+					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -530,24 +725,27 @@
 			"bc cost": 30,
 			"effects": [
 				{
-					"bb atk%": 470,
+					"bb added atk% based on hp": 300,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 200,
+					"bb crit%": 60,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "470,200,0,0,0,0",
-					"proc id": "1",
+					"params": "200,500,0,200,60,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -562,12 +760,28 @@
 					"weaken%": 85
 				},
 				{
-					"bc drop rate% buff (10)": 35,
+					"bc drop rate% buff (10)": 40,
 					"drop rate buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"hc drop rate% buff (9)": 35,
-					"params": "35,35,0,3,0",
+					"hc drop rate% buff (9)": 40,
+					"params": "40,40,0,3,0",
 					"proc id": "6",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"params": "100,2,0,20",
+					"proc id": "10007",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"increase bb gauge gradual": 12,
+					"increase bb gauge gradual turns (37)": 3,
+					"params": "1200,3,0",
+					"proc id": "19",
 					"target area": "aoe",
 					"target type": "party"
 				}

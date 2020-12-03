@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 23,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2017-10-11T11:13:17.000Z"
+		"updatedAt": "2020-12-02T09:36:13.000Z"
 	},
 	"damage frames": [
 		{
@@ -68,7 +68,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 23,
-			"proc id": "1"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -131,7 +131,7 @@
 			"proc id": "93"
 		}
 	],
-	"desc": "23 combo powerful Thunder attack on all foes, greatly boosts Atk, Def, Rec of Thunder types for 3 turns, enormously boosts critical hit rate of Thunder types for 3 turns, boosts critical damage of Thunder types for 3 turns, hugely boosts Atk relative to Def for 3 turns, Injury, Weak, Sick infliction & negates critical damage for 2 turns",
+	"desc": "23 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate (Thunder) for 3 turns, Injury, Weakness, Sickness infliction, boosts Atk, Rec relative to Def for 3 turns, boosts critical damage (Thunder) for 3 turns & 100% critical, elemental damage reduction for 3 turns",
 	"drop check count": 1,
 	"id": "1840288",
 	"levels": [
@@ -139,24 +139,26 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 700,
+					"bb added atk% based on hp": 800,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "700,200,0,0,0,0",
-					"proc id": "1",
+					"params": "300,1100,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -172,17 +174,18 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 110,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,80,0,0,3,3",
+					"params": "2,110,0,110,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 110,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "0.5,3,0,4",
+					"params": "0.75,3,0,4",
 					"proc id": "10016",
 					"target area": "aoe",
 					"target type": "party"
@@ -190,10 +193,12 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,0,0,0,0,2,0",
+					"params": "100,100,100,100,0,0,3,0",
 					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -203,24 +208,26 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 710,
+					"bb added atk% based on hp": 810,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "710,200,0,0,0,0",
-					"proc id": "1",
+					"params": "300,1110,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -236,17 +243,18 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 110,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,80,0,0,3,3",
+					"params": "2,110,0,110,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 110,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "0.5,3,0,4",
+					"params": "0.75,3,0,4",
 					"proc id": "10016",
 					"target area": "aoe",
 					"target type": "party"
@@ -254,10 +262,12 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,0,0,0,0,2,0",
+					"params": "100,100,100,100,0,0,3,0",
 					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -267,24 +277,26 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 720,
+					"bb added atk% based on hp": 820,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "720,200,0,0,0,0",
-					"proc id": "1",
+					"params": "300,1120,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -300,17 +312,18 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 110,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,80,0,0,3,3",
+					"params": "2,110,0,110,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 110,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "0.5,3,0,4",
+					"params": "0.75,3,0,4",
 					"proc id": "10016",
 					"target area": "aoe",
 					"target type": "party"
@@ -318,10 +331,12 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,0,0,0,0,2,0",
+					"params": "100,100,100,100,0,0,3,0",
 					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -331,24 +346,26 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 730,
+					"bb added atk% based on hp": 830,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "730,200,0,0,0,0",
-					"proc id": "1",
+					"params": "300,1130,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -364,17 +381,18 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 110,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,80,0,0,3,3",
+					"params": "2,110,0,110,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 110,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "0.5,3,0,4",
+					"params": "0.75,3,0,4",
 					"proc id": "10016",
 					"target area": "aoe",
 					"target type": "party"
@@ -382,10 +400,12 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,0,0,0,0,2,0",
+					"params": "100,100,100,100,0,0,3,0",
 					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -395,24 +415,26 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 740,
+					"bb added atk% based on hp": 840,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "740,200,0,0,0,0",
-					"proc id": "1",
+					"params": "300,1140,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -428,17 +450,18 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 110,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,80,0,0,3,3",
+					"params": "2,110,0,110,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 110,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "0.5,3,0,4",
+					"params": "0.75,3,0,4",
 					"proc id": "10016",
 					"target area": "aoe",
 					"target type": "party"
@@ -446,10 +469,12 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,0,0,0,0,2,0",
+					"params": "100,100,100,100,0,0,3,0",
 					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -459,24 +484,26 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 750,
+					"bb added atk% based on hp": 850,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "750,200,0,0,0,0",
-					"proc id": "1",
+					"params": "300,1150,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -492,17 +519,18 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 110,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,80,0,0,3,3",
+					"params": "2,110,0,110,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 110,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "0.5,3,0,4",
+					"params": "0.75,3,0,4",
 					"proc id": "10016",
 					"target area": "aoe",
 					"target type": "party"
@@ -510,10 +538,12 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,0,0,0,0,2,0",
+					"params": "100,100,100,100,0,0,3,0",
 					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -523,24 +553,26 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 760,
+					"bb added atk% based on hp": 860,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "760,200,0,0,0,0",
-					"proc id": "1",
+					"params": "300,1160,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -556,17 +588,18 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 110,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,80,0,0,3,3",
+					"params": "2,110,0,110,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 110,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "0.5,3,0,4",
+					"params": "0.75,3,0,4",
 					"proc id": "10016",
 					"target area": "aoe",
 					"target type": "party"
@@ -574,10 +607,12 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,0,0,0,0,2,0",
+					"params": "100,100,100,100,0,0,3,0",
 					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -587,24 +622,26 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 770,
+					"bb added atk% based on hp": 870,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "770,200,0,0,0,0",
-					"proc id": "1",
+					"params": "300,1170,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -620,17 +657,18 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 110,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,80,0,0,3,3",
+					"params": "2,110,0,110,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 110,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "0.5,3,0,4",
+					"params": "0.75,3,0,4",
 					"proc id": "10016",
 					"target area": "aoe",
 					"target type": "party"
@@ -638,10 +676,12 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,0,0,0,0,2,0",
+					"params": "100,100,100,100,0,0,3,0",
 					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -651,24 +691,26 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 780,
+					"bb added atk% based on hp": 880,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "780,200,0,0,0,0",
-					"proc id": "1",
+					"params": "300,1180,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -684,17 +726,18 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 110,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,80,0,0,3,3",
+					"params": "2,110,0,110,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 110,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "0.5,3,0,4",
+					"params": "0.75,3,0,4",
 					"proc id": "10016",
 					"target area": "aoe",
 					"target type": "party"
@@ -702,10 +745,12 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,0,0,0,0,2,0",
+					"params": "100,100,100,100,0,0,3,0",
 					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -715,24 +760,26 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 800,
+					"bb added atk% based on hp": 900,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 300,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "800,200,0,0,0,0",
-					"proc id": "1",
+					"params": "300,1200,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
-					"atk% buff (13)": 130,
+					"atk% buff (13)": 165,
 					"buff turns": 3,
 					"crit% buff (16)": 60,
-					"def% buff (14)": 130,
+					"def% buff (14)": 165,
 					"effect delay time(ms)/frame": "0.0/0",
 					"element buffed": "thunder",
-					"params": "4,130,130,130,60,3,0",
+					"params": "4,165,165,165,60,3,0",
 					"proc id": "5",
-					"rec% buff (15)": 130,
+					"rec% buff (15)": 165,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -748,17 +795,18 @@
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 80,
+					"atk% buff (46)": 110,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,80,0,0,3,3",
+					"params": "2,110,0,110,3,0",
 					"proc id": "24",
+					"rec% buff (48)": 110,
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "0.5,3,0,4",
+					"params": "0.75,3,0,4",
 					"proc id": "10016",
 					"target area": "aoe",
 					"target type": "party"
@@ -766,10 +814,12 @@
 				{
 					"crit dmg base damage resist% (143)": 100,
 					"crit dmg buffed damage resist% (143)": 100,
-					"dmg resist turns": 2,
+					"dmg resist turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "100,100,0,0,0,0,2,0",
+					"params": "100,100,100,100,0,0,3,0",
 					"proc id": "93",
+					"strong base element damage resist% (144)": 100,
+					"strong buffed element damage resist% (144)": 100,
 					"target area": "aoe",
 					"target type": "party"
 				}
