@@ -1,0 +1,74 @@
+{
+	"associated_units": [
+		"810998:es"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2020-12-30T09:50:00.000Z",
+		"updatedAt": "2020-12-30T09:50:00.000Z"
+	},
+	"desc": "200% critical damage when Maeri is in squad or crit type sphere equipped, 20% Fire elemental damage, restores HP each turn for all allies, 0-100% Atk, Def, Rec relative to remaining HP & fills BB gauge each turn",
+	"effects": [
+		{
+			"conditionParams": "2#4,820990%6,2%0,0%0,0",
+			"conditions": [
+				{
+					"unit required": [
+						{
+							"id": 820998,
+							"name": "Sweet Dreamer Maeri"
+						}
+					]
+				},
+				{
+					"sphere category required": "Critical",
+					"sphere category required (raw)": "2"
+				}
+			],
+			"crit multiplier%": 200,
+			"params": "2",
+			"passive id": "34",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"elemental weakness multiplier%": 20,
+			"fire units do extra elemental weakness dmg": true,
+			"params": "1,0,0,0,0,0,0.2",
+			"passive id": "50",
+			"passive target": "party"
+		},
+		{
+			"conditions": [],
+			"params": "3500,4500,10",
+			"passive id": "33",
+			"passive target": "party",
+			"rec% added (turn heal)": 11,
+			"turn heal high": 4500,
+			"turn heal low": 3500
+		},
+		{
+			"atk% base buff": 0,
+			"atk% extra buff based on hp": 100,
+			"buff proportional to hp": "remaining",
+			"conditions": [],
+			"def% base buff": 0,
+			"def% extra buff based on hp": 100,
+			"params": "0,100,0,100,0,100,0",
+			"passive id": "46",
+			"passive target": "self",
+			"rec% base buff": 0,
+			"rec% extra buff based on hp": 100
+		},
+		{
+			"bc fill per turn": 10,
+			"conditions": [],
+			"params": "1000",
+			"passive id": "9",
+			"passive target": "self"
+		}
+	],
+	"id": "810998",
+	"name": "A Dragon's Pride",
+	"rarity": "7",
+	"target": "self"
+}
