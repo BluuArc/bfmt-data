@@ -16,7 +16,7 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2017-10-11T11:13:17.000Z"
+		"updatedAt": "2021-01-20T09:46:58.000Z"
 	},
 	"damage frames": [
 		{
@@ -113,6 +113,18 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
+			"proc id": "55"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
 			"proc id": "85"
 		},
 		{
@@ -126,21 +138,9 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "19"
-		},
-		{
-			"effect delay time(ms)/frame": "0.0/0",
-			"frame times": [
-				0
-			],
-			"hit dmg% distribution": [
-				100
-			],
-			"hit dmg% distribution (total)": 100,
-			"hits": 1,
-			"proc id": "55"
 		}
 	],
-	"desc": "23 combo massive Dark attack on all foes, 3 combo massive Dark attack on single foe (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Dark elemental damage for 3 turns, damage taken enormously restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
+	"desc": "23 combo Dark attack on all foes, 3 combo Dark attack on single foe (damage relative to remaining HP), boosts spark damage for 3 turns, boosts Dark elemental damage for 3 turns, damage taken restores HP for 3 turns & fills BB gauge for 3 turns",
 	"drop check count": 1,
 	"id": "2860288",
 	"levels": [
@@ -170,9 +170,19 @@
 				{
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,0,0,0,0,0,3,110",
+					"params": "500,0,0,0,0,0,3,0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 400,
+					"spark dmg% buff (40)": 500,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"params": "6,0,0,0,0,0,5,3,0",
+					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -193,16 +203,6 @@
 					"increase bb gauge gradual turns (37)": 3,
 					"params": "10000,3,0",
 					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 500,
-					"params": "6,0,0,0,0,0,5,3,0",
-					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -234,9 +234,19 @@
 				{
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,0,0,0,0,0,3,110",
+					"params": "500,0,0,0,0,0,3,0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 400,
+					"spark dmg% buff (40)": 500,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"params": "6,0,0,0,0,0,5,3,0",
+					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -257,16 +267,6 @@
 					"increase bb gauge gradual turns (37)": 3,
 					"params": "10000,3,0",
 					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 500,
-					"params": "6,0,0,0,0,0,5,3,0",
-					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -298,9 +298,19 @@
 				{
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,0,0,0,0,0,3,110",
+					"params": "500,0,0,0,0,0,3,0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 400,
+					"spark dmg% buff (40)": 500,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"params": "6,0,0,0,0,0,5,3,0",
+					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -321,16 +331,6 @@
 					"increase bb gauge gradual turns (37)": 3,
 					"params": "10000,3,0",
 					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 500,
-					"params": "6,0,0,0,0,0,5,3,0",
-					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -362,9 +362,19 @@
 				{
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,0,0,0,0,0,3,110",
+					"params": "500,0,0,0,0,0,3,0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 400,
+					"spark dmg% buff (40)": 500,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"params": "6,0,0,0,0,0,5,3,0",
+					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -385,16 +395,6 @@
 					"increase bb gauge gradual turns (37)": 3,
 					"params": "10000,3,0",
 					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 500,
-					"params": "6,0,0,0,0,0,5,3,0",
-					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -426,9 +426,19 @@
 				{
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,0,0,0,0,0,3,110",
+					"params": "500,0,0,0,0,0,3,0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 400,
+					"spark dmg% buff (40)": 500,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"params": "6,0,0,0,0,0,5,3,0",
+					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -449,16 +459,6 @@
 					"increase bb gauge gradual turns (37)": 3,
 					"params": "10000,3,0",
 					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 500,
-					"params": "6,0,0,0,0,0,5,3,0",
-					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -490,9 +490,19 @@
 				{
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,0,0,0,0,0,3,110",
+					"params": "500,0,0,0,0,0,3,0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 400,
+					"spark dmg% buff (40)": 500,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"params": "6,0,0,0,0,0,5,3,0",
+					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -513,16 +523,6 @@
 					"increase bb gauge gradual turns (37)": 3,
 					"params": "10000,3,0",
 					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 500,
-					"params": "6,0,0,0,0,0,5,3,0",
-					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -554,9 +554,19 @@
 				{
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,0,0,0,0,0,3,110",
+					"params": "500,0,0,0,0,0,3,0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 400,
+					"spark dmg% buff (40)": 500,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"params": "6,0,0,0,0,0,5,3,0",
+					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -577,16 +587,6 @@
 					"increase bb gauge gradual turns (37)": 3,
 					"params": "10000,3,0",
 					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 500,
-					"params": "6,0,0,0,0,0,5,3,0",
-					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -618,9 +618,19 @@
 				{
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,0,0,0,0,0,3,110",
+					"params": "500,0,0,0,0,0,3,0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 400,
+					"spark dmg% buff (40)": 500,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"params": "6,0,0,0,0,0,5,3,0",
+					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -641,16 +651,6 @@
 					"increase bb gauge gradual turns (37)": 3,
 					"params": "10000,3,0",
 					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 500,
-					"params": "6,0,0,0,0,0,5,3,0",
-					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -682,9 +682,19 @@
 				{
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,0,0,0,0,0,3,110",
+					"params": "500,0,0,0,0,0,3,0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 400,
+					"spark dmg% buff (40)": 500,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"params": "6,0,0,0,0,0,5,3,0",
+					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -705,16 +715,6 @@
 					"increase bb gauge gradual turns (37)": 3,
 					"params": "10000,3,0",
 					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 500,
-					"params": "6,0,0,0,0,0,5,3,0",
-					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -746,9 +746,19 @@
 				{
 					"buff turns": 3,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "400,0,0,0,0,0,3,110",
+					"params": "500,0,0,0,0,0,3,0",
 					"proc id": "23",
-					"spark dmg% buff (40)": 400,
+					"spark dmg% buff (40)": 500,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"dark units do extra elemental weakness dmg": true,
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental weakness buff turns": 3,
+					"elemental weakness multiplier%": 500,
+					"params": "6,0,0,0,0,0,5,3,0",
+					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -769,16 +779,6 @@
 					"increase bb gauge gradual turns (37)": 3,
 					"params": "10000,3,0",
 					"proc id": "19",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"dark units do extra elemental weakness dmg": true,
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental weakness buff turns": 3,
-					"elemental weakness multiplier%": 500,
-					"params": "6,0,0,0,0,0,5,3,0",
-					"proc id": "55",
 					"target area": "aoe",
 					"target type": "party"
 				}

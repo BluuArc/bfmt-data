@@ -4,30 +4,10 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-07-14T07:53:14.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2021-01-20T09:46:58.000Z"
 	},
-	"desc": "50% boost to Atk of Light types, greatly boosts Atk relative to remaining HP, adds Light barrier effect to BB/SBB & raises max Atk value from 99999 to 130000<br>40% Boost to Atk, Def each turn (3 turns max, capping at 120%), boosts Light elemental damage for all allies & considerably raises normal hit amount in Guild Raid",
+	"desc": "50% Atk (Light) for all allies, 0-100% Atk, Def relative to remaining HP, 30% all parameters & add to BB/SBB (Adds Light barrier)<br>25% Light elemental damage for all allies, 40% Atk, Def each turn (3 times) & raises normal hit amount in Guild Raid",
 	"effects": [
-		{
-			"conditions": [],
-			"params": "62,5&3500&0&100&0,1,2,0,1,1,0",
-			"passive id": "66",
-			"passive target": "self",
-			"trigger on bb": true,
-			"trigger on sbb": true,
-			"triggered effect": [
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "light",
-					"elemental barrier hp": 3500,
-					"proc id": "62",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
 		{
 			"atk% buff": 50,
 			"conditions": [],
@@ -43,16 +23,41 @@
 			"atk% extra buff based on hp": 100,
 			"buff proportional to hp": "remaining",
 			"conditions": [],
-			"params": "0,100,0,0,0,0,0",
+			"def% base buff": 0,
+			"def% extra buff based on hp": 100,
+			"params": "0,100,0,100,0,0,0",
 			"passive id": "46",
 			"passive target": "self"
 		},
 		{
+			"atk% buff": 30,
 			"conditions": [],
-			"increase atk cap": 130000,
-			"params": "130000",
-			"passive id": "143",
-			"passive target": "self"
+			"def% buff": 30,
+			"hp% buff": 30,
+			"params": "30,30,30,0,30",
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 30
+		},
+		{
+			"conditions": [],
+			"params": "62,5&7000&0&100&0,1,2,0,1,1,0",
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "light",
+					"elemental barrier hp": 7000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
 		}
 	],
 	"id": "850288",

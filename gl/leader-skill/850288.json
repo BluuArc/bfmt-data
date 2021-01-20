@@ -4,32 +4,39 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-07-14T05:45:40.000Z",
-		"updatedAt": "2017-07-14T05:45:40.000Z"
+		"updatedAt": "2021-01-20T09:46:58.000Z"
 	},
-	"desc": "60% boost to Atk, max HP, hugely boosts critical damage, hugely boosts BC efficacy & 80% boost to Atk, Def when HP is over 50%",
+	"desc": "150% Atk, max HP, 30% critical rate, 100% Atk, Def when HP is above 50%, 250% critical damage, fills BB gauge each turn & raises normal hit amount",
 	"effects": [
 		{
-			"atk% buff": 60,
-			"hp% buff": 60,
-			"params": "60,0,0,0,60",
+			"atk% buff": 150,
+			"crit% buff": 30,
+			"hp% buff": 150,
+			"params": "150,0,0,30,150",
 			"passive id": "1"
 		},
 		{
-			"crit multiplier%": 150,
-			"params": "1.5",
+			"atk% buff": 100,
+			"def% buff": 100,
+			"hp above % buff requirement": 50,
+			"params": "100,100,0,0,50,1",
+			"passive id": "11"
+		},
+		{
+			"crit multiplier%": 250,
+			"params": "2.5",
 			"passive id": "34"
 		},
 		{
-			"bb gauge fill rate%": 50,
-			"params": "50",
-			"passive id": "32"
+			"bc fill per turn": 10,
+			"params": "1000",
+			"passive id": "9"
 		},
 		{
-			"atk% buff": 80,
-			"def% buff": 80,
-			"hp above % buff requirement": 50,
-			"params": "80,80,0,0,50,1",
-			"passive id": "11"
+			"extra hits dmg%": -20,
+			"hit increase/hit": 1,
+			"params": "1,1,-20,0,0,0,0,100",
+			"passive id": "37"
 		}
 	],
 	"id": "850288",

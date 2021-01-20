@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 25,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-07-14T12:22:34.000Z",
-		"updatedAt": "2017-07-14T12:22:34.000Z"
+		"updatedAt": "2021-01-20T09:46:58.000Z"
 	},
 	"damage frames": [
 		{
@@ -72,7 +72,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 25,
-			"proc id": "1"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -121,9 +121,21 @@
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
 			"proc id": "66"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "8"
 		}
 	],
-	"desc": "25 combo massive Light attack on all foes, enormously boosts critical damage for 3 turns, enormously boosts Light types' Atk for 3 turns, considerably raises normal hit amount for 3 turns & high probability of raising allies from KO",
+	"desc": "25 combo Light attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, may raise allies from KO & boosts max HP",
 	"drop check count": 1,
 	"id": "2850288",
 	"levels": [
@@ -131,30 +143,35 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 350,
+					"crit multiplier%": 500,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
+					"params": "5,3,0",
 					"proc id": "54",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 350,
+					"atk% buff (1)": 450,
 					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "light",
-					"params": "5,350,0,0,0,3,0",
+					"element buffed": "all",
+					"params": "0,450,450,450,60,3,0",
 					"proc id": "5",
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -163,7 +180,7 @@
 					"extra hits dmg%": 120,
 					"hit increase buff turns (50)": 3,
 					"hit increase/hit": 3,
-					"params": "3,1,120,0,0,0,0,3,0",
+					"params": "3,2,120,0,0,0,0,3,0",
 					"proc id": "26",
 					"target area": "aoe",
 					"target type": "party"
@@ -174,6 +191,14 @@
 					"proc id": "66",
 					"revive unit chance%": 80,
 					"revive unit hp%": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
+					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -183,30 +208,35 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 350,
+					"crit multiplier%": 500,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
+					"params": "5,3,0",
 					"proc id": "54",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 350,
+					"atk% buff (1)": 450,
 					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "light",
-					"params": "5,350,0,0,0,3,0",
+					"element buffed": "all",
+					"params": "0,450,450,450,60,3,0",
 					"proc id": "5",
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -215,7 +245,7 @@
 					"extra hits dmg%": 120,
 					"hit increase buff turns (50)": 3,
 					"hit increase/hit": 3,
-					"params": "3,1,120,0,0,0,0,3,0",
+					"params": "3,2,120,0,0,0,0,3,0",
 					"proc id": "26",
 					"target area": "aoe",
 					"target type": "party"
@@ -226,6 +256,14 @@
 					"proc id": "66",
 					"revive unit chance%": 80,
 					"revive unit hp%": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
+					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -235,30 +273,35 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 350,
+					"crit multiplier%": 500,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
+					"params": "5,3,0",
 					"proc id": "54",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 350,
+					"atk% buff (1)": 450,
 					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "light",
-					"params": "5,350,0,0,0,3,0",
+					"element buffed": "all",
+					"params": "0,450,450,450,60,3,0",
 					"proc id": "5",
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -267,7 +310,7 @@
 					"extra hits dmg%": 120,
 					"hit increase buff turns (50)": 3,
 					"hit increase/hit": 3,
-					"params": "3,1,120,0,0,0,0,3,0",
+					"params": "3,2,120,0,0,0,0,3,0",
 					"proc id": "26",
 					"target area": "aoe",
 					"target type": "party"
@@ -278,6 +321,14 @@
 					"proc id": "66",
 					"revive unit chance%": 80,
 					"revive unit hp%": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
+					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -287,30 +338,35 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 350,
+					"crit multiplier%": 500,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
+					"params": "5,3,0",
 					"proc id": "54",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 350,
+					"atk% buff (1)": 450,
 					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "light",
-					"params": "5,350,0,0,0,3,0",
+					"element buffed": "all",
+					"params": "0,450,450,450,60,3,0",
 					"proc id": "5",
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -319,7 +375,7 @@
 					"extra hits dmg%": 120,
 					"hit increase buff turns (50)": 3,
 					"hit increase/hit": 3,
-					"params": "3,1,120,0,0,0,0,3,0",
+					"params": "3,2,120,0,0,0,0,3,0",
 					"proc id": "26",
 					"target area": "aoe",
 					"target type": "party"
@@ -330,6 +386,14 @@
 					"proc id": "66",
 					"revive unit chance%": 80,
 					"revive unit hp%": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
+					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -339,30 +403,35 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 350,
+					"crit multiplier%": 500,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
+					"params": "5,3,0",
 					"proc id": "54",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 350,
+					"atk% buff (1)": 450,
 					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "light",
-					"params": "5,350,0,0,0,3,0",
+					"element buffed": "all",
+					"params": "0,450,450,450,60,3,0",
 					"proc id": "5",
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -371,7 +440,7 @@
 					"extra hits dmg%": 120,
 					"hit increase buff turns (50)": 3,
 					"hit increase/hit": 3,
-					"params": "3,1,120,0,0,0,0,3,0",
+					"params": "3,2,120,0,0,0,0,3,0",
 					"proc id": "26",
 					"target area": "aoe",
 					"target type": "party"
@@ -382,6 +451,14 @@
 					"proc id": "66",
 					"revive unit chance%": 80,
 					"revive unit hp%": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
+					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -391,30 +468,35 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 350,
+					"crit multiplier%": 500,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
+					"params": "5,3,0",
 					"proc id": "54",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 350,
+					"atk% buff (1)": 450,
 					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "light",
-					"params": "5,350,0,0,0,3,0",
+					"element buffed": "all",
+					"params": "0,450,450,450,60,3,0",
 					"proc id": "5",
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -423,7 +505,7 @@
 					"extra hits dmg%": 120,
 					"hit increase buff turns (50)": 3,
 					"hit increase/hit": 3,
-					"params": "3,1,120,0,0,0,0,3,0",
+					"params": "3,2,120,0,0,0,0,3,0",
 					"proc id": "26",
 					"target area": "aoe",
 					"target type": "party"
@@ -434,6 +516,14 @@
 					"proc id": "66",
 					"revive unit chance%": 80,
 					"revive unit hp%": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
+					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -443,30 +533,35 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 350,
+					"crit multiplier%": 500,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
+					"params": "5,3,0",
 					"proc id": "54",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 350,
+					"atk% buff (1)": 450,
 					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "light",
-					"params": "5,350,0,0,0,3,0",
+					"element buffed": "all",
+					"params": "0,450,450,450,60,3,0",
 					"proc id": "5",
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -475,7 +570,7 @@
 					"extra hits dmg%": 120,
 					"hit increase buff turns (50)": 3,
 					"hit increase/hit": 3,
-					"params": "3,1,120,0,0,0,0,3,0",
+					"params": "3,2,120,0,0,0,0,3,0",
 					"proc id": "26",
 					"target area": "aoe",
 					"target type": "party"
@@ -486,6 +581,14 @@
 					"proc id": "66",
 					"revive unit chance%": 80,
 					"revive unit hp%": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
+					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -495,30 +598,35 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 350,
+					"crit multiplier%": 500,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
+					"params": "5,3,0",
 					"proc id": "54",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 350,
+					"atk% buff (1)": 450,
 					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "light",
-					"params": "5,350,0,0,0,3,0",
+					"element buffed": "all",
+					"params": "0,450,450,450,60,3,0",
 					"proc id": "5",
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -527,7 +635,7 @@
 					"extra hits dmg%": 120,
 					"hit increase buff turns (50)": 3,
 					"hit increase/hit": 3,
-					"params": "3,1,120,0,0,0,0,3,0",
+					"params": "3,2,120,0,0,0,0,3,0",
 					"proc id": "26",
 					"target area": "aoe",
 					"target type": "party"
@@ -538,6 +646,14 @@
 					"proc id": "66",
 					"revive unit chance%": 80,
 					"revive unit hp%": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
+					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -547,30 +663,35 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 350,
+					"crit multiplier%": 500,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
+					"params": "5,3,0",
 					"proc id": "54",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 350,
+					"atk% buff (1)": 450,
 					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "light",
-					"params": "5,350,0,0,0,3,0",
+					"element buffed": "all",
+					"params": "0,450,450,450,60,3,0",
 					"proc id": "5",
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -579,7 +700,7 @@
 					"extra hits dmg%": 120,
 					"hit increase buff turns (50)": 3,
 					"hit increase/hit": 3,
-					"params": "3,1,120,0,0,0,0,3,0",
+					"params": "3,2,120,0,0,0,0,3,0",
 					"proc id": "26",
 					"target area": "aoe",
 					"target type": "party"
@@ -590,6 +711,14 @@
 					"proc id": "66",
 					"revive unit chance%": 80,
 					"revive unit hp%": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
+					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -599,30 +728,35 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"buff turns (84)": 3,
-					"crit multiplier%": 350,
+					"crit multiplier%": 500,
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "3.5,3,0",
+					"params": "5,3,0",
 					"proc id": "54",
 					"target area": "aoe",
 					"target type": "party"
 				},
 				{
-					"atk% buff (13)": 350,
+					"atk% buff (1)": 450,
 					"buff turns": 3,
+					"crit% buff (7)": 60,
+					"def% buff (3)": 450,
 					"effect delay time(ms)/frame": "0.0/0",
-					"element buffed": "light",
-					"params": "5,350,0,0,0,3,0",
+					"element buffed": "all",
+					"params": "0,450,450,450,60,3,0",
 					"proc id": "5",
+					"rec% buff (5)": 450,
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -631,7 +765,7 @@
 					"extra hits dmg%": 120,
 					"hit increase buff turns (50)": 3,
 					"hit increase/hit": 3,
-					"params": "3,1,120,0,0,0,0,3,0",
+					"params": "3,2,120,0,0,0,0,3,0",
 					"proc id": "26",
 					"target area": "aoe",
 					"target type": "party"
@@ -642,6 +776,14 @@
 					"proc id": "66",
 					"revive unit chance%": 80,
 					"revive unit hp%": 100,
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
+					"proc id": "8",
 					"target area": "aoe",
 					"target type": "party"
 				}

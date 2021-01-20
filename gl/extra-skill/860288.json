@@ -4,9 +4,9 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-10-11T11:13:17.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2021-01-20T09:46:58.000Z"
 	},
-	"desc": "50% boost to Atk of Dark types, 50% boost to Spark damage, adds Dark barrier effect to BB/SBB & raises Atk parameter limits to 130000<br>Boosts Atk, Def when BB gauge is over 50%, adds 22 combo powerful Dark attack on Light types effect to SBB & boosts Dark elemental damage for all allies in Guild Raid",
+	"desc": "50% Atk (Dark) for all allies, 100% critical, elemental damage reduction, 100% spark damage & add to BB/SBB (Adds Dark barrier)<br>25% Dark elemental damage for all allies, 75% Atk, Def when BB gauge is above 50% & add to SBB (22 combo Dark attack on Light foes) in Guild Raid",
 	"effects": [
 		{
 			"atk% buff": 50,
@@ -20,21 +20,26 @@
 		},
 		{
 			"conditions": [],
-			"damage% for spark": 50,
-			"params": "50,0,0,0,0,0",
+			"crit chance base resist%": 100,
+			"crit chance buffed resist%": 100,
+			"crit dmg base damage resist%": 100,
+			"crit dmg buffed damage resist%": 100,
+			"params": "100,100,100,100,100,100,0,0,0,0",
+			"passive id": "53",
+			"passive target": "self",
+			"strong base element damage resist%": 100,
+			"strong buffed element damage resist%": 100
+		},
+		{
+			"conditions": [],
+			"damage% for spark": 100,
+			"params": "100,0,0,0,0,0",
 			"passive id": "31",
 			"passive target": "self"
 		},
 		{
 			"conditions": [],
-			"increase atk cap": 130000,
-			"params": "130000",
-			"passive id": "143",
-			"passive target": "self"
-		},
-		{
-			"conditions": [],
-			"params": "62,6&3500&0&100&0,1,2,0,1,1,0",
+			"params": "62,6&7000&0&100&0,1,2,0,1,1,0",
 			"passive id": "66",
 			"passive target": "self",
 			"trigger on bb": true,
@@ -45,7 +50,7 @@
 					"elemental barrier absorb dmg%": 100,
 					"elemental barrier def": 0,
 					"elemental barrier element": "dark",
-					"elemental barrier hp": 3500,
+					"elemental barrier hp": 7000,
 					"proc id": "62",
 					"target area": "aoe",
 					"target type": "party"

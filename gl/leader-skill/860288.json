@@ -4,33 +4,41 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-10-11T11:13:17.000Z",
-		"updatedAt": "2018-05-16T12:15:15.000Z"
+		"updatedAt": "2021-01-20T09:46:58.000Z"
 	},
-	"desc": "60% boost to Atk, max HP, 130% boost to Spark damage, damage taken may restore HP & 25% Spark damage reduction",
+	"desc": "150% Atk, max HP, 30% critical rate, 250% spark damage, 50% spark damage reduction, damage taken may restore HP & 15% damage reduction from Light, Dark types",
 	"effects": [
 		{
-			"atk% buff": 60,
-			"hp% buff": 60,
-			"params": "60,0,0,0,60",
+			"atk% buff": 150,
+			"crit% buff": 30,
+			"hp% buff": 150,
+			"params": "150,0,0,30,150",
 			"passive id": "1"
 		},
 		{
-			"damage% for spark": 130,
-			"params": "130,0,0,0,0,0",
+			"damage% for spark": 250,
+			"params": "250,0,0,0,0,0",
 			"passive id": "31"
 		},
 		{
+			"base spark dmg% resist": 50,
+			"buff spark dmg% resist": 50,
+			"params": "50,50",
+			"passive id": "77"
+		},
+		{
 			"dmg% to hp% when attacked chance%": 50,
-			"dmg% to hp% when attacked high": 25,
+			"dmg% to hp% when attacked high": 30,
 			"dmg% to hp% when attacked low": 25,
-			"params": "25,25,50",
+			"params": "25,30,50",
 			"passive id": "24"
 		},
 		{
-			"base spark dmg% resist": 25,
-			"buff spark dmg% resist": 25,
-			"params": "25,25",
-			"passive id": "77"
+			"dmg% mitigation for elemental attacks": 15,
+			"mitigate dark attacks": true,
+			"mitigate light attacks": true,
+			"params": "5,6,0,0,0,0,15",
+			"passive id": "62"
 		}
 	],
 	"id": "860288",
