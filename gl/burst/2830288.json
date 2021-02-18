@@ -5,13 +5,13 @@
 	"attackInfo": [
 		{
 			"hits": 22,
-			"id": "1",
+			"id": "47",
 			"target": "AOE"
 		}
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-07-14T12:22:34.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2021-02-18T10:10:53.000Z"
 	},
 	"damage frames": [
 		{
@@ -66,7 +66,7 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 22,
-			"proc id": "1"
+			"proc id": "47"
 		},
 		{
 			"effect delay time(ms)/frame": "0.0/0",
@@ -90,18 +90,6 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
-			"proc id": "113"
-		},
-		{
-			"effect delay time(ms)/frame": "0.0/0",
-			"frame times": [
-				0
-			],
-			"hit dmg% distribution": [
-				100
-			],
-			"hit dmg% distribution (total)": 100,
-			"hits": 1,
 			"proc id": "26"
 		},
 		{
@@ -114,10 +102,34 @@
 			],
 			"hit dmg% distribution (total)": 100,
 			"hits": 1,
+			"proc id": "94"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
 			"proc id": "8"
+		},
+		{
+			"effect delay time(ms)/frame": "0.0/0",
+			"frame times": [
+				0
+			],
+			"hit dmg% distribution": [
+				100
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 1,
+			"proc id": "113"
 		}
 	],
-	"desc": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
+	"desc": "22 combo Earth attack on all foes (damage relative to remaining HP), boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns, normal attacks hits all foes for 3 turns, boosts max HP & fills OD gauge at turn's end for 3 turns",
 	"drop check count": 1,
 	"id": "2830288",
 	"levels": [
@@ -125,30 +137,23 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 250,
+					"atk% buff (46)": 300,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,250,0,0,3,3",
+					"params": "2,300,0,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"od fill": 800,
-					"od fill turns (148)": 3,
-					"params": "0,0,800,3,170",
-					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -163,10 +168,28 @@
 					"target type": "party"
 				},
 				{
+					"aoe atk inc%": 50,
+					"chance to aoe": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 40,
-					"params": "0,40,0",
+					"params": "50,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"od fill": 7500,
+					"od fill turns (148)": 3,
+					"params": "0,0,7500,3,170",
+					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -176,30 +199,23 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 250,
+					"atk% buff (46)": 300,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,250,0,0,3,3",
+					"params": "2,300,0,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"od fill": 800,
-					"od fill turns (148)": 3,
-					"params": "0,0,800,3,170",
-					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -214,10 +230,28 @@
 					"target type": "party"
 				},
 				{
+					"aoe atk inc%": 50,
+					"chance to aoe": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 40,
-					"params": "0,40,0",
+					"params": "50,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"od fill": 7500,
+					"od fill turns (148)": 3,
+					"params": "0,0,7500,3,170",
+					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -227,30 +261,23 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 250,
+					"atk% buff (46)": 300,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,250,0,0,3,3",
+					"params": "2,300,0,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"od fill": 800,
-					"od fill turns (148)": 3,
-					"params": "0,0,800,3,170",
-					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -265,10 +292,28 @@
 					"target type": "party"
 				},
 				{
+					"aoe atk inc%": 50,
+					"chance to aoe": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 40,
-					"params": "0,40,0",
+					"params": "50,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"od fill": 7500,
+					"od fill turns (148)": 3,
+					"params": "0,0,7500,3,170",
+					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -278,30 +323,23 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 250,
+					"atk% buff (46)": 300,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,250,0,0,3,3",
+					"params": "2,300,0,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"od fill": 800,
-					"od fill turns (148)": 3,
-					"params": "0,0,800,3,170",
-					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -316,10 +354,28 @@
 					"target type": "party"
 				},
 				{
+					"aoe atk inc%": 50,
+					"chance to aoe": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 40,
-					"params": "0,40,0",
+					"params": "50,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"od fill": 7500,
+					"od fill turns (148)": 3,
+					"params": "0,0,7500,3,170",
+					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -329,30 +385,23 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 250,
+					"atk% buff (46)": 300,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,250,0,0,3,3",
+					"params": "2,300,0,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"od fill": 800,
-					"od fill turns (148)": 3,
-					"params": "0,0,800,3,170",
-					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -367,10 +416,28 @@
 					"target type": "party"
 				},
 				{
+					"aoe atk inc%": 50,
+					"chance to aoe": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 40,
-					"params": "0,40,0",
+					"params": "50,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"od fill": 7500,
+					"od fill turns (148)": 3,
+					"params": "0,0,7500,3,170",
+					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -380,30 +447,23 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 250,
+					"atk% buff (46)": 300,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,250,0,0,3,3",
+					"params": "2,300,0,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"od fill": 800,
-					"od fill turns (148)": 3,
-					"params": "0,0,800,3,170",
-					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -418,10 +478,28 @@
 					"target type": "party"
 				},
 				{
+					"aoe atk inc%": 50,
+					"chance to aoe": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 40,
-					"params": "0,40,0",
+					"params": "50,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"od fill": 7500,
+					"od fill turns (148)": 3,
+					"params": "0,0,7500,3,170",
+					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -431,30 +509,23 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 250,
+					"atk% buff (46)": 300,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,250,0,0,3,3",
+					"params": "2,300,0,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"od fill": 800,
-					"od fill turns (148)": 3,
-					"params": "0,0,800,3,170",
-					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -469,10 +540,28 @@
 					"target type": "party"
 				},
 				{
+					"aoe atk inc%": 50,
+					"chance to aoe": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 40,
-					"params": "0,40,0",
+					"params": "50,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"od fill": 7500,
+					"od fill turns (148)": 3,
+					"params": "0,0,7500,3,170",
+					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -482,30 +571,23 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 250,
+					"atk% buff (46)": 300,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,250,0,0,3,3",
+					"params": "2,300,0,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"od fill": 800,
-					"od fill turns (148)": 3,
-					"params": "0,0,800,3,170",
-					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -520,10 +602,28 @@
 					"target type": "party"
 				},
 				{
+					"aoe atk inc%": 50,
+					"chance to aoe": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 40,
-					"params": "0,40,0",
+					"params": "50,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"od fill": 7500,
+					"od fill turns (148)": 3,
+					"params": "0,0,7500,3,170",
+					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -533,30 +633,23 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 250,
+					"atk% buff (46)": 300,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,250,0,0,3,3",
+					"params": "2,300,0,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"od fill": 800,
-					"od fill turns (148)": 3,
-					"params": "0,0,800,3,170",
-					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -571,10 +664,28 @@
 					"target type": "party"
 				},
 				{
+					"aoe atk inc%": 50,
+					"chance to aoe": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 40,
-					"params": "0,40,0",
+					"params": "50,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"od fill": 7500,
+					"od fill turns (148)": 3,
+					"params": "0,0,7500,3,170",
+					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				}
@@ -584,30 +695,23 @@
 			"bc cost": 32,
 			"effects": [
 				{
-					"bb atk%": 2000,
+					"bb added atk% based on hp": 1500,
+					"bb added atk% proportional to hp": "remaining",
+					"bb base atk%": 1500,
 					"bb flat atk": 200,
 					"effect delay time(ms)/frame": "16.7/1",
-					"params": "2000,200,0,0,0,0",
-					"proc id": "1",
+					"params": "1500,3000,0,200,0,0,0,0",
+					"proc id": "47",
 					"target area": "aoe",
 					"target type": "enemy"
 				},
 				{
 					"% converted turns": 3,
-					"atk% buff (46)": 250,
+					"atk% buff (46)": 300,
 					"converted attribute": "defense",
 					"effect delay time(ms)/frame": "0.0/0",
-					"params": "2,250,0,0,3,3",
+					"params": "2,300,0,0,3,0",
 					"proc id": "24",
-					"target area": "aoe",
-					"target type": "party"
-				},
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"od fill": 800,
-					"od fill turns (148)": 3,
-					"params": "0,0,800,3,170",
-					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				},
@@ -622,10 +726,28 @@
 					"target type": "party"
 				},
 				{
+					"aoe atk inc%": 50,
+					"chance to aoe": 100,
 					"effect delay time(ms)/frame": "0.0/0",
-					"max hp% increase": 40,
-					"params": "0,40,0",
+					"params": "50,100,3,0",
+					"proc id": "94",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"max hp% increase": 55,
+					"params": "0,55,0",
 					"proc id": "8",
+					"target area": "aoe",
+					"target type": "party"
+				},
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"od fill": 7500,
+					"od fill turns (148)": 3,
+					"params": "0,0,7500,3,170",
+					"proc id": "113",
 					"target area": "aoe",
 					"target type": "party"
 				}

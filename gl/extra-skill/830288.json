@@ -4,30 +4,10 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-07-14T07:53:14.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2021-02-18T10:10:53.000Z"
 	},
-	"desc": "50% boost to Atk of Earth types, 100% boost to Atk when BB gauge is over 50%, adds Earth barrier effect to BB/SBB & raises Atk parameter limits to 130000<br> 50% boost to Atk, Def when HP is over 50%, raises normal hit amount & boosts Earth elemental damage for all allies in Guild Raid",
+	"desc": "50% Atk (Earth) for all allies, 30% all parameters, 100% Atk when BB gauge is above 50% & add to BB/SBB (Adds Earth barrier)<br>25% Earth elemental damage for all allies, raises normal hit amount & add to SBB (19 combo Earth attack on Thunder foes) in Guild Raid",
 	"effects": [
-		{
-			"conditions": [],
-			"params": "62,3&3500&0&100&0,1,2,0,1,1,0",
-			"passive id": "66",
-			"passive target": "self",
-			"trigger on bb": true,
-			"trigger on sbb": true,
-			"triggered effect": [
-				{
-					"effect delay time(ms)/frame": "0.0/0",
-					"elemental barrier absorb dmg%": 100,
-					"elemental barrier def": 0,
-					"elemental barrier element": "earth",
-					"elemental barrier hp": 3500,
-					"proc id": "62",
-					"target area": "aoe",
-					"target type": "party"
-				}
-			]
-		},
 		{
 			"atk% buff": 50,
 			"conditions": [],
@@ -39,6 +19,16 @@
 			"passive target": "party"
 		},
 		{
+			"atk% buff": 30,
+			"conditions": [],
+			"def% buff": 30,
+			"hp% buff": 30,
+			"params": "30,30,30,0,30",
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 30
+		},
+		{
 			"atk% buff": 100,
 			"bb gauge above % buff requirement": 50,
 			"conditions": [],
@@ -48,10 +38,23 @@
 		},
 		{
 			"conditions": [],
-			"increase atk cap": 130000,
-			"params": "130000",
-			"passive id": "143",
-			"passive target": "self"
+			"params": "62,3&7000&0&100&0,1,2,0,1,1,0",
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "earth",
+					"elemental barrier hp": 7000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
 		}
 	],
 	"id": "830288",

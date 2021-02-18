@@ -76,7 +76,7 @@
 				],
 				"hit dmg% distribution (total)": 100,
 				"hits": 16,
-				"proc id": "1"
+				"proc id": "47"
 			},
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -113,9 +113,33 @@
 				"hit dmg% distribution (total)": 100,
 				"hits": 1,
 				"proc id": "8"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "94"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "44"
 			}
 		],
-		"desc": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
+		"desc": "16 combo Earth attack on all foes (damage relative to remaining HP, boosts own critical rate), boosts Atk, Def, Rec and critical rate (Earth) for 3 turns, damage taken may restore HP for 3 turns, boosts max HP, normal attacks hits all foes for 3 turns & 2 turns DoT infliction",
 		"drop check count": 1,
 		"id": "830288",
 		"levels": [
@@ -123,45 +147,69 @@
 				"bc cost": 30,
 				"effects": [
 					{
-						"bb atk%": 370,
+						"bb added atk% based on hp": 200,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb crit%": 60,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "370,200,0,0,0,0",
-						"proc id": "1",
+						"params": "200,400,0,200,60,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp recover from dmg buff turns (133)": 3,
-						"hp recover from dmg chance": 30,
+						"hp recover from dmg chance": 50,
 						"hp recover from dmg% high": 30,
 						"hp recover from dmg% low": 25,
-						"params": "25,30,30,3,0",
+						"params": "25,30,50,3,0",
 						"proc id": "85",
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 20,
-						"params": "0,20,0",
+						"max hp% increase": 30,
+						"params": "0,30,0",
 						"proc id": "8",
 						"target area": "aoe",
 						"target type": "party"
+					},
+					{
+						"aoe atk inc%": 0,
+						"chance to aoe": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "0,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dot atk%": 1000,
+						"dot element affected": true,
+						"dot flat atk": 100,
+						"dot turns (71)": 2,
+						"dot unit index": 0,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,100,0,2,0",
+						"proc id": "44",
+						"target area": "aoe",
+						"target type": "enemy"
 					}
 				]
 			},
@@ -169,45 +217,69 @@
 				"bc cost": 30,
 				"effects": [
 					{
-						"bb atk%": 380,
+						"bb added atk% based on hp": 210,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb crit%": 60,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "380,200,0,0,0,0",
-						"proc id": "1",
+						"params": "200,410,0,200,60,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp recover from dmg buff turns (133)": 3,
-						"hp recover from dmg chance": 30,
+						"hp recover from dmg chance": 50,
 						"hp recover from dmg% high": 30,
 						"hp recover from dmg% low": 25,
-						"params": "25,30,30,3,0",
+						"params": "25,30,50,3,0",
 						"proc id": "85",
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 20,
-						"params": "0,20,0",
+						"max hp% increase": 30,
+						"params": "0,30,0",
 						"proc id": "8",
 						"target area": "aoe",
 						"target type": "party"
+					},
+					{
+						"aoe atk inc%": 0,
+						"chance to aoe": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "0,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dot atk%": 1000,
+						"dot element affected": true,
+						"dot flat atk": 100,
+						"dot turns (71)": 2,
+						"dot unit index": 0,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,100,0,2,0",
+						"proc id": "44",
+						"target area": "aoe",
+						"target type": "enemy"
 					}
 				]
 			},
@@ -215,45 +287,69 @@
 				"bc cost": 30,
 				"effects": [
 					{
-						"bb atk%": 390,
+						"bb added atk% based on hp": 220,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb crit%": 60,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "390,200,0,0,0,0",
-						"proc id": "1",
+						"params": "200,420,0,200,60,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp recover from dmg buff turns (133)": 3,
-						"hp recover from dmg chance": 30,
+						"hp recover from dmg chance": 50,
 						"hp recover from dmg% high": 30,
 						"hp recover from dmg% low": 25,
-						"params": "25,30,30,3,0",
+						"params": "25,30,50,3,0",
 						"proc id": "85",
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 20,
-						"params": "0,20,0",
+						"max hp% increase": 30,
+						"params": "0,30,0",
 						"proc id": "8",
 						"target area": "aoe",
 						"target type": "party"
+					},
+					{
+						"aoe atk inc%": 0,
+						"chance to aoe": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "0,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dot atk%": 1000,
+						"dot element affected": true,
+						"dot flat atk": 100,
+						"dot turns (71)": 2,
+						"dot unit index": 0,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,100,0,2,0",
+						"proc id": "44",
+						"target area": "aoe",
+						"target type": "enemy"
 					}
 				]
 			},
@@ -261,45 +357,69 @@
 				"bc cost": 30,
 				"effects": [
 					{
-						"bb atk%": 400,
+						"bb added atk% based on hp": 230,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb crit%": 60,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "400,200,0,0,0,0",
-						"proc id": "1",
+						"params": "200,430,0,200,60,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp recover from dmg buff turns (133)": 3,
-						"hp recover from dmg chance": 30,
+						"hp recover from dmg chance": 50,
 						"hp recover from dmg% high": 30,
 						"hp recover from dmg% low": 25,
-						"params": "25,30,30,3,0",
+						"params": "25,30,50,3,0",
 						"proc id": "85",
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 20,
-						"params": "0,20,0",
+						"max hp% increase": 30,
+						"params": "0,30,0",
 						"proc id": "8",
 						"target area": "aoe",
 						"target type": "party"
+					},
+					{
+						"aoe atk inc%": 0,
+						"chance to aoe": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "0,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dot atk%": 1000,
+						"dot element affected": true,
+						"dot flat atk": 100,
+						"dot turns (71)": 2,
+						"dot unit index": 0,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,100,0,2,0",
+						"proc id": "44",
+						"target area": "aoe",
+						"target type": "enemy"
 					}
 				]
 			},
@@ -307,45 +427,69 @@
 				"bc cost": 30,
 				"effects": [
 					{
-						"bb atk%": 410,
+						"bb added atk% based on hp": 240,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb crit%": 60,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "410,200,0,0,0,0",
-						"proc id": "1",
+						"params": "200,440,0,200,60,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp recover from dmg buff turns (133)": 3,
-						"hp recover from dmg chance": 30,
+						"hp recover from dmg chance": 50,
 						"hp recover from dmg% high": 30,
 						"hp recover from dmg% low": 25,
-						"params": "25,30,30,3,0",
+						"params": "25,30,50,3,0",
 						"proc id": "85",
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 20,
-						"params": "0,20,0",
+						"max hp% increase": 30,
+						"params": "0,30,0",
 						"proc id": "8",
 						"target area": "aoe",
 						"target type": "party"
+					},
+					{
+						"aoe atk inc%": 0,
+						"chance to aoe": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "0,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dot atk%": 1000,
+						"dot element affected": true,
+						"dot flat atk": 100,
+						"dot turns (71)": 2,
+						"dot unit index": 0,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,100,0,2,0",
+						"proc id": "44",
+						"target area": "aoe",
+						"target type": "enemy"
 					}
 				]
 			},
@@ -353,45 +497,69 @@
 				"bc cost": 30,
 				"effects": [
 					{
-						"bb atk%": 420,
+						"bb added atk% based on hp": 250,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb crit%": 60,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "420,200,0,0,0,0",
-						"proc id": "1",
+						"params": "200,450,0,200,60,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp recover from dmg buff turns (133)": 3,
-						"hp recover from dmg chance": 30,
+						"hp recover from dmg chance": 50,
 						"hp recover from dmg% high": 30,
 						"hp recover from dmg% low": 25,
-						"params": "25,30,30,3,0",
+						"params": "25,30,50,3,0",
 						"proc id": "85",
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 20,
-						"params": "0,20,0",
+						"max hp% increase": 30,
+						"params": "0,30,0",
 						"proc id": "8",
 						"target area": "aoe",
 						"target type": "party"
+					},
+					{
+						"aoe atk inc%": 0,
+						"chance to aoe": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "0,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dot atk%": 1000,
+						"dot element affected": true,
+						"dot flat atk": 100,
+						"dot turns (71)": 2,
+						"dot unit index": 0,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,100,0,2,0",
+						"proc id": "44",
+						"target area": "aoe",
+						"target type": "enemy"
 					}
 				]
 			},
@@ -399,45 +567,69 @@
 				"bc cost": 30,
 				"effects": [
 					{
-						"bb atk%": 430,
+						"bb added atk% based on hp": 260,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb crit%": 60,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "430,200,0,0,0,0",
-						"proc id": "1",
+						"params": "200,460,0,200,60,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp recover from dmg buff turns (133)": 3,
-						"hp recover from dmg chance": 30,
+						"hp recover from dmg chance": 50,
 						"hp recover from dmg% high": 30,
 						"hp recover from dmg% low": 25,
-						"params": "25,30,30,3,0",
+						"params": "25,30,50,3,0",
 						"proc id": "85",
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 20,
-						"params": "0,20,0",
+						"max hp% increase": 30,
+						"params": "0,30,0",
 						"proc id": "8",
 						"target area": "aoe",
 						"target type": "party"
+					},
+					{
+						"aoe atk inc%": 0,
+						"chance to aoe": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "0,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dot atk%": 1000,
+						"dot element affected": true,
+						"dot flat atk": 100,
+						"dot turns (71)": 2,
+						"dot unit index": 0,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,100,0,2,0",
+						"proc id": "44",
+						"target area": "aoe",
+						"target type": "enemy"
 					}
 				]
 			},
@@ -445,45 +637,69 @@
 				"bc cost": 30,
 				"effects": [
 					{
-						"bb atk%": 440,
+						"bb added atk% based on hp": 270,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb crit%": 60,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "440,200,0,0,0,0",
-						"proc id": "1",
+						"params": "200,470,0,200,60,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp recover from dmg buff turns (133)": 3,
-						"hp recover from dmg chance": 30,
+						"hp recover from dmg chance": 50,
 						"hp recover from dmg% high": 30,
 						"hp recover from dmg% low": 25,
-						"params": "25,30,30,3,0",
+						"params": "25,30,50,3,0",
 						"proc id": "85",
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 20,
-						"params": "0,20,0",
+						"max hp% increase": 30,
+						"params": "0,30,0",
 						"proc id": "8",
 						"target area": "aoe",
 						"target type": "party"
+					},
+					{
+						"aoe atk inc%": 0,
+						"chance to aoe": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "0,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dot atk%": 1000,
+						"dot element affected": true,
+						"dot flat atk": 100,
+						"dot turns (71)": 2,
+						"dot unit index": 0,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,100,0,2,0",
+						"proc id": "44",
+						"target area": "aoe",
+						"target type": "enemy"
 					}
 				]
 			},
@@ -491,45 +707,69 @@
 				"bc cost": 30,
 				"effects": [
 					{
-						"bb atk%": 450,
+						"bb added atk% based on hp": 280,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb crit%": 60,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "450,200,0,0,0,0",
-						"proc id": "1",
+						"params": "200,480,0,200,60,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp recover from dmg buff turns (133)": 3,
-						"hp recover from dmg chance": 30,
+						"hp recover from dmg chance": 50,
 						"hp recover from dmg% high": 30,
 						"hp recover from dmg% low": 25,
-						"params": "25,30,30,3,0",
+						"params": "25,30,50,3,0",
 						"proc id": "85",
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 20,
-						"params": "0,20,0",
+						"max hp% increase": 30,
+						"params": "0,30,0",
 						"proc id": "8",
 						"target area": "aoe",
 						"target type": "party"
+					},
+					{
+						"aoe atk inc%": 0,
+						"chance to aoe": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "0,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dot atk%": 1000,
+						"dot element affected": true,
+						"dot flat atk": 100,
+						"dot turns (71)": 2,
+						"dot unit index": 0,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,100,0,2,0",
+						"proc id": "44",
+						"target area": "aoe",
+						"target type": "enemy"
 					}
 				]
 			},
@@ -537,45 +777,69 @@
 				"bc cost": 30,
 				"effects": [
 					{
-						"bb atk%": 470,
+						"bb added atk% based on hp": 300,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 200,
+						"bb crit%": 60,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "470,200,0,0,0,0",
-						"proc id": "1",
+						"params": "200,500,0,200,60,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
 						"hp recover from dmg buff turns (133)": 3,
-						"hp recover from dmg chance": 30,
+						"hp recover from dmg chance": 50,
 						"hp recover from dmg% high": 30,
 						"hp recover from dmg% low": 25,
-						"params": "25,30,30,3,0",
+						"params": "25,30,50,3,0",
 						"proc id": "85",
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 20,
-						"params": "0,20,0",
+						"max hp% increase": 30,
+						"params": "0,30,0",
 						"proc id": "8",
 						"target area": "aoe",
 						"target type": "party"
+					},
+					{
+						"aoe atk inc%": 0,
+						"chance to aoe": 100,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "0,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"dot atk%": 1000,
+						"dot element affected": true,
+						"dot flat atk": 100,
+						"dot turns (71)": 2,
+						"dot unit index": 0,
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "1000,100,0,100,0,2,0",
+						"proc id": "44",
+						"target area": "aoe",
+						"target type": "enemy"
 					}
 				]
 			}
@@ -584,10 +848,10 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2017-07-12T09:50:28.000Z",
-		"updatedAt": "2020-12-23T14:39:38.000Z"
+		"updatedAt": "2021-02-18T10:11:12.000Z"
 	},
 	"category": 830280,
-	"cost": 54,
+	"cost": 60,
 	"damage frames": {
 		"frame times": [
 			35,
@@ -642,28 +906,8 @@
 		"associated_units": [
 			"830288:es"
 		],
-		"desc": "50% boost to Atk of Earth types, 100% boost to Atk when BB gauge is over 50%, adds Earth barrier effect to BB/SBB & raises Atk parameter limits to 130000<br> 50% boost to Atk, Def when HP is over 50%, raises normal hit amount & boosts Earth elemental damage for all allies in Guild Raid",
+		"desc": "50% Atk (Earth) for all allies, 30% all parameters, 100% Atk when BB gauge is above 50% & add to BB/SBB (Adds Earth barrier)<br>25% Earth elemental damage for all allies, raises normal hit amount & add to SBB (19 combo Earth attack on Thunder foes) in Guild Raid",
 		"effects": [
-			{
-				"conditions": [],
-				"params": "62,3&3500&0&100&0,1,2,0,1,1,0",
-				"passive id": "66",
-				"passive target": "self",
-				"trigger on bb": true,
-				"trigger on sbb": true,
-				"triggered effect": [
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"elemental barrier absorb dmg%": 100,
-						"elemental barrier def": 0,
-						"elemental barrier element": "earth",
-						"elemental barrier hp": 3500,
-						"proc id": "62",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
 			{
 				"atk% buff": 50,
 				"conditions": [],
@@ -675,6 +919,16 @@
 				"passive target": "party"
 			},
 			{
+				"atk% buff": 30,
+				"conditions": [],
+				"def% buff": 30,
+				"hp% buff": 30,
+				"params": "30,30,30,0,30",
+				"passive id": "1",
+				"passive target": "self",
+				"rec% buff": 30
+			},
+			{
 				"atk% buff": 100,
 				"bb gauge above % buff requirement": 50,
 				"conditions": [],
@@ -684,10 +938,23 @@
 			},
 			{
 				"conditions": [],
-				"increase atk cap": 130000,
-				"params": "130000",
-				"passive id": "143",
-				"passive target": "self"
+				"params": "62,3&7000&0&100&0,1,2,0,1,1,0",
+				"passive id": "66",
+				"passive target": "self",
+				"trigger on bb": true,
+				"trigger on sbb": true,
+				"triggered effect": [
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"elemental barrier absorb dmg%": 100,
+						"elemental barrier def": 0,
+						"elemental barrier element": "earth",
+						"elemental barrier hp": 7000,
+						"proc id": "62",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
 			}
 		],
 		"id": "830288",
@@ -700,129 +967,218 @@
 			"category": "1",
 			"dependency": "",
 			"dependency comment": "",
-			"id": "720001",
+			"id": "1010500014",
 			"skill": {
-				"bp": 20,
-				"desc": "30% boost to all parameters",
+				"bp": 10,
+				"desc": "80% all parameters",
 				"effects": [
 					{
 						"passive": {
-							"atk% buff": 30,
-							"def% buff": 30,
-							"hp% buff": 30,
-							"params": "30,30,30,0,30",
+							"atk% buff": 80,
+							"def% buff": 80,
+							"hp% buff": 80,
+							"params": "80,80,80,0,80",
 							"passive id": "1",
-							"rec% buff": 30
+							"rec% buff": 80
 						}
 					}
 				],
-				"id": "720001",
-				"level": 1,
-				"name": "30% boost to all parameters",
-				"series": "700000"
+				"id": "1010500014",
+				"level": 2,
+				"name": "80% all parameters",
+				"series": "1010500014"
 			}
 		},
 		{
-			"category": "1",
-			"dependency": "1@720001",
+			"category": "2",
+			"dependency": "",
 			"dependency comment": "",
-			"id": "740102",
+			"id": "1010500102",
 			"skill": {
-				"bp": 15,
-				"desc": "Raises all parameters boost from 30% to 50%",
+				"bp": 10,
+				"desc": "120% Spark damage",
 				"effects": [
 					{
 						"passive": {
-							"atk% buff": 50,
-							"def% buff": 50,
-							"hp% buff": 50,
-							"params": "50,50,50,0,50",
-							"passive id": "1",
-							"rec% buff": 50
+							"damage% for spark": 120,
+							"params": "120,0,0,0,0,0",
+							"passive id": "31"
 						}
 					}
 				],
-				"id": "740102",
-				"level": 4,
-				"name": "50% boost to all parameters",
-				"series": "700000"
+				"id": "1010500102",
+				"level": 2,
+				"name": "120% Spark damage",
+				"series": "1010500102"
 			}
 		},
 		{
 			"category": "3",
 			"dependency": "",
 			"dependency comment": "",
-			"id": "2120001",
+			"id": "1010500126",
 			"skill": {
-				"bp": 20,
-				"desc": "Boosts critical hit damage",
+				"bp": 10,
+				"desc": "200% critical damage",
 				"effects": [
 					{
 						"passive": {
-							"crit multiplier%": 75,
-							"params": "0.75",
+							"crit multiplier%": 200,
+							"params": "2",
 							"passive id": "34"
 						}
 					}
 				],
-				"id": "2120001",
-				"level": 3,
-				"name": "Boosts critical hit damage",
-				"series": "2100000"
+				"id": "1010500126",
+				"level": 2,
+				"name": "200% critical damage",
+				"series": "1010500126"
 			}
 		},
 		{
 			"category": "4",
 			"dependency": "",
 			"dependency comment": "",
-			"id": "1000001028",
+			"id": "1010500024",
 			"skill": {
-				"bp": 5,
-				"desc": "Considerably raises own normal hit amount",
+				"bp": 15,
+				"desc": "200% elemental damage",
 				"effects": [
 					{
 						"passive": {
-							"hit increase/hit": 2,
-							"params": "2,3,0,0,0,0,0,100",
+							"dark units do extra elemental weakness dmg": true,
+							"earth units do extra elemental weakness dmg": true,
+							"elemental weakness multiplier%": 200,
+							"fire units do extra elemental weakness dmg": true,
+							"light units do extra elemental weakness dmg": true,
+							"params": "1,2,3,4,5,6,2",
+							"passive id": "50",
+							"thunder units do extra elemental weakness dmg": true,
+							"water units do extra elemental weakness dmg": true
+						}
+					}
+				],
+				"id": "1010500024",
+				"level": 3,
+				"name": "200% elemental damage",
+				"series": "1010500024"
+			}
+		},
+		{
+			"category": "4",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010700037",
+			"skill": {
+				"bp": 10,
+				"desc": "Raises normal hit amount",
+				"effects": [
+					{
+						"passive": {
+							"hit increase/hit": 3,
+							"params": "3,3,0,0,0,0,0,100",
 							"passive id": "37"
 						}
 					}
 				],
-				"id": "1000001028",
+				"id": "1010700037",
 				"level": 2,
-				"name": "Considerably raises own normal hit amount",
-				"series": "3100000"
+				"name": "Raises normal hit amount",
+				"series": "1010700037"
 			}
 		},
 		{
 			"category": "11",
 			"dependency": "",
 			"dependency comment": "",
-			"id": "1000001035",
+			"id": "1010800061",
 			"skill": {
 				"bp": 10,
-				"desc": "Add to BB (Removes all status ailments and Atk, Def, Rec reduction)",
+				"desc": "Raises Atk limit to 180k",
 				"effects": [
 					{
 						"passive": {
-							"params": "38,1&2&3&4&5&6&7&8&9,1,2,0,1,0,0",
+							"increase atk cap": 180000,
+							"params": "180000",
+							"passive id": "143"
+						}
+					}
+				],
+				"id": "1010800061",
+				"level": 3,
+				"name": "Raises Atk limit to 180k",
+				"series": "1010800061"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010800160",
+			"skill": {
+				"bp": 20,
+				"desc": "Enhances UBB's raises normal hit amount effect",
+				"effects": [
+					{
+						"add to ubb": {
+							"extra hits dmg%": 30,
+							"hit increase buff turns (50)": 0,
+							"hit increase/hit": 1,
+							"params": "1,0,30,0,0,0,0,0,0",
+							"proc id": "26"
+						}
+					}
+				],
+				"id": "1010800160",
+				"level": 5,
+				"name": "Enhances UBB's raises normal hit amount effect",
+				"series": "1010800160"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010500066",
+			"skill": {
+				"bp": 20,
+				"desc": "Add to BB (Negates all status ailments and Atk, Def, Rec reduction for 3 turns)",
+				"effects": [
+					{
+						"passive": {
+							"params": "17,100&100&100&100&100&100&3&70,1,2,0,1,0,0",
 							"passive id": "66",
 							"trigger on bb": true,
 							"triggered effect": [
 								{
-									"ailments cured": [
-										"poison",
-										"weaken",
-										"sick",
-										"injury",
-										"curse",
-										"paralysis",
-										"atk down",
-										"def down",
-										"rec down"
-									],
 									"effect delay time(ms)/frame": "0.0/0",
-									"proc id": "38",
+									"proc id": "17",
+									"resist curse% (34)": 100,
+									"resist injury% (33)": 100,
+									"resist paralysis% (35)": 100,
+									"resist poison% (30)": 100,
+									"resist sick% (32)": 100,
+									"resist status ails turns": 3,
+									"resist weaken% (31)": 100,
+									"target area": "aoe",
+									"target type": "party"
+								}
+							]
+						}
+					},
+					{
+						"passive": {
+							"params": "73,100&100&100&3&70,1,2,0,1,0,0",
+							"passive id": "66",
+							"trigger on bb": true,
+							"triggered effect": [
+								{
+									"atk down resist% (120)": 100,
+									"def down resist% (121)": 100,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "73",
+									"rec down resist% (122)": 100,
+									"stat down immunity buff turns": 3,
 									"target area": "aoe",
 									"target type": "party"
 								}
@@ -830,122 +1186,71 @@
 						}
 					}
 				],
-				"id": "1000001035",
-				"level": 6,
-				"name": "Add to BB (Removes all status ailments and Atk, Def, Rec reduction)",
-				"series": "1000001035"
+				"id": "1010500066",
+				"level": 4,
+				"name": "Add to BB (Negates all status ailments and Atk, Def, Rec reduction for 3 turns)",
+				"series": "1010500066"
 			}
 		},
 		{
 			"category": "11",
 			"dependency": "",
 			"dependency comment": "",
-			"id": "1000001031",
+			"id": "1010800161",
 			"skill": {
 				"bp": 20,
-				"desc": "Enhances SBB's Atk boost relative to Def effect",
-				"effects": [
-					{
-						"add to sbb": {
-							"% converted turns": 0,
-							"atk% buff (46)": 10,
-							"converted attribute": null,
-							"params": "0,10,0,0,0,0",
-							"proc id": "24"
-						}
-					}
-				],
-				"id": "1000001031",
-				"level": 5,
-				"name": "Enhances SBB's Atk boost relative to Def effect",
-				"series": "1000001031"
-			}
-		},
-		{
-			"category": "11",
-			"dependency": "",
-			"dependency comment": "",
-			"id": "43003000",
-			"skill": {
-				"bp": 20,
-				"desc": "Enhances hit count and damage of UBB's hugely raises normal hit amount effect",
-				"effects": [
-					{
-						"add to ubb": {
-							"extra hits dmg%": 30,
-							"hit increase buff turns (50)": 0,
-							"hit increase/hit": 1,
-							"params": "1,1,30,0,0,0,0,0,0",
-							"proc id": "26"
-						}
-					}
-				],
-				"id": "43003000",
-				"level": 5,
-				"name": "Enhances hit count and damage of UBB's raises normal hit amount effect",
-				"series": "43003000"
-			}
-		},
-		{
-			"category": "11",
-			"dependency": "",
-			"dependency comment": "",
-			"id": "1000001033",
-			"skill": {
-				"bp": 20,
-				"desc": "Enhances BB/SBB's Atk, Def, Rec boost effects",
-				"effects": [
-					{
-						"add to bb": {
-							"atk% buff (1)": 10,
-							"buff turns": 0,
-							"def% buff (3)": 10,
-							"element buffed": "all",
-							"params": "0,10,10,10,0,0,0",
-							"proc id": "5",
-							"rec% buff (5)": 10
-						}
-					},
-					{
-						"add to sbb": {
-							"atk% buff (1)": 10,
-							"buff turns": 0,
-							"def% buff (3)": 10,
-							"element buffed": "all",
-							"params": "0,10,10,10,0,0,0",
-							"proc id": "5",
-							"rec% buff (5)": 10
-						}
-					}
-				],
-				"id": "1000001033",
-				"level": 5,
-				"name": "Enhances BB/SBB's Atk, Def, Rec boost effects",
-				"series": "1000001033"
-			}
-		},
-		{
-			"category": "11",
-			"dependency": "",
-			"dependency comment": "",
-			"id": "1000001034",
-			"skill": {
-				"bp": 25,
-				"desc": "Adds damage reduction from Earth & Thunder types for 2 turns effect to BB/SBB",
+				"desc": "Add to SBB (19 combo Earth attack on single foe)",
 				"effects": [
 					{
 						"passive": {
-							"params": "39,3&4&0&0&0&0&15&2&0,1,2,0,1,1,0",
+							"params": "1,1200&200&0&0&0&0,2,1,0,0,1,0",
+							"passive id": "66",
+							"trigger on sbb": true,
+							"triggered effect": [
+								{
+									"bb atk%": 1200,
+									"bb flat atk": 200,
+									"effect delay time(ms)/frame": "0.0/0",
+									"proc id": "1",
+									"target area": "single",
+									"target type": "enemy"
+								}
+							]
+						}
+					}
+				],
+				"id": "1010800161",
+				"level": 5,
+				"name": "Add to SBB (19 combo Earth attack on single foe)",
+				"series": "1010800161"
+			}
+		},
+		{
+			"category": "11",
+			"dependency": "",
+			"dependency comment": "",
+			"id": "1010800159",
+			"skill": {
+				"bp": 25,
+				"desc": "Add to BB/SBB (15% damage reduction from all element types for 3 turns)",
+				"effects": [
+					{
+						"passive": {
+							"params": "39,1&2&3&4&5&6&15&3&0,1,2,0,1,1,0",
 							"passive id": "66",
 							"trigger on bb": true,
 							"trigger on sbb": true,
 							"triggered effect": [
 								{
 									"dmg% mitigation for elemental attacks": 15,
-									"dmg% mitigation for elemental attacks buff turns": 2,
+									"dmg% mitigation for elemental attacks buff turns": 3,
 									"effect delay time(ms)/frame": "0.0/0",
+									"mitigate dark attacks": true,
 									"mitigate earth attacks": true,
+									"mitigate fire attacks": true,
+									"mitigate light attacks": true,
 									"mitigate thunder attacks": true,
+									"mitigate water attacks": true,
 									"proc id": "39",
 									"target area": "aoe",
 									"target type": "party"
@@ -954,35 +1259,35 @@
 						}
 					}
 				],
-				"id": "1000001034",
-				"level": 4,
-				"name": "Adds damage reduction from Earth & Thunder types for 2 turns effect to BB/SBB",
-				"series": "1000001034"
+				"id": "1010800159",
+				"level": 5,
+				"name": "Add to BB/SBB (15% damage reduction from all element types for 3 turns)",
+				"series": "1010800159"
 			}
 		},
 		{
 			"category": "11",
 			"dependency": "",
 			"dependency comment": "",
-			"id": "55001003",
+			"id": "1011000021",
 			"skill": {
-				"bp": 30,
-				"desc": "Adds great HP restoration effect for 3 turns to BB/SBB",
+				"bp": 20,
+				"desc": "Add to BB/SBB (Restores HP for 3 turns)",
 				"effects": [
 					{
 						"passive": {
-							"params": "3,3000&3500&50&3&0,1,2,0,1,1,0",
+							"params": "3,4000&4500&200&3&0,1,2,0,1,1,0",
 							"passive id": "66",
 							"trigger on bb": true,
 							"trigger on sbb": true,
 							"triggered effect": [
 								{
 									"effect delay time(ms)/frame": "0.0/0",
-									"gradual heal high": 3500,
-									"gradual heal low": 3000,
+									"gradual heal high": 4500,
+									"gradual heal low": 4000,
 									"gradual heal turns (8)": 3,
 									"proc id": "3",
-									"rec added% (from target)": 15,
+									"rec added% (from target)": 30,
 									"target area": "aoe",
 									"target type": "party"
 								}
@@ -990,29 +1295,21 @@
 						}
 					}
 				],
-				"id": "55001003",
-				"level": 5,
-				"name": "Adds great HP restoration effect to BB/SBB",
-				"series": "55001000"
+				"id": "1011000021",
+				"level": 4,
+				"name": "Add to BB/SBB (Restores HP for 3 turns)",
+				"series": "1011000021"
 			}
 		},
 		{
 			"category": "11",
 			"dependency": "",
 			"dependency comment": "",
-			"id": "1000001032",
+			"id": "1010800162",
 			"skill": {
-				"bp": 35,
+				"bp": 20,
 				"desc": "Allows SBB's buff effects to last for additional turn",
 				"effects": [
-					{
-						"add to sbb": {
-							"% converted turns": 1,
-							"converted attribute": null,
-							"params": "0,0,0,0,1,0",
-							"proc id": "24"
-						}
-					},
 					{
 						"add to sbb": {
 							"buff turns": 1,
@@ -1023,10 +1320,10 @@
 					},
 					{
 						"add to sbb": {
-							"od fill rate buff turns (132)": 1,
-							"od fill rate% buff": 0,
-							"params": "0,1,0",
-							"proc id": "84"
+							"% converted turns": 1,
+							"converted attribute": null,
+							"params": "0,0,0,0,1,0",
+							"proc id": "24"
 						}
 					},
 					{
@@ -1036,12 +1333,26 @@
 							"params": "0,0,0,0,0,0,0,1,0",
 							"proc id": "26"
 						}
+					},
+					{
+						"add to sbb": {
+							"drop rate buff turns": 1,
+							"params": "0,0,0,1,0",
+							"proc id": "6"
+						}
+					},
+					{
+						"add to sbb": {
+							"od fill turns (148)": 1,
+							"params": "0,0,0,1,0",
+							"proc id": "113"
+						}
 					}
 				],
-				"id": "1000001032",
+				"id": "1010800162",
 				"level": 5,
 				"name": "Allows SBB's buff effects to last for additional turn",
-				"series": "1000001032"
+				"series": "1010800162"
 			}
 		}
 	],
@@ -1056,28 +1367,38 @@
 			"desc": "50% boost to Atk of Earth types, 100% boost to Atk when BB gauge is over 50%, adds Earth barrier effect to BB/SBB & raises Atk parameter limits to 130000<br> 50% boost to Atk, Def when HP is over 50%, raises normal hit amount & boosts Earth elemental damage for all allies in Guild Raid",
 			"effects": [
 				{
-					"atk% buff": 50,
-					"conditions": [],
-					"def% buff": 50,
-					"hp above % buff requirement": 50,
-					"params": "50,50,0,0,50,1",
-					"passive id": "11",
-					"passive target": "self"
-				},
-				{
-					"conditions": [],
-					"hit increase/hit": 1,
-					"params": "1,3,0,0,0,0,0,100",
-					"passive id": "37",
-					"passive target": "self"
-				},
-				{
 					"conditions": [],
 					"earth units do extra elemental weakness dmg": true,
 					"elemental weakness multiplier%": 25,
 					"params": "3,0,0,0,0,0,0.25",
 					"passive id": "50",
 					"passive target": "party"
+				},
+				{
+					"conditions": [],
+					"extra hits dmg%": 120,
+					"hit increase/hit": 2,
+					"params": "2,1,120,0,0,0,0,100",
+					"passive id": "37",
+					"passive target": "self"
+				},
+				{
+					"conditions": [],
+					"params": "97,3&1100&200&0&0&0&0,2,2,0,0,1,0",
+					"passive id": "66",
+					"passive target": "self",
+					"trigger on sbb": true,
+					"triggered effect": [
+						{
+							"additional element used for attack check": "earth",
+							"bb atk%": 1100,
+							"bb flat atk": 200,
+							"effect delay time(ms)/frame": "0.0/0",
+							"proc id": "97",
+							"target area": "aoe",
+							"target type": "enemy"
+						}
+					]
 				}
 			],
 			"id": "8930288",
@@ -1098,33 +1419,42 @@
 		"associated_units": [
 			"830288:ls"
 		],
-		"desc": "60% boost to Atk, max HP, hugely boosts critical damage, enormously boosts BC, HC drop rate & boosts Atk, Def relative to remaining HP",
+		"desc": "150% Atk, max HP, 30% critical rate, 250% critical damage, 0-80% Atk, Def relative to remaining HP, 50% BC, HC, 9% Item, 50% Zel, Karma drop rates & 30% OD gauge fill rate",
 		"effects": [
 			{
-				"atk% buff": 60,
-				"hp% buff": 60,
-				"params": "60,0,0,0,60",
+				"atk% buff": 150,
+				"crit% buff": 30,
+				"hp% buff": 150,
+				"params": "150,0,0,30,150",
 				"passive id": "1"
 			},
 			{
-				"crit multiplier%": 150,
-				"params": "1.5",
+				"crit multiplier%": 250,
+				"params": "2.5",
 				"passive id": "34"
 			},
 			{
-				"bc drop rate% buff": 30,
-				"hc drop rate% buff": 30,
-				"params": "30,30,0,0,0",
-				"passive id": "19"
-			},
-			{
 				"atk% base buff": 0,
-				"atk% extra buff based on hp": 50,
+				"atk% extra buff based on hp": 80,
 				"buff proportional to hp": "remaining",
 				"def% base buff": 0,
-				"def% extra buff based on hp": 50,
-				"params": "0,50,0,50,0,0,0",
+				"def% extra buff based on hp": 80,
+				"params": "0,80,0,80,0,0,0",
 				"passive id": "46"
+			},
+			{
+				"bc drop rate% buff": 50,
+				"hc drop rate% buff": 50,
+				"item drop rate% buff": 9,
+				"karma drop rate% buff": 50,
+				"params": "50,50,9,50,50",
+				"passive id": "19",
+				"zel drop rate% buff": 50
+			},
+			{
+				"od fill rate%": 30,
+				"params": "30",
+				"passive id": "70"
 			}
 		],
 		"id": "830288",
@@ -1201,7 +1531,7 @@
 				],
 				"hit dmg% distribution (total)": 100,
 				"hits": 19,
-				"proc id": "1"
+				"proc id": "47"
 			},
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -1237,7 +1567,7 @@
 				],
 				"hit dmg% distribution (total)": 100,
 				"hits": 1,
-				"proc id": "113"
+				"proc id": "26"
 			},
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -1261,10 +1591,10 @@
 				],
 				"hit dmg% distribution (total)": 100,
 				"hits": 1,
-				"proc id": "26"
+				"proc id": "113"
 			}
 		],
-		"desc": "19 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, hugely boosts Atk relative to Def for 3 turns, considerably boosts OD gauge fill rate at turn's end for 3 turns, hugely boosts BC, HC drop rate for 3 turns & raises normal hit amount for 3 turns",
+		"desc": "19 combo Earth attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate (Earth) for 3 turns, boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns, boosts BC, HC drop rate for 3 turns & fills OD gauge at turn's end for 3 turns",
 		"drop check count": 1,
 		"id": "1830288",
 		"levels": [
@@ -1272,53 +1602,36 @@
 				"bc cost": 32,
 				"effects": [
 					{
-						"bb atk%": 700,
+						"bb added atk% based on hp": 800,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 300,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "700,200,0,0,0,0",
-						"proc id": "1",
+						"params": "300,1100,0,200,0,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
-						"atk% buff (13)": 130,
+						"atk% buff (13)": 165,
 						"buff turns": 3,
 						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
+						"def% buff (14)": 165,
 						"effect delay time(ms)/frame": "0.0/0",
 						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
+						"params": "3,165,165,165,60,3,0",
 						"proc id": "5",
-						"rec% buff (15)": 130,
+						"rec% buff (15)": 165,
 						"target area": "aoe",
 						"target type": "party"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 80,
+						"atk% buff (46)": 110,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,80,0,0,3,3",
+						"params": "2,110,0,0,3,0",
 						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 400,
-						"od fill turns (148)": 3,
-						"params": "0,0,400,3,150",
-						"proc id": "113",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 30,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 30,
-						"params": "30,30,0,3,0",
-						"proc id": "6",
 						"target area": "aoe",
 						"target type": "party"
 					},
@@ -1327,582 +1640,8 @@
 						"extra hits dmg%": 20,
 						"hit increase buff turns (50)": 3,
 						"hit increase/hit": 2,
-						"params": "2,2,20,0,0,0,0,3,0",
+						"params": "2,3,20,0,0,0,0,3,0",
 						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 32,
-				"effects": [
-					{
-						"bb atk%": 710,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"params": "710,200,0,0,0,0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (13)": 130,
-						"buff turns": 3,
-						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
-						"proc id": "5",
-						"rec% buff (15)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 80,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,80,0,0,3,3",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 400,
-						"od fill turns (148)": 3,
-						"params": "0,0,400,3,150",
-						"proc id": "113",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 31,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 31,
-						"params": "31,31,0,3,0",
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 20,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"params": "2,2,20,0,0,0,0,3,0",
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 32,
-				"effects": [
-					{
-						"bb atk%": 720,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"params": "720,200,0,0,0,0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (13)": 130,
-						"buff turns": 3,
-						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
-						"proc id": "5",
-						"rec% buff (15)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 80,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,80,0,0,3,3",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 400,
-						"od fill turns (148)": 3,
-						"params": "0,0,400,3,150",
-						"proc id": "113",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 32,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 32,
-						"params": "32,32,0,3,0",
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 20,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"params": "2,2,20,0,0,0,0,3,0",
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 32,
-				"effects": [
-					{
-						"bb atk%": 730,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"params": "730,200,0,0,0,0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (13)": 130,
-						"buff turns": 3,
-						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
-						"proc id": "5",
-						"rec% buff (15)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 80,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,80,0,0,3,3",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 400,
-						"od fill turns (148)": 3,
-						"params": "0,0,400,3,150",
-						"proc id": "113",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 33,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 33,
-						"params": "33,33,0,3,0",
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 20,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"params": "2,2,20,0,0,0,0,3,0",
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 32,
-				"effects": [
-					{
-						"bb atk%": 740,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"params": "740,200,0,0,0,0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (13)": 130,
-						"buff turns": 3,
-						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
-						"proc id": "5",
-						"rec% buff (15)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 80,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,80,0,0,3,3",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 400,
-						"od fill turns (148)": 3,
-						"params": "0,0,400,3,150",
-						"proc id": "113",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 34,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 34,
-						"params": "34,34,0,3,0",
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 20,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"params": "2,2,20,0,0,0,0,3,0",
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 32,
-				"effects": [
-					{
-						"bb atk%": 750,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"params": "750,200,0,0,0,0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (13)": 130,
-						"buff turns": 3,
-						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
-						"proc id": "5",
-						"rec% buff (15)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 80,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,80,0,0,3,3",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 400,
-						"od fill turns (148)": 3,
-						"params": "0,0,400,3,150",
-						"proc id": "113",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 35,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 35,
-						"params": "35,35,0,3,0",
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 20,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"params": "2,2,20,0,0,0,0,3,0",
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 32,
-				"effects": [
-					{
-						"bb atk%": 760,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"params": "760,200,0,0,0,0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (13)": 130,
-						"buff turns": 3,
-						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
-						"proc id": "5",
-						"rec% buff (15)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 80,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,80,0,0,3,3",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 400,
-						"od fill turns (148)": 3,
-						"params": "0,0,400,3,150",
-						"proc id": "113",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 36,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 36,
-						"params": "36,36,0,3,0",
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 20,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"params": "2,2,20,0,0,0,0,3,0",
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 32,
-				"effects": [
-					{
-						"bb atk%": 770,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"params": "770,200,0,0,0,0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (13)": 130,
-						"buff turns": 3,
-						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
-						"proc id": "5",
-						"rec% buff (15)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 80,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,80,0,0,3,3",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 400,
-						"od fill turns (148)": 3,
-						"params": "0,0,400,3,150",
-						"proc id": "113",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 37,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 37,
-						"params": "37,37,0,3,0",
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 20,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"params": "2,2,20,0,0,0,0,3,0",
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 32,
-				"effects": [
-					{
-						"bb atk%": 780,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"params": "780,200,0,0,0,0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (13)": 130,
-						"buff turns": 3,
-						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
-						"proc id": "5",
-						"rec% buff (15)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 80,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,80,0,0,3,3",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 400,
-						"od fill turns (148)": 3,
-						"params": "0,0,400,3,150",
-						"proc id": "113",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"bc drop rate% buff (10)": 38,
-						"drop rate buff turns": 3,
-						"effect delay time(ms)/frame": "0.0/0",
-						"hc drop rate% buff (9)": 38,
-						"params": "38,38,0,3,0",
-						"proc id": "6",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"extra hits dmg%": 20,
-						"hit increase buff turns (50)": 3,
-						"hit increase/hit": 2,
-						"params": "2,2,20,0,0,0,0,3,0",
-						"proc id": "26",
-						"target area": "aoe",
-						"target type": "party"
-					}
-				]
-			},
-			{
-				"bc cost": 32,
-				"effects": [
-					{
-						"bb atk%": 800,
-						"bb flat atk": 200,
-						"effect delay time(ms)/frame": "16.7/1",
-						"params": "800,200,0,0,0,0",
-						"proc id": "1",
-						"target area": "aoe",
-						"target type": "enemy"
-					},
-					{
-						"atk% buff (13)": 130,
-						"buff turns": 3,
-						"crit% buff (16)": 60,
-						"def% buff (14)": 130,
-						"effect delay time(ms)/frame": "0.0/0",
-						"element buffed": "earth",
-						"params": "3,130,130,130,60,3,0",
-						"proc id": "5",
-						"rec% buff (15)": 130,
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"% converted turns": 3,
-						"atk% buff (46)": 80,
-						"converted attribute": "defense",
-						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,80,0,0,3,3",
-						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 400,
-						"od fill turns (148)": 3,
-						"params": "0,0,400,3,150",
-						"proc id": "113",
 						"target area": "aoe",
 						"target type": "party"
 					},
@@ -1918,11 +1657,622 @@
 					},
 					{
 						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 800,
+						"od fill turns (148)": 3,
+						"params": "0,0,800,3,170",
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb added atk% based on hp": 810,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 300,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"params": "300,1110,0,200,0,0,0,0",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"atk% buff (13)": 165,
+						"buff turns": 3,
+						"crit% buff (16)": 60,
+						"def% buff (14)": 165,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "earth",
+						"params": "3,165,165,165,60,3,0",
+						"proc id": "5",
+						"rec% buff (15)": 165,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"% converted turns": 3,
+						"atk% buff (46)": 110,
+						"converted attribute": "defense",
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "2,110,0,0,3,0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
 						"extra hits dmg%": 20,
 						"hit increase buff turns (50)": 3,
 						"hit increase/hit": 2,
-						"params": "2,2,20,0,0,0,0,3,0",
+						"params": "2,3,20,0,0,0,0,3,0",
 						"proc id": "26",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"bc drop rate% buff (10)": 40,
+						"drop rate buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hc drop rate% buff (9)": 40,
+						"params": "40,40,0,3,0",
+						"proc id": "6",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 800,
+						"od fill turns (148)": 3,
+						"params": "0,0,800,3,170",
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb added atk% based on hp": 820,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 300,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"params": "300,1120,0,200,0,0,0,0",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"atk% buff (13)": 165,
+						"buff turns": 3,
+						"crit% buff (16)": 60,
+						"def% buff (14)": 165,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "earth",
+						"params": "3,165,165,165,60,3,0",
+						"proc id": "5",
+						"rec% buff (15)": 165,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"% converted turns": 3,
+						"atk% buff (46)": 110,
+						"converted attribute": "defense",
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "2,110,0,0,3,0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra hits dmg%": 20,
+						"hit increase buff turns (50)": 3,
+						"hit increase/hit": 2,
+						"params": "2,3,20,0,0,0,0,3,0",
+						"proc id": "26",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"bc drop rate% buff (10)": 40,
+						"drop rate buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hc drop rate% buff (9)": 40,
+						"params": "40,40,0,3,0",
+						"proc id": "6",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 800,
+						"od fill turns (148)": 3,
+						"params": "0,0,800,3,170",
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb added atk% based on hp": 830,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 300,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"params": "300,1130,0,200,0,0,0,0",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"atk% buff (13)": 165,
+						"buff turns": 3,
+						"crit% buff (16)": 60,
+						"def% buff (14)": 165,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "earth",
+						"params": "3,165,165,165,60,3,0",
+						"proc id": "5",
+						"rec% buff (15)": 165,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"% converted turns": 3,
+						"atk% buff (46)": 110,
+						"converted attribute": "defense",
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "2,110,0,0,3,0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra hits dmg%": 20,
+						"hit increase buff turns (50)": 3,
+						"hit increase/hit": 2,
+						"params": "2,3,20,0,0,0,0,3,0",
+						"proc id": "26",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"bc drop rate% buff (10)": 40,
+						"drop rate buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hc drop rate% buff (9)": 40,
+						"params": "40,40,0,3,0",
+						"proc id": "6",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 800,
+						"od fill turns (148)": 3,
+						"params": "0,0,800,3,170",
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb added atk% based on hp": 840,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 300,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"params": "300,1140,0,200,0,0,0,0",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"atk% buff (13)": 165,
+						"buff turns": 3,
+						"crit% buff (16)": 60,
+						"def% buff (14)": 165,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "earth",
+						"params": "3,165,165,165,60,3,0",
+						"proc id": "5",
+						"rec% buff (15)": 165,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"% converted turns": 3,
+						"atk% buff (46)": 110,
+						"converted attribute": "defense",
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "2,110,0,0,3,0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra hits dmg%": 20,
+						"hit increase buff turns (50)": 3,
+						"hit increase/hit": 2,
+						"params": "2,3,20,0,0,0,0,3,0",
+						"proc id": "26",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"bc drop rate% buff (10)": 40,
+						"drop rate buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hc drop rate% buff (9)": 40,
+						"params": "40,40,0,3,0",
+						"proc id": "6",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 800,
+						"od fill turns (148)": 3,
+						"params": "0,0,800,3,170",
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb added atk% based on hp": 850,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 300,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"params": "300,1150,0,200,0,0,0,0",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"atk% buff (13)": 165,
+						"buff turns": 3,
+						"crit% buff (16)": 60,
+						"def% buff (14)": 165,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "earth",
+						"params": "3,165,165,165,60,3,0",
+						"proc id": "5",
+						"rec% buff (15)": 165,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"% converted turns": 3,
+						"atk% buff (46)": 110,
+						"converted attribute": "defense",
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "2,110,0,0,3,0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra hits dmg%": 20,
+						"hit increase buff turns (50)": 3,
+						"hit increase/hit": 2,
+						"params": "2,3,20,0,0,0,0,3,0",
+						"proc id": "26",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"bc drop rate% buff (10)": 40,
+						"drop rate buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hc drop rate% buff (9)": 40,
+						"params": "40,40,0,3,0",
+						"proc id": "6",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 800,
+						"od fill turns (148)": 3,
+						"params": "0,0,800,3,170",
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb added atk% based on hp": 860,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 300,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"params": "300,1160,0,200,0,0,0,0",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"atk% buff (13)": 165,
+						"buff turns": 3,
+						"crit% buff (16)": 60,
+						"def% buff (14)": 165,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "earth",
+						"params": "3,165,165,165,60,3,0",
+						"proc id": "5",
+						"rec% buff (15)": 165,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"% converted turns": 3,
+						"atk% buff (46)": 110,
+						"converted attribute": "defense",
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "2,110,0,0,3,0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra hits dmg%": 20,
+						"hit increase buff turns (50)": 3,
+						"hit increase/hit": 2,
+						"params": "2,3,20,0,0,0,0,3,0",
+						"proc id": "26",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"bc drop rate% buff (10)": 40,
+						"drop rate buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hc drop rate% buff (9)": 40,
+						"params": "40,40,0,3,0",
+						"proc id": "6",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 800,
+						"od fill turns (148)": 3,
+						"params": "0,0,800,3,170",
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb added atk% based on hp": 870,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 300,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"params": "300,1170,0,200,0,0,0,0",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"atk% buff (13)": 165,
+						"buff turns": 3,
+						"crit% buff (16)": 60,
+						"def% buff (14)": 165,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "earth",
+						"params": "3,165,165,165,60,3,0",
+						"proc id": "5",
+						"rec% buff (15)": 165,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"% converted turns": 3,
+						"atk% buff (46)": 110,
+						"converted attribute": "defense",
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "2,110,0,0,3,0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra hits dmg%": 20,
+						"hit increase buff turns (50)": 3,
+						"hit increase/hit": 2,
+						"params": "2,3,20,0,0,0,0,3,0",
+						"proc id": "26",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"bc drop rate% buff (10)": 40,
+						"drop rate buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hc drop rate% buff (9)": 40,
+						"params": "40,40,0,3,0",
+						"proc id": "6",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 800,
+						"od fill turns (148)": 3,
+						"params": "0,0,800,3,170",
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb added atk% based on hp": 880,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 300,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"params": "300,1180,0,200,0,0,0,0",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"atk% buff (13)": 165,
+						"buff turns": 3,
+						"crit% buff (16)": 60,
+						"def% buff (14)": 165,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "earth",
+						"params": "3,165,165,165,60,3,0",
+						"proc id": "5",
+						"rec% buff (15)": 165,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"% converted turns": 3,
+						"atk% buff (46)": 110,
+						"converted attribute": "defense",
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "2,110,0,0,3,0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra hits dmg%": 20,
+						"hit increase buff turns (50)": 3,
+						"hit increase/hit": 2,
+						"params": "2,3,20,0,0,0,0,3,0",
+						"proc id": "26",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"bc drop rate% buff (10)": 40,
+						"drop rate buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hc drop rate% buff (9)": 40,
+						"params": "40,40,0,3,0",
+						"proc id": "6",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 800,
+						"od fill turns (148)": 3,
+						"params": "0,0,800,3,170",
+						"proc id": "113",
+						"target area": "aoe",
+						"target type": "party"
+					}
+				]
+			},
+			{
+				"bc cost": 32,
+				"effects": [
+					{
+						"bb added atk% based on hp": 900,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 300,
+						"bb flat atk": 200,
+						"effect delay time(ms)/frame": "16.7/1",
+						"params": "300,1200,0,200,0,0,0,0",
+						"proc id": "47",
+						"target area": "aoe",
+						"target type": "enemy"
+					},
+					{
+						"atk% buff (13)": 165,
+						"buff turns": 3,
+						"crit% buff (16)": 60,
+						"def% buff (14)": 165,
+						"effect delay time(ms)/frame": "0.0/0",
+						"element buffed": "earth",
+						"params": "3,165,165,165,60,3,0",
+						"proc id": "5",
+						"rec% buff (15)": 165,
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"% converted turns": 3,
+						"atk% buff (46)": 110,
+						"converted attribute": "defense",
+						"effect delay time(ms)/frame": "0.0/0",
+						"params": "2,110,0,0,3,0",
+						"proc id": "24",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"extra hits dmg%": 20,
+						"hit increase buff turns (50)": 3,
+						"hit increase/hit": 2,
+						"params": "2,3,20,0,0,0,0,3,0",
+						"proc id": "26",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"bc drop rate% buff (10)": 40,
+						"drop rate buff turns": 3,
+						"effect delay time(ms)/frame": "0.0/0",
+						"hc drop rate% buff (9)": 40,
+						"params": "40,40,0,3,0",
+						"proc id": "6",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 800,
+						"od fill turns (148)": 3,
+						"params": "0,0,800,3,170",
+						"proc id": "113",
 						"target area": "aoe",
 						"target type": "party"
 					}
@@ -1932,7 +2282,7 @@
 		"name": "Obstacle-Breaking Thrust"
 	},
 	"sell caution": false,
-	"sell_price": 20000,
+	"sell_price": 50000,
 	"stats": {
 		"_base": {
 			"atk": 2475,
@@ -2004,7 +2354,7 @@
 				],
 				"hit dmg% distribution (total)": 100,
 				"hits": 22,
-				"proc id": "1"
+				"proc id": "47"
 			},
 			{
 				"effect delay time(ms)/frame": "0.0/0",
@@ -2028,18 +2378,6 @@
 				],
 				"hit dmg% distribution (total)": 100,
 				"hits": 1,
-				"proc id": "113"
-			},
-			{
-				"effect delay time(ms)/frame": "0.0/0",
-				"frame times": [
-					0
-				],
-				"hit dmg% distribution": [
-					100
-				],
-				"hit dmg% distribution (total)": 100,
-				"hits": 1,
 				"proc id": "26"
 			},
 			{
@@ -2052,10 +2390,34 @@
 				],
 				"hit dmg% distribution (total)": 100,
 				"hits": 1,
+				"proc id": "94"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
 				"proc id": "8"
+			},
+			{
+				"effect delay time(ms)/frame": "0.0/0",
+				"frame times": [
+					0
+				],
+				"hit dmg% distribution": [
+					100
+				],
+				"hit dmg% distribution (total)": 100,
+				"hits": 1,
+				"proc id": "113"
 			}
 		],
-		"desc": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
+		"desc": "22 combo Earth attack on all foes (damage relative to remaining HP), boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns, normal attacks hits all foes for 3 turns, boosts max HP & fills OD gauge at turn's end for 3 turns",
 		"drop check count": 1,
 		"id": "2830288",
 		"levels": [
@@ -2063,30 +2425,23 @@
 				"bc cost": 32,
 				"effects": [
 					{
-						"bb atk%": 2000,
+						"bb added atk% based on hp": 1500,
+						"bb added atk% proportional to hp": "remaining",
+						"bb base atk%": 1500,
 						"bb flat atk": 200,
 						"effect delay time(ms)/frame": "16.7/1",
-						"params": "2000,200,0,0,0,0",
-						"proc id": "1",
+						"params": "1500,3000,0,200,0,0,0,0",
+						"proc id": "47",
 						"target area": "aoe",
 						"target type": "enemy"
 					},
 					{
 						"% converted turns": 3,
-						"atk% buff (46)": 250,
+						"atk% buff (46)": 300,
 						"converted attribute": "defense",
 						"effect delay time(ms)/frame": "0.0/0",
-						"params": "2,250,0,0,3,3",
+						"params": "2,300,0,0,3,0",
 						"proc id": "24",
-						"target area": "aoe",
-						"target type": "party"
-					},
-					{
-						"effect delay time(ms)/frame": "0.0/0",
-						"od fill": 800,
-						"od fill turns (148)": 3,
-						"params": "0,0,800,3,170",
-						"proc id": "113",
 						"target area": "aoe",
 						"target type": "party"
 					},
@@ -2101,10 +2456,28 @@
 						"target type": "party"
 					},
 					{
+						"aoe atk inc%": 50,
+						"chance to aoe": 100,
 						"effect delay time(ms)/frame": "0.0/0",
-						"max hp% increase": 40,
-						"params": "0,40,0",
+						"params": "50,100,3,0",
+						"proc id": "94",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"max hp% increase": 55,
+						"params": "0,55,0",
 						"proc id": "8",
+						"target area": "aoe",
+						"target type": "party"
+					},
+					{
+						"effect delay time(ms)/frame": "0.0/0",
+						"od fill": 7500,
+						"od fill turns (148)": 3,
+						"params": "0,0,7500,3,170",
+						"proc id": "113",
 						"target area": "aoe",
 						"target type": "party"
 					}

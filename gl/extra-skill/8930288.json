@@ -4,26 +4,10 @@
 	],
 	"bfmtMetadata": {
 		"createdAt": "2017-07-14T07:53:14.000Z",
-		"updatedAt": "2017-11-15T11:13:03.000Z"
+		"updatedAt": "2021-02-18T10:10:53.000Z"
 	},
 	"desc": "50% boost to Atk of Earth types, 100% boost to Atk when BB gauge is over 50%, adds Earth barrier effect to BB/SBB & raises Atk parameter limits to 130000<br> 50% boost to Atk, Def when HP is over 50%, raises normal hit amount & boosts Earth elemental damage for all allies in Guild Raid",
 	"effects": [
-		{
-			"atk% buff": 50,
-			"conditions": [],
-			"def% buff": 50,
-			"hp above % buff requirement": 50,
-			"params": "50,50,0,0,50,1",
-			"passive id": "11",
-			"passive target": "self"
-		},
-		{
-			"conditions": [],
-			"hit increase/hit": 1,
-			"params": "1,3,0,0,0,0,0,100",
-			"passive id": "37",
-			"passive target": "self"
-		},
 		{
 			"conditions": [],
 			"earth units do extra elemental weakness dmg": true,
@@ -31,6 +15,32 @@
 			"params": "3,0,0,0,0,0,0.25",
 			"passive id": "50",
 			"passive target": "party"
+		},
+		{
+			"conditions": [],
+			"extra hits dmg%": 120,
+			"hit increase/hit": 2,
+			"params": "2,1,120,0,0,0,0,100",
+			"passive id": "37",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"params": "97,3&1100&200&0&0&0&0,2,2,0,0,1,0",
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"additional element used for attack check": "earth",
+					"bb atk%": 1100,
+					"bb flat atk": 200,
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "97",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
 		}
 	],
 	"id": "8930288",
