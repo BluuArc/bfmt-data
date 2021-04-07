@@ -1,0 +1,93 @@
+{
+	"associated_units": [
+		"811028:es"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2021-04-07T11:28:56.000Z",
+		"updatedAt": "2021-04-07T11:28:56.000Z"
+	},
+	"desc": "150% spark damage when Lleva or Bonnie is in squad or spark type sphere equipped, 0-100% Atk, Def, Rec relative to remaining HP, probable damage reduction to 1 & 1 KO resistance when HP is below 40%",
+	"effects": [
+		{
+			"conditionParams": "2#4,841020%4,840110%6,11%0,0",
+			"conditions": [
+				{
+					"unit required": [
+						{
+							"id": 841028,
+							"name": "Boltstriker Lleva"
+						}
+					]
+				},
+				{
+					"unit required": [
+						{
+							"id": 840114,
+							"name": "Deadly Bonnie"
+						},
+						{
+							"id": 840115,
+							"name": "Fatal Spark Bonnie"
+						},
+						{
+							"id": 840116,
+							"name": "Lethal Cannon Bonnie"
+						},
+						{
+							"id": 840117,
+							"name": "Plasma Blaster Bonnie"
+						},
+						{
+							"id": 840118,
+							"name": "Hyper Tank Bonnie"
+						}
+					]
+				},
+				{
+					"sphere category required": "Spark",
+					"sphere category required (raw)": "11"
+				}
+			],
+			"damage% for spark": 150,
+			"params": "150,0,0,0,0,0",
+			"passive id": "31",
+			"passive target": "self"
+		},
+		{
+			"atk% base buff": 0,
+			"atk% extra buff based on hp": 100,
+			"buff proportional to hp": "remaining",
+			"conditions": [],
+			"def% base buff": 0,
+			"def% extra buff based on hp": 100,
+			"params": "0,100,0,100,0,100,0",
+			"passive id": "46",
+			"passive target": "self",
+			"rec% base buff": 0,
+			"rec% extra buff based on hp": 100
+		},
+		{
+			"conditions": [],
+			"params": "20",
+			"passive id": "43",
+			"passive target": "self",
+			"take 1 dmg%": 20
+		},
+		{
+			"buff": {
+				"angel idol buff (12)": true,
+				"angel idol recover hp%": 100,
+				"buff turns (12)": "-1"
+			},
+			"conditions": [],
+			"hp below % buff activation": 40,
+			"params": "12,100,1,40,2,-1",
+			"passive id": "55",
+			"passive target": "self"
+		}
+	],
+	"id": "811028",
+	"name": "Thermal Breach",
+	"rarity": "7",
+	"target": "self"
+}

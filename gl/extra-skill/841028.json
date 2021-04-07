@@ -1,0 +1,118 @@
+{
+	"associated_units": [
+		"841028:es"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2021-04-07T11:28:56.000Z",
+		"updatedAt": "2021-04-07T11:28:56.000Z"
+	},
+	"desc": "150% Thunder elemental damage when Buck or Bonnie is in squad or Atk boosting Sphere is equipped, 25% critical damage for all allies, fills BB gauge each turn, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Removes all status ailments and Atk, Def, Rec reduction)",
+	"effects": [
+		{
+			"conditionParams": "2#4,811020%4,840110%6,13%0,0",
+			"conditions": [
+				{
+					"unit required": [
+						{
+							"id": 811028,
+							"name": "Blast Brigadier Buck"
+						}
+					]
+				},
+				{
+					"unit required": [
+						{
+							"id": 840114,
+							"name": "Deadly Bonnie"
+						},
+						{
+							"id": 840115,
+							"name": "Fatal Spark Bonnie"
+						},
+						{
+							"id": 840116,
+							"name": "Lethal Cannon Bonnie"
+						},
+						{
+							"id": 840117,
+							"name": "Plasma Blaster Bonnie"
+						},
+						{
+							"id": 840118,
+							"name": "Hyper Tank Bonnie"
+						}
+					]
+				},
+				{
+					"sphere category required": "Attack Boosting",
+					"sphere category required (raw)": "13"
+				}
+			],
+			"elemental weakness multiplier%": 150,
+			"params": "4,0,0,0,0,0,1.5",
+			"passive id": "50",
+			"passive target": "self",
+			"thunder units do extra elemental weakness dmg": true
+		},
+		{
+			"conditions": [],
+			"crit multiplier%": 25,
+			"params": "0.25",
+			"passive id": "34",
+			"passive target": "party"
+		},
+		{
+			"bc fill per turn": 10,
+			"conditions": [],
+			"params": "1000",
+			"passive id": "9",
+			"passive target": "self"
+		},
+		{
+			"atk down resist%": 100,
+			"conditions": [],
+			"curse resist%": 100,
+			"def down resist%": 100,
+			"injury resist%": 100,
+			"paralysis resist%": 100,
+			"params": "100,100,100,100,100,100,100,100,100",
+			"passive id": "73",
+			"passive target": "self",
+			"poison resist%": 100,
+			"rec down resist%": 100,
+			"sick resist%": 100,
+			"weaken resist%": 100
+		},
+		{
+			"conditions": [],
+			"params": "38,1&2&3&4&5&6&7&8&9,1,2,0,1,1,0",
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"ailments cured": [
+						"poison",
+						"weaken",
+						"sick",
+						"injury",
+						"curse",
+						"paralysis",
+						"atk down",
+						"def down",
+						"rec down"
+					],
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "38",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"id": "841028",
+	"name": "Enhanced Boltblade",
+	"rarity": "7",
+	"target": "self"
+}
