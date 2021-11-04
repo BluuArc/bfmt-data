@@ -820,7 +820,7 @@
 	},
 	"bfmtMetadata": {
 		"createdAt": "2017-09-15T11:31:46.000Z",
-		"updatedAt": "2021-02-18T10:11:12.000Z"
+		"updatedAt": "2021-11-03T11:15:24.000Z"
 	},
 	"bonds": {
 		"3840998": {
@@ -3289,9 +3289,15 @@
 				"effects": [
 					{
 						"passive": {
-							"crit multiplier%": 200,
+							"dark units do extra elemental weakness dmg": true,
+							"earth units do extra elemental weakness dmg": true,
+							"elemental weakness multiplier%": 200,
+							"fire units do extra elemental weakness dmg": true,
+							"light units do extra elemental weakness dmg": true,
 							"params": "2",
-							"passive id": "34"
+							"passive id": "34",
+							"thunder units do extra elemental weakness dmg": true,
+							"water units do extra elemental weakness dmg": true
 						}
 					}
 				],
@@ -3312,7 +3318,9 @@
 				"effects": [
 					{
 						"passive": {
-							"bc fill per turn": 8,
+							"bc fill on crit max": 12,
+							"bc fill on crit min": 10,
+							"bc fill on crit%": 100,
 							"params": "800",
 							"passive id": "9"
 						}
@@ -3335,9 +3343,17 @@
 				"effects": [
 					{
 						"passive": {
-							"increase atk cap": 180000,
+							"atk down resist%": 100,
+							"curse resist%": 100,
+							"def down resist%": 100,
+							"injury resist%": 100,
+							"paralysis resist%": 100,
 							"params": "180000",
-							"passive id": "143"
+							"passive id": "143",
+							"poison resist%": 100,
+							"rec down resist%": 100,
+							"sick resist%": 100,
+							"weaken resist%": 100
 						}
 					}
 				],
@@ -3358,11 +3374,7 @@
 				"effects": [
 					{
 						"passive": {
-							"angel idol chance% condition": 0,
-							"angel idol recover chance% high": 100,
-							"angel idol recover chance% low": 100,
-							"angel idol recover counts": 1,
-							"angel idol recover hp%": 100,
+							"increase atk cap": 200000,
 							"params": "100,1,100,100,0",
 							"passive id": "69"
 						}
@@ -3385,20 +3397,12 @@
 				"effects": [
 					{
 						"passive": {
+							"angel idol chance% condition": 0,
+							"angel idol recover chance% high": 40,
+							"angel idol recover chance% low": 40,
+							"angel idol recover counts": 2,
 							"params": "97,5&1100&200&0&0&0&0,2,2,0,0,1,0",
-							"passive id": "66",
-							"trigger on sbb": true,
-							"triggered effect": [
-								{
-									"additional element used for attack check": "light",
-									"bb atk%": 1100,
-									"bb flat atk": 200,
-									"effect delay time(ms)/frame": "0.0/0",
-									"proc id": "97",
-									"target area": "aoe",
-									"target type": "enemy"
-								}
-							]
+							"passive id": "66"
 						}
 					}
 				],
@@ -3422,15 +3426,13 @@
 							"params": "18,50&3&0,1,2,0,1,1,0",
 							"passive id": "66",
 							"trigger on bb": true,
-							"trigger on sbb": true,
 							"triggered effect": [
 								{
-									"dmg% reduction": 50,
-									"dmg% reduction turns (36)": 3,
 									"effect delay time(ms)/frame": "0.0/0",
-									"proc id": "18",
-									"target area": "aoe",
-									"target type": "party"
+									"target area": "single",
+									"target type": "self",
+									"unknown proc id": "92",
+									"unknown proc param": "0,30,0"
 								}
 							]
 						}
@@ -3455,18 +3457,14 @@
 						"passive": {
 							"params": "20,500&800&100&3&0,1,2,0,1,1,0",
 							"passive id": "66",
-							"trigger on bb": true,
 							"trigger on sbb": true,
 							"triggered effect": [
 								{
-									"bc fill when attacked high": 8,
-									"bc fill when attacked low": 5,
-									"bc fill when attacked turns (38)": 3,
-									"bc fill when attacked%": 100,
 									"effect delay time(ms)/frame": "0.0/0",
-									"proc id": "20",
-									"target area": "aoe",
-									"target type": "party"
+									"target area": "single",
+									"target type": "100",
+									"unknown proc id": "10018",
+									"unknown proc param": "20,2,0"
 								}
 							]
 						}
@@ -3491,22 +3489,14 @@
 						"passive": {
 							"params": "39,1&2&3&4&5&6&15&3&0,1,2,0,1,1,0",
 							"passive id": "66",
-							"trigger on bb": true,
 							"trigger on sbb": true,
 							"triggered effect": [
 								{
-									"dmg% mitigation for elemental attacks": 15,
-									"dmg% mitigation for elemental attacks buff turns": 3,
 									"effect delay time(ms)/frame": "0.0/0",
-									"mitigate dark attacks": true,
-									"mitigate earth attacks": true,
-									"mitigate fire attacks": true,
-									"mitigate light attacks": true,
-									"mitigate thunder attacks": true,
-									"mitigate water attacks": true,
-									"proc id": "39",
 									"target area": "aoe",
-									"target type": "party"
+									"target type": "party",
+									"unknown proc id": "10015",
+									"unknown proc param": "100,3,0,5"
 								}
 							]
 						}
@@ -3535,10 +3525,12 @@
 							"trigger on sbb": true,
 							"triggered effect": [
 								{
-									"aoe atk inc%": 0,
-									"chance to aoe": 100,
 									"effect delay time(ms)/frame": "0.0/0",
-									"proc id": "94",
+									"elemental barrier absorb dmg%": 100,
+									"elemental barrier def": 0,
+									"elemental barrier element": "light",
+									"elemental barrier hp": 5000,
+									"proc id": "62",
 									"target area": "aoe",
 									"target type": "party"
 								}
@@ -3561,37 +3553,10 @@
 				"bp": 20,
 				"desc": "Allows SBB's buff effects to last for additional turn",
 				"effects": [
-					{
-						"add to sbb": {
-							"buff turns": 1,
-							"element buffed": "all",
-							"params": "0,0,0,0,0,1,0",
-							"proc id": "5"
-						}
-					},
-					{
-						"add to sbb": {
-							"% converted turns": 1,
-							"converted attribute": null,
-							"params": "0,0,0,0,1,0",
-							"proc id": "24"
-						}
-					},
-					{
-						"add to sbb": {
-							"buff turns (84)": 1,
-							"crit multiplier%": 0,
-							"params": "0,1,0",
-							"proc id": "54"
-						}
-					},
-					{
-						"add to sbb": {
-							"params": "0,0,0,0,1,0",
-							"proc id": "78",
-							"self stat buff turns": 1
-						}
-					}
+					{},
+					{},
+					{},
+					{}
 				],
 				"id": "1010800154",
 				"level": 5,

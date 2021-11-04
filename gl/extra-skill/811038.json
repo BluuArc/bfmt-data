@@ -1,0 +1,101 @@
+{
+	"associated_units": [
+		"811038:es"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2021-11-03T10:22:30.000Z",
+		"updatedAt": "2021-11-03T10:22:30.000Z"
+	},
+	"desc": "200% damage against status afflicted foes when Summoner Special or spark type sphere is equipped, 15% DoT reduction for all allies, 0-100% Atk, Def, Rec relative to remaining HP, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Removes all status ailments and Atk, Def, Rec reduction)",
+	"effects": [
+		{
+			"atk% buff when enemy has ailment": 200,
+			"atk% buff when enemy has curse": true,
+			"atk% buff when enemy has injury": true,
+			"atk% buff when enemy has paralysis": true,
+			"atk% buff when enemy has poison": true,
+			"atk% buff when enemy has sick": true,
+			"atk% buff when enemy has weaken": true,
+			"conditionParams": "2#3,819374%6,11%0,0%0,0",
+			"conditions": [
+				{
+					"item required": [
+						"819374"
+					]
+				},
+				{
+					"sphere category required": "Spark",
+					"sphere category required (raw)": "11"
+				}
+			],
+			"params": "1&2&3&4&5&6,200",
+			"passive id": "74",
+			"passive target": "self"
+		},
+		{
+			"conditions": [],
+			"params": "100,15",
+			"passive id": "127",
+			"passive target": "party"
+		},
+		{
+			"atk% base buff": 0,
+			"atk% extra buff based on hp": 100,
+			"buff proportional to hp": "remaining",
+			"conditions": [],
+			"def% base buff": 0,
+			"def% extra buff based on hp": 100,
+			"params": "0,100,0,100,0,100,0",
+			"passive id": "46",
+			"passive target": "self",
+			"rec% base buff": 0,
+			"rec% extra buff based on hp": 100
+		},
+		{
+			"atk down resist%": 100,
+			"conditions": [],
+			"curse resist%": 100,
+			"def down resist%": 100,
+			"injury resist%": 100,
+			"paralysis resist%": 100,
+			"params": "100,100,100,100,100,100,100,100,100",
+			"passive id": "73",
+			"passive target": "self",
+			"poison resist%": 100,
+			"rec down resist%": 100,
+			"sick resist%": 100,
+			"weaken resist%": 100
+		},
+		{
+			"conditions": [],
+			"params": "38,1&2&3&4&5&6&7&8&9,1,2,0,1,1,0",
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"ailments cured": [
+						"poison",
+						"weaken",
+						"sick",
+						"injury",
+						"curse",
+						"paralysis",
+						"atk down",
+						"def down",
+						"rec down"
+					],
+					"effect delay time(ms)/frame": "0.0/0",
+					"proc id": "38",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		}
+	],
+	"id": "811038",
+	"name": "Mystery Meat",
+	"rarity": "7",
+	"target": "self"
+}
